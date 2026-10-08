@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
 ﻿using UnityEngine;
-=======
-using UnityEngine;
->>>>>>> Stashed changes
+
 using UnityEditor;
 using System.Linq;
 
@@ -42,10 +39,7 @@ public class MissionSOEditor : Editor
             EditorGUI.indentLevel++;
             EditorGUILayout.PropertyField(typeProp);
 
-<<<<<<< Updated upstream
-=======
-            // Always show title & instructions
->>>>>>> Stashed changes
+
             EditorGUILayout.PropertyField(element.FindPropertyRelative("title"));
             EditorGUILayout.PropertyField(element.FindPropertyRelative("instruction"));
 
@@ -123,15 +117,10 @@ public class MissionSOEditor : Editor
             waypointIdProp.stringValue = db.waypoints[newIndex].id;
 
         EditorGUILayout.PropertyField(confirmationZoneProp, new GUIContent("Required Zone to Complete"));
-<<<<<<< Updated upstream
 
     }
 
 
 
-=======
-    }
 
-
->>>>>>> Stashed changes
 }
