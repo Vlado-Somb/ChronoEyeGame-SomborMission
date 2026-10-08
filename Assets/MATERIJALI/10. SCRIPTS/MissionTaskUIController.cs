@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -186,7 +185,7 @@ public class MissionTaskUIController : MonoBehaviour
         if (headerContainer != null) headerContainer.style.display = DisplayStyle.None;
         if (questionContainer != null) questionContainer.style.display = DisplayStyle.None;
         if (inputContainer != null) inputContainer.style.display = DisplayStyle.None;
-        if (taskCompletionContainer != null) inputContainer.style.display = DisplayStyle.None;
+        if (taskCompletionContainer != null) taskCompletionContainer.style.display = DisplayStyle.None;
     }
 
     void OnEnable()
