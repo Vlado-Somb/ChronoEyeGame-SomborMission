@@ -114,10 +114,8 @@ Transform:
   - {fileID: 2806422020304891927}
   - {fileID: 2597595622862495608}
   - {fileID: 4012248555578347517}
-<<<<<<< Updated upstream
   - {fileID: 5316902577207664615}
-=======
->>>>>>> Stashed changes
+
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &665809265268616759
@@ -689,7 +687,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
-<<<<<<< Updated upstream
 --- !u!1 &2949887644622534443
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,8 +769,7 @@ MonoBehaviour:
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
-=======
->>>>>>> Stashed changes
+
 --- !u!1 &3513920323373485910
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,12 +914,10 @@ MonoBehaviour:
   waypointDatabase: {fileID: 11400000, guid: ed03d7c802b2e5d44ad25ffdbd36c3ea, type: 2}
   gpsProviderComponent: {fileID: 0}
   uiDoc: {fileID: 3626916261104328911}
-<<<<<<< Updated upstream
   mapOverlayController: {fileID: 0}
   missionManager: {fileID: 0}
   hintUIController: {fileID: 0}
-=======
->>>>>>> Stashed changes
+
 --- !u!1 &4116114192667945667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,11 +999,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreUIDocument: {fileID: 0}
-<<<<<<< Updated upstream
   scoreManager: {fileID: 0}
   _toastTime: 0
-=======
->>>>>>> Stashed changes
+
   normalPointsClip: {fileID: 0}
   bonusPointsClip: {fileID: 0}
   penaltyPointsClip: {fileID: 0}
