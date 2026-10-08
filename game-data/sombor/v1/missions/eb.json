@@ -8,7 +8,7 @@
   "title": "SPOMENIK ERNESTU BOŠNJAKU",
   "primaryWaypointId": "SO_EB",
   "language": "sr-Latn",
-  "reviewStatus": "legacy_unreviewed",
+  "reviewStatus": "ar_accepted_editorial_pending",
   "tasks": [
     {
       "id": "EB-01",
@@ -23,6 +23,38 @@
       "gps": {
         "waypointId": "SO_EB",
         "requiredZone": 3
+      }
+    },
+    {
+      "id": "EB-AR-01",
+      "type": "ar_interaction",
+      "title": "Somborski nemi film",
+      "instruction": "Postavi filmski okvir preko bezbednog pogleda na spomenik i sačuvaj kadar.",
+      "implementationStatus": "editorially_active_assets_pending",
+      "active": true,
+      "requiredForMission": true,
+      "ar": {
+        "interaction": "silent_film_frame",
+        "activationAfterTask": "EB-01",
+        "anchorPolicy": "user_ground_plane_or_camera_guided_overlay",
+        "neverRequireUnsafePositioning": true,
+        "feedback": "Ernest Bošnjak je važan pionir filmske kulture Sombora.",
+        "assetIds": [
+          "assets/ar-focus-reticle.svg"
+        ]
+      },
+      "mentorCue": {
+        "mentorId": "profesor-vlada",
+        "appearance": "auto_then_recallable"
+      },
+      "fallback": {
+        "mode": "2d_equivalent",
+        "sameEducationalObjective": true
+      },
+      "completion": {
+        "title": "AR trag otkriven",
+        "narrative": "Ernest Bošnjak je važan pionir filmske kulture Sombora.",
+        "delaySeconds": 2
       }
     },
     {
