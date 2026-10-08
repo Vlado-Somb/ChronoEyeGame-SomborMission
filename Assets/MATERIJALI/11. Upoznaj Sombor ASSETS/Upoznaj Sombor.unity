@@ -216,7 +216,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
-<<<<<<< Updated upstream
 --- !u!114 &637631912 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7584557568430345698, guid: 21ac4d615eade3a469da8279b3605b2d,
@@ -241,8 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7617a2cf2cfdff4784680433581eeb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
->>>>>>> Stashed changes
+
 --- !u!1001 &655724499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256,7 +254,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TESTING
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 2732191018922107912, guid: 3981d28bd5cc4024ea73ae2b6778fcce,
         type: 3}
       propertyPath: emitInterval
@@ -277,8 +274,7 @@ PrefabInstance:
       propertyPath: SimLongitude
       value: 19.1134
       objectReference: {fileID: 0}
-=======
->>>>>>> Stashed changes
+
     - target: {fileID: 4825129249553552009, guid: 3981d28bd5cc4024ea73ae2b6778fcce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -331,15 +327,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-<<<<<<< Updated upstream
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4825129249553552009, guid: 3981d28bd5cc4024ea73ae2b6778fcce,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2017466607}
-=======
-    m_AddedGameObjects: []
->>>>>>> Stashed changes
+
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3981d28bd5cc4024ea73ae2b6778fcce, type: 3}
 --- !u!114 &655724500 stripped
@@ -354,7 +347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a945ad5205e301b42a20ff018c5457c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
 --- !u!4 &655724501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4825129249553552009, guid: 3981d28bd5cc4024ea73ae2b6778fcce,
@@ -421,8 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b2a4c9947fedfb4d9884e8d2b2186a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
->>>>>>> Stashed changes
+
 --- !u!1001 &1392085558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,25 +425,19 @@ PrefabInstance:
     - target: {fileID: 2948779623368072143, guid: 35d70bd2256eddf4eb0c900bb1a22c0e,
         type: 3}
       propertyPath: _altitude
-<<<<<<< Updated upstream
       value: 11.5
-=======
-      value: 11.500000000931323
->>>>>>> Stashed changes
+
       objectReference: {fileID: 0}
     - target: {fileID: 2948779623368072143, guid: 35d70bd2256eddf4eb0c900bb1a22c0e,
         type: 3}
       propertyPath: _latitude
-<<<<<<< Updated upstream
       value: 45.7723573
       objectReference: {fileID: 0}
     - target: {fileID: 2948779623368072143, guid: 35d70bd2256eddf4eb0c900bb1a22c0e,
         type: 3}
       propertyPath: _longitude
       value: 19.1136507
-=======
-      value: 37.42209800000002
->>>>>>> Stashed changes
+
       objectReference: {fileID: 0}
     - target: {fileID: 2948779623368072143, guid: 35d70bd2256eddf4eb0c900bb1a22c0e,
         type: 3}
@@ -464,7 +449,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GEOSPATIAL ORIGIN+ANCHORS
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 3131168702876566638, guid: 35d70bd2256eddf4eb0c900bb1a22c0e,
         type: 3}
       propertyPath: m_IsActive
@@ -500,8 +484,7 @@ PrefabInstance:
       propertyPath: _originAuthority
       value: 0
       objectReference: {fileID: 0}
-=======
->>>>>>> Stashed changes
+
     - target: {fileID: 4300791316934808834, guid: 35d70bd2256eddf4eb0c900bb1a22c0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -554,7 +537,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5851833590936509760, guid: 35d70bd2256eddf4eb0c900bb1a22c0e,
         type: 3}
-<<<<<<< Updated upstream
       propertyPath: m_LocalPosition.x
       value: -76.63712
       objectReference: {fileID: 0}
@@ -582,10 +564,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 3.4
-=======
-      propertyPath: m_LocalPosition.z
-      value: 0.0000000027939677
->>>>>>> Stashed changes
+
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -655,7 +634,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 5311566735488027003, guid: 975a144990e655f45b05d9e6f7212658,
         type: 3}
       propertyPath: gpsUI
@@ -692,14 +670,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034,
         type: 2}
-=======
->>>>>>> Stashed changes
+
     - target: {fileID: 5371877734410379643, guid: 975a144990e655f45b05d9e6f7212658,
         type: 3}
       propertyPath: gpsProviderMono
       value: 
       objectReference: {fileID: 655724500}
-<<<<<<< Updated upstream
     - target: {fileID: 5371877734410379643, guid: 975a144990e655f45b05d9e6f7212658,
         type: 3}
       propertyPath: useRuntimeWaypoints
@@ -707,9 +683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3371387635388913602, guid: 975a144990e655f45b05d9e6f7212658, type: 3}
-=======
-    m_RemovedComponents: []
->>>>>>> Stashed changes
+
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -722,7 +696,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 294178323208357540, guid: ea2aa9446548fa44794d2fc8d716a669,
         type: 3}
       propertyPath: m_IsActive
@@ -778,8 +751,7 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-=======
->>>>>>> Stashed changes
+
     - target: {fileID: 7110971712881970445, guid: ea2aa9446548fa44794d2fc8d716a669,
         type: 3}
       propertyPath: m_Name
@@ -790,7 +762,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 7112196705611596884, guid: ea2aa9446548fa44794d2fc8d716a669,
         type: 3}
       propertyPath: m_Enabled
@@ -807,8 +778,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3708947879396833048, guid: 538dabfa69fe350499554dc4a03397f5,
         type: 3}
-=======
->>>>>>> Stashed changes
+
     - target: {fileID: 8309303163902793858, guid: ea2aa9446548fa44794d2fc8d716a669,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -876,7 +846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728ad7fae8e460a4ba41265c7308d757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
 --- !u!114 &1479629369 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8262975929550249927, guid: ea2aa9446548fa44794d2fc8d716a669,
@@ -941,8 +910,7 @@ MonoBehaviour:
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
   m_WorldSpaceHeight: 1080
-=======
->>>>>>> Stashed changes
+
 --- !u!1001 &1562035175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -951,14 +919,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 2250297267153600840, guid: 7a7d064fad065a54ba5016368673258d,
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-=======
->>>>>>> Stashed changes
+
     - target: {fileID: 2758699200578776038, guid: 7a7d064fad065a54ba5016368673258d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1009,7 +975,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 3386975080320270609, guid: 7a7d064fad065a54ba5016368673258d,
         type: 3}
       propertyPath: distortion
@@ -1030,8 +995,7 @@ PrefabInstance:
       propertyPath: typewriterSpeed
       value: 0.04
       objectReference: {fileID: 0}
-=======
->>>>>>> Stashed changes
+
     - target: {fileID: 8656110528102943133, guid: 7a7d064fad065a54ba5016368673258d,
         type: 3}
       propertyPath: m_Name
@@ -1108,7 +1072,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-<<<<<<< Updated upstream
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7501078665050138146, guid: 55a2aab5139a23a4ebb3853b4544c5b2,
         type: 3}
@@ -1218,10 +1181,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-=======
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 55a2aab5139a23a4ebb3853b4544c5b2, type: 3}
->>>>>>> Stashed changes
+
 --- !u!1001 &1737245775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1285,7 +1245,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI SYSTEMS
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 884161744440618555, guid: 21ac4d615eade3a469da8279b3605b2d,
         type: 3}
       propertyPath: helpColor.a
@@ -1432,12 +1391,7 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1906064515}
-=======
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
->>>>>>> Stashed changes
+
   m_SourcePrefab: {fileID: 100100000, guid: 21ac4d615eade3a469da8279b3605b2d, type: 3}
 --- !u!114 &1737245776 stripped
 MonoBehaviour:
@@ -1463,7 +1417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5c3d62d28ac7c4a9418a27257410f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
 --- !u!114 &1737245778 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 884161744440618555, guid: 21ac4d615eade3a469da8279b3605b2d,
@@ -1781,8 +1734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7b9bb9ebcc14f4e993be660c6e04da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
->>>>>>> Stashed changes
+
 --- !u!1001 &2106521998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1848,7 +1800,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7050556787580397234, guid: 0bf73731f2536b64492dc72d049daf03,
         type: 3}
-<<<<<<< Updated upstream
       propertyPath: missionReference
       value: 
       objectReference: {fileID: 1379987455}
@@ -1868,11 +1819,7 @@ PrefabInstance:
       propertyPath: _triggerBindingAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8ea187ee3b56f0745811fc468e51fef3,
-=======
-      propertyPath: _triggerBindingAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 72e258c2e7d3a304c97a0c689c0e4962,
->>>>>>> Stashed changes
+
         type: 2}
     - target: {fileID: 8779575514353451023, guid: 0bf73731f2536b64492dc72d049daf03,
         type: 3}
@@ -1888,7 +1835,6 @@ PrefabInstance:
         type: 3}
       propertyPath: timelineSettings
       value: 
-<<<<<<< Updated upstream
       objectReference: {fileID: 11400000, guid: 65d7b3b70de488240b7b2328c954b7ef,
         type: 2}
     - target: {fileID: 8779575514353451023, guid: 0bf73731f2536b64492dc72d049daf03,
@@ -2101,8 +2047,7 @@ PrefabInstance:
         type: 3}
       propertyPath: blockEntries.Array.data[8].overrideNextIndex
       value: 0
-=======
->>>>>>> Stashed changes
+
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
