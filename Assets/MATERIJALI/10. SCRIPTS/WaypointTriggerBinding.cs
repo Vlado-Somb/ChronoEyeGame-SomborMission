@@ -2,19 +2,12 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< Updated upstream
 using MyGame.Waypoint;
 using MyGame.Timeline;
 
 #if UNITY_EDITOR
 using UnityEditor;
-=======
 
-#if UNITY_EDITOR
-using UnityEditor;
-using MyGame.Waypoint;
-using MyGame.Timeline;
->>>>>>> Stashed changes
 #endif
 
 [CreateAssetMenu(menuName = "GameData/Waypoint Trigger Binding")]
