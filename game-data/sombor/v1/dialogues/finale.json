@@ -1,0 +1,67 @@
+{
+  "id": "finale",
+  "legacyId": "finale_dialog",
+  "active": true,
+  "reviewStatus": "legacy_unreviewed",
+  "source": {
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Dialogues/FINALE Dialog.asset",
+    "branch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "lines": [
+    {
+      "id": "finale-01",
+      "speaker": "Profesor Vlada",
+      "text": "Na kraju tvog putovanja kroz ulice i trgove Sombora možeš ponosno zaključiti da ovaj grad nije samo mesto prolaznih susreta, već centar čitavog regiona bogatog kulturnim razmenama.",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "finale-02",
+      "speaker": "Profesor Vlada",
+      "text": "“Zgrada pred tobom simbolizuje veličinu slobodnog carskog grada, čije su ulice svedoci istorijskih previranja i umetničkih uspona.”",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "finale-03",
+      "speaker": "Profesor Vlada",
+      "text": "“Igrajući ovu igru, sakupio si fragmente znanja o različitim tradicijama i narodima koje su ostavile neizbrisiv trag na ovim prostorima.”",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "finale-04",
+      "speaker": "Profesor Vlada",
+      "text": "“Nadam se da si naučio mnogo o životu, umetnosti i istoriji koja je utkala Sombor u bogatstvo kulturnih vrednosti regiona.”",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "finale-05",
+      "speaker": "Profesor Vlada",
+      "text": "“Čuvaj sakupljene priče i nastavi da istražuješ svet – jer svaka nova ulica krije neispričanu priču.”",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    }
+  ]
+}
