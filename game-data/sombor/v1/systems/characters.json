@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "principle": "AR mentors are in-world characters, with text and voice fallback; historical characters must be visibly labelled as dramatizations rather than authentic recordings.",
+  "characters": [
+    {
+      "id": "profesor-vlada",
+      "role": "main_narrator",
+      "active": true,
+      "availableIn": [
+        "sombor-gk",
+        "sombor-mkg",
+        "sombor-psm",
+        "sombor-gms",
+        "sombor-nps",
+        "sombor-vp",
+        "sombor-lk",
+        "sombor-eb",
+        "sombor-zup"
+      ],
+      "appearance": {
+        "trigger": "first_safe_gps_arrival",
+        "modes": [
+          "auto_once",
+          "manual_summon"
+        ],
+        "summonButton": "Pozovi profesora",
+        "reticlePlacement": "user_selected_horizontal_surface",
+        "initialDistanceMeters": 1.8,
+        "minPhysicalScaleMeters": 0.9,
+        "maxPhysicalScaleMeters": 1.7,
+        "doNotBlockCamera": true,
+        "animationStates": [
+          "materialize",
+          "idle",
+          "point",
+          "speak",
+          "wave",
+          "dematerialize"
+        ],
+        "materialStyle": "stylized_human_not_photorealistic",
+        "modelAsset": "models/profesor-vlada.glb",
+        "modelStatus": "planned_not_created",
+        "portraitFallback": "assets/profesor-vlada-portrait.svg"
+      },
+      "dialogue": {
+        "gkOpeningRef": "missions/gk.json#narrative.mentorOpening",
+        "gkAfterArRef": "missions/gk.json#narrative.mentorAfterAR",
+        "gkClosingRef": "missions/gk.json#narrative.mentorCompletion",
+        "voiceOverLanguage": "sr",
+        "captionsRequired": true,
+        "voiceFilesPending": true
+      },
+      "safety": {
+        "neverSpawnOnRoad": true,
+        "showOnlyWhenDeviceStationary": true,
+        "allowMute": true,
+        "allowSkip": true,
+        "manualPlaceIfTrackingPoor": true
+      }
+    },
+    {
+      "id": "historical-echo",
+      "role": "optional_historical_figure",
+      "activeAsGameplayContent": false,
+      "description": "Future location-specific silhouettes or actors (e.g. Milan Konjović); no fabricated authentic words or photographic likeness assumed.",
+      "possibleModes": [
+        "translucent_silhouette",
+        "brief_appearance",
+        "local_voice",
+        "period_figure"
+      ],
+      "label": "Istorijska interpretacija",
+      "authoringNeeds": [
+        "historical_source",
+        "voice_script",
+        "license_or_original_model",
+        "3d_glb_or_2d_silhouette",
+        "location_trigger"
+      ]
+    }
+  ],
+  "eventClasses": {
+    "appearance": [
+      "on_enter_gps_approach",
+      "manual_summon",
+      "on_hint",
+      "after_ar_complete"
+    ],
+    "behaviors": [
+      "speak",
+      "point_to_target",
+      "show_item",
+      "fade_out"
+    ],
+    "lifecycle": "reusable_scene_entity_not_one_per_mission"
+  }
+}
