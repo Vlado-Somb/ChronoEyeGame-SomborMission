@@ -1,0 +1,53 @@
+{
+  "id": "sombor-gk",
+  "source": {
+    "repository": "Vlado-Somb/ChronoEyeGame-SomborMission",
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/GK_SO_Mission.asset",
+    "sourceBranch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "title": "GRADSKA KUĆA",
+  "primaryWaypointId": "SO_GK",
+  "language": "sr-Latn",
+  "reviewStatus": "legacy_unreviewed",
+  "tasks": [
+    {
+      "id": "GK-01",
+      "type": "gps",
+      "title": "Gradska straža kroz vekove",
+      "instruction": "Ponađi Gradsku kuću u Somboru i stani na sredinu Trga Svetog Trojstva.",
+      "completion": {
+        "title": "Uspešno si pronašao Gradsku kuću",
+        "narrative": "Gradska kuća je jedno od najreprezentativnijih zdanja u Somboru, koje je svojim centralnim položajem u okviru istorijskog jezgra Venac, u velikoj meri odredilo arhitektonsko urbanističku fizionomiju ovog dela grada.",
+        "delaySeconds": 8
+      },
+      "gps": {
+        "waypointId": "SO_GK",
+        "requiredZone": 3
+      }
+    },
+    {
+      "id": "GK-02",
+      "type": "multiple_choice",
+      "title": "Gradsku kuća u Somboru ",
+      "instruction": "Obrati pažnju na svoju okolinu, ispitaj arhitekturu..",
+      "completion": {
+        "title": "Uspešno si pronašao Gradsku kuću",
+        "narrative": "Gradska kuća je podignuta 1749. na mestu palate prvog zapovednika Šanca i Sombora Jovana Brankovića iz 1718. Današnji izgled dobila je 1840. dogradnjom novih krila i tornja 1842. po projektu Franca Gfelera. Nakon smrti Jovana Brankovića, kaštel je prodat gradskoj upravi da bi u njemu 1749. god. bio smešten Magistrat. Objekat je svoj konačan izled dobio 1842. godine i predstavlja najreprezentativnije zdanje u neoklasicističkom stilu. Gradska kuća je proglašena za kulturno dobro od velike važnosti.",
+        "delaySeconds": 8
+      },
+      "question": {
+        "text": "Koje godine je gradska kuća, izgradnjom tornja, dobila svoj konačni izgled?",
+        "choices": [
+          "1718.",
+          "1749.",
+          "1842."
+        ],
+        "correctIndex": 2
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK",
+        "confirmationZone": "3"
+      }
+    }
+  ]
+}
