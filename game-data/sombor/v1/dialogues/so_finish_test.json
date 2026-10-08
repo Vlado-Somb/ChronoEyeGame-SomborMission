@@ -1,0 +1,50 @@
+{
+  "id": "so_finish_test",
+  "legacyId": "SO_Finish_SD_id",
+  "active": false,
+  "reviewStatus": "legacy_unreviewed",
+  "source": {
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Dialogues/SO Finish Dialog Asset.asset",
+    "branch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "lines": [
+    {
+      "id": "so_finish_test-01",
+      "speaker": "Narator",
+      "text": "Bravo uspešno si završio igru!",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "so_finish_test-02",
+      "speaker": "Somborske bube",
+      "text": "Neće moći ove noći!!!",
+      "options": [],
+      "glitch": {
+        "enabled": true,
+        "pattern": [
+          0.5,
+          1,
+          0.5,
+          0.7
+        ],
+        "durationSeconds": 3
+      }
+    },
+    {
+      "id": "so_finish_test-03",
+      "speaker": "Narator",
+      "text": "Ma sve je ok, ovo je bio samo test!",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    }
+  ]
+}
