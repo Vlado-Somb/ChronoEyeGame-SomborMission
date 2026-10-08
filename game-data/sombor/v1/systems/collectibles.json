@@ -23,6 +23,16 @@
           "asset": "assets/gk-tower-token.svg",
           "caption": "Toranj, pročelje i 1842. — prvi veliki trag gradskog pamćenja.",
           "historicalFact": "Natpis MDCCCXLII označava 1842. godinu."
+        },
+        {
+          "id": "mkg-palette-relic",
+          "name": "Paleta genija boja",
+          "missionId": "sombor-mkg",
+          "rarity": "unique",
+          "asset": "assets/mkg-palette-relic.svg",
+          "caption": "Tri faze umetničkog putovanja: plava, crvena i siva. Sombor čuva poklon od 500 radova.",
+          "historicalFact": "Galerija „Milan Konjović” otvorena je 10. septembra 1966, uz početni legat od 500 dela.",
+          "source": "https://visitsombor.org/ponuda/id56/culture/art-studios-and-ateliers/gallery-milan-konjovic.html"
         }
       ]
     },
@@ -58,6 +68,18 @@
             "waypointId": "SO_GK",
             "text": "Na pročelju Gradske kuće možeš pročitati rimski zapis MDCCCXLII.",
             "source": "https://vojvodina.travel/atrakcije/gradska-kuca-sombor/"
+          },
+          {
+            "id": "gold-mkg-001",
+            "waypointId": "SO_MKG",
+            "text": "Galerija „Milan Konjović” svečano je otvorena 10. septembra 1966. godine.",
+            "source": "https://visitsombor.org/ponuda/id56/culture/art-studios-and-ateliers/gallery-milan-konjovic.html"
+          },
+          {
+            "id": "gold-mkg-002",
+            "waypointId": "SO_MKG",
+            "text": "Konjović je Somboru poklonio početni legat od 500 svojih radova.",
+            "source": "https://srpskaenciklopedija.rs/books/slovo-g/page/galerija-milan-konjovic"
           }
         ]
       }
@@ -88,7 +110,20 @@
       "unlock": "discover_playful_interaction",
       "uiGroup": "Džokeri",
       "asset": "assets/joker-token.svg",
-      "rule": "Humor clearly fictional, not a false historical fact; future court-jester themed micro-scenes."
+      "rule": "Humor clearly fictional, not a false historical fact; future court-jester themed micro-scenes.",
+      "items": [
+        {
+          "id": "joker-mkg-001",
+          "name": "Pobegla mrlja",
+          "waypointId": "SO_MKG",
+          "asset": "assets/joker-token.svg",
+          "caption": "Jedna nestašna kap boje pobegla je sa palete! Uhvati je pre nego što oboji i tvoj ekran.",
+          "contentType": "fictional_playful",
+          "truthNote": "Izmišljena humoristička scena, ne istorijska činjenica.",
+          "rarity": "uncommon",
+          "repeatable": false
+        }
+      ]
     }
   ],
   "spawnRules": {

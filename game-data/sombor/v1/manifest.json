@@ -9,7 +9,7 @@
     "android",
     "arcore"
   ],
-  "editorialStatus": "gk_production_brief_ready_remaining_missions_ar_integrated_review_pending",
+  "editorialStatus": "gk_and_mkg_production_briefs_ready_remaining_missions_ar_integrated_review_pending",
   "sourceBranch": "fix/sombor-resource-stabilization-20261008",
   "missions": [
     {
@@ -103,6 +103,14 @@
       "assets": "production/gradska-kuca/asset-manifest.json",
       "scene": "production/gradska-kuca/scene-flow.json",
       "qa": "production/gradska-kuca/QA_CHECKLIST.md"
+    },
+    {
+      "id": "mkg-prod-02",
+      "missionId": "sombor-mkg",
+      "brief": "production/galerija-milan-konjovic/PRODUCTION_BRIEF.md",
+      "assets": "production/galerija-milan-konjovic/asset-manifest.json",
+      "scene": "production/galerija-milan-konjovic/scene-flow.json",
+      "qa": "production/galerija-milan-konjovic/QA_CHECKLIST.md"
     }
   ],
   "contentInventory": {

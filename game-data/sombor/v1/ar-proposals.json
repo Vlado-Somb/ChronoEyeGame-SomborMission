@@ -23,17 +23,20 @@
       "id": "AR-SO-MKG-01",
       "missionId": "sombor-mkg",
       "waypointId": "SO_MKG",
-      "title": "Боје Коњовића",
-      "interaction": "AR color cards float over the screen; player matches a palette concept inspired by the painter, without requiring copyrighted painting images.",
-      "completion": "pick_correct_color_pattern",
+      "title": "Геније боја — три епохе",
+      "interaction": "Player selects blue (1929–1933), red (1934–1940), grey (1945–1952) cards in their historical order, without needing real painting images. Three short original graphic brush strokes; same order task in 2D fallback.",
+      "completion": "ordered_phase_ids_blue_red_grey",
       "assetNeeds": [
-        "original illustrative palette",
-        "editorial interpretation of style"
+        "original colored phase-card SVG",
+        "palette main relic SVG",
+        "audio voice scripts",
+        "optional symbolic historical echo silhouette"
       ],
       "optional": false,
       "active": true,
-      "editingStatus": "editorial_concept_accepted_implementation_pending",
-      "taskId": "MKG-AR-01"
+      "editingStatus": "full_production_package_written",
+      "taskId": "MKG-AR-01",
+      "productionPackage": "production/galerija-milan-konjovic/PRODUCTION_BRIEF.md"
     },
     {
       "id": "AR-SO-NPS-01",
