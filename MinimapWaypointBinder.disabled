@@ -1,0 +1,48 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+/// <summary>
+/// Binds active waypoint IDs from the current timeline block to the minimap overlay.
+/// Requires reference to MasterTimelineManager and MinimapController.
+/// </summary>
+public class MinimapWaypointBinder : MonoBehaviour
+{
+    [Header("References")]
+    [SerializeField] private MasterTimelineManager timelineManager;
+    [SerializeField] private MinimapController minimapController;
+
+    void OnEnable()
+    {
+        if (timelineManager != null)
+            timelineManager.OnIndexChanged += HandleTimelineBlockChanged;
+    }
+
+    void OnDisable()
+    {
+        if (timelineManager != null)
+            timelineManager.OnIndexChanged -= HandleTimelineBlockChanged;
+    }
+
+    private void HandleTimelineBlockChanged(int newIndex, ITimelineBlock timelineBlock)
+    {
+        // Only act on MissionBlocks that reference a MissionSO
+        if (timelineBlock is MissionBlockSO missionBlock && missionBlock.missionAsset != null)
+        {
+            var mission = missionBlock.missionAsset;
+            List<string> activeWaypointIds = new();
+
+            if (mission.gpsWaypointIds != null)
+                activeWaypointIds.AddRange(mission.gpsWaypointIds);
+
+            if (mission.poiWaypointIds != null)
+                activeWaypointIds.AddRange(mission.poiWaypointIds);
+
+            minimapController.SetActiveWaypoints(activeWaypointIds);
+        }
+        else
+        {
+            // Clear the minimap if not a mission block
+            minimapController.SetActiveWaypoints(new List<string>());
+        }
+    }
+}
