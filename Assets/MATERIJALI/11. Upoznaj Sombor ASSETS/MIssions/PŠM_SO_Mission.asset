@@ -34,7 +34,7 @@ MonoBehaviour:
     answerPlaceholder: 
     expectedAnswer: 
     customData: 
-    isCompleted: 1
+    isCompleted: 0
   - taskType: 2
     title: Sada muzej a nekada palata
     completionTitle: "Bravo, uspe\u0161no si odgovrio na ovo pitanje!"
@@ -59,7 +59,7 @@ MonoBehaviour:
     answerPlaceholder: 
     expectedAnswer: 
     customData: 
-    isCompleted: 1
+    isCompleted: 0
   - taskType: 3
     title: "Naseljavanja Ba\u010Dke kroz vekove"
     completionTitle: "Bravo, uspe\u0161no si odgovrio na ovo pitanje!"
@@ -87,5 +87,5 @@ MonoBehaviour:
     answerPlaceholder: "Ovde brojem upi\u0161i svoj odgovor"
     expectedAnswer: 1751
     customData: 
-    isCompleted: 1
+    isCompleted: 0
   waypointDatabase: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034, type: 2}
