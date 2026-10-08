@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "gameId": "chrono-eye-sombor",
   "name": "Упознај Сомбор",
   "language": "sr-Latn",
@@ -9,7 +9,7 @@
     "android",
     "arcore"
   ],
-  "editorialStatus": "imported_unreviewed",
+  "editorialStatus": "gk_production_brief_ready_remaining_missions_ar_integrated_review_pending",
   "sourceBranch": "fix/sombor-resource-stabilization-20261008",
   "missions": [
     {
@@ -89,5 +89,29 @@
   "timeline": "timeline.json",
   "triggers": "triggers.json",
   "mechanics": "mechanics.json",
-  "arProposals": "ar-proposals.json"
+  "arProposals": "ar-proposals.json",
+  "systems": {
+    "characters": "systems/characters.json",
+    "collectibles": "systems/collectibles.json",
+    "album": "systems/album.json"
+  },
+  "productionPackages": [
+    {
+      "id": "gk-prod-01",
+      "missionId": "sombor-gk",
+      "brief": "production/gradska-kuca/PRODUCTION_BRIEF.md",
+      "assets": "production/gradska-kuca/asset-manifest.json",
+      "scene": "production/gradska-kuca/scene-flow.json",
+      "qa": "production/gradska-kuca/QA_CHECKLIST.md"
+    }
+  ],
+  "contentInventory": {
+    "missions": 9,
+    "tasks": 31,
+    "arInteractions": 5,
+    "gpsTasks": 9,
+    "multipleChoiceTasks": 11,
+    "textInputTasks": 6
+  },
+  "changelog": "CHANGELOG.md"
 }
