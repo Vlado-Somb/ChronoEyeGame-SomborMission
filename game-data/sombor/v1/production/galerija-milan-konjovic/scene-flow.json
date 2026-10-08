@@ -1,0 +1,136 @@
+{
+  "packageId": "mkg-prod-02",
+  "missionId": "sombor-mkg",
+  "gameplayOrder": [
+    "MKG-01",
+    "MKG-AR-01",
+    "MKG-02",
+    "MKG-03"
+  ],
+  "events": [
+    {
+      "id": "gallery_arrival",
+      "trigger": {
+        "event": "GPS_ZONE_CONFIRMED",
+        "waypointId": "SO_MKG",
+        "zone": 2,
+        "minimumSeconds": 2,
+        "fieldVerified": false
+      },
+      "action": "complete_MKG-01_then_offer_mentor_scene",
+      "narrativeRef": "missions/mkg.json#narrative.mentorOpening"
+    },
+    {
+      "id": "mentor_entrance",
+      "trigger": "MKG-01 completed + safe stationary user",
+      "action": "summon_profesor_vlada_if_enabled_or_show_captions",
+      "mentorId": "profesor-vlada",
+      "speechRef": "missions/mkg.json#narrative.mentorOpening",
+      "sfx": "mentor-appear",
+      "canSkip": true,
+      "manualRecall": true
+    },
+    {
+      "id": "ar_begin",
+      "trigger": "user_pressed_Pokreni_AR_after_MKG-01",
+      "action": "render_three_original_phase_cards",
+      "cards": [
+        "mkg-phase-blue",
+        "mkg-phase-red",
+        "mkg-phase-grey"
+      ],
+      "technology": "camera_facing_billboards_or_user_selected_surface",
+      "fallback": "2d_ordered_color_phase_selection"
+    },
+    {
+      "id": "ar_phase_sequence",
+      "trigger": {
+        "event": "USER_SELECTED_PHASE",
+        "sequence": [
+          "blue",
+          "red",
+          "grey"
+        ]
+      },
+      "action": "show_colored_brush_strokes_then_AR_INTERACTION_COMPLETED",
+      "noErrorPenalty": true,
+      "retry": true,
+      "textCue": "Plava — Crvena — Siva"
+    },
+    {
+      "id": "optional_historical_echo",
+      "trigger": "MKG-AR-01 complete + user opts in + content available",
+      "action": "fade_in_stylized_brush_silhouette_then_fade_out",
+      "characterId": "milan-konjovic-echo",
+      "requiredForMission": false,
+      "label": "Istorijska interpretacija"
+    },
+    {
+      "id": "historical_quiz",
+      "trigger": "MKG-AR-01 completed",
+      "action": "display_MKG-02_multiple_choice",
+      "correctIndex": 2,
+      "questionTheme": "slikarstvo",
+      "mustPass": true
+    },
+    {
+      "id": "birth_question",
+      "trigger": "MKG-02 completed",
+      "action": "display_MKG-03_text_input",
+      "acceptedAnswers": [
+        "1898",
+        "1898."
+      ],
+      "mustPass": true
+    },
+    {
+      "id": "mission_complete",
+      "trigger": "MKG-03 completed",
+      "action": "award_mission_score_once_show_completion_unlock_relic",
+      "collectibleId": "mkg-palette-relic",
+      "narrativeRef": "missions/mkg.json#narrative.mentorCompletion"
+    },
+    {
+      "id": "optional_gold",
+      "trigger": "user_taps_safe_stationary_bonus_spawn",
+      "action": "unlock_microstory_and_bonus_with_single_award",
+      "ids": [
+        "gold-mkg-001",
+        "gold-mkg-002"
+      ]
+    },
+    {
+      "id": "optional_joker",
+      "trigger": "user_taps_pobegla_mrlja_in_ar_or_2d",
+      "action": "unlock_fictional_bonus_item_once",
+      "idRef": "joker-mkg-001"
+    },
+    {
+      "id": "album",
+      "trigger": "user_opens_Moja_zbirka",
+      "action": "open_herbarijum_sombora",
+      "tab": "Veliki tragovi"
+    }
+  ],
+  "fallback": {
+    "when": [
+      "no_arcore",
+      "camera_permission_denied",
+      "tracking_unstable",
+      "low_light",
+      "user_prefers_2d"
+    ],
+    "mode": "2d_ordered_color_phase_selection",
+    "sameLearningOutcome": true,
+    "scoringEquivalent": true
+  },
+  "requirements": {
+    "notWalkingWithCamera": true,
+    "protectRoadBoundary": true,
+    "allowMute": true,
+    "subtitlesAlways": true,
+    "manualMentorRecall": true,
+    "noDuplicateScoreOnRestart": true
+  },
+  "status": "editorial_and_asset_concept_ready_runtime_pending"
+}
