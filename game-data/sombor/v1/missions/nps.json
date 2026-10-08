@@ -8,7 +8,7 @@
   "title": "SOMBORSKO POZORIŠTE",
   "primaryWaypointId": "SO_NPS",
   "language": "sr-Latn",
-  "reviewStatus": "legacy_unreviewed",
+  "reviewStatus": "ar_accepted_editorial_pending",
   "tasks": [
     {
       "id": "NPS-01",
@@ -23,6 +23,38 @@
       "gps": {
         "waypointId": "SO_NPS",
         "requiredZone": 3
+      }
+    },
+    {
+      "id": "NPS-AR-01",
+      "type": "ar_interaction",
+      "title": "Pozornica u prostoru",
+      "instruction": "Postavi malu virtuelnu pozornicu na bezbednu površinu i podigni zavesu.",
+      "implementationStatus": "editorially_active_assets_pending",
+      "active": true,
+      "requiredForMission": true,
+      "ar": {
+        "interaction": "stage_place_and_activate",
+        "activationAfterTask": "NPS-01",
+        "anchorPolicy": "user_ground_plane_or_camera_guided_overlay",
+        "neverRequireUnsafePositioning": true,
+        "feedback": "Pozorišna scena oživljava tek kada je istraživač pokrene.",
+        "assetIds": [
+          "assets/ar-focus-reticle.svg"
+        ]
+      },
+      "mentorCue": {
+        "mentorId": "profesor-vlada",
+        "appearance": "auto_then_recallable"
+      },
+      "fallback": {
+        "mode": "2d_equivalent",
+        "sameEducationalObjective": true
+      },
+      "completion": {
+        "title": "AR trag otkriven",
+        "narrative": "Pozorišna scena oživljava tek kada je istraživač pokrene.",
+        "delaySeconds": 2
       }
     },
     {
