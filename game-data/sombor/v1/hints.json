@@ -1,0 +1,110 @@
+{
+  "sourceBranch": "fix/sombor-resource-stabilization-20261008",
+  "editorialState": "legacy_unreviewed",
+  "hints": [
+    {
+      "id": "HINTEB1",
+      "text": "„Zamisli Sombor kao veliku scenu—jedna filmska reč spaja ovo mesto sa fabrikom snova. Popuni prazninu onim što bi naš grad učinilo svetskom filmskom zvezdom.“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 4,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTEB1.asset"
+    },
+    {
+      "id": "HINTGK1",
+      "text": "„Kad vetar lagano šušti nad Trgom Svetog Trojstva, seti se da ga  svi zovu Ćelavi trg – u srcu grada potraži prostranstvo belih ploča i kamena.“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 3,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTGK1.asset"
+    },
+    {
+      "id": "HINTGK2",
+      "text": "„Podigni pogled ka tornju, tamo gde rimski brojevi šapuću priče vekova – uklesani simboli razotkrivaju tajne prošlih vremena.“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 3,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTGK2.asset"
+    },
+    {
+      "id": "HINTGK3",
+      "text": "„Kad uklesani rimski simboli šapuću o prošlim vekovima onda je M = 1000, D = 500, C = 100, L = 50, X = 10 i I = 1“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 5,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTGK3.asset"
+    },
+    {
+      "id": "HINTGMS1",
+      "text": "„Kad mirisi konja i  kožnog sedla dopru do tvojih nozdrva, znaj da je Gradski muzej tik uz stajalište fijakera.“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 2,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTGMS1.asset"
+    },
+    {
+      "id": "HINTLK1",
+      "text": "„Prouči svaki detalj uz metalnog lika  –  skulptura zna ime pesme koju trebaš otkriti.“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 0,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTLK1.asset"
+    },
+    {
+      "id": "HINTMKG1",
+      "text": "„Ispitaj ćoškove galerije – možda Milan Konjović i dalje živi među senkama.“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 1,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTMKG1.asset"
+    },
+    {
+      "id": "HINTNPS1",
+      "text": "„Podigni pogled iznad grčkih stubova, kod samog krova – tamo je skrivena godina prvog čina pozorišta.“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 2,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTNPS1.asset"
+    },
+    {
+      "id": "HINTPŠM1",
+      "text": "„Kreni niz vetar koji miriše na grožđe i vino, pusti korak u Zmaj Jovinu ulicu – tamo te čeka muzej Podunavskih Švaba.“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 4,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTPŠM1.asset"
+    },
+    {
+      "id": "HINTPŠM2",
+      "text": "„Obrati pažnju na natpise na pročelju; reči urezani u kamenu šapuću skrivene priče i godine.“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 2,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTPŠM2.asset"
+    },
+    {
+      "id": "HINTVP",
+      "text": "\"Veljko Petrović i dalje.. u beskraj.. čita svoje stihove i priče.\"",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 1,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTVP.asset"
+    },
+    {
+      "id": "HINTŽUP1",
+      "text": "„Zastani za tren i slobodno pitaj prolaznike kako se zove  to platno puno pokreta, hrabrosti i boje; svaki Somborac zna ime ove ratne epopeje.“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 4,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTŽUP1.asset"
+    },
+    {
+      "id": "HINTŽUP2",
+      "text": "„Pogledaj pažljivo zidove ovog zdanja, jer heroji su uklesani pored portala – njihove senke čuvaju slavu županije.“",
+      "category": 2,
+      "delayBeforeShowSeconds": 0,
+      "extraDisplaySeconds": 3,
+      "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTŽUP2.asset"
+    }
+  ]
+}
