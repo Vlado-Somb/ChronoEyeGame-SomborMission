@@ -8,35 +8,83 @@
   "title": "GRADSKA KUĆA",
   "primaryWaypointId": "SO_GK",
   "language": "sr-Latn",
-  "reviewStatus": "legacy_unreviewed",
+  "reviewStatus": "production_editorial_v1",
   "tasks": [
     {
       "id": "GK-01",
       "type": "gps",
-      "title": "Gradska straža kroz vekove",
-      "instruction": "Ponađi Gradsku kuću u Somboru i stani na sredinu Trga Svetog Trojstva.",
+      "title": "Ćelavi trg — pronađi Gradsku kuću",
+      "instruction": "Stani na bezbedno mesto na Trgu Svetog Trojstva odakle jasno vidiš pročelje Gradske kuće. Nije potrebno prilaziti ulici ili sredini kolovoza.",
       "completion": {
-        "title": "Uspešno si pronašao Gradsku kuću",
-        "narrative": "Gradska kuća je jedno od najreprezentativnijih zdanja u Somboru, koje je svojim centralnim položajem u okviru istorijskog jezgra Venac, u velikoj meri odredilo arhitektonsko urbanističku fizionomiju ovog dela grada.",
-        "delaySeconds": 8
+        "title": "Stigao si na Ćelavi trg",
+        "narrative": "Nalaziš se ispred jednog od najprepoznatljivijih zdanja Sombora. Gradska kuća je vekovima oblikovala srce grada, a trg pred tobom čuva tragove još starijih priča.",
+        "delaySeconds": 3
       },
       "gps": {
         "waypointId": "SO_GK",
-        "requiredZone": 3
+        "requiredZone": 2,
+        "arrivalActivationZone": 2,
+        "fieldVerificationRequired": true
+      },
+      "legacyOriginal": {
+        "title": "Gradska straža kroz vekove",
+        "instruction": "Ponađi Gradsku kuću u Somboru i stani na sredinu Trga Svetog Trojstva.",
+        "completion": {
+          "title": "Uspešno si pronašao Gradsku kuću",
+          "narrative": "Gradska kuća je jedno od najreprezentativnijih zdanja u Somboru, koje je svojim centralnim položajem u okviru istorijskog jezgra Venac, u velikoj meri odredilo arhitektonsko urbanističku fizionomiju ovog dela grada.",
+          "delaySeconds": 8
+        },
+        "gps": {
+          "waypointId": "SO_GK",
+          "requiredZone": 3
+        }
+      }
+    },
+    {
+      "id": "GK-AR-01",
+      "type": "ar_interaction",
+      "title": "Pronađi toranj",
+      "instruction": "Podigni pogled i kamerom pronađi toranj Gradske kuće. Zatim potraži godinu na pročelju.",
+      "implementationStatus": "production_specified_assets_partial",
+      "active": true,
+      "requiredForMission": true,
+      "ar": {
+        "interaction": "guided_tower_tap",
+        "activationAfterTask": "GK-01",
+        "anchorPolicy": "user_ground_plane_or_camera_guided_overlay",
+        "neverRequireUnsafePositioning": true,
+        "feedback": "Pogledaj oznaku iznad stubova: rimski brojevi kriju godinu konačnog oblikovanja Gradske kuće.",
+        "assetIds": [
+          "assets/gk-tower-outline.svg",
+          "assets/ar-focus-reticle.svg"
+        ]
+      },
+      "mentorCue": {
+        "mentorId": "profesor-vlada",
+        "appearance": "auto_then_recallable"
+      },
+      "fallback": {
+        "mode": "2d_tower_hotspot",
+        "sameEducationalObjective": true
+      },
+      "completion": {
+        "title": "AR trag otkriven",
+        "narrative": "Pogledaj oznaku iznad stubova: rimski brojevi kriju godinu konačnog oblikovanja Gradske kuće.",
+        "delaySeconds": 2
       }
     },
     {
       "id": "GK-02",
       "type": "multiple_choice",
-      "title": "Gradsku kuća u Somboru ",
-      "instruction": "Obrati pažnju na svoju okolinu, ispitaj arhitekturu..",
+      "title": "Koju godinu krije pročelje?",
+      "instruction": "Pronađi natpis rimskim brojevima iznad stubova. Ako ti zatreba, Profesor Vlada može pomoći da ih pročitaš.",
       "completion": {
-        "title": "Uspešno si pronašao Gradsku kuću",
-        "narrative": "Gradska kuća je podignuta 1749. na mestu palate prvog zapovednika Šanca i Sombora Jovana Brankovića iz 1718. Današnji izgled dobila je 1840. dogradnjom novih krila i tornja 1842. po projektu Franca Gfelera. Nakon smrti Jovana Brankovića, kaštel je prodat gradskoj upravi da bi u njemu 1749. god. bio smešten Magistrat. Objekat je svoj konačan izled dobio 1842. godine i predstavlja najreprezentativnije zdanje u neoklasicističkom stilu. Gradska kuća je proglašena za kulturno dobro od velike važnosti.",
-        "delaySeconds": 8
+        "title": "Otkrio si 1842. godinu",
+        "narrative": "Na mestu nekadašnjeg kaštela Jovana Brankovića iz 1718. nastajalo je sedište gradskog Magistrata. Od 1749. ovo mesto je vezano za gradsku upravu; veliko preuređenje i dogradnja doveli su do današnjeg neoklasicističkog izgleda 1842. godine. Na pročelju je natpis MDCCCXLII — rimski zapis broja 1842. Gradska kuća je kulturno dobro od velikog značaja.",
+        "delaySeconds": 5
       },
       "question": {
-        "text": "Koje godine je gradska kuća, izgradnjom tornja, dobila svoj konačni izgled?",
+        "text": "Koje godine je Gradska kuća, nakon dogradnje, dobila svoj prepoznatljivi današnji izgled?",
         "choices": [
           "1718.",
           "1749.",
@@ -47,7 +95,68 @@
       "unusedUnityFields": {
         "waypointId": "SO_GK",
         "confirmationZone": "3"
+      },
+      "legacyOriginal": {
+        "title": "Gradsku kuća u Somboru ",
+        "instruction": "Obrati pažnju na svoju okolinu, ispitaj arhitekturu..",
+        "completion": {
+          "title": "Uspešno si pronašao Gradsku kuću",
+          "narrative": "Gradska kuća je podignuta 1749. na mestu palate prvog zapovednika Šanca i Sombora Jovana Brankovića iz 1718. Današnji izgled dobila je 1840. dogradnjom novih krila i tornja 1842. po projektu Franca Gfelera. Nakon smrti Jovana Brankovića, kaštel je prodat gradskoj upravi da bi u njemu 1749. god. bio smešten Magistrat. Objekat je svoj konačan izled dobio 1842. godine i predstavlja najreprezentativnije zdanje u neoklasicističkom stilu. Gradska kuća je proglašena za kulturno dobro od velike važnosti.",
+          "delaySeconds": 8
+        },
+        "question": {
+          "text": "Koje godine je Gradska kuća, nakon dogradnje, dobila svoj prepoznatljivi današnji izgled?",
+          "choices": [
+            "1718.",
+            "1749.",
+            "1842."
+          ],
+          "correctIndex": 2
+        }
       }
     }
+  ],
+  "narrative": {
+    "setting": "Trg Svetog Trojstva — Ćelavi trg, Sombor",
+    "theme": "Grad koji pamti: kaštel, magistrat, trg i satni toranj",
+    "historyParagraphs": [
+      "Na ovom mestu se od 1718. godine nalazio kaštel somborskog kapetana Jovana Brankovića. Posle njegove smrti, zdanje je prešlo u službu gradske uprave: Magistrat je ovde bio smešten 1749. godine.",
+      "Tokom 19. veka Gradska kuća dobija reprezentativno neoklasicističko pročelje. Godina 1842. zabeležena je rimskim brojevima iznad stubova, kao vidljiv trag završetka velike dogradnje.",
+      "Trg Svetog Trojstva, koji Somborci zovu Ćelavi trg, nekada je imao spomenik Svetom Trojstvu podignut 1774. godine, uklonjen 1947. Ta promena javnog prostora otvara temu o tome kako grad pamti i zaboravlja."
+    ],
+    "mentorOpening": "Dobro došao na Ćelavi trg! Vidiš Gradsku kuću? Na njenoj fasadi sakriven je broj koji vodi pravo u istoriju grada. Hajde prvo da pronađemo toranj, a onda da pročitamo ono što nam zgrada sama govori.",
+    "mentorAfterAR": "Odlično! Sada potraži natpis iznad stubova. Nije običan ukras: rimski brojevi kriju važnu godinu.",
+    "mentorCompletion": "Tačno, 1842! Video si da arhitektura nije samo lep dekor — ona čuva istorijske tragove. U album je stigao tvoj prvi veliki predmet Sombora!"
+  },
+  "hints": [
+    "HINTGK1",
+    "HINTGK2",
+    "HINTGK3"
+  ],
+  "characters": [
+    "profesor-vlada"
+  ],
+  "rewards": {
+    "mainCollectibleId": "gk-tower-relic",
+    "afterMissionCompleted": true
+  },
+  "productionPackage": "production/gradska-kuca/PRODUCTION_BRIEF.md",
+  "historicalSources": [
+    {
+      "title": "Gradska kuća — Turistička organizacija Vojvodine",
+      "url": "https://vojvodina.travel/atrakcije/gradska-kuca-sombor/"
+    },
+    {
+      "title": "Trg Svetog Trojstva — Turistička organizacija Vojvodine",
+      "url": "https://vojvodina.travel/atrakcije/trg-svetog-trojstva-sombor/"
+    },
+    {
+      "title": "Gradska kuća — Ravnoplov",
+      "url": "https://www.ravnoplov.rs/gradska-kuca-u-somboru/"
+    }
+  ],
+  "historicalReviewNotes": [
+    "U izvorima postoje razlike u pojedinim fazama prepravki tornja; kviz proverava 1842 kao godinu reprezentativnog izgleda i natpisa, bez tvrdnje da se ništa kasnije nije menjalo.",
+    "GPS na Ćelavom trgu ne sme zahtevati preciznost od 7 m ili prisiljavati igrača na nesigurno kretanje."
   ]
 }
