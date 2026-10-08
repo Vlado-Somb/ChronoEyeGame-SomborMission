@@ -1,5 +1,16 @@
 # CHANGELOG — CHRONO EYE SOMBOR
 
+## 2026-10-08 — production package 02: Milan Konjović
+
+- Razrađena galerijska misija `sombor-mkg` kao urednička i produkciona celina po Mission Standard v0.2, bez promene broja glavnih zadataka. Tok: GPS `MKG-01` → AR `MKG-AR-01` → ABC `MKG-02` → tekst `MKG-03`.
+- Sačuvani stari kvizovi `Slikarstvo` i `1898` sa izvornim formulacijama u `legacyOriginal`, ispravljene pravopisne nepravilnosti u aktivnim tekstovima; dodata biografija 1898–1993, evropski put i galerijski legat.
+- AR „Genije boja“ sada je jasno tipizovana **redosledna igra** sa plavom fazom 1929–1933, crvenom 1934–1940 i sivom 1945–1952, bez korišćenja reprodukcija zaštićenih slika, sa 2D fallback-om iste vrednosti.
+- Napravljeno **6 originalnih SVG asset koncepata**, audio i GLB resursi planirani, ne proglašeni proizvedenim.
+- Novi `mkg-palette-relic`, zlatni pečati `gold-mkg-001` / `gold-mkg-002` i fikcionalni šaljivi `joker-mkg-001`; poseban `milan-konjovic-echo` bez imitacije istorijskog glasa.
+- Četiri produkciona dokumenta i kontrolna lista `production/galerija-milan-konjovic/`, uz istorijske izvore i terenske QA zadatke.
+- `SO_MKG` koristi privremenu GPS zonu prilaza 2, bez izmišljanja da je raniji 7 m radijus bezbedno kalibrisan. Google servisi nisu dirani.
+- **Status:** sadržaj i konceptni resursi u Git kandidat grani; Web/Android/ARCore integracija, prava za realne slike, audio i stvarni GLB čekaju.
+
 ## 2026-10-08 — v1.1 editorial and production package
 
 **Decision log** (data-only branch `content/sombor-portable-game-data-20261008`):
