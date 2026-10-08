@@ -6,10 +6,8 @@ using UnityEngine.UIElements;
 using UnityEngine.XR.ARFoundation;
 using Binding = WaypointTriggerBinding.Binding;
 using MyGame.Timeline;
-<<<<<<< Updated upstream
 using System.Collections;
-=======
->>>>>>> Stashed changes
+
 
 [RequireComponent(typeof(MasterTimelineManager))]
 public class TriggerEvaluator : MonoBehaviour
@@ -19,7 +17,6 @@ public class TriggerEvaluator : MonoBehaviour
     ARTrackedImageManager _arImageManager;
 
     // Core managers
-<<<<<<< Updated upstream
     [Header("Timeline Reference")]
     [Tooltip("ScriptableObject holding the timeline database of blocks.")]
     [SerializeField] private TimelineSettings timelineSettings;
@@ -31,11 +28,7 @@ public class TriggerEvaluator : MonoBehaviour
     public static event Action<HintBlockSO> OnHintTriggered;
 
 
-=======
-    MissionManager _missionMgr;
-    MasterTimelineManager _timeline;
 
->>>>>>> Stashed changes
     [SerializeField]
     private WaypointTriggerBinding _triggerBindingAsset;
     public WaypointTriggerBinding Binding => _triggerBindingAsset;
@@ -53,7 +46,6 @@ public class TriggerEvaluator : MonoBehaviour
     private readonly HashSet<string> _triggeredGroups = new();
     private readonly Dictionary<Binding, HashSet<WaypointZoneLevel>> _reachedZones = new();
     private readonly HashSet<string> _firedEvents = new();
-<<<<<<< Updated upstream
     // private readonly HashSet<string> _completedMissionNames = new();
     // private readonly HashSet<string> _completedBlocks = new();
 
@@ -69,11 +61,7 @@ public class TriggerEvaluator : MonoBehaviour
         }
     }
    */
-=======
 
-    public bool HasFired(string key) => _triggeredGroups.Contains(key);
-
->>>>>>> Stashed changes
     // ——————— Lifecycle ————————
 
     private void OnEnable()
@@ -103,7 +91,6 @@ public class TriggerEvaluator : MonoBehaviour
             Debug.LogError("[TriggerEvaluator] ❌ Could not find MissionGPSHUDUIController");
 
         // 5) Mission events
-<<<<<<< Updated upstream
         _missionMgr = missionReference != null ? missionReference : MissionManager.Instance;
 
         if (_missionMgr != null)
@@ -133,22 +120,7 @@ public class TriggerEvaluator : MonoBehaviour
 
         if (timelineSettings == null)
             Debug.LogError("[TriggerEvaluator] TimelineSettings asset is not assigned in inspector.", this);
-=======
-        _missionMgr = MissionManager.Instance;
-        if (_missionMgr != null)
-        {
-            _missionMgr.OnMissionStarted += HandleMissionStarted;
-            _missionMgr.OnMissionComplete += HandleMissionComplete;
-        }
 
-        // 6) Timeline‐block events
-        _timeline = MasterTimelineManager.Instance;
-        if (_timeline != null)
-        {
-            _timeline.OnBlockStarted += HandleBlockStarted;
-            _timeline.OnBlockEnded += HandleBlockEnded;
-        }
->>>>>>> Stashed changes
 
         // 7) AR Image tracking (Foundation 6+)
         _arImageManager = FindFirstObjectByType<ARTrackedImageManager>();
@@ -185,11 +157,9 @@ public class TriggerEvaluator : MonoBehaviour
         _triggeredGroups.Clear();
         _firedEvents.Clear();
         _reachedZones.Clear();
-<<<<<<< Updated upstream
         // _completedMissionNames.Clear();
         // _completedBlocks.Clear();
-=======
->>>>>>> Stashed changes
+
     }
 
     private void HandleWaypointZoneEntered(string waypointId, WaypointZoneLevel zone)
@@ -198,15 +168,13 @@ public class TriggerEvaluator : MonoBehaviour
 
         foreach (var binding in _triggerBindingAsset.waypointTriggers)
         {
-<<<<<<< Updated upstream
             if (binding == null)
             {
                 Debug.LogWarning("[TriggerEvaluator] ⚠️ Skipping null binding in waypointTriggers.");
                 continue;
             }
 
-=======
->>>>>>> Stashed changes
+
             if (string.IsNullOrEmpty(binding.waypointId))
                 continue;
 
@@ -239,7 +207,6 @@ public class TriggerEvaluator : MonoBehaviour
             {
                 Debug.Log($"[TriggerEvaluator] 🎯 All conditions met! Firing block {binding.targetBlockIndex} for groupKey={groupKey}");
                 _triggeredGroups.Add(groupKey);
-<<<<<<< Updated upstream
 
                 if (binding.targetBlockIndex < 0)
                 {
@@ -270,20 +237,16 @@ public class TriggerEvaluator : MonoBehaviour
                     _timelineSafety.RequestBlockExecution(idx);
                 }
 
-=======
-                _timeline.RequestBlockExecution(binding.targetBlockIndex);
->>>>>>> Stashed changes
+
             }
             else
             {
                 // Log which ones are still missing, if you want:
                 Debug.Log($"[TriggerEvaluator] ⛔ Conditions not yet met for groupKey={groupKey}");
             }
-<<<<<<< Updated upstream
 
             EvaluateAllConditionGroups();
-=======
->>>>>>> Stashed changes
+
         }
     }
 
@@ -297,7 +260,6 @@ public class TriggerEvaluator : MonoBehaviour
         => TriggerByMissionEvent(_missionMgr.MissionAsset.missionName,
                                  TriggerSubEventType.OnMissionComplete);
 
-<<<<<<< Updated upstream
     public void TriggerByMissionEvent(string missionId, TriggerSubEventType subType)
     {
         string key = $"MISSION_{subType}_{missionId}";
@@ -316,17 +278,11 @@ public class TriggerEvaluator : MonoBehaviour
     {
         if (block is TimelineBlockSO blockSO)
             TriggerByGameBlockEvent(blockSO.blockId, TriggerSubEventType.OnBlockStarted);
-=======
-    private void HandleBlockStarted(ITimelineBlock block)
-    {
-        var id = (block as TimelineBlockSO)?.blockId;
-        TriggerByGameBlockEvent(id, TriggerSubEventType.OnBlockStarted);
->>>>>>> Stashed changes
+
     }
 
     private void HandleBlockEnded(ITimelineBlock block)
     {
-<<<<<<< Updated upstream
         if (block is TimelineBlockSO blockSO)
             TriggerByGameBlockEvent(blockSO.blockId, TriggerSubEventType.OnBlockEnded);
     }
@@ -385,35 +341,25 @@ public class TriggerEvaluator : MonoBehaviour
         Debug.Log($"[TriggerEvaluator] 🧠 UI event fired: {key}");
         _firedEvents.Add(key);
         EvaluateAllConditionGroups();
-=======
-        var id = (block as TimelineBlockSO)?.blockId;
-        TriggerByGameBlockEvent(id, TriggerSubEventType.OnBlockEnded);
->>>>>>> Stashed changes
+
     }
 
     private void OnTrackedImagesChanged(ARTrackablesChangedEventArgs<ARTrackedImage> args)
     {
         foreach (var img in args.added)
-<<<<<<< Updated upstream
             TriggerByTrackedImageEvent(img.referenceImage.name,
-=======
-            TriggerByImageEvent(img.referenceImage.name,
->>>>>>> Stashed changes
+
                                 TriggerSubEventType.OnImageTracked);
 
         foreach (var pair in args.removed)
         {
             var img = pair.Value;  // <-- unwrap the KeyValuePair
-<<<<<<< Updated upstream
             TriggerByTrackedImageEvent(img.referenceImage.name,
-=======
-            TriggerByImageEvent(img.referenceImage.name,
->>>>>>> Stashed changes
+
                                 TriggerSubEventType.OnImageLost);
         }
     }
 
-<<<<<<< Updated upstream
     public void TriggerByTrackedImageEvent(string imageId, TriggerSubEventType subType)
     {
         string key = $"IMAGE_{(int)subType}_{imageId}";
@@ -433,8 +379,7 @@ public class TriggerEvaluator : MonoBehaviour
     {
         Debug.Log($"[TriggerEvaluator] 🔍 Fired events so far:\n  - {string.Join("\n  - ", _firedEvents)}");
     }
-=======
->>>>>>> Stashed changes
+
 
 
     private bool EvaluateConditionGroup(
@@ -506,11 +451,8 @@ public class TriggerEvaluator : MonoBehaviour
                     }
 
                     Debug.Log(
-<<<<<<< Updated upstream
                         $"[TriggerEvaluator] ✅ Waypoint {enteredWaypoint} {condition.requiredZone} Condition '{GetLogPrefix(binding)}' met"
-=======
-                        $"[TriggerEvaluator] ✅ Condition '{GetLogPrefix(binding)}' met"
->>>>>>> Stashed changes
+
                     );
                     break;
 
@@ -546,7 +488,6 @@ public class TriggerEvaluator : MonoBehaviour
                     break;
 
                 case TriggerType.POI:
-<<<<<<< Updated upstream
                     {
                         if (!_firedEvents.Contains(condition.conditionId))
                         {
@@ -568,9 +509,7 @@ public class TriggerEvaluator : MonoBehaviour
                         break;
                     }
 
-=======
-                case TriggerType.Dialog:
->>>>>>> Stashed changes
+
                 case TriggerType.UI:
                     if (string.IsNullOrEmpty(condition.conditionId))
                     {
@@ -585,7 +524,6 @@ public class TriggerEvaluator : MonoBehaviour
                     Debug.Log($"[TriggerEvaluator] ✅ Event condition '{GetLogPrefix(binding)}' met");
                     break;
 
-<<<<<<< Updated upstream
                 case TriggerType.Mission:
                     if (!_firedEvents.Contains(condition.conditionId))
                     {
@@ -614,18 +552,15 @@ public class TriggerEvaluator : MonoBehaviour
                     break;
 
 
-=======
->>>>>>> Stashed changes
+
                 default:
                     Debug.LogWarning(
                         $"[TriggerEvaluator] ⚠️ Unknown TriggerType " +
                         $"in condition '{GetLogPrefix(binding)}'"
                     );
                     return false;
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
+
             }
         }
 
@@ -633,7 +568,6 @@ public class TriggerEvaluator : MonoBehaviour
         return true;
     }
 
-<<<<<<< Updated upstream
     private void EvaluateAllConditionGroups()
     {
         foreach (var binding in _triggerBindingAsset.waypointTriggers)
@@ -687,8 +621,7 @@ public class TriggerEvaluator : MonoBehaviour
     }
 
 
-=======
->>>>>>> Stashed changes
+
 
     private string GenerateGroupKeyFromBundle(WaypointTriggerBinding.Binding binding)
     {
@@ -700,24 +633,19 @@ public class TriggerEvaluator : MonoBehaviour
         return $"{binding.waypointId}_{binding.targetBlockIndex}_{string.Join("_", condIds)}";
     }
 
-<<<<<<< Updated upstream
     /*
-=======
 
->>>>>>> Stashed changes
 
     public void TriggerByIdAndSubEvent(string id, TriggerSubEventType subType)
     {
         foreach (var binding in _triggerBindingAsset.waypointTriggers)
         {
-<<<<<<< Updated upstream
             if (binding == null)
             {
                 Debug.LogWarning("[TriggerEvaluator] ⚠️ Skipping null binding in TriggerByIdAndSubEvent.");
                 continue;
             }
-=======
->>>>>>> Stashed changes
+
             string groupKey = GenerateGroupKeyFromBundle(binding);
             if (_triggeredGroups.Contains(groupKey))
                 continue;
@@ -748,16 +676,13 @@ public class TriggerEvaluator : MonoBehaviour
                     if (EvaluateConditionGroup(binding, zones))
                     {
                         _triggeredGroups.Add(groupKey);
-<<<<<<< Updated upstream
                         if (binding.targetBlockIndex < 0)
                         {
                             Debug.LogWarning($"[TriggerEvaluator] Skipping trigger: Invalid block index {binding.targetBlockIndex}");
                             return;
                         }
                         _timelineSafety?.RequestBlockExecution(binding.targetBlockIndex);
-=======
-                        _timeline.RequestBlockExecution(binding.targetBlockIndex);
->>>>>>> Stashed changes
+
                     }
                     break;
                 }
@@ -787,16 +712,13 @@ public class TriggerEvaluator : MonoBehaviour
                     if (EvaluateConditionGroup(binding, zones))
                     {
                         _triggeredGroups.Add(groupKey);
-<<<<<<< Updated upstream
                         if (binding.targetBlockIndex < 0)
                         {
                             Debug.LogWarning($"[TriggerEvaluator] Skipping trigger: Invalid block index {binding.targetBlockIndex}");
                             return;
                         }
                         _timelineSafety?.RequestBlockExecution(binding.targetBlockIndex);
-=======
-                        _timeline.RequestBlockExecution(binding.targetBlockIndex);
->>>>>>> Stashed changes
+
                     }
                     break;
                 }
@@ -816,10 +738,8 @@ public class TriggerEvaluator : MonoBehaviour
 
             foreach (var condition in binding.triggers)
             {
-<<<<<<< Updated upstream
                 Debug.Log($"[TE DEBUG] Looking for blockId={blockId}, conditionId={condition.conditionId}, subType={condition.subEventType}, expected={subType}");
-=======
->>>>>>> Stashed changes
+
                 if (condition.triggerType == TriggerType.GameBlock
                  && condition.subEventType == subType
                  && condition.blockId == blockId)
@@ -829,26 +749,21 @@ public class TriggerEvaluator : MonoBehaviour
                     if (EvaluateConditionGroup(binding, zones))
                     {
                         _triggeredGroups.Add(groupKey);
-<<<<<<< Updated upstream
                         if (binding.targetBlockIndex < 0)
                         {
                             Debug.LogWarning($"[TriggerEvaluator] Skipping trigger: Invalid block index {binding.targetBlockIndex}");
                             return;
                         }
                         _timelineSafety?.RequestBlockExecution(binding.targetBlockIndex);
-=======
-                        _timeline.RequestBlockExecution(binding.targetBlockIndex);
->>>>>>> Stashed changes
+
                     }
                     break;
                 }
             }
         }
     }
-<<<<<<< Updated upstream
     
-=======
->>>>>>> Stashed changes
+
 
     public void TriggerByImageEvent(string imageName, TriggerSubEventType subType)
     {
@@ -872,7 +787,6 @@ public class TriggerEvaluator : MonoBehaviour
                     if (EvaluateConditionGroup(binding, zones))
                     {
                         _triggeredGroups.Add(groupKey);
-<<<<<<< Updated upstream
 
                         if (binding.targetBlockIndex < 0)
                         {
@@ -880,16 +794,13 @@ public class TriggerEvaluator : MonoBehaviour
                             return;
                         }
                         _timelineSafety?.RequestBlockExecution(binding.targetBlockIndex);
-=======
-                        _timeline.RequestBlockExecution(binding.targetBlockIndex);
->>>>>>> Stashed changes
+
                     }
                     break;
                 }
             }
         }
     }
-<<<<<<< Updated upstream
     */
     private MasterTimelineManager _timelineSafety
     {
@@ -907,9 +818,7 @@ public class TriggerEvaluator : MonoBehaviour
         }
     }
    
-=======
 
->>>>>>> Stashed changes
 
     public void ResetAllTriggers()
     {
@@ -933,7 +842,6 @@ public class TriggerEvaluator : MonoBehaviour
         return $"[TriggerEvaluator][{b.targetBlockIndex}:{name}][Group={groupKey}]";
     }
 }
-<<<<<<< Updated upstream
 /* private IEnumerator WaitForTimelineLink()
     {
         while (MasterTimelineManager.Instance == null)
@@ -953,5 +861,4 @@ public class TriggerEvaluator : MonoBehaviour
      TriggerByGameBlockEvent(id, TriggerSubEventType.OnBlockEnded);
  }
 */
-=======
->>>>>>> Stashed changes
+
