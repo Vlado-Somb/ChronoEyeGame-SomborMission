@@ -1,0 +1,94 @@
+{
+  "packageId": "gk-prod-01",
+  "missionId": "sombor-gk",
+  "gameplayOrder": [
+    "GK-01",
+    "GK-AR-01",
+    "GK-02"
+  ],
+  "events": [
+    {
+      "id": "arrival",
+      "trigger": "SO_GK zone2 sustained 2s, or manual accessibility override if GPS unreliable",
+      "action": "show_safe_view_prompt_then_mentor_intro",
+      "narrativeRef": "missions/gk.json#narrative.mentorOpening"
+    },
+    {
+      "id": "mentor_intro",
+      "trigger": "safe_placement_confirmed_or_2d_mode",
+      "action": "animated_summon_then_voice_or_captions",
+      "sfx": "mentor-appear",
+      "canSkip": true
+    },
+    {
+      "id": "ar_start",
+      "trigger": "GK-01 completed and user pressed Pokreni AR",
+      "action": "open_arcore_camera_or_2d_fallback",
+      "guideAsset": "assets/ar-focus-reticle.svg"
+    },
+    {
+      "id": "tower_focus",
+      "trigger": "user_tapped_guide_target",
+      "action": "show_tower_outline_and_point_to_facade_year",
+      "guideAsset": "assets/gk-tower-outline.svg",
+      "validate": "guided user choice; no fake computer vision"
+    },
+    {
+      "id": "ar_complete",
+      "trigger": "user_acknowledges_tower_and_inscription",
+      "action": "mark_GK-AR-01_completed_and_show_history_hint",
+      "sfx": "ar-success"
+    },
+    {
+      "id": "quiz",
+      "trigger": "GK-AR-01 completed",
+      "action": "show_GK-02_existing_historical_choices",
+      "correctIndex": 2
+    },
+    {
+      "id": "mission_complete",
+      "trigger": "GK-02 correct",
+      "action": "award_score_once_and_unique_gk_tower_relic",
+      "item": "gk-tower-relic",
+      "sfx": "token-pickup"
+    },
+    {
+      "id": "optional_gold_pickup",
+      "trigger": "player_taps_active_golden_seal_from_safe_stationary_ar_or_2d",
+      "action": "unlock_story_and_bonus_with_cap",
+      "collectionIds": [
+        "gold-gk-001",
+        "gold-gk-002"
+      ]
+    },
+    {
+      "id": "album",
+      "trigger": "player_taps_Moja_zbirka",
+      "action": "open_Herbarijum_Sombora",
+      "tabs": [
+        "Veliki tragovi",
+        "Gradski pečati",
+        "Srca",
+        "Džokeri"
+      ]
+    }
+  ],
+  "fallback": {
+    "when": [
+      "no_arcore",
+      "camera_permission_denied",
+      "tracking_unstable",
+      "user_prefers_2d"
+    ],
+    "mode": "2d_photograph_tower_and_year_hotspots",
+    "scoringEquivalent": true
+  },
+  "requirements": {
+    "userSafeStationary": true,
+    "manualMentorRecall": true,
+    "closeARAtAnyTime": true,
+    "subtitleAlwaysAvailable": true,
+    "locationStateStoredOnDevice": true
+  },
+  "status": "editorial_and_data_ready_not_app_implemented"
+}
