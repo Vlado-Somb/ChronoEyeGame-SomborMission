@@ -8,7 +8,7 @@
   "title": "SPOMENIK LAZI KOSTIĆU",
   "primaryWaypointId": "SO_LK",
   "language": "sr-Latn",
-  "reviewStatus": "legacy_unreviewed",
+  "reviewStatus": "ar_accepted_editorial_pending",
   "tasks": [
     {
       "id": "LK-01",
@@ -23,6 +23,52 @@
       "gps": {
         "waypointId": "SO_LK",
         "requiredZone": 3
+      }
+    },
+    {
+      "id": "LK-AR-01",
+      "type": "ar_interaction",
+      "title": "Santa Maria della Salute — stihovi u vazduhu",
+      "instruction": "Rasporedi plutajuće kartice tako da pravilno složiš naslov pesme Laze Kostića.",
+      "implementationStatus": "editorially_active_assets_pending",
+      "active": true,
+      "requiredForMission": true,
+      "ar": {
+        "interaction": "sequence_tap",
+        "activationAfterTask": "LK-01",
+        "anchorPolicy": "user_ground_plane_or_camera_guided_overlay",
+        "neverRequireUnsafePositioning": true,
+        "feedback": "Složio si naslov poznate pesme: Santa Maria della Salute.",
+        "assetIds": [
+          "assets/ar-focus-reticle.svg"
+        ],
+        "content": {
+          "fragments": [
+            "della Salute",
+            "Santa",
+            "Maria"
+          ],
+          "correctSequence": [
+            1,
+            2,
+            0
+          ],
+          "fullTitle": "Santa Maria della Salute",
+          "note": "Poređuje se naslov pesme, a ne izmišljeni ili neprovereni stihovi."
+        }
+      },
+      "mentorCue": {
+        "mentorId": "profesor-vlada",
+        "appearance": "auto_then_recallable"
+      },
+      "fallback": {
+        "mode": "2d_equivalent",
+        "sameEducationalObjective": true
+      },
+      "completion": {
+        "title": "AR trag otkriven",
+        "narrative": "Složio si naslov poznate pesme: Santa Maria della Salute.",
+        "delaySeconds": 2
       }
     },
     {
