@@ -92,8 +92,8 @@ MonoBehaviour:
     zone2ConfirmDelay: 2
     zone3ConfirmDelay: 2
   - type: 1
-    id: "SO_S\\u010C"
-    displayName: "Srpska \\u010Ditaonica"
+    id: SO_SČ
+    displayName: Srpska čitaonica
     latitude: 45.77286325919296
     longitude: 19.11566256691123
     altitude: 90
