@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6f0fc02fb1b5d458053254751e1a78, type: 3}
+  m_Name: GMS_SO_Mission
+  m_EditorClassIdentifier: 
+  missionName: MUZEJ GRADA SOMBORA
+  tasks:
+  - taskType: 0
+    title: Sombor od neolita do modernog doba
+    completionTitle: "Na\u0161ao si mesto gde se \u010Duva istorija grada!"
+    completionQuote: "Ovo je kompleksan zavi\u010Dajni muzej koji obavlja delatnost
+      sakupljanja, \u010Duvanja, publikovanja i izlaganja kulturnog nasle\u0111a
+      sa prostora grada Sombora i op\u0161tina Apatin, Kula i Od\u017Eaci. Muzejska
+      delatnost je organizovana kroz rad arheolo\u0161kog, etnolo\u0161kog, istorijskog
+      i likovnog odeljenja."
+    taskCompletionDelay: 8
+    instruction: "Prona\u0111i lokaciju muzeja koji \u010Duva istoriju grada Sombora"
+    waypointId: SO_GMS
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 2
+    title: 'Putovanje Somborom kroz vekove '
+    completionTitle: "Tako je, Gradski muzej Sombor je ta\u010Dan odgovor!"
+    completionQuote: "Gradski muzej Sombor ima i dva depandansa u sastavu Istorijskog
+      odeljenja: Spomen muzej Batinske bitke i Muzej Podunavskih \u0160vaba. Ukupan
+      muzejski fond \u010Dini oko 40.000 muzejskih predmeta iz svih oblasti muzeolo\u0161ke
+      delatnosti."
+    taskCompletionDelay: 7
+    instruction: "Odgovori ta\u010Dno na postavljeno pitanje"
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "Ta\u010Dan naziv ove somborske muzejske institucije je.."
+    Choices:
+    - Narodni muzej Sombor
+    - "Zavi\u010Dajni muzej Sombor"
+    - Gradski muzej Sombor
+    - Istorijski muzej Sombor
+    CorrectChoiceIndex: 2
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 2
+    title: "Izlo\u017Ebe i postavke"
+    completionTitle: "Tako je aktuelna izlo\u017Eba je \"Ispit zrelosti \u2014 maturanti
+      vojvo\u0111anskih gimnazija\""
+    completionQuote: "Postavka hronolo\u0161ki prati period razvoja gimnazija na
+      prostoru Vojvodine koje su i dalje aktuelne, od druge polovine 19. veka (kada
+      se pojavljuju prvi ispiti zrelosti u srpskim gimnazijama) do 60\u2013ih godina
+      20. veka (kada po\u010Dinje novi na\u010Din i pristup proslave mature prepoznatljiv
+      i dana\u0161njim \u0111acima)."
+    taskCompletionDelay: 0
+    instruction: "Odgovori ta\u010Dno na postavljeno pitanje"
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "Kako se zove aktuelna izlo\u017Eba u Gradskom muzeju Sombor?"
+    Choices:
+    - '200 godina vladavine Avara '
+    - Ispit zrelosti
+    - Nit snovana 60 jeseni
+    CorrectChoiceIndex: 1
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  waypointDatabase: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034, type: 2}

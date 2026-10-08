@@ -1,0 +1,384 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7572dee0681c6434aa2c179d7e8f66be, type: 3}
+  m_Name: Sombor GAME Waypoint Trigger Binding
+  m_EditorClassIdentifier: 
+  globalTriggers: []
+  waypointSettings: {fileID: 11400000, guid: b56d1b087a4e4c34b9be39fd7d741c6a, type: 2}
+  timelineSettings: {fileID: 11400000, guid: 65d7b3b70de488240b7b2328c954b7ef, type: 2}
+  waypointTriggers:
+  - bindingLabel: "Glavna ku\u0107a"
+    groupId: SO_GK_3_DIALOG_DialogCompleted_uvod_dialog_WP__2
+    waypointId: SO_GK
+    activationZone: 1
+    targetBlockIndex: 3
+    triggers:
+    - label: None_auto
+      conditionId: DIALOG_DialogCompleted_uvod_dialog
+      triggerType: 3
+      conWaypointId: 
+      requiredZone: 0
+      missionName: 
+      blockId: 
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 2
+      requiredSeconds: 0
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+    - label: None_auto
+      conditionId: WP__2
+      triggerType: 2
+      conWaypointId: 
+      requiredZone: 2
+      missionName: 
+      blockId: 
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 2
+      requiredSeconds: 0
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+  - bindingLabel: "Glavna ku\u0107a HINT1"
+    groupId: SO_GLOBAL_14_TIME_GlobalTime_900_DIALOG_DialogCompleted_uvod_dialog
+    waypointId: SO_GLOBAL
+    activationZone: 2
+    targetBlockIndex: 14
+    triggers:
+    - label: None_auto
+      conditionId: TIME_GlobalTime_900
+      triggerType: 1
+      conWaypointId: 
+      requiredZone: 0
+      missionName: 
+      blockId: 
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 6
+      requiredSeconds: 900
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+    - label: None_auto
+      conditionId: DIALOG_DialogCompleted_uvod_dialog
+      triggerType: 3
+      conWaypointId: 
+      requiredZone: 0
+      missionName: 
+      blockId: 
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 2
+      requiredSeconds: 900
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+  - bindingLabel: "Glavna ku\u0107a HINT2"
+    groupId: SO_GK_15_TIME_BlockTime_300_BLOCK_OnBlockStarted_GK_SO_Mission
+    waypointId: SO_GK
+    activationZone: 2
+    targetBlockIndex: 15
+    triggers:
+    - label: None_auto
+      conditionId: TIME_BlockTime_300
+      triggerType: 1
+      conWaypointId: 
+      requiredZone: 0
+      missionName: 
+      blockId: 
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 7
+      requiredSeconds: 300
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+    - label: None_auto
+      conditionId: BLOCK_OnBlockStarted_GK_SO_Mission
+      triggerType: 7
+      conWaypointId: 
+      requiredZone: 0
+      missionName: 
+      blockId: GK_SO_Mission
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 10
+      requiredSeconds: 900
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+  - bindingLabel: "Glavna ku\u0107a HINT3"
+    groupId: SO_GK_16_TIME_BlockTime_450_BLOCK_OnBlockEnded_HINTGK2
+    waypointId: SO_GK
+    activationZone: 1
+    targetBlockIndex: 16
+    triggers:
+    - label: None_auto
+      conditionId: TIME_BlockTime_450
+      triggerType: 1
+      conWaypointId: 
+      requiredZone: 0
+      missionName: 
+      blockId: 
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 7
+      requiredSeconds: 450
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+    - label: None_auto
+      conditionId: BLOCK_OnBlockEnded_HINTGK2
+      triggerType: 7
+      conWaypointId: 
+      requiredZone: 0
+      missionName: 
+      blockId: HINTGK2
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 11
+      requiredSeconds: 900
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+  - bindingLabel: Uvod DIALOG
+    groupId: SO_GLOBAL_10_TIME_GlobalTime_9
+    waypointId: SO_GLOBAL
+    activationZone: 2
+    targetBlockIndex: 10
+    triggers:
+    - label: None_auto
+      conditionId: TIME_GlobalTime_9
+      triggerType: 1
+      conWaypointId: 
+      requiredZone: 0
+      missionName: 
+      blockId: 
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 6
+      requiredSeconds: 9
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+  - bindingLabel: "Konjovi\u0107 Galerija start"
+    groupId: "SO_MKG_2_MISSION_OnMissionComplete_GRADSKA KU\u0106A_TIME_BlockTime_7_WP_SO_MKG_2"
+    waypointId: SO_MKG
+    activationZone: 1
+    targetBlockIndex: 2
+    triggers:
+    - label: None_auto
+      conditionId: "MISSION_OnMissionComplete_GRADSKA KU\u0106A"
+      triggerType: 6
+      conWaypointId: 
+      requiredZone: 0
+      missionName: "GRADSKA KU\u0106A"
+      blockId: 
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 9
+      requiredSeconds: 9
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+    - label: None_auto
+      conditionId: TIME_BlockTime_7
+      triggerType: 1
+      conWaypointId: 
+      requiredZone: 0
+      missionName: "GRADSKA KU\u0106A"
+      blockId: 
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 7
+      requiredSeconds: 7
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+    - label: None_auto
+      conditionId: WP_SO_MKG_2
+      triggerType: 2
+      conWaypointId: SO_MKG
+      requiredZone: 2
+      missionName: "GRADSKA KU\u0106A"
+      blockId: 
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 7
+      requiredSeconds: 7
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+  - bindingLabel: "P\u0160M start"
+    groupId: "SO_P\u0160M_6_BLOCK_OnBlockStarted_MKG_SO_Mission_TIME_BlockTime_7"
+    waypointId: "SO_P\u0160M"
+    activationZone: 1
+    targetBlockIndex: 6
+    triggers:
+    - label: None_auto
+      conditionId: BLOCK_OnBlockStarted_MKG_SO_Mission
+      triggerType: 7
+      conWaypointId: 
+      requiredZone: 0
+      missionName: "GRADSKA KU\u0106A"
+      blockId: MKG_SO_Mission
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 10
+      requiredSeconds: 9
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+    - label: None_auto
+      conditionId: TIME_BlockTime_7
+      triggerType: 1
+      conWaypointId: 
+      requiredZone: 0
+      missionName: "GRADSKA KU\u0106A"
+      blockId: 
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 7
+      requiredSeconds: 7
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+  - bindingLabel: Muzej start samo Wp free roam
+    groupId: SO_GMS_5_WP_SO_GMS_2
+    waypointId: SO_GMS
+    activationZone: 1
+    targetBlockIndex: 5
+    triggers:
+    - label: None_auto
+      conditionId: WP_SO_GMS_2
+      triggerType: 2
+      conWaypointId: SO_GMS
+      requiredZone: 2
+      missionName: "GRADSKA KU\u0106A"
+      blockId: MKG_SO_Mission
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 10
+      requiredSeconds: 9
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+  - bindingLabel: "Pozori\u0161te start samo WP free roam"
+    groupId: SO_NPS_7_WP_SO_NPS_2
+    waypointId: SO_NPS
+    activationZone: 1
+    targetBlockIndex: 7
+    triggers:
+    - label: None_auto
+      conditionId: WP_SO_NPS_2
+      triggerType: 2
+      conWaypointId: SO_NPS
+      requiredZone: 2
+      missionName: "GRADSKA KU\u0106A"
+      blockId: MKG_SO_Mission
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 10
+      requiredSeconds: 9
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+  - bindingLabel: MID game dialog after WP free roam
+    groupId: SO_GLOBAL_11_BLOCK_OnBlockEnded_NPS_SO_Mission_BLOCK_OnBlockEnded_GMS_SO_Mission
+    waypointId: SO_GLOBAL
+    activationZone: 3
+    targetBlockIndex: 11
+    triggers:
+    - label: None_auto
+      conditionId: BLOCK_OnBlockEnded_NPS_SO_Mission
+      triggerType: 7
+      conWaypointId: SO_NPS
+      requiredZone: 2
+      missionName: "GRADSKA KU\u0106A"
+      blockId: NPS_SO_Mission
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 11
+      requiredSeconds: 9
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+    - label: None_auto
+      conditionId: BLOCK_OnBlockEnded_GMS_SO_Mission
+      triggerType: 7
+      conWaypointId: SO_NPS
+      requiredZone: 2
+      missionName: "GRADSKA KU\u0106A"
+      blockId: GMS_SO_Mission
+      imageName: 
+      dialogId: uvod_dialog
+      poiId: 
+      uiElementId: 
+      subEventType: 11
+      requiredSeconds: 9
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0

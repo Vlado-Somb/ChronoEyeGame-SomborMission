@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6f0fc02fb1b5d458053254751e1a78, type: 3}
+  m_Name: EB_SO_Mission
+  m_EditorClassIdentifier: 
+  missionName: "SPOMENIK ERNESTU BO\u0160NJAKU"
+  tasks:
+  - taskType: 0
+    title: Moja draga kolevka
+    completionTitle: "Bravo, na\u0161ao si spomen obele\u017Eje ovo poznatom Somborcu!"
+    completionQuote: "Bo\u0161njak je 1906. godine doneo u Sombor kino-projektor
+      i otvorio bioskop, prvo u zgradi pozori\u0161ta, a posle u jednoj velikoj \u0161upi
+      na Va\u0161ari\u0161tu. Tu je prikazivao razne filmske \u017Eurnale i kra\u0107e
+      komi\u010Dne zabavne filmove koje je nabavljao od evropskih distributera."
+    taskCompletionDelay: 0
+    instruction: "Prona\u0111i spomenik poznatom somborcu Ernestu Bo\u0161njaku"
+    waypointId: SO_EB
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 2
+    title: Somborski sanjar
+    completionTitle: "Bravo istra\u017Eiva\u010Du!"
+    completionQuote: "Ernest Bo\u0161njak bio je osniva\u010D jugoslovenske kinematografije.
+      Bio je jedan od prvih jugoslovenskih snimatelja, reditelja i producenta."
+    taskCompletionDelay: 8
+    instruction: "Odgovori ta\u010Dno na pitanje.."
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "\u0160ta je bio Ernest Bo\u0161njak?"
+    Choices:
+    - lekar
+    - "politi\u010Dar"
+    - reditelj
+    - akrobata
+    CorrectChoiceIndex: 2
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 3
+    title: Sombor ka prestonica sedme umetnosti
+    completionTitle: "Fantasti\u010Dno!"
+    completionQuote: "\u201EKad bi Sombor bio Holivud\u201C je predstava o Ernestu
+      Bo\u0161njaku, somborskom sanjaru, koji je kao pionir Jugoslovenskog filma,
+      po\u010Detkom 20. veka \u017Eeleo da od Sombora napravi \u201Efabriku snova\u201C.
+      Njegova \u017Eelja da od Sombora napravi Holivud, ali njegov san kako umetnost
+      mo\u017Ee da promeni jedan grad, da promeni svet, biva zaustavljena Velikim
+      ratom."
+    taskCompletionDelay: 9
+    instruction: "Upi\u0161i ta\u010Dan odgovor"
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: "Koji je puno naziv poznate predstave o \u017Eivotu Ernesta
+      Bo\u0161njaka, \"Kad bi Sombor bi..\""
+    answerPlaceholder: odgovor je
+    expectedAnswer: Holivud
+    customData: 
+    isCompleted: 0
+  waypointDatabase: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034, type: 2}

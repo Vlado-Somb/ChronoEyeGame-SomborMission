@@ -1,0 +1,230 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e0e05ffd8c40c49ac8705f0973715d, type: 3}
+  m_Name: Sombor Waypoint Database
+  m_EditorClassIdentifier: 
+  waypoints:
+  - type: 0
+    id: SO_GK
+    displayName: "Gradska ku\u0107a"
+<<<<<<< Updated upstream
+    latitude: 45.77246906429608
+    longitude: 19.11386314623093
+    altitude: 90
+    triggerRadiusLevel1: 150
+    triggerRadiusLevel2: 66
+    triggerRadiusLevel3: 10
+=======
+    latitude: 45.772478019300046
+    longitude: 19.11388079514005
+    altitude: 90
+    triggerRadiusLevel1: 75
+    triggerRadiusLevel2: 21
+    triggerRadiusLevel3: 7
+>>>>>>> Stashed changes
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+  - type: 0
+    id: SO_MKG
+    displayName: "Galerija Milan Konjovi\u0107"
+<<<<<<< Updated upstream
+    latitude: 45.77225379100182
+    longitude: 19.113749531927738
+    altitude: 90
+    triggerRadiusLevel1: 100
+    triggerRadiusLevel2: 35
+    triggerRadiusLevel3: 8
+=======
+    latitude: 45.77215606194312
+    longitude: 19.113776908494945
+    altitude: 90
+    triggerRadiusLevel1: 50
+    triggerRadiusLevel2: 15
+    triggerRadiusLevel3: 7
+>>>>>>> Stashed changes
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+  - type: 0
+    id: "SO_P\u0160M"
+    displayName: "Muzej Podunavskih \u0160vaba"
+<<<<<<< Updated upstream
+    latitude: 45.772056716514726
+    longitude: 19.11269997327806
+    altitude: 90
+    triggerRadiusLevel1: 100
+    triggerRadiusLevel2: 30
+    triggerRadiusLevel3: 8
+=======
+    latitude: 45.772059444178886
+    longitude: 19.11271056383739
+    altitude: 90
+    triggerRadiusLevel1: 50
+    triggerRadiusLevel2: 15
+    triggerRadiusLevel3: 7
+>>>>>>> Stashed changes
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+  - type: 0
+    id: SO_GMS
+    displayName: Gradski Muzej Sombor
+<<<<<<< Updated upstream
+    latitude: 45.77192920802979
+    longitude: 19.111556856276923
+    altitude: 90
+    triggerRadiusLevel1: 50
+    triggerRadiusLevel2: 25
+=======
+    latitude: 45.772059444178886
+    longitude: 19.11271056383739
+    altitude: 90
+    triggerRadiusLevel1: 50
+    triggerRadiusLevel2: 15
+>>>>>>> Stashed changes
+    triggerRadiusLevel3: 7
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+  - type: 0
+    id: SO_NPS
+    displayName: "Narodno pozori\u0161te Sombor"
+<<<<<<< Updated upstream
+    latitude: 45.77229970213995
+    longitude: 19.111809160703643
+    altitude: 90
+    triggerRadiusLevel1: 50
+    triggerRadiusLevel2: 30
+=======
+    latitude: 45.77228188438349
+    longitude: 19.11181348204088
+    altitude: 90
+    triggerRadiusLevel1: 50
+    triggerRadiusLevel2: 12
+>>>>>>> Stashed changes
+    triggerRadiusLevel3: 7
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+  - type: 0
+<<<<<<< Updated upstream
+    id: SO_VP
+    displayName: "Spomenik Veljku Petrovi\u0107u"
+    latitude: 45.772193708091905
+    longitude: 19.1161010794803
+=======
+    id: "SO_S\u010C"
+    displayName: "Srpska \u010Ditaonica"
+    latitude: 45.77286325919296
+    longitude: 19.11566256691123
+>>>>>>> Stashed changes
+    altitude: 90
+    triggerRadiusLevel1: 50
+    triggerRadiusLevel2: 12
+    triggerRadiusLevel3: 5
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+  - type: 0
+    id: SO_LK
+    displayName: "Spomenik Lazi Kosti\u0107u"
+<<<<<<< Updated upstream
+    latitude: 45.773423582082984
+    longitude: 19.115200402654818
+=======
+    latitude: 45.773483680738025
+    longitude: 19.115175987705435
+>>>>>>> Stashed changes
+    altitude: 90
+    triggerRadiusLevel1: 50
+    triggerRadiusLevel2: 12
+    triggerRadiusLevel3: 5
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+  - type: 0
+    id: SO_EB
+    displayName: "Spomenik Ernestu Bo\u0161njaku"
+<<<<<<< Updated upstream
+    latitude: 45.7729479321253
+    longitude: 19.115523374372582
+=======
+    latitude: 45.772966468741664
+    longitude: 19.11547583884617
+>>>>>>> Stashed changes
+    altitude: 90
+    triggerRadiusLevel1: 50
+    triggerRadiusLevel2: 12
+    triggerRadiusLevel3: 5
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+<<<<<<< Updated upstream
+  - type: 1
+    id: SO_PED
+    displayName: "Pedago\u0161ki fakultet u Somboru"
+    latitude: 45.7683412509427
+    longitude: 19.12169385967678
+    altitude: 90
+    triggerRadiusLevel1: 70
+    triggerRadiusLevel2: 20
+    triggerRadiusLevel3: 10
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+  - type: 1
+    id: "SO_SV\u0110"
+    displayName: "Crkva Svetog \u0110or\u0111a"
+    latitude: 45.77257847221019
+    longitude: 19.10976272208343
+    altitude: 90
+    triggerRadiusLevel1: 50
+    triggerRadiusLevel2: 20
+    triggerRadiusLevel3: 10
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+  - type: 0
+    id: "SO_\u017DUP"
+    displayName: "\u017Dupanija"
+    latitude: 45.77019397080231
+    longitude: 19.117783030058295
+=======
+  - type: 0
+    id: "SO_\u017DUP"
+    displayName: "\u017Dupanija"
+    latitude: 45.770009385415605
+    longitude: 19.117732572954402
+>>>>>>> Stashed changes
+    altitude: 90
+    triggerRadiusLevel1: 180
+    triggerRadiusLevel2: 66
+    triggerRadiusLevel3: 15
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+<<<<<<< Updated upstream
+  - type: 1
+    id: SO_GLOBAL
+    displayName: "Op\u0161ti Waypoint za Sombor"
+    latitude: 45.77302199880994
+    longitude: 19.115302193863783
+    altitude: 90
+    triggerRadiusLevel1: 1000
+    triggerRadiusLevel2: 550
+    triggerRadiusLevel3: 250
+    zone1ConfirmDelay: 2
+    zone2ConfirmDelay: 2
+    zone3ConfirmDelay: 2
+=======
+>>>>>>> Stashed changes

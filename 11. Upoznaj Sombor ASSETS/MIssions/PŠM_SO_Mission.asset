@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6f0fc02fb1b5d458053254751e1a78, type: 3}
+  m_Name: "P\u0160M_SO_Mission"
+  m_EditorClassIdentifier: 
+  missionName: "MUZEJ PODUNAVSKIH \u0160VABA"
+  tasks:
+  - taskType: 0
+    title: Most kultura i tradicije
+    completionTitle: "Uspe\u0161no si prona\u0161ao Muzej Podunavskih \u0160vaba"
+    completionQuote: "Kad si se na\u0161ao pred zgradom muzeja, seti se da ona \u010Duva
+      se\u0107anja na zajednice koje su se nad Dunavom razvijale vi\u0161e od dva
+      veka. Ovaj kutak Sombora svedo\u010Di o bogatom spoju nema\u010Dke i srpske
+      tradicije."
+    taskCompletionDelay: 6
+    instruction: "Prona\u0111i lokaciju Muzeja Podunavskih \u0160vaba."
+    waypointId: "SO_P\u0160M"
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 1
+  - taskType: 2
+    title: Sada muzej a nekada palata
+    completionTitle: "Bravo, uspe\u0161no si odgovrio na ovo pitanje!"
+    completionQuote: "Kada je sagra\u0111ena, Gra\u0161alkovi\u0107eva palata je
+      slu\u017Eila kao administrativna i stambena zgrada komorske uprave (Domus cameralis
+      administrationis) i predstavljala je jednu od najimpozantnijih javnih gra\u0111evina
+      u Somboru."
+    taskCompletionDelay: 7
+    instruction: "Odgovori ta\u010Dno na postavljeno pitanja."
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "\u010Cije je palata nekada bila ova zgrada u kojoj se nalazi MP\u0160
+      muzej?"
+    Choices:
+    - "Kroni\u0107eva palata"
+    - "Gra\u0161alkovi\u0107eva palata"
+    - "Vla\u0161kali\u0107eva plata"
+    CorrectChoiceIndex: 1
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 1
+  - taskType: 3
+    title: "Naseljavanja Ba\u010Dke kroz vekove"
+    completionTitle: "Bravo, uspe\u0161no si odgovrio na ovo pitanje!"
+    completionQuote: "Izborom 1751. godine pokazuje\u0161 da poznaje\u0161 period
+      prvih naseljavanja Ba\u010Dke. Prvo su naseljavane rusinske grkokatoli\u010Dke
+      porodice, a zatim je po\u010Dela i kolonizacija nema\u010Dkih zemljoradnika
+      u Banat i Ba\u010Dku. Njihov trud u poljoprivredi i zanatima ostavio je neizbrisiv
+      trag u istoriji regiona."
+    taskCompletionDelay: 7
+    instruction: "Unesi ta\u010Dan odgovor."
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "Koje godine su se Podunavske \u0160vabe po\u010Dele da se doseljavaju
+      na teritoiju dana\u0161njeg Sombora?"
+    Choices:
+    - 1596. godine
+    - 1763. godine
+    - 1763. godine
+    - 1763. godine
+    CorrectChoiceIndex: 1
+    inputPlaceholder: "Koje godine je potpisan dekret o po\u010Detku kolonizacije
+      Ba\u010Dke?"
+    answerPlaceholder: "Ovde brojem upi\u0161i svoj odgovor"
+    expectedAnswer: 1751
+    customData: 
+    isCompleted: 1
+  waypointDatabase: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034, type: 2}

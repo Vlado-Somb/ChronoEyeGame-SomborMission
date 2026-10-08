@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6f0fc02fb1b5d458053254751e1a78, type: 3}
+  m_Name: MKG_SO_Mission
+  m_EditorClassIdentifier: 
+  missionName: "GALERIJA MILAN KONJOVI\u0106"
+  tasks:
+  - taskType: 0
+    title: Platno utkano u gradske zidove
+    completionTitle: "Bravo, uspe\u0161no si prona\u0161ao galeriju ovog znamenitog
+      Somborca!"
+    completionQuote: "Galerija \u201EMilan Konjovi\u0107\u201D u Somboru osnovana
+      je Ugovorom o poklonu od 8. jula 1966. godine, kojim je Milan Konjovi\u0107
+      svom rodnom gradu Somboru darivao zbirku od 500 svojih radova."
+    taskCompletionDelay: 7
+    instruction: "Prona\u0111i lokaciju Galerija Milana Konjovi\u0107a, i stani sipred
+      nje."
+    waypointId: SO_MKG
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 2
+    title: Od Sombora do Pariza i natrag..
+    completionTitle: "Bravo, Milan Konjovi\u0107 bio je srpski slikar i akademik!"
+    completionQuote: "Studirao je u Pragu i Be\u010Du, a \u017Eiveo u Parizu od 1924.
+      do 1932. Svojim opusom od 6.000 radova pripada vrhu srpske likovne umetnosti,
+      uz afirmaciju svoga osobenog stila koloriste ekspresionisti\u010Dkog temperamenta."
+    taskCompletionDelay: 8
+    instruction: Odgovori na postavljeno pitanje.
+    waypointId: SO_MKG
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "Ko je bio Milan Konjovi\u0107?"
+    Choices:
+    - Vajar
+    - Pisac
+    - Slikar
+    - Fotograf
+    CorrectChoiceIndex: 2
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 3
+    title: Poslednji Fovista bio je iz Sombora
+    completionTitle: "Ta\u010Dan odgovor!"
+    completionQuote: "Milan Konjovi\u0107 je ro\u0111en 28. januara 1898. godine
+      u znamenitoj porodici advokata i poslanika u ugarskom saboru Davida Konjevi\u0107a.Po
+      majci je potomak uglednog srpskog pedagoga, publiciste i upravnika Srpske u\u010Diteljske
+      \u0161kole Nikole Vuki\u0107evi\u0107a. U Somboru je, tokom poha\u0111anja
+      gimnazije, 1914. godine prvi put izlagao pedesetak radova slikanih u prirodi."
+    taskCompletionDelay: 8
+    instruction: "U belo polje unesi ta\u010Dan odgovor."
+    waypointId: SO_MKG
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "Kada je ro\u0111en Milan Konjovi\u0107?"
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: "Kada je ro\u0111en Milan Konjovi\u0107?"
+    answerPlaceholder: "Unesi godinu ro\u0111enja"
+    expectedAnswer: 1898
+    customData: 
+    isCompleted: 0
+  waypointDatabase: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034, type: 2}

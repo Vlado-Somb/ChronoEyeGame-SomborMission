@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6f0fc02fb1b5d458053254751e1a78, type: 3}
+  m_Name: VP_SO_Mission
+  m_EditorClassIdentifier: 
+  missionName: "SPOMENIK VELJKU PETROVI\u0106U"
+  tasks:
+  - taskType: 0
+    title: "Pitomac prvog srpskog koled\u017Ea"
+    completionTitle: "Postaje\u0161 sve bolji istra\u017Eiva\u010D!"
+    completionQuote: "Veljko Petrovi\u0107 bio je istaknuti srpski knji\u017Eevnik
+      i akademik. Gimnaziju je zavr\u0161io na ma\u0111arskom jeziku u rodnom Somboru,
+      a potom je studirao pravo u Budimpe\u0161ti. Istovremeno je bio pitomac prvog
+      srpskog koled\u017Ea, zavoda Save Tekelije, \u010Duvenog pe\u0161tanskog Tekelijanuma."
+    taskCompletionDelay: 7
+    instruction: "Prona\u0111i spomenik Veljku Petrovi\u0107u"
+    waypointId: SO_VP
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 2
+    title: 
+    completionTitle: Bravo!
+    completionQuote: "Nai\u0111e tako neka igra, obuzme de\u010Dake kao zaraza, razvije
+      se u naviku a u nekome i u pravu strast. Krajem devedesetih godina uneo je
+      neko u Ba\u010Dku kult takozvanih plemenitih golubova..."
+    taskCompletionDelay: 10
+    instruction: 
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "Kako se zove \u010Duvena zbirka pripovetaka Veljka Petrovi\u0107a?"
+    Choices:
+    - GOLUBICA SA CRNIM SRCEM
+    - PLAVI LEPTIR
+    - "PONO\u0106NE PRI\u010CE"
+    CorrectChoiceIndex: 0
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 2
+    title: Zapisi u kamenu i bronzi
+    completionTitle: "\u010Cestitam, istra\u017Eiva\u010Du ima\u0161 dobro oko!"
+    completionQuote: "Igor \u0160eter vajar, je rodjen 1951. u Ljubljani, u Sloveniji,
+      a ve\u0107 dugo vremena \u017Eivi u gradu Somboru, u Srbiji. Umetno\u0161\u0107u
+      se bavi od uvek. Interesovanje za slikarstvo i vajarstvo ga je inspirisalo
+      da iznova stvara i nalazi nove izazove."
+    taskCompletionDelay: 7
+    instruction: "Odgvori ta\u010Dno na pitanje"
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "Kako se zove umetnik koji je skulpturama ovekove\u010Dio somborske
+      velikane?"
+    Choices:
+    - Henry Moore
+    - "Igor \u0160eter"
+    - "Mr\u0111an Baji\u0107"
+    CorrectChoiceIndex: 1
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  waypointDatabase: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034, type: 2}

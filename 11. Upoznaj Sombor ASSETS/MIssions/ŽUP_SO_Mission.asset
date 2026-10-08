@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6f0fc02fb1b5d458053254751e1a78, type: 3}
+  m_Name: "\u017DUP_SO_Mission"
+  m_EditorClassIdentifier: 
+  missionName: "\u017DUPANIJA"
+  tasks:
+  - taskType: 0
+    title: "Tiha mo\u0107 Sombora"
+    completionTitle: "Bravo mladi istori\u010Daru!"
+    completionQuote: "Jo\u0161 u 15. veku, u tada\u0161njem Cobor Sent-Mihalju, a
+      dana\u0161njem Somboru, odr\u017Eavana su ponekad zasedanja skup\u0161tine
+      Bodro\u0161ke \u017Eupanije. Nakon povla\u010Denja Turaka iz Ba\u010Dke 1687.,
+      sednice \u017Eupanijske skup\u0161tine ponovo su po\u010Dele da se odr\u017Eavaju
+      u Somboru. Za stalno sedi\u0161te Ba\u010Dko-bodro\u0161ke \u017Eupanije Sombor
+      je progla\u0161en 1786. godine."
+    taskCompletionDelay: 10
+    instruction: "Prona\u0111i zgradu Ba\u010Dko-Bodro\u0161ke \u017Eupanije u Somboru "
+    waypointId: "SO_\u017DUP"
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 3
+    title: Eksplozija boja s bojnih polja
+    completionTitle: "\u010Cestitam, ti si sada ekspert za istoriju Sombora!"
+    completionQuote: "Slika se zove \u201EBitka kod Sente\u201C, \u0161iroka je 7
+      metara, a visoka 4 metra. Ako se ra\u010Duna i povr\u0161ina pozla\u0107enog
+      rama, koji je, takodje, umetni\u010Dko delo, onda ta slika ima 40m2! Slika
+      je delo madjarskog umetnika nema\u010Dkog porekla Ferenca Ajzenhuta i poru\u010Dena
+      je za Milenijumsku izlo\u017Ebu, koja je 1896. godine organizovana u Pe\u0161ti,
+      povodom proslave hiljadugodi\u0161njice dolaska Madjara u Panonsku niziju."
+    taskCompletionDelay: 12
+    instruction: "Najve\u0107e ulje na platnu ne samo u Srbiji, nego i na prostorima
+      nekada\u0161nje Jugoslavije nalazi se u ovoj zgradi. "
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: Kako se zove ta slika?
+    answerPlaceholder: "unesi ta\u010Dan odgovor"
+    expectedAnswer: Bitka kod Sente
+    customData: 
+    isCompleted: 0
+  - taskType: 2
+    title: Sombor grad heroja
+    completionTitle: "Smrt fa\u0161izmu, sloboda narodu!"
+    completionQuote: "Vujadin Bane Sekuli\u0107 poti\u010De iz imu\u0107ne somborske
+      porodice. Bio je bio student, rukovodilac Saveza komunisti\u010Dke omladine
+      Jugoslavije (SKOJ) za Sombor i \u010Dlan Komunisti\u010Dke partije Jugoslavije,
+      u koju je primljen nedelju dana pre nego \u0161to je uhva\u0107en u prigreva\u010Dkom
+      ataru, u akciji paljevine \u017Eita. I pored strahovitih muka, kojima je bio
+      podvrgnut, nije odao ni jednog od sau\u010Desnika. Streljan je 14. avgusta
+      1941. godine."
+    taskCompletionDelay: 10
+    instruction: "Odgovori ta\u010Dno na pitanje"
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: Kako se zove narodni heroj koji je streljan u krugu zatvora ove
+      zgrade?
+    Choices:
+    - "Vujadin Bane Sekuli\u0107"
+    - Mihajlo Mika Alas
+    - "\u017Dikica Jovanovi\u0107 \u0160panac"
+    - "Bo\u0161ko Buha"
+    CorrectChoiceIndex: 0
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  waypointDatabase: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034, type: 2}

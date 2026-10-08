@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6f0fc02fb1b5d458053254751e1a78, type: 3}
+  m_Name: NPS_SO_Mission
+  m_EditorClassIdentifier: 
+  missionName: "SOMBORSKO POZORI\u0160TE"
+  tasks:
+  - taskType: 0
+    title: "Daske koje Somborcima mnogo zna\u010De"
+    completionTitle: "Bravo, prona\u0161ao si zgradu jednog od simbola grada!"
+    completionQuote: "Narodno pozori\u0161te Sombor ima dve scene: Veliku scenu i
+      malu scenu - Studio 99. Gledali\u0161te Velike scene ima trista mesta, a gledali\u0161te
+      Studia 99 ima devedeset i devet mesta. Deo je Evropske rute istorijskih teatara
+      (The european route of historic theatres), koja ima za cilj negovanje kulturne
+      ba\u0161tine odabranih evropskih pozori\u0161ta nastalih izme\u0111u 1500.
+      i 1900. godine."
+    taskCompletionDelay: 6
+    instruction: "Prona\u0111i zgradu pozori\u0161ta u Somboru, i stani pored metalne
+      skulpture  ispred ulaza."
+    waypointId: SO_NPS
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 3
+    title: Gradska teatarska istorija
+    completionTitle: "Bravo, 1882. godina je ta\u010Dan odgovor!"
+    completionQuote: "Prva predstava u zgradi Pozori\u0161ta u Somboru odr\u017Eana
+      je 25. novembra 1882. godine. Zdanje je sagra\u0111eno na inicijativu Deoni\u010Darskog
+      dru\u0161tva somborskog pozori\u0161ta, formiranog 1879. koje su \u010Dinili
+      gra\u0111ani Sombora. Od tada, Pozori\u0161te u Somboru radi kontinuirano."
+    taskCompletionDelay: 8
+    instruction: "Unesi ta\u010Dan odgovor."
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices:
+    - 
+    - 
+    - 
+    CorrectChoiceIndex: 1
+    inputPlaceholder: "Koje godine je osnovano ovo pozori\u0161te?"
+    answerPlaceholder: godina osnivanja
+    expectedAnswer: 1882
+    customData: 
+    isCompleted: 0
+  - taskType: 2
+    title: "\u010Cije li je? Na\u0161e je!"
+    completionTitle: "Ta\u010Dno!"
+    completionQuote: "Srpsko Diletantsko pozori\u0161te je tokom 1847 \u2013 1848
+      davalo predstave u Somboru, nastupaju\u0107i sa bogatim repertoarom na srpskom
+      jeziku. Stalno profesionalno pozori\u0161te deluje od 1946. godine, a 1952.
+      ovaj teatar prerasta u Narodno pozori\u0161te, a 1997. godine upisano je u
+      registar spomenika kulture, kao kulturno dobro od velikog zna\u010Daja. "
+    taskCompletionDelay: 8
+    instruction: "Odgovori ta\u010Dno na postavljeno pitanje."
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "Koji je dana\u0161nji naziv ove umetni\u010Dke institucije?"
+    Choices:
+    - "Gradsko pozori\u0161te Sombor"
+    - "Narodno pozori\u0161te Sombor"
+    - "Dr\u017Eavno pozori\u0161te Sombor"
+    - "Gra\u0111ansko pozori\u0161te Sombor"
+    CorrectChoiceIndex: 1
+    inputPlaceholder: "Koje godine je osnovano somborsko pozori\u0161te?"
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  waypointDatabase: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034, type: 2}

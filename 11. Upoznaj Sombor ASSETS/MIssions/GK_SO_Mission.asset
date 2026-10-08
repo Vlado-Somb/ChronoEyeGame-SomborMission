@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6f0fc02fb1b5d458053254751e1a78, type: 3}
+  m_Name: GK_SO_Mission
+  m_EditorClassIdentifier: 
+  missionName: "GRADSKA KU\u0106A"
+  tasks:
+  - taskType: 0
+    title: "Gradska stra\u017Ea kroz vekove"
+    completionTitle: "Uspe\u0161no si prona\u0161ao Gradsku ku\u0107u"
+    completionQuote: "Gradska ku\u0107a je jedno od najreprezentativnijih zdanja
+      u Somboru, koje je svojim centralnim polo\u017Eajem u okviru istorijskog jezgra
+      Venac, u velikoj meri odredilo arhitektonsko urbanisti\u010Dku fizionomiju
+      ovog dela grada."
+    taskCompletionDelay: 8
+    instruction: "Pona\u0111i Gradsku ku\u0107u u Somboru i stani na sredinu Trga
+      Svetog Trojstva."
+    waypointId: SO_GK
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 1
+  - taskType: 2
+    title: "Gradsku ku\u0107a u Somboru "
+    completionTitle: "Uspe\u0161no si prona\u0161ao Gradsku ku\u0107u"
+    completionQuote: "Gradska ku\u0107a je podignuta 1749. na mestu palate prvog
+      zapovednika \u0160anca i Sombora Jovana Brankovi\u0107a iz 1718. Dana\u0161nji
+      izgled dobila je 1840. dogradnjom novih krila i tornja 1842. po projektu Franca
+      Gfelera. Nakon smrti Jovana Brankovi\u0107a, ka\u0161tel je prodat gradskoj
+      upravi da bi u njemu 1749. god. bio sme\u0161ten Magistrat. Objekat je svoj
+      kona\u010Dan izled dobio 1842. godine i predstavlja najreprezentativnije zdanje
+      u neoklasicisti\u010Dkom stilu. Gradska ku\u0107a je progla\u0161ena za kulturno
+      dobro od velike va\u017Enosti."
+    taskCompletionDelay: 8
+    instruction: "Obrati pa\u017Enju na svoju okolinu, ispitaj arhitekturu.."
+    waypointId: SO_GK
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "Koje godine je gradska ku\u0107a, izgradnjom tornja, dobila svoj
+      kona\u010Dni izgled?"
+    Choices:
+    - 1718.
+    - 1749.
+    - 1842.
+    CorrectChoiceIndex: 2
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 1
+  waypointDatabase: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034, type: 2}

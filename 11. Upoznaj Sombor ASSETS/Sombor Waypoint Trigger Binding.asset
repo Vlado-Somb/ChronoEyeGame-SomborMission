@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7572dee0681c6434aa2c179d7e8f66be, type: 3}
+  m_Name: Sombor Waypoint Trigger Binding
+  m_EditorClassIdentifier: 
+  globalTriggers:
+  - label: None_auto
+    conditionId: NONE_None
+    triggerType: 0
+    conWaypointId: 
+    requiredZone: 0
+    missionName: 
+    blockId: 
+    imageName: 
+    dialogId: 
+    poiId: 
+    uiElementId: 
+    subEventType: 0
+    requiredSeconds: 0
+    enableLocationCheck: 0
+    triggerOnlyOnce: 0
+    allowInterrupt: 0
+    requireAllConditions: 0
+  waypointSettings: {fileID: 11400000, guid: b56d1b087a4e4c34b9be39fd7d741c6a, type: 2}
+  timelineSettings: {fileID: 11400000, guid: 65d7b3b70de488240b7b2328c954b7ef, type: 2}
+  waypointTriggers:
+  - bindingLabel: 
+    groupId: 
+    waypointId: SO_GK
+    activationZone: 1
+    targetBlockIndex: 0
+    triggers:
+    - label: None_auto
+      conditionId: TIME_6_10
+      triggerType: 1
+      conWaypointId: 
+      requiredZone: 0
+      missionName: 
+      blockId: 
+      imageName: 
+      dialogId: 
+      poiId: 
+      uiElementId: 
+      subEventType: 6
+      requiredSeconds: 10
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+    - label: None_auto
+      conditionId: TIME_6_12
+      triggerType: 1
+      conWaypointId: 
+      requiredZone: 0
+      missionName: 
+      blockId: 
+      imageName: 
+      dialogId: 
+      poiId: 
+      uiElementId: 
+      subEventType: 6
+      requiredSeconds: 12
+      enableLocationCheck: 0
+      triggerOnlyOnce: 1
+      allowInterrupt: 0
+      requireAllConditions: 0
+  - bindingLabel: 
+    groupId: 
+    waypointId: SO_GK
+    activationZone: 0
+    targetBlockIndex: 0
+    triggers: []
+  - bindingLabel: 
+    groupId: 
+    waypointId: 
+    activationZone: 0
+    targetBlockIndex: 0
+    triggers:
+    - label: None_auto
+      conditionId: NONE_None
+      triggerType: 0
+      conWaypointId: 
+      requiredZone: 0
+      missionName: 
+      blockId: 
+      imageName: 
+      dialogId: 
+      poiId: 
+      uiElementId: 
+      subEventType: 0
+      requiredSeconds: 0
+      enableLocationCheck: 0
+      triggerOnlyOnce: 0
+      allowInterrupt: 0
+      requireAllConditions: 0

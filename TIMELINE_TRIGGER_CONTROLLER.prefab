@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3499288818502184435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4153569317643842091}
+  - component: {fileID: 9158859753371785806}
+  m_Layer: 0
+  m_Name: TIMELINE_TRIGGER_CONTROLLER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4153569317643842091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3499288818502184435}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6900834, y: -7.019026, z: -34.609306}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9158859753371785806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3499288818502184435}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a01032182baf2489f0ca50dd70d692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  database: {fileID: 11400000, guid: ed03d7c802b2e5d44ad25ffdbd36c3ea, type: 2}
+  timeline: {fileID: 0}
+  triggerConditions:
+  - label: Prvi uslov - prvi dialog
+    targetBlockIndex: 0
+    targetBlockId: intro_dialog
+    waypointId: ispred_kuce
+    triggerOnlyOnce: 1
+    allowInterrupt: 0
+    enableTimeCheck: 0
+    minTimeSinceStart: 0
+    enableLocationCheck: 1
+    requireAllConditions: 0
+  - label: prvi hint
+    targetBlockIndex: 1
+    targetBlockId: intro_hint2
+    waypointId: ispred_kuce
+    triggerOnlyOnce: 1
+    allowInterrupt: 0
+    enableTimeCheck: 1
+    minTimeSinceStart: 20
+    enableLocationCheck: 1
+    requireAllConditions: 1
+  - label: drugi hint
+    targetBlockIndex: 2
+    targetBlockId: intro_hint
+    waypointId: ispred_kuce
+    triggerOnlyOnce: 1
+    allowInterrupt: 0
+    enableTimeCheck: 1
+    minTimeSinceStart: 30
+    enableLocationCheck: 1
+    requireAllConditions: 1
+  - label: Aldi mission expl
+    targetBlockIndex: 4
+    targetBlockId: pn_bef__explo
+    waypointId: ispred_aldija_miss_start
+    triggerOnlyOnce: 1
+    allowInterrupt: 0
+    enableTimeCheck: 0
+    minTimeSinceStart: 40
+    enableLocationCheck: 1
+    requireAllConditions: 0
+  - label: Aldi mission
+    targetBlockIndex: 3
+    targetBlockId: pn_miss
+    waypointId: ispred_aldija_miss_start
+    triggerOnlyOnce: 1
+    allowInterrupt: 0
+    enableTimeCheck: 0
+    minTimeSinceStart: 40
+    enableLocationCheck: 1
+    requireAllConditions: 0
+  - label: Aldi after
+    targetBlockIndex: 5
+    targetBlockId: pn_aft__delay
+    waypointId: ispred_aldija_miss_start
+    triggerOnlyOnce: 1
+    allowInterrupt: 0
+    enableTimeCheck: 0
+    minTimeSinceStart: 40
+    enableLocationCheck: 1
+    requireAllConditions: 0
+  - label: Aldi after
+    targetBlockIndex: 5
+    targetBlockId: pn_aft__delay
+    waypointId: ispred_aldija_miss_start
+    triggerOnlyOnce: 1
+    allowInterrupt: 0
+    enableTimeCheck: 0
+    minTimeSinceStart: 40
+    enableLocationCheck: 1
+    requireAllConditions: 0
+  - label: Aldi after
+    targetBlockIndex: 5
+    targetBlockId: pn_aft__delay
+    waypointId: ispred_aldija_miss_start
+    triggerOnlyOnce: 1
+    allowInterrupt: 0
+    enableTimeCheck: 0
+    minTimeSinceStart: 40
+    enableLocationCheck: 1
+    requireAllConditions: 0

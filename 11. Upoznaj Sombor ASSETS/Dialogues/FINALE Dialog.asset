@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a18dcb900b4754bb23c2b0400a39ed, type: 3}
+  m_Name: FINALE Dialog
+  m_EditorClassIdentifier: 
+  assetID: finale_dialog
+  lines:
+  - speakerName: Profesor Vlada
+    text: "Na kraju tvog putovanja kroz ulice i trgove Sombora mo\u017Ee\u0161 ponosno
+      zaklju\u010Diti da ovaj grad nije samo mesto prolaznih susreta, ve\u0107 centar
+      \u010Ditavog regiona bogatog kulturnim razmenama."
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Profesor Vlada
+    text: "\u201CZgrada pred tobom simbolizuje veli\u010Dinu slobodnog carskog grada,
+      \u010Dije su ulice svedoci istorijskih previranja i umetni\u010Dkih uspona.\u201D"
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Profesor Vlada
+    text: "\u201CIgraju\u0107i ovu igru, sakupio si fragmente znanja o razli\u010Ditim
+      tradicijama i narodima koje su ostavile neizbrisiv trag na ovim prostorima.\u201D"
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Profesor Vlada
+    text: "\u201CNadam se da si nau\u010Dio mnogo o \u017Eivotu, umetnosti i istoriji
+      koja je utkala Sombor u bogatstvo kulturnih vrednosti regiona.\u201D"
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Profesor Vlada
+    text: "\u201C\u010Cuvaj sakupljene pri\u010De i nastavi da istra\u017Euje\u0161
+      svet \u2013 jer svaka nova ulica krije neispri\u010Danu pri\u010Du.\u201D"
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0

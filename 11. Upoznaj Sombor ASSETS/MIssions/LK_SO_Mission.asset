@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6f0fc02fb1b5d458053254751e1a78, type: 3}
+  m_Name: LK_SO_Mission
+  m_EditorClassIdentifier: 
+  missionName: "SPOMENIK LAZI KOSTI\u0106U"
+  tasks:
+  - taskType: 0
+    title: Stihovi izliveni u bronzi
+    completionTitle: Bravo!
+    completionQuote: "Jedna \u017Eena \u010Dekala ga je \u010Detvrt veka u Somboru.
+      Napisao je najlep\u0161u ljubavnu pesmu u Somboru. Uto\u010Di\u0161te mu je
+      bio Sombor i u njemu je zauvek ostao. To je bio Laza Kosti\u0107!"
+    taskCompletionDelay: 7
+    instruction: "Prona\u0111i spomeni Lazi Kosti\u0107u."
+    waypointId: SO_LK
+    confirmationZone: 3
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 2
+    title: "Pravnik, politi\u010Dar ili ne\u0161to vi\u0161e.."
+    completionTitle: "Ta\u010Dno, bio je poznati knji\u017Eevnik!"
+    completionQuote: "Laza Kosti\u0107 je umro 1910. god. u Be\u010Du, a sahranjen
+      je na Velikom Pravoslavnom groblju u Somboru. Osta\u0107e zapam\u0107en kao
+      jedan od najzna\u010Dajnijih knji\u017Eevnika srpskog romantizma. Izabran je
+      za \u010Dlana Srpskog u\u010Denog dru\u0161tva i za redovnog \u010Dlana Srpske
+      kraljevske akademije."
+    taskCompletionDelay: 6
+    instruction: "Odgovori ta\u010Dno na postavljeno pitanje.."
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: "Laza Kosti\u0107j je bio poznati srpski..?"
+    Choices:
+    - glumac
+    - zemljoradnik
+    - lekar
+    - "knji\u017Eevnik"
+    CorrectChoiceIndex: 3
+    inputPlaceholder: 
+    answerPlaceholder: 
+    expectedAnswer: 
+    customData: 
+    isCompleted: 0
+  - taskType: 3
+    title: "Pesma o prelepoj Lenki Dun\u0111erski"
+    completionTitle: "Bravo, otkrio si ko je napisao jednu od najlep\u0161ih pesama
+      srpske poezije!"
+    completionQuote: "A na\u0161a deca pesme su moje, tih sastanaka ve\u010Diti trag,
+      to se ne pi\u0161e, to se ne poje, samo \u0161to du\u0161om probije zrak. To
+      razumemo samo nas dvoje, to je u raju prinovak drag, to tek u zanosu proroci
+      slute, Santa Maria della Salute."
+    taskCompletionDelay: 12
+    instruction: "Upi\u0161i ta\u010Dan odgovor, pravopis je va\u017Ean.."
+    waypointId: SO_GK
+    confirmationZone: 0
+    poiPrefab: {fileID: 0}
+    poiIdentifier: 
+    questionText: 
+    Choices: []
+    CorrectChoiceIndex: 0
+    inputPlaceholder: "Kako se zove najpoznatija pesma Laze Kosti\u0107a?"
+    answerPlaceholder: pesma se zove
+    expectedAnswer: Santa Maria della Salute
+    customData: 
+    isCompleted: 0
+  waypointDatabase: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034, type: 2}

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a18dcb900b4754bb23c2b0400a39ed, type: 3}
+  m_Name: START Dialog
+  m_EditorClassIdentifier: 
+  assetID: uvod_dialog
+  lines:
+  - speakerName: Profesor Vlada
+    text: "Dragi istra\u017Eiva\u010Du, svaki kamen, skulptira, fasada ili naziv
+      ulice u Somboru \u010Duvaju neispri\u010Dane pri\u010De generacija koje su
+      ovde \u017Eivele."
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Profesor Vlada
+    text: "Ispitivanjem javnih prostora otvara\u0161 vrata ka nekim pri\u010Dama
+      i obi\u010Dajima rasutim po zidovima i plo\u010Dnicima."
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Profesor Vlada
+    text: "Skulpture na trgovima \u010Desto su podignute kao spomenici hrabrosti
+      ili se\u0107anja na doga\u0111aje koji su promenili tok istorije."
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Profesor Vlada
+    text: "Skulpture na trgovima \u010Desto su podignute kao spomenici hrabrosti
+      ili se\u0107anja na doga\u0111aje koji su promenili tok istorije."
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Profesor Vlada
+    text: "I nazivi ulica, predstavljaju tragove me\u0111ukulturne saradnje i raznih
+      naroda koji su nekada, ali i danas, preplitali svoje \u017Eivote na ovim prostorima."
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Profesor Vlada
+    text: "Sve te znamenitosti grade mozaik koji otkriva ko smo bili i ko smo postali
+      kroz vekove. Tvoj zadatak je da otkrije\u0161 te slojeve zna\u010Denja i dopuni\u0161
+      slagalicu pro\u0161losti sopstvenim zapa\u017Eanjima."
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Profesor Vlada
+    text: "A sada se zaputi ka centru grada, tamo te \u010Dekaju veliki gradski trgovi!"
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
