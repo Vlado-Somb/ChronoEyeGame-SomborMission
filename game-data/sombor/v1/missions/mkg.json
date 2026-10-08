@@ -1,0 +1,75 @@
+{
+  "id": "sombor-mkg",
+  "source": {
+    "repository": "Vlado-Somb/ChronoEyeGame-SomborMission",
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/MKG_SO_Mission.asset",
+    "sourceBranch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "title": "GALERIJA MILAN KONJOVIĆ",
+  "primaryWaypointId": "SO_MKG",
+  "language": "sr-Latn",
+  "reviewStatus": "legacy_unreviewed",
+  "tasks": [
+    {
+      "id": "MKG-01",
+      "type": "gps",
+      "title": "Platno utkano u gradske zidove",
+      "instruction": "Pronađi lokaciju Galerija Milana Konjovića, i stani sipred nje.",
+      "completion": {
+        "title": "Bravo, uspešno si pronašao galeriju ovog znamenitog Somborca!",
+        "narrative": "Galerija „Milan Konjović” u Somboru osnovana je Ugovorom o poklonu od 8. jula 1966. godine, kojim je Milan Konjović svom rodnom gradu Somboru darivao zbirku od 500 svojih radova.",
+        "delaySeconds": 7
+      },
+      "gps": {
+        "waypointId": "SO_MKG",
+        "requiredZone": 3
+      }
+    },
+    {
+      "id": "MKG-02",
+      "type": "multiple_choice",
+      "title": "Od Sombora do Pariza i natrag..",
+      "instruction": "Odgovori na postavljeno pitanje.",
+      "completion": {
+        "title": "Bravo, Milan Konjović bio je srpski slikar i akademik!",
+        "narrative": "Studirao je u Pragu i Beču, a živeo u Parizu od 1924. do 1932. Svojim opusom od 6.000 radova pripada vrhu srpske likovne umetnosti, uz afirmaciju svoga osobenog stila koloriste ekspresionističkog temperamenta.",
+        "delaySeconds": 8
+      },
+      "question": {
+        "text": "Ko je bio Milan Konjović?",
+        "choices": [
+          "Vajar",
+          "Pisac",
+          "Slikar",
+          "Fotograf"
+        ],
+        "correctIndex": 2
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_MKG",
+        "confirmationZone": "3"
+      }
+    },
+    {
+      "id": "MKG-03",
+      "type": "text_input",
+      "title": "Poslednji Fovista bio je iz Sombora",
+      "instruction": "U belo polje unesi tačan odgovor.",
+      "completion": {
+        "title": "Tačan odgovor!",
+        "narrative": "Milan Konjović je rođen 28. januara 1898. godine u znamenitoj porodici advokata i poslanika u ugarskom saboru Davida Konjevića.Po majci je potomak uglednog srpskog pedagoga, publiciste i upravnika Srpske učiteljske škole Nikole Vukićevića. U Somboru je, tokom pohađanja gimnazije, 1914. godine prvi put izlagao pedesetak radova slikanih u prirodi.",
+        "delaySeconds": 8
+      },
+      "textInput": {
+        "questionText": "Kada je rođen Milan Konjović?",
+        "inputPlaceholder": "Kada je rođen Milan Konjović?",
+        "answerPlaceholder": "Unesi godinu rođenja",
+        "expectedAnswer": "1898"
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_MKG",
+        "confirmationZone": "3"
+      }
+    }
+  ]
+}
