@@ -426,8 +426,8 @@ public class MissionManager : MonoBehaviour
             waypointManager.OnWaypointZoneEntered -= gpsWaypointHandler;
             _completedWaypointTarget = targetWaypoint;
             CompleteCurrentTask();
-
         }
+    }
 
     public bool IsWaypointLockedByCurrentMission(string waypointId)
     {
