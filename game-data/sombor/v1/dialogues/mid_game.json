@@ -1,0 +1,56 @@
+{
+  "id": "mid_game",
+  "legacyId": "midgame_dialog",
+  "active": true,
+  "reviewStatus": "legacy_unreviewed",
+  "source": {
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Dialogues/MID GAME Dialog.asset",
+    "branch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "lines": [
+    {
+      "id": "mid_game-01",
+      "speaker": "Profesor Vlada",
+      "text": "Lepo je što si već zakoračio u svet pozorišne umetnosti i otkrio bogatstvo kulturnih događanja u Somboru.",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "mid_game-02",
+      "speaker": "Profesor Vlada",
+      "text": "Sada te pozivam da kreneš glavnom ulicom grada, gde te pod vedrim nebom očekuje još jedan sloj vizuelnih čuda.",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "mid_game-03",
+      "speaker": "Profesor Vlada",
+      "text": "Pogledi prolaznika zastaju nad kamenom scenografijom i portretima velikana somborske umetnosti, koji su nekada inspiraciju pronalazili na tim istim pločnicima.",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "mid_game-04",
+      "speaker": "Profesor Vlada",
+      "text": "Otvori oči i srce, jer upravo ovde, na otvorenom teatru grada, tradicija i inspiracija postaju jedno.",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    }
+  ]
+}
