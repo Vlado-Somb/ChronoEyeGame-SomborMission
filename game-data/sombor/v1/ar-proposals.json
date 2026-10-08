@@ -1,6 +1,6 @@
 {
-  "status": "proposals_only",
-  "integrationPrinciple": "Preserve existing GPS + quiz tasks; introduce optional AR moments as clearly marked new steps, with GPS fallback and safe screen-position overlays if camera tracking is unreliable.",
+  "status": "accepted_active_game_design",
+  "integrationPrinciple": "All five ideas are now active AR task entries in corresponding mission JSON, directly after their GPS step. Implementations and media may remain pending; 2D equivalent is required.",
   "arAltitudePolicy": "Do not use legacy Unity altitude as absolute vertical AR alignment. Use user placement, visual alignment or field-verified geospatial anchor only.",
   "proposals": [
     {
@@ -14,7 +14,10 @@
         "simple transparent tower outline",
         "historically reviewed caption"
       ],
-      "optional": true
+      "optional": false,
+      "active": true,
+      "editingStatus": "full_production_package_written",
+      "taskId": "GK-AR-01"
     },
     {
       "id": "AR-SO-MKG-01",
@@ -27,7 +30,10 @@
         "original illustrative palette",
         "editorial interpretation of style"
       ],
-      "optional": true
+      "optional": false,
+      "active": true,
+      "editingStatus": "editorial_concept_accepted_implementation_pending",
+      "taskId": "MKG-AR-01"
     },
     {
       "id": "AR-SO-NPS-01",
@@ -40,20 +46,27 @@
         "simple low-poly stage frame",
         "verified date/caption"
       ],
-      "optional": true
+      "optional": false,
+      "active": true,
+      "editingStatus": "editorial_concept_accepted_implementation_pending",
+      "taskId": "NPS-AR-01"
     },
     {
       "id": "AR-SO-LK-01",
       "missionId": "sombor-lk",
       "waypointId": "SO_LK",
-      "title": "Стихови око споменика",
-      "interaction": "Player manually places floating text fragments near the monument and reorders them; the actual quoted text must be selected during editorial review.",
+      "title": "Santa Maria della Salute — stihovi u vazduhu",
+      "interaction": "Reorder three title cards Santa / Maria / della Salute in AR or identical 2D fallback; canonical full title Santa Maria della Salute.",
       "completion": "order_text_fragments",
       "assetNeeds": [
-        "approved public-domain or licensed text",
-        "typography overlay"
+        "typography text cards",
+        "AR placement",
+        "optional book feather symbol"
       ],
-      "optional": true
+      "optional": false,
+      "active": true,
+      "editingStatus": "editorial_concept_accepted_implementation_pending",
+      "taskId": "LK-AR-01"
     },
     {
       "id": "AR-SO-EB-01",
@@ -66,8 +79,11 @@
         "original silent-film frame",
         "historical context caption"
       ],
-      "optional": true
+      "optional": false,
+      "active": true,
+      "editingStatus": "editorial_concept_accepted_implementation_pending",
+      "taskId": "EB-AR-01"
     }
   ],
-  "reviewRule": "No proposed AR task changes current scoring, route or mission gating until explicitly accepted and tested."
+  "reviewRule": "AR tasks are required for the mission but must always be completable via equally rewarded 2D fallback; active in data is not synonymous with implemented in app."
 }
