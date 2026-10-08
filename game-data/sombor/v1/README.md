@@ -9,6 +9,7 @@ Samostalan **sadržaj igre**, izveden iz Unity ScriptableObject resursa i dopunj
 - [`production/gradska-kuca/asset-manifest.json`](production/gradska-kuca/asset-manifest.json) — šta je vizuelno napravljeno, a šta još čeka 3D i zvuk.
 - [`production/gradska-kuca/scene-flow.json`](production/gradska-kuca/scene-flow.json) — redosled GPS → profesor → AR toranj → istorijski kviz → nagrada.
 - [`production/gradska-kuca/QA_CHECKLIST.md`](production/gradska-kuca/QA_CHECKLIST.md) — kriterijumi prihvatanja pre release-a.
+- [`production/galerija-milan-konjovic/PRODUCTION_BRIEF.md`](production/galerija-milan-konjovic/PRODUCTION_BRIEF.md) — Misija 02: *Genije boja*, originalna priča + aktivan AR zadatak hronoloških plave/crvene/sive faze, postojeća pitanja slikar/1898, bonus tokeni i zvučni/likovni plan.
 
 ## Sadržaj
 
