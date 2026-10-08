@@ -1,0 +1,73 @@
+{
+  "id": "sombor-zup",
+  "source": {
+    "repository": "Vlado-Somb/ChronoEyeGame-SomborMission",
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/ŽUP_SO_Mission.asset",
+    "sourceBranch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "title": "ŽUPANIJA",
+  "primaryWaypointId": "SO_ŽUP",
+  "language": "sr-Latn",
+  "reviewStatus": "legacy_unreviewed",
+  "tasks": [
+    {
+      "id": "ZUP-01",
+      "type": "gps",
+      "title": "Tiha moć Sombora",
+      "instruction": "Pronađi zgradu Bačko-Bodroške županije u Somboru ",
+      "completion": {
+        "title": "Bravo mladi istoričaru!",
+        "narrative": "Još u 15. veku, u tadašnjem Cobor Sent-Mihalju, a današnjem Somboru, održavana su ponekad zasedanja skupštine Bodroške županije. Nakon povlačenja Turaka iz Bačke 1687., sednice županijske skupštine ponovo su počele da se održavaju u Somboru. Za stalno sedište Bačko-bodroške županije Sombor je proglašen 1786. godine.",
+        "delaySeconds": 10
+      },
+      "gps": {
+        "waypointId": "SO_ŽUP",
+        "requiredZone": 3
+      }
+    },
+    {
+      "id": "ZUP-02",
+      "type": "text_input",
+      "title": "Eksplozija boja s bojnih polja",
+      "instruction": "Najveće ulje na platnu ne samo u Srbiji, nego i na prostorima nekadašnje Jugoslavije nalazi se u ovoj zgradi. ",
+      "completion": {
+        "title": "Čestitam, ti si sada ekspert za istoriju Sombora!",
+        "narrative": "Slika se zove „Bitka kod Sente“, široka je 7 metara, a visoka 4 metra. Ako se računa i površina pozlaćenog rama, koji je, takodje, umetničko delo, onda ta slika ima 40m2! Slika je delo madjarskog umetnika nemačkog porekla Ferenca Ajzenhuta i poručena je za Milenijumsku izložbu, koja je 1896. godine organizovana u Pešti, povodom proslave hiljadugodišnjice dolaska Madjara u Panonsku niziju.",
+        "delaySeconds": 12
+      },
+      "textInput": {
+        "questionText": "",
+        "inputPlaceholder": "Kako se zove ta slika?",
+        "answerPlaceholder": "unesi tačan odgovor",
+        "expectedAnswer": "Bitka kod Sente"
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK"
+      }
+    },
+    {
+      "id": "ZUP-03",
+      "type": "multiple_choice",
+      "title": "Sombor grad heroja",
+      "instruction": "Odgovori tačno na pitanje",
+      "completion": {
+        "title": "Smrt fašizmu, sloboda narodu!",
+        "narrative": "Vujadin Bane Sekulić potiče iz imućne somborske porodice. Bio je bio student, rukovodilac Saveza komunističke omladine Jugoslavije (SKOJ) za Sombor i član Komunističke partije Jugoslavije, u koju je primljen nedelju dana pre nego što je uhvaćen u prigrevačkom ataru, u akciji paljevine žita. I pored strahovitih muka, kojima je bio podvrgnut, nije odao ni jednog od saučesnika. Streljan je 14. avgusta 1941. godine.",
+        "delaySeconds": 10
+      },
+      "question": {
+        "text": "Kako se zove narodni heroj koji je streljan u krugu zatvora ove",
+        "choices": [
+          "Vujadin Bane Sekulić",
+          "Mihajlo Mika Alas",
+          "Žikica Jovanović Španac",
+          "Boško Buha"
+        ],
+        "correctIndex": 0
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK"
+      }
+    }
+  ]
+}
