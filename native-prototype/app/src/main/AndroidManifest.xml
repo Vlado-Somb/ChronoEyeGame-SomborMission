@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-feature android:name="android.hardware.camera.ar" android:required="true"/>
+<uses-feature android:glEsVersion="0x00030000" android:required="true"/>
+<application android:allowBackup="false" android:icon="@drawable/chrono_icon" android:label="ChronoEye · AR Lab" android:theme="@style/ChronoTheme" android:usesCleartextTraffic="false">
+<activity android:name="com.chronoeye.prototype.MainActivity" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
+<activity android:name="com.google.ar.core.examples.java.helloar.HelloArActivity" android:configChanges="orientation|screenSize" android:exported="false" android:screenOrientation="locked"/>
+<meta-data android:name="com.google.ar.core" android:value="required"/>
+</application></manifest>

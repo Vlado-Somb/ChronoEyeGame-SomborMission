@@ -1,0 +1,3 @@
+<resources><style name="ChronoTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+<item name="android:fontFamily">sans</item><item name="android:windowLightStatusBar">false</item><item name="android:statusBarColor">#101820</item><item name="android:navigationBarColor">#101820</item><item name="android:windowOptOutEdgeToEdgeEnforcement">true</item><item name="colorAccent">#F0BD69</item>
+</style></resources>

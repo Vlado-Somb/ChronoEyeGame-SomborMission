@@ -1,0 +1,7 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+<android.opengl.GLSurfaceView android:id="@+id/surfaceview" android:layout_width="match_parent" android:layout_height="match_parent"/>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dp" android:orientation="horizontal" android:background="#C0101820">
+<Button android:id="@+id/return_button" android:layout_width="wrap_content" android:layout_height="48dp" android:text="Назад" android:textSize="12sp"/>
+<Button android:id="@+id/reset_button" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:text="Постави поново" android:textSize="11sp"/>
+<Button android:id="@+id/depth_button" android:layout_width="wrap_content" android:layout_height="48dp" android:text="Depth: УКЉ." android:textSize="11sp"/>
+</LinearLayout><TextView android:id="@+id/diagnostics" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_marginBottom="70dp" android:padding="16dp" android:background="#C0101820" android:textColor="#F0BD69" android:textSize="13sp" android:text="Полако помери телефон да препозна површину."/></RelativeLayout>
