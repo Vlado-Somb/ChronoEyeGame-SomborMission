@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "collectionName": "Herbarijum Sombora",
+  "categories": [
+    {
+      "id": "relic",
+      "label": "Veliki tragovi",
+      "color": "#C9944A",
+      "rarity": "mission_unique",
+      "scoring": {
+        "points": 0,
+        "note": "Mission completion bonus is awarded once, relic is the collectible record and does not duplicate the mission score."
+      },
+      "repeatable": false,
+      "unlock": "complete_main_mission",
+      "uiGroup": "Spomenari",
+      "items": [
+        {
+          "id": "gk-tower-relic",
+          "name": "Toranj Gradske kuće",
+          "missionId": "sombor-gk",
+          "rarity": "unique",
+          "asset": "assets/gk-tower-token.svg",
+          "caption": "Toranj, pročelje i 1842. — prvi veliki trag gradskog pamćenja.",
+          "historicalFact": "Natpis MDCCCXLII označava 1842. godinu."
+        }
+      ]
+    },
+    {
+      "id": "golden_seal",
+      "label": "Zlatni gradski pečati",
+      "color": "#E3AC32",
+      "rarity": "common",
+      "repeatable": true,
+      "scoring": {
+        "pointsPerPickup": 2,
+        "dailyCap": 10,
+        "requiresUniqueSpawnId": true
+      },
+      "unlock": "discover_in_safe_gps_area_or_ar_scene",
+      "uiGroup": "Pečati",
+      "appearance": {
+        "asset": "assets/gold-city-seal.svg",
+        "inspiration": "Simplified original graphic inspired by the 1749 free-royal-city seal — not a facsimile",
+        "verifyAgainst": "https://www.ravnoplov.rs/grb-sombora/"
+      },
+      "content": {
+        "microStories": true,
+        "examples": [
+          {
+            "id": "gold-gk-001",
+            "waypointId": "SO_GK",
+            "text": "Sombor je 1749. dobio status slobodnog i kraljevskog grada.",
+            "source": "https://www.arhivsombor.org.rs/povelja/povela-slobodnog-kralevskog-grada"
+          },
+          {
+            "id": "gold-gk-002",
+            "waypointId": "SO_GK",
+            "text": "Na pročelju Gradske kuće možeš pročitati rimski zapis MDCCCXLII.",
+            "source": "https://vojvodina.travel/atrakcije/gradska-kuca-sombor/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "heart",
+      "label": "Srca Sombora",
+      "color": "#E87791",
+      "rarity": "uncommon",
+      "repeatable": false,
+      "scoring": {
+        "pointsPerNewItem": 3
+      },
+      "unlock": "romantic_story_discovery",
+      "uiGroup": "Srca",
+      "asset": "assets/heart-token.svg",
+      "example": "Srce uz priču o poeziji i ljubavi; sadržaj za Lazu Kostića ide uz Santa Maria della Salute."
+    },
+    {
+      "id": "joker",
+      "label": "Šaljivi tragovi",
+      "color": "#9E74CE",
+      "rarity": "rare",
+      "repeatable": false,
+      "scoring": {
+        "pointsPerNewItem": 1
+      },
+      "unlock": "discover_playful_interaction",
+      "uiGroup": "Džokeri",
+      "asset": "assets/joker-token.svg",
+      "rule": "Humor clearly fictional, not a false historical fact; future court-jester themed micro-scenes."
+    }
+  ],
+  "spawnRules": {
+    "safePedestrianOnly": true,
+    "noCollectiblesOnRoads": true,
+    "proximityEligibleOnly": true,
+    "maxVisibleAtOnce": 3,
+    "optional": true,
+    "allow2DCollection": true,
+    "avoidDuplicateAwardsOnReload": true,
+    "collectionProgressStoredPerPlayer": true
+  },
+  "initialGkPlacementPlan": {
+    "main": {
+      "id": "gk-tower-relic",
+      "when": "after_GK_02_correct"
+    },
+    "gold": [
+      {
+        "id": "gold-gk-001",
+        "when": "after_safe_arrival_and_mentor_intro"
+      },
+      {
+        "id": "gold-gk-002",
+        "when": "after_ar_target_confirmed"
+      }
+    ],
+    "heart": [],
+    "joker": []
+  }
+}
