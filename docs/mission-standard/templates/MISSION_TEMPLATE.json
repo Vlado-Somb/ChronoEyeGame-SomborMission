@@ -1,0 +1,47 @@
+{
+  "id": "example-city-mission-01",
+  "title": "Наслов нове мисије",
+  "primaryWaypointId": "EXAMPLE_WP_01",
+  "language": "sr-Cyrl",
+  "reviewStatus": "draft_unverified",
+  "tasks": [
+    {
+      "id": "EX-01",
+      "type": "gps",
+      "title": "Приђи локалитету",
+      "instruction": "Приђи јавно приступачној тачки.",
+      "completion": {
+        "title": "Локација откривена",
+        "narrative": "Кратак проверен текст који играч добија по доласку.",
+        "delaySeconds": 2
+      },
+      "gps": {
+        "waypointId": "EXAMPLE_WP_01",
+        "requiredZone": 3
+      }
+    },
+    {
+      "id": "EX-02",
+      "type": "multiple_choice",
+      "title": "Откриј причу",
+      "instruction": "Изабери тачан одговор.",
+      "completion": {
+        "title": "Тачно",
+        "narrative": "Објашњење засновано на провереном извору.",
+        "delaySeconds": 2
+      },
+      "question": {
+        "text": "Пример питања (заменити историјски провереним)?",
+        "choices": [
+          "Нетачно",
+          "Тачно",
+          "Нетачно"
+        ],
+        "correctIndex": 1
+      }
+    }
+  ],
+  "_templateOnly": {
+    "note": "Ова датотека је САМО пример. Не објављивати је као стварну мисију. Када се копира у пакет уклонити _templateOnly и обезбедити упарен waypoint, извор текста и регистроване timeline/triggers."
+  }
+}
