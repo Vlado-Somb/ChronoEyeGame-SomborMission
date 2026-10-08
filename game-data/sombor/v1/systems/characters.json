@@ -77,6 +77,54 @@
         "3d_glb_or_2d_silhouette",
         "location_trigger"
       ]
+    },
+    {
+      "id": "milan-konjovic-echo",
+      "role": "historical_echo",
+      "activeAsGameplayContent": false,
+      "acceptedForDesign": true,
+      "missionId": "sombor-mkg",
+      "label": "Istorijska interpretacija — Milan Konjović",
+      "representation": "original_abstract_silhouette_not_a_likeness_or_photograph",
+      "appearance": {
+        "trigger": "after_MKG-AR-01_complete",
+        "once": true,
+        "optional": true,
+        "placement": "camera_relative_or_user_surface",
+        "modelAsset": "models/mkg-historical-echo.glb",
+        "modelStatus": "planned_not_created",
+        "silhouetteFallback": "assets/mkg-historical-echo-silhouette.svg",
+        "animationStates": [
+          "fade_in",
+          "one_brush_stroke",
+          "fade_out"
+        ]
+      },
+      "audio": {
+        "sfx": "audio/mkg-brush-whisper.ogg",
+        "sfxStatus": "pending_original_sfx",
+        "speech": null,
+        "narrationBy": "profesor-vlada",
+        "note": "Do not fabricate authentic recorded voice or put invented quotations in Konjović's mouth."
+      },
+      "ui": {
+        "showHistoricalInterpretationLabel": true,
+        "allowSkip": true,
+        "allow2D": true
+      },
+      "safety": {
+        "requiresStationaryUser": true,
+        "neverSpawnOnRoad": true,
+        "placementConfirmedByUser": true
+      },
+      "history": {
+        "source": "https://snp.org.rs/enciklopedija/?p=6247",
+        "productionNeeds": [
+          "historical likeness rights if portrait fidelity is later requested",
+          "original voice script",
+          "tested GLB/AR placement"
+        ]
+      }
     }
   ],
   "eventClasses": {
