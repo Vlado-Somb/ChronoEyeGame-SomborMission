@@ -35,7 +35,7 @@ MonoBehaviour:
     answerPlaceholder: 
     expectedAnswer: 
     customData: 
-    isCompleted: 1
+    isCompleted: 0
   - taskType: 2
     title: "Gradsku ku\u0107a u Somboru "
     completionTitle: "Uspe\u0161no si prona\u0161ao Gradsku ku\u0107u"
@@ -64,5 +64,5 @@ MonoBehaviour:
     answerPlaceholder: 
     expectedAnswer: 
     customData: 
-    isCompleted: 1
+    isCompleted: 0
   waypointDatabase: {fileID: 11400000, guid: bd802864dbde74d4bbe14b06d6058034, type: 2}
