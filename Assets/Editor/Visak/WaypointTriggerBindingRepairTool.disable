@@ -1,0 +1,48 @@
+﻿using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+
+public static class WaypointTriggerBindingRepairTool
+{
+    [MenuItem("Tools/Repair Waypoint Trigger Bindings")]
+    public static void RepairAllBindings()
+    {
+        string[] allGuids = AssetDatabase.FindAssets("t:WaypointTriggerBinding");
+        int totalFixed = 0;
+
+        foreach (string guid in allGuids)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            var bindingAsset = AssetDatabase.LoadAssetAtPath<WaypointTriggerBinding>(path);
+            if (bindingAsset == null || bindingAsset.waypointTriggers == null)
+                continue;
+
+            bool assetModified = false;
+
+            foreach (var binding in bindingAsset.waypointTriggers)
+            {
+                if (binding == null || binding.triggers == null)
+                    continue;
+
+                for (int i = binding.triggers.Count - 1; i >= 0; i--)
+                {
+                    var trig = binding.triggers[i];
+                    if (trig == null || string.IsNullOrEmpty(trig.triggerId) || trig.targetBlockIndex < 0)
+                    {
+                        binding.triggers.RemoveAt(i);
+                        assetModified = true;
+                        totalFixed++;
+                    }
+                }
+            }
+
+            if (assetModified)
+            {
+                EditorUtility.SetDirty(bindingAsset);
+                Debug.Log($"[Repair] ✅ Cleaned corrupted triggers in: {path}");
+            }
+        }
+
+        Debug.Log($"[Repair] ✅ Total cleaned entries: {totalFixed}");
+    }
+}

@@ -1,0 +1,81 @@
+﻿using UnityEngine;
+using UnityEditor;
+using UnityEditor.UIElements;
+using UnityEngine.UIElements;
+using System.Collections.Generic;
+
+public class TriggerVisualizerWindow : EditorWindow
+{
+    [MenuItem("Tools/Timeline/Trigger Visualizer Window")]
+    public static void Open()
+    {
+        var window = GetWindow<TriggerVisualizerWindow>();
+        window.titleContent = new GUIContent("Trigger Visualizer");
+        window.minSize = new Vector2(600, 400);
+        window.Show();
+    }
+
+    private VisualElement _root;
+    private ScrollView _scroll;
+    private MasterTimelineManager _timeline;
+    private WaypointTriggerBinding _binding;
+
+    private void CreateGUI()
+    {
+        _root = rootVisualElement;
+
+        var refreshBtn = new Button(Refresh) { text = "Refresh Trigger Overview" };
+        _root.Add(refreshBtn);
+
+        _scroll = new ScrollView();
+        _root.Add(_scroll);
+    }
+
+    private void Refresh()
+    {
+        _scroll.Clear();
+
+        _timeline = FindFirstObjectByType<MasterTimelineManager>();
+        _binding = FindFirstObjectByType<WaypointTriggerBinding>();
+
+        if (_timeline == null || _binding == null)
+        {
+            _scroll.Add(new Label("Missing MasterTimelineManager or WaypointTriggerBinding in scene."));
+            return;
+        }
+
+        var allTriggers = new List<TimelineTriggerCondition>();
+        if (_binding.triggers != null) allTriggers.AddRange(_binding.triggers);
+        foreach (var entry in _binding.waypointTriggers)
+            if (entry.triggers != null)
+                allTriggers.AddRange(entry.triggers);
+
+        var grouped = new Dictionary<int, List<TimelineTriggerCondition>>();
+        foreach (var cond in allTriggers)
+        {
+            if (!grouped.ContainsKey(cond.targetBlockIndex))
+                grouped[cond.targetBlockIndex] = new List<TimelineTriggerCondition>();
+            grouped[cond.targetBlockIndex].Add(cond);
+        }
+
+        foreach (var pair in grouped)
+        {
+            int idx = pair.Key;
+            string label = _timeline != null ? _timeline.GetBlockLabelForIndex(idx) : $"(Block {idx})";
+
+            var box = new Box();
+            box.Add(new Label($"Target Block {idx}: {label}"));
+
+            foreach (var trig in pair.Value)
+            {
+                string triggerName = string.IsNullOrEmpty(trig.label) ? trig.triggerId : trig.label;
+                string zoneSuffix = (trig.triggerType == TriggerType.Waypoint) ? $" | Zone: {trig.requiredZone}" : "";
+                string subEventInfo = (trig.subEventType != TriggerSubEventType.None) ? $" → {trig.subEventType}" : "";
+
+                box.Add(new Label($"→ {trig.triggerType} | ID: {trig.triggerId} | Label: {triggerName}{zoneSuffix}{subEventInfo}"));
+            }
+
+            _scroll.Add(box);
+        }
+    }
+}

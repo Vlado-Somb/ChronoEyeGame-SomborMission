@@ -1,0 +1,119 @@
+.dialog-overlay {
+    display: flex;
+    position: absolute;
+    bottom: 12%;
+    left: 5%;
+    right: 5%;
+    min-height: 120px;
+    max-height: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: cyan;
+    border-width: 3px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.glitch-panel {
+    display: none;
+    position: absolute;
+    bottom: 12%;
+    left: 5%;
+    right: 5%;
+    min-height: 120px;
+    max-height: 50%;
+    background-color: rgba(1, 1, 1, 0.5);
+    border-color: cyan;
+    border-width: 2px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.action-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding: 0 16px;
+}
+
+.speaker-text {
+    font-size: 48px;
+    color: cyan;
+    -unity-text-align: upper-left;
+    margin-bottom: 8px;
+}
+
+.body-text {
+    font-size: 36px;
+    color: white;
+    -unity-text-align: upper-left;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-grow: 1;
+    margin-bottom: 12px;
+}
+
+.choice-button {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    padding: 6px 12px;
+    flex: 1 1 auto;
+    max-width: 40%;
+    background-color: transparent;
+    border-color: cyan;
+    border-width: 3px;
+    border-radius: 4px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-button {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    padding: 6px 12px;
+    flex: 1 1 auto;
+    max-width: 40%;
+    background-color: transparent;
+    border-color: cyan;
+    border-width: 3px;
+    border-radius: 4px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-label {
+    font-size: 30px;
+    color: cyan;
+    -unity-text-align: middle-center;
+    width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.mission-button {
+    display: none;
+    position: relative;
+    width: 50%;
+    padding: 12px 24px;
+    font-size: 24px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    background-color: cyan;
+    color: black;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px red;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}

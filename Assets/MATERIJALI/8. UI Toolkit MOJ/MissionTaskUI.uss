@@ -1,0 +1,303 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    padding: 8px;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+    position: relative;
+    border-left-color: rgb(255, 215, 0);
+    border-right-color: rgb(255, 215, 0);
+    border-top-color: rgb(255, 215, 0);
+    border-bottom-color: rgb(255, 215, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    max-width: 90%;
+    max-height: 40%;
+    min-width: 60px;
+    min-height: 15px;
+    picking-mode: false;
+}
+
+.header-container {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: black;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    left: 5%;
+    right: 5%;
+    top: auto;
+    -unity-text-outline-color: rgb(0, 0, 0);
+    border-left-color: rgb(204, 204, 0);
+    border-right-color: rgb(204, 204, 0);
+    border-top-color: rgb(204, 204, 0);
+    border-bottom-color: rgb(204, 204, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    position: relative;
+    max-width: 90%;
+    max-height: 40%;
+    min-width: 60%;
+    min-height: 15%;
+    flex-grow: 1;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.mission-title-label {
+    width: 100%;
+    -unity-text-align: middle-center;
+    font-size: 42px;
+    -unity-font-style: italic;
+    color: rgb(255, 255, 255);
+    align-self: center;
+}
+
+.task-title-label {
+    color: white;
+    margin-bottom: 4px;
+    align-self: center;
+    font-size: 36px;
+}
+
+.step-label {
+    color: white;
+    margin-bottom: 4px;
+    align-self: center;
+    font-size: 42px;
+}
+
+.task-instruction-label {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 28px;
+    align-self: center;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    flex-wrap: wrap;
+    position: relative;
+    right: auto;
+    left: auto;
+    white-space: normal;
+    width: 80%;
+}
+
+.question-container {
+    background-color: rgba(0, 0, 0, 0.43);
+    border-color: black;
+    padding: 12px;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 12px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: stretch;
+    flex-shrink: 0;
+    position: relative;
+    border-left-color: rgb(255, 215, 0);
+    border-right-color: rgb(255, 215, 0);
+    border-top-color: rgb(255, 215, 0);
+    border-bottom-color: rgb(255, 215, 0);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+}
+
+.question-text-label {
+    color: rgb(255, 255, 255);
+    margin-bottom: 12px;
+    font-size: 36px;
+    -unity-text-align: upper-center;
+    picking-mode: false;
+    align-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 80%;
+    width: 80%;
+    padding-bottom: 24px;
+}
+
+.choices-host {
+    flex-direction: column;
+    display: flex;
+    margin-top: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.choice-button {
+    background-color: rgba(0, 0, 0, 0.43);
+    border-color: black;
+    border-radius: 4px;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 4px;
+    align-self: center;
+    margin-bottom: 8px;
+    min-width: 500px;
+    max-width: 900px;
+    transition: background-color 0.15s, opacity 0.15s;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-left-color: rgb(255, 215, 0);
+    border-right-color: rgb(255, 215, 0);
+    border-top-color: rgb(255, 215, 0);
+    border-bottom-color: rgb(255, 215, 0);
+}
+
+.choice-button-label {
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    font-size: 32px;
+    picking-mode: false;
+}
+
+.choice-button:hover {
+    background-color: rgb(255, 215, 0);
+}
+
+.choice-button:focus {
+    background-color: rgb(255, 215, 0);
+}
+
+.choice-button:disabled {
+    opacity: 0.5;
+}
+
+.choice-error-label {
+    background-color: transparent;
+    color: red;
+    margin-top: 8px;
+    display: none;
+    font-size: 36px;
+    -unity-text-align: upper-center;
+    -unity-text-outline-width: 1px;
+}
+
+.input-container {
+    background-color: rgba(0, 0, 0, 0.43);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-color: black;
+    border-radius: 4px;
+    padding: 12px;
+    border-radius: 4px;
+    min-width: 500px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 16px;
+    flex-shrink: 0;
+}
+
+.answer-field-label {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    width: 100%;
+    font-size: 36px;
+    -unity-text-align: upper-center;
+    align-self: center;
+    flex-wrap: wrap;
+}
+
+.text-input {
+    background-color: transparent;
+    color: black;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-color: black;
+    border-radius: 4px;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    width: 100%;
+    font-size: 36px;
+    align-self: center;
+}
+
+.submit-button {
+    background-color: rgba(0, 0, 0, 0.43);
+    color: white;
+    border-radius: 4px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 4px;
+    align-self: center;
+    margin-bottom: 8px;
+    min-width: 200px;
+    transition: background-color 0.15s, opacity 0.15s;
+    font-size: 32px;
+    border-left-color: rgb(255, 215, 0);
+    border-right-color: rgb(255, 215, 0);
+    border-top-color: rgb(255, 215, 0);
+    border-bottom-color: rgb(255, 215, 0);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+}
+
+.submit-button-label {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    font-size: 36px;
+}
+
+.submit-button:hover {
+    background-color: rgb(255, 215, 0);
+}
+
+.submit-button:focus {
+    background-color: rgb(255, 215, 0);
+}
+
+.submit-button:disabled {
+    opacity: 0.5;
+}
+
+.input-error-label {
+    background-color: transparent;
+    color: red;
+    margin-top: 8px;
+    display: none;
+}

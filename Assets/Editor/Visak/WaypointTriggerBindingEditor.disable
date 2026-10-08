@@ -1,0 +1,164 @@
+﻿using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+
+[CustomEditor(typeof(WaypointTriggerBinding))]
+public class WaypointTriggerBindingEditor : Editor
+{
+    private SerializedProperty _bindings;
+    private MasterTimelineManager _timeline;
+    private WaypointDatabase _waypointDatabase;
+
+    private bool[] _bindingFoldouts;
+    private List<List<bool>> _triggerFoldouts = new();
+
+    private void OnEnable()
+    {
+        _bindings = serializedObject.FindProperty("waypointTriggers");
+        _timeline = FindObjectOfType<MasterTimelineManager>();
+        _waypointDatabase = FindObjectOfType<WaypointDatabase>();
+
+        _bindingFoldouts = new bool[_bindings.arraySize];
+        _triggerFoldouts.Clear();
+        for (int i = 0; i < _bindings.arraySize; i++)
+        {
+            var triggers = _bindings.GetArrayElementAtIndex(i).FindPropertyRelative("triggers");
+            List<bool> foldouts = new();
+            for (int j = 0; j < triggers.arraySize; j++)
+            {
+                foldouts.Add(false);
+            }
+            _triggerFoldouts.Add(foldouts);
+        }
+    }
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+
+        for (int i = 0; i < _bindings.arraySize; i++)
+        {
+            var binding = _bindings.GetArrayElementAtIndex(i);
+            var waypointIdProp = binding.FindPropertyRelative("waypointId");
+            var triggers = binding.FindPropertyRelative("triggers");
+
+            // Sync list sizes
+            while (_triggerFoldouts.Count <= i)
+                _triggerFoldouts.Add(new List<bool>());
+            while (_triggerFoldouts[i].Count < triggers.arraySize)
+                _triggerFoldouts[i].Add(false);
+            while (_triggerFoldouts[i].Count > triggers.arraySize)
+                _triggerFoldouts[i].RemoveAt(_triggerFoldouts[i].Count - 1);
+
+            _bindingFoldouts[i] = EditorGUILayout.Foldout(_bindingFoldouts[i], $"Waypoint: {waypointIdProp.stringValue}", true);
+            if (_bindingFoldouts[i])
+            {
+                EditorGUI.indentLevel++;
+
+                // Waypoint dropdown
+                if (_waypointDatabase != null)
+                {
+                    string[] wpIds = _waypointDatabase.GetWaypointIds();
+                    int selectedIdx = System.Array.IndexOf(wpIds, waypointIdProp.stringValue);
+                    int newIdx = EditorGUILayout.Popup("Waypoint ID", selectedIdx, wpIds);
+                    if (newIdx >= 0 && newIdx < wpIds.Length)
+                        waypointIdProp.stringValue = wpIds[newIdx];
+                }
+                else
+                {
+                    EditorGUILayout.PropertyField(waypointIdProp, new GUIContent("Waypoint ID"));
+                }
+
+                for (int j = 0; j < triggers.arraySize; j++)
+                {
+                    var trigger = triggers.GetArrayElementAtIndex(j);
+                    var triggerId = trigger.FindPropertyRelative("triggerId");
+                    var blockIndex = trigger.FindPropertyRelative("targetBlockIndex");
+                    var triggerType = trigger.FindPropertyRelative("triggerType");
+                    var label = trigger.FindPropertyRelative("label");
+
+                    string summary = $"[{blockIndex.intValue}] {triggerType.enumDisplayNames[triggerType.enumValueIndex]} → {label.stringValue}";
+                    _triggerFoldouts[i][j] = EditorGUILayout.Foldout(_triggerFoldouts[i][j], summary, true);
+
+                    if (_triggerFoldouts[i][j])
+                    {
+                        EditorGUI.indentLevel++;
+
+                        EditorGUILayout.PropertyField(triggerId);
+                        EditorGUILayout.PropertyField(label);
+
+                        if (_timeline != null)
+                        {
+                            int blockCount = _timeline.GetBlockCount();
+                            string[] options = new string[blockCount];
+                            for (int k = 0; k < blockCount; k++)
+                            {
+                                options[k] = $"[{k}] {_timeline.GetBlockLabelForIndex(k)}";
+                            }
+                            blockIndex.intValue = EditorGUILayout.Popup("Target Block", blockIndex.intValue, options);
+                        }
+                        else
+                        {
+                            EditorGUILayout.PropertyField(blockIndex);
+                        }
+
+                        EditorGUILayout.PropertyField(triggerType);
+
+                        EditorGUILayout.PropertyField(trigger.FindPropertyRelative("triggerOnlyOnce"));
+                        EditorGUILayout.PropertyField(trigger.FindPropertyRelative("allowInterrupt"));
+                        EditorGUILayout.PropertyField(trigger.FindPropertyRelative("requireAllConditions"));
+
+                        var timeCheck = trigger.FindPropertyRelative("enableTimeCheck");
+                        EditorGUILayout.PropertyField(timeCheck);
+                        if (timeCheck.boolValue)
+                        {
+                            EditorGUILayout.PropertyField(trigger.FindPropertyRelative("minTimeSinceStart"));
+                        }
+
+                        var locCheck = trigger.FindPropertyRelative("enableLocationCheck");
+                        EditorGUILayout.PropertyField(locCheck);
+
+                        EditorGUI.indentLevel--;
+                    }
+                }
+
+                EditorGUILayout.BeginHorizontal();
+                if (GUILayout.Button("Add Trigger"))
+                {
+                    triggers.InsertArrayElementAtIndex(triggers.arraySize);
+                    _triggerFoldouts[i].Add(false);
+                }
+                if (GUILayout.Button("Remove Last Trigger"))
+                {
+                    if (triggers.arraySize > 0)
+                    {
+                        triggers.DeleteArrayElementAtIndex(triggers.arraySize - 1);
+                        _triggerFoldouts[i].RemoveAt(_triggerFoldouts[i].Count - 1);
+                    }
+                }
+                EditorGUILayout.EndHorizontal();
+
+                if (GUILayout.Button("Remove Binding"))
+                {
+                    _bindings.DeleteArrayElementAtIndex(i);
+                    _triggerFoldouts.RemoveAt(i);
+                    break;
+                }
+
+                EditorGUI.indentLevel--;
+            }
+        }
+
+        if (GUILayout.Button("Add Binding"))
+        {
+            _bindings.InsertArrayElementAtIndex(_bindings.arraySize);
+            var newBinding = _bindings.GetArrayElementAtIndex(_bindings.arraySize - 1);
+            newBinding.FindPropertyRelative("waypointId").stringValue = "";
+            newBinding.FindPropertyRelative("triggers").ClearArray();
+
+            _triggerFoldouts.Add(new List<bool>());
+        }
+
+        serializedObject.ApplyModifiedProperties();
+    }
+}

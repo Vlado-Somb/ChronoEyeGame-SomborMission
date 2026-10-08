@@ -1,0 +1,32 @@
+VisualElement {
+}
+
+.naziviWaypointText {
+    color: rgb(37, 73, 217);
+    font-size: 90px;
+    background-color: rgba(255, 0, 0, 0.43);
+}
+
+.button {
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-left-color: rgba(245, 0, 0, 0.54);
+    border-right-color: rgba(245, 0, 0, 0.54);
+    border-top-color: rgba(245, 0, 0, 0.54);
+    border-bottom-color: rgba(245, 0, 0, 0.54);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    flex-direction: row;
+}
+
+.button:hover {
+    background-color: rgba(213, 22, 22, 0);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}

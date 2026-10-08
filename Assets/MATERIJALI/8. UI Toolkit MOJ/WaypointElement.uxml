@@ -1,0 +1,9 @@
+<engine:UXML xmlns:ui="UnityEngine.UIElements" xmlns:engine="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/MATERIJALI/8.%20UI%20Toolkit%20MOJ/WaypointElement.uss?fileID=7433441132597879392&amp;guid=192bb6bb19455d4429ff87fae9a7e860&amp;type=3#WaypointElement" />
+    <ui:VisualElement name="WaypointWrapper" class="waypoint-wrapper">
+        <ui:VisualElement name="LabelContainer" class="label-container">
+            <ui:Label name="WaypointLabel" text="Waypoint Label" class="waypoint-label" />
+        </ui:VisualElement>
+        <ui:VisualElement name="WaypointIcon" class="waypoint-icon" />
+    </ui:VisualElement>
+</engine:UXML>

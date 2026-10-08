@@ -1,0 +1,7 @@
+<UXML xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/MATERIJALI/UI%20Toolkit%20MOJ/HintOverlay.uss?fileID=7433441132597879392&amp;guid=957532866ca9fa24aba32672b3d29fce&amp;type=3#HintOverlay" />
+    <VisualElement name="hintRoot" class="hint-container" style="top: 50%; height: 10%;">
+        <Label name="hintTitle" text="INFO" class="hint-title" style="top: auto;" />
+        <Label name="hintText" text="This is a hint." class="hint-text" />
+    </VisualElement>
+</UXML>

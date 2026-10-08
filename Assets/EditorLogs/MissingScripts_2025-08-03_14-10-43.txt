@@ -1,0 +1,1 @@
+❌ Missing script on [Assets/MATERIJALI/TIMELINE_TRIGGER_CONTROLLER.prefab] GameObject: TIMELINE_TRIGGER_CONTROLLER, Component index: 1

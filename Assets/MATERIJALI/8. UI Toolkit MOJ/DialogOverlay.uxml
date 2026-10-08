@@ -1,0 +1,23 @@
+<ui:UXML xmlns="UnityEngine.UIElements" xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/MATERIJALI/UI%20Toolkit%20MOJ/DialogOverlay.uss?fileID=7433441132597879392&amp;guid=06806e5687a12f84b8d05faeaaabc305&amp;type=3#DialogOverlay" />
+    <ui:VisualElement name="DialogOverlay" class="dialog-overlay">
+        <ui:Label name="SpeakerText" class="speaker-text" />
+        <ui:Label name="BodyText" class="body-text" />
+        <ui:VisualElement name="ActionRow" class="action-row">
+            <ui:Button name="ChoiceA" class="choice-button">
+                <ui:Label name="ChoiceALabel" class="button-label"/>
+            </ui:Button>
+            <ui:Button name="NextButton" class="dialog-button">
+                <ui:Label text="Next" class="button-label" />
+            </ui:Button>
+            <ui:Button name="ChoiceB" class="choice-button">
+                <ui:Label name="ChoiceBLabel" class="button-label"/>
+            </ui:Button>
+            <ui:Button name="MissionButton" text="I am ready. Start the mission!" class="mission-button"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="PanelGlitch" class="glitch-panel">
+        <ui:Label name="PanelGlitchHead" parse-escape-sequences="false" text="*** SIGNAL DISTORTION ***" class="speaker-text" style="-unity-text-align: upper-center;" />
+        <ui:Label name="PanelGlitchBodyText" text="Incoming data stream is corrupted..." class="body-text" />
+    </ui:VisualElement>
+</ui:UXML>

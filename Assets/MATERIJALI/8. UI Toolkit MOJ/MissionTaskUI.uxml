@@ -1,0 +1,60 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns:ub="UnityEngine.UIElements" xmlns:uieva="UnityEditor.Experimental.GraphView" xmlns:uiie="UnityEngine.UIElements" xmlns:uiux="UnityEngine.Experimental.UIElements" editor-extension-mode="False">
+<<<<<<< Updated upstream
+    <Style src="project://database/Assets/MATERIJALI/8.%20UI%20Toolkit%20MOJ/MissionTaskUI.uss?fileID=7433441132597879392&amp;guid=b1d75754403db1c4e866311ddb4c05db&amp;type=3#MissionTaskUI" />
+    <ui:VisualElement class="root">
+        <ui:VisualElement name="taskUIWrapper" style="flex-direction: column; border-left-color: rgb(255, 215, 0); border-right-color: rgb(255, 215, 0); border-top-color: rgb(255, 215, 0); border-bottom-color: rgb(255, 215, 0); border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgba(0, 0, 0, 0.43);">
+            <ui:VisualElement name="headerContainer" class="header-container" style="flex-wrap: nowrap;">
+                <ui:Label name="missionTitleLabel" text="Mission Name" class="mission-title-label" />
+                <ui:Label name="taskTitleLabel" text="Task Name" class="task-title-label" />
+                <ui:Label name="stepLabel" text="TaskStep #/Total" class="step-label" />
+                <ui:Label name="instructionLabel" text="Follow the instructions below." class="task-instruction-label" />
+            </ui:VisualElement>
+            <ui:VisualElement name="questionContainer" focusable="true" class="question-container">
+                <ui:Label name="questionTextLabel" text="Question? - Choice" class="question-text-label" style="align-self: center; white-space: normal;" />
+                <ui:VisualElement name="choicesHost" class="choices-host" />
+=======
+    <Style src="project://database/Assets/MATERIJALI/UI%20Toolkit%20MOJ/MissionTaskUI.uss?fileID=7433441132597879392&amp;guid=b1d75754403db1c4e866311ddb4c05db&amp;type=3#MissionTaskUI" />
+    <ui:VisualElement class="root">
+        <ui:VisualElement name="task-ui-wrapper" style="flex-direction: column; border-left-color: rgb(255, 215, 0); border-right-color: rgb(255, 215, 0); border-top-color: rgb(255, 215, 0); border-bottom-color: rgb(255, 215, 0); border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgba(0, 0, 0, 0.43);">
+            <ui:VisualElement name="header-container" class="header-container">
+                <ui:Label name="missionTitleLabel" text="Mission Name" class="mission-title-label" />
+                <ui:Label name="taskTitleLabel" text="Task Name" class="task-title-label" />
+                <ui:Label name="stepLabel" text="TaskStep #/Total" class="task-step-label step-label" />
+                <ui:Label name="instructionLabel" text="Follow the instructions below." class="task-instruction-label instruction-label" />
+            </ui:VisualElement>
+            <ui:VisualElement name="question-container" focusable="true" class="question-container">
+                <ui:Label name="questionTextLabel" text="Question? - Choice" class="question-text-label" />
+>>>>>>> Stashed changes
+                <ui:Button name="choiceAButton" class="choice-button">
+                    <ui:Label name="choiceALabel" text="Choice A" class="choice-button-label" />
+                </ui:Button>
+                <ui:Button name="choiceBButton" class="choice-button">
+                    <ui:Label name="choiceBLabel" text="Choice B" class="choice-button-label" />
+                </ui:Button>
+<<<<<<< Updated upstream
+                <ui:Label name="choiceErrorLabel" text="Wrong answer!" class="choice-error-label" />
+            </ui:VisualElement>
+            <ui:VisualElement name="textInputContainer" class="input-container">
+                <ui:Label name="answerPlaceField" text="Question? - Input" class="answer-field-label" />
+=======
+                <ui:Label name="ChoiceErrorLabel" text="Wrong answer!" class="choice-error-label" />
+            </ui:VisualElement>
+            <ui:VisualElement name="textinput-container" class="input-container">
+                <ui:Label name="AnswerPlaceField" text="Question? - Input" class="answer-field-label" />
+>>>>>>> Stashed changes
+                <ui:TextField name="inputField" value="Enter your answer…" class="text-input" />
+                <ui:Button name="submitButton" class="submit-button">
+                    <ui:Label text="Submit" class="submit-button-label" />
+                </ui:Button>
+                <ui:Label name="inputErrorLabel" text="Input error." class="input-error-label" />
+            </ui:VisualElement>
+<<<<<<< Updated upstream
+            <ui:VisualElement name="taskCompletionContainer" class="header-container" style="flex-direction: row; align-items: center; justify-content: center;">
+                <ui:Label name="completionTitleLabel" text="Completeion Title" class="task-title-label" />
+                <ui:Label name="completionQuoteLabel" text="Completion Quote" class="task-instruction-label" />
+            </ui:VisualElement>
+=======
+>>>>>>> Stashed changes
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,166 @@
+﻿using UnityEditor;
+using UnityEditorInternal;
+using UnityEngine;
+using System.Linq;
+using System.Collections.Generic;
+
+[CustomEditor(typeof(MasterTimelineManager))]
+public class MasterTimelineManagerEditor : Editor
+{
+    private ReorderableList _list;
+    private SerializedProperty _entriesProp, _verboseProp, _fallbackProp;
+    private Dictionary<TimelineBlockSO, List<string>> _waypointMapByBlock = new Dictionary<TimelineBlockSO, List<string>>();
+
+    private void OnEnable()
+    {
+        _entriesProp = serializedObject.FindProperty("blockEntries");
+        _verboseProp = serializedObject.FindProperty("verboseLogging");
+        _fallbackProp = serializedObject.FindProperty("explorationFallbackIndex");
+
+        _list = new ReorderableList(
+            serializedObject,
+            _entriesProp,
+            draggable: true,
+            displayHeader: true,
+            displayAddButton: true,
+            displayRemoveButton: true);
+
+        _list.drawHeaderCallback = rect => EditorGUI.LabelField(rect, "Timeline Sequence", EditorStyles.boldLabel);
+        _list.elementHeightCallback = index => EditorGUIUtility.singleLineHeight * 3 + 10;
+        _list.drawElementCallback = DrawBlockEntry;
+    }
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+
+        BuildWaypointMap();
+
+        _list.DoLayoutList();
+        EditorGUILayout.PropertyField(_verboseProp);
+
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Exploration Fallback", EditorStyles.boldLabel);
+
+        var mgr = (MasterTimelineManager)target;
+        // Build name list with guards against null/destroyed
+        var names = mgr.blockEntries
+            .Select(be => {
+                var b = be.block;
+                return (b != null ? b.name : "<none>");
+            })
+            .ToArray();
+
+        var fbOpts = new[] { "<none>" }.Concat(names).ToArray();
+        int curFb = Mathf.Clamp(_fallbackProp.intValue, -1, names.Length - 1) + 1;
+        int pickFb = EditorGUILayout.Popup("Fallback Block", curFb, fbOpts);
+        _fallbackProp.intValue = (pickFb > 0 ? pickFb - 1 : -1);
+
+        serializedObject.ApplyModifiedProperties();
+    }
+
+    private void DrawBlockEntry(Rect rect, int index, bool isActive, bool isFocused)
+    {
+        var entry = _entriesProp.GetArrayElementAtIndex(index);
+        var blockProp = entry.FindPropertyRelative("block");
+        var delayProp = entry.FindPropertyRelative("entryDelay");
+        var overrideProp = entry.FindPropertyRelative("overrideNextIndex");
+
+        float h = EditorGUIUtility.singleLineHeight;
+        float x = rect.x;
+        float w = rect.width;
+
+        Object blockObj = blockProp.objectReferenceValue;
+        if (blockObj == null)
+        {
+            var warningRect = new Rect(x, rect.y + 2, w, h);
+            EditorGUI.HelpBox(warningRect, "Missing or destroyed block reference", MessageType.Warning);
+            return;
+        }
+
+        var so = blockObj as TimelineBlockSO;
+        if (so == null)
+        {
+            var errorRect = new Rect(x, rect.y + 2, w, h);
+            EditorGUI.HelpBox(errorRect, "Invalid block type", MessageType.Error);
+            return;
+        }
+
+        // Row 1: block field + type label
+        var r1 = new Rect(x, rect.y + 2, w * 0.75f, h);
+        EditorGUI.PropertyField(r1, blockProp, GUIContent.none);
+        var typeRect = new Rect(x + w * 0.75f + 4, rect.y + 2, w * 0.25f - 4, h);
+        EditorGUI.LabelField(typeRect, so.blockType.ToString(), EditorStyles.miniLabel);
+
+        // Prepare next popup names safely
+        var mgr = (MasterTimelineManager)target;
+        var nextNames = mgr.blockEntries
+            .Select(be => be.block != null ? be.block.name : "<none>")
+            .ToArray();
+        var labels = nextNames.Concat(new[] { "<none>" }).ToArray();
+        var idxMap = Enumerable.Range(0, nextNames.Length).Concat(new[] { -1 }).ToArray();
+        int curPick = System.Array.IndexOf(idxMap, overrideProp.intValue);
+
+        // Row 2: delay, next popup, next block type
+        float y2 = rect.y + h + 6;
+        float wDelay = w * 0.20f;
+        float wNext = w * 0.55f;
+        float wType = w * 0.20f;
+
+        EditorGUI.LabelField(new Rect(x, y2, 40, h), "Delay");
+        EditorGUI.PropertyField(new Rect(x + 45, y2, wDelay - 45, h), delayProp, GUIContent.none);
+
+        EditorGUI.LabelField(new Rect(x + wDelay + 4, y2, 36, h), "Next");
+        int pick = EditorGUI.Popup(
+            new Rect(x + wDelay + 4 + 40, y2, wNext - 44, h),
+            curPick, labels);
+        overrideProp.intValue = idxMap[pick];
+
+        string nextType = "—";
+        if (idxMap[pick] >= 0)
+        {
+            var nb = mgr.blockEntries[idxMap[pick]].block as TimelineBlockSO;
+            if (nb != null)
+                nextType = nb.blockType.ToString();
+        }
+        var type2Rect = new Rect(x + wDelay + wNext + 12, y2, wType - 12, h);
+        EditorGUI.LabelField(type2Rect, nextType, EditorStyles.miniLabel);
+
+        // Row 3: waypoints if any
+        float y3 = rect.y + h * 2 + 8;
+        var r3 = new Rect(x, y3, w, h);
+        if (_waypointMapByBlock.TryGetValue(so, out var wps) && wps.Count > 0)
+        {
+            EditorGUI.LabelField(r3, "Waypoints: " + string.Join(", ", wps), EditorStyles.helpBox);
+        }
+    }
+
+    private void BuildWaypointMap()
+    {
+        _waypointMapByBlock.Clear();
+        var mgr = (MasterTimelineManager)target;
+
+        foreach (var guid in AssetDatabase.FindAssets("t:WaypointTriggerBinding"))
+        {
+            var path = AssetDatabase.GUIDToAssetPath(guid);
+            var bind = AssetDatabase.LoadAssetAtPath<WaypointTriggerBinding>(path);
+            if (bind == null) continue;
+
+            foreach (var wp in bind.waypointTriggers)
+                foreach (var cond in wp.triggers)
+                {
+                    int idx = cond.targetBlockIndex;
+                    if (idx < 0 || idx >= mgr.blockEntries.Count) continue;
+
+                    var blockSO = mgr.blockEntries[idx].block;
+                    if (blockSO == null) continue;
+
+                    if (!_waypointMapByBlock.TryGetValue(blockSO, out var list))
+                        _waypointMapByBlock[blockSO] = list = new List<string>();
+
+                    if (!list.Contains(wp.waypointId))
+                        list.Add(wp.waypointId);
+                }
+        }
+    }
+}

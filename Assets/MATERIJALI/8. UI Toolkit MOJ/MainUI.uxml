@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/MATERIJALI/UI%20Toolkit%20MOJ/TestTesla%20USSFile.uss?fileID=7433441132597879392&amp;guid=e18fab00bd0b5484a94de70d2614b4d0&amp;type=3#TestTesla USSFile" />
+    <engine:VisualElement name="VisualElement" style="flex-grow: 1; top: 300px; bottom: 200px; width: auto; max-height: 1500px;">
+        <engine:Label text="LOKACIJA" class="naziviWaypointText" style="align-items: center; align-self: center;" />
+        <engine:ListView name="ListView" header-title="lik prica" show-add-remove-footer="true" tooltip="ako kliknes ove lik ce pricati" show-border="true" style="align-items: center; align-self: center; font-size: 24px;" />
+        <engine:VisualElement style="flex-grow: 0; flex-direction: row; align-self: center; align-content: center; justify-content: flex-start; align-items: center; font-size: 36px;">
+            <engine:Button text="NE" class="button" />
+            <engine:Button text="DA" class="button" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

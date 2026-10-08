@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 4755b35b590504809a7525fd2109c2e2
+  - enabled: 0
+    path: Assets/Samples/ARCore Extensions/1.47.0/Geospatial Sample/Scenes/GeospatialArf5.unity
+    guid: 1e5d96b9ed94e442dbbfddf2475baf5c
+  - enabled: 0
+    path: Assets/Scenes/test.unity
+    guid: 82b25353153611f459a4191d96202f3a
+  - enabled: 1
+    path: Assets/MATERIJALI/6. Scene Acts/1. WELCOME SCREEN.unity
+    guid: d51d76bcde437d64bb638ffec1a97a13
+  - enabled: 1
+    path: Assets/MATERIJALI/6. Scene Acts/2_INTRO_TEXT.unity
+    guid: 02beb4563f4a09c41920b58b782bbb6d
+  - enabled: 1
+    path: Assets/MATERIJALI/6. Scene Acts/2a_INTRO_TEXT_ZADATAK.unity
+    guid: 6ec81e1659a051d40a3463f5bebd4376
+  - enabled: 0
+    path: Assets/MATERIJALI/6. Scene Acts/3_ACT0_Embassy.unity
+    guid: f9219839d7070784da866bcb2c50d52f
+  - enabled: 0
+    path: Assets/MATERIJALI/6. Scene Acts/3_ACT0_Embassy 1.unity
+    guid: 7acac870f481e7e4b8fae4d4bd6222b9
+  - enabled: 0
+    path: Assets/MATERIJALI/6. Scene Acts/3_ACT0_Embassy_2.unity
+    guid: 828d9eda52b90d5498259095cca5fd05
+  - enabled: 1
+    path: Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Upoznaj Sombor.unity
+    guid: 2a9de91376540814fb6ec25ed7bc17d9
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 0465d33c6aee55f44b0237db8b0e0259,
+      type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: c199e683398494f32b4cde18e73ab731,
+      type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 0b53a025a635a4393ba0b49822242280,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3fd4fc0127790db4bae83f7b77da8d45,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: b07c4ba7650be4c25b3d0c497e7e2bb8,
+      type: 2}
+  m_UseUCBPForAssetBundles: 0

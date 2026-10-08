@@ -1,0 +1,21 @@
+<<<<<<< Updated upstream
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/MATERIJALI/8.%20UI%20Toolkit%20MOJ/ScoreUI.uss?fileID=7433441132597879392&amp;guid=630ebd43fec5a954aae29427bea59638&amp;type=3#ScoreUI" />
+    <ui:VisualElement class="score-ui-root">
+        <ui:VisualElement name="ScorePanel" class="score-panel" style="width: auto;">
+            <ui:Label name="ScoreToast" class="toast-label" />
+            <ui:Label name="NewPoints" class="score-toast-new-points" />
+            <ui:Label name="ScoreTitle" class="score-title" />
+            <ui:Label name="ScoreValue" class="score-value" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
+=======
+<UXML xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/MATERIJALI/8.%20UI%20Toolkit%20MOJ/ScoreUI.uss?fileID=7433441132597879392&amp;guid=630ebd43fec5a954aae29427bea59638&amp;type=3#ScoreUI" />
+    <VisualElement name="scoreUI-root" class="score-ui-root">
+        <Label name="scoreTitleLabel" class="score-title" />
+        <Label name="scoreLabel" class="score-value" />
+    </VisualElement>
+</UXML>
+>>>>>>> Stashed changes

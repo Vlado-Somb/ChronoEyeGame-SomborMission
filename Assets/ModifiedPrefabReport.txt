@@ -1,0 +1,450 @@
+🔧 Prefab: DIALOG
+        • uiController = Dialog UI
+        • distortion = Dialog UI
+
+🔧 Prefab: AR SYSTEM
+        • m_Name = AR SYSTEM
+        • holdPanel = HoldToInteractUI
+
+🔧 Prefab: TIMELINE AND TRIGGER EVALUATOR
+        • timelineReference = TRIGGER_EVALUATOR
+        • missionReference = MissionManager TEST
+        • _triggerBindingAsset = Sombor Clean New Waypoint Trigger Binding
+        • timelineSettings = Sombor Timeline Settings
+        • blockEntries = (unsupported type)
+        • size = (unsupported type)
+        • data = (unsupported type)
+        • block = SO Exploration Block SO
+        • overrideNextIndex = 0
+        • data = (unsupported type)
+        • block = GK_SO Mission Block SO
+        • overrideNextIndex = 0
+        • data = (unsupported type)
+        • block = PŠM_SO Mission Block SO
+        • overrideNextIndex = 0
+        • data = (unsupported type)
+        • block = SO Finish Standalone Dialog Block SO
+        • overrideNextIndex = 0
+        • explorationFallbackIndex = 0
+        • gpsUI = MissionGPSHUDUI
+        • taskUI = MissionTaskUI
+
+🔧 Prefab: MUSICMANAGER
+    ➕ Added Component (type unknown)
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: AR SYSTEM
+        • m_Name = AR SYSTEM
+        • holdPanel = HoldToInteractUI
+
+🔧 Prefab: AR SYSTEM
+        • m_Name = AR SYSTEM
+        • holdPanel = HoldToInteractUI
+
+🔧 Prefab: AR SYSTEM
+        • m_Name = AR SYSTEM
+        • holdPanel = HoldToInteractUI
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: TESTING
+    ➕ Added GameObject: AUDIO CHECK
+        • SimLatitude = 45.772
+        • SimLongitude = 19.113
+        • SimAltitude = 80
+        • emitInterval = 1
+
+🔧 Prefab: DIALOG
+        • uiController = Dialog UI
+        • distortion = Dialog UI
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: TESTING
+    ➕ Added GameObject: AUDIO CHECK
+        • SimLatitude = 45.772
+        • SimLongitude = 19.113
+        • SimAltitude = 80
+        • emitInterval = 1
+
+🔧 Prefab: AR SYSTEM
+        • m_Name = AR SYSTEM
+        • holdPanel = HoldToInteractUI
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: MISSION SYSTEM
+    ➖ Removed Component: UIDocument on MissionManager TEST
+        • scoreUI = ScoreUI
+        • taskUI = MissionTaskUI
+        • gpsUI = MissionGPSHUDUI
+        • poiDetector = Main Camera
+        • gpsProviderSource = UnifiedGpsProvider
+        • database = Sombor Waypoint Database
+        • useRuntimeWaypoints = False
+        • gpsProviderMono = UnifiedGpsProvider
+
+🔧 Prefab: AR SYSTEM
+        • m_Name = AR SYSTEM
+        • holdPanel = HoldToInteractUI
+
+🔧 Prefab: TESTING
+    ➕ Added GameObject: AUDIO CHECK
+        • SimLatitude = 45.772
+        • SimLongitude = 19.113
+        • SimAltitude = 80
+        • emitInterval = 1
+
+🔧 Prefab: AR SYSTEM
+        • m_Name = AR SYSTEM
+        • holdPanel = HoldToInteractUI
+
+🔧 Prefab: TESTING
+    ➕ Added GameObject: AUDIO CHECK
+        • SimLatitude = 45.772
+        • SimLongitude = 19.113
+        • SimAltitude = 80
+        • emitInterval = 1
+
+🔧 Prefab: MISSION SYSTEM
+    ➖ Removed Component: UIDocument on MissionManager TEST
+        • scoreUI = ScoreUI
+        • taskUI = MissionTaskUI
+        • gpsUI = MissionGPSHUDUI
+        • poiDetector = Main Camera
+        • gpsProviderSource = UnifiedGpsProvider
+        • database = Sombor Waypoint Database
+        • useRuntimeWaypoints = False
+        • gpsProviderMono = UnifiedGpsProvider
+
+🔧 Prefab: AR SYSTEM
+        • m_Name = AR SYSTEM
+        • holdPanel = HoldToInteractUI
+
+🔧 Prefab: AR SYSTEM
+        • m_Name = AR SYSTEM
+        • holdPanel = HoldToInteractUI
+
+🔧 Prefab: AR SYSTEM
+        • m_Name = AR SYSTEM
+        • holdPanel = HoldToInteractUI
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: MISSION SYSTEM
+    ➖ Removed Component: UIDocument on MissionManager TEST
+        • scoreUI = ScoreUI
+        • taskUI = MissionTaskUI
+        • gpsUI = MissionGPSHUDUI
+        • poiDetector = Main Camera
+        • gpsProviderSource = UnifiedGpsProvider
+        • database = Sombor Waypoint Database
+        • useRuntimeWaypoints = False
+        • gpsProviderMono = UnifiedGpsProvider
+
+🔧 Prefab: UI SYSTEMS
+    ➕ Added GameObject: ScoreUIDocument
+    ➕ Added Component (type unknown)
+    ➕ Added Component (type unknown)
+        • uiDoc = Dialog Manager
+        • uiDoc = Dialog Manager
+        • gpsProviderComponent = UnifiedGpsProvider
+        • mapOverlayController = Map UI
+        • missionManager = MissionManager TEST
+        • hintUIController = HintUI
+        • startOnAwake = False
+        • scoreUIDocument = ScoreUIDocument
+        • scoreManager = MissionManager TEST
+        • _toastTime = 5
+        • normalPointsClip = point-smooth-beep-230573
+        • bonusPointsClip = magic-teleport-whoosh-352765
+        • penaltyPointsClip = fail-234710
+        • defaultScoreTitle = Ukupno osvojeni poeni:
+        • waypointManager = WaypointManager
+        • missionManager = MissionManager TEST
+        • gpsProvider = UnifiedGpsProvider
+
+🔧 Prefab: AR SYSTEM
+        • m_Name = AR SYSTEM
+        • holdPanel = HoldToInteractUI
+
+🔧 Prefab: TIMELINE AND TRIGGER EVALUATOR
+        • timelineReference = TRIGGER_EVALUATOR
+        • missionReference = MissionManager TEST
+        • _triggerBindingAsset = Sombor Clean New Waypoint Trigger Binding
+        • timelineSettings = Sombor Timeline Settings
+        • blockEntries = (unsupported type)
+        • size = (unsupported type)
+        • data = (unsupported type)
+        • block = SO Exploration Block SO
+        • overrideNextIndex = 0
+        • data = (unsupported type)
+        • block = GK_SO Mission Block SO
+        • overrideNextIndex = 0
+        • data = (unsupported type)
+        • block = PŠM_SO Mission Block SO
+        • overrideNextIndex = 0
+        • data = (unsupported type)
+        • block = SO Finish Standalone Dialog Block SO
+        • overrideNextIndex = 0
+        • explorationFallbackIndex = 0
+        • gpsUI = MissionGPSHUDUI
+        • taskUI = MissionTaskUI
+
+🔧 Prefab: TIMELINE AND TRIGGER EVALUATOR
+        • timelineReference = TRIGGER_EVALUATOR
+        • missionReference = MissionManager TEST
+        • _triggerBindingAsset = Sombor Clean New Waypoint Trigger Binding
+        • timelineSettings = Sombor Timeline Settings
+        • blockEntries = (unsupported type)
+        • size = (unsupported type)
+        • data = (unsupported type)
+        • block = SO Exploration Block SO
+        • overrideNextIndex = 0
+        • data = (unsupported type)
+        • block = GK_SO Mission Block SO
+        • overrideNextIndex = 0
+        • data = (unsupported type)
+        • block = PŠM_SO Mission Block SO
+        • overrideNextIndex = 0
+        • data = (unsupported type)
+        • block = SO Finish Standalone Dialog Block SO
+        • overrideNextIndex = 0
+        • explorationFallbackIndex = 0
+        • gpsUI = MissionGPSHUDUI
+        • taskUI = MissionTaskUI
+
+🗂 Done. 36 prefab(s) with modifications exported.

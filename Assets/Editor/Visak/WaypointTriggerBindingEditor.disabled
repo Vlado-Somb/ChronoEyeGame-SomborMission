@@ -1,0 +1,223 @@
+﻿// WaypointTriggerBindingEditor.cs
+using UnityEditor;
+using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
+using MyGame.Timeline;
+using MyGame.Waypoint;
+
+[CustomEditor(typeof(WaypointTriggerBinding))]
+public class WaypointTriggerBindingEditor : Editor
+{
+    SerializedProperty bindingsProp;
+    private WaypointDatabase db;
+    private MasterTimelineManager timeline;
+    private WaypointTriggerBinding bindingAsset;
+
+    // Foldout state:
+    private List<bool> _bindingFoldouts = new List<bool>();
+    private List<List<bool>> _triggerFoldouts = new List<List<bool>>();
+
+    void OnEnable()
+    {
+        bindingAsset = (WaypointTriggerBinding)target; // ✅ this assigns the class-level field
+
+        bindingsProp = serializedObject.FindProperty("waypointTriggers");
+
+        var settings = bindingAsset.waypointSettings;
+        if (settings != null && settings.waypointDatabases.Count > settings.defaultIndex)
+            db = settings.waypointDatabases[settings.defaultIndex];
+
+        timeline = FindFirstObjectByType<MasterTimelineManager>();
+        SyncFoldouts();
+    }
+
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+        EditorGUILayout.Space();
+
+        // Show and edit the WaypointSettings field
+        EditorGUI.BeginChangeCheck();
+        bindingAsset.waypointSettings = (WaypointSettings)EditorGUILayout.ObjectField(
+            "Waypoint Settings",
+            bindingAsset.waypointSettings,
+            typeof(WaypointSettings),
+            false
+        );
+        if (EditorGUI.EndChangeCheck())
+        {
+            EditorUtility.SetDirty(bindingAsset);
+        }
+
+        EditorGUILayout.Space();
+
+        if (bindingAsset.waypointSettings == null)
+        {
+            EditorGUILayout.HelpBox(
+              "❌ No WaypointSettings assigned.\nAssign one to enable waypoint selection.",
+              MessageType.Warning
+            );
+        }
+        if (bindingAsset.waypointSettings == null)
+            return;
+
+        if (bindingAsset.waypointSettings.waypointDatabases.Count > bindingAsset.waypointSettings.defaultIndex)
+        {
+            db = bindingAsset.waypointSettings.waypointDatabases[bindingAsset.waypointSettings.defaultIndex];
+        }
+        else
+        {
+            EditorGUILayout.HelpBox("⚠️ Invalid defaultIndex in WaypointSettings.", MessageType.Warning);
+            return;
+        }
+
+        timeline = FindFirstObjectByType<MasterTimelineManager>();
+
+
+        SyncFoldouts();
+
+        // Safely gather block IDs via SerializedObject
+        SerializedObject timelineSO = new SerializedObject(timeline);
+        SerializedProperty entriesProp = timelineSO.FindProperty("blockEntries");
+        List<string> blockIdsList = new List<string>();
+        for (int i = 0; i < entriesProp.arraySize; i++)
+        {
+            var entryProp = entriesProp.GetArrayElementAtIndex(i);
+            var blockProp = entryProp.FindPropertyRelative("block");
+            var blockObj = blockProp.objectReferenceValue as TimelineBlockSO;
+            if (blockObj != null)
+                blockIdsList.Add(blockObj.blockId);
+        }
+        string[] blockIds = blockIdsList.ToArray();
+
+        // Draw each binding
+        for (int b = 0; b < bindingsProp.arraySize; b++)
+        {
+            var binding = bindingsProp.GetArrayElementAtIndex(b);
+            var wpProp = binding.FindPropertyRelative("waypointId");
+            var triggers = binding.FindPropertyRelative("triggers");
+
+            // Header with delete icon
+            EditorGUILayout.BeginHorizontal("box");
+            _bindingFoldouts[b] = EditorGUILayout.Foldout(
+                _bindingFoldouts[b],
+                $"Binding {b + 1}: {wpProp.stringValue}",
+                true
+            );
+            if (GUILayout.Button("×", GUILayout.Width(20)))
+            {
+                bindingsProp.DeleteArrayElementAtIndex(b);
+                _bindingFoldouts.RemoveAt(b);
+                _triggerFoldouts.RemoveAt(b);
+                serializedObject.ApplyModifiedProperties();
+                break;
+            }
+            EditorGUILayout.EndHorizontal();
+
+            if (_bindingFoldouts[b])
+            {
+                EditorGUI.indentLevel++;
+                // Waypoint popup
+                var wpIds = db.waypoints.Select(w => w.id).ToArray();
+                int idx = Mathf.Max(0, System.Array.IndexOf(wpIds, wpProp.stringValue));
+                wpProp.stringValue = wpIds[
+                    EditorGUILayout.Popup("Waypoint", idx, wpIds)
+                ];
+
+                // Draw each trigger
+                for (int t = 0; t < triggers.arraySize; t++)
+                {
+                    var triggerProp = triggers.GetArrayElementAtIndex(t);
+                    _triggerFoldouts[b][t] = EditorGUILayout.Foldout(
+                        _triggerFoldouts[b][t],
+                        triggerProp.FindPropertyRelative("label").stringValue ?? "New Trigger",
+                        true
+                    );
+
+                    if (_triggerFoldouts[b][t])
+                    {
+                        EditorGUILayout.BeginHorizontal();
+                        GUILayout.Space(15);
+                        if (GUILayout.Button("× Delete Trigger", GUILayout.Width(110)))
+                        {
+                            triggers.DeleteArrayElementAtIndex(t);
+                            _triggerFoldouts[b].RemoveAt(t);
+                            serializedObject.ApplyModifiedProperties();
+                            break;
+                        }
+                        EditorGUILayout.EndHorizontal();
+
+                        EditorGUI.indentLevel++;
+                        EditorGUILayout.PropertyField(triggerProp.FindPropertyRelative("label"));
+
+                        // Block picker using blockIds array
+                        var blockIdProp = triggerProp.FindPropertyRelative("targetBlockId");
+                        if (blockIds.Length > 0)
+                        {
+                            int bi = Mathf.Max(0, System.Array.IndexOf(blockIds, blockIdProp.stringValue));
+                            blockIdProp.stringValue = blockIds[
+                                EditorGUILayout.Popup("Target Block", bi, blockIds)
+                            ];
+                        }
+                        else
+                        {
+                            EditorGUILayout.LabelField("Target Block", "No blocks available");
+                        }
+
+                        EditorGUILayout.PropertyField(triggerProp.FindPropertyRelative("waypointId"));
+                        EditorGUILayout.PropertyField(triggerProp.FindPropertyRelative("triggerOnlyOnce"));
+                        EditorGUILayout.PropertyField(triggerProp.FindPropertyRelative("allowInterrupt"));
+                        EditorGUILayout.PropertyField(triggerProp.FindPropertyRelative("enableTimeCheck"));
+                        if (triggerProp.FindPropertyRelative("enableTimeCheck").boolValue)
+                            EditorGUILayout.PropertyField(triggerProp.FindPropertyRelative("minTimeSinceStart"));
+                        EditorGUILayout.PropertyField(triggerProp.FindPropertyRelative("enableLocationCheck"));
+                        EditorGUILayout.PropertyField(triggerProp.FindPropertyRelative("requireAllConditions"));
+                        EditorGUI.indentLevel--;
+                    }
+                }
+
+                // Add-trigger button
+                if (GUILayout.Button($"+ Add Trigger to Binding {b + 1}"))
+                {
+                    triggers.arraySize++;
+                    _triggerFoldouts[b].Add(false);
+                }
+
+                EditorGUI.indentLevel--;
+            }
+        }
+
+        // Add-binding button
+        if (GUILayout.Button("+ Add New Binding"))
+        {
+            bindingsProp.arraySize++;
+            _bindingFoldouts.Add(true);
+            _triggerFoldouts.Add(new List<bool>());
+        }
+
+        serializedObject.ApplyModifiedProperties();
+    }
+
+    private void SyncFoldouts()
+    {
+        while (_bindingFoldouts.Count < bindingsProp.arraySize)
+            _bindingFoldouts.Add(false);
+        while (_bindingFoldouts.Count > bindingsProp.arraySize)
+            _bindingFoldouts.RemoveAt(_bindingFoldouts.Count - 1);
+
+        for (int b = 0; b < bindingsProp.arraySize; b++)
+        {
+            var triggers = bindingsProp.GetArrayElementAtIndex(b).FindPropertyRelative("triggers");
+            if (b >= _triggerFoldouts.Count)
+                _triggerFoldouts.Add(new List<bool>());
+            var foldList = _triggerFoldouts[b];
+
+            while (foldList.Count < triggers.arraySize)
+                foldList.Add(false);
+            while (foldList.Count > triggers.arraySize)
+                foldList.RemoveAt(foldList.Count - 1);
+        }
+    }
+}

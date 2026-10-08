@@ -1,0 +1,30 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/MATERIJALI/8.%20UI%20Toolkit%20MOJ/MissionGPSHUDUI.uss?fileID=7433441132597879392&amp;guid=0b6473ad0c3d1314b8572abed077a160&amp;type=3#MissionGPSHUDUI" />
+    <ui:VisualElement name="GPSHUDRoot" class="gps-hud-container">
+        <ui:VisualElement class="gps-row">
+            <ui:Label text="Lat:  " class="gps-label" />
+            <ui:Label name="LatValue" class="gps-value" />
+            <ui:Label text="Lon:  " class="gps-label" />
+            <ui:Label name="LonValue" class="gps-value" />
+            <ui:Label text="Alt:  " class="gps-label" />
+            <ui:Label name="AltValue" class="gps-value" />
+        </ui:VisualElement>
+        <ui:VisualElement class="gps-row">
+            <ui:Label text="Total time:  " class="gps-label" />
+            <ui:Label name="GlobalTimeValue" class="gps-value" />
+            <ui:Label text="Block time:  " class="gps-label" />
+            <ui:Label name="BlockTimeValue" class="gps-value" />
+            <ui:Label text="Points:  " class="gps-label" />
+            <ui:Label name="PointsValue" class="gps-value" />
+        </ui:VisualElement>
+        <ui:VisualElement class="gps-row">
+            <ui:Label text="Next waypoint:  " class="gps-label" />
+            <ui:Label name="WaypointName" class="gps-value" />
+            <ui:Label text="Distance:  " class="gps-label" />
+            <ui:Label name="DistanceValue" class="gps-value" />
+        </ui:VisualElement>
+        <ui:VisualElement class="gps-row" style="align-self: center;">
+            <ui:Button name="ToggleMapButton" text="Map" style="align-self: center; align-items: center; width: 100px; height: 50px; font-size: 21px; background-color: rgb(255, 215, 0); -unity-text-outline-color: rgba(255, 255, 255, 0.46); -unity-text-outline-width: 0; border-left-color: rgb(166, 166, 166); border-right-color: rgb(166, 166, 166); border-top-color: rgb(166, 166, 166); border-bottom-color: rgb(166, 166, 166);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
