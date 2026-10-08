@@ -5,10 +5,8 @@ using UnityEngine;
 using System.Linq;
 using System;
 using MyGame.Waypoint;
-<<<<<<< Updated upstream
 using MyGame.Timeline;
-=======
->>>>>>> Stashed changes
+
 
 [CustomPropertyDrawer(typeof(TimelineTriggerCondition))]
 public class TriggerConditionDrawer : PropertyDrawer
@@ -95,13 +93,7 @@ public class TriggerConditionDrawer : PropertyDrawer
                     // 4) if changed, write back
                     if (newIndex != oldIndex && newIndex >= 0 && newIndex < ids.Length)
                         waypointProp.stringValue = ids[newIndex];
-<<<<<<< Updated upstream
-=======
 
-                    // 4) if selection changed, write it back
-                    if (newIndex != oldIndex && newIndex >= 0 && newIndex < _tc_WaypointIds.Length)
-                        waypointProp.stringValue = _tc_WaypointIds[newIndex];
->>>>>>> Stashed changes
 
                     // 5) small refresh button
                     Rect btnRect = new Rect(position.x + position.width - 20, y, 20, lineHeight);
@@ -147,7 +139,6 @@ public class TriggerConditionDrawer : PropertyDrawer
                 break;
 
             case TriggerType.GameBlock:
-<<<<<<< Updated upstream
                 {
                     int selectedIndex = Mathf.Max(0, Array.IndexOf(blockIds, blockIdProp.stringValue));
 
@@ -169,13 +160,7 @@ public class TriggerConditionDrawer : PropertyDrawer
                     break;
                 }
 
-=======
-                EditorGUI.PropertyField(new Rect(position.x, y, position.width, lineHeight), blockIdProp);
-                y += lineHeight + spacing;
-                EditorGUI.PropertyField(new Rect(position.x, y, position.width, lineHeight), subEventProp);
-                y += lineHeight + spacing;
-                break;
->>>>>>> Stashed changes
+
 
             case TriggerType.TrackedImage:
                 EditorGUI.PropertyField(new Rect(position.x, y, position.width, lineHeight), imageNameProp);
