@@ -1,8 +1,6 @@
 ﻿using System;
-<<<<<<< Updated upstream
 using System.Collections.Generic;
-=======
->>>>>>> Stashed changes
+
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -30,7 +28,6 @@ public class MissionTaskUIController : MonoBehaviour
     private Label choiceBLabel;
     private Label choiceErrorLabel;
 
-<<<<<<< Updated upstream
     // ==== Multi-choice dynamic support ====
     private VisualElement choicesHost;                 // container to hold dynamic buttons
     private readonly List<Button> _dynamicChoiceButtons = new();
@@ -43,8 +40,7 @@ public class MissionTaskUIController : MonoBehaviour
     private const float HOLD_THRESHOLD = 0.2f; // keep your existing threshold
 
 
-=======
->>>>>>> Stashed changes
+
     private VisualElement inputContainer;
     private Label answerPlaceField;
     private TextField inputField;
@@ -70,11 +66,8 @@ public class MissionTaskUIController : MonoBehaviour
     }
     private PressTracker choiceAPress;
     private PressTracker choiceBPress;
-<<<<<<< Updated upstream
-    // private const float HOLD_THRESHOLD = 0.2f; // 0.3 seconds
-=======
     private const float HOLD_THRESHOLD = 0.2f; // 0.3 seconds
->>>>>>> Stashed changes
+
 
     private PressTracker submitPress;
     private EventCallback<PointerDownEvent> _OnSubmitPointerDown;
@@ -85,11 +78,9 @@ public class MissionTaskUIController : MonoBehaviour
     private EventCallback<PointerDownEvent> _choiceB_PointerDownHandler;
     private EventCallback<PointerUpEvent> _choiceB_PointerUpHandler;
 
-<<<<<<< Updated upstream
     private Coroutine _subscribeCo;
 
-=======
->>>>>>> Stashed changes
+
 
     void Awake()
     {
@@ -118,36 +109,25 @@ public class MissionTaskUIController : MonoBehaviour
             Debug.Log($"[DEBUG] root saw a PointerDownEvent on “evt.target”:  {targetName}");
         }, TrickleDown.TrickleDown);
 
-<<<<<<< Updated upstream
 
         // ROOT WRAPPER CONTAINER ELEMENTS
         taskUIWrapper = root.Q<VisualElement>("taskUIWrapper");
 
         // HEADER CONTAINER ELEMENTS
         headerContainer = root.Q<VisualElement>("headerContainer");
-=======
-        // ROOT WRAPPER CONTAINER ELEMENTS
-        taskUIWrapper = root.Q<VisualElement>("task-ui-wrapper");
 
-        // HEADER CONTAINER ELEMENTS
-        headerContainer = root.Q<VisualElement>("header-container");
->>>>>>> Stashed changes
         missionTitleLabel = root.Q<Label>("missionTitleLabel");
         taskTitleLabel = root.Q<Label>("taskTitleLabel");
         stepLabel = root.Q<Label>("stepLabel");
         instructionLabel = root.Q<Label>("instructionLabel");
         // QUESTION CONTAINER ELEMENTS
-<<<<<<< Updated upstream
         questionContainer = root.Q<VisualElement>("questionContainer");
-=======
-        questionContainer = root.Q<VisualElement>("question-container");
->>>>>>> Stashed changes
+
         questionTextLabel = root.Q<Label>("questionTextLabel");
         choiceAButton = root.Q<Button>("choiceAButton");
         choiceALabel = root.Q<Label>("choiceALabel");
         choiceBButton = root.Q<Button>("choiceBButton");
         choiceBLabel = root.Q<Label>("choiceBLabel");
-<<<<<<< Updated upstream
         choiceErrorLabel = root.Q<Label>("choiceErrorLabel");
 
         // Create or find a host for dynamic choices
@@ -164,25 +144,15 @@ public class MissionTaskUIController : MonoBehaviour
         // INPUT CONTAINER ELEMENTS
         inputContainer = root.Q<VisualElement>("textInputContainer");
         answerPlaceField = root.Q<Label>("answerPlaceField");
-=======
-        choiceErrorLabel = root.Q<Label>("ChoiceErrorLabel");
-        // INPUT CONTAINER ELEMENTS
-        inputContainer = root.Q<VisualElement>("textinput-container");
-        answerPlaceField = root.Q<Label>("AnswerPlaceField");
->>>>>>> Stashed changes
+
         inputField = root.Q<TextField>("inputField");
         submitButton = root.Q<Button>("submitButton");
         inputErrorLabel = root.Q<Label>("inputErrorLabel");
         // TASK COMPLETION CONTAINER ELEMENTS
-<<<<<<< Updated upstream
         taskCompletionContainer = root.Q<VisualElement>("taskCompletionContainer");
         completionTitleLabel = root.Q<Label>("completionTitleLabel");
         completionQuoteLabel = root.Q<Label>("completionQuoteLabel");
-=======
-        taskCompletionContainer = root.Q<VisualElement>("task-completion-container");
-        completionTitleLabel = root.Q<Label>("completion-title-label");
-        completionQuoteLabel = root.Q<Label>("completion-quote-label");
->>>>>>> Stashed changes
+
 
         choiceALabel.pickingMode = PickingMode.Ignore;
         choiceBLabel.pickingMode = PickingMode.Ignore;
@@ -237,26 +207,18 @@ public class MissionTaskUIController : MonoBehaviour
         {
             Debug.LogWarning("[MissionTaskUI] Could not subscribe to MissionManager events (Instance not ready)");
         }
-<<<<<<< Updated upstream
         TrySubscribeOrRetry();
-=======
->>>>>>> Stashed changes
+
     }
 
     void OnDisable()
     {
-<<<<<<< Updated upstream
         if (_subscribeCo != null) { StopCoroutine(_subscribeCo); _subscribeCo = null; }
 
         var mgr = MissionManager.Instance;
         if (mgr != null)
         {
-=======
-        var mgr = MissionManager.Instance;
-        if (mgr != null)
-        {
-            // Unsubscribe stored delegates
->>>>>>> Stashed changes
+
             mgr.OnMissionStarted -= showHeaderOnStart;
             mgr.OnTaskChanged -= UpdateTaskUI;
             mgr.OnMissionComplete -= hideHeaderOnComplete;
@@ -296,7 +258,6 @@ public class MissionTaskUIController : MonoBehaviour
 
     /// <summary>Show or hide the multiple-choice section.</summary>
     public void ShowQuestionSection(bool visible)
-<<<<<<< Updated upstream
     {
         questionContainer.style.display = visible
               ? DisplayStyle.Flex
@@ -338,22 +299,7 @@ public class MissionTaskUIController : MonoBehaviour
 
         stepLabel.text = $"{currentStep}/{totalSteps}";
     }
-=======
-        => questionContainer.style.display = visible
-            ? DisplayStyle.Flex
-            : DisplayStyle.None;
 
-    /// <summary>Show or hide the text-input section.</summary>
-    public void ShowTextInputSection(bool visible)
-        => inputContainer.style.display = visible
-            ? DisplayStyle.Flex
-            : DisplayStyle.None;
-
-    public void ShowCompletionSection(bool visible)
-    => taskCompletionContainer.style.display = visible
-        ? DisplayStyle.Flex
-        : DisplayStyle.None;
->>>>>>> Stashed changes
 
     public void SetTaskCompletionContainer(
         string completionTitleFallback,
@@ -368,32 +314,7 @@ public class MissionTaskUIController : MonoBehaviour
             : completionQuoteFallback;
     }
 
-<<<<<<< Updated upstream
-=======
-    public void SetTaskHeader(
-        string missionName,
-        string taskTitleOrFallback,
-        string instructionOrFallback,
-        int currentStep,
-        int totalSteps)
-    {
-        // Mission name
-        missionTitleLabel.text = missionName;
 
-        // Task title
-        taskTitleLabel.text = string.IsNullOrWhiteSpace(taskTitleOrFallback)
-            ? "Untitled Task"
-            : taskTitleOrFallback;
-
-        // Instruction
-        instructionLabel.text = string.IsNullOrWhiteSpace(instructionOrFallback)
-            ? "No instruction."
-            : instructionOrFallback;
-
-        // Step counter
-        stepLabel.text = $"{currentStep}/{totalSteps}";
-    }
->>>>>>> Stashed changes
 
     /// <summary>
     /// Called by MissionManager.OnTaskChanged to update header and route logic.
@@ -402,13 +323,9 @@ public class MissionTaskUIController : MonoBehaviour
     {
         // 1) Reset visibility: header always on, question & input off
         ShowHeader(true);
-<<<<<<< Updated upstream
         // ShowQuestionSection(false);
         // ShowTextInputSection(false);
-=======
-        ShowQuestionSection(false);
-        ShowTextInputSection(false);
->>>>>>> Stashed changes
+
 
         // 2) Pull out first line of the task title (fallback will be handled in SetTaskHeader)
         string taskTitle = !string.IsNullOrWhiteSpace(task.title)
@@ -460,12 +377,9 @@ public class MissionTaskUIController : MonoBehaviour
 
         // 3) Save the correctChoiceIndex & onAnswered callback in local fields if needed
         this.correctChoiceIndex = correctChoiceIndex;
-<<<<<<< Updated upstream
         this.onQuestionAnswered = _ => onAnswered((bool)_);
 
-=======
-        this.onQuestionAnswered?.Invoke(onAnswered);
->>>>>>> Stashed changes
+
 
         // 4) Wipe out any old handlers & reset state:
         if (_OnChoiceAPointerDown != null)
@@ -593,7 +507,6 @@ public class MissionTaskUIController : MonoBehaviour
         }
     }
 
-<<<<<<< Updated upstream
     public void ConfigureQuestionUIFlexible(
      string questionText,
      IList<string> choices,
@@ -689,10 +602,7 @@ public class MissionTaskUIController : MonoBehaviour
         // Show section once ready
         ShowQuestionSection(true);
     }
-=======
 
-
->>>>>>> Stashed changes
 
     // Example ShowChoiceError remains unchanged
     public void ShowChoiceError(string message)
@@ -826,7 +736,6 @@ public class MissionTaskUIController : MonoBehaviour
         // Because we styled .choice-button:disabled and .choice-button-text appropriately,
         // it will appear “grayed out” automatically.
     }
-<<<<<<< Updated upstream
 
     /// <summary>
     /// Resets task UI (labels + dynamic choices).
@@ -892,8 +801,7 @@ public class MissionTaskUIController : MonoBehaviour
         TrySubscribeOrRetry();
     }
 
-=======
->>>>>>> Stashed changes
+
     public void HideAllTaskUI()
     {
         if (questionContainer != null) questionContainer.style.display = DisplayStyle.None;
