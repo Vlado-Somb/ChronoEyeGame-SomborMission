@@ -1,0 +1,73 @@
+{
+  "id": "sombor-eb",
+  "source": {
+    "repository": "Vlado-Somb/ChronoEyeGame-SomborMission",
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/EB_SO_Mission.asset",
+    "sourceBranch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "title": "SPOMENIK ERNESTU BOŠNJAKU",
+  "primaryWaypointId": "SO_EB",
+  "language": "sr-Latn",
+  "reviewStatus": "legacy_unreviewed",
+  "tasks": [
+    {
+      "id": "EB-01",
+      "type": "gps",
+      "title": "Moja draga kolevka",
+      "instruction": "Pronađi spomenik poznatom somborcu Ernestu Bošnjaku",
+      "completion": {
+        "title": "Bravo, našao si spomen obeležje ovo poznatom Somborcu!",
+        "narrative": "Bošnjak je 1906. godine doneo u Sombor kino-projektor i otvorio bioskop, prvo u zgradi pozorišta, a posle u jednoj velikoj šupi na Vašarištu. Tu je prikazivao razne filmske žurnale i kraće komične zabavne filmove koje je nabavljao od evropskih distributera.",
+        "delaySeconds": 0
+      },
+      "gps": {
+        "waypointId": "SO_EB",
+        "requiredZone": 3
+      }
+    },
+    {
+      "id": "EB-02",
+      "type": "multiple_choice",
+      "title": "Somborski sanjar",
+      "instruction": "Odgovori tačno na pitanje..",
+      "completion": {
+        "title": "Bravo istraživaču!",
+        "narrative": "Ernest Bošnjak bio je osnivač jugoslovenske kinematografije. Bio je jedan od prvih jugoslovenskih snimatelja, reditelja i producenta.",
+        "delaySeconds": 8
+      },
+      "question": {
+        "text": "Šta je bio Ernest Bošnjak?",
+        "choices": [
+          "lekar",
+          "političar",
+          "reditelj",
+          "akrobata"
+        ],
+        "correctIndex": 2
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK"
+      }
+    },
+    {
+      "id": "EB-03",
+      "type": "text_input",
+      "title": "Sombor ka prestonica sedme umetnosti",
+      "instruction": "Upiši tačan odgovor",
+      "completion": {
+        "title": "Fantastično!",
+        "narrative": "„Kad bi Sombor bio Holivud“ je predstava o Ernestu Bošnjaku, somborskom sanjaru, koji je kao pionir Jugoslovenskog filma, početkom 20. veka želeo da od Sombora napravi „fabriku snova“. Njegova želja da od Sombora napravi Holivud, ali njegov san kako umetnost može da promeni jedan grad, da promeni svet, biva zaustavljena Velikim ratom.",
+        "delaySeconds": 9
+      },
+      "textInput": {
+        "questionText": "",
+        "inputPlaceholder": "Koji je puno naziv poznate predstave o životu Ernesta Bošnjaka, \"Kad bi Sombor bi..\"",
+        "answerPlaceholder": "odgovor je",
+        "expectedAnswer": "Holivud"
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK"
+      }
+    }
+  ]
+}
