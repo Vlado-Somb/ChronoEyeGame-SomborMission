@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a18dcb900b4754bb23c2b0400a39ed, type: 3}
+  m_Name: Ducic Embassy STONES
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: Narrator
+    text: "Ah, skepticism\u2014a necessary shield in a world of distortion. But even
+      shields can block the light. Du\u010Di\u0107 would tell you that a nation\u2019s
+      soul cannot be measured by doubt but by the daring to dream. Stay vigilant,
+      Inspector, for sometimes, even echoes can carry the weight of truth."
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}

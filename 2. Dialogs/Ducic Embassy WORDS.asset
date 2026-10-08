@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a18dcb900b4754bb23c2b0400a39ed, type: 3}
+  m_Name: Ducic Embassy WORDS
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: Narrator
+    text: "Then you are one of the few who understand. Du\u010Di\u0107 himself believed
+      that words, like rivers, could carve through stone given time and intent. He
+      envisioned poetry as an architecture of thought, not bound by mortar or brick,
+      but by the will of those who believe. Look deeper, and you may find traces
+      of his spirit still moving here."
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}

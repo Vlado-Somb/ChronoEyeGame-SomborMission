@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581f3e2de54c9e54c8e0fb1bdeea7e27, type: 3}
+  m_Name: Test Tesla POI Definition
+  m_EditorClassIdentifier: 
+  id: teslaPOI
+  prefab: {fileID: 919132149155446097, guid: 416eff1f26dc721429e0e027142a686e, type: 3}
+  showHighlight: 1
+  useWorldPopup: 1
+  popupText: Hey hey
+  popupDelay: 0.5
+  triggerNarrative: 1
+  narrativeID: ducic_id
+  spawnDelay: 0

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a18dcb900b4754bb23c2b0400a39ed, type: 3}
+  m_Name: TataDialog
+  m_EditorClassIdentifier: 
+  assetID: kafic_id
+  lines:
+  - speakerName: Panonske bube odmetnici!
+    text: Hahahhahahhah, sve smo pokvarili!!!!
+    voiceOver: {fileID: 8300000, guid: 65b3a448509461341a30106f0ba76394, type: 3}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Panonske bube odmetnici!
+    text: Gotovo je!!!
+    voiceOver: {fileID: 8300000, guid: 2639907ac100adc4da16b6e9bec78cca, type: 3}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: tata!
+    text: Decooooo :)
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 1
+    glitchPattern:
+    - 1
+    - 0.5
+    - 0.5
+    glitchDuration: 3
+  - speakerName: tata!
+    text: "Ajmo negde na pi\u0107e, ja \u010Dastim!"
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 3

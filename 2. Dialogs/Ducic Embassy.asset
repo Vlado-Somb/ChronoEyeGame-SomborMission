@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a18dcb900b4754bb23c2b0400a39ed, type: 3}
+  m_Name: Ducic Embassy
+  m_EditorClassIdentifier: 
+  assetID: ducic_id
+  lines:
+  - speakerName: Narrator
+    text: 'You stand before the gates of the Serbian Embassy, a place where stories
+      linger in the cracks of the stone and whispers of time echo against the walls.
+      Here, the boundaries between the present and the past begin to blur. '
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 3
+  - speakerName: Narrator
+    text: What was once a home for diplomacy and poetry now serves as a threshold
+      to truths long forgotten, waiting to be uncovered by those who dare to look
+      deeper.
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 1
+    glitchPattern:
+    - 1
+    - 0.5
+    - 0.5
+    - 1
+    - 2
+    glitchDuration: 5
+  - speakerName: Narrator
+    text: "This is no ordinary place, Inspector. Du\u010Di\u0107\u2019s verses are
+      not just words\u2014they are keys, unlocking doorways to ideas beyond comprehension. "
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Narrator
+    text: "Jovan Du\u010Di\u0107, a poet, a diplomat, a dreamer who danced between
+      worlds. He spoke to nations in language that defied translation, words that
+      bound the ephemeral to the eternal. "
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Narrator
+    text: His presence is no longer here, yet his essence lingers in the architecture,
+      in the cadence of his verses, and in the silence that speaks his name. To stand
+      here is to stand where he once imagined a future that we are yet to grasp."
+    voiceOver: {fileID: 0}
+    choices: []
+    nextOnChoice0: {fileID: 0}
+    nextOnChoice1: {fileID: 0}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0
+  - speakerName: Narrator
+    text: Tell me, Inspector, do you believe that poetry holds power? Can words move
+      mountains, or are they mere echoes against the immovable stones of history?"
+    voiceOver: {fileID: 0}
+    choices:
+    - I believe in words and poetry to keep truth alive.
+    - I believe in stone and steel, memories cast to last.
+    nextOnChoice0: {fileID: 11400000, guid: a26b98a342dd00040ace5dc53e20b879, type: 2}
+    nextOnChoice1: {fileID: 11400000, guid: 5200cff9e1a8a924ca5f3f7c2322f34a, type: 2}
+    triggerGlitch: 0
+    glitchPattern: []
+    glitchDuration: 0

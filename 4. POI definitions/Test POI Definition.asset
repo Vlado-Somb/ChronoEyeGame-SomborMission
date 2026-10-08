@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581f3e2de54c9e54c8e0fb1bdeea7e27, type: 3}
+  m_Name: Test POI Definition
+  m_EditorClassIdentifier: 
+  id: TestCube
+  prefab: {fileID: 3314132080811526816, guid: 1d4e53155dde57e43b87eee21a415873, type: 3}
+  showHighlight: 1
+  highlightPrefab: {fileID: 1193953125369175018, guid: 7d39067bead4bc14aa0b451564aa5198,
+    type: 3}
+  useWorldPopup: 1
+  worldPopupPrefab: {fileID: 6286408231596708360, guid: e7edcfb9f730bcb4c93765b0c40baaf2,
+    type: 3}
+  popupText: TestKockaPrefab POPUP
+  popupDelay: 2
+  triggerNarrative: 1
+  dialogAsset: {fileID: 11400000, guid: 44fdbe7da82f2154296497af74f02af9, type: 2}
+  spawnDelay: 0
