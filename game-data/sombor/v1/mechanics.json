@@ -1,0 +1,60 @@
+{
+  "source": "Reproduced from MissionSO, MissionManager, WaypointManager, TriggerEvaluator, ScoreManager and existing settings; not executable Unity code",
+  "mode": "gps_city_exploration_with_mission_quizzes",
+  "scoring": {
+    "enabledByDefault": true,
+    "pointsPerCompletedTask": 10,
+    "bonusPerCompletedMission": 30,
+    "penaltyPerIncorrectAnswer": -2
+  },
+  "missionFlow": {
+    "taskOrder": "defined by tasks array",
+    "taskTypes": [
+      "gps",
+      "poi",
+      "multiple_choice",
+      "text_input",
+      "custom"
+    ],
+    "onCorrectAnswer": "mark task complete -> show completion title and narrative -> wait configured delay -> award task points -> advance",
+    "onWrongAnswer": "show error -> subtract configured points -> retry",
+    "onMissionComplete": "award mission bonus; emit completion event, allowing owning mission timeline block to finish",
+    "progressStorage": "User-device runtime state, NOT content JSON (Unity previously used PlayerPrefs for GameScore)"
+  },
+  "gps": {
+    "coordinateSystem": "WGS84",
+    "distance": "Haversine (horizontal great-circle distance)",
+    "zoneOrder": [
+      "outside",
+      "outer",
+      "approach",
+      "close"
+    ],
+    "zoneEvents": "fire when a specific zone is entered and its per-zone confirmation delay is met",
+    "missionGpsTask": "complete when its waypoint emits requiredZone event",
+    "legacyCheckIntervalSeconds": 1,
+    "legacyRequiredZone": 3,
+    "notes": "Zone 3 precision at 5–7 m must be verified outdoors; web and AR must not assume the legacy altitude is geoid/ground height."
+  },
+  "answers": {
+    "multipleChoice": "0-based correctIndex, two choices or flexible three/four-choice layout",
+    "textInputCurrentRule": "case-insensitive exact string comparison",
+    "proposedFutureRule": "normalize Cyrillic/Latin, trim whitespace and allow editorially reviewed alternative answers (not yet active)"
+  },
+  "events": {
+    "availableTypes": [
+      "time",
+      "waypoint",
+      "dialogue",
+      "poi",
+      "ui",
+      "mission",
+      "game_block",
+      "tracked_image"
+    ],
+    "registry": "timeline.json",
+    "triggerGroups": "triggers.json",
+    "hints": "hints.json",
+    "notes": "Some group-level boolean semantics are inherited from the old implementation and require replay testing; port the event intent, not stale incidental Unity state."
+  }
+}
