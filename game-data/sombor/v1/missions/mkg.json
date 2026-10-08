@@ -8,7 +8,7 @@
   "title": "GALERIJA MILAN KONJOVIĆ",
   "primaryWaypointId": "SO_MKG",
   "language": "sr-Latn",
-  "reviewStatus": "legacy_unreviewed",
+  "reviewStatus": "ar_accepted_editorial_pending",
   "tasks": [
     {
       "id": "MKG-01",
@@ -23,6 +23,38 @@
       "gps": {
         "waypointId": "SO_MKG",
         "requiredZone": 3
+      }
+    },
+    {
+      "id": "MKG-AR-01",
+      "type": "ar_interaction",
+      "title": "Boje Konjovića",
+      "instruction": "Pogledaj virtuelne palete i pronađi kolorit koji najbolje dočarava snažan slikarski izraz Milana Konjovića.",
+      "implementationStatus": "editorially_active_assets_pending",
+      "active": true,
+      "requiredForMission": true,
+      "ar": {
+        "interaction": "palette_choice",
+        "activationAfterTask": "MKG-01",
+        "anchorPolicy": "user_ground_plane_or_camera_guided_overlay",
+        "neverRequireUnsafePositioning": true,
+        "feedback": "Boja može da prenese raspoloženje jednako snažno kao i oblik.",
+        "assetIds": [
+          "assets/ar-focus-reticle.svg"
+        ]
+      },
+      "mentorCue": {
+        "mentorId": "profesor-vlada",
+        "appearance": "auto_then_recallable"
+      },
+      "fallback": {
+        "mode": "2d_equivalent",
+        "sameEducationalObjective": true
+      },
+      "completion": {
+        "title": "AR trag otkriven",
+        "narrative": "Boja može da prenese raspoloženje jednako snažno kao i oblik.",
+        "delaySeconds": 2
       }
     },
     {
