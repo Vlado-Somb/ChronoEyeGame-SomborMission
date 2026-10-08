@@ -1,0 +1,79 @@
+{
+  "id": "sombor-psm",
+  "source": {
+    "repository": "Vlado-Somb/ChronoEyeGame-SomborMission",
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/PŠM_SO_Mission.asset",
+    "sourceBranch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "title": "MUZEJ PODUNAVSKIH ŠVABA",
+  "primaryWaypointId": "SO_PŠM",
+  "language": "sr-Latn",
+  "reviewStatus": "legacy_unreviewed",
+  "tasks": [
+    {
+      "id": "PSM-01",
+      "type": "gps",
+      "title": "Most kultura i tradicije",
+      "instruction": "Pronađi lokaciju Muzeja Podunavskih Švaba.",
+      "completion": {
+        "title": "Uspešno si pronašao Muzej Podunavskih Švaba",
+        "narrative": "Kad si se našao pred zgradom muzeja, seti se da ona čuva sećanja na zajednice koje su se nad Dunavom razvijale više od dva veka. Ovaj kutak Sombora svedoči o bogatom spoju nemačke i srpske tradicije.",
+        "delaySeconds": 6
+      },
+      "gps": {
+        "waypointId": "SO_PŠM",
+        "requiredZone": 3
+      }
+    },
+    {
+      "id": "PSM-02",
+      "type": "multiple_choice",
+      "title": "Sada muzej a nekada palata",
+      "instruction": "Odgovori tačno na postavljeno pitanja.",
+      "completion": {
+        "title": "Bravo, uspešno si odgovrio na ovo pitanje!",
+        "narrative": "Kada je sagrađena, Grašalkovićeva palata je služila kao administrativna i stambena zgrada komorske uprave (Domus cameralis administrationis) i predstavljala je jednu od najimpozantnijih javnih građevina u Somboru.",
+        "delaySeconds": 7
+      },
+      "question": {
+        "text": "Čije je palata nekada bila ova zgrada u kojoj se nalazi MPŠ muzej?",
+        "choices": [
+          "Kronićeva palata",
+          "Grašalkovićeva palata",
+          "Vlaškalićeva plata"
+        ],
+        "correctIndex": 1
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK"
+      }
+    },
+    {
+      "id": "PSM-03",
+      "type": "text_input",
+      "title": "Naseljavanja Bačke kroz vekove",
+      "instruction": "Unesi tačan odgovor.",
+      "completion": {
+        "title": "Bravo, uspešno si odgovrio na ovo pitanje!",
+        "narrative": "Izborom 1751. godine pokazuješ da poznaješ period prvih naseljavanja Bačke. Prvo su naseljavane rusinske grkokatoličke porodice, a zatim je počela i kolonizacija nemačkih zemljoradnika u Banat i Bačku. Njihov trud u poljoprivredi i zanatima ostavio je neizbrisiv trag u istoriji regiona.",
+        "delaySeconds": 7
+      },
+      "textInput": {
+        "questionText": "Koje godine su se Podunavske Švabe počele da se doseljavaju na teritoiju današnjeg Sombora?",
+        "inputPlaceholder": "Koje godine je potpisan dekret o početku kolonizacije Bačke?",
+        "answerPlaceholder": "Ovde brojem upiši svoj odgovor",
+        "expectedAnswer": "1751"
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK",
+        "Choices": [
+          "1596. godine",
+          "1763. godine",
+          "1763. godine",
+          "1763. godine"
+        ],
+        "CorrectChoiceIndex": "1"
+      }
+    }
+  ]
+}
