@@ -1,0 +1,73 @@
+{
+  "status": "proposals_only",
+  "integrationPrinciple": "Preserve existing GPS + quiz tasks; introduce optional AR moments as clearly marked new steps, with GPS fallback and safe screen-position overlays if camera tracking is unreliable.",
+  "arAltitudePolicy": "Do not use legacy Unity altitude as absolute vertical AR alignment. Use user placement, visual alignment or field-verified geospatial anchor only.",
+  "proposals": [
+    {
+      "id": "AR-SO-GK-01",
+      "missionId": "sombor-gk",
+      "waypointId": "SO_GK",
+      "title": "Пронађи торањ",
+      "interaction": "Player points the camera toward City Hall; a translucent outline or visual guide highlights the tower, then a short historical year prompt appears.",
+      "completion": "user_tap_confirm_then_answer",
+      "assetNeeds": [
+        "simple transparent tower outline",
+        "historically reviewed caption"
+      ],
+      "optional": true
+    },
+    {
+      "id": "AR-SO-MKG-01",
+      "missionId": "sombor-mkg",
+      "waypointId": "SO_MKG",
+      "title": "Боје Коњовића",
+      "interaction": "AR color cards float over the screen; player matches a palette concept inspired by the painter, without requiring copyrighted painting images.",
+      "completion": "pick_correct_color_pattern",
+      "assetNeeds": [
+        "original illustrative palette",
+        "editorial interpretation of style"
+      ],
+      "optional": true
+    },
+    {
+      "id": "AR-SO-NPS-01",
+      "missionId": "sombor-nps",
+      "waypointId": "SO_NPS",
+      "title": "Позорница у простору",
+      "interaction": "At the theater façade, player places a small virtual stage frame and reveals a mini question about the theater history.",
+      "completion": "place_then_answer",
+      "assetNeeds": [
+        "simple low-poly stage frame",
+        "verified date/caption"
+      ],
+      "optional": true
+    },
+    {
+      "id": "AR-SO-LK-01",
+      "missionId": "sombor-lk",
+      "waypointId": "SO_LK",
+      "title": "Стихови око споменика",
+      "interaction": "Player manually places floating text fragments near the monument and reorders them; the actual quoted text must be selected during editorial review.",
+      "completion": "order_text_fragments",
+      "assetNeeds": [
+        "approved public-domain or licensed text",
+        "typography overlay"
+      ],
+      "optional": true
+    },
+    {
+      "id": "AR-SO-EB-01",
+      "missionId": "sombor-eb",
+      "waypointId": "SO_EB",
+      "title": "Сомборски неми филм",
+      "interaction": "Place a stylized silent-film frame over the camera view, then answer a question about Ernest Bošnjak.",
+      "completion": "place_frame_then_answer",
+      "assetNeeds": [
+        "original silent-film frame",
+        "historical context caption"
+      ],
+      "optional": true
+    }
+  ],
+  "reviewRule": "No proposed AR task changes current scoring, route or mission gating until explicitly accepted and tested."
+}
