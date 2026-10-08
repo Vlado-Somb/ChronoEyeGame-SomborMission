@@ -1,34 +1,43 @@
-# CHRONO EYE — SOMBOR | Portable game data v1
+# CHRONO EYE — SOMBOR | Portable game data v1.1
 
-Ово је **садржај игре независан од Unity-ја**. Пренесен је из старих ScriptableObject `.asset` ресурса и намењен будућој архитектури **Web интерфејс + Android + ARCore**.
+Samostalan **sadržaj igre**, izveden iz Unity ScriptableObject resursa i dopunjen urednički prihvaćenim AR zadacima, namenjen kombinaciji **Web + Android + ARCore**. Ovo **nije** gotova Android aplikacija i ne zahteva Unity kao runtime.
 
-## Почетак
+## Počni ovde
 
-Отвори `manifest.json`: он повезује све остале датотеке релативним путањама. JSON се може читати у веб апликацији или упаковати са Android APK-ом, без Unity библиотека.
+- [`manifest.json`](manifest.json) — ulazna tačka za sav sadržaj i verziju šeme.
+- [`production/gradska-kuca/PRODUCTION_BRIEF.md`](production/gradska-kuca/PRODUCTION_BRIEF.md) — potpuni pilot-paket Gradske kuće na Ćelavom trgu, sa istorijskim narativom.
+- [`production/gradska-kuca/asset-manifest.json`](production/gradska-kuca/asset-manifest.json) — šta je vizuelno napravljeno, a šta još čeka 3D i zvuk.
+- [`production/gradska-kuca/scene-flow.json`](production/gradska-kuca/scene-flow.json) — redosled GPS → profesor → AR toranj → istorijski kviz → nagrada.
+- [`production/gradska-kuca/QA_CHECKLIST.md`](production/gradska-kuca/QA_CHECKLIST.md) — kriterijumi prihvatanja pre release-a.
 
-## Шта садржи
+## Sadržaj
 
-- `missions/*.json`: 9 мисија, укупно 26 задатака (GPS, квиз са понуђеним одговорима и текстуални упис).
-- `waypoints.json`: 13 постојећих GPS тачака, радијуси три зоне и времена потврде.
-- `dialogues/*.json`: 3 дијалога који припадају причи и један посебно означен тестни дијалог.
-- `hints.json`: 13 текстова помоћи.
-- `timeline.json`: регистар 26 блокова са стабилним називима и индексима оригинала.
-- `triggers.json`: 10 група / 18 услова покретања (GPS, време, догађај мисије, дијалог и блок).
-- `mechanics.json`: правила о бодовима, типови задатака, GPS зонама, одговорима и завршетку мисије, реконструисана из Unity логике.
-- `ar-proposals.json`: идеје за додатне AR мини-задатке (неактивне; не мешају се у пренете мисије).
+- `missions/*.json`: **9 misija / 31 zadatak**: 9 GPS, 5 AR, 11 multiple-choice, 6 text-input. AR dolazi odmah posle GPS-a i ima jednakovredan 2D fallback.
+- `waypoints.json`: 13 WGS84 lokacija, probni GPS radijusi i vreme potvrde zona.
+- `dialogues/*.json`: tri narativna dijaloga i jedan neaktivan testni.
+- `hints.json`: 13 tekstova pomoći; GK ima HINTGK1/HINTGK2/HINTGK3.
+- `timeline.json`: registar izvornih 26 blokova, a **ne** obavezni linearni redosled.
+- `triggers.json`: 10 grupa i 18 originalnih event-uslova; treba posebno testirati semantiku pri portovanju.
+- `systems/characters.json`: klasa AR mentora (Profesor Vlada) i budući istorijski eho-likovi.
+- `systems/collectibles.json`: glavni relic po lokaciji, zlatni pečati iz 1749, srca i džokeri.
+- `systems/album.json`: UX „Herbarijum Sombora“, kolekcija, otključane kartice i zaštita od duplih poena.
+- `mechanics.json`: zadaci, skoring, GPS, AR i fallback.
+- `ar-proposals.json`: evidencija **prihvaćenih pet AR ideja**, sve povezane sa aktivnim zadacima.
+- `assets/*.svg`: sedam originalnih konceptnih 2D grafika koje ne zahtevaju licencu spoljašnjih fotografija.
+- `CHANGELOG.md`: urednički i produkcioni trag odluka.
 
-## Правила преноса
+## Podela odgovornosti
 
-1. Оригиналне формулације питања, објашњења и одговори нису редакторски преписивани.
-2. Стварно коришћена поља одвојена су по типу задатка; неактивна, али попуњена Unity поља остају у `unusedUnityFields` ради касније ревизије.
-3. Unity GUID-ови нису потребни новој апликацији. Користе се обични ID-јеви задатака, мисија и блокова.
-4. `timeline.json` је **регистар блокова**, не произвољно наметнут редослед игре. Услови у `triggers.json` описују када се блок покреће.
-5. Нема уписивања корисничког напретка у ове JSON датотеке; скор и завршени задаци припадају одвојеном стању играча.
-6. Локације и радијуси су **радна верзија**, за проверу на терену. Висина из Unity-а није поуздана AR висинска референца.
-7. Текстови и историјске чињенице имају статус `legacy_unreviewed`; сређујемо их касније, појединачно.
+**U ovom toku** uređujemo istoriju, tekstove, model mentora, AR dizajn, kolekciju, opise aseta i UX. **U tehničkom toku** gradimo Web/Android/ARCore implementaciju, GPS poligone, API-je, GLB, zvuk, kamerni prikaz i test. Staru Unity logiku koristimo kao izvor pravila igre, ne kao obavezan engine.
 
-## Однос са старим пројектом
+## Šta je stvarno gotovo
 
-Старе C# скрипте користимо као **референцу за механику**, не као обавезан runtime. Нови Web/Android/ARCore мотор може да репродукује исту логику читањем ових података. Unity компајлирање није предуслов за уређивање приче.
+Zapisani i provereni JSON zadaci, produkcioni brief, evidencija scena, definicije albumskih nagrada, inicijalni SVG koncepti. **Nisu još isporučeni** 3D mentor, snimljen glas, fotografija za 2D fallback, geospatial anchoring ni aplikacioni kod za ove AR zadatke.
 
-Ово је прва портабилна верзија, без преписивања уредничке приче и без активирања нових AR задатака.
+## Istorijski izvori i autorstvo
+
+GK igra zadržava 1718 / 1749 / 1842 i originalno pitanje, uz uredničku korekciju teksta i izvorne linkove. Zlatni token jeste **stilizovani savremeni znak inspirisan pečatom Sombora**, a ne reprodukcija originala; istorijsku osnovu proveriti na Ravnoplovu i u Istorijskom arhivu.
+
+## Trajnost podataka
+
+Sve napredovanje, poeni i otključani predmeti pripadaju stanju igrača (lokalno ili u zasebnom backend-u), a **nikada se ne upisuju u ove javne JSON fajlove**. Stare, slučajno popunjene Unity kolone ostaju samo za reviziju; izvorne vrednosti prve misije sačuvane su pod `legacyOriginal`.
