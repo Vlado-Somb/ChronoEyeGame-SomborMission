@@ -11,7 +11,8 @@
 2. [Регистар одлука](docs/mission-standard/DECISION_LOG.md) — усвојене, пробне и одбачене архитектонске одлуке; укључујући избор сервиса.
 3. [Регистар сервиса](docs/mission-standard/SERVICE_REGISTRY.md) — шта се користи, за шта, стање приступа и услови активирања.
 4. [Дневник добре праксе](docs/mission-standard/PRACTICE_LOG.md) — *само проверена* искуства, тестови, ограничења и препоруке.
-5. [Историја измена](docs/mission-standard/CHANGELOG.md) — промене стандарда и одлука.
+5. [Шаблон продукционог пакета](docs/mission-standard/PRODUCTION_PACKAGE_TEMPLATE_v0.2.md) — обавезан образац за нову мисију.
+6. [Историја измена](docs/mission-standard/CHANGELOG.md) — промене стандарда и одлука.
 
 **Референца за податке:** [Sombor Game Data v1.1 + GK production — PR #2](https://github.com/Vlado-Somb/ChronoEyeGame-SomborMission/pull/2), директоријум `game-data/sombor/v1/` у предложеној грани. До спајања PR-а у `main`, садржај је *candidate*, не део `main`.
 
