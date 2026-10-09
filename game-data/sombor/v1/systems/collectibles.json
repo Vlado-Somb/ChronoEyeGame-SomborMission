@@ -81,6 +81,19 @@
             "points": 0,
             "awardOnce": true
           }
+        },
+        {
+          "id": "eb-dream-filmstrip-relic",
+          "name": "Filmska traka",
+          "missionId": "sombor-eb",
+          "asset": "assets/eb-film-relic.svg",
+          "rarity": "unique",
+          "caption": "Simbolična filmska traka neostvarenog studija, nije autentičan Bošnjakov predmet.",
+          "historicalFact": "Ernest Bošnjak počeo je snimati filmove 1909. godine.",
+          "scoring": {
+            "points": 0,
+            "awardOnce": true
+          }
         }
       ]
     },
@@ -176,6 +189,18 @@
             "waypointId": "SO_ŽUP",
             "text": "Zgrada je proširena i preoblikovana 1882. prema projektu Đule Partoša.",
             "source": "https://www.soinfo.org/vesti/vest/19149/sledi-rekonstrukcija-atrijuma-zupanije/"
+          },
+          {
+            "id": "gold-eb-001",
+            "waypointId": "SO_EB",
+            "text": "Ernest Bošnjak vratio se u Sombor 1906. i doprineo razvoju filmskih projekcija.",
+            "source": "https://www.ravnoplov.rs/"
+          },
+          {
+            "id": "gold-eb-002",
+            "waypointId": "SO_EB",
+            "text": "Ernest Bošnjak je 1909. počeo da snima filmove; filmski studio ostao je neostvaren plan.",
+            "source": "https://www.ravnoplov.rs/"
           }
         ]
       }
@@ -238,6 +263,16 @@
           "contentType": "fictional_playful",
           "truthNote": "Autorska šala, nije istorijska činjenica.",
           "rarity": "uncommon",
+          "repeatable": false
+        },
+        {
+          "id": "joker-eb-001",
+          "name": "Kadar koji je pobegao",
+          "waypointId": "SO_EB",
+          "asset": "assets/joker-token.svg",
+          "caption": "Jedan zamišljeni kadar iskočio je iz filmske trake! Vrati ga u priču.",
+          "contentType": "fictional_playful",
+          "truthNote": "Izmišljena šala, nije istorijska činjenica.",
           "repeatable": false
         }
       ]

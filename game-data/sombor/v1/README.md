@@ -49,3 +49,5 @@ GK igra zadržava 1718 / 1749 / 1842 i originalno pitanje, uz uredničku korekci
 ## Trajnost podataka
 
 Sve napredovanje, poeni i otključani predmeti pripadaju stanju igrača (lokalno ili u zasebnom backend-u), a **nikada se ne upisuju u ove javne JSON fajlove**. Stare, slučajno popunjene Unity kolone ostaju samo za reviziju; izvorne vrednosti prve misije sačuvane su pod `legacyOriginal`.
+
+- [Ernest Bošnjak: Nedosanjani kadar](production/ernest-bosnjak/PRODUCTION_BRIEF.md) — montaža tri filmska kadra u AR/2D režimu, originalni kvizovi, Filmska traka i tri opciona bonusa. Produkcioni koncept; uređajski testovi čekaju.

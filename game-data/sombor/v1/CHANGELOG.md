@@ -1,5 +1,13 @@
 # CHANGELOG — CHRONO EYE SOMBOR
 
+## 2026-10-09 — Ernest Bošnjak, production package
+
+- EB-AR-01: tri simbolična filmska kadra sa ravnopravnim 2D fallback-om.
+- Originalna misija arhivirana u production/ernest-bosnjak/legacy-eb.json; odgovori reditelj i Holivud zadržani.
+- Četiri produkciona dokumenta, SVG koncepti i relic Filmska traka; dopunjen registar gold-eb-001, gold-eb-002, joker-eb-001.
+- Bez Android/ARCore, terenskog GPS, 3D ili audio testa. Izvori za bonus mikropriče zahtevaju preciznije URL-ove.
+
+
 ## 2026-10-09 — Županija, production package 06
 
 - SO_ŽUP remains 45.770009385415605, 19.117732572954402; zone 2 / 66 m is provisional, not field-verified.
