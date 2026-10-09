@@ -1,6 +1,6 @@
 {
   "status": "accepted_active_game_design",
-  "integrationPrinciple": "Eight AR tasks active in content; Android/ARCore integration untested; equal 2D fallback required.",
+  "integrationPrinciple": "Nine AR tasks active in editorial JSON; Android/ARCore runtime pending device tests. Every AR task has equally rewarded 2D fallback.",
   "arAltitudePolicy": "Do not use legacy Unity altitude as absolute vertical AR alignment. Use user placement, visual alignment or field-verified geospatial anchor only.",
   "proposals": [
     {
@@ -42,7 +42,7 @@
       "id": "AR-SO-NPS-01",
       "missionId": "sombor-nps",
       "waypointId": "SO_NPS",
-      "title": "Izgubljeni znak - sastavi pozornicu",
+      "title": "Sastavi pozorišnu scenu",
       "interaction": "Map curtain, actor and audience to three stage slots; identical AR and 2D role game.",
       "completion": "all_slots_match",
       "assetNeeds": [
@@ -70,7 +70,7 @@
       ],
       "optional": false,
       "active": true,
-      "editingStatus": "editorial_concept_accepted_implementation_pending",
+      "editingStatus": "editorial_production_specified_runtime_pending",
       "taskId": "LK-AR-01"
     },
     {
@@ -114,7 +114,7 @@
       "id": "AR-SO-VP-01",
       "missionId": "sombor-vp",
       "waypointId": "SO_VP",
-      "title": "Golubičin let — tri pisma vremena",
+      "title": "Tri etape života Veljka Petrovića",
       "interaction": "Order three sourced cards Sombor 1884 → Budapest Tekelijanum 1902 → Sombor memorial 2017; same 2D game.",
       "completion": "ordered_flight_route_cards",
       "assetNeeds": [
@@ -132,8 +132,8 @@
       "id": "AR-SO-ZUP-01",
       "missionId": "sombor-zup",
       "waypointId": "SO_ŽUP",
-      "title": "Tri sata — događaj, slika, sala",
-      "interaction": "Map 1697 battle / 1896 painting / 1898 installation to three roles, with identical 2D fallback",
+      "title": "Tri istorijska traga Županije",
+      "interaction": "Map battle 1697, building completion 1808 and painting installation 1898 to three roles, identical 2D fallback.",
       "completion": "all_slots_match",
       "assetNeeds": [
         "five original SVG concepts",
@@ -145,6 +145,19 @@
       "editingStatus": "full_production_package_written_assets_partial_runtime_pending",
       "taskId": "ZUP-AR-01",
       "productionPackage": "production/zupanija/PRODUCTION_BRIEF.md"
+    },
+    {
+      "id": "AR-SO-GMS-01",
+      "missionId": "sombor-gms",
+      "waypointId": "SO_GMS",
+      "taskId": "GMS-AR-01",
+      "title": "Četiri lica muzeja",
+      "interaction": "Match four symbolic cards to museum fields with identical 2D mapping and scoring.",
+      "completion": "all_slots_match",
+      "optional": false,
+      "active": true,
+      "editingStatus": "active_json_runtime_pending",
+      "productionPackage": "production/gradski-muzej/PRODUCTION_BRIEF.md"
     }
   ],
   "reviewRule": "AR tasks are required for the mission but must always be completable via equally rewarded 2D fallback; active in data is not synonymous with implemented in app."
