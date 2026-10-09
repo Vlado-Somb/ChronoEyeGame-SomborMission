@@ -1,0 +1,46 @@
+{
+  "blocks": [
+    {
+      "id": "BP2_A0_BLOCK",
+      "missionId": "budapest-act-0",
+      "flowPath": "production/act-0/scene-flow.json",
+      "entryNodeId": "BP2_A0_NODE_ARRIVE"
+    },
+    {
+      "id": "BP2_A1_BLOCK",
+      "missionId": "budapest-act-1",
+      "flowPath": "production/act-1/scene-flow.json",
+      "entryNodeId": "BP2_A1_NODE_ARRIVE"
+    },
+    {
+      "id": "BP2_A2_BLOCK",
+      "missionId": "budapest-act-2",
+      "flowPath": "production/act-2/scene-flow.json",
+      "entryNodeId": "BP2_A2_NODE_ARRIVE"
+    },
+    {
+      "id": "BP2_A3_BLOCK",
+      "missionId": "budapest-act-3",
+      "flowPath": "production/act-3/scene-flow.json",
+      "entryNodeId": "BP2_A3_NODE_ARRIVE"
+    },
+    {
+      "id": "BP2_A4_BLOCK",
+      "missionId": "budapest-act-4",
+      "flowPath": "production/act-4/scene-flow.json",
+      "entryNodeId": "BP2_A4_NODE_ARRIVE"
+    },
+    {
+      "id": "BP2_A5_BLOCK",
+      "missionId": "budapest-act-5",
+      "flowPath": "production/act-5/scene-flow.json",
+      "entryNodeId": "BP2_A5_NODE_ARRIVE"
+    },
+    {
+      "id": "BP2_A6_BLOCK",
+      "missionId": "budapest-act-6",
+      "flowPath": "production/act-6/scene-flow.json",
+      "entryNodeId": "BP2_A6_NODE_ARRIVE"
+    }
+  ]
+}
