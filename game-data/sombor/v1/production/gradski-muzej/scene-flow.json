@@ -1,7 +1,7 @@
 {
   "packageId": "gms-prod-08",
   "missionId": "sombor-gms",
-  "status": "editorial_spec_runtime_pending_not_wired",
+  "status": "editorial_spec_active_json_runtime_pending",
   "gameplayOrder": [
     "GMS-01",
     "GMS-AR-01",
