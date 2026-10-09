@@ -19,11 +19,11 @@
       "action": "show three cards and three role slots",
       "expectedMapping": {
         "event": "battle_1697",
-        "artwork": "painting_1896",
-        "installation": "hall_1898"
+        "building": "building_1808",
+        "installation": "installation_1898"
       },
       "ar": "manual_surface_or_camera_relative",
-      "fallback": "2d_three_clocks_role_mapping"
+      "fallback": "2d_three_traces_role_mapping"
     },
     {
       "id": "ar_success",
@@ -66,18 +66,18 @@
     }
   ],
   "fallback": {
-    "mode": "2d_three_clocks_role_mapping",
+    "mode": "2d_three_traces_role_mapping",
     "sameEducationalObjective": true,
     "sameScoring": true,
     "identicalCardIds": [
       "battle_1697",
-      "painting_1896",
-      "hall_1898"
+      "building_1808",
+      "installation_1898"
     ],
     "identicalExpectedMapping": {
       "event": "battle_1697",
-      "artwork": "painting_1896",
-      "installation": "hall_1898"
+      "building": "building_1808",
+      "installation": "installation_1898"
     }
   },
   "scoring": {
@@ -98,5 +98,5 @@
     "noPaintingScan": true,
     "stationaryRequired": true
   },
-  "status": "editorial_ready_runtime_pending"
+  "status": "editorial_spec_updated_runtime_pending"
 }
