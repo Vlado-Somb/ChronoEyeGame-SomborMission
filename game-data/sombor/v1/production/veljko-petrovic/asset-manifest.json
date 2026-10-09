@@ -1,0 +1,127 @@
+{
+  "packageId": "vp-prod-05",
+  "missionId": "sombor-vp",
+  "assetBase": "game-data/sombor/v1/",
+  "assets": [
+    {
+      "id": "vp-sombor-1884",
+      "kind": "svg",
+      "path": "assets/vp-sombor-1884.svg",
+      "status": "created_concept",
+      "rights": "original_project",
+      "purpose": "Sombor 1884 symbolic card"
+    },
+    {
+      "id": "vp-tekeli-1902",
+      "kind": "svg",
+      "path": "assets/vp-tekeli-1902.svg",
+      "status": "created_concept",
+      "rights": "original_project",
+      "purpose": "Budapest Tekelijanum symbolic card, not architectural reconstruction"
+    },
+    {
+      "id": "vp-monument-2017",
+      "kind": "svg",
+      "path": "assets/vp-monument-2017.svg",
+      "status": "created_concept",
+      "rights": "original_project",
+      "purpose": "Memorial symbolic card, not sculpture copy"
+    },
+    {
+      "id": "vp-flight-path",
+      "kind": "svg",
+      "path": "assets/vp-flight-path.svg",
+      "status": "created_concept",
+      "rights": "original_project",
+      "purpose": "Three-letter flight path"
+    },
+    {
+      "id": "vp-feather-relic",
+      "kind": "svg",
+      "path": "assets/vp-feather-relic.svg",
+      "status": "created_concept",
+      "rights": "original_project",
+      "purpose": "Unique fictional feather relic"
+    },
+    {
+      "id": "profesor-vlada-portrait",
+      "kind": "svg",
+      "path": "assets/profesor-vlada-portrait.svg",
+      "status": "created_concept",
+      "rights": "original_project_shared"
+    },
+    {
+      "id": "gold-city-seal",
+      "kind": "svg",
+      "path": "assets/gold-city-seal.svg",
+      "status": "created_concept",
+      "rights": "original_project_shared"
+    },
+    {
+      "id": "joker-token",
+      "kind": "svg",
+      "path": "assets/joker-token.svg",
+      "status": "created_concept",
+      "rights": "original_project_shared"
+    },
+    {
+      "id": "profesor-vlada-glb",
+      "kind": "glb",
+      "path": "models/profesor-vlada.glb",
+      "status": "planned_not_created"
+    },
+    {
+      "id": "vp-symbolic-pigeon-glb",
+      "kind": "glb",
+      "path": "models/vp-symbolic-pigeon.glb",
+      "status": "planned_not_created",
+      "note": "optional stylized bird, not a scan of Igor Šeter sculpture"
+    },
+    {
+      "id": "vp-mentorOpening",
+      "kind": "ogg",
+      "path": "audio/vp-mentorOpening.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/vp.json#narrative.mentorOpening"
+    },
+    {
+      "id": "vp-mentorBeforeAR",
+      "kind": "ogg",
+      "path": "audio/vp-mentorBeforeAR.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/vp.json#narrative.mentorBeforeAR"
+    },
+    {
+      "id": "vp-mentorAfterAR",
+      "kind": "ogg",
+      "path": "audio/vp-mentorAfterAR.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/vp.json#narrative.mentorAfterAR"
+    },
+    {
+      "id": "vp-mentorCompletion",
+      "kind": "ogg",
+      "path": "audio/vp-mentorCompletion.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/vp.json#narrative.mentorCompletion"
+    },
+    {
+      "id": "vp-wing-chime",
+      "kind": "ogg",
+      "path": "audio/vp-wing-chime.ogg",
+      "status": "planned_not_created",
+      "note": "fictional original effect"
+    },
+    {
+      "id": "vp-monument-photo",
+      "kind": "webp",
+      "path": "media/vp-monument.webp",
+      "status": "planned_not_created",
+      "rights": "license_or_original_capture_required",
+      "note": "not required for 2D fallback"
+    }
+  ],
+  "rightsPolicy": "No copied sculpture 3D, no book excerpt, no photos or voice impersonation without rights.",
+  "spatialPolicy": "No unverified GPS altitude or claimed computer vision.",
+  "runtimeStatus": "not_implemented_or_tested"
+}

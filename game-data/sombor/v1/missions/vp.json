@@ -5,38 +5,134 @@
     "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/VP_SO_Mission.asset",
     "sourceBranch": "fix/sombor-resource-stabilization-20261008"
   },
-  "title": "SPOMENIK VELJKU PETROVIĆU",
+  "title": "SPOMENIK VELJKU PETROVIĆU — GOLUBICA KOJA SE VRAĆA",
   "primaryWaypointId": "SO_VP",
   "language": "sr-Latn",
-  "reviewStatus": "legacy_unreviewed",
+  "reviewStatus": "vp_production_overlay_ready",
   "tasks": [
     {
       "id": "VP-01",
       "type": "gps",
-      "title": "Pitomac prvog srpskog koledža",
-      "instruction": "Pronađi spomenik Veljku Petroviću",
+      "title": "Pronađi pisca i golubicu",
+      "instruction": "Pronađi spomenik Veljku Petroviću u pešačkoj zoni Sombora, ispred Gradske biblioteke „Karlo Bijelicki“. Nije potrebno ulaziti u biblioteku; ostani na bezbednom mestu.",
       "completion": {
-        "title": "Postaješ sve bolji istraživač!",
-        "narrative": "Veljko Petrović bio je istaknuti srpski književnik i akademik. Gimnaziju je završio na mađarskom jeziku u rodnom Somboru, a potom je studirao pravo u Budimpešti. Istovremeno je bio pitomac prvog srpskog koledža, zavoda Save Tekelije, čuvenog peštanskog Tekelijanuma.",
-        "delaySeconds": 7
+        "title": "Pronašao si pisca i golubicu",
+        "narrative": "Veljko Petrović rođen je u Somboru 1884. Od 1902. studirao je u Budimpešti i boravio u Tekelijanumu. Spomenik sa golubicom čuva sećanje na njegov književni svet.",
+        "delaySeconds": 4
       },
       "gps": {
         "waypointId": "SO_VP",
-        "requiredZone": 3
+        "requiredZone": 2,
+        "arrivalActivationZone": 2,
+        "fieldVerificationRequired": true,
+        "minimumStationarySeconds": 2
+      },
+      "legacyOriginal": {
+        "archive": "production/veljko-petrovic/legacy-vp.json",
+        "taskId": "VP-01"
+      }
+    },
+    {
+      "id": "VP-AR-01",
+      "type": "ar_interaction",
+      "title": "Golubičin let — tri pisma vremena",
+      "instruction": "Poređaj tri kartice po godinama: Sombor 1884 → Budimpešta 1902 → spomenik 2017. Isti zadatak možeš igrati bez kamere.",
+      "active": true,
+      "requiredForMission": true,
+      "implementationStatus": "production_specified_assets_partial",
+      "ar": {
+        "interaction": "chronological_flight_route_cards",
+        "activationAfterTask": "VP-01",
+        "anchorPolicy": "relative_to_camera_or_manual_surface",
+        "tracking": "no_object_recognition",
+        "neverRequireUnsafePositioning": true,
+        "assetIds": [
+          "assets/vp-sombor-1884.svg",
+          "assets/vp-tekeli-1902.svg",
+          "assets/vp-monument-2017.svg",
+          "assets/vp-flight-path.svg"
+        ],
+        "content": {
+          "cards": [
+            {
+              "id": "sombor_1884",
+              "year": "1884",
+              "label": "Sombor — rođenje",
+              "asset": "assets/vp-sombor-1884.svg",
+              "fact": "Veljko Petrović rođen je u Somboru 1884.",
+              "source": "https://www.digitalizacija.ns.rs/lat/veljko-petrovic/tab-os-informacije"
+            },
+            {
+              "id": "budapest_1902",
+              "year": "1902",
+              "label": "Budimpešta — Tekelijanum",
+              "asset": "assets/vp-tekeli-1902.svg",
+              "fact": "Od 1902. studirao je pravo u Budimpešti i boravio u Tekelijanumu.",
+              "source": "https://www.digitalizacija.ns.rs/lat/veljko-petrovic/tab-os-informacije"
+            },
+            {
+              "id": "monument_2017",
+              "year": "2017",
+              "label": "Sombor — spomenik",
+              "asset": "assets/vp-monument-2017.svg",
+              "fact": "Spomenik sa golubicom otkriven je 15. decembra 2017. ispred Gradske biblioteke.",
+              "source": "https://www.025.rs/otkriven-spomenik-veljku-petrovicu/"
+            }
+          ],
+          "correctSequence": [
+            "sombor_1884",
+            "budapest_1902",
+            "monument_2017"
+          ],
+          "shuffleInitialOrder": true,
+          "onMistake": "retry_without_penalty",
+          "interpretationNote": "Golubica i pisma su fikcionalni simboli; ne postoje autentična pisma iz ove igre."
+        },
+        "successCondition": {
+          "kind": "sequence_equals",
+          "expected": [
+            "sombor_1884",
+            "budapest_1902",
+            "monument_2017"
+          ],
+          "resultEvent": "AR_INTERACTION_COMPLETED",
+          "taskId": "VP-AR-01",
+          "awardOnce": true
+        }
+      },
+      "mentorCue": {
+        "mentorId": "profesor-vlada",
+        "appearance": "auto_once_then_manual_recall"
+      },
+      "fallback": {
+        "mode": "2d_ordered_flight_route_cards",
+        "sameEducationalObjective": true,
+        "sameScoring": true,
+        "identicalCardIds": [
+          "sombor_1884",
+          "budapest_1902",
+          "monument_2017"
+        ],
+        "mayActivateWithoutCamera": true
+      },
+      "completion": {
+        "title": "Tri pisma pronašla su put",
+        "narrative": "Poslednja stanica nije povratak pisca, već povratak njegove priče među nove čitaoce.",
+        "delaySeconds": 3
       }
     },
     {
       "id": "VP-02",
       "type": "multiple_choice",
-      "title": "",
-      "instruction": "",
+      "title": "Priča koja je dala ime knjizi",
+      "instruction": "Prepoznaj naslov iz Petrovićevog književnog sveta.",
       "completion": {
-        "title": "Bravo!",
-        "narrative": "Naiđe tako neka igra, obuzme dečake kao zaraza, razvije se u naviku a u nekome i u pravu strast. Krajem devedesetih godina uneo je neko u Bačku kult takozvanih plemenitih golubova...",
-        "delaySeconds": 10
+        "title": "Tačno — Golubica sa crnim srcem!",
+        "narrative": "„Golubica sa crnim srcem“ jeste pripovetka, a naslov je korišćen i za izbor pripovedaka. Njen tekst ne reprodukujemo bez prava.",
+        "delaySeconds": 5
       },
       "question": {
-        "text": "Kako se zove čuvena zbirka pripovetaka Veljka Petrovića?",
+        "text": "Koji naslov nosi Petrovićeva poznata pripovetka, a takođe i kasniji izbor njegovih pripovedaka?",
         "choices": [
           "GOLUBICA SA CRNIM SRCEM",
           "PLAVI LEPTIR",
@@ -46,20 +142,24 @@
       },
       "unusedUnityFields": {
         "waypointId": "SO_GK"
+      },
+      "legacyOriginal": {
+        "archive": "production/veljko-petrovic/legacy-vp.json",
+        "taskId": "VP-02"
       }
     },
     {
       "id": "VP-03",
       "type": "multiple_choice",
-      "title": "Zapisi u kamenu i bronzi",
-      "instruction": "Odgvori tačno na pitanje",
+      "title": "Ko je oblikovao spomenik?",
+      "instruction": "Prepoznaj umetnika koji je izradio ovaj spomenik.",
       "completion": {
-        "title": "Čestitam, istraživaču imaš dobro oko!",
-        "narrative": "Igor Šeter vajar, je rodjen 1951. u Ljubljani, u Sloveniji, a već dugo vremena živi u gradu Somboru, u Srbiji. Umetnošću se bavi od uvek. Interesovanje za slikarstvo i vajarstvo ga je inspirisalo da iznova stvara i nalazi nove izazove.",
-        "delaySeconds": 7
+        "title": "Tačno — Igor Šeter!",
+        "narrative": "Spomenik piscu sa golubicom izradio je somborski vajar Igor Šeter. Otkriven je 15. decembra 2017. ispred biblioteke „Karlo Bijelicki“.",
+        "delaySeconds": 5
       },
       "question": {
-        "text": "Kako se zove umetnik koji je skulpturama ovekovečio somborske velikane?",
+        "text": "Koji vajar je autor somborskog spomenika Veljku Petroviću?",
         "choices": [
           "Henry Moore",
           "Igor Šeter",
@@ -69,7 +169,74 @@
       },
       "unusedUnityFields": {
         "waypointId": "SO_GK"
+      },
+      "legacyOriginal": {
+        "archive": "production/veljko-petrovic/legacy-vp.json",
+        "taskId": "VP-03"
       }
     }
+  ],
+  "contentVersion": "1.2.0-vp",
+  "narrative": {
+    "setting": "Spomenik Veljku Petroviću, pešačka zona Sombora; ispred Gradske biblioteke „Karlo Bijelicki“",
+    "theme": "Putovanje pisca, književni glas i povratak u sećanje grada",
+    "logline": "Golubica sa spomenika traži tri zamišljena pisma vremena; igrač ih vraća u redosled i otkriva da se u grad vraća priča, a ne pisac.",
+    "historyParagraphs": [
+      "Veljko Petrović (1884–1967) rođen je u Somboru; gimnaziju je završio na mađarskom jeziku, a od 1902. studirao je pravo u Budimpešti i bio pitomac Tekelijanuma.",
+      "„Golubica sa crnim srcem“ je Petrovićeva pripovetka u izdanju Pripovetke (1963), a njen naslov je korišćen i za kasnije izbore pripovedaka.",
+      "Spomenik sa golubicom, delo Igora Šetera, otkriven je 15. decembra 2017. ispred Gradske biblioteke. Biblioteka je orijentir, a waypoint i misija odnose se na spomenik."
+    ],
+    "mentorOpening": "Pogledaj bronzanog pisca i golubicu. Čudno... na našem ekranu ptica nosi tri prazna pisma. Nisu to stvarna Petrovićeva pisma — već naša igra o tome kako priča putuje. Hoćeš li joj pomoći?",
+    "mentorBeforeAR": "Tri stanice: rodni grad, mesto studija i spomenik podignut mnogo kasnije. Složi kartice po godinama. Ne moraš nigde da ideš — samo mirno posmatraj.",
+    "mentorWrongAR": "Golubica je skrenula na pogrešnu stranu vremena. Pogledaj godine i pokušaj ponovo, bez kazne.",
+    "mentorAfterAR": "Poslednja kartica nije povratak samog pisca, nego povratak njegove priče u javni prostor. Sada otkrij naslov pripovetke i ime vajara.",
+    "mentorBeforeFinal": "Jedna pripovetka dala je ime knjizi, a jedan vajar dao je njenom simbolu mesto među prolaznicima. Ko čuva priču kad autora više nema?",
+    "mentorCompletion": "Dobio si Pero povratka. Ono je naš izmišljeni relikt, ne Petrovićevo pero. Grad pamti kroz knjige, ljude i umetnost. Sačuvaj ovaj trag u Herbarijumu Sombora.",
+    "fictionalWhisper": "Psst! Golubica tvrdi da je u Budimpeštu odletela bez karte. To je šala iz igre, ne istorijski podatak.",
+    "historicalEchoPolicy": "Bez imitacije autentičnog glasa, rukopisa ili lika pisca. Samo Profesor Vlada govori; ptica je fikcionalni efekat."
+  },
+  "characters": [
+    "profesor-vlada"
+  ],
+  "rewards": {
+    "mainCollectibleId": "vp-feather-relic",
+    "afterMissionCompleted": true,
+    "optionalCollectibleIds": [
+      "gold-vp-001",
+      "gold-vp-002",
+      "joker-vp-001"
+    ],
+    "missionCompletionAwardOnce": true,
+    "ar2dSameScore": true
+  },
+  "productionPackage": "production/veljko-petrovic/PRODUCTION_BRIEF.md",
+  "historicalSources": [
+    {
+      "title": "Digitalizacija NS — biografija",
+      "url": "https://www.digitalizacija.ns.rs/lat/veljko-petrovic/tab-os-informacije"
+    },
+    {
+      "title": "SOinfo — spomenik ispred biblioteke",
+      "url": "https://www.soinfo.org/vesti/vest/19355/veljko-petrovic-sa-golubicom-ispred-gradske-biblioteke/"
+    },
+    {
+      "title": "025.rs — otkrivanje 15.12.2017.",
+      "url": "https://www.025.rs/otkriven-spomenik-veljku-petrovicu/"
+    },
+    {
+      "title": "Open Library — Pripovetke (1963)",
+      "url": "https://openlibrary.org/works/OL38429853W/Pripovetke"
+    },
+    {
+      "title": "Radio Apatin — skulpture Igora Šetera",
+      "url": "https://www.radioapatin.com/kultura/od-17-aprila-izlozba-somborskog-vajara-igora-seter-18107"
+    }
+  ],
+  "historicalReviewNotes": [
+    "Originalna tri zadatka u potpunosti su sačuvana u legacy-vp.json.",
+    "VP-02 odgovor 0 i VP-03 odgovor 1 sa svim ponuđenim opcijama ostaju nepromenjeni.",
+    "SO_VP je spomenik, ne biblioteka. Biblioteka je samo orijentir.",
+    "GPS zona 2 = 12 m i nije terenski potvrđena; ne koristiti Unity visinu za AR.",
+    "Pisma, ptica koja govori i relikt su autorska fikcija."
   ]
 }

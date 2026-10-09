@@ -1,0 +1,75 @@
+{
+  "id": "sombor-vp",
+  "source": {
+    "repository": "Vlado-Somb/ChronoEyeGame-SomborMission",
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/VP_SO_Mission.asset",
+    "sourceBranch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "title": "SPOMENIK VELJKU PETROVIĆU",
+  "primaryWaypointId": "SO_VP",
+  "language": "sr-Latn",
+  "reviewStatus": "legacy_unreviewed",
+  "tasks": [
+    {
+      "id": "VP-01",
+      "type": "gps",
+      "title": "Pitomac prvog srpskog koledža",
+      "instruction": "Pronađi spomenik Veljku Petroviću",
+      "completion": {
+        "title": "Postaješ sve bolji istraživač!",
+        "narrative": "Veljko Petrović bio je istaknuti srpski književnik i akademik. Gimnaziju je završio na mađarskom jeziku u rodnom Somboru, a potom je studirao pravo u Budimpešti. Istovremeno je bio pitomac prvog srpskog koledža, zavoda Save Tekelije, čuvenog peštanskog Tekelijanuma.",
+        "delaySeconds": 7
+      },
+      "gps": {
+        "waypointId": "SO_VP",
+        "requiredZone": 3
+      }
+    },
+    {
+      "id": "VP-02",
+      "type": "multiple_choice",
+      "title": "",
+      "instruction": "",
+      "completion": {
+        "title": "Bravo!",
+        "narrative": "Naiđe tako neka igra, obuzme dečake kao zaraza, razvije se u naviku a u nekome i u pravu strast. Krajem devedesetih godina uneo je neko u Bačku kult takozvanih plemenitih golubova...",
+        "delaySeconds": 10
+      },
+      "question": {
+        "text": "Kako se zove čuvena zbirka pripovetaka Veljka Petrovića?",
+        "choices": [
+          "GOLUBICA SA CRNIM SRCEM",
+          "PLAVI LEPTIR",
+          "PONOĆNE PRIČE"
+        ],
+        "correctIndex": 0
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK"
+      }
+    },
+    {
+      "id": "VP-03",
+      "type": "multiple_choice",
+      "title": "Zapisi u kamenu i bronzi",
+      "instruction": "Odgvori tačno na pitanje",
+      "completion": {
+        "title": "Čestitam, istraživaču imaš dobro oko!",
+        "narrative": "Igor Šeter vajar, je rodjen 1951. u Ljubljani, u Sloveniji, a već dugo vremena živi u gradu Somboru, u Srbiji. Umetnošću se bavi od uvek. Interesovanje za slikarstvo i vajarstvo ga je inspirisalo da iznova stvara i nalazi nove izazove.",
+        "delaySeconds": 7
+      },
+      "question": {
+        "text": "Kako se zove umetnik koji je skulpturama ovekovečio somborske velikane?",
+        "choices": [
+          "Henry Moore",
+          "Igor Šeter",
+          "Mrđan Bajić"
+        ],
+        "correctIndex": 1
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK"
+      }
+    }
+  ]
+}

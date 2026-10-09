@@ -1,5 +1,15 @@
 # CHANGELOG — CHRONO EYE SOMBOR
 
+## 2026-10-09 — Veljko Petrović, production package 05
+
+- Waypoint SO_VP is **spomenik Veljku Petroviću**, not the Gradska biblioteka; sources confirm the monument stands in front of the library.
+- Added VP-AR-01 after GPS: original three-card chronology **Sombor 1884 → Budimpešta/Tekelijanum 1902 → Sombor memorial 2017** with equal 2D fallback.
+- Full original mission archived unchanged in `production/veljko-petrovic/legacy-vp.json`; original quiz answer indices VP-02=0 and VP-03=1 retained.
+- Professor Vlada's dramatic script, five original SVG concepts, `vp-feather-relic`, two sourced golden seals and a fictional joker.
+- Four production documents and updated registers, manifest, AR proposals, mechanics and README. Inventory: **9 missions / 33 tasks / 7 AR**.
+- GPS zone 2 / 12 m is provisional. GLB, OGG, WebP, Web/Android/ARCore integration and field tests pending. No runtime or Cloud credentials changed.
+
+
 ## 2026-10-09 — Narodno pozoriste, production package 04
 
 - Stage role mapping (curtain, actor, audience) with equivalent 2D fallback.
