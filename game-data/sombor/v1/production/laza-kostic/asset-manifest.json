@@ -1,0 +1,21 @@
+{
+  "missionId": "sombor-lk",
+  "status": "concept_only",
+  "assets": [
+    {
+      "id": "assets/ar-focus-reticle.svg",
+      "status": "existing_shared_svg"
+    },
+    {
+      "id": "assets/lk-poem-title-relic.svg",
+      "status": "concept_svg_pending_creation"
+    }
+  ],
+  "pending": [
+    "mentor_glb",
+    "audio_ogg",
+    "device_arcore_test",
+    "gps_field_test"
+  ],
+  "license": "original graphics only"
+}
