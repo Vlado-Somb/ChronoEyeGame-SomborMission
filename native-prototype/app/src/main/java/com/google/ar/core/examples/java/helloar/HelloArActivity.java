@@ -121,6 +121,10 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
 
   private static final float Z_NEAR = 0.1f;
   private static final float Z_FAR = 100f;
+  private static final int MAX_CRYSTALS = 5;
+  private static final float CRYSTAL_SCALE = 2.0f;
+  private static final float CRYSTAL_PICK_RADIUS_METERS = .28f;
+  private static final long DEPTH_FRESHNESS_NS = 100_000_000L;
 
   private static final int CUBEMAP_RESOLUTION = 16;
   private static final int CUBEMAP_NUMBER_OF_IMPORTANCE_SAMPLES = 32;
@@ -129,10 +133,11 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
   private GLSurfaceView surfaceView;
 
   private boolean installRequested;
-  private TextView diagnostics;
+  private TextView diagnostics, availableCrystalsLabel;
   private Button depthButton;
   private volatile boolean depthWanted = true;
   private volatile boolean resetRequested;
+  private volatile int crystalsAvailable = MAX_CRYSTALS;
   private boolean depthSupported, completing, renderReady;
   private long statsStart;
   private int statsFrames;
@@ -141,15 +146,16 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
   private final float[] tapVp = new float[16], tapInverse = new float[16];
   private final float[] rayClip = new float[4], rayWorld = new float[4];
   private final float[] rayOrigin = new float[3], objectCenter = new float[3], cameraPoint = new float[3];
-  private final float[] localCenter = {0f, .11f, 0f};
+  private final float[] localCenter = {0f, .11f * CRYSTAL_SCALE, 0f};
   private final float[] depthInput = new float[2], depthUv = new float[2];
 
   private DiagnosticSession log;
   private volatile int viewMode, snapshotInterval;
   private volatile boolean markRequested, collectRequested;
+  private boolean touchDepthVerified;
   private int selectedId=-1, nextId=1;
   private String depthState="no_data", lastTracking="";
-  private double depthAge=-1, centerMm=-1, selectedZ=-1, selectedRealMm=-1;
+  private double depthAge=Double.NaN, centerMm=-1, selectedZ=-1, selectedRealMm=-1;
   private long lastFrameNs, sampleNs, missingFrames, staleFrames, slowFrames, lastSnapshotMs;
   private double frameSum, frameMax, producerMs;
   private int frameCount;
@@ -234,6 +240,7 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     depthSettings.onCreate(this);
     instantPlacementSettings.onCreate(this);
     diagnostics = findViewById(R.id.diagnostics);
+    availableCrystalsLabel = findViewById(R.id.available_crystals);
     depthButton = findViewById(R.id.depth_button);
     depthButton.setOnClickListener(v -> {
       depthWanted = !depthWanted;
@@ -241,7 +248,12 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
       log.event("occlusion_toggle",json("enabled",depthWanted));
     });
     findViewById(R.id.reset_button).setOnClickListener(v -> resetRequested = true);
-    findViewById(R.id.return_button).setOnClickListener(v -> finish());
+    findViewById(R.id.return_button).setOnClickListener(v -> {
+      log.event("test_finished", json("remaining", crystalsAvailable));
+      getSharedPreferences("chrono_progress", MODE_PRIVATE).edit().putBoolean("testFinished", true).apply();
+      setResult(RESULT_OK, new Intent().putExtra("event", "ar_test_finished").putExtra("sessionId", log.id));
+      finish();
+    });
     findViewById(R.id.mode_button).setOnClickListener(v -> {
       viewMode=(viewMode+1)%3;
       ((Button)v).setText(new String[]{"Камера","Дубина","Преклапање"}[viewMode]);
@@ -523,6 +535,7 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
       for (WrappedAnchor wrapped : wrappedAnchors) wrapped.getAnchor().detach();
       wrappedAnchors.clear();
       resetRequested = false;
+      updateAvailableCrystals();
     }
 
     // Texture names should only be set once on a GL thread unless they change. This is done during
@@ -557,7 +570,7 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     backgroundRenderer.updateDisplayGeometry(frame);
     long producerStart=SystemClock.elapsedRealtimeNanos();
     boolean freshDepth=false;
-    depthAge=-1; centerMm=-1; selectedZ=-1; selectedRealMm=-1;
+    depthAge=Double.NaN; centerMm=-1; selectedZ=-1; selectedRealMm=-1;
     depthState=!depthSupported?"unsupported":camera.getTrackingState()!=TrackingState.TRACKING?"not_tracking":"no_data";
     for(WrappedAnchor w:wrappedAnchors) if(w.id==selectedId && w.getAnchor().getTrackingState()==TrackingState.TRACKING) {
       w.getAnchor().getPose().transformPoint(localCenter,0,objectCenter,0);
@@ -567,7 +580,8 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     if(camera.getTrackingState()==TrackingState.TRACKING && depthSupported) {
       try(Image image=frame.acquireDepthImage16Bits()) {
         depthAge=(frame.getTimestamp()-image.getTimestamp())/1_000_000.0;
-        freshDepth=depthAge>=0 && depthAge<=100;
+        // ARCore camera/depth timestamps can differ slightly in either direction.
+        freshDepth=Math.abs(depthAge)<=DEPTH_FRESHNESS_NS/1_000_000.0;
         depthState=freshDepth?"active":"stale";
         if(!freshDepth) staleFrames++;
         if(freshDepth) backgroundRenderer.updateCameraDepthTexture(image);
@@ -596,19 +610,22 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     updateDiagnostics(frame,camera,freshDepth && depthWanted);
     if(collectRequested) {
       collectRequested=false;
-      boolean canCollect=!depthWanted || !depthSupported || (freshDepth && selectedZ>0 && selectedRealMm>0 && selectedRealMm>=selectedZ-140);
-      if(!canCollect) {
-        log.event("collection_rejected",json("id",selectedId,"reason","occluded_or_depth_unavailable"));
-        runOnUiThread(() -> Toast.makeText(this,"Приближи избор у кадар; нема потврде видљивости",Toast.LENGTH_SHORT).show());
-      }
-      for(int i=0;i<wrappedAnchors.size();i++) if(canCollect && wrappedAnchors.get(i).id==selectedId) {
-        WrappedAnchor w=wrappedAnchors.remove(i); w.getAnchor().detach();
-        log.event("collected",json("id",w.id)); selectedId=-1;
-        runOnUiThread(() -> {
-          android.content.SharedPreferences prefs=getSharedPreferences("chrono_progress",MODE_PRIVATE);
-          prefs.edit().putInt("collected",prefs.getInt("collected",0)+1).apply();
-          setResult(RESULT_OK,new Intent().putExtra("event","artifact_collected").putExtra("sessionId",log.id));
-        }); break;
+      WrappedAnchor selected=null;
+      for(WrappedAnchor w:wrappedAnchors) if(w.id==selectedId) { selected=w; break; }
+      if(selected==null) {
+        log.event("collection_rejected",json("id",selectedId,"reason","no_selected_crystal"));
+        runOnUiThread(() -> Toast.makeText(this,"Прво постави дијамант",Toast.LENGTH_SHORT).show());
+      } else {
+        // Confirmed foreground geometry blocks collection, but missing depth does not.
+        boolean knownOccluded=depthWanted && depthSupported && freshDepth &&
+            selectedZ>0 && selectedRealMm>0 &&
+            selectedRealMm < selectedZ-CRYSTAL_PICK_RADIUS_METERS*1000.0;
+        if(knownOccluded) {
+          log.event("collection_rejected",json("id",selected.id,"reason","confirmed_occlusion"));
+          runOnUiThread(() -> Toast.makeText(this,"Дијамант је заклоњен",Toast.LENGTH_SHORT).show());
+        } else {
+          collectCrystal(selected,"button",freshDepth && selectedRealMm>0);
+        }
       }
     }
 
@@ -684,6 +701,7 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
       // Get the current pose of an Anchor in world space. The Anchor pose is updated
       // during calls to session.update() as ARCore refines its estimate of the world.
       anchor.getPose().toMatrix(modelMatrix, 0);
+      Matrix.scaleM(modelMatrix, 0, CRYSTAL_SCALE, CRYSTAL_SCALE, CRYSTAL_SCALE);
 
       // Calculate model/view/projection matrices
       Matrix.multiplyMM(modelViewMatrix, 0, viewMatrix, 0, modelMatrix, 0);
@@ -710,6 +728,29 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     backgroundRenderer.drawVirtualScene(render, virtualSceneFramebuffer, Z_NEAR, Z_FAR);
   }
 
+  private void updateAvailableCrystals() {
+    crystalsAvailable=Math.max(0,MAX_CRYSTALS-wrappedAnchors.size());
+    final int count=crystalsAvailable;
+    runOnUiThread(() -> {
+      if(!isFinishing()) availableCrystalsLabel.setText("Преостало: "+count+"/"+MAX_CRYSTALS+" дијаманата");
+    });
+  }
+
+  private void collectCrystal(WrappedAnchor crystal,String method,boolean visibilityVerified) {
+    if(!wrappedAnchors.remove(crystal)) return;
+    crystal.getAnchor().detach();
+    selectedId=-1;
+    updateAvailableCrystals();
+    log.event("collected",json("id",crystal.id,"method",method,
+        "visibilityVerified",visibilityVerified,"remaining",crystalsAvailable));
+    runOnUiThread(() -> {
+      android.content.SharedPreferences prefs=getSharedPreferences("chrono_progress",MODE_PRIVATE);
+      prefs.edit().putInt("collected",prefs.getInt("collected",0)+1).apply();
+      setResult(RESULT_OK,new Intent().putExtra("event","artifact_collected").putExtra("sessionId",log.id));
+      Toast.makeText(this,"Дијамант сакупљен!",Toast.LENGTH_SHORT).show();
+    });
+  }
+
   // Handle only one tap per frame, as taps are usually low frequency compared to frame rate.
   private void handleTap(Frame frame, Camera camera) {
     MotionEvent tap = tapHelper.poll();
@@ -718,31 +759,37 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
       if (camera.getTrackingState() != TrackingState.TRACKING || completing) return;
       for(WrappedAnchor wrapped:wrappedAnchors) {
         Anchor anchor=wrapped.getAnchor();
-        if(anchor.getTrackingState()==TrackingState.TRACKING && intersectsObject(tap,camera,anchor) && visibleAtTap(frame,camera,tap)) {
+        if(anchor.getTrackingState()==TrackingState.TRACKING && intersectsObject(tap,camera,anchor)) {
           selectedId=wrapped.id;
           log.event("selected",json("id",selectedId));
+          if(visibleAtTap(frame,camera,tap)) collectCrystal(wrapped,"tap",touchDepthVerified);
+          else {
+            log.event("collection_rejected",json("id",selectedId,"reason","confirmed_occlusion"));
+            runOnUiThread(() -> Toast.makeText(this,"Дијамант је заклоњен",Toast.LENGTH_SHORT).show());
+          }
           return;
         }
       }
-      if(wrappedAnchors.size()>=5) return;
+      if(wrappedAnchors.size()>=MAX_CRYSTALS) return;
       for (HitResult hit : frame.hitTest(tap)) {
         Trackable t = hit.getTrackable();
         if ((t instanceof Plane && ((Plane)t).isPoseInPolygon(hit.getHitPose())
              && PlaneRenderer.calculateDistanceToPlane(hit.getHitPose(), camera.getPose()) > 0)
              || t instanceof DepthPoint
              || (t instanceof Point && ((Point)t).getOrientationMode() == OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
-          boolean[] used=new boolean[5]; for(WrappedAnchor w:wrappedAnchors) used[w.color]=true;
-          int color=0; while(color<4 && used[color]) color++;
+          boolean[] used=new boolean[MAX_CRYSTALS]; for(WrappedAnchor w:wrappedAnchors) used[w.color]=true;
+          int color=0; while(color<MAX_CRYSTALS-1 && used[color]) color++;
           WrappedAnchor created=new WrappedAnchor(hit.createAnchor(),t,nextId++,color);
           wrappedAnchors.add(created); selectedId=created.id;
-          log.event("placed",json("id",created.id,"color",colorNames[color],"pose",pose(created.getAnchor().getPose())));
+          updateAvailableCrystals();
+          log.event("placed",json("id",created.id,"color",colorNames[color],"remaining",crystalsAvailable,"pose",pose(created.getAnchor().getPose())));
           break;
         }
       }
     } finally { tap.recycle(); }
   }
 
-  /** Ray / sphere picking for the 22 cm prototype crystal. */
+  /** Ray / sphere picking for the doubled 44 cm prototype crystal. */
   private boolean intersectsObject(MotionEvent tap, Camera camera, Anchor anchor) {
     camera.getViewMatrix(tapView, 0);
     camera.getProjectionMatrix(tapProjection, 0, Z_NEAR, Z_FAR);
@@ -762,23 +809,38 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     float t=cx*dx+cy*dy+cz*dz;
     if (t < Z_NEAR || t > Z_FAR) return false;
     float ex=cx-t*dx, ey=cy-t*dy, ez=cz-t*dz;
-    return ex*ex+ey*ey+ez*ez <= .14f*.14f;
+    return ex*ex+ey*ey+ez*ez <= CRYSTAL_PICK_RADIUS_METERS*CRYSTAL_PICK_RADIUS_METERS;
   }
 
   private boolean visibleAtTap(Frame frame, Camera camera, MotionEvent tap) {
+    touchDepthVerified=false;
     if (!depthSupported || !depthWanted) return true;
     try (Image image = frame.acquireDepthImage16Bits()) {
-      if (Math.abs(frame.getTimestamp()-image.getTimestamp()) > 100_000_000L) return false;
+      long skewNs=frame.getTimestamp()-image.getTimestamp();
+      if (Math.abs(skewNs)>DEPTH_FRESHNESS_NS) {
+        log.event("touch_depth_unverified",json("reason","stale","ageMs",skewNs/1_000_000.0));
+        return true;
+      }
       depthInput[0]=tap.getX(); depthInput[1]=tap.getY();
       frame.transformCoordinates2d(Coordinates2d.VIEW, depthInput, Coordinates2d.TEXTURE_NORMALIZED, depthUv);
       int x=Math.max(0,Math.min(image.getWidth()-1,(int)(depthUv[0]*image.getWidth())));
       int y=Math.max(0,Math.min(image.getHeight()-1,(int)(depthUv[1]*image.getHeight())));
       Image.Plane plane=image.getPlanes()[0];
       int mm=plane.getBuffer().order(ByteOrder.LITTLE_ENDIAN).getShort(y*plane.getRowStride()+x*plane.getPixelStride()) & 0xffff;
-      if (mm == 0) return false;
+      if (mm==0) {
+        log.event("touch_depth_unverified",json("reason","missing_pixel"));
+        return true;
+      }
+      touchDepthVerified=true;
       camera.getPose().inverse().transformPoint(objectCenter,0,cameraPoint,0);
-      return mm/1000f >= -cameraPoint[2]-.14f;
-    } catch (NotYetAvailableException e) { return false; }
+      return mm/1000f >= -cameraPoint[2]-CRYSTAL_PICK_RADIUS_METERS;
+    } catch (NotYetAvailableException e) {
+      log.event("touch_depth_unverified",json("reason","not_yet_available"));
+      return true;
+    } catch (RuntimeException e) {
+      log.event("touch_depth_unverified",json("reason","depth_error","error",e.toString()));
+      return true;
+    }
   }
 
   private static JSONObject pose(com.google.ar.core.Pose p) {
@@ -834,18 +896,18 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     }
     double mean=frameCount==0?0:frameSum/frameCount;
     JSONObject data=json("fps",lastFps,"frameMeanMs",mean,"frameMaxMs",frameMax,"slowOver50Ms",slowFrames,
-      "frameTimestampNs",frame.getTimestamp(),"depthAgeMs",depthAge<0?null:depthAge,"depthState",depthState,
+      "frameTimestampNs",frame.getTimestamp(),"depthAgeMs",Double.isFinite(depthAge)?depthAge:null,"depthState",depthState,
       "occlusion",occlusion,"occlusionReason",!depthWanted?"user_disabled":depthState,"centerMm",centerMm<=0?null:centerMm,
       "selectedId",selectedId,"objectZMm",selectedZ<=0?null:selectedZ,"realAtObjectMm",selectedRealMm<=0?null:selectedRealMm,
       "cameraPose",log.detailed?pose(camera.getPose()):null,"anchors",anchors,"pairs",pairs,
       "tracking",tracking,"missingFrames",missingFrames,"staleFrames",staleFrames,"detailed",log.detailed,"producerMs",producerMs);
     String row=String.format(java.util.Locale.ROOT,"%.2f,%.3f,%.3f,%d,%s,%s,%s,%s,%s,%d,%d,%d,%s,%.3f",lastFps,mean,frameMax,slowFrames,
-      depthAge<0?"":Double.toString(depthAge),depthState,occlusion,centerMm<=0?"":Double.toString(centerMm),selectedZ<=0?"":Double.toString(selectedZ),wrappedAnchors.size(),missingFrames,staleFrames,log.detailed,producerMs);
+      Double.isFinite(depthAge)?Double.toString(depthAge):"",depthState,occlusion,centerMm<=0?"":Double.toString(centerMm),selectedZ<=0?"":Double.toString(selectedZ),wrappedAnchors.size(),missingFrames,staleFrames,log.detailed,producerMs);
     log.sample(data,row);
     String selected="нема"; for(WrappedAnchor w:wrappedAnchors) if(w.id==selectedId) selected="#"+w.id+" "+colorNames[w.color];
     String text=String.format(java.util.Locale.ROOT,
       "%s · %.1f s · %.0f FPS\n%s\nДубина: %s · старост %s ms · заклањање %s\nЦентар +: %s mm | избор %s\nZ предмета: %s mm | стварно ту: %s mm\n0 m плаво → 2.5 m зелено → ≥5 m црвено\nШаховница: нема важеће дубине · %d/5 предмета\n%s · губитак реда %d",
-      log.id.substring(0,8),log.elapsedMs()/1000.0,lastFps,tracking,depthState,depthAge<0?"—":String.format(java.util.Locale.ROOT,"%.0f",depthAge),occlusion?"ДА":"НЕ",
+      log.id.substring(0,8),log.elapsedMs()/1000.0,lastFps,tracking,depthState,Double.isFinite(depthAge)?String.format(java.util.Locale.ROOT,"%.2f",depthAge):"—",occlusion?"ДА":"НЕ",
       centerMm<=0?"—":String.format(java.util.Locale.ROOT,"%.0f",centerMm),selected,
       selectedZ<=0?"—":String.format(java.util.Locale.ROOT,"%.0f",selectedZ),selectedRealMm<=0?"—":String.format(java.util.Locale.ROOT,"%.0f",selectedRealMm),wrappedAnchors.size(),log.status,log.dropped.get());
     runOnUiThread(() -> { if(!isFinishing()) diagnostics.setText(text); });

@@ -44,11 +44,12 @@ class MainActivity : AppCompatActivity() {
  override fun onPause() { if (::web.isInitialized) web.onPause(); super.onPause() }
  override fun onDestroy() { web.removeJavascriptInterface("ChronoNative"); web.destroy(); super.onDestroy() }
  inner class Bridge {
-  @JavascriptInterface fun openAr() { runOnUiThread { if (!arOpen && !isFinishing) { arOpen = true; arLauncher.launch(Intent(this@MainActivity, HelloArActivity::class.java)) } } }
+  @JavascriptInterface fun openAr() { runOnUiThread { if (!arOpen && !isFinishing) { arOpen = true; getSharedPreferences("chrono_progress", MODE_PRIVATE).edit().putBoolean("testFinished", false).apply(); arLauncher.launch(Intent(this@MainActivity, HelloArActivity::class.java)) } } }
   @JavascriptInterface fun getState(): String {
    val prefs = getSharedPreferences("chrono_progress", MODE_PRIVATE)
    return JSONObject().put("collected", prefs.getInt("collected", 0)).put("lastFps", prefs.getFloat("lastFps", 0f).toDouble())
-    .put("depthSupported", prefs.getBoolean("depthSupported", false)).put("tested", prefs.contains("depthSupported")).toString()
+    .put("depthSupported", prefs.getBoolean("depthSupported", false)).put("tested", prefs.contains("depthSupported"))
+    .put("testFinished", prefs.getBoolean("testFinished", false)).toString()
   }
   @JavascriptInterface fun resetProgress() { getSharedPreferences("chrono_progress", MODE_PRIVATE).edit().clear().apply(); runOnUiThread { refresh() } }
  }

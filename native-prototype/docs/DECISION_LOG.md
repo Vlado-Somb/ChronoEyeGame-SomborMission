@@ -27,3 +27,14 @@ schemaVersion=1 is independent of mission schema; no mission migration.
 
 Validation status: implemented_not_field_tested. See VALIDATION.md for actual
 build/lint/analyzer checks. S25 Ultra physical test is still required.
+
+DEC-AR-20261009-02 — accepted_for_design / implemented_not_field_tested.
+Following 2026-10-09 field report with consistently small negative depthAgeMs,
+accept absolute camera-depth timestamp skew <= 100 ms instead of rejecting
+negative skew. Record signed skew. Preserve known physical occlusion, but do
+not block crystal touch solely because depth is missing/stale/invalid. Scale
+five test crystals 2x (22cm -> 44cm), match pick radius and center, collect
+on crystal tap, show remaining placement slots 5/5 -> 0/5 -> restored by
+collection/reset/new AR session. Explicit `ar_test_finished` native result.
+This is diagnostic AR Lab functionality, NOT final mission collectibles/scoring.
+Status must not be promoted to verified_in_test before APK CI and phone QA.
