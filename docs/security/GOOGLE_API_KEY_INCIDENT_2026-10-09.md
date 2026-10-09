@@ -43,3 +43,21 @@ References:
 - https://developers.google.com/maps/api-security-best-practices
 - https://developers.google.com/maps/documentation/tile/get-api-key
 - https://developers.google.com/ar/develop/authorization?platform=android
+
+
+## Follow-up audit — 2026-10-09
+
+- PR #19 head reviewed: `61af2fe82b186be182f94eb80e4ea37e9bbe6516`; main: `91cd59d689cac63395cebbc4087df6377ccf26e9`. PR was open/draft, mergeable; Google source CI run `37987361296` passed. This was not a complete secret or binary audit.
+- Targeted comparison covered the six known Google-bearing paths plus two Cesium settings paths across 28 fetched remote branch heads. The same two Google values remain in all six paths on the other 27 heads, including main. The eight-path audit does not certify unrelated files.
+- Two distinct Cesium ion JWT values were found in three locations: `Assets/CesiumSettings/Resources/CesiumIonServers/ion.cesium.com.asset`, `Assets/CesiumSettings/Resources/CesiumRuntimeSettings.asset`, and `Assets/MATERIJALI/6. Scene Acts/3_ACT0_Embassy 1.unity`. Owner explicitly authorized clearing these legacy credentials. Their validity/scopes were not tested against Cesium. Provider-side revocation remains necessary if active.
+- Source scanner now checks JWT/private-key patterns as well as Google keys, including extensionless files, backups and large text files. Its output redacts values. It explicitly reports uninspected binary/archive/missing files. It does not prove removal from history or compressed APK content.
+- Historical exposure remains confirmed by reachable main/source blob versions; no force-push or history rewrite performed. Full-history and all-binary clearance is **not claimed**.
+- A checked-in legacy APK, `SOMBOR TEST 31.10.e.apk` (76,736,664 bytes in the tree), remains present. Latest AR Lab workflow `37985787225` succeeded and advertises artifact `11642539540` (5,330,345-byte ZIP). An artifact URL was returned, but byte download failed; that artifact's embedded secrets and signing certificate are not yet verified.
+- Cloud Browser returned `Site Unavailable — Unable to access this site` at console.cloud.google.com; user's separately logged-in browser tab was not exposed to this session. No Google/Cesium credential was revoked, rotated or created; no API, billing, IAM or quota was changed. Abuse and charges cannot be assessed without console access.
+- Keep incident open. Repository containment and Cloud recovery are separate gates.
+
+### Legacy APK inspection and source validation
+
+- Downloaded the tracked legacy APK (76,736,664 bytes), SHA-256 `b115ba9abb92492c253c2a8a65a8fec69f677e8d2753f168d338cb8f3461f930`. A byte-pattern scan of every decompressed ZIP entry found one JWT in `assets/bin/Data/data.unity3d`; no literal Google-key match in that scan. This does not clear nested Unity compression/serialized data or obfuscated credentials.
+- Remove this obsolete checked-in APK from the updated PR tree, preserving history and all source assets. Installed apps, Cloud projects and OAuth clients are unaffected by this repository-file removal. Historical copies still require token revocation and coordinated distribution cleanup.
+- Scanner fixture checks passed: clean text, extensionless Google key, backup JWT, >8 MiB text key, PEM private key; matching values are not emitted. Full source CI on the updated remote commit is a separate gate. No Android/Unity runtime build was run here.

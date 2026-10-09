@@ -165,3 +165,16 @@
 - **Зависност:** власник Google Cloud налога мора опозвати/ротирати оба кључа, проверити ограничења и billing, па одобрити засебну конфигурацију за ARCore/Map Tiles. Ни Cloud подешавања, ни API активације, ни billing нису промењени овом одлуком.
 - **Последица:** legacy Unity Geospatial/3D Tiles функције могу бити нефункционалне до безбедног увођења ограничених credential-а; теренски и build тест нису обављени.
 - **Доказ и поступак:** `docs/security/GOOGLE_API_KEY_INCIDENT_2026-10-09.md`. Затварање инцидента после Cloud потврде, контроле branches/artefacts и регресионих тестова.
+
+
+### DEC-SEC-2026-002 — Recovery audit and legacy Cesium containment
+- **Date:** 2026-10-09; **Status:** `accepted_for_design` for source containment; Cloud changes blocked/unverified.
+- **Authorization:** owner explicitly allowed removal of legacy Unity/Cesium credentials; future legacy use will be reconfigured.
+- **Change:** clear three serialized Cesium token occurrences (two distinct token values), extend source CI beyond Google keys to JWT/private-key patterns and previously skipped text filenames. Preserve scenes and projects.
+- **Evidence:** targeted eight-path comparison of 28 remote branch heads; both Google keys remain in the six affected files on the other 27 heads, including main. PR #19 originally removed only Google keys.
+- **Cloud boundary:** Cloud Browser returned Site Unavailable twice; no signed-in console observed. Project IDs, IAM, credential validity/revocation, usage, abuse, billing and quotas remain unknown. No Cloud or Cesium account changes.
+- **Integration:** keep PR #19 draft until review; no force-push, history rewrite or unrelated branch merge. Update stale branches from the reviewed security fix before future merges and run the source check on every resulting tree.
+- **Legacy consequence:** old Unity cloud/Cesium rendering requires fresh restricted configuration. New native local-depth prototype is separate; no device runtime test claimed.
+- **Recovery proposal / gates:** see `docs/security/CLOUD_RECOVERY_2026-10-09.md`. Cost-bearing activation and destructive actions still need the owner's concrete approval.
+
+- **Binary containment addendum:** byte inspection found a JWT in the obsolete tracked legacy APK. Remove that repository file from this review branch; preserve source, history and installed applications. No claim of nested Unity binary clearance.

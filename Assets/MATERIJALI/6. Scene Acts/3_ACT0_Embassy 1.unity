@@ -3994,7 +3994,7 @@ MonoBehaviour:
   _tilesetSource: 1
   _url: https://tile.googleapis.com/v1/3dtiles/root.json?key=CONFIGURE_RESTRICTED_MAP_TILES_API_KEY
   _ionAssetID: 2275207
-  _ionAccessToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjZTljZDY2ZC0wNGExLTQ3YWMtYmI4Zi1hYjEwMjMzMzExNzgiLCJpZCI6MjY1Mzg5LCJpYXQiOjE3NDc0MzIwNDR9.n-8F9fw1zi8p7i5d8uQqzQ_5XId220GUGJjioqBeuJk
+  _ionAccessToken: 
   _ionServer: {fileID: 11400000, guid: fdbc6525dc52e4f438f100d1aa8d86f7, type: 2}
   _maximumScreenSpaceError: 16
   _preloadAncestors: 1
