@@ -70,11 +70,11 @@
         },
         {
           "id": "zup-three-times-key-relic",
-          "name": "Ključ tri vremena",
+          "name": "Kartica Županije",
           "missionId": "sombor-zup",
           "rarity": "unique",
-          "asset": "assets/zup-three-times-key-relic.svg",
-          "caption": "Izmišljeni ključ razlikovanja događaja 1697, slike 1896. i postavke 1898; nije istorijski predmet.",
+          "asset": "assets/zup-heritage-card.svg",
+          "caption": "Autorska ilustracija istorijskih tragova Županije; nije istorijski predmet.",
           "historicalFact": "Bitka kod Sente 1697, Ajzenhutova slika 1896, postavljena u Županiji 1898.",
           "source": "https://www.ravnoplov.rs/bitka-kod-sente-nasa-najveca-slika/",
           "scoring": {
@@ -103,6 +103,20 @@
           "asset": "assets/lk-poem-title-relic.svg",
           "caption": "Autorska ilustracija naslova pesme, nije istorijski predmet.",
           "historicalFact": "Laza Kostić je autor pesme „Santa Maria della Salute“.",
+          "scoring": {
+            "points": 0,
+            "awardOnce": true
+          }
+        },
+        {
+          "id": "gms-four-collections-relic",
+          "name": "Četiri muzejske zbirke",
+          "missionId": "sombor-gms",
+          "rarity": "unique",
+          "asset": "assets/gms-four-collections-relic.svg",
+          "caption": "Autorska ilustracija četiri muzejske oblasti, nije istorijski predmet.",
+          "historicalFact": "Gradski muzej Sombor čuva arheološku i numizmatičku, etnološku, istorijsku i likovnu građu.",
+          "source": "https://vojvodina.travel/atrakcije/gradski-muzej-sombor/",
           "scoring": {
             "points": 0,
             "awardOnce": true
@@ -214,6 +228,18 @@
             "waypointId": "SO_EB",
             "text": "Ernest Bošnjak je 1909. počeo da snima filmove; filmski studio ostao je neostvaren plan.",
             "source": "https://www.ravnoplov.rs/"
+          },
+          {
+            "id": "gold-gms-001",
+            "waypointId": "SO_GMS",
+            "text": "Istorijsko društvo Bačko-bodroške županije osnovano je 1883. godine.",
+            "source": "https://vojvodina.travel/atrakcije/gradski-muzej-sombor/"
+          },
+          {
+            "id": "gold-gms-002",
+            "waypointId": "SO_GMS",
+            "text": "Gradski muzej Sombor useljen je u sadašnju zgradu 1945. godine.",
+            "source": "https://vojvodina.travel/atrakcije/gradski-muzej-sombor/"
           }
         ]
       }
