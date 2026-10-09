@@ -1,0 +1,105 @@
+{
+  "id": "budapest-act-6",
+  "title": "Храм који враћа место",
+  "actIndex": 6,
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "runtimeStatus": "not_integrated",
+  "primaryWaypointId": "BP_GELLERT_VIEW",
+  "intermediateWaypointIds": [
+    "BP_TABAN_RETURN"
+  ],
+  "prerequisiteMissionIds": [
+    "budapest-act-5"
+  ],
+  "dialoguePath": "dialogues/act-6.json",
+  "evidenceSetId": "BP2_EVIDENCE_6",
+  "tasks": [
+    {
+      "id": "BP2_A6_ARRIVE",
+      "type": "gps",
+      "title": "Безбедна позиција за реконструкцију",
+      "instruction": "Потврди стајање или користи 2D; геопросторна тачка још није потврђена.",
+      "waypointId": "BP_GELLERT_VIEW",
+      "arrivalMode": "gps_or_explicit_manual",
+      "completion": {
+        "title": "Позиција припремљена"
+      }
+    },
+    {
+      "id": "BP2_A6_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Храм из три извора",
+      "instruction": "Означи проверено прочеље, непроверене делове и уметничку допуну.",
+      "ar": {
+        "activationAfterTask": "BP2_A6_ARRIVE",
+        "assetIds": [
+          "BP2_ART_6"
+        ],
+        "successCondition": {
+          "allEvidenceMappings": [
+            "facade:photo",
+            "hidden:unverified",
+            "bell:artistic"
+          ]
+        }
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "facade:photo",
+            "hidden:unverified",
+            "bell:artistic"
+          ]
+        }
+      },
+      "evidenceSetId": "BP2_EVIDENCE_6",
+      "completion": {
+        "title": "Реконструкција означена"
+      }
+    },
+    {
+      "id": "BP2_A6_QUIZ",
+      "type": "multiple_choice",
+      "title": "Разумевање реконструкције",
+      "instruction": "Избери како се приказује непознато.",
+      "question": {
+        "text": "Како приказати непотврђену страну храма?",
+        "choices": [
+          "Као сигуран аутентичан зид",
+          "Као непроверену контуру",
+          "Сакрити изворе"
+        ],
+        "correctIndex": 1
+      },
+      "sources": [
+        "SRC_TABAN_OSZK",
+        "SRC_USER_PHOTO"
+      ],
+      "completion": {
+        "title": "Проверено"
+      }
+    }
+  ],
+  "narrative": {
+    "mentorOpening": "BP2_D6_overlook",
+    "mentorCompletion": "BP2_D6_epilogue",
+    "sources": [
+      "SRC_TABAN_OSZK",
+      "SRC_TABAN_BTM",
+      "SRC_USER_PHOTO"
+    ],
+    "educationalObjective": "Сачувати разлику између документа и реконструкције, па послати временски сигнал."
+  },
+  "progressPolicy": {
+    "namespace": "budapest-content-v2",
+    "v1AutoImport": false
+  },
+  "travelSafety": {
+    "noCameraWhileWalking": true,
+    "stationaryOnly": true
+  }
+}
