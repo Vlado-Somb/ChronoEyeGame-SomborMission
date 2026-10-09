@@ -47,7 +47,9 @@ class MainActivity : AppCompatActivity() {
   @JavascriptInterface fun openAr() { runOnUiThread { if (!arOpen && !isFinishing) { arOpen = true; getSharedPreferences("chrono_progress", MODE_PRIVATE).edit().putBoolean("testFinished", false).apply(); arLauncher.launch(Intent(this@MainActivity, HelloArActivity::class.java)) } } }
   @JavascriptInterface fun getState(): String {
    val prefs = getSharedPreferences("chrono_progress", MODE_PRIVATE)
-   return JSONObject().put("collected", prefs.getInt("collected", 0)).put("lastFps", prefs.getFloat("lastFps", 0f).toDouble())
+   // Read actual installed package metadata; never hardcode the web shell's visible version.
+   val actualVersion = packageManager.getPackageInfo(packageName, 0).versionName ?: "unknown"
+   return JSONObject().put("appVersion", actualVersion).put("collected", prefs.getInt("collected", 0)).put("lastFps", prefs.getFloat("lastFps", 0f).toDouble())
     .put("depthSupported", prefs.getBoolean("depthSupported", false)).put("tested", prefs.contains("depthSupported"))
     .put("testFinished", prefs.getBoolean("testFinished", false)).toString()
   }
