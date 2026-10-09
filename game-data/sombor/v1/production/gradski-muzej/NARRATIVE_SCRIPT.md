@@ -1,13 +1,13 @@
-# Svetiljka izgubljenih priča — scenario
+# Četiri lica muzeja — edukativni scenario (urednička revizija)
 
-## Act I: Signal
-Professor Vlada hears a faint paper-rustle. Four labels have lost their stories. He invites the player to stand safely outside the museum. The signal and labels are fictional.
+## 1. Dolazak
+Profesor Vlada: „Stigli smo do Gradskog muzeja Sombor. Muzej čuva različite vrste svedočanstava o prošlosti. Hajde da upoznamo četiri oblasti.“ Igrač potvrđuje da stoji na bezbednoj pešačkoj površini.
 
-## Act II: Four cabinets
-Four original symbolic cards represent archaeology and coins, ethnology, history and fine art. The player matches each card to its department in AR or 2D. No real museum object is scanned.
+## 2. AR / 2D — Četiri zbirke
+Igrač povezuje simbolične ilustracije sa oblastima: novčić i fragment keramike → arheologija i numizmatika; tkalački alat → etnologija; arhivski dokument → istorija; paleta → likovna umetnost. Potpuno isti zadatak, bodovi i ponavljanje u 2D prikazu. Bez fotografisanja ili skeniranja eksponata.
 
-## Act III: The empty cabinet
-All labels return, but the central cabinet stays dark. Vlada: 'A collection is more than objects. We must also preserve where each story came from.' Three distinct dates illuminate: 1883 society, 1887 room in Županija, 1945 museum in its present home.
+## 3. Istorijska beleška
+Profesor Vlada: „Muzej je nastajao postepeno. Istorijsko društvo osnovano je 1883, a u sadašnju zgradu muzej se smestio 1945. godine.“ Godina 1887. ostaje u proširenoj informativnoj kartici, ne u AR zadatku.
 
-## Act IV: Return of light
-The player names Gradski muzej Sombor, then chooses 1945 for the present building. Vlada awards the symbolic lantern relic, not a historical artifact. The Herbarijum card explains the museum's four collections.
+## 4. Kviz i nagrada
+Kratko proveriti jednu istorijsku činjenicu, uz očuvanje originalnih Unity pitanja u legacy arhivi. Završna nagrada: simbolična kartica „Četiri zbirke“ u Herbarijumu; uskladiti naziv i asset u registrima pre objavljivanja. Nema mističnih signala, čarobnih svetiljki ni fantastičnih događaja.
