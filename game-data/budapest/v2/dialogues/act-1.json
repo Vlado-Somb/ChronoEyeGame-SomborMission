@@ -125,7 +125,7 @@
       "mediaCues": [
         {
           "id": "BP2_D1_arrival_CU01",
-          "kind": "ambien",
+          "kind": "ambience",
           "direction": "Градски саобраћај, лишће; један врло танак акустички траг мастила по папиру.",
           "status": "planned_not_created",
           "captionRequired": true
@@ -254,7 +254,7 @@
       "mediaCues": [
         {
           "id": "BP2_D1_poem_CU01",
-          "kind": "recitati",
+          "kind": "recitation",
           "direction": "Тих, сув мушки глас, без музичке подлоге до завршне паузе.",
           "status": "planned_not_created",
           "captionRequired": true
@@ -376,7 +376,7 @@
       "gameplayBeats": [
         {
           "id": "BP2_D1_evidence_BE01",
-          "kind": "EVIDEN",
+          "kind": "EVIDENCE",
           "instruction": "Сачувај обе картице; обележи изворно поткрепљену, поређење не сме бити аутоматска истинитост."
         }
       ]
@@ -509,7 +509,7 @@
       "mediaCues": [
         {
           "id": "BP2_D1_interruption_CU01",
-          "kind": "mot",
+          "kind": "motif",
           "direction": "Три кратка импулса у паузама између нових ауторских стихова; последњи садржи врло слаб четврти одјек.",
           "status": "planned_not_created",
           "captionRequired": true
