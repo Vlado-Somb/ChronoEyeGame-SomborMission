@@ -24,3 +24,6 @@ Version: 2.0.0-budapest-draft.1. A content authoring candidate, NOT a globally d
 
 ## Release gate
 - No built Android APK, Web Maps/AR engine integration, device GPS/ARCore survey, production media rights, or full historical fact audit is asserted by these JSON/MD files. See QA_REPORT.md and the per-act QA checklists.
+
+## Изузетак: редослед V акта
+Act V graph почиње сценом пешачке навигације (bridge) и скоро непримећеног места храма (near_absence), а тек затим захтева задаћу GPS/manual ARRIVE код Златног јелена. То не значи потврду GPS-а док је телефон у покрету: навигација не покреће AR, сценски говор само кад се стане, недоказане координате остају null. 

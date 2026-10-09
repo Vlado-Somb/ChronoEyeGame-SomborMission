@@ -1,13 +1,13 @@
 {
   "id": "BP2_A5_FLOW",
   "missionId": "budapest-act-5",
-  "entryNodeId": "BP2_A5_NODE_ARRIVE",
+  "entryNodeId": "BP2_A5_NODE_S00",
   "nodes": [
     {
       "id": "BP2_A5_NODE_ARRIVE",
       "kind": "task",
       "taskId": "BP2_A5_ARRIVE",
-      "next": "BP2_A5_NODE_S00"
+      "next": "BP2_A5_NODE_S02"
     },
     {
       "id": "BP2_A5_NODE_S00",
@@ -33,7 +33,7 @@
       "kind": "dialogue",
       "dialogueId": "BP2_D5_near_absence",
       "skipSummary": "Инспектор у близини некадашњег храма примећује само слаб сигнал, не препознаје место.",
-      "next": "BP2_A5_NODE_S02",
+      "next": "BP2_A5_NODE_ARRIVE",
       "skipPreservesTranscript": true,
       "navigationCue": {
         "waypointId": "BP_TABAN_NEAR",
@@ -175,5 +175,18 @@
   "resumePolicy": "resume_node_no_duplicate_reward",
   "fallback": "2d_evidence_cards",
   "status": "candidate_no_runtime_test",
-  "navigationPolicy": "bridge_navigation_only_no_ar; pause_for_safe_scene_standing"
+  "navigationPolicy": "bridge_navigation_only_no_ar; pause_for_safe_scene_standing",
+  "routePolicy": {
+    "entryBeforeArrival": true,
+    "orderedNarrativeWaypoints": [
+      "BP_BRIDGE_SAFE",
+      "BP_TABAN_NEAR",
+      "BP_GOLDEN_STAG",
+      "BP_TABAN_RETURN",
+      "BP_GELLERT_VIEW"
+    ],
+    "taskArrivalAt": "BP_GOLDEN_STAG",
+    "noAROnBridge": true,
+    "allUnsurveyedRouteStepsRequireSafeStop": true
+  }
 }
