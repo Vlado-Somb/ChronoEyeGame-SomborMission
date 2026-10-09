@@ -1,0 +1,102 @@
+{
+  "id": "BP2_A4_FLOW",
+  "missionId": "budapest-act-4",
+  "entryNodeId": "BP2_A4_NODE_ARRIVE",
+  "nodes": [
+    {
+      "id": "BP2_A4_NODE_ARRIVE",
+      "kind": "task",
+      "taskId": "BP2_A4_ARRIVE",
+      "next": "BP2_A4_NODE_S00"
+    },
+    {
+      "id": "BP2_A4_NODE_S00",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_threshold",
+      "skipSummary": "Михаило Витковић шаље инспектора брату Јовану; илонино преузимање агенције откривено.",
+      "next": "BP2_A4_NODE_S01"
+    },
+    {
+      "id": "BP2_A4_NODE_S01",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_phasing",
+      "skipSummary": "Михаило Витковић шаље инспектора брату Јовану; илонино преузимање агенције откривено.",
+      "next": "BP2_A4_NODE_S02"
+    },
+    {
+      "id": "BP2_A4_NODE_S02",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_student_table",
+      "skipSummary": "Михаило Витковић шаље инспектора брату Јовану; илонино преузимање агенције откривено.",
+      "next": "BP2_A4_NODE_EXPLORE"
+    },
+    {
+      "id": "BP2_A4_NODE_S03",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_takeover",
+      "skipSummary": "Михаило Витковић шаље инспектора брату Јовану; илонино преузимање агенције откривено.",
+      "next": "BP2_A4_NODE_S04"
+    },
+    {
+      "id": "BP2_A4_NODE_S04",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_varga",
+      "skipSummary": "Михаило Витковић шаље инспектора брату Јовану; илонино преузимање агенције откривено.",
+      "next": "BP2_A4_NODE_S05"
+    },
+    {
+      "id": "BP2_A4_NODE_S05",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_mihailo",
+      "skipSummary": "Михаило Витковић шаље инспектора брату Јовану; илонино преузимање агенције откривено.",
+      "next": "BP2_A4_NODE_S06"
+    },
+    {
+      "id": "BP2_A4_NODE_S06",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_rupture",
+      "skipSummary": "Михаило Витковић шаље инспектора брату Јовану; илонино преузимање агенције откривено.",
+      "next": "BP2_A4_NODE_FINISH"
+    },
+    {
+      "id": "BP2_A4_NODE_EXPLORE",
+      "kind": "task",
+      "taskId": "BP2_A4_EXPLORE",
+      "next": "BP2_A4_NODE_QUIZ"
+    },
+    {
+      "id": "BP2_A4_NODE_QUIZ",
+      "kind": "task",
+      "taskId": "BP2_A4_QUIZ",
+      "next": "BP2_A4_NODE_S03"
+    },
+    {
+      "id": "BP2_A4_NODE_FINISH",
+      "kind": "mission_completion",
+      "requiresAllTaskIds": [
+        "BP2_A4_ARRIVE",
+        "BP2_A4_EXPLORE",
+        "BP2_A4_QUIZ"
+      ],
+      "awardKey": "budapest-act-4:complete",
+      "collectibleId": "BP2_RELIC_4",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-5",
+      "next": null
+    }
+  ],
+  "taskOrder": [
+    "BP2_A4_ARRIVE",
+    "BP2_A4_EXPLORE",
+    "BP2_A4_QUIZ"
+  ],
+  "optionalSceneIds": [],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "transcriptAlwaysAvailable": true,
+    "skipWritesPlotSummary": true
+  },
+  "resumePolicy": "resume_node_no_duplicate_reward",
+  "fallback": "2d_evidence_cards",
+  "status": "candidate_no_runtime_test"
+}
