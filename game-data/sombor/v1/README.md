@@ -14,10 +14,11 @@ Samostalan **sadržaj igre**, izveden iz Unity ScriptableObject resursa i dopunj
 - [`production/muzej-podunavskih-svaba/PRODUCTION_BRIEF.md`](production/muzej-podunavskih-svaba/PRODUCTION_BRIEF.md) — Misija 03: *Kofer sećanja*, AR/2D igra sa tri traga, proverena godina muzeja 2019 i sačuvani izvorni 1751 pod `legacyOriginal`.
 
 - [Narodno pozoriste: Izgubljeni znak](production/narodno-pozoriste/PRODUCTION_BRIEF.md) — stage role AR/2D, 1882 quiz, Promptbook relic and original SVG concepts.
+- [Veljko Petrović: Golubica koja se vraća](production/veljko-petrovic/PRODUCTION_BRIEF.md) — spomenik (ne biblioteka), 1884 → 1902 → 2017 AR/2D, izvorna dva kviza, Pero povratka i pet SVG koncepata.
 
 ## Sadržaj
 
-- `missions/*.json`: **9 misija / 32 zadatka**: 9 GPS, 6 AR, 11 multiple-choice, 6 text-input. AR dolazi odmah posle GPS-a i ima jednakovredan 2D fallback.
+- `missions/*.json`: **9 misija / 33 zadatka**: 9 GPS, 7 AR, 11 multiple-choice, 6 text-input. AR dolazi odmah posle GPS-a i ima jednakovredan 2D fallback.
 - `waypoints.json`: 13 WGS84 lokacija, probni GPS radijusi i vreme potvrde zona.
 - `dialogues/*.json`: tri narativna dijaloga i jedan neaktivan testni.
 - `hints.json`: 13 tekstova pomoći; GK ima HINTGK1/HINTGK2/HINTGK3.
@@ -27,7 +28,7 @@ Samostalan **sadržaj igre**, izveden iz Unity ScriptableObject resursa i dopunj
 - `systems/collectibles.json`: glavni relic po lokaciji, zlatni pečati iz 1749, srca i džokeri.
 - `systems/album.json`: UX „Herbarijum Sombora“, kolekcija, otključane kartice i zaštita od duplih poena.
 - `mechanics.json`: zadaci, skoring, GPS, AR i fallback.
-- `ar-proposals.json`: evidencija **prihvaćenih šest AR ideja**, sve povezane sa aktivnim zadacima.
+- `ar-proposals.json`: evidencija **prihvaćenih sedam AR ideja**, sve povezane sa aktivnim zadacima.
 - `assets/*.svg`: originalnih konceptnih 2D grafika koje ne zahtevaju licencu spoljašnjih fotografija.
 - `CHANGELOG.md`: urednički i produkcioni trag odluka.
 
