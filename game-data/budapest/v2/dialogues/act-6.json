@@ -1,0 +1,1214 @@
+{
+  "id": "BP2_DIALOGUE_6",
+  "language": "sr-Cyrl",
+  "status": "accepted_for_design_not_recorded",
+  "authoringSource": "screenplay/act-6*.txt",
+  "scenes": [
+    {
+      "id": "BP2_D6_overlook",
+      "act": 6,
+      "slug": "overlook",
+      "title": "Видиковац без зграде",
+      "location": "Гелерт брдо, безбедна стационарна тачка",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-6a.txt",
+      "lines": [
+        {
+          "id": "BP2_D6_overlook_L01",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Некада сам мислио да је довољно направити машину која ће сачувати слику.",
+          "subtitle": "Некада сам мислио да је довољно направити машину која ће сачувати слику.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_overlook_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "А сада?",
+          "subtitle": "А сада?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_overlook_L03",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Слика без својих извора је само уверљива прича. Понекад дивна. Понекад опасна.",
+          "subtitle": "Слика без својих извора је само уверљива прича. Понекад дивна. Понекад опасна.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_overlook_L04",
+          "speakerId": "BP2_CH_JOVAN_V",
+          "text": "Овде је стајала црква којој су људи долазили са својим бригама.",
+          "subtitle": "Овде је стајала црква којој су људи долазили са својим бригама.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_overlook_L05",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "И с бојама које нису стајале мирно.",
+          "subtitle": "И с бојама које нису стајале мирно.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_overlook_L06",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "И с речима којима нико није био последњи читалац.",
+          "subtitle": "И с речима којима нико није био последњи читалац.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_overlook_L07",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ви никада нисте живели у истој години.",
+          "subtitle": "Ви никада нисте живели у истој години.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_overlook_L08",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Нисмо били ни дужни. Круг није састанак, него договор да траг преживи онога ко га је оставио.",
+          "subtitle": "Нисмо били ни дужни. Круг није састанак, него договор да траг преживи онога ко га је оставио.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D6_overlook_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D6_overlook_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_overlook_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_overlook_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_overlook_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_overlook_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_overlook_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_overlook_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_overlook_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_overlook_L08"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D6_overlook_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D6_overlook_ST01",
+          "text": "Пуних пет секунди гледа се садашњи град. Изворне картице показују некадашњи храм Св. Димитрија, а оно што је непроверено остаје прозирно."
+        },
+        {
+          "id": "BP2_D6_overlook_ST02",
+          "text": "Чланови су временска монтажа, сваки са видљивом ознакама „драматизован ехо“."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D6_overlook_CU01",
+          "kind": "ambien",
+          "direction": "Стварни шум Будимпеште, без музике. Три импулса су сада правилно раздвојена тишином.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D6_anchors",
+      "act": 6,
+      "slug": "anchors",
+      "title": "Три тачке без лажи",
+      "location": "просторна оријентација или 2D реконструкција",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-6a.txt",
+      "lines": [
+        {
+          "id": "BP2_D6_anchors_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Геопросторна тачност: непотврђена. Могу да прикажем умањену верзију.",
+          "subtitle": "Геопросторна тачност: непотврђена. Могу да прикажем умањену верзију.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_anchors_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Покажи оно што знамо. Где не знамо, остави празнину.",
+          "subtitle": "Покажи оно што знамо. Где не знамо, остави празнину.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_anchors_L03",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Могу ти дати светлост за контуру. Извор мора остати изван моје воље.",
+          "subtitle": "Могу ти дати светлост за контуру. Извор мора остати изван моје воље.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_anchors_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Фасада са фотографије — поткрепљена. Скривена страна — непроверена. Звук звона — наша композиција.",
+          "subtitle": "Фасада са фотографије — поткрепљена. Скривена страна — непроверена. Звук звона — наша композиција.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_anchors_L05",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Разумем. Три слоја неће бити спојена у једну тврдњу.",
+          "subtitle": "Разумем. Три слоја неће бити спојена у једну тврдњу.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D6_anchors_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_anchors_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_anchors_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_anchors_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_anchors_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_anchors_L05"
+        },
+        {
+          "type": "beat",
+          "id": "BP2_D6_anchors_BE01"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D6_anchors_ST01",
+          "text": "Три геопросторна референта су само план док нису теренски потврђени. Сцена може да функционише као 2D картографско поређење без GPS/AR тачности."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": [
+        {
+          "id": "BP2_D6_anchors_BE01",
+          "kind": "EVIDEN",
+          "instruction": "documented_facade:photographic; hidden_wall:unverified; bell:original_artistic. Исто у 2D и AR, не зависи од физичке камере."
+        }
+      ]
+    },
+    {
+      "id": "BP2_D6_apparition",
+      "act": 6,
+      "slug": "apparition",
+      "title": "Храм од трагова",
+      "location": "просторни модел / 2D сценски кадар",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-6a.txt",
+      "lines": [
+        {
+          "id": "BP2_D6_apparition_L01",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Сад га видим. Не као зид. Као одговор на питање где је био.",
+          "subtitle": "Сад га видим. Не као зид. Као одговор на питање где је био.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_apparition_L02",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "И колико тога још морамо сазнати.",
+          "subtitle": "И колико тога још морамо сазнати.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_apparition_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Реконструкција задржава изворе видљивим.",
+          "subtitle": "Реконструкција задржава изворе видљивим.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_apparition_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Нека остану и кад се слика угаси.",
+          "subtitle": "Нека остану и кад се слика угаси.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D6_apparition_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D6_apparition_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_apparition_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_apparition_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_apparition_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_apparition_L04"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D6_apparition_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D6_apparition_ST01",
+          "text": "Ако је геопросторна провера завршена, силуета израста на стварно потврђеном месту: темељ, наос, зидови, звоник; иначе приказ у 2D/минијатури без погрешне размере. Сви непоткрепљени детаљи остају испрекидана контура."
+        },
+        {
+          "id": "BP2_D6_apparition_ST02",
+          "text": "Торањ се завршава последњи. Важна тишина без музике пре Илониног упада."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D6_apparition_CU01",
+          "kind": "mus",
+          "direction": "Постепени усходни мотив од три ноте; без „старог снимка“ звона или насумично преузетог појања.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D6_seizure",
+      "act": 6,
+      "slug": "seizure",
+      "title": "Зграда без иједне сумње",
+      "location": "поновна отмица приказа",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-6a.txt",
+      "lines": [
+        {
+          "id": "BP2_D6_seizure_L01",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Дивно. Али још увек недовршено.",
+          "subtitle": "Дивно. Али још увек недовршено.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_seizure_L02",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Могу понудити потпуни храм. Све прозоре. Све фреске. Све што недостаје.",
+          "subtitle": "Могу понудити потпуни храм. Све прозоре. Све фреске. Све што недостаје.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D6_seizure_L03",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "На основу чега?",
+          "subtitle": "На основу чега?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_seizure_L04",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "На основу онога што најбоље одговара целини. Људи желе да виде.",
+          "subtitle": "На основу онога што најбоље одговара целини. Људи желе да виде.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_seizure_L05",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "У томе је и опасност. Истина није награда за гледање.",
+          "subtitle": "У томе је и опасност. Истина није награда за гледање.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_seizure_L06",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Ти си донео изуме, Никола. Други су одлучивали шта ће с њима.",
+          "subtitle": "Ти си донео изуме, Никола. Други су одлучивали шта ће с њима.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_seizure_L07",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "И нисам све могао да контролишем.",
+          "subtitle": "И нисам све могао да контролишем.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_seizure_L08",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Али ја могу. Моја Маска је само алат. Ја сам јој дала задатак.",
+          "subtitle": "Али ја могу. Моја Маска је само алат. Ја сам јој дала задатак.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_seizure_L09",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "А ми смо ти пронашли праве изворе.",
+          "subtitle": "А ми смо ти пронашли праве изворе.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_seizure_L10",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "И сви су у мојој мрежи. Ако пристанеш, биће лакше свима.",
+          "subtitle": "И сви су у мојој мрежи. Ако пристанеш, биће лакше свима.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D6_seizure_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D6_seizure_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_seizure_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_seizure_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_seizure_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_seizure_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_seizure_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_seizure_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_seizure_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_seizure_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_seizure_L09"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_seizure_L10"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D6_seizure_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D6_seizure_ST01",
+          "text": "Илонина нова верзија је визуелно запањујућа, без икакве прозирне контуре. Управо тиме се открива да је затворена реконструкција сумњива."
+        },
+        {
+          "id": "BP2_D6_seizure_ST02",
+          "text": "Илонино људско лице остаје јасно, не преобраћа се у робота. Зло се не оправдава као „машина је сама одлучила“."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D6_seizure_CU01",
+          "kind": "voice_mor",
+          "direction": "Једна реплика прелази из АРГО-а у Илону, из Илоне у Теслу и назад, али титлови откривају потпис извора.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D6_adjudication",
+      "act": 6,
+      "slug": "adjudication",
+      "title": "Последња маргина",
+      "location": "локални досије над виртуелним храмом",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-6b.txt",
+      "lines": [
+        {
+          "id": "BP2_D6_adjudication_L01",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Уклањањем непроверених ознака слика ће бити потпуна.",
+          "subtitle": "Уклањањем непроверених ознака слика ће бити потпуна.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D6_adjudication_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Уклањањем ознака не мењаш историју, него кријеш границу свог знања.",
+          "subtitle": "Уклањањем ознака не мењаш историју, него кријеш границу свог знања.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_adjudication_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Локални досије садржи три независне групе извора.",
+          "subtitle": "Локални досије садржи три независне групе извора.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_adjudication_L04",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Пази шта радиш. Ако све оставиш отворено, нико те неће сматрати победником.",
+          "subtitle": "Пази шта радиш. Ако све оставиш отворено, нико те неће сматрати победником.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_adjudication_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Можда победи онај који другом остави право да га исправи.",
+          "subtitle": "Можда победи онај који другом остави право да га исправи.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_adjudication_L06",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "То је више него што сам ја сам умео да гарантујем.",
+          "subtitle": "То је више него што сам ја сам умео да гарантујем.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_adjudication_L07",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Ако сам направила бољу слику, зашто да је не прихватиш?",
+          "subtitle": "Ако сам направила бољу слику, зашто да је не прихватиш?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_adjudication_L08",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Могу да прихватим слику. Не морам да прихватим да је последња реч.",
+          "subtitle": "Могу да прихватим слику. Не морам да прихватим да је последња реч.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D6_adjudication_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_adjudication_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_adjudication_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_adjudication_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_adjudication_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_adjudication_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_adjudication_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_adjudication_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_adjudication_L08"
+        },
+        {
+          "type": "beat",
+          "id": "BP2_D6_adjudication_BE01"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D6_adjudication_ST01",
+          "text": "МАСКА покушава да споји све изворе у један бело-савршен објекат; инспектор може да их „развеза“ и означи по пореклу. Та иста радња је доступна у 2D. Нема брзинске казне."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": [
+        {
+          "id": "BP2_D6_adjudication_BE01",
+          "kind": "CHOI",
+          "instruction": "Сачувај документовану реконструкцију / Сачувај и Илонину као ЈАСНО означену интерпретацију / Привремено прихвати савршену, па врати питања; само прве две су одржив крај."
+        }
+      ]
+    },
+    {
+      "id": "BP2_D6_false_end",
+      "act": 6,
+      "slug": "false_end",
+      "title": "Савршен модел без порекла",
+      "location": "повратна етичка грана",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-6b.txt",
+      "lines": [
+        {
+          "id": "BP2_D6_false_end_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Изабрана јединствена верзија. Појединачни извори привремено сакривени.",
+          "subtitle": "Изабрана јединствена верзија. Појединачни извори привремено сакривени.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_false_end_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Отвори извор за онај прозор.",
+          "subtitle": "Отвори извор за онај прозор.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_false_end_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Недоступно.",
+          "subtitle": "Недоступно.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_false_end_L04",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Видиш? Ништа не ремети призор.",
+          "subtitle": "Видиш? Ништа не ремети призор.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_false_end_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Тачно зато не могу да верујем призору.",
+          "subtitle": "Тачно зато не могу да верујем призору.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_false_end_L06",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Ти си тај који може да врати ознаке.",
+          "subtitle": "Ти си тај који може да врати ознаке.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D6_false_end_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_false_end_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_false_end_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_false_end_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_false_end_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_false_end_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_false_end_L06"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D6_false_end_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D6_false_end_ST01",
+          "text": "Ако корисник привремено изабере потпуну верзију, не губи бодове, реликвије или карту; кратко види како су дугмад порекла нестала. Одмах понуди повратак, не кажњавај избор."
+        },
+        {
+          "id": "BP2_D6_false_end_ST02",
+          "text": "UI враћа претходне изворе локалном копијом. Одавде оба прихватљива завршетка поново доступна."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D6_ending_evidence",
+      "act": 6,
+      "slug": "ending_evidence",
+      "title": "Сачувај само потврђено",
+      "location": "први валидан завршетак",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-6b.txt",
+      "lines": [
+        {
+          "id": "BP2_D6_ending_evidence_L01",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Остави потврђене делове, изворе и видљиве празнине.",
+          "subtitle": "Остави потврђене делове, изворе и видљиве празнине.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_ending_evidence_L02",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Сачувано у локалном досијеу. Непроверено остаје означено.",
+          "subtitle": "Сачувано у локалном досијеу. Непроверено остаје означено.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_ending_evidence_L03",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Твоја црква није цела.",
+          "subtitle": "Твоја црква није цела.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_ending_evidence_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Зато други могу да наставе да истражују.",
+          "subtitle": "Зато други могу да наставе да истражују.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_ending_evidence_L05",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Чувао си истину без претварања да си је завршио.",
+          "subtitle": "Чувао си истину без претварања да си је завршио.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "line",
+          "id": "BP2_D6_ending_evidence_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_ending_evidence_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_ending_evidence_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_ending_evidence_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_ending_evidence_L05"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D6_ending_evidence_ST01"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D6_ending_evidence_ST01",
+          "text": "Контура непознатог остаје лагано видљива. Може се пребацити на данашњи град."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D6_ending_both",
+      "act": 6,
+      "slug": "ending_both",
+      "title": "Две верзије, два потписа",
+      "location": "други валидан завршетак",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-6b.txt",
+      "lines": [
+        {
+          "id": "BP2_D6_ending_both_L01",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Сачувај обе. Једну као реконструкцију по изворима, другу као Илонину интерпретацију.",
+          "subtitle": "Сачувај обе. Једну као реконструкцију по изворима, другу као Илонину интерпретацију.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_ending_both_L02",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Два приказа раздвојена. Обе верзије имају порекло и ознаку статуса.",
+          "subtitle": "Два приказа раздвојена. Обе верзије имају порекло и ознаку статуса.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_ending_both_L03",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Остављаш и моје дело?",
+          "subtitle": "Остављаш и моје дело?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_ending_both_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Да. Као пример шта може да се замисли, не као доказ шта је било.",
+          "subtitle": "Да. Као пример шта може да се замисли, не као доказ шта је било.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_ending_both_L05",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Тако ни лепота није избачена из историје. Само јој није дозвољено да глуми сведока.",
+          "subtitle": "Тако ни лепота није избачена из историје. Само јој није дозвољено да глуми сведока.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "line",
+          "id": "BP2_D6_ending_both_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_ending_both_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_ending_both_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_ending_both_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_ending_both_L05"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D6_ending_both_ST01"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D6_ending_both_ST01",
+          "text": "Корисник касније може отворити две јасно означене верзије. Нема приморавања на „морално тачан“ једини крај."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D6_timeloop",
+      "act": 6,
+      "slug": "timeloop",
+      "title": "Писмо без пошиљаоца",
+      "location": "крај временске петље, 2D просторни приказ",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-6b.txt",
+      "lines": [
+        {
+          "id": "BP2_D6_timeloop_L01",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Не могу ти рећи зашто си био изабран, као да сам све знао.",
+          "subtitle": "Не могу ти рећи зашто си био изабран, као да сам све знао.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_timeloop_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Илона ме изабрала јер је мој временски потпис отварао стари протокол.",
+          "subtitle": "Илона ме изабрала јер је мој временски потпис отварао стари протокол.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_timeloop_L03",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Да. Али моји претходници нису знали чији ће бити. Постојао је само траг без имена.",
+          "subtitle": "Да. Али моји претходници нису знали чији ће бити. Постојао је само траг без имена.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_timeloop_L04",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Писмо је чекало онога који ће га послати.",
+          "subtitle": "Писмо је чекало онога који ће га послати.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_timeloop_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Коверта без адресе…",
+          "subtitle": "Коверта без адресе…",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_timeloop_L06",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Није била без ње. Адреса још није постојала.",
+          "subtitle": "Није била без ње. Адреса још није постојала.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_timeloop_L07",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Локални временски канал може пренети само кратак сигнал. Не може пренети историјски доказ.",
+          "subtitle": "Локални временски канал може пренети само кратак сигнал. Не може пренети историјски доказ.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_timeloop_L08",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ни не треба. Три извора остају овде, доступна другима.",
+          "subtitle": "Ни не треба. Три извора остају овде, доступна другима.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_timeloop_L09",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Тада је твој избор, не моја заповест, оно што затвара круг.",
+          "subtitle": "Тада је твој избор, не моја заповест, оно што затвара круг.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_timeloop_L10",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Пошаљи три импулса и једну празну маргину.",
+          "subtitle": "Пошаљи три импулса и једну празну маргину.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D6_timeloop_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D6_timeloop_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_timeloop_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_timeloop_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_timeloop_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_timeloop_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_timeloop_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_timeloop_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_timeloop_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_timeloop_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_timeloop_L09"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_timeloop_L10"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D6_timeloop_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D6_timeloop_ST01",
+          "text": "Храм се лагано повлачи и остаје град. Први Дучићев коверат враћа се као мала картографска картица. Показује се да је инспекторова одлука једини део плана који Тесла није могао одлучити."
+        },
+        {
+          "id": "BP2_D6_timeloop_ST02",
+          "text": "Хронокастер шаље из будућности сигнал у раније доба. То је исти фрагмент који се чуо у прологу/уз Дучића. Није физичко путовање и нема парадокса „стварни документи су створени од себе“."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D6_timeloop_CU01",
+          "kind": "mot",
+          "direction": "Три импулса из пролога сада су јасна; четврта пауза није грешка него простор за онога ко долази.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D6_epilogue",
+      "act": 6,
+      "slug": "epilogue",
+      "title": "Најважније је оно што остане",
+      "location": "данашња Будимпешта",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-6b.txt",
+      "lines": [
+        {
+          "id": "BP2_D6_epilogue_L01",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Инспекторе, вратите се на агенцијски канал. Можемо све објаснити.",
+          "subtitle": "Инспекторе, вратите се на агенцијски канал. Можемо све објаснити.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_epilogue_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Можете прво да објавите шта сте променили.",
+          "subtitle": "Можете прво да објавите шта сте променили.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_epilogue_L03",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "То није процедура.",
+          "subtitle": "То није процедура.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_epilogue_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Онда нека постане.",
+          "subtitle": "Онда нека постане.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_epilogue_L05",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Ниси зауставио сваку Маску на свету.",
+          "subtitle": "Ниси зауставио сваку Маску на свету.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_epilogue_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Нисам. Али овај пут се види ко је стајао иза ње.",
+          "subtitle": "Нисам. Али овај пут се види ко је стајао иза ње.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_epilogue_L07",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Круг није затворен да нико не уђе. Затворен је да ништа не остане само.",
+          "subtitle": "Круг није затворен да нико не уђе. Затворен је да ништа не остане само.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_epilogue_L08",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Мисија завршена. Извори остају доступни за проверу.",
+          "subtitle": "Мисија завршена. Извори остају доступни за проверу.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D6_epilogue_L09",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Овог пута то сам проверио.",
+          "subtitle": "Овог пута то сам проверио.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D6_epilogue_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_epilogue_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_epilogue_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_epilogue_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_epilogue_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_epilogue_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_epilogue_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_epilogue_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_epilogue_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D6_epilogue_L09"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D6_epilogue_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D6_epilogue_ST01",
+          "text": "Кратак прелаз у визуелно стварни град. Чланови Круга приказани су као засебни временски исечци; руке са три спојена врха прста кратко се смењују, не сви за једним историјским столом."
+        },
+        {
+          "id": "BP2_D6_epilogue_ST02",
+          "text": "Последњи кадар није победнички ватромет: звук данашњег града, светлост са историјске локације која се тихо угаси, и отворен досије."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": []
+    }
+  ]
+}
