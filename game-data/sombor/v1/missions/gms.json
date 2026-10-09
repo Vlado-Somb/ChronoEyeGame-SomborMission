@@ -5,10 +5,10 @@
     "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/GMS_SO_Mission.asset",
     "sourceBranch": "fix/sombor-resource-stabilization-20261008"
   },
-  "title": "MUZEJ GRADA SOMBORA",
+  "title": "GRADSKI MUZEJ SOMBOR — ČETIRI LICA MUZEJA",
   "primaryWaypointId": "SO_GMS",
   "language": "sr-Latn",
-  "reviewStatus": "legacy_unreviewed",
+  "reviewStatus": "production_editorial_v1_runtime_pending",
   "tasks": [
     {
       "id": "GMS-01",
@@ -17,12 +17,114 @@
       "instruction": "Pronađi lokaciju muzeja koji čuva istoriju grada Sombora",
       "completion": {
         "title": "Našao si mesto gde se čuva istorija grada!",
-        "narrative": "Ovo je kompleksan zavičajni muzej koji obavlja delatnost sakupljanja, čuvanja, publikovanja i izlaganja kulturnog nasleđa sa prostora grada Sombora i opština Apatin, Kula i Odžaci. Muzejska delatnost je organizovana kroz rad arheološkog, etnološkog, istorijskog i likovnog odeljenja.",
-        "delaySeconds": 8
+        "narrative": "Gradski muzej čuva arheološke, etnološke, istorijske i likovne zbirke.",
+        "delaySeconds": 4
       },
       "gps": {
         "waypointId": "SO_GMS",
-        "requiredZone": 3
+        "requiredZone": 2,
+        "fieldVerified": false,
+        "safePedestrianOnly": true
+      }
+    },
+    {
+      "id": "GMS-AR-01",
+      "type": "ar_interaction",
+      "title": "Četiri lica muzeja",
+      "instruction": "Poveži četiri simbolične ilustracije sa oblastima Gradskog muzeja.",
+      "active": true,
+      "requiredForMission": true,
+      "implementationStatus": "editorially_active_assets_partial_runtime_pending",
+      "completion": {
+        "title": "Četiri oblasti su povezane",
+        "narrative": "Arheologija i numizmatika, etnologija, istorija i likovna umetnost proučavaju različita svedočanstva.",
+        "delaySeconds": 2
+      },
+      "ar": {
+        "interaction": "museum_four_collections_match",
+        "activationAfterTask": "GMS-01",
+        "anchorPolicy": "camera_relative_or_user_selected_safe_surface",
+        "neverRequireUnsafePositioning": true,
+        "assetIds": [
+          "assets/gms-archaeology.svg",
+          "assets/gms-ethnology.svg",
+          "assets/gms-history.svg",
+          "assets/gms-art.svg"
+        ],
+        "content": {
+          "cards": [
+            {
+              "id": "archaeology",
+              "label": "Novčić i keramika",
+              "category": "Arheologija i numizmatika",
+              "asset": "assets/gms-archaeology.svg"
+            },
+            {
+              "id": "ethnology",
+              "label": "Tkalački alat",
+              "category": "Etnologija",
+              "asset": "assets/gms-ethnology.svg"
+            },
+            {
+              "id": "history",
+              "label": "Arhivski dokument",
+              "category": "Istorija",
+              "asset": "assets/gms-history.svg"
+            },
+            {
+              "id": "art",
+              "label": "Slikarska paleta",
+              "category": "Likovna umetnost",
+              "asset": "assets/gms-art.svg"
+            }
+          ],
+          "slots": [
+            "archaeology",
+            "ethnology",
+            "history",
+            "art"
+          ],
+          "expectedMapping": {
+            "archaeology": "archaeology",
+            "ethnology": "ethnology",
+            "history": "history",
+            "art": "art"
+          },
+          "historicalCaveat": "Ilustracije su autorske i simbolične, nisu autentični muzejski eksponati.",
+          "onMistake": "retry_without_penalty"
+        },
+        "successCondition": {
+          "kind": "all_slots_match",
+          "expectedMapping": {
+            "archaeology": "archaeology",
+            "ethnology": "ethnology",
+            "history": "history",
+            "art": "art"
+          },
+          "resultEvent": "AR_INTERACTION_COMPLETED",
+          "taskId": "GMS-AR-01",
+          "awardOnce": true
+        }
+      },
+      "fallback": {
+        "mode": "2d_museum_four_collections_match",
+        "sameEducationalObjective": true,
+        "sameCards": true,
+        "sameMapping": true,
+        "sameScoring": true,
+        "mayActivateWithoutCamera": true,
+        "identicalCardIds": [
+          "archaeology",
+          "ethnology",
+          "history",
+          "art"
+        ],
+        "identicalExpectedMapping": {
+          "archaeology": "archaeology",
+          "ethnology": "ethnology",
+          "history": "history",
+          "art": "art"
+        }
       }
     },
     {
@@ -52,25 +154,59 @@
     {
       "id": "GMS-03",
       "type": "multiple_choice",
-      "title": "Izložbe i postavke",
+      "title": "Muzej u današnjoj zgradi",
       "instruction": "Odgovori tačno na postavljeno pitanje",
       "completion": {
-        "title": "Tako je aktuelna izložba je \"Ispit zrelosti — maturanti vojvođanskih gimnazija\"",
-        "narrative": "Postavka hronološki prati period razvoja gimnazija na prostoru Vojvodine koje su i dalje aktuelne, od druge polovine 19. veka (kada se pojavljuju prvi ispiti zrelosti u srpskim gimnazijama) do 60–ih godina 20. veka (kada počinje novi način i pristup proslave mature prepoznatljiv i današnjim đacima).",
-        "delaySeconds": 0
+        "title": "Tačno — useljenje u sadašnju zgradu",
+        "narrative": "Gradski muzej Sombor useljen je u današnju zgradu 27. oktobra 1945. godine.",
+        "delaySeconds": 4
       },
       "question": {
-        "text": "Kako se zove aktuelna izložba u Gradskom muzeju Sombor?",
+        "text": "Šta se dogodilo 27. oktobra 1945. godine u istoriji Gradskog muzeja Sombor?",
         "choices": [
-          "'200 godina vladavine Avara '",
-          "Ispit zrelosti",
-          "Nit snovana 60 jeseni"
+          "Muzej je useljen u današnju zgradu.",
+          "Otvorena je prva filmska projekcija u gradu.",
+          "Podignuta je zgrada Županije.",
+          "Osnovano je Narodno pozorište."
         ],
-        "correctIndex": 1
+        "correctIndex": 0
       },
       "unusedUnityFields": {
         "waypointId": "SO_GK"
+      },
+      "legacyOriginal": {
+        "archive": "production/gradski-muzej/legacy-gms.json",
+        "taskId": "GMS-03",
+        "originalCorrectAnswer": "Ispit zrelosti",
+        "reason": "Pitanje o tada aktuelnoj izložbi više nije vremenski važeće."
       }
     }
-  ]
+  ],
+  "narrative": {
+    "setting": "Trg Republike 4, Sombor",
+    "theme": "Četiri muzejske oblasti i čuvanje istorijskih izvora",
+    "mentorOpening": "Ovo je Gradski muzej Sombor. Njegove zbirke predstavljaju različite vrste istorijskih svedočanstava.",
+    "mentorBeforeAR": "Poveži četiri simbolične ilustracije sa oblastima koje muzej proučava.",
+    "mentorAfterAR": "Muzejski predmeti govore o različitim aspektima prošlosti. Proverimo još dve činjenice.",
+    "mentorCompletion": "Otključao si karticu četiri muzejske zbirke. Ona je ilustracija, ne muzejski eksponat.",
+    "historyParagraphs": [
+      "Istorijsko društvo Bačko-bodroške županije osnovano je 11. maja 1883. godine. Prvu prostoriju za rad dobilo je u Županiji 1887.",
+      "Gradski muzej Sombor useljen je 27. oktobra 1945. u zgradu na Trgu Republike 4.",
+      "Muzej ima arheološke i numizmatičke, etnološke, istorijske i likovne zbirke. Četiri ilustracije u zadatku predstavljaju nastavne simbole, ne konkretne eksponate."
+    ],
+    "sources": [
+      "https://vojvodina.travel/atrakcije/gradski-muzej-sombor/",
+      "https://www.politika.rs/sr/clanak/545587/gradski-muzej-u-somboru-obelezava-140-godina-postojanja"
+    ]
+  },
+  "rewards": {
+    "mainCollectibleId": "gms-four-collections-relic",
+    "afterMissionCompleted": true,
+    "optionalCollectibleIds": [
+      "gold-gms-001",
+      "gold-gms-002"
+    ],
+    "missionCompletionAwardOnce": true,
+    "ar2dSameScore": true
+  }
 }
