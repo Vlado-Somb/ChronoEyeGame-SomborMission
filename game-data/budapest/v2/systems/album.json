@@ -1,0 +1,38 @@
+{
+  "id": "BP2_ALBUM",
+  "title": "Досије — истина са изворима",
+  "button": "Мој досије",
+  "alwaysAvailable": true,
+  "modes": [
+    "2d",
+    "ar"
+  ],
+  "sections": [
+    "Трагови",
+    "Разговори",
+    "Извори",
+    "Исправке",
+    "Медијска драматизација",
+    "Отворена питања"
+  ],
+  "itemIds": [
+    "BP2_RELIC_0",
+    "BP2_RELIC_1",
+    "BP2_RELIC_2",
+    "BP2_RELIC_3",
+    "BP2_RELIC_4",
+    "BP2_RELIC_5",
+    "BP2_RELIC_6"
+  ],
+  "cardFields": [
+    "title",
+    "storyByte",
+    "sourceIds",
+    "firstDiscoveredAt",
+    "locked",
+    "scoring"
+  ],
+  "privateNote": "device_local_only_not_exported",
+  "transcriptPolicy": "all_48_scenes_accessible_with_captions",
+  "replayPolicy": "cannot_duplicate_rewards"
+}
