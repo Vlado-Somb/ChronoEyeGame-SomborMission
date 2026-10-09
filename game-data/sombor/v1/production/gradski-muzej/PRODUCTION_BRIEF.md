@@ -9,3 +9,5 @@ A mysterious signal from the museum reveals four misplaced symbolic labels. Prof
 
 ## Historical anchors
 11 May 1883: the historical society was founded. In 1887 it gained a room in Županija. The museum was housed in its present building in 1945. These are three distinct institutional milestones. The original Unity quiz about an allegedly current exhibition is retained in legacy-gms.json but should not be presented as current without verification.
+
+AR → 2D: same four cards and score.
