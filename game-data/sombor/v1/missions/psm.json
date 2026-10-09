@@ -159,19 +159,13 @@
     },
     {
       "id": "PSM-03",
-      "type": "text_input",
-      "title": "Godina muzeja",
-      "instruction": "Unesi godinu kada je osnovan Muzej podunavskih Švaba kao muzejska jedinica Gradskog muzeja Sombor.",
+      "type": "multiple_choice",
+      "title": "Doba doseljavanja",
+      "instruction": "Izaberi istorijski period doseljavanja podunavskih Nemaca u Bačku.",
       "completion": {
-        "title": "Tako je — 2019!",
-        "narrative": "Muzej je osnovan odlukom grada 9. jula 2019. Postavka prikazuje život podunavskih Nemaca od doseljavanja do teških iskustava XX veka.",
+        "title": "Tačno — XVIII vek!",
+        "narrative": "Doseljavanje se odvijalo u više talasa tokom XVIII veka, ne jedne jedine godine.",
         "delaySeconds": 5
-      },
-      "textInput": {
-        "questionText": "Koje godine je osnovan Muzej podunavskih Švaba u Somboru?",
-        "inputPlaceholder": "Godina osnivanja",
-        "answerPlaceholder": "Unesi četiri cifre",
-        "expectedAnswer": "2019"
       },
       "unusedUnityFields": {
         "waypointId": "SO_GK",
@@ -208,6 +202,15 @@
           "CorrectChoiceIndex": "1"
         },
         "editorialFlag": "Original 1751 is not substantiated as a unique first year of German immigration to Sombor; several waves started in late 1740s. Preserved for audit, not active."
+      },
+      "question": {
+        "text": "U kom veku su se podunavski Nemci u većem broju doseljavali u Bačku?",
+        "choices": [
+          "Sredinom XVII veka",
+          "Sredinom XVIII veka",
+          "Sredinom XIX veka"
+        ],
+        "correctIndex": 1
       }
     }
   ],
@@ -222,7 +225,7 @@
     ],
     "mentorOpening": "Kao da je neko spustio stari kofer pred palatu. To je samo naša zamišljena priča, ali putovanja su ovde bila stvarna. Danas ova zgrada čuva mnogo glasova. Hoćeš li da pratiš njihove tragove?",
     "mentorBeforeAR": "Tri kartice: putovanje Dunavom, svakodnevni život i muzej. Složi ih redom. To su naši simboli, a ne pravi predmeti neke porodice.",
-    "mentorAfterAR": "Bravo. Ali istorija nije samo uredan niz lepih slika. Postoje i teške priče o ratovima i gubicima. Muzej nas uči da ih čitamo pažljivo. Sada proveri ime palate i godinu osnivanja muzeja.",
+    "mentorAfterAR": "Bravo. Istorija nije samo niz lepih slika: postoje i teške priče o ratovima i gubicima. Proveri ime palate i vek doseljavanja.",
     "mentorCompletion": "Dobio si Ključ sećanja. On ne otvara prava vrata, već novo pitanje: čije priče znamo, a čije tek treba saslušati?",
     "historicalEchoPolicy": "No impersonated historical victims, fabricated family testimonies or comedic treatment of persecution."
   },
@@ -265,6 +268,7 @@
     "Original 1751 quiz preserved in legacyOriginal but changed to verified 2019; immigration had multiple waves.",
     "Palace dates differ: 1750 cornerstone versus 1763 tourism source.",
     "Legacy unusedUnityFields refer to SO_GK, but active GPS uses SO_PŠM.",
-    "GPS zone2 15 m not field-verified."
+    "GPS zone2 15 m not field-verified.",
+    "Revision 2026-10-09: 2019 museum foundation question replaced with multiple choice on XVIII-century immigration; 2019 retained in historical paragraphs and previous Git revision. Unity 1751 remains in legacyOriginal."
   ]
 }

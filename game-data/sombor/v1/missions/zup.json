@@ -35,8 +35,8 @@
     {
       "id": "ZUP-AR-01",
       "type": "ar_interaction",
-      "title": "Tri sata: događaj, slika, sala",
-      "instruction": "Poveži godine 1697, 1896. i 1898. sa istorijskim događajem, umetničkim delom i njegovim postavljanjem u Županiji.",
+      "title": "Tri vremena: bitka, zgrada, slika",
+      "instruction": "Poveži 1697. sa bitkom kod Sente, 1808. sa završetkom izgradnje Županije i 1898. sa postavljanjem slike u salu.",
       "active": true,
       "requiredForMission": true,
       "implementationStatus": "production_specified_assets_partial",
@@ -47,54 +47,51 @@
         "assetIds": [
           "assets/zup-three-clocks-board.svg",
           "assets/zup-event-1697.svg",
-          "assets/zup-painting-1896.svg",
-          "assets/zup-hall-1898.svg"
+          "assets/zup-hall-1898.svg",
+          "assets/zup-painting-1896.svg"
         ],
         "content": {
           "cards": [
             {
               "id": "battle_1697",
               "year": "1697",
-              "label": "Istorijski događaj",
+              "label": "Bitka kod Sente",
               "role": "event",
-              "asset": "assets/zup-event-1697.svg",
-              "source": "https://www.ravnoplov.rs/bitka-kod-sente-nasa-najveca-slika/"
+              "asset": "assets/zup-event-1697.svg"
             },
             {
-              "id": "painting_1896",
-              "year": "1896",
-              "label": "Umetničko delo",
-              "role": "artwork",
-              "asset": "assets/zup-painting-1896.svg",
-              "source": "https://www.ravnoplov.rs/bitka-kod-sente-nasa-najveca-slika/"
+              "id": "building_1808",
+              "year": "1808",
+              "label": "Završetak izgradnje Županije",
+              "role": "building",
+              "asset": "assets/zup-hall-1898.svg"
             },
             {
-              "id": "hall_1898",
+              "id": "installation_1898",
               "year": "1898",
-              "label": "Postavljanje u salu",
+              "label": "Slika postavljena u Županiji",
               "role": "installation",
-              "asset": "assets/zup-hall-1898.svg",
-              "source": "https://www.ravnoplov.rs/zdanje-zupanije-u-somboru/"
+              "asset": "assets/zup-painting-1896.svg"
             }
           ],
           "slots": [
             {
               "id": "event",
-              "label": "Šta se dogodilo?"
+              "label": "Istorijski događaj"
             },
             {
-              "id": "artwork",
-              "label": "Kada je naslikano?"
+              "id": "building",
+              "label": "Izgradnja zgrade"
             },
             {
               "id": "installation",
-              "label": "Kada je postavljeno?"
+              "label": "Slika u sali"
             }
           ],
           "expectedMapping": {
             "event": "battle_1697",
-            "artwork": "painting_1896",
-            "installation": "hall_1898"
+            "building": "building_1808",
+            "installation": "installation_1898"
           },
           "shuffleInitialOrder": true,
           "onMistake": "retry_without_penalty"
@@ -103,8 +100,8 @@
           "kind": "all_slots_match",
           "expectedMapping": {
             "event": "battle_1697",
-            "artwork": "painting_1896",
-            "installation": "hall_1898"
+            "building": "building_1808",
+            "installation": "installation_1898"
           },
           "resultEvent": "AR_INTERACTION_COMPLETED",
           "awardOnce": true
@@ -116,19 +113,19 @@
         "sameScoring": true,
         "identicalCardIds": [
           "battle_1697",
-          "painting_1896",
-          "hall_1898"
+          "building_1808",
+          "installation_1898"
         ],
         "identicalExpectedMapping": {
           "event": "battle_1697",
-          "artwork": "painting_1896",
-          "installation": "hall_1898"
+          "building": "building_1808",
+          "installation": "installation_1898"
         },
         "mayActivateWithoutCamera": true
       },
       "completion": {
         "title": "Tri sata su razdvojena",
-        "narrative": "1697 bitka, 1896 slika, 1898 postavljanje u Županiji.",
+        "narrative": "1697. bitka, 1808. završetak izgradnje Županije, 1898. postavljanje Ajzenhutove slike (naslikane 1896).",
         "delaySeconds": 3
       }
     },
@@ -195,9 +192,9 @@
       "Zgrada čuva i složenu istoriju 20. veka; sećanje na Vujadina Baneta Sekulića obrađuje se dostojanstveno."
     ],
     "mentorOpening": "Tri sata u Chrono Eye-u odjednom kucaju. Nešto je pobrkalo vreme. Hoćeš li mi pomoći da ih razdvojimo?",
-    "mentorBeforeAR": "Jedno je bitka, drugo slikarov prikaz, a treće mesto na kojem se slika čuva. Poveži tri kartice.",
+    "mentorBeforeAR": "Tri vremena: bitka 1697, završetak gradnje Županije 1808, postavljanje slike 1898. Poveži tragove.",
     "mentorWrongAR": "To nije ista vrsta istorijskog traga. Pokušaj ponovo, bez kazne.",
-    "mentorAfterAR": "Bravo: 1697, 1896, 1898. Sada proverimo ime platna.",
+    "mentorAfterAR": "Bravo: 1697, 1808, 1898. Slika je naslikana 1896, a postavljena 1898. Kako se zove?",
     "mentorAfterPainting": "Ali zgrada pamti i teške događaje 1941. godine. Pristupimo tom tragu s poštovanjem.",
     "mentorCompletion": "Ključ tri vremena je naš izmišljeni simbol, ne istorijski predmet. Čuvaj ga u Herbarijumu Sombora.",
     "historicalEchoPolicy": "No historical voice impersonation or painting reproduction."
@@ -234,6 +231,7 @@
     "Original unchanged in production/zupanija/legacy-zup.json",
     "ZUP-02 expectedAnswer and ZUP-03 choices/correctIndex unchanged",
     "1697 battle, 1896 artwork, 1898 installation",
-    "GPS zone2 66 m is provisional; field test required"
+    "GPS zone2 66 m is provisional; field test required",
+    "Revision 2026-10-09: AR three dates changed from 1697/1896/1898 to 1697/1808/1898; original preserved in Git history and legacy production package. Existing SVG names retained provisionally, relabel before release."
   ]
 }
