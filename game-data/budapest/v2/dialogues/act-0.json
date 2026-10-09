@@ -1,0 +1,426 @@
+{
+  "id": "BP2_DIALOGUE_0",
+  "language": "sr-Cyrl",
+  "sourceFiles": [
+    "screenplay/act-0.txt"
+  ],
+  "scenes": [
+    {
+      "id": "BP2_D0_invitation",
+      "act": 0,
+      "title": "Добродошли у прошлост",
+      "location": "старт апликације",
+      "sourceFile": "screenplay/act-0.txt",
+      "fictionLabel": "Ауторска драматизација; не историјски цитат.",
+      "lines": [
+        {
+          "id": "BP2_D0_invitation_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Добро дошли у CHRONO EYE. Историја не мора да буде загонетка.",
+          "subtitle": "Добро дошли у CHRONO EYE. Историја не мора да буде загонетка.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_invitation_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Мислио сам да је ово обилазак Будимпеште.",
+          "subtitle": "Мислио сам да је ово обилазак Будимпеште.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_invitation_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "И јесте. Само што сваки посетилац може помоћи да сачувамо оно што време брише.",
+          "subtitle": "И јесте. Само што сваки посетилац може помоћи да сачувамо оно што време брише.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_invitation_L04",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Инспекторе? Овде Варга, ваш непосредни руководилац. Хвала што сте прихватили теренски задатак.",
+          "subtitle": "Инспекторе? Овде Варга, ваш непосредни руководилац. Хвала што сте прихватили теренски задатак.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_invitation_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Нисам знао да туристички водич има руководиоца.",
+          "subtitle": "Нисам знао да туристички водич има руководиоца.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_invitation_L06",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Лепи градови имају много тога што не стаје у разгледницу. Ми сакупљамо проверљиве трагове, пре него што их неко препише.",
+          "subtitle": "Лепи градови имају много тога што не стаје у разгледницу. Ми сакупљамо проверљиве трагове, пре него што их неко препише.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_invitation_L07",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Задатак је једноставан: пронађите, проверите, синхронизујте.",
+          "subtitle": "Задатак је једноставан: пронађите, проверите, синхронизујте.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_invitation_L08",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "А ако нешто не успем да проверим?",
+          "subtitle": "А ако нешто не успем да проверим?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_invitation_L09",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Означите као непроверено. Ништа не бришите. Систем ће се побринути за остало.",
+          "subtitle": "Означите као непроверено. Ништа не бришите. Систем ће се побринути за остало.",
+          "voiceAssetId": null
+        }
+      ],
+      "directions": [
+        "БЕЗ AR: обична мапа Будимпеште. Пријатан минималистички интерфејс; без наговештаја хорора. На дну је ситан индикатор „синхронизација укључена“.",
+        "При избору „настави“ инспектор добија први празан досије, не црну кутију. Важно: Варга изговара исправне, разумне ствари."
+      ],
+      "cues": [
+        {
+          "kind": "ambience",
+          "text": "Садашњи град, удаљени трамвај, ваздух на тргу; сувише чист агенцијски сигнал.",
+          "assetStatus": "planned_not_created"
+        }
+      ],
+      "beats": [
+        "CHOICE|Прихвати задатак / Прво прегледај правила — обе опције воде даље, али могу поставити flag cautiousStart."
+      ],
+      "sequence": [
+        {
+          "type": "direction",
+          "index": 0
+        },
+        {
+          "type": "cue",
+          "index": 0
+        },
+        {
+          "type": "line",
+          "index": 0
+        },
+        {
+          "type": "line",
+          "index": 1
+        },
+        {
+          "type": "line",
+          "index": 2
+        },
+        {
+          "type": "line",
+          "index": 3
+        },
+        {
+          "type": "line",
+          "index": 4
+        },
+        {
+          "type": "line",
+          "index": 5
+        },
+        {
+          "type": "line",
+          "index": 6
+        },
+        {
+          "type": "line",
+          "index": 7
+        },
+        {
+          "type": "line",
+          "index": 8
+        },
+        {
+          "type": "direction",
+          "index": 1
+        },
+        {
+          "type": "beat",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "id": "BP2_D0_onboarding",
+      "act": 0,
+      "title": "Три команде",
+      "location": "на истој карти",
+      "sourceFile": "screenplay/act-0.txt",
+      "fictionLabel": "Ауторска драматизација; не историјски цитат.",
+      "lines": [
+        {
+          "id": "BP2_D0_onboarding_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Када отворите два записа, можете их упоредити. Свака сачувана белешка добија извор и време проналаска.",
+          "subtitle": "Када отворите два записа, можете их упоредити. Свака сачувана белешка добија извор и време проналаска.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_onboarding_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "И локалну копију?",
+          "subtitle": "И локалну копију?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_onboarding_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Локална копија је доступна за каснију синхронизацију.",
+          "subtitle": "Локална копија је доступна за каснију синхронизацију.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_onboarding_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Нисам то питао.",
+          "subtitle": "Нисам то питао.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_onboarding_L05",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Ваша безбедност нам је важна. Све можете наставити сутра.",
+          "subtitle": "Ваша безбедност нам је важна. Све можете наставити сутра.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_onboarding_L06",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Заборавите за сада на меније. Прва станица је испред Амбасаде Србије. Тамо је једно писмо остало без пошиљаоца.",
+          "subtitle": "Заборавите за сада на меније. Прва станица је испред Амбасаде Србије. Тамо је једно писмо остало без пошиљаоца.",
+          "voiceAssetId": null
+        }
+      ],
+      "directions": [
+        "Кратка и ненаметљива обука: INSPECT, COMPARE, KEEP LOCAL. Прва два изгледају активно; треће је скривено у додатним опцијама."
+      ],
+      "cues": [],
+      "beats": [
+        "EVIDENCE|Две верзије ауторске дигиталне карте, једна садржи сенку зграде. Закључак: прикази се разликују, не да је један нужно истинит. 2D и AR исти исход."
+      ],
+      "sequence": [
+        {
+          "type": "direction",
+          "index": 0
+        },
+        {
+          "type": "line",
+          "index": 0
+        },
+        {
+          "type": "line",
+          "index": 1
+        },
+        {
+          "type": "line",
+          "index": 2
+        },
+        {
+          "type": "line",
+          "index": 3
+        },
+        {
+          "type": "line",
+          "index": 4
+        },
+        {
+          "type": "line",
+          "index": 5
+        },
+        {
+          "type": "beat",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "id": "BP2_D0_fracture",
+      "act": 0,
+      "title": "Није грешка у екрану",
+      "location": "на путу или безбедно заустављен",
+      "sourceFile": "screenplay/act-0.txt",
+      "fictionLabel": "Ауторска драматизација; не историјски цитат.",
+      "lines": [
+        {
+          "id": "BP2_D0_fracture_L01",
+          "speakerId": "BP2_CH_UNKNOWN",
+          "text": "Не веруј… само… једном…",
+          "subtitle": "Не веруј… само… једном…",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_fracture_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "АРГО, чији је ово глас?",
+          "subtitle": "АРГО, чији је ово глас?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_fracture_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Ниједан регистровани извор. Вероватно оштећен запис.",
+          "subtitle": "Ниједан регистровани извор. Вероватно оштећен запис.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_fracture_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Нисам тражио вероватноћу. Тражио сам чији је.",
+          "subtitle": "Нисам тражио вероватноћу. Тражио сам чији је.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_fracture_L05",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Обавештење је уклоњено ради бољег корисничког доживљаја.",
+          "subtitle": "Обавештење је уклоњено ради бољег корисничког доживљаја.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_fracture_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ја га нисам уклонио.",
+          "subtitle": "Ја га нисам уклонио.",
+          "voiceAssetId": null
+        }
+      ],
+      "directions": [
+        "Не терати инспектора да гледа у телефон док хода. Када застане или се врати у мапу, један кадар затрепери; три импулса, затим тишина.",
+        "Кратко видљив знак три тачке које се додирују. Не сме личити на доказан историјски религијски поздрав."
+      ],
+      "cues": [
+        {
+          "kind": "motif",
+          "text": "Три удара без четвртог; није Морзеова азбука, него оригинални мотив.",
+          "assetStatus": "planned_not_created"
+        }
+      ],
+      "beats": [],
+      "sequence": [
+        {
+          "type": "direction",
+          "index": 0
+        },
+        {
+          "type": "cue",
+          "index": 0
+        },
+        {
+          "type": "line",
+          "index": 0
+        },
+        {
+          "type": "line",
+          "index": 1
+        },
+        {
+          "type": "line",
+          "index": 2
+        },
+        {
+          "type": "line",
+          "index": 3
+        },
+        {
+          "type": "line",
+          "index": 4
+        },
+        {
+          "type": "line",
+          "index": 5
+        },
+        {
+          "type": "direction",
+          "index": 1
+        }
+      ]
+    },
+    {
+      "id": "BP2_D0_handler",
+      "act": 0,
+      "title": "Мала службена тајна",
+      "location": "приватни агенцијски канал",
+      "sourceFile": "screenplay/act-0.txt",
+      "fictionLabel": "Ауторска драматизација; не историјски цитат.",
+      "lines": [
+        {
+          "id": "BP2_D0_handler_L01",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Јавили су ми да сте имали аномалију. Не брините, то се дешава када се старе базе података преклапају.",
+          "subtitle": "Јавили су ми да сте имали аномалију. Не брините, то се дешава када се старе базе података преклапају.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_handler_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ко је старији: запис или база?",
+          "subtitle": "Ко је старији: запис или база?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_handler_L03",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Добро питање. Запишите га. Али следите протокол, молим вас. Не преносите несинхронизоване податке другим каналима.",
+          "subtitle": "Добро питање. Запишите га. Али следите протокол, молим вас. Не преносите несинхронизоване податке другим каналима.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_handler_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Као да се плашите да ћу изгубити доказе.",
+          "subtitle": "Као да се плашите да ћу изгубити доказе.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP2_D0_handler_L05",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Управо тога се плашим.",
+          "subtitle": "Управо тога се плашим.",
+          "voiceAssetId": null
+        }
+      ],
+      "directions": [
+        "Први пут чујемо Варгу без ARGO-а. Његово дисање је људско, не синтетичко.",
+        "КРАЈ: код гледаоца остаје сумња у систем, али Варга делује коректно. Снага је у двосмислености, не у откривеном негативцу."
+      ],
+      "cues": [],
+      "beats": [],
+      "sequence": [
+        {
+          "type": "direction",
+          "index": 0
+        },
+        {
+          "type": "line",
+          "index": 0
+        },
+        {
+          "type": "line",
+          "index": 1
+        },
+        {
+          "type": "line",
+          "index": 2
+        },
+        {
+          "type": "line",
+          "index": 3
+        },
+        {
+          "type": "line",
+          "index": 4
+        },
+        {
+          "type": "direction",
+          "index": 1
+        }
+      ]
+    }
+  ]
+}
