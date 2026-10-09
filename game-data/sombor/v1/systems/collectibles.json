@@ -33,6 +33,16 @@
           "caption": "Tri faze umetničkog putovanja: plava, crvena i siva. Sombor čuva poklon od 500 radova.",
           "historicalFact": "Galerija „Milan Konjović” otvorena je 10. septembra 1966, uz početni legat od 500 dela.",
           "source": "https://visitsombor.org/ponuda/id56/culture/art-studios-and-ateliers/gallery-milan-konjovic.html"
+        },
+        {
+          "id": "psm-memory-key-relic",
+          "name": "Ključ sećanja",
+          "missionId": "sombor-psm",
+          "rarity": "unique",
+          "asset": "assets/psm-memory-key-relic.svg",
+          "caption": "Simbolični ključ za priče mnogih porodica, nije istorijski predmet.",
+          "historicalFact": "Muzej podunavskih Švaba osnovan je 9. jula 2019.",
+          "source": "https://myheritageguide.com/sr/object/stari-zanati-2/"
         }
       ]
     },
@@ -80,6 +90,18 @@
             "waypointId": "SO_MKG",
             "text": "Konjović je Somboru poklonio početni legat od 500 svojih radova.",
             "source": "https://srpskaenciklopedija.rs/books/slovo-g/page/galerija-milan-konjovic"
+          },
+          {
+            "id": "gold-psm-001",
+            "waypointId": "SO_PŠM",
+            "text": "Grašalkovićeva palata služila je komorskoj upravi i prihvatu doseljenika.",
+            "source": "https://vojvodina.travel/atrakcije/grasalkoviceva-palata-sombor/"
+          },
+          {
+            "id": "gold-psm-002",
+            "waypointId": "SO_PŠM",
+            "text": "Muzej podunavskih Švaba osnovan je 9. jula 2019.",
+            "source": "https://myheritageguide.com/sr/object/stari-zanati-2/"
           }
         ]
       }

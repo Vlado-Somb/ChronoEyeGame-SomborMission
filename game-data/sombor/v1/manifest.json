@@ -9,7 +9,7 @@
     "android",
     "arcore"
   ],
-  "editorialStatus": "gk_and_mkg_production_briefs_ready_remaining_missions_ar_integrated_review_pending",
+  "editorialStatus": "gk_mkg_psm_production_briefs_ready_other_missions_pending",
   "sourceBranch": "fix/sombor-resource-stabilization-20261008",
   "missions": [
     {
@@ -111,12 +111,20 @@
       "assets": "production/galerija-milan-konjovic/asset-manifest.json",
       "scene": "production/galerija-milan-konjovic/scene-flow.json",
       "qa": "production/galerija-milan-konjovic/QA_CHECKLIST.md"
+    },
+    {
+      "id": "psm-prod-03",
+      "missionId": "sombor-psm",
+      "brief": "production/muzej-podunavskih-svaba/PRODUCTION_BRIEF.md",
+      "assets": "production/muzej-podunavskih-svaba/asset-manifest.json",
+      "scene": "production/muzej-podunavskih-svaba/scene-flow.json",
+      "qa": "production/muzej-podunavskih-svaba/QA_CHECKLIST.md"
     }
   ],
   "contentInventory": {
     "missions": 9,
-    "tasks": 31,
-    "arInteractions": 5,
+    "tasks": 32,
+    "arInteractions": 6,
     "gpsTasks": 9,
     "multipleChoiceTasks": 11,
     "textInputTasks": 6
