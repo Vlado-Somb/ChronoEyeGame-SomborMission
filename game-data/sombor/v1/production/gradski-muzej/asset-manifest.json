@@ -1,1 +1,18 @@
-{"packageId":"gms-prod-08","missionId":"sombor-gms","assets":[]}
+{
+  "packageId": "gms-prod-08",
+  "missionId": "sombor-gms",
+  "assets": [
+    {
+      "id": "gms-archaeology",
+      "kind": "svg",
+      "path": "assets/gms-archaeology.svg",
+      "status": "created_concept"
+    },
+    {
+      "id": "gms-ethnology",
+      "kind": "svg",
+      "path": "assets/gms-ethnology.svg",
+      "status": "created_concept"
+    }
+  ]
+}
