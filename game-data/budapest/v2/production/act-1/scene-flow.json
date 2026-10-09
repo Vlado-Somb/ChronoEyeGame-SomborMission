@@ -13,36 +13,41 @@
       "id": "BP2_A1_NODE_S00",
       "kind": "dialogue",
       "dialogueId": "BP2_D1_arrival",
-      "skipSummary": "Дијалог се може вратити у досијеу; сви извори остају доступни.",
-      "next": "BP2_A1_NODE_S01"
+      "skipSummary": "Дучићев ехо разликује потпис и порекло; говор није аутентичан историјски снимак.",
+      "next": "BP2_A1_NODE_S01",
+      "skipPreservesTranscript": true
     },
     {
       "id": "BP2_A1_NODE_S01",
       "kind": "dialogue",
       "dialogueId": "BP2_D1_poem",
-      "skipSummary": "Дијалог се може вратити у досијеу; сви извори остају доступни.",
-      "next": "BP2_A1_NODE_S02"
+      "skipSummary": "Оригинални ауторски стихови помињу три гласа и празну маргину, чије значење још није откривено.",
+      "next": "BP2_A1_NODE_S02",
+      "skipPreservesTranscript": true
     },
     {
       "id": "BP2_A1_NODE_S02",
       "kind": "dialogue",
       "dialogueId": "BP2_D1_evidence",
-      "skipSummary": "Дијалог се може вратити у досијеу; сви извори остају доступни.",
-      "next": "BP2_A1_NODE_EXPLORE"
+      "skipSummary": "Два слична документа имају различито порекло; сачувати оба и означити шта је проверљиво.",
+      "next": "BP2_A1_NODE_EXPLORE",
+      "skipPreservesTranscript": true
     },
     {
       "id": "BP2_A1_NODE_S03",
       "kind": "dialogue",
       "dialogueId": "BP2_D1_interruption",
-      "skipSummary": "Дијалог се може вратити у досијеу; сви извори остају доступни.",
-      "next": "BP2_A1_NODE_S04"
+      "skipSummary": "Оштећени Теслин глас продире у агенцијски канал; АРГО га проглашава сметњом.",
+      "next": "BP2_A1_NODE_S04",
+      "skipPreservesTranscript": true
     },
     {
       "id": "BP2_A1_NODE_S04",
       "kind": "dialogue",
       "dialogueId": "BP2_D1_departure",
-      "skipSummary": "Дијалог се може вратити у досијеу; сви извори остају доступни.",
-      "next": "BP2_A1_NODE_FINISH"
+      "skipSummary": "Дучић не открива примаоца писма; кратак поздрав са три прста остаје ненаметљив траг.",
+      "next": "BP2_A1_NODE_FINISH",
+      "skipPreservesTranscript": true
     },
     {
       "id": "BP2_A1_NODE_EXPLORE",

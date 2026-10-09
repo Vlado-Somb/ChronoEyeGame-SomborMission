@@ -13,43 +13,49 @@
       "id": "BP2_A2_NODE_S00",
       "kind": "dialogue",
       "dialogueId": "BP2_D2_plaza",
-      "skipSummary": "Сукоб Тесле и Илоне; сачувана веза извор–тврдња.",
-      "next": "BP2_A2_NODE_S01"
+      "skipSummary": "Трг хероја је стварни локалитет, али приказани сукоб пројекција припада фикцији.",
+      "next": "BP2_A2_NODE_S01",
+      "skipPreservesTranscript": true
     },
     {
       "id": "BP2_A2_NODE_S01",
       "kind": "dialogue",
       "dialogueId": "BP2_D2_architecture",
-      "skipSummary": "Сукоб Тесле и Илоне; сачувана веза извор–тврдња.",
-      "next": "BP2_A2_NODE_S02"
+      "skipSummary": "Тесла тражи три независна извора уместо прихватања највеће и најубедљивије слике.",
+      "next": "BP2_A2_NODE_S02",
+      "skipPreservesTranscript": true
     },
     {
       "id": "BP2_A2_NODE_S02",
       "kind": "dialogue",
       "dialogueId": "BP2_D2_invasion",
-      "skipSummary": "Сукоб Тесле и Илоне; сачувана веза извор–тврдња.",
-      "next": "BP2_A2_NODE_S03"
+      "skipSummary": "МАСКА преузима виртуелни Теслин приказ: једна фигура говори конкурентним гласовима.",
+      "next": "BP2_A2_NODE_S03",
+      "skipPreservesTranscript": true
     },
     {
       "id": "BP2_A2_NODE_S03",
       "kind": "dialogue",
       "dialogueId": "BP2_D2_conflict",
-      "skipSummary": "Сукоб Тесле и Илоне; сачувана веза извор–тврдња.",
-      "next": "BP2_A2_NODE_S04"
+      "skipSummary": "Др Илона Арц наступа као људски управљач дигиталне МАСКЕ; није самостално настала AI.",
+      "next": "BP2_A2_NODE_S04",
+      "skipPreservesTranscript": true
     },
     {
       "id": "BP2_A2_NODE_S04",
       "kind": "dialogue",
       "dialogueId": "BP2_D2_contest",
-      "skipSummary": "Сукоб Тесле и Илоне; сачувана веза извор–тврдња.",
-      "next": "BP2_A2_NODE_EXPLORE"
+      "skipSummary": "Инспектор одбија јединствени синтетички приказ и враћа ознаке извора.",
+      "next": "BP2_A2_NODE_EXPLORE",
+      "skipPreservesTranscript": true
     },
     {
       "id": "BP2_A2_NODE_S05",
       "kind": "dialogue",
       "dialogueId": "BP2_D2_aftermath",
-      "skipSummary": "Сукоб Тесле и Илоне; сачувана веза извор–тврдња.",
-      "next": "BP2_A2_NODE_FINISH"
+      "skipSummary": "После привидне победе Теслин сигнал остаје угрожен; пут води у Централ.",
+      "next": "BP2_A2_NODE_FINISH",
+      "skipPreservesTranscript": true
     },
     {
       "id": "BP2_A2_NODE_EXPLORE",
@@ -87,7 +93,8 @@
   "dialoguePolicy": {
     "skipAllowed": true,
     "transcriptAlwaysAvailable": true,
-    "skipWritesPlotSummary": true
+    "skipWritesPlotSummary": true,
+    "completionWaitsForFlowFinish": true
   },
   "resumePolicy": "resume_node_no_duplicate_reward",
   "fallback": "2d_evidence_cards",
