@@ -1,0 +1,121 @@
+{
+  "id": "budapest-act-0",
+  "title": "Позив са погрешне стране",
+  "actIndex": 0,
+  "language": "sr-Cyrl",
+  "packageVersion": "2.0.0-draft.1",
+  "reviewStatus": "accepted_for_design",
+  "runtimeStatus": "not_integrated",
+  "primaryWaypointId": "BP_START",
+  "intermediateWaypointIds": [],
+  "prerequisiteMissionIds": [],
+  "tasks": [
+    {
+      "id": "BP2_A0_ARRIVE",
+      "type": "gps",
+      "title": "Безбедна потврда доласка",
+      "instruction": "Потврди безбедно стајање или ручно настави у 2D; GPS није теренски верификован.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Додато у локални досије без губитка порекла.",
+        "delaySeconds": 0
+      },
+      "gps": {
+        "waypointId": "BP_START",
+        "requiredZone": 2
+      },
+      "arrivalMode": "gps_or_explicit_manual",
+      "waypointId": "BP_START"
+    },
+    {
+      "id": "BP2_A0_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Истражи три независна трага",
+      "instruction": "Разликуј две дигиталне мапе без проглашавања лепше истинитом.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Додато у локални досије без губитка порекла.",
+        "delaySeconds": 0
+      },
+      "ar": {
+        "interaction": "evidence_map",
+        "activationAfterTask": "BP2_A0_ARRIVE",
+        "assetIds": [
+          "BP2_ART_0"
+        ],
+        "mode": "stationary_overlay_or_card",
+        "successCondition": {
+          "allEvidenceMappings": [
+            "map_a:preserve",
+            "map_b:preserve",
+            "difference:verify"
+          ]
+        },
+        "automaticRecognition": false
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "map_a:preserve",
+            "map_b:preserve",
+            "difference:verify"
+          ]
+        }
+      },
+      "evidenceSetId": "BP2_EVIDENCE_0",
+      "implementationStatus": "editorially_authored_assets_pending"
+    },
+    {
+      "id": "BP2_A0_QUIZ",
+      "type": "multiple_choice",
+      "title": "Провери шта заиста знаш",
+      "instruction": "Пре одговора отвори изворе из досијеа.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Додато у локални досије без губитка порекла.",
+        "delaySeconds": 0
+      },
+      "question": {
+        "text": "Шта доказује различит приказ на две карте?",
+        "choices": [
+          "Да је прва карта увек тачна",
+          "Да треба сачувати оба приказа и независно проверити",
+          "Да је зграда сигурно нестала"
+        ],
+        "correctIndex": 1,
+        "wrongAnswerFeedback": "Покушај поново; нема казне. Отвори картицу са извором."
+      },
+      "sources": [
+        "SRC_USER_CORE"
+      ],
+      "historyCardId": "BP2_HISTORY_0"
+    }
+  ],
+  "narrative": {
+    "setting": "Позив са погрешне стране",
+    "historyParagraphs": [
+      "Разликуј приказ и доказ; фикционални увод не успоставља стварну историјску чињеницу."
+    ],
+    "mentorOpening": "BP2_D0_invitation",
+    "educationalObjective": "Разликуј две дигиталне мапе без проглашавања лепше истинитом.",
+    "sources": [
+      "SRC_USER_CORE"
+    ],
+    "fictionDisclosure": "Портрети и дијалози су ауторске драматизације; тајни Круг и временска шифра су фикција.",
+    "mentorCompletion": "BP2_D0_handler"
+  },
+  "progressPolicy": {
+    "namespace": "budapest-content-v2",
+    "v1AutoImport": false,
+    "restartOnAppResume": false
+  }
+}
