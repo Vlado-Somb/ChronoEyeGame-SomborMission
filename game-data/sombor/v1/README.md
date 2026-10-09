@@ -13,6 +13,8 @@ Samostalan **sadržaj igre**, izveden iz Unity ScriptableObject resursa i dopunj
 
 - [`production/muzej-podunavskih-svaba/PRODUCTION_BRIEF.md`](production/muzej-podunavskih-svaba/PRODUCTION_BRIEF.md) — Misija 03: *Kofer sećanja*, AR/2D igra sa tri traga, proverena godina muzeja 2019 i sačuvani izvorni 1751 pod `legacyOriginal`.
 
+- [Narodno pozoriste: Izgubljeni znak](production/narodno-pozoriste/PRODUCTION_BRIEF.md) — stage role AR/2D, 1882 quiz, Promptbook relic and original SVG concepts.
+
 ## Sadržaj
 
 - `missions/*.json`: **9 misija / 32 zadatka**: 9 GPS, 6 AR, 11 multiple-choice, 6 text-input. AR dolazi odmah posle GPS-a i ima jednakovredan 2D fallback.
