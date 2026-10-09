@@ -7,5 +7,6 @@
 <application android:allowBackup="false" android:icon="@drawable/chrono_icon" android:label="ChronoEye · AR Lab" android:theme="@style/ChronoTheme" android:usesCleartextTraffic="false">
 <activity android:name="com.chronoeye.prototype.MainActivity" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
 <activity android:name="com.google.ar.core.examples.java.helloar.HelloArActivity" android:configChanges="orientation|screenSize" android:exported="false" android:screenOrientation="locked"/>
+<provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.diagnostics" android:exported="false" android:grantUriPermissions="true"><meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/diagnostic_paths"/></provider>
 <meta-data android:name="com.google.ar.core" android:value="required"/>
 </application></manifest>

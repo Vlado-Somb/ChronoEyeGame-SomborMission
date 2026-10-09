@@ -113,71 +113,37 @@ public class BackgroundRenderer {
    * Sets whether the background camera image should be replaced with a depth visualization instead.
    * This reloads the corresponding shader code, and must be called on the GL thread.
    */
-  public void setUseDepthVisualization(SampleRender render, boolean useDepthVisualization)
-      throws IOException {
-    if (backgroundShader != null) {
-      if (this.useDepthVisualization == useDepthVisualization) {
-        return;
-      }
-      backgroundShader.close();
-      backgroundShader = null;
-      this.useDepthVisualization = useDepthVisualization;
+  public void setUseDepthVisualization(SampleRender render, boolean unused) throws IOException {
+    // All shaders initialized once during onSurfaceCreated, never from UI toggles.
+    if (backgroundShader != null) return;
+    backgroundShader = Shader.createFromAssets(render, "shaders/background_show_camera.vert",
+        "shaders/diagnostic_background.frag", null)
+        .setTexture("u_CameraColorTexture", cameraColorTexture)
+        .setTexture("u_CameraDepthTexture", cameraDepthTexture)
+        .setDepthTest(false).setDepthWrite(false);
+    for (int i=0;i<2;i++) {
+      HashMap<String,String> defines=new HashMap<>(); defines.put("USE_OCCLUSION",Integer.toString(i));
+      occlusionShaders[i]=Shader.createFromAssets(render,"shaders/occlusion.vert","shaders/occlusion.frag",defines)
+          .setDepthTest(false).setDepthWrite(false)
+          .setBlend(Shader.BlendFactor.SRC_ALPHA,Shader.BlendFactor.ONE_MINUS_SRC_ALPHA);
+      if(i==1) occlusionShaders[i].setTexture("u_CameraDepthTexture",cameraDepthTexture);
     }
-    if (useDepthVisualization) {
-     depthColorPaletteTexture =
-        Texture.createFromAsset(
-            render,
-            "models/depth_color_palette.png",
-            Texture.WrapMode.CLAMP_TO_EDGE,
-            Texture.ColorFormat.LINEAR);
-      backgroundShader =
-          Shader.createFromAssets(
-                  render,
-                  "shaders/background_show_depth_color_visualization.vert",
-                  "shaders/background_show_depth_color_visualization.frag",
-                  /*defines=*/ null)
-              .setTexture("u_CameraDepthTexture", cameraDepthTexture)
-              .setTexture("u_ColorMap", depthColorPaletteTexture)
-              .setDepthTest(false)
-              .setDepthWrite(false);
-    } else {
-      backgroundShader =
-          Shader.createFromAssets(
-                  render,
-                  "shaders/background_show_camera.vert",
-                  "shaders/background_show_camera.frag",
-                  /*defines=*/ null)
-              .setTexture("u_CameraColorTexture", cameraColorTexture)
-              .setDepthTest(false)
-              .setDepthWrite(false);
-    }
+    occlusionShader=occlusionShaders[0];
+    // A defined zero texture is required even before the first depth frame.
+    GLES30.glBindTexture(GLES30.GL_TEXTURE_2D,cameraDepthTexture.getTextureId());
+    GLES30.glTexParameteri(GLES30.GL_TEXTURE_2D,GLES30.GL_TEXTURE_MIN_FILTER,GLES30.GL_NEAREST);
+    GLES30.glTexParameteri(GLES30.GL_TEXTURE_2D,GLES30.GL_TEXTURE_MAG_FILTER,GLES30.GL_NEAREST);
+    GLES30.glTexImage2D(GLES30.GL_TEXTURE_2D,0,GLES30.GL_RG8,1,1,0,GLES30.GL_RG,GLES30.GL_UNSIGNED_BYTE,ByteBuffer.allocateDirect(2));
   }
-
-  /**
-   * Sets whether to use depth for occlusion. This reloads the shader code with new {@code
-   * #define}s, and must be called on the GL thread.
-   */
-  public void setUseOcclusion(SampleRender render, boolean useOcclusion) throws IOException {
-    if (occlusionShader != null) {
-      if (this.useOcclusion == useOcclusion) {
-        return;
-      }
-      occlusionShader.close();
-      occlusionShader = null;
-      this.useOcclusion = useOcclusion;
-    }
-    HashMap<String, String> defines = new HashMap<>();
-    defines.put("USE_OCCLUSION", useOcclusion ? "1" : "0");
-    occlusionShader =
-        Shader.createFromAssets(render, "shaders/occlusion.vert", "shaders/occlusion.frag", defines)
-            .setDepthTest(false)
-            .setDepthWrite(false)
-            .setBlend(Shader.BlendFactor.SRC_ALPHA, Shader.BlendFactor.ONE_MINUS_SRC_ALPHA);
-    if (useOcclusion) {
-      occlusionShader
-          .setTexture("u_CameraDepthTexture", cameraDepthTexture)
-          .setFloat("u_DepthAspectRatio", aspectRatio);
-    }
+  private final Shader[] occlusionShaders=new Shader[2];
+  private ByteBuffer packedDepth;
+  public void setDiagnosticView(int mode, boolean fresh) {
+    backgroundShader.setInt("u_Mode",mode).setBool("u_DepthValid",fresh);
+  }
+  public void setUseOcclusion(SampleRender render, boolean enabled) throws IOException {
+    useOcclusion=enabled;
+    occlusionShader=occlusionShaders[enabled?1:0];
+    if(enabled) occlusionShader.setFloat("u_DepthAspectRatio",aspectRatio);
   }
 
   /**
@@ -201,22 +167,22 @@ public class BackgroundRenderer {
 
   /** Update depth texture with Image contents. */
   public void updateCameraDepthTexture(Image image) {
-    // SampleRender abstraction leaks here
-    GLES30.glBindTexture(GLES30.GL_TEXTURE_2D, cameraDepthTexture.getTextureId());
-    GLES30.glTexImage2D(
-        GLES30.GL_TEXTURE_2D,
-        0,
-        GLES30.GL_RG8,
-        image.getWidth(),
-        image.getHeight(),
-        0,
-        GLES30.GL_RG,
-        GLES30.GL_UNSIGNED_BYTE,
-        image.getPlanes()[0].getBuffer());
-    if (useOcclusion) {
-      aspectRatio = (float) image.getWidth() / (float) image.getHeight();
-      occlusionShader.setFloat("u_DepthAspectRatio", aspectRatio);
+    int width=image.getWidth(), height=image.getHeight();
+    Image.Plane plane=image.getPlanes()[0];
+    ByteBuffer source=plane.getBuffer();
+    if(packedDepth==null || packedDepth.capacity()!=width*height*2) packedDepth=ByteBuffer.allocateDirect(width*height*2);
+    packedDepth.clear();
+    for(int y=0;y<height;y++) for(int x=0;x<width;x++) {
+      int offset=y*plane.getRowStride()+x*plane.getPixelStride();
+      packedDepth.put(source.get(offset)).put(source.get(offset+1));
     }
+    packedDepth.flip();
+    GLES30.glBindTexture(GLES30.GL_TEXTURE_2D,cameraDepthTexture.getTextureId());
+    GLES30.glPixelStorei(GLES30.GL_UNPACK_ALIGNMENT,1);
+    GLES30.glTexImage2D(GLES30.GL_TEXTURE_2D,0,GLES30.GL_RG8,width,height,0,GLES30.GL_RG,GLES30.GL_UNSIGNED_BYTE,packedDepth);
+    GLES30.glPixelStorei(GLES30.GL_UNPACK_ALIGNMENT,4);
+    aspectRatio=(float)width/height;
+    if(useOcclusion) occlusionShader.setFloat("u_DepthAspectRatio",aspectRatio);
   }
 
   /**

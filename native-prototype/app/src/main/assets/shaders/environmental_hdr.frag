@@ -49,6 +49,7 @@ precision mediump float;
 const int kNumberOfRoughnessLevels = NUMBER_OF_MIPMAP_LEVELS;
 
 // The albedo and roughness/metallic textures.
+uniform vec3 u_ObjectTint;
 uniform sampler2D u_AlbedoTexture;
 uniform sampler2D u_RoughnessMetallicAmbientOcclusionTexture;
 
@@ -222,7 +223,7 @@ void Pbr_CreateMaterialParameters(const in vec2 texCoord,
                                   const in ShadingParameters shading,
                                   out MaterialParameters material) {
   // Read the material parameters from the textures
-  vec3 albedo = mix(texture(albedoTexture, texCoord).rgb, vec3(0.87, 0.49, 0.14), 0.85);
+  vec3 albedo = mix(texture(albedoTexture, texCoord).rgb, u_ObjectTint, 0.85);
   vec3 roughnessMetallicAmbientOcclusion = texture(pbrTexture, texCoord).rgb;
   // Roughness inputs are perceptually linear; convert them to regular roughness
   // values. Roughness levels approaching 0 will make specular reflections
@@ -270,7 +271,7 @@ void main() {
 
   // Skip all lighting calculations if the estimation is not valid.
   if (!u_LightEstimateIsValid) {
-    o_FragColor = vec4(mix(texture(u_AlbedoTexture, texCoord).rgb, vec3(0.87, 0.49, 0.14), 0.85), 1.0);
+    o_FragColor = vec4(mix(texture(u_AlbedoTexture, texCoord).rgb, u_ObjectTint, 0.85), 1.0);
     return;
   }
 
@@ -293,5 +294,5 @@ void main() {
   vec3 radiance = mainLightRadiance + environmentalRadiance;
 
   // Convert final color to sRGB color space
-  o_FragColor = vec4(LinearToSrgb(radiance), 1.0);
+  o_FragColor = vec4(mix(LinearToSrgb(radiance),u_ObjectTint,0.65), 1.0);
 }
