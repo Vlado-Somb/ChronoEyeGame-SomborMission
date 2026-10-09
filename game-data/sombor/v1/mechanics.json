@@ -7,7 +7,8 @@
     "bonusPerCompletedMission": 30,
     "penaltyPerIncorrectAnswer": -2,
     "arTaskSameBasePointsAsOtherTasks": true,
-    "collectiblesDefinedIn": "systems/collectibles.json"
+    "collectiblesDefinedIn": "systems/collectibles.json",
+    "ar2dParityRequired": true
   },
   "missionFlow": {
     "taskOrder": "defined by tasks array",
@@ -37,12 +38,13 @@
     "missionGpsTask": "complete when its waypoint emits requiredZone event",
     "legacyCheckIntervalSeconds": 1,
     "legacyRequiredZone": 3,
-    "notes": "Zone 3 precision at 5–7 m must be verified outdoors; web and AR must not assume the legacy altitude is geoid/ground height."
+    "notes": "Zone 3 precision at 5–7 m must be verified outdoors; web and AR must not assume the legacy altitude is geoid/ground height.",
+    "runtimePolicy": "Prefer zone 2 from safe public pedestrian position where mission config specifies; field validation required; never require unsafe close approach"
   },
   "answers": {
     "multipleChoice": "0-based correctIndex, two choices or flexible three/four-choice layout",
     "textInputCurrentRule": "case-insensitive exact string comparison",
-    "proposedFutureRule": "normalize Cyrillic/Latin, trim whitespace and allow editorially reviewed alternative answers (not yet active)"
+    "proposedFutureRule": "Normalize Cyrillic/Latin and whitespace only after explicit editorial review, not active"
   },
   "events": {
     "availableTypes": [
@@ -62,7 +64,7 @@
     "collectibleDiscovery": "emits item_unlocked and at_most_one_score_award_per_unique_spawn"
   },
   "ar": {
-    "activeMissionTasks": 8,
+    "activeMissionTasks": 9,
     "trigger": "immediately_after_gps_arrival_in_supported_missions",
     "requires": [
       "user_ready_and_stationary",
