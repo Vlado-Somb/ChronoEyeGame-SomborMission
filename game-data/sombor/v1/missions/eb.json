@@ -5,70 +5,143 @@
     "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/EB_SO_Mission.asset",
     "sourceBranch": "fix/sombor-resource-stabilization-20261008"
   },
-  "title": "SPOMENIK ERNESTU BOŠNJAKU",
+  "title": "ERNEST BOŠNJAK — NEDOSANJANI KADAR",
   "primaryWaypointId": "SO_EB",
   "language": "sr-Latn",
-  "reviewStatus": "ar_accepted_editorial_pending",
+  "reviewStatus": "production_editorial_v1_assets_partial",
   "tasks": [
     {
       "id": "EB-01",
       "type": "gps",
-      "title": "Moja draga kolevka",
-      "instruction": "Pronađi spomenik poznatom somborcu Ernestu Bošnjaku",
+      "title": "Trag filmskog pionira",
+      "instruction": "Pronađi spomenik Ernestu Bošnjaku sa bezbedne javne pešačke površine. Ne hodaj sa podignutim telefonom.",
       "completion": {
-        "title": "Bravo, našao si spomen obeležje ovo poznatom Somborcu!",
-        "narrative": "Bošnjak je 1906. godine doneo u Sombor kino-projektor i otvorio bioskop, prvo u zgradi pozorišta, a posle u jednoj velikoj šupi na Vašarištu. Tu je prikazivao razne filmske žurnale i kraće komične zabavne filmove koje je nabavljao od evropskih distributera.",
-        "delaySeconds": 0
+        "title": "Pronašao si filmski trag",
+        "narrative": "Bošnjak se 1906. vratio u Sombor s projektorom. Njegova priča tek počinje.",
+        "delaySeconds": 4
       },
       "gps": {
         "waypointId": "SO_EB",
-        "requiredZone": 3
+        "requiredZone": 2,
+        "minimumStationarySeconds": 2,
+        "fieldVerificationRequired": true,
+        "safeViewpointConfirmationRequired": true
+      },
+      "legacyOriginal": {
+        "archive": "production/ernest-bosnjak/legacy-eb.json",
+        "taskId": "EB-01"
       }
     },
     {
       "id": "EB-AR-01",
       "type": "ar_interaction",
-      "title": "Somborski nemi film",
-      "instruction": "Postavi filmski okvir preko bezbednog pogleda na spomenik i sačuvaj kadar.",
-      "implementationStatus": "editorially_active_assets_pending",
+      "title": "Nedovršeni film — tri kadra",
+      "instruction": "Montiraj tri simbolična kadra: projektor 1906 → kamera 1909 → san o filmskom studiju 1914.",
+      "implementationStatus": "production_specified_assets_partial",
       "active": true,
       "requiredForMission": true,
       "ar": {
-        "interaction": "silent_film_frame",
+        "interaction": "silent_film_three_shot_montage",
         "activationAfterTask": "EB-01",
-        "anchorPolicy": "user_ground_plane_or_camera_guided_overlay",
+        "anchorPolicy": "camera_relative_or_user_selected_safe_surface",
         "neverRequireUnsafePositioning": true,
-        "feedback": "Ernest Bošnjak je važan pionir filmske kulture Sombora.",
         "assetIds": [
-          "assets/ar-focus-reticle.svg"
-        ]
+          "assets/eb-projector-1906.svg",
+          "assets/eb-camera-1909.svg",
+          "assets/eb-studio-1914.svg",
+          "assets/eb-filmstrip-board.svg"
+        ],
+        "content": {
+          "cards": [
+            {
+              "id": "projector_1906",
+              "year": "1906",
+              "label": "Povratak s projektorom",
+              "asset": "assets/eb-projector-1906.svg"
+            },
+            {
+              "id": "camera_1909",
+              "year": "1909",
+              "label": "Kamera i prvi filmovi",
+              "asset": "assets/eb-camera-1909.svg"
+            },
+            {
+              "id": "studio_1914",
+              "year": "1914",
+              "label": "Nedosanjani filmski studio",
+              "asset": "assets/eb-studio-1914.svg"
+            }
+          ],
+          "correctSequence": [
+            "projector_1906",
+            "camera_1909",
+            "studio_1914"
+          ],
+          "shuffleInitialOrder": true,
+          "onMistake": "retry_without_ar_penalty",
+          "filmPlayback": {
+            "type": "original_vector_filmstrip",
+            "durationSeconds": 5,
+            "skipAllowed": true,
+            "notArchivalFootage": true
+          },
+          "historicalCaveat": "Originalne simbolične ilustracije; nisu Bošnjakovi autentični snimci."
+        },
+        "successCondition": {
+          "kind": "sequence_equals",
+          "expected": [
+            "projector_1906",
+            "camera_1909",
+            "studio_1914"
+          ],
+          "resultEvent": "AR_INTERACTION_COMPLETED",
+          "taskId": "EB-AR-01",
+          "awardOnce": true
+        },
+        "feedback": "Projektor, kamera i neostvareni studio: tri koraka jedne filmske vizije."
       },
       "mentorCue": {
         "mentorId": "profesor-vlada",
         "appearance": "auto_then_recallable"
       },
       "fallback": {
-        "mode": "2d_equivalent",
-        "sameEducationalObjective": true
+        "mode": "2d_silent_film_three_shot_montage",
+        "sameEducationalObjective": true,
+        "sameScoring": true,
+        "mayActivateWithoutCamera": true,
+        "identicalCardIds": [
+          "projector_1906",
+          "camera_1909",
+          "studio_1914"
+        ],
+        "identicalCorrectSequence": [
+          "projector_1906",
+          "camera_1909",
+          "studio_1914"
+        ]
       },
       "completion": {
-        "title": "AR trag otkriven",
-        "narrative": "Ernest Bošnjak je važan pionir filmske kulture Sombora.",
-        "delaySeconds": 2
+        "title": "Film je montiran",
+        "narrative": "Kadrovi su povezani, ali pravi studio nije izgrađen. Ko je bio čovek iza kamere?",
+        "delaySeconds": 3
+      },
+      "legacyOriginal": {
+        "archive": "production/ernest-bosnjak/legacy-eb.json",
+        "taskId": "EB-AR-01"
       }
     },
     {
       "id": "EB-02",
       "type": "multiple_choice",
-      "title": "Somborski sanjar",
-      "instruction": "Odgovori tačno na pitanje..",
+      "title": "Čovek iza kamere",
+      "instruction": "Koje zanimanje najbolje opisuje Bošnjakov rad na filmu?",
       "completion": {
-        "title": "Bravo istraživaču!",
-        "narrative": "Ernest Bošnjak bio je osnivač jugoslovenske kinematografije. Bio je jedan od prvih jugoslovenskih snimatelja, reditelja i producenta.",
-        "delaySeconds": 8
+        "title": "Tačno — reditelj!",
+        "narrative": "Bio je snimatelj, reditelj i producent, a bavio se i štamparstvom.",
+        "delaySeconds": 6
       },
       "question": {
-        "text": "Šta je bio Ernest Bošnjak?",
+        "text": "Koje od ponuđenih zanimanja je imao Ernest Bošnjak?",
         "choices": [
           "lekar",
           "političar",
@@ -79,26 +152,34 @@
       },
       "unusedUnityFields": {
         "waypointId": "SO_GK"
+      },
+      "legacyOriginal": {
+        "archive": "production/ernest-bosnjak/legacy-eb.json",
+        "taskId": "EB-02"
       }
     },
     {
       "id": "EB-03",
       "type": "text_input",
-      "title": "Sombor ka prestonica sedme umetnosti",
-      "instruction": "Upiši tačan odgovor",
+      "title": "San o filmskom gradu",
+      "instruction": "Dovrši naslov pozorišne predstave o Bošnjaku.",
       "completion": {
-        "title": "Fantastično!",
-        "narrative": "„Kad bi Sombor bio Holivud“ je predstava o Ernestu Bošnjaku, somborskom sanjaru, koji je kao pionir Jugoslovenskog filma, početkom 20. veka želeo da od Sombora napravi „fabriku snova“. Njegova želja da od Sombora napravi Holivud, ali njegov san kako umetnost može da promeni jedan grad, da promeni svet, biva zaustavljena Velikim ratom.",
-        "delaySeconds": 9
+        "title": "Tačno — Holivud!",
+        "narrative": "Predstava „Kad bi Sombor bio Holivud“ čuva sećanje na njegov san. Somborska premijera bila je 17. februara 2018.",
+        "delaySeconds": 6
       },
       "textInput": {
-        "questionText": "",
-        "inputPlaceholder": "Koji je puno naziv poznate predstave o životu Ernesta Bošnjaka, \"Kad bi Sombor bi..\"",
+        "questionText": "Dovrši naslov predstave: „Kad bi Sombor bio ...“",
+        "inputPlaceholder": "Poslednja reč naslova",
         "answerPlaceholder": "odgovor je",
         "expectedAnswer": "Holivud"
       },
       "unusedUnityFields": {
         "waypointId": "SO_GK"
+      },
+      "legacyOriginal": {
+        "archive": "production/ernest-bosnjak/legacy-eb.json",
+        "taskId": "EB-03"
       }
     }
   ]
