@@ -46,3 +46,9 @@
 - Обавезна миграција:
 - TEST / доказ:
 ```
+
+
+## Android Host preparation 0.1 — 2026-10-09
+- DEC-2026-HOST-001: независно језгро сесије, Android AtomicFile адаптер и Web Maps адаптер у `android-host/`.
+- Нова приватна session schema v1; content schema v0.2 се не мења. Дијагностички напредак се не конвертује у мисијски.
+- JVM/JS провере PASS; Android компилација/интеграција и теренски тест PENDING.
