@@ -21,7 +21,16 @@
       "title": "Станите на безбедној тачки",
       "instruction": "Ручна потврда док VPS/координате нису проверене.",
       "completion": {
-        "title": "Тачка потврђена"
+        "title": "Тачка потврђена",
+        "narrative": "Приступ стварној локацији је означен.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true,
+      "gps": {
+        "waypointId": "BP_HEROES",
+        "requiredZone": 2,
+        "fieldVerificationRequired": true
       }
     },
     {
@@ -40,7 +49,16 @@
             "tesla:fiction",
             "single_truth:unverified"
           ]
-        }
+        },
+        "interaction": "evidence_mapping",
+        "mode": "manual_surface",
+        "placementMode": "manual_surface",
+        "automaticRecognition": false,
+        "capabilityCheck": [
+          "arcore_available",
+          "safe_stationary_surface"
+        ],
+        "requiresSurveyForWorldLockedAnchor": true
       },
       "fallback": {
         "mode": "2d_evidence_cards",
@@ -56,8 +74,13 @@
       },
       "evidenceSetId": "BP2_EVIDENCE_2",
       "completion": {
-        "title": "Извори сачувани"
-      }
+        "title": "Извори сачувани",
+        "narrative": "Раздвојен је споменик од синтетичког лика.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true,
+      "implementationStatus": "editorially_authored_assets_pending"
     },
     {
       "id": "BP2_A2_QUIZ",
@@ -71,14 +94,19 @@
           "Маскин приказ",
           "Трг хероја"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "wrongAnswerFeedback": "Погледај означене изворе, па покушај поново. Нетачан покушај не одузима бодове."
       },
       "sources": [
         "SRC_HEROES"
       ],
       "completion": {
-        "title": "Раздвојено"
-      }
+        "title": "Раздвојено",
+        "narrative": "Визуелна убедљивост није историјски доказ.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true
     }
   ],
   "narrative": {
@@ -87,10 +115,27 @@
     "sources": [
       "SRC_HEROES",
       "SRC_USER_CORE"
-    ]
+    ],
+    "setting": "Лица на тргу",
+    "historyParagraphs": [
+      "Трг хероја (Hősök tere) је стварни будимпештански локалитет. У сценарију се преко стварног простора приказује измишљени сукоб дигиталних ликова.",
+      "Виртуелни Теслин лик, МАСКА и њихова борба нису историјски догађај. Визуелна убедљивост реконструкције није доказ аутентичности."
+    ],
+    "educationalObjective": "Упоредити стварно место, виртуелну пројекцију и тврдњу о истини.",
+    "fictionDisclosure": "Историјске личности и места су стварни где је наведен извор; тајни Круг, временска шифра и изговорене реплике су ауторска драматизација.",
+    "historicalReviewStatus": "editorial_reference_with_targeted_primary_source_checks; full_fact_audit_pending",
+    "reviewStatus": "accepted_for_design"
   },
   "progressPolicy": {
     "namespace": "budapest-content-v2",
-    "v1AutoImport": false
+    "v1AutoImport": false,
+    "manualArrivalRecordedAs": "manual_not_gps",
+    "contentVersionGuard": "explicit_migration_required"
+  },
+  "packageVersion": "2.0.0-draft.1",
+  "travelSafety": {
+    "noCameraWhileWalking": true,
+    "stationaryOnly": true,
+    "privateAreasForbidden": true
   }
 }

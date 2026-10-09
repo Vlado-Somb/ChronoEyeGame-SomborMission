@@ -1,6 +1,9 @@
 {
   "categories": [
-    "relic"
+    "relic",
+    "golden_seal",
+    "heart",
+    "joker"
   ],
   "items": [
     {
@@ -143,5 +146,10 @@
       },
       "repeatability": "once_per_profile"
     }
-  ]
+  ],
+  "optionalCategoriesStatus": {
+    "golden_seal": "reserved_no_items_authored",
+    "heart": "reserved_no_items_authored",
+    "joker": "reserved_no_items_authored"
+  }
 }

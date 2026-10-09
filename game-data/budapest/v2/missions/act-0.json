@@ -24,7 +24,8 @@
       },
       "gps": {
         "waypointId": "BP_START",
-        "requiredZone": 2
+        "requiredZone": 2,
+        "fieldVerificationRequired": true
       },
       "arrivalMode": "gps_or_explicit_manual",
       "waypointId": "BP_START"
@@ -47,7 +48,7 @@
         "assetIds": [
           "BP2_ART_0"
         ],
-        "mode": "stationary_overlay_or_card",
+        "mode": "manual_surface",
         "successCondition": {
           "allEvidenceMappings": [
             "map_a:preserve",
@@ -55,7 +56,13 @@
             "difference:verify"
           ]
         },
-        "automaticRecognition": false
+        "automaticRecognition": false,
+        "placementMode": "manual_surface",
+        "capabilityCheck": [
+          "arcore_available",
+          "safe_stationary_surface"
+        ],
+        "requiresSurveyForWorldLockedAnchor": true
       },
       "fallback": {
         "mode": "2d_evidence_cards",
@@ -111,11 +118,22 @@
       "SRC_USER_CORE"
     ],
     "fictionDisclosure": "Портрети и дијалози су ауторске драматизације; тајни Круг и временска шифра су фикција.",
-    "mentorCompletion": "BP2_D0_handler"
+    "mentorCompletion": "BP2_D0_handler",
+    "historicalReviewStatus": "editorial_reference_with_targeted_primary_source_checks; full_fact_audit_pending",
+    "reviewStatus": "accepted_for_design"
   },
   "progressPolicy": {
     "namespace": "budapest-content-v2",
     "v1AutoImport": false,
-    "restartOnAppResume": false
+    "restartOnAppResume": false,
+    "manualArrivalRecordedAs": "manual_not_gps",
+    "contentVersionGuard": "explicit_migration_required"
+  },
+  "dialoguePath": "dialogues/act-0.json",
+  "evidenceSetId": "BP2_EVIDENCE_0",
+  "travelSafety": {
+    "noCameraWhileWalking": true,
+    "stationaryOnly": true,
+    "privateAreasForbidden": true
   }
 }

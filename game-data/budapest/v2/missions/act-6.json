@@ -23,7 +23,16 @@
       "waypointId": "BP_GELLERT_VIEW",
       "arrivalMode": "gps_or_explicit_manual",
       "completion": {
-        "title": "Позиција припремљена"
+        "title": "Позиција припремљена",
+        "narrative": "Потврђена је безбедна тачка или 2D приказ.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true,
+      "gps": {
+        "waypointId": "BP_GELLERT_VIEW",
+        "requiredZone": 2,
+        "fieldVerificationRequired": true
       }
     },
     {
@@ -42,7 +51,16 @@
             "hidden:unverified",
             "bell:artistic"
           ]
-        }
+        },
+        "interaction": "evidence_mapping",
+        "mode": "manual_surface",
+        "placementMode": "manual_surface",
+        "automaticRecognition": false,
+        "capabilityCheck": [
+          "arcore_available",
+          "safe_stationary_surface"
+        ],
+        "requiresSurveyForWorldLockedAnchor": true
       },
       "fallback": {
         "mode": "2d_evidence_cards",
@@ -58,8 +76,13 @@
       },
       "evidenceSetId": "BP2_EVIDENCE_6",
       "completion": {
-        "title": "Реконструкција означена"
-      }
+        "title": "Реконструкција означена",
+        "narrative": "Познато и непознато на моделу су раздвојени.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true,
+      "implementationStatus": "editorially_authored_assets_pending"
     },
     {
       "id": "BP2_A6_QUIZ",
@@ -73,15 +96,20 @@
           "Као непроверену контуру",
           "Сакрити изворе"
         ],
-        "correctIndex": 1
+        "correctIndex": 1,
+        "wrongAnswerFeedback": "Погледај означене изворе, па покушај поново. Нетачан покушај не одузима бодове."
       },
       "sources": [
         "SRC_TABAN_OSZK",
         "SRC_USER_PHOTO"
       ],
       "completion": {
-        "title": "Проверено"
-      }
+        "title": "Проверено",
+        "narrative": "Непознато остаје јасно означено; избори нису кажњени.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true
     }
   ],
   "narrative": {
@@ -92,14 +120,26 @@
       "SRC_TABAN_BTM",
       "SRC_USER_PHOTO"
     ],
-    "educationalObjective": "Сачувати разлику између документа и реконструкције, па послати временски сигнал."
+    "educationalObjective": "Сачувати разлику између документа и реконструкције, па послати временски сигнал.",
+    "setting": "Храм који враћа место",
+    "historyParagraphs": [
+      "Табанска црква Светог Димитрија не постоји у садашњем пејзажу. За њен виртуелни приказ морају се раздвојити документовани делови, недовољно поткрепљени делови и оригиналне уметничке допуне.",
+      "Референтне фотографије и историјски текстови не доказују сами по себи прецизан габарит, положај и све невидљиве стране храма. Пуна геопросторна реконструкција остаје блокирана док се не потврде просторни подаци."
+    ],
+    "fictionDisclosure": "Историјске личности и места су стварни где је наведен извор; тајни Круг, временска шифра и изговорене реплике су ауторска драматизација.",
+    "historicalReviewStatus": "editorial_reference_with_targeted_primary_source_checks; full_fact_audit_pending",
+    "reviewStatus": "accepted_for_design"
   },
   "progressPolicy": {
     "namespace": "budapest-content-v2",
-    "v1AutoImport": false
+    "v1AutoImport": false,
+    "manualArrivalRecordedAs": "manual_not_gps",
+    "contentVersionGuard": "explicit_migration_required"
   },
   "travelSafety": {
     "noCameraWhileWalking": true,
-    "stationaryOnly": true
-  }
+    "stationaryOnly": true,
+    "privateAreasForbidden": true
+  },
+  "packageVersion": "2.0.0-draft.1"
 }

@@ -26,7 +26,16 @@
       "waypointId": "BP_GOLDEN_STAG",
       "arrivalMode": "gps_or_explicit_manual",
       "completion": {
-        "title": "Тачка потврђена"
+        "title": "Тачка потврђена",
+        "narrative": "Приступ Табану је потврђен са безбедне тачке.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true,
+      "gps": {
+        "waypointId": "BP_GOLDEN_STAG",
+        "requiredZone": 2,
+        "fieldVerificationRequired": true
       }
     },
     {
@@ -45,7 +54,16 @@
             "kud:contemporary",
             "cipher:fiction"
           ]
-        }
+        },
+        "interaction": "evidence_mapping",
+        "mode": "manual_surface",
+        "placementMode": "manual_surface",
+        "automaticRecognition": false,
+        "capabilityCheck": [
+          "arcore_available",
+          "safe_stationary_surface"
+        ],
+        "requiresSurveyForWorldLockedAnchor": true
       },
       "fallback": {
         "mode": "2d_evidence_cards",
@@ -61,8 +79,13 @@
       },
       "evidenceSetId": "BP2_EVIDENCE_5",
       "completion": {
-        "title": "Докази сачувани"
-      }
+        "title": "Докази сачувани",
+        "narrative": "Упоређени су историјски траг, живо наслеђе и драмска шифра.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true,
+      "implementationStatus": "editorially_authored_assets_pending"
     },
     {
       "id": "BP2_A5_QUIZ",
@@ -76,7 +99,8 @@
           "Постојање КУД-а Табан",
           "Теслина шифра у ношњи и колу"
         ],
-        "correctIndex": 2
+        "correctIndex": 2,
+        "wrongAnswerFeedback": "Погледај означене изворе, па покушај поново. Нетачан покушај не одузима бодове."
       },
       "sources": [
         "SRC_TABAN_OSZK",
@@ -85,8 +109,12 @@
         "SRC_USER_CORE"
       ],
       "completion": {
-        "title": "Проверено"
-      }
+        "title": "Проверено",
+        "narrative": "Тајни код није представљен као доказана традиција.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true
     }
   ],
   "narrative": {
@@ -98,14 +126,26 @@
       "SRC_GOLDEN_STAG",
       "SRC_KUD_TABAN",
       "SRC_USER_CORE"
-    ]
+    ],
+    "setting": "Последњи живи код",
+    "historyParagraphs": [
+      "Црква Светог Димитрија у некадашњем српском Табану била је важан део будимског српског наслеђа; срушена је 1949. године. Њена данашња невидљивост део је стварне историје места.",
+      "Јован Пачић је историјски сликао народне ношње, а КУД „Табан“ представља савремено живо неговање традиције. Тајна шифра ритма, ношње и покрета није историјски потврђена, већ је измишљена за игру."
+    ],
+    "fictionDisclosure": "Историјске личности и места су стварни где је наведен извор; тајни Круг, временска шифра и изговорене реплике су ауторска драматизација.",
+    "historicalReviewStatus": "editorial_reference_with_targeted_primary_source_checks; full_fact_audit_pending",
+    "reviewStatus": "accepted_for_design"
   },
   "progressPolicy": {
     "namespace": "budapest-content-v2",
-    "v1AutoImport": false
+    "v1AutoImport": false,
+    "manualArrivalRecordedAs": "manual_not_gps",
+    "contentVersionGuard": "explicit_migration_required"
   },
   "travelSafety": {
     "noCameraWhileWalking": true,
-    "stationaryOnly": true
-  }
+    "stationaryOnly": true,
+    "privateAreasForbidden": true
+  },
+  "packageVersion": "2.0.0-draft.1"
 }

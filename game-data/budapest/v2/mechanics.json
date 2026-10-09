@@ -7,7 +7,8 @@
     "quizRetryPenalty": 0,
     "expectedPointsPerAct": 60,
     "expectedCampaignPoints": 420,
-    "awardPolicy": "once_per_profile_per_versioned_award_key"
+    "awardPolicy": "once_per_profile_per_stable_award_key",
+    "awardLedgerScope": "gameId:task_or_mission_id:award_type_not_content_version"
   },
   "modes": [
     "stationary_ar",
@@ -43,7 +44,8 @@
     "gestureRecognized",
     "livingKeyRecovered",
     "finalChoice",
-    "timeSignalSent"
+    "timeSignalSent",
+    "cautiousStart"
   ],
   "oldProgressMigration": {
     "from": "game-data/budapest/v1",
