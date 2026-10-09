@@ -1,0 +1,330 @@
+{
+  "sets": [
+    {
+      "id": "BP2_EVIDENCE_0",
+      "act": 0,
+      "cards": [
+        {
+          "id": "map_a",
+          "text": "Верзија A ауторске карте; једна силуета је видљива",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "map_b",
+          "text": "Верзија B ауторске карте; силуета недостаје",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "difference",
+          "text": "Разлика је сигнал да проверимо оба извора, не доказ шта је стварно",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        }
+      ],
+      "targets": {
+        "preserve": "Сачувај ову верзију",
+        "verify": "Започни независну проверу"
+      },
+      "submitMode": "map_card_to_target",
+      "successCondition": {
+        "allEvidenceMappings": [
+          "map_a:preserve",
+          "map_b:preserve",
+          "difference:verify"
+        ]
+      },
+      "ar2dEquivalent": true
+    },
+    {
+      "id": "BP2_EVIDENCE_1",
+      "act": 1,
+      "cards": [
+        {
+          "id": "provenance",
+          "text": "Копија ауторског писма са записаним пореклом",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "signature",
+          "text": "Копија без порекла; само потпис",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "margin",
+          "text": "Три гласа и празна маргина — фикциона порука",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        }
+      ],
+      "targets": {
+        "traceable": "Има ланац порекла",
+        "unverified": "Потребна независна провера",
+        "fiction": "Порука фикционалног заплета"
+      },
+      "submitMode": "map_card_to_target",
+      "successCondition": {
+        "allEvidenceMappings": [
+          "provenance:traceable",
+          "signature:unverified",
+          "margin:fiction"
+        ]
+      },
+      "ar2dEquivalent": true
+    },
+    {
+      "id": "BP2_EVIDENCE_2",
+      "act": 2,
+      "cards": [
+        {
+          "id": "square",
+          "text": "Hősök tere, стварна локација",
+          "sourceId": "SRC_HEROES",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "tesla",
+          "text": "Теслин холограм — уметничка реконструкција",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "single_truth",
+          "text": "Илонина тврдња да једна верзија замењује све доказе",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        }
+      ],
+      "targets": {
+        "physical": "Документован локалитет",
+        "fiction": "Драматизација",
+        "unverified": "Тврдња противника без независног доказа"
+      },
+      "submitMode": "map_card_to_target",
+      "successCondition": {
+        "allEvidenceMappings": [
+          "square:physical",
+          "tesla:fiction",
+          "single_truth:unverified"
+        ]
+      },
+      "ar2dEquivalent": true
+    },
+    {
+      "id": "BP2_EVIDENCE_3",
+      "act": 3,
+      "cards": [
+        {
+          "id": "opening_1887",
+          "text": "Centrál је отворен 1887, према званичном историјату",
+          "sourceId": "SRC_CENTRAL",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "agency_1886",
+          "text": "Агенцијска картица са фикционално фалсификованом 1886",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "table_dialogue",
+          "text": "Овсат и сарадници у измишљеном композитном разговору",
+          "sourceId": "SRC_CENTRAL",
+          "kind": "historical_or_editorial_claim_review_required"
+        }
+      ],
+      "targets": {
+        "sourced": "Проверљив историјски податак",
+        "manipulated": "Сценско подметање",
+        "dramatized": "Историјски контекст, али ауторски разговор"
+      },
+      "submitMode": "map_card_to_target",
+      "successCondition": {
+        "allEvidenceMappings": [
+          "opening_1887:sourced",
+          "agency_1886:manipulated",
+          "table_dialogue:dramatized"
+        ]
+      },
+      "ar2dEquivalent": true
+    },
+    {
+      "id": "BP2_EVIDENCE_4",
+      "act": 4,
+      "cards": [
+        {
+          "id": "institution",
+          "text": "Текелијанум као установа основан 1838",
+          "sourceId": "SRC_TEKELIJANUM",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "building",
+          "text": "Данашња зграда подигнута 1907–1908",
+          "sourceId": "SRC_TEKELIJANUM",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "gesture",
+          "text": "Три спојена прста Михаила Витковића као фикциони знак Круга",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        }
+      ],
+      "targets": {
+        "historical": "Проверљив слој историје",
+        "fiction": "Сценски симбол"
+      },
+      "submitMode": "map_card_to_target",
+      "successCondition": {
+        "allEvidenceMappings": [
+          "institution:historical",
+          "building:historical",
+          "gesture:fiction"
+        ]
+      },
+      "ar2dEquivalent": true
+    },
+    {
+      "id": "BP2_EVIDENCE_5",
+      "act": 5,
+      "cards": [
+        {
+          "id": "temple",
+          "text": "Црква Св. Димитрија и документован губитак 1949",
+          "sourceId": "SRC_TABAN_OSZK",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "kud",
+          "text": "КУД Табан је стварна савремена традицијска организација",
+          "sourceId": "SRC_KUD_TABAN",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "cipher",
+          "text": "Шифра покрета, шара и музике створена за CHRONO EYE",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        }
+      ],
+      "targets": {
+        "history": "Историјски траг",
+        "contemporary": "Жива савремена пракса",
+        "fiction": "Фикциони механизам заплета"
+      },
+      "submitMode": "map_card_to_target",
+      "successCondition": {
+        "allEvidenceMappings": [
+          "temple:history",
+          "kud:contemporary",
+          "cipher:fiction"
+        ]
+      },
+      "ar2dEquivalent": true
+    },
+    {
+      "id": "BP2_EVIDENCE_6",
+      "act": 6,
+      "cards": [
+        {
+          "id": "facade",
+          "text": "Облик прочеља на референтној слици, непотврђена мера",
+          "sourceId": "SRC_USER_PHOTO",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "hidden",
+          "text": "Скривена страна коју ниједна употребљена фотографија не доказује",
+          "sourceId": "SRC_USER_PHOTO",
+          "kind": "historical_or_editorial_claim_review_required"
+        },
+        {
+          "id": "bell",
+          "text": "Нова оригинална композиција звона за сцену",
+          "sourceId": "SRC_USER_CORE",
+          "kind": "historical_or_editorial_claim_review_required"
+        }
+      ],
+      "targets": {
+        "photo": "Поткрепљено фотографијом, не мером",
+        "unverified": "Непотврђено",
+        "artistic": "Ауторски звучни додатак"
+      },
+      "submitMode": "map_card_to_target",
+      "successCondition": {
+        "allEvidenceMappings": [
+          "facade:photo",
+          "hidden:unverified",
+          "bell:artistic"
+        ]
+      },
+      "ar2dEquivalent": true
+    }
+  ],
+  "historyCards": [
+    {
+      "id": "BP2_HISTORY_0",
+      "text": "Разликуј приказ и доказ; фикционални увод не успоставља стварну историјску чињеницу.",
+      "sourceIds": [
+        "SRC_USER_CORE"
+      ]
+    },
+    {
+      "id": "BP2_HISTORY_1",
+      "text": "Амбасада је стварна станица; Дучићев драматизовани говор није историјски снимак или аутентичан цитат.",
+      "sourceIds": [
+        "SRC_EMBASSY",
+        "SRC_USER_CORE"
+      ]
+    },
+    {
+      "id": "BP2_HISTORY_2",
+      "text": "Трг хероја је стварно место; борба два лика за холограм је фикција.",
+      "sourceIds": [
+        "SRC_HEROES",
+        "SRC_USER_CORE"
+      ]
+    },
+    {
+      "id": "BP2_HISTORY_3",
+      "text": "Званични историјат наводи отварање 1887. и стварне књижевне кругове; не доказује наш дијалог.",
+      "sourceIds": [
+        "SRC_CENTRAL",
+        "SRC_USER_CORE"
+      ]
+    },
+    {
+      "id": "BP2_HISTORY_4",
+      "text": "Витковићева кућа је одвојена од Текелијанума; тајно чланство и поздрав су фикција.",
+      "sourceIds": [
+        "SRC_TEKELIJANUM",
+        "SRC_VITKOVICS_SALON",
+        "SRC_USER_CORE"
+      ]
+    },
+    {
+      "id": "BP2_HISTORY_5",
+      "text": "КУД Табан не чува доказану тајну шифру из османског доба. Храм није сада физички присутан.",
+      "sourceIds": [
+        "SRC_TABAN_OSZK",
+        "SRC_KUD_TABAN",
+        "SRC_USER_CORE"
+      ]
+    },
+    {
+      "id": "BP2_HISTORY_6",
+      "text": "Простор и историја храма морају бити проверени; AR реконструкција је разлучива од историјског доказа.",
+      "sourceIds": [
+        "SRC_TABAN_OSZK",
+        "SRC_TABAN_BTM",
+        "SRC_USER_PHOTO"
+      ]
+    }
+  ],
+  "imagePolicy": "citation_is_not_media_license",
+  "safety": "no_forced_ar_while_moving"
+}
