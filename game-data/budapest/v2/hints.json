@@ -1,0 +1,172 @@
+{
+  "hints": [
+    {
+      "id": "BP2_HINT_0_1",
+      "taskId": "BP2_A0_EXPLORE",
+      "level": 1,
+      "text": "Погледај исто место на обе карте.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_0_2",
+      "taskId": "BP2_A0_EXPLORE",
+      "level": 2,
+      "text": "Запиши шта се разликује, не која ти се допада.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_0_3",
+      "taskId": "BP2_A0_EXPLORE",
+      "level": 3,
+      "text": "Сачувај обе и означи разлику као повод за проверу.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_1_1",
+      "taskId": "BP2_A1_EXPLORE",
+      "level": 1,
+      "text": "Упореди порекло, не калиграфију.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_1_2",
+      "taskId": "BP2_A1_EXPLORE",
+      "level": 2,
+      "text": "Потпис се може преписати без доказа о ланцу порекла.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_1_3",
+      "taskId": "BP2_A1_EXPLORE",
+      "level": 3,
+      "text": "Маргина је фикциони сигнал, а запис са извором је проверљив.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_2_1",
+      "taskId": "BP2_A2_EXPLORE",
+      "level": 1,
+      "text": "Шта је на тргу без телефона?",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_2_2",
+      "taskId": "BP2_A2_EXPLORE",
+      "level": 2,
+      "text": "Теслин и Маскин лик припадају драматизацији.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_2_3",
+      "taskId": "BP2_A2_EXPLORE",
+      "level": 3,
+      "text": "Повежи трг са физичким местом, Теслу са фикцијом, Илонину тврдњу са непотврђеним.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_3_1",
+      "taskId": "BP2_A3_EXPLORE",
+      "level": 1,
+      "text": "Не мешај стварни историјат и измишљене реплике.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_3_2",
+      "taskId": "BP2_A3_EXPLORE",
+      "level": 2,
+      "text": "Centrál је основан 1887, али наш дијалог није снимљен тада.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_3_3",
+      "taskId": "BP2_A3_EXPLORE",
+      "level": 3,
+      "text": "1887 — извор; 1886 — подметање; сто — сценска драматизација.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_4_1",
+      "taskId": "BP2_A4_EXPLORE",
+      "level": 1,
+      "text": "1838 није година изградње садашње зграде.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_4_2",
+      "taskId": "BP2_A4_EXPLORE",
+      "level": 2,
+      "text": "1907–1908 односи се на зграду, а три прста су фикциони знак.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_4_3",
+      "taskId": "BP2_A4_EXPLORE",
+      "level": 3,
+      "text": "Институција и здање су историјски слојеви; чланство у Кругу је фикција.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_5_1",
+      "taskId": "BP2_A5_EXPLORE",
+      "level": 1,
+      "text": "Јованово сведочење указује на храм који више не стоји.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_5_2",
+      "taskId": "BP2_A5_EXPLORE",
+      "level": 2,
+      "text": "КУД Табан је стварно савремено удружење.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_5_3",
+      "taskId": "BP2_A5_EXPLORE",
+      "level": 3,
+      "text": "Историјска црква, данашња игра и Теслино измишљено кодирање су три различите тврдње.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_6_1",
+      "taskId": "BP2_A6_EXPLORE",
+      "level": 1,
+      "text": "Погледај која страна цркве је заиста на фотографији.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_6_2",
+      "taskId": "BP2_A6_EXPLORE",
+      "level": 2,
+      "text": "Непознато не постаје познато тиме што је лепо.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    },
+    {
+      "id": "BP2_HINT_6_3",
+      "taskId": "BP2_A6_EXPLORE",
+      "level": 3,
+      "text": "Фасада поткрепљена фотографијом, скривено непроверено, звук ауторски.",
+      "penaltyPoints": 0,
+      "available": "on_request"
+    }
+  ]
+}
