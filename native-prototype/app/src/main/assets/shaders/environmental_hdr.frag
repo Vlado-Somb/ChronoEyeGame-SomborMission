@@ -49,6 +49,7 @@ precision mediump float;
 const int kNumberOfRoughnessLevels = NUMBER_OF_MIPMAP_LEVELS;
 
 // The albedo and roughness/metallic textures.
+uniform vec3 u_ObjectTint;
 uniform sampler2D u_AlbedoTexture;
 uniform sampler2D u_RoughnessMetallicAmbientOcclusionTexture;
 
@@ -263,8 +264,6 @@ vec3 LinearToSrgb(const vec3 color) {
   vec3 kGamma = vec3(1.0 / 2.2);
   return clamp(pow(color, kGamma), 0.0, 1.0);
 }
-
-uniform vec3 u_ObjectTint;
 
 void main() {
   // Mirror texture coordinates over the X axis

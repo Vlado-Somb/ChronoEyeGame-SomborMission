@@ -55,7 +55,7 @@ final class DiagnosticSession {
     catch(org.json.JSONException e) { throw new IllegalArgumentException(e); }
     return j;
   }
-  static JSONArray array(float[] values) { JSONArray a=new JSONArray(); for(float v:values) a.put((double)v); return a; }
+  static JSONArray array(float[] values) { JSONArray a=new JSONArray(); try { for(float v:values) a.put((double)v); } catch(org.json.JSONException e) { throw new IllegalArgumentException(e); } return a; }
   private boolean offer(Runnable r) {
     if(closing || !queue.offer(r)) { dropped.incrementAndGet(); return false; }
     return true;
