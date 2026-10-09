@@ -1,4 +1,4 @@
-# ChronoEye AR Lab 0.3.0
+# ChronoEye AR Lab 0.4.0 (V4 depth diagnostics)
 
 Дијагностички Android прототип за следећи S25 Ultra тест. Нова верзија има
 камера/heatmap/overlay, независно заклањање, до пет обојених предмета, временски
@@ -54,3 +54,19 @@ https://github.com/google-ar/arcore-android-sdk . Видети `LICENSE-GOOGLE-A
 - „Заврши тест“ завршава AR екран и шаље `ar_test_finished` у Android host; `testFinished` је засебно стање од броја сакупљених кристала. Напредак теста служи само за лабораторијски UI, не додељује бодове мисијама.
 
 **Статус:** имплементирано у коду; мора се потврдити компајлирањем APK-а и физичким тестом додира/оклузије на телефону. Извезени логови нису у Git-у.
+
+## V4 — после V3 теренског лога (2026-10-09)
+
+- Depth је и даље строго ограничен на signed |frameTs − depthTs| ≤ 100 ms.
+- Додат watchdog за >1 s без свежих података при TRACKING стању;
+  бележи се status аквизиције, depth/camera timestamp, поновљени кадрови и опоравак.
+  Не ресетује се ARCore Session и не руше се локални anchor-и.
+- Једно acquireDepthImage16Bits по AR кадру; исти затворени Image scope се
+  користи за додир/оклузију/снимак, увек преко try-with-resources.
+- Укључени су периодични DEPTH16 снимци сваких 10 s и снимци при прелазу
+  active↔stale (највише 200; disk/raw u16, DEFLATE у ZIP).
+- „Заврши тест“ финализује session_end/end.json, затим отвара Android
+  дељење архиве са sessionContinues=false. После дељења „Назад у мапу“.
+- 0.4.0 / versionCode 4, schemaVersion 2, buildId у manifest/sample/export.
+- Остају потребни GitHub Actions build и физички тест; нема тврдње да је
+  V3 depth застој тиме решен.

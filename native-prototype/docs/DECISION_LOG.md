@@ -38,3 +38,9 @@ on crystal tap, show remaining placement slots 5/5 -> 0/5 -> restored by
 collection/reset/new AR session. Explicit `ar_test_finished` native result.
 This is diagnostic AR Lab functionality, NOT final mission collectibles/scoring.
 Status must not be promoted to verified_in_test before APK CI and phone QA.
+
+DEC-AR-20261009-03 — V4 designed/implemented, awaiting CI and physical validation.
+After V3 field log (213/374 active depth samples, stale intervals tens of seconds),
+keep 100 ms threshold; add one-Image-per-frame acquisition, 1 s watchdog,
+status transitions, 10 s snapshots and completed ZIP export. No programmatic ARCore
+session restart, no changes to mission scoring or WebView host.

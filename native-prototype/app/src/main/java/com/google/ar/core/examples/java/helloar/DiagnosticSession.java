@@ -38,6 +38,7 @@ final class DiagnosticSession {
   private BufferedWriter events, csv;
   private long bytes, lastSystem, lastCpu = android.os.Process.getElapsedCpuTime(), lastWall = SystemClock.elapsedRealtime();
   private volatile int snapshots;
+  private long baselinePssKiB = -1;
   private final java.util.concurrent.atomic.AtomicBoolean sharing=new java.util.concurrent.atomic.AtomicBoolean();
   private final java.util.concurrent.atomic.AtomicInteger pendingSnapshots=new java.util.concurrent.atomic.AtomicInteger();
   private static final long MAX_BYTES = 64L*1024*1024, MAX_MS = 30*60*1000;
@@ -105,15 +106,22 @@ final class DiagnosticSession {
       directory=new File(root,id); if(!directory.mkdirs()) throw new IOException("session directory");
       events=new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(directory,"events.jsonl")),StandardCharsets.UTF_8));
       csv=new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(directory,"series.csv")),StandardCharsets.UTF_8));
-      csv.write("elapsedMs,fps,frameMeanMs,frameMaxMs,slowOver50Ms,depthAgeMs,depthState,occlusion,centerMm,objectZMm,objects,missingFrames,staleFrames,detailed,producerMs\n");
-      JSONObject manifest=json("schemaVersion",1,"sessionId",id,"startedUtc",utc,"startMonotonicNs",startNs,
-          "appVersion","0.2.0","versionCode",2,"manufacturer",Build.MANUFACTURER,"model",Build.MODEL,"android",Build.VERSION.RELEASE,"sdk",Build.VERSION.SDK_INT,
+      csv.write("elapsedMs,fps,frameMeanMs,frameMaxMs,slowOver50Ms,depthAgeMs,depthState,occlusion,centerMm,objectZMm,objects,missingFrames,staleFrames,detailed,producerMs,depthTimestampNs,acquisitionStatus,repeatedCameraFrames,repeatedDepthFrames,newDepthFrames,acquisitionFailures,acquisitionMs\n");
+      String appVersion="unknown"; long versionCode=-1;
+      try {
+        android.content.pm.PackageInfo info=context.getPackageManager().getPackageInfo(context.getPackageName(),0);
+        appVersion=info.versionName; versionCode=Build.VERSION.SDK_INT>=28?info.getLongVersionCode():info.versionCode;
+      } catch(Exception ignored) {}
+      JSONObject manifest=json("schemaVersion",2,"sessionId",id,"startedUtc",utc,"startMonotonicNs",startNs,
+          "appVersion",appVersion,"versionCode",versionCode,"buildId","ar-lab-v4-depth-20261009","manufacturer",Build.MANUFACTURER,"model",Build.MODEL,"android",Build.VERSION.RELEASE,"sdk",Build.VERSION.SDK_INT,
           "depth","filtered DEPTH16 little-endian uint16 mm; 0=missing; camera-axis Z, not ray distance",
           "confidence",null,"confidenceReason","filtered depth has no raw confidence in this build",
           "cpuNormalization","100 * delta process CPU ms / delta elapsed ms; 100%=one full core; may exceed 100",
           "totalCpuLoad",null,"gpuLoad",null,"cpuTemperatureC",null,"unavailableReason","not exposed by supported public APIs used here",
           "maxSessionMs",MAX_MS,"maxBytes",MAX_BYTES,"maxSnapshots",200,"queueCapacity",128,"retainedSessions",5,
-          "depthFreshnessMs",100,"occlusionBiasMm",-80,"rawVideo",false,"audio",false,"upload","not_configured",
+          "depthFreshnessMs",100,"depthWatchdogMs",1000,"autoSnapshotIntervalSeconds",10,
+          "snapshotFormat","DEPTH16 u16 uncompressed on disk; ZIP deflate on export",
+          "occlusionBiasMm",-80,"rawVideo",false,"audio",false,"upload","not_configured",
           "units",json("time","ms unless Ns suffix","poseTranslation","m","quaternion","qx qy qz qw","memory","KiB","batteryTemperature","C; battery, not CPU"));
       try { put(manifest,"arcoreVersion",context.getPackageManager().getPackageInfo("com.google.ar.core",0).versionName); } catch(Exception e) { put(manifest,"arcoreVersion",null); }
       writeFile(new File(directory,"manifest.json"),manifest.toString(2)); status="пише локално";
@@ -129,6 +137,7 @@ final class DiagnosticSession {
     long now=SystemClock.elapsedRealtime(), cpu=android.os.Process.getElapsedCpuTime();
     double percent=100.0*(cpu-lastCpu)/Math.max(1,now-lastWall); lastCpu=cpu; lastWall=now;
     Debug.MemoryInfo memory=new Debug.MemoryInfo(); Debug.getMemoryInfo(memory);
+    if(baselinePssKiB<0 && elapsedMs()>=15_000) baselinePssKiB=memory.getTotalPss();
     Intent battery=context.registerReceiver(null,new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
     PowerManager power=(PowerManager)context.getSystemService(Context.POWER_SERVICE);
     int level=battery==null?-1:battery.getIntExtra(BatteryManager.EXTRA_LEVEL,-1), scale=battery==null?-1:battery.getIntExtra(BatteryManager.EXTRA_SCALE,-1);
@@ -139,35 +148,78 @@ final class DiagnosticSession {
       "thermalReason",Build.VERSION.SDK_INT>=29?"Android thermal severity; not temperature":"API<29",
       "batteryPercent",level>=0&&scale>0?100.0*level/scale:null,
       "batteryTemperatureC",battery!=null&&battery.hasExtra(BatteryManager.EXTRA_TEMPERATURE)?battery.getIntExtra(BatteryManager.EXTRA_TEMPERATURE,0)/10.0:null,
-      "droppedQueueItems",dropped.get());
+      "droppedQueueItems",dropped.get(),"pssDeltaSinceWarmupKiB",baselinePssKiB<0?null:memory.getTotalPss()-baselinePssKiB);
     writeEvent(json("sessionId",id,"elapsedMs",elapsedMs(),"type","system","data",data).toString());
   }
+  private File archive(boolean stillRunning) throws IOException {
+    if(directory==null) throw new IOException("session directory not initialized");
+    if(stillRunning) { events.flush(); csv.flush(); }
+    File outDir=new File(context.getCacheDir(),"diagnostic-exports"); outDir.mkdirs();
+    File[] old=outDir.listFiles();
+    if(old!=null) {
+      Arrays.sort(old,Comparator.comparingLong(File::lastModified));
+      for(int i=0;i<old.length-2;i++) old[i].delete();
+    }
+    File zip=new File(outDir,"ChronoEye-"+id+"-"+elapsedMs()+".zip");
+    writeFile(new File(directory,"export.json"),json("exportElapsedMs",elapsedMs(),
+      "droppedQueueItems",dropped.get(),"status",status,"sessionContinues",stillRunning,
+      "buildId","ar-lab-v4-depth-20261009").toString());
+    try(ZipOutputStream z=new ZipOutputStream(new FileOutputStream(zip))) {
+      File[] files=directory.listFiles(); if(files==null) throw new IOException("no session files");
+      byte[] buffer=new byte[8192];
+      for(File f:files) {
+        if(!f.isFile()) continue;
+        z.putNextEntry(new ZipEntry(f.getName()));
+        try(InputStream in=new FileInputStream(f)) { int n; while((n=in.read(buffer))!=-1) z.write(buffer,0,n); }
+        z.closeEntry();
+      }
+    }
+    return zip;
+  }
+  private void openShareChooser(Activity activity,File zip) {
+    activity.runOnUiThread(() -> {
+      if(activity.isFinishing()) return;
+      android.net.Uri uri=FileProvider.getUriForFile(activity,activity.getPackageName()+".diagnostics",zip);
+      Intent send=new Intent(Intent.ACTION_SEND).setType("application/zip")
+          .putExtra(Intent.EXTRA_STREAM,uri).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+      send.setClipData(ClipData.newRawUri("AR diagnostics",uri));
+      activity.startActivity(Intent.createChooser(send,"Подели дијагностику"));
+    });
+  }
   void share(Activity activity) {
+    if(closing) { shareCompleted(activity); return; }
     if(!sharing.compareAndSet(false,true)) return;
     if(!offer(() -> {
-      try {
-        if(events==null) throw new IOException("log not initialized");
-        events.flush(); csv.flush();
-        File outDir=new File(context.getCacheDir(),"diagnostic-exports"); outDir.mkdirs();
-        File[] old=outDir.listFiles(); if(old!=null) { Arrays.sort(old,Comparator.comparingLong(File::lastModified)); for(int i=0;i<old.length-2;i++) old[i].delete(); }
-        File zip=new File(outDir,"ChronoEye-"+id+"-"+elapsedMs()+".zip");
-        writeFile(new File(directory,"export.json"),json("exportElapsedMs",elapsedMs(),"droppedQueueItems",dropped.get(),"status",status,"sessionContinues",!closing).toString());
-        try(ZipOutputStream z=new ZipOutputStream(new FileOutputStream(zip))) {
-          File[] files=directory.listFiles(); if(files==null) throw new IOException("no session files");
-          byte[] buffer=new byte[8192];
-          for(File f:files) { if(!f.isFile()) continue; z.putNextEntry(new ZipEntry(f.getName())); try(InputStream in=new FileInputStream(f)) { int n; while((n=in.read(buffer))!=-1) z.write(buffer,0,n); } z.closeEntry(); }
-        }
-        activity.runOnUiThread(() -> {
-          if(activity.isFinishing()) return;
-          android.net.Uri uri=FileProvider.getUriForFile(activity,activity.getPackageName()+".diagnostics",zip);
-          Intent send=new Intent(Intent.ACTION_SEND).setType("application/zip").putExtra(Intent.EXTRA_STREAM,uri).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-          send.setClipData(ClipData.newRawUri("AR diagnostics",uri));
-          activity.startActivity(Intent.createChooser(send,"Подели дијагностику"));
-        });
-      } catch(Exception e) { fail(e); activity.runOnUiThread(() -> android.widget.Toast.makeText(activity,status,android.widget.Toast.LENGTH_LONG).show()); }
+      try { openShareChooser(activity,archive(true)); }
+      catch(Exception e) { fail(e); activity.runOnUiThread(() ->
+          android.widget.Toast.makeText(activity,status,android.widget.Toast.LENGTH_LONG).show()); }
       finally { sharing.set(false); }
-    })) { sharing.set(false); android.widget.Toast.makeText(activity,"Ред је пун; покушај поново",android.widget.Toast.LENGTH_SHORT).show(); }
+    })) { sharing.set(false); activity.runOnUiThread(() ->
+        android.widget.Toast.makeText(activity,"Ред је пун; покушај поново",android.widget.Toast.LENGTH_SHORT).show()); }
   }
-  void close() { active=false; event("session_end",json()); closing=true; }
+  void finishAndShare(Activity activity) {
+    close("user_finished");
+    shareCompleted(activity);
+  }
+  private void shareCompleted(Activity activity) {
+    if(!sharing.compareAndSet(false,true)) return;
+    new Thread(() -> {
+      try {
+        worker.join(); // Off the UI thread: wait until session_end and end.json are durable.
+        if(!closed) throw new IOException("session close incomplete");
+        openShareChooser(activity,archive(false));
+      } catch(Exception e) {
+        fail(e); activity.runOnUiThread(() ->
+            android.widget.Toast.makeText(activity,status,android.widget.Toast.LENGTH_LONG).show());
+      } finally { sharing.set(false); }
+    },"chrono-final-export").start();
+  }
+  synchronized void close(String reason) {
+    if(closing) return;
+    active=false;
+    event("session_end",json("reason",reason,"closedElapsedMs",elapsedMs()));
+    closing=true;
+  }
+  void close() { close("activity_destroyed"); }
   private static void delete(File f) { File[] children=f.listFiles(); if(children!=null) for(File c:children) delete(c); f.delete(); }
 }

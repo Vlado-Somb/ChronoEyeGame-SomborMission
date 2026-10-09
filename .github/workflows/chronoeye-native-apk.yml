@@ -2,7 +2,7 @@ name: ChronoEye native APK
 on:
   workflow_dispatch:
   push:
-    branches: [chronoeye/native-ar-prototype, 'chronoeye/ar-diagnostics-*']
+    branches: [chronoeye/native-ar-prototype, 'chronoeye/ar-diagnostics-*', 'chronoeye/ar-depth-v4-*']
     paths: ['native-prototype/**', '.github/workflows/chronoeye-native-apk.yml']
 permissions:
   contents: read

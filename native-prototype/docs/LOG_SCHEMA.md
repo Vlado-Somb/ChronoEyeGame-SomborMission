@@ -61,3 +61,16 @@ to avoid interpolating separately packed bytes. No guessed confidence values.
 
 Primary reference (checked 2026-10-09):
 https://developers.google.com/ar/develop/java/depth/developer-guide
+
+## V4 schemaVersion 2 additive fields (2026-10-09)
+Manifest: actual package appVersion/versionCode plus buildId, depthWatchdogMs=1000,
+autoSnapshotIntervalSeconds=10. `sample` events include acquisitionStatus,
+acquisitionMs, depthTimestampNs, repeatedCameraFrames, repeatedDepthFrames,
+newDepthFrames, acquisitionFailures and buildId. Corresponding columns appended to
+series.csv (v1 columns unchanged). New events: depth_pipeline, depth_watchdog,
+depth_recovered. `system` adds pssDeltaSinceWarmupKiB (first reference >=15 s).
+Image is acquired once per render frame, closed before leaving scope.
+`snapshot` files are uncompressed local uint16 data but ZIP uses deflate.
+Finished test invokes close before ZIP is generated, yielding session_end, end.json
+and export.json sessionContinues=false; interim manual share stays a live prefix.
+This instrumentation diagnoses stalled timestamps but does not prove ARCore's cause.

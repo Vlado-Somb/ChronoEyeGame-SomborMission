@@ -33,3 +33,13 @@ before the successful checks above. The 100 ms freshness gate was not relaxed.
 Native prototype plus its build workflow only. No Unity, game-data, Maps, other
 branches or ChatGPT automations changed. Public repository has code and synthetic
 fixtures only, never user session logs or credentials.
+
+## V4 source changes pending CI and field QA
+- Branch: chronoeye/ar-depth-v4-20261009 (based on AR Lab 0.3.0 branch).
+- Fields: per-frame acquisition outcome, camera/depth repetition, watchdog and
+  recovery events; default 10 s DEPTH16 snapshots; complete session ZIP share.
+- Acceptance: GitHub Actions assembleDebug/lintDebug/unittests/signature verification.
+  On-phone acceptance: 10 min, 5 collectibles, 100 ms gate, timestamps,
+  snapshots, session_end/end.json/sessionContinues=false.
+- No phone evidence for V4 yet. A watchdog reports stalls; it does not magically
+  repair ARCore's missing image stream.
