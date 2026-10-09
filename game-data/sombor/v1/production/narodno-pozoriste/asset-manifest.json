@@ -1,0 +1,56 @@
+{
+  "package": "nps-prod-04",
+  "assets": [
+    {
+      "id": "nps-stage-board",
+      "path": "assets/nps-stage-board.svg",
+      "status": "created_concept",
+      "license": "original_project"
+    },
+    {
+      "id": "nps-curtain",
+      "path": "assets/nps-curtain.svg",
+      "status": "created_concept",
+      "license": "original_project"
+    },
+    {
+      "id": "nps-actor",
+      "path": "assets/nps-actor.svg",
+      "status": "created_concept",
+      "license": "original_project"
+    },
+    {
+      "id": "nps-audience",
+      "path": "assets/nps-audience.svg",
+      "status": "created_concept",
+      "license": "original_project"
+    },
+    {
+      "id": "nps-promptbook-relic",
+      "path": "assets/nps-promptbook-relic.svg",
+      "status": "created_concept",
+      "license": "original_project"
+    },
+    {
+      "id": "profesor-vlada",
+      "path": "models/profesor-vlada.glb",
+      "status": "planned_not_created"
+    },
+    {
+      "id": "nps-stage",
+      "path": "models/nps-stage.glb",
+      "status": "planned_not_created"
+    },
+    {
+      "id": "nps-voice",
+      "path": "audio/nps-mentor.ogg",
+      "status": "script_ready_audio_pending"
+    },
+    {
+      "id": "nps-facade-photo",
+      "path": "media/nps-facade.webp",
+      "status": "pending_rights_and_capture"
+    }
+  ],
+  "note": "SVG sources exist; GLB/OGG/WebP do not."
+}

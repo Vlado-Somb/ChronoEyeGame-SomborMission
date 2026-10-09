@@ -1,5 +1,14 @@
 # CHANGELOG — CHRONO EYE SOMBOR
 
+## 2026-10-09 — Narodno pozoriste, production package 04
+
+- Stage role mapping (curtain, actor, audience) with equivalent 2D fallback.
+- Original NPS task archive preserved at production/narodno-pozoriste/legacy-nps.json; quiz answers 1882 and choice index 1 unchanged.
+- Historical facts 1882 / 1946 / 1952 reviewed; 1877/1879 society date conflict flagged.
+- Four production documents, five original SVG concepts, symbolic Promptbook relic, two sourced gold seals and a fictional joker.
+- GPS zone 2 provisional; no Android/ARCore, GLB, OGG or field verification.
+
+
 ## 2026-10-09 — production package 03: Muzej podunavskih Švaba
 
 - Nova AR mini-igra `PSM-AR-01` između GPS i dva istorijska kviza: tri originalne simbolične kartice (dolazak → svakodnevica → muzej), jednakovredan 2D fallback.

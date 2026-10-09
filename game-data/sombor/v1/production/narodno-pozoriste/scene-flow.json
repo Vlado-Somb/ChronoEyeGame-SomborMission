@@ -1,0 +1,72 @@
+{
+  "packageId": "nps-prod-04",
+  "missionId": "sombor-nps",
+  "gameplayOrder": [
+    "NPS-01",
+    "NPS-AR-01",
+    "NPS-02",
+    "NPS-03"
+  ],
+  "events": [
+    {
+      "id": "arrival",
+      "trigger": "SO_NPS zone2 sustained 2s",
+      "action": "confirm_stationary_then_mentor_intro",
+      "next": "stage"
+    },
+    {
+      "id": "stage",
+      "trigger": "NPS-01 complete",
+      "action": "place three stage roles",
+      "mapping": {
+        "curtain": "upstage",
+        "actor": "center_stage",
+        "audience": "auditorium"
+      },
+      "onMistake": "hint_and_retry",
+      "successEvent": "AR_INTERACTION_COMPLETED",
+      "next": "year"
+    },
+    {
+      "id": "year",
+      "trigger": "NPS-AR-01 complete",
+      "action": "show_NPS-02",
+      "expectedAnswer": "1882",
+      "next": "name"
+    },
+    {
+      "id": "name",
+      "trigger": "NPS-02 complete",
+      "action": "show_NPS-03",
+      "correctIndex": 1,
+      "next": "finish"
+    },
+    {
+      "id": "finish",
+      "trigger": "NPS-03 complete",
+      "action": "award_mission_once_and_unlock_relic",
+      "relic": "nps-promptbook-relic"
+    },
+    {
+      "id": "bonus",
+      "trigger": "optional_safe_stationary_pickup",
+      "collectibles": [
+        "gold-nps-001",
+        "gold-nps-002",
+        "joker-nps-001"
+      ],
+      "oncePerSpawn": true
+    }
+  ],
+  "fallback": {
+    "mode": "2d_stage_role_slot_mapping",
+    "sameEducationalObjective": true,
+    "sameScoring": true
+  },
+  "safety": {
+    "noWalkingWithCamera": true,
+    "noRoadSpawns": true,
+    "fieldVerified": false
+  },
+  "status": "editorial_only"
+}
