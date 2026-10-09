@@ -1,0 +1,95 @@
+{
+  "assets": [
+    {
+      "id": "BP2_ART_0",
+      "type": "scene_prop",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "original_or_licensed"
+    },
+    {
+      "id": "BP2_ART_1",
+      "type": "scene_prop",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "original_or_licensed"
+    },
+    {
+      "id": "BP2_ART_2",
+      "type": "scene_prop",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "original_or_licensed"
+    },
+    {
+      "id": "BP2_ART_3",
+      "type": "scene_prop",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "original_or_licensed"
+    },
+    {
+      "id": "BP2_ART_4",
+      "type": "scene_prop",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "original_or_licensed"
+    },
+    {
+      "id": "BP2_ART_5",
+      "type": "scene_prop",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "original_or_licensed"
+    },
+    {
+      "id": "BP2_ART_6",
+      "type": "scene_prop",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "original_or_licensed"
+    },
+    {
+      "id": "BP2_MODEL_CHURCH",
+      "type": "media",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "review_required"
+    },
+    {
+      "id": "BP2_MODEL_TESLA",
+      "type": "media",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "review_required"
+    },
+    {
+      "id": "BP2_MODEL_ILONA",
+      "type": "media",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "review_required"
+    },
+    {
+      "id": "BP2_VOICE_CAST",
+      "type": "media",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "review_required"
+    },
+    {
+      "id": "BP2_SFX_CAFE",
+      "type": "media",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "review_required"
+    },
+    {
+      "id": "BP2_MUSIC_KOLO",
+      "type": "media",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "review_required"
+    }
+  ]
+}
