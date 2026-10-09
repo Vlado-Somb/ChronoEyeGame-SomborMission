@@ -1,0 +1,434 @@
+{
+  "id": "BP_DIALOGUE_5",
+  "language": "sr-Cyrl",
+  "scenes": [
+    {
+      "id": "BP_D5_opening",
+      "act": 5,
+      "title": "Место које недостаје",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D5_opening_L01",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Овде причу не почињемо моделом. Почињемо фотографијом и питањем шта је остало изван кадра.",
+          "subtitle": "Овде причу не почињемо моделом. Почињемо фотографијом и питањем шта је остало изван кадра.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_opening_L02",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "На карти је празно.",
+          "subtitle": "На карти је празно.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_opening_L03",
+          "speakerId": "BP_CH_MIRA",
+          "text": "На данашњем приказу. То није доказ да овде никада ничега није било.",
+          "subtitle": "На данашњем приказу. То није доказ да овде никада ничега није било.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_opening_L04",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Имамо трагове нестале цркве. Немамо право да сваки детаљ измислимо и затим га назовемо сећањем.",
+          "subtitle": "Имамо трагове нестале цркве. Немамо право да сваки детаљ измислимо и затим га назовемо сећањем.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_opening_L05",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Зато сам га ја већ завршио.",
+          "subtitle": "Зато сам га ја већ завршио.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_opening_L06",
+          "speakerId": "BP_CH_SYSTEM",
+          "text": "ПАЛИМПСЕСТ нуди потпуну реконструкцију.",
+          "subtitle": "ПАЛИМПСЕСТ нуди потпуну реконструкцију.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_opening_L07",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Прелепа је.",
+          "subtitle": "Прелепа је.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_opening_L08",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Хвала. Понекад је лепота најпоштенији одговор који можемо дати.",
+          "subtitle": "Хвала. Понекад је лепота најпоштенији одговор који можемо дати.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_opening_L09",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Питајте га за оне прозоре које фотографија не показује.",
+          "subtitle": "Питајте га за оне прозоре које фотографија не показује.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D5_temptation",
+      "act": 5,
+      "title": "Прозори на невидљивој страни",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D5_temptation_L01",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "На основу чега сте направили другу страну?",
+          "subtitle": "На основу чега сте направили другу страну?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_temptation_L02",
+          "speakerId": "BP_CH_AUREL",
+          "text": "На основу онога што најбоље одговара целини.",
+          "subtitle": "На основу онога што најбоље одговара целини.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_temptation_L03",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Дакле, претпоставка.",
+          "subtitle": "Дакле, претпоставка.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_temptation_L04",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Реконструкција. Зар желите да људи памте рупу?",
+          "subtitle": "Реконструкција. Зар желите да људи памте рупу?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_temptation_L05",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Желимо да знају шта гледају.",
+          "subtitle": "Желимо да знају шта гледају.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_temptation_L06",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Нико неће доћи због фусноте.",
+          "subtitle": "Нико неће доћи због фусноте.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_temptation_L07",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Онда ћемо направити добру причу. Фусноту ћемо ипак оставити.",
+          "subtitle": "Онда ћемо направити добру причу. Фусноту ћемо ипак оставити.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_temptation_L08",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Прекидам канал. Следећи потез је ваш.",
+          "subtitle": "Прекидам канал. Следећи потез је ваш.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_temptation_L09",
+          "speakerId": "BP_CH_SYSTEM",
+          "text": "Менторски канал искључен. Локални докази су доступни.",
+          "subtitle": "Менторски канал искључен. Локални докази су доступни.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D5_ordeal",
+      "act": 5,
+      "title": "Без ментора",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D5_ordeal_L01",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Нема више гласа који ће потврдити да сте у праву.",
+          "subtitle": "Нема више гласа који ће потврдити да сте у праву.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ordeal_L02",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Има разлога које могу да покажем.",
+          "subtitle": "Има разлога које могу да покажем.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ordeal_L03",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Поставите потврђене делове. За остале изаберите „непотврђено“. Контура може да остане контура.",
+          "subtitle": "Поставите потврђене делове. За остале изаберите „непотврђено“. Контура може да остане контура.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ordeal_L04",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Могу вам дати целу цркву.",
+          "subtitle": "Могу вам дати целу цркву.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ordeal_L05",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Можете ми дати слику целе цркве. Желим да сачувам и начин на који смо до ње дошли.",
+          "subtitle": "Можете ми дати слику целе цркве. Желим да сачувам и начин на који смо до ње дошли.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ordeal_L06",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Не тражимо да вратите изгубљено једним додиром. Само да не изгубимо и доказ да је постојало.",
+          "subtitle": "Не тражимо да вратите изгубљено једним додиром. Само да не изгубимо и доказ да је постојало.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D5_false_end",
+      "act": 5,
+      "title": "Цена савршенства",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D5_false_end_L01",
+          "speakerId": "BP_CH_SYSTEM",
+          "text": "Верзија прихваћена као потпуна. Порекло појединачних делова скривено.",
+          "subtitle": "Верзија прихваћена као потпуна. Порекло појединачних делова скривено.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_false_end_L02",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Покушајте сада да отворите извор за онај прозор.",
+          "subtitle": "Покушајте сада да отворите извор за онај прозор.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_false_end_L03",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Нема га.",
+          "subtitle": "Нема га.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_false_end_L04",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Сада је део целине.",
+          "subtitle": "Сада је део целине.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_false_end_L05",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Још можемо да вратимо ознаке. Ништа из локалне копије није изгубљено.",
+          "subtitle": "Још можемо да вратимо ознаке. Ништа из локалне копије није изгубљено.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_false_end_L06",
+          "speakerId": "BP_CH_SYSTEM",
+          "text": "Поново отвори одлуку. Без губитка напретка.",
+          "subtitle": "Поново отвори одлуку. Без губитка напретка.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D5_ending_evidence",
+      "act": 5,
+      "title": "Сачуван траг",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D5_ending_evidence_L01",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Сачувај изворе. Непознато остави видљивим.",
+          "subtitle": "Сачувај изворе. Непознато остави видљивим.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ending_evidence_L02",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Сачувано. И мој лог је уз њих.",
+          "subtitle": "Сачувано. И мој лог је уз њих.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ending_evidence_L03",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Ваш модел никада неће бити потпун.",
+          "subtitle": "Ваш модел никада неће бити потпун.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ending_evidence_L04",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Зато други могу да га допуне.",
+          "subtitle": "Зато други могу да га допуне.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ending_evidence_L05",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Видите торањ? Ово је наш приказ на основу трагова. Град око њега је и даље садашњи град.",
+          "subtitle": "Видите торањ? Ово је наш приказ на основу трагова. Град око њега је и даље садашњи град.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D5_ending_both",
+      "act": 5,
+      "title": "Две означене верзије",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D5_ending_both_L01",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Сачувај обе верзије. На свакој прикажи шта је доказ, а шта тумачење.",
+          "subtitle": "Сачувај обе верзије. На свакој прикажи шта је доказ, а шта тумачење.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ending_both_L02",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Остављате и моју?",
+          "subtitle": "Остављате и моју?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ending_both_L03",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Као интерпретацију. Са потписом и поступком. Не као једину прошлост.",
+          "subtitle": "Као интерпретацију. Са потписом и поступком. Не као једину прошлост.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ending_both_L04",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Сачувано. Сада се верзије могу упоредити.",
+          "subtitle": "Сачувано. Сада се верзије могу упоредити.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ending_both_L05",
+          "speakerId": "BP_CH_AUREL",
+          "text": "То није град који сам хтео да направим.",
+          "subtitle": "То није град који сам хтео да направим.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_ending_both_L06",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Али је град у ком неко други још може да постави питање.",
+          "subtitle": "Али је град у ком неко други још може да постави питање.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D5_return",
+      "act": 5,
+      "title": "Повратак",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D5_return_L01",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Канал је сада само за читање. Тесла се враћа из локалне копије.",
+          "subtitle": "Канал је сада само за читање. Тесла се враћа из локалне копије.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_return_L02",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Видим да сте завршили без мог одобрења.",
+          "subtitle": "Видим да сте завршили без мог одобрења.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_return_L03",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Било је лакше кад сте мање говорили.",
+          "subtitle": "Било је лакше кад сте мање говорили.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_return_L04",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Забележићу то као непотврђено.",
+          "subtitle": "Забележићу то као непотврђено.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_return_L05",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Један последњи запис за албум: шта још желите да сазнате?",
+          "subtitle": "Један последњи запис за албум: шта још желите да сазнате?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_return_L06",
+          "speakerId": "BP_CH_SYSTEM",
+          "text": "Белешка је необавезна и остаје на вашем уређају.",
+          "subtitle": "Белешка је необавезна и остаје на вашем уређају.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_return_L07",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Сада спустите телефон. Погледајте место још једном.",
+          "subtitle": "Сада спустите телефон. Погледајте место још једном.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_return_L08",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Мисија је завршена. Прича није затворена.",
+          "subtitle": "Мисија је завршена. Прича није затворена.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D5_optional_knight",
+      "act": 5,
+      "title": "Књижевни ехо",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D5_optional_knight_L01",
+          "speakerId": "BP_CH_STEFAN",
+          "text": "Овај глас је сценска замисао, а не доказ мог присуства на овом месту.",
+          "subtitle": "Овај глас је сценска замисао, а не доказ мог присуства на овом месту.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_optional_knight_L02",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Шта онда можете да нам кажете?",
+          "subtitle": "Шта онда можете да нам кажете?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D5_optional_knight_L03",
+          "speakerId": "BP_CH_STEFAN",
+          "text": "Да дело и реч не путују увек истим путем. Проверите пут, пре него што им припишете исто порекло.",
+          "subtitle": "Да дело и реч не путују увек истим путем. Проверите пут, пре него што им припишете исто порекло.",
+          "voiceAssetId": null
+        }
+      ]
+    }
+  ]
+}

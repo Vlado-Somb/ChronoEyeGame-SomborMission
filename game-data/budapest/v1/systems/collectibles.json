@@ -1,0 +1,153 @@
+{
+  "categories": [
+    "relic",
+    "golden_seal",
+    "heart",
+    "joker"
+  ],
+  "items": [
+    {
+      "id": "BP_RELIC_0",
+      "category": "relic",
+      "title": "Прва маргина",
+      "assetId": "BP_ART_0",
+      "storyByte": "Разлика је повод за проверу, а не довољан доказ о прошлости.",
+      "sourceIds": [
+        "SRC_USER_CORE"
+      ],
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-0"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP_RELIC_0"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    },
+    {
+      "id": "BP_RELIC_1",
+      "category": "relic",
+      "title": "Коверта са пореклом",
+      "assetId": "BP_ART_1",
+      "storyByte": "Контакт Амбасаде Републике Србије потврђује идентитет станице. То не доказује измишљену причу о тајном кругу.",
+      "sourceIds": [
+        "SRC_EMBASSY"
+      ],
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-1"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP_RELIC_1"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    },
+    {
+      "id": "BP_RELIC_2",
+      "category": "relic",
+      "title": "Отворени круг",
+      "assetId": "BP_ART_2",
+      "storyByte": "Hősök tere је стварна будимпештанска локација. Холограми и борба канала припадају фикцији игре.",
+      "sourceIds": [
+        "SRC_HEROES"
+      ],
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-2"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP_RELIC_2"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    },
+    {
+      "id": "BP_RELIC_3",
+      "category": "relic",
+      "title": "Лист исправке",
+      "assetId": "BP_ART_3",
+      "storyByte": "Centrál наводи 1887. Погрешних 1886 у претходном дијалогу је намерно подметање у фикцији, не историјски податак.",
+      "sourceIds": [
+        "SRC_CENTRAL"
+      ],
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-3"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP_RELIC_3"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    },
+    {
+      "id": "BP_RELIC_4",
+      "category": "relic",
+      "title": "Повезана бележница",
+      "assetId": "BP_ART_4",
+      "storyByte": "1838. се односи на установу; данашња зграда подигнута је 1907–1908. Два датума не морају бити противречна ако описују различите ствари.",
+      "sourceIds": [
+        "SRC_TEKELIJANUM"
+      ],
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-4"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP_RELIC_4"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    },
+    {
+      "id": "BP_RELIC_5",
+      "category": "relic",
+      "title": "Торањ са отвореном маргином",
+      "assetId": "BP_ART_5",
+      "storyByte": "Извор OSZK наводи рушење 1949. Сачувана дела и документација омогућавају истраживање; наш модел није замена за њих.",
+      "sourceIds": [
+        "SRC_TABAN"
+      ],
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-5"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP_RELIC_5"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    }
+  ],
+  "optionalCategoriesStatus": {
+    "golden_seal": "not_used_in_v1_to_preserve_pacing",
+    "heart": "not_used_in_v1",
+    "joker": "humour_in_dialogue_not_pickups"
+  }
+}

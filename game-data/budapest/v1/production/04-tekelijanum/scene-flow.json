@@ -1,0 +1,84 @@
+{
+  "id": "BP_A4_FLOW",
+  "missionId": "budapest-act-4",
+  "entryNodeId": "BP_A4_NODE_ARRIVAL",
+  "nodes": [
+    {
+      "id": "BP_A4_NODE_ENTRY",
+      "kind": "dialogue",
+      "next": "BP_A4_NODE_PREPARE",
+      "dialogueId": "BP_D4_opening",
+      "requiresSafeStationary": true,
+      "skipSummary": "Оснивање установе и нова зграда имају различите датуме. Празан четврти слот означава непознато."
+    },
+    {
+      "id": "BP_A4_NODE_ARRIVAL",
+      "kind": "task",
+      "next": "BP_A4_NODE_ENTRY",
+      "taskId": "BP_A4_ARRIVE"
+    },
+    {
+      "id": "BP_A4_NODE_PREPARE",
+      "kind": "dialogue",
+      "next": "BP_A4_NODE_EXPLORE",
+      "dialogueId": "BP_D4_puzzle",
+      "skipSummary": "Оснивање установе и нова зграда имају различите датуме. Празан четврти слот означава непознато."
+    },
+    {
+      "id": "BP_A4_NODE_EXPLORE",
+      "kind": "task",
+      "next": "BP_A4_NODE_QUIZ",
+      "taskId": "BP_A4_EXPLORE"
+    },
+    {
+      "id": "BP_A4_NODE_QUIZ",
+      "kind": "task",
+      "next": "BP_A4_NODE_POST",
+      "taskId": "BP_A4_QUIZ"
+    },
+    {
+      "id": "BP_A4_NODE_POST",
+      "kind": "dialogue",
+      "next": "BP_A4_NODE_CLOSE",
+      "dialogueId": "BP_D4_reveal",
+      "skipSummary": "Оснивање установе и нова зграда имају различите датуме. Празан четврти слот означава непознато."
+    },
+    {
+      "id": "BP_A4_NODE_CLOSE",
+      "kind": "dialogue",
+      "next": "BP_A4_NODE_FINISH",
+      "dialogueId": "BP_D4_completion",
+      "skipSummary": "Оснивање установе и нова зграда имају различите датуме. Празан четврти слот означава непознато."
+    },
+    {
+      "id": "BP_A4_NODE_FINISH",
+      "kind": "mission_completion",
+      "next": null,
+      "requiresAllTaskIds": [
+        "BP_A4_ARRIVE",
+        "BP_A4_EXPLORE",
+        "BP_A4_QUIZ"
+      ],
+      "awardKey": "budapest-act-4:complete",
+      "collectibleId": "BP_RELIC_4",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-5"
+    }
+  ],
+  "taskOrder": [
+    "BP_A4_ARRIVE",
+    "BP_A4_EXPLORE",
+    "BP_A4_QUIZ"
+  ],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "skipWritesPlotSummary": true,
+    "transcriptAlwaysAvailable": true,
+    "completionWaitsForFlowFinish": true
+  },
+  "resumePolicy": "resume_current_node; do_not_replay_awards",
+  "optionalSceneIds": [],
+  "fallback": "2d_evidence_cards",
+  "status": "data_contract_candidate_not_runtime",
+  "launchPolicy": "unlock_after_trigger; start_only_on_user_continue; pause_during_travel"
+}

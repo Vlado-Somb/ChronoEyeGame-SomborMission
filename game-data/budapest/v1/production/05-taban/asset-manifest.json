@@ -1,0 +1,17 @@
+{
+  "missionId": "budapest-act-5",
+  "assetRegistry": "assets/index.json",
+  "assetIds": [
+    "BP_ART_5",
+    "BP_VOICE",
+    "BP_SFX",
+    "BP_MODEL_CHURCH",
+    "BP_PHOTO_TABAN"
+  ],
+  "textAssets": [
+    "dialogues/act-5.json",
+    "missions/act-5.json"
+  ],
+  "missingAssetsDoNotBlockTextReview": true,
+  "publicArReleaseBlocked": true
+}

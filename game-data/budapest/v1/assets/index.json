@@ -1,0 +1,106 @@
+{
+  "assets": [
+    {
+      "id": "BP_ART_0",
+      "type": "svg",
+      "path": "assets/act-0-motif.svg",
+      "status": "created_concept",
+      "rights": "Original project graphic created for this package",
+      "purpose": "Симболички мотив; није историјски цртеж ни завршен storyboard."
+    },
+    {
+      "id": "BP_ART_1",
+      "type": "svg",
+      "path": "assets/act-1-motif.svg",
+      "status": "created_concept",
+      "rights": "Original project graphic created for this package",
+      "purpose": "Симболички мотив; није историјски цртеж ни завршен storyboard."
+    },
+    {
+      "id": "BP_ART_2",
+      "type": "svg",
+      "path": "assets/act-2-motif.svg",
+      "status": "created_concept",
+      "rights": "Original project graphic created for this package",
+      "purpose": "Симболички мотив; није историјски цртеж ни завршен storyboard."
+    },
+    {
+      "id": "BP_ART_3",
+      "type": "svg",
+      "path": "assets/act-3-motif.svg",
+      "status": "created_concept",
+      "rights": "Original project graphic created for this package",
+      "purpose": "Симболички мотив; није историјски цртеж ни завршен storyboard."
+    },
+    {
+      "id": "BP_ART_4",
+      "type": "svg",
+      "path": "assets/act-4-motif.svg",
+      "status": "created_concept",
+      "rights": "Original project graphic created for this package",
+      "purpose": "Симболички мотив; није историјски цртеж ни завршен storyboard."
+    },
+    {
+      "id": "BP_ART_5",
+      "type": "svg",
+      "path": "assets/act-5-motif.svg",
+      "status": "created_concept",
+      "rights": "Original project graphic created for this package",
+      "purpose": "Симболички мотив; није историјски цртеж ни завршен storyboard."
+    },
+    {
+      "id": "BP_MODEL_CHURCH",
+      "type": "glb",
+      "path": null,
+      "legacyRepositoryPath": "Assets/Model/Cathedral.FBX",
+      "legacyBlobSha": "9ca3b6951cf1c4a014fa9b3e28e4e13a021aa1b5",
+      "status": "integration_pending",
+      "identityStatus": "candidate_not_visually_verified_as_taban",
+      "rights": "owner_and_license_review_required",
+      "requiredWork": [
+        "inspect_geometry_against_user_reference",
+        "confirm_scale_orientation_period",
+        "export_glb_lods",
+        "label_hypothetical_geometry"
+      ]
+    },
+    {
+      "id": "BP_MODEL_TESLA",
+      "type": "glb",
+      "path": null,
+      "legacyRepositoryPath": "Assets/MATERIJALI/Likovi 3D  FBX models/Nikola Tesla.fbx",
+      "status": "integration_pending",
+      "rights": "owner_and_license_review_required"
+    },
+    {
+      "id": "BP_MODEL_DUCIC",
+      "type": "glb",
+      "path": null,
+      "legacyRepositoryPath": "Assets/MATERIJALI/Likovi 3D  FBX models/jovan_ducic_ghost.fbx",
+      "status": "integration_pending",
+      "rights": "owner_and_license_review_required"
+    },
+    {
+      "id": "BP_PHOTO_TABAN",
+      "type": "webp",
+      "path": null,
+      "status": "planned_not_created",
+      "sourceId": "SRC_USER_PHOTO",
+      "rights": "reference_only_public_redistribution_unverified"
+    },
+    {
+      "id": "BP_VOICE",
+      "type": "ogg",
+      "path": null,
+      "status": "script_ready_audio_pending",
+      "rights": "commission_original_performances_no_authentic_voice_claim"
+    },
+    {
+      "id": "BP_SFX",
+      "type": "ogg",
+      "path": null,
+      "status": "planned_not_created",
+      "rights": "original_or_licensed_production_required"
+    }
+  ]
+}

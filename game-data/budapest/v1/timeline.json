@@ -1,0 +1,40 @@
+{
+  "blocks": [
+    {
+      "id": "BP_A0_BLOCK",
+      "missionId": "budapest-act-0",
+      "flowPath": "production/00-signal/scene-flow.json",
+      "entryNodeId": "BP_A0_NODE_ENTRY"
+    },
+    {
+      "id": "BP_A1_BLOCK",
+      "missionId": "budapest-act-1",
+      "flowPath": "production/01-embassy/scene-flow.json",
+      "entryNodeId": "BP_A1_NODE_ARRIVAL"
+    },
+    {
+      "id": "BP_A2_BLOCK",
+      "missionId": "budapest-act-2",
+      "flowPath": "production/02-heroes/scene-flow.json",
+      "entryNodeId": "BP_A2_NODE_ARRIVAL"
+    },
+    {
+      "id": "BP_A3_BLOCK",
+      "missionId": "budapest-act-3",
+      "flowPath": "production/03-central/scene-flow.json",
+      "entryNodeId": "BP_A3_NODE_ARRIVAL"
+    },
+    {
+      "id": "BP_A4_BLOCK",
+      "missionId": "budapest-act-4",
+      "flowPath": "production/04-tekelijanum/scene-flow.json",
+      "entryNodeId": "BP_A4_NODE_ARRIVAL"
+    },
+    {
+      "id": "BP_A5_BLOCK",
+      "missionId": "budapest-act-5",
+      "flowPath": "production/05-taban/scene-flow.json",
+      "entryNodeId": "BP_A5_NODE_ARRIVAL"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "hints": [
+    {
+      "id": "BP_A0_H1",
+      "taskId": "BP_A0_EXPLORE",
+      "tier": 1,
+      "text": "Погледај исти део обе карте.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": 60
+    },
+    {
+      "id": "BP_A0_H2",
+      "taskId": "BP_A0_EXPLORE",
+      "tier": 2,
+      "text": "На једној је силуета, на другој празно место.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    },
+    {
+      "id": "BP_A0_H3",
+      "taskId": "BP_A0_EXPLORE",
+      "tier": 3,
+      "text": "Сачувај обе картице; не проглашавај ниједну истинитом само по изгледу.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    },
+    {
+      "id": "BP_A1_H1",
+      "taskId": "BP_A1_EXPLORE",
+      "tier": 1,
+      "text": "Погледај полеђину обе картице.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": 60
+    },
+    {
+      "id": "BP_A1_H2",
+      "taskId": "BP_A1_EXPLORE",
+      "tier": 2,
+      "text": "Једна наводи одакле је преузета; друга има само потпис.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    },
+    {
+      "id": "BP_A1_H3",
+      "taskId": "BP_A1_EXPLORE",
+      "tier": 3,
+      "text": "Изабери card_with_provenance. Упореди адресу са званичном контакт-картицом.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    },
+    {
+      "id": "BP_A2_H1",
+      "taskId": "BP_A2_EXPLORE",
+      "tier": 1,
+      "text": "На свакој картици отвори ознаку порекла.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": 60
+    },
+    {
+      "id": "BP_A2_H2",
+      "taskId": "BP_A2_EXPLORE",
+      "tier": 2,
+      "text": "Холограм не постаје историјска чињеница зато што стоји поред споменика.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    },
+    {
+      "id": "BP_A2_H3",
+      "taskId": "BP_A2_EXPLORE",
+      "tier": 3,
+      "text": "Повежи трг са стварним местом, Теслу са драматизацијом, затворени круг са непотврђеним.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    },
+    {
+      "id": "BP_A3_H1",
+      "taskId": "BP_A3_EXPLORE",
+      "tier": 1,
+      "text": "Не бирај глас ком више верујеш; отвори извор.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": 60
+    },
+    {
+      "id": "BP_A3_H2",
+      "taskId": "BP_A3_EXPLORE",
+      "tier": 2,
+      "text": "Теслин запис и историјат кафеа разликују се за једну годину.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    },
+    {
+      "id": "BP_A3_H3",
+      "taskId": "BP_A3_EXPLORE",
+      "tier": 3,
+      "text": "1887 је година из извора. Сачувај 1886 као одбачену верзију, уз исправку.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    },
+    {
+      "id": "BP_A4_H1",
+      "taskId": "BP_A4_EXPLORE",
+      "tier": 1,
+      "text": "Прочитај именицу поред сваког датума.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": 60
+    },
+    {
+      "id": "BP_A4_H2",
+      "taskId": "BP_A4_EXPLORE",
+      "tier": 2,
+      "text": "Установа може бити старија од зграде у којој се сада налази.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    },
+    {
+      "id": "BP_A4_H3",
+      "taskId": "BP_A4_EXPLORE",
+      "tier": 3,
+      "text": "1838 → установа; 1907–1908 → зграда; 1907 → рељеф полагања камена темељца.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    },
+    {
+      "id": "BP_A5_H1",
+      "taskId": "BP_A5_EXPLORE",
+      "tier": 1,
+      "text": "Провери који део фотографија заиста показује.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": 60
+    },
+    {
+      "id": "BP_A5_H2",
+      "taskId": "BP_A5_EXPLORE",
+      "tier": 2,
+      "text": "Оно што је изван кадра није потврђено само зато што модел изгледа складно.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    },
+    {
+      "id": "BP_A5_H3",
+      "taskId": "BP_A5_EXPLORE",
+      "tier": 3,
+      "text": "Предњу видљиву страну означи као поткрепљену сликом, скривену као непотврђену, звук као ауторску допуну.",
+      "cost": 0,
+      "availability": "on_request",
+      "autoOfferAfterIdleSeconds": null
+    }
+  ]
+}

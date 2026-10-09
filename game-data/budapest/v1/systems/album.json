@@ -1,0 +1,33 @@
+{
+  "id": "BP_ALBUM",
+  "title": "Досије отвореног града",
+  "button": "Мој досије",
+  "alwaysAvailable": true,
+  "modes": [
+    "2d",
+    "ar"
+  ],
+  "sections": [
+    "Трагови",
+    "Исправке",
+    "Извори",
+    "Отворена питања"
+  ],
+  "itemIds": [
+    "BP_RELIC_0",
+    "BP_RELIC_1",
+    "BP_RELIC_2",
+    "BP_RELIC_3",
+    "BP_RELIC_4",
+    "BP_RELIC_5"
+  ],
+  "cardFields": [
+    "title",
+    "storyByte",
+    "sourceIds",
+    "firstDiscoveredAt",
+    "locked",
+    "scoring"
+  ],
+  "privateNote": "optional_device_local_never_in_public_git"
+}

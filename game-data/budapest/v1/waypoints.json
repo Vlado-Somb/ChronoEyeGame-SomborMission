@@ -1,0 +1,185 @@
+{
+  "crs": "WGS84",
+  "waypoints": [
+    {
+      "id": "BP_START",
+      "name": "Почетак са било ког безбедног места",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "not_applicable",
+      "fieldVerified": false,
+      "navigationEnabled": false,
+      "zones": [
+        {
+          "zone": 1,
+          "radiusMeters": 90,
+          "confirmSeconds": 2
+        },
+        {
+          "zone": 2,
+          "radiusMeters": 35,
+          "confirmSeconds": 3
+        },
+        {
+          "zone": 3,
+          "radiusMeters": 25,
+          "confirmSeconds": 3
+        }
+      ],
+      "zoneStatus": "proposed_field_test_required",
+      "arAnchor": null,
+      "safeStandingPoint": null,
+      "arrivalFallback": "explicit_manual_confirmation_logged_as_manual_not_gps"
+    },
+    {
+      "id": "BP_EMBASSY",
+      "name": "Амбасада Републике Србије",
+      "latitude": 47.51396155360761,
+      "longitude": 19.077311677113567,
+      "coordinateStatus": "legacy_unity_candidate",
+      "fieldVerified": false,
+      "navigationEnabled": false,
+      "zones": [
+        {
+          "zone": 1,
+          "radiusMeters": 90,
+          "confirmSeconds": 2
+        },
+        {
+          "zone": 2,
+          "radiusMeters": 35,
+          "confirmSeconds": 3
+        },
+        {
+          "zone": 3,
+          "radiusMeters": 25,
+          "confirmSeconds": 3
+        }
+      ],
+      "zoneStatus": "proposed_field_test_required",
+      "arAnchor": null,
+      "safeStandingPoint": null,
+      "arrivalFallback": "explicit_manual_confirmation_logged_as_manual_not_gps"
+    },
+    {
+      "id": "BP_HEROES",
+      "name": "Hősök tere",
+      "latitude": 47.5149,
+      "longitude": 19.0779,
+      "coordinateStatus": "approximate_design_candidate",
+      "fieldVerified": false,
+      "navigationEnabled": false,
+      "zones": [
+        {
+          "zone": 1,
+          "radiusMeters": 90,
+          "confirmSeconds": 2
+        },
+        {
+          "zone": 2,
+          "radiusMeters": 35,
+          "confirmSeconds": 3
+        },
+        {
+          "zone": 3,
+          "radiusMeters": 25,
+          "confirmSeconds": 3
+        }
+      ],
+      "zoneStatus": "proposed_field_test_required",
+      "arAnchor": null,
+      "safeStandingPoint": null,
+      "arrivalFallback": "explicit_manual_confirmation_logged_as_manual_not_gps"
+    },
+    {
+      "id": "BP_CENTRAL",
+      "name": "Centrál, Károlyi utca 9",
+      "latitude": 47.4916,
+      "longitude": 19.0567,
+      "coordinateStatus": "approximate_design_candidate",
+      "fieldVerified": false,
+      "navigationEnabled": false,
+      "zones": [
+        {
+          "zone": 1,
+          "radiusMeters": 90,
+          "confirmSeconds": 2
+        },
+        {
+          "zone": 2,
+          "radiusMeters": 35,
+          "confirmSeconds": 3
+        },
+        {
+          "zone": 3,
+          "radiusMeters": 25,
+          "confirmSeconds": 3
+        }
+      ],
+      "zoneStatus": "proposed_field_test_required",
+      "arAnchor": null,
+      "safeStandingPoint": null,
+      "arrivalFallback": "explicit_manual_confirmation_logged_as_manual_not_gps"
+    },
+    {
+      "id": "BP_TEKELIJANUM",
+      "name": "Текелијанум, Veres Pálné 17–19",
+      "latitude": 47.4899,
+      "longitude": 19.0562,
+      "coordinateStatus": "approximate_design_candidate",
+      "fieldVerified": false,
+      "navigationEnabled": false,
+      "zones": [
+        {
+          "zone": 1,
+          "radiusMeters": 90,
+          "confirmSeconds": 2
+        },
+        {
+          "zone": 2,
+          "radiusMeters": 35,
+          "confirmSeconds": 3
+        },
+        {
+          "zone": 3,
+          "radiusMeters": 25,
+          "confirmSeconds": 3
+        }
+      ],
+      "zoneStatus": "proposed_field_test_required",
+      "arAnchor": null,
+      "safeStandingPoint": null,
+      "arrivalFallback": "explicit_manual_confirmation_logged_as_manual_not_gps"
+    },
+    {
+      "id": "BP_TABAN",
+      "name": "Табан — историјска парцела цркве",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "survey_required",
+      "fieldVerified": false,
+      "navigationEnabled": false,
+      "zones": [
+        {
+          "zone": 1,
+          "radiusMeters": 90,
+          "confirmSeconds": 2
+        },
+        {
+          "zone": 2,
+          "radiusMeters": 35,
+          "confirmSeconds": 3
+        },
+        {
+          "zone": 3,
+          "radiusMeters": 25,
+          "confirmSeconds": 3
+        }
+      ],
+      "zoneStatus": "proposed_field_test_required",
+      "arAnchor": null,
+      "safeStandingPoint": null,
+      "arrivalFallback": "explicit_manual_confirmation_logged_as_manual_not_gps"
+    }
+  ]
+}

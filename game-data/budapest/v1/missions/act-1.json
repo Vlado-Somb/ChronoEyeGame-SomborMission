@@ -1,0 +1,111 @@
+{
+  "id": "budapest-act-1",
+  "title": "Писмо без коверте",
+  "primaryWaypointId": "BP_EMBASSY",
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "actIndex": 1,
+  "prerequisiteMissionIds": [
+    "budapest-act-0"
+  ],
+  "tasks": [
+    {
+      "id": "BP_A1_ARRIVE",
+      "type": "gps",
+      "title": "Стигни и стани",
+      "instruction": "Потврди безбедно место у јавном простору; ако GPS није употребљив, изабери ручну потврду.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "gps": {
+        "waypointId": "BP_EMBASSY",
+        "requiredZone": 2
+      },
+      "arrivalMode": "gps_or_explicit_manual",
+      "waypointId": "BP_EMBASSY"
+    },
+    {
+      "id": "BP_A1_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Писмо без коверте",
+      "instruction": "Отвори две дигиталне архивске картице и изабери ону са видљивим ланцем порекла. Потпис сам није довољан.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "ar": {
+        "interaction": "inspect_provenance",
+        "activationAfterTask": "BP_A1_ARRIVE",
+        "assetIds": [
+          "BP_ART_1"
+        ],
+        "mode": "guided_photo_overlay",
+        "successCondition": {
+          "allEvidenceMappings": [
+            "card_with_provenance"
+          ]
+        },
+        "automaticRecognition": false
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "card_with_provenance"
+          ]
+        }
+      },
+      "implementationStatus": "editorially_active_assets_pending",
+      "evidenceSetId": "BP_EVIDENCE_1"
+    },
+    {
+      "id": "BP_A1_QUIZ",
+      "type": "multiple_choice",
+      "title": "Провери закључак",
+      "instruction": "Користи досије и извор наведен уз картицу.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Контакт Амбасаде Републике Србије потврђује идентитет станице. То не доказује измишљену причу о тајном кругу.",
+        "delaySeconds": 0
+      },
+      "question": {
+        "text": "Амбасада које државе је на овој станици, према званичној контакт-картици?",
+        "choices": [
+          "Републике Србије",
+          "Румуније",
+          "Бугарске"
+        ],
+        "correctIndex": 0,
+        "wrongAnswerFeedback": "Погледај историјску картицу и њен извор. Можеш поново одговорити; хинт је бесплатан."
+      },
+      "sources": [
+        "SRC_EMBASSY"
+      ],
+      "historyCardId": "BP_HISTORY_1"
+    }
+  ],
+  "narrative": {
+    "setting": "Писмо без коверте",
+    "historyParagraphs": [
+      "Станица је Амбасада Републике Србије, Dózsa György út 92. Игра користи јавни прилаз; Дучићев ехо је драматизација."
+    ],
+    "mentorOpening": "BP_D1_opening",
+    "mentorCompletion": "BP_D1_completion",
+    "educationalObjective": "Препознати порекло записа и стварни идентитет локације.",
+    "sources": [
+      "SRC_EMBASSY"
+    ]
+  },
+  "runtimeStatus": "not_integrated"
+}

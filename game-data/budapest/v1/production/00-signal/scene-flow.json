@@ -1,0 +1,83 @@
+{
+  "id": "BP_A0_FLOW",
+  "missionId": "budapest-act-0",
+  "entryNodeId": "BP_A0_NODE_ENTRY",
+  "nodes": [
+    {
+      "id": "BP_A0_NODE_ENTRY",
+      "kind": "dialogue",
+      "next": "BP_A0_NODE_ARRIVAL",
+      "dialogueId": "BP_D0_opening",
+      "requiresSafeStationary": true,
+      "skipSummary": "Сачувај две различите карте; непознат сигнал оставља четврто место празним."
+    },
+    {
+      "id": "BP_A0_NODE_ARRIVAL",
+      "kind": "task",
+      "next": "BP_A0_NODE_PREPARE",
+      "taskId": "BP_A0_START"
+    },
+    {
+      "id": "BP_A0_NODE_PREPARE",
+      "kind": "instruction",
+      "next": "BP_A0_NODE_EXPLORE",
+      "text": "Упореди две ауторске карте. Означи да се силуета појављује само на једној; сачувај обе верзије."
+    },
+    {
+      "id": "BP_A0_NODE_EXPLORE",
+      "kind": "task",
+      "next": "BP_A0_NODE_QUIZ",
+      "taskId": "BP_A0_EXPLORE"
+    },
+    {
+      "id": "BP_A0_NODE_QUIZ",
+      "kind": "task",
+      "next": "BP_A0_NODE_POST",
+      "taskId": "BP_A0_QUIZ"
+    },
+    {
+      "id": "BP_A0_NODE_POST",
+      "kind": "checkpoint",
+      "next": "BP_A0_NODE_CLOSE"
+    },
+    {
+      "id": "BP_A0_NODE_CLOSE",
+      "kind": "dialogue",
+      "next": "BP_A0_NODE_FINISH",
+      "dialogueId": "BP_D0_completion",
+      "skipSummary": "Сачувај две различите карте; непознат сигнал оставља четврто место празним."
+    },
+    {
+      "id": "BP_A0_NODE_FINISH",
+      "kind": "mission_completion",
+      "next": null,
+      "requiresAllTaskIds": [
+        "BP_A0_START",
+        "BP_A0_EXPLORE",
+        "BP_A0_QUIZ"
+      ],
+      "awardKey": "budapest-act-0:complete",
+      "collectibleId": "BP_RELIC_0",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-1"
+    }
+  ],
+  "taskOrder": [
+    "BP_A0_START",
+    "BP_A0_EXPLORE",
+    "BP_A0_QUIZ"
+  ],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "skipWritesPlotSummary": true,
+    "transcriptAlwaysAvailable": true,
+    "completionWaitsForFlowFinish": true
+  },
+  "resumePolicy": "resume_current_node; do_not_replay_awards",
+  "optionalSceneIds": [
+    "BP_D0_refusal"
+  ],
+  "fallback": "2d_evidence_cards",
+  "status": "data_contract_candidate_not_runtime",
+  "launchPolicy": "unlock_after_trigger; start_only_on_user_continue; pause_during_travel"
+}

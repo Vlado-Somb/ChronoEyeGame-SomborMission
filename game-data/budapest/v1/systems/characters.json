@@ -1,0 +1,304 @@
+{
+  "characters": [
+    {
+      "id": "BP_CH_SYSTEM",
+      "name": "Систем",
+      "role": "interface",
+      "availableIn": [
+        "budapest-act-0",
+        "budapest-act-2",
+        "budapest-act-5"
+      ],
+      "appearance": {
+        "trigger": "scripted_dialogue_or_manual_recall"
+      },
+      "modes": [
+        "text",
+        "2d",
+        "ar_when_asset_ready"
+      ],
+      "modelAsset": null,
+      "modelStatus": "planned_not_created",
+      "animationStates": [
+        "appear",
+        "idle",
+        "speak",
+        "point",
+        "vanish"
+      ],
+      "captionsRequired": true,
+      "safety": "stationary_confirmed_surface_or_2d",
+      "historicalVoiceClaim": false
+    },
+    {
+      "id": "BP_CH_PLAYER",
+      "name": "Инспектор",
+      "role": "player",
+      "availableIn": [
+        "budapest-act-0",
+        "budapest-act-1",
+        "budapest-act-2",
+        "budapest-act-3",
+        "budapest-act-4",
+        "budapest-act-5"
+      ],
+      "appearance": {
+        "trigger": "scripted_dialogue_or_manual_recall"
+      },
+      "modes": [
+        "text",
+        "2d",
+        "ar_when_asset_ready"
+      ],
+      "modelAsset": null,
+      "modelStatus": "planned_not_created",
+      "animationStates": [
+        "appear",
+        "idle",
+        "speak",
+        "point",
+        "vanish"
+      ],
+      "captionsRequired": true,
+      "safety": "stationary_confirmed_surface_or_2d",
+      "historicalVoiceClaim": false
+    },
+    {
+      "id": "BP_CH_MIRA",
+      "name": "Мира",
+      "role": "fictional_archivist",
+      "availableIn": [
+        "budapest-act-0",
+        "budapest-act-1",
+        "budapest-act-2",
+        "budapest-act-3",
+        "budapest-act-4",
+        "budapest-act-5"
+      ],
+      "appearance": {
+        "trigger": "scripted_dialogue_or_manual_recall"
+      },
+      "modes": [
+        "text",
+        "2d",
+        "ar_when_asset_ready"
+      ],
+      "modelAsset": null,
+      "modelStatus": "planned_not_created",
+      "animationStates": [
+        "appear",
+        "idle",
+        "speak",
+        "point",
+        "vanish"
+      ],
+      "captionsRequired": true,
+      "safety": "stationary_confirmed_surface_or_2d",
+      "historicalVoiceClaim": false
+    },
+    {
+      "id": "BP_CH_UNKNOWN",
+      "name": "Непознат сигнал",
+      "role": "fictional_signal",
+      "availableIn": [
+        "budapest-act-0",
+        "budapest-act-1"
+      ],
+      "appearance": {
+        "trigger": "scripted_dialogue_or_manual_recall"
+      },
+      "modes": [
+        "text",
+        "2d",
+        "ar_when_asset_ready"
+      ],
+      "modelAsset": null,
+      "modelStatus": "planned_not_created",
+      "animationStates": [
+        "appear",
+        "idle",
+        "speak",
+        "point",
+        "vanish"
+      ],
+      "captionsRequired": true,
+      "safety": "stationary_confirmed_surface_or_2d",
+      "historicalVoiceClaim": false
+    },
+    {
+      "id": "BP_CH_TESLA",
+      "name": "Никола Тесла",
+      "role": "dramatized_mentor",
+      "availableIn": [
+        "budapest-act-1",
+        "budapest-act-2",
+        "budapest-act-3",
+        "budapest-act-4",
+        "budapest-act-5"
+      ],
+      "appearance": {
+        "trigger": "scripted_dialogue_or_manual_recall"
+      },
+      "modes": [
+        "text",
+        "2d",
+        "ar_when_asset_ready"
+      ],
+      "modelAsset": "BP_MODEL_TESLA",
+      "modelStatus": "integration_pending",
+      "animationStates": [
+        "appear",
+        "idle",
+        "speak",
+        "point",
+        "vanish"
+      ],
+      "captionsRequired": true,
+      "safety": "stationary_confirmed_surface_or_2d",
+      "historicalVoiceClaim": false
+    },
+    {
+      "id": "BP_CH_DUCIC",
+      "name": "Јован Дучић",
+      "role": "dramatized_echo",
+      "availableIn": [
+        "budapest-act-1"
+      ],
+      "appearance": {
+        "trigger": "scripted_dialogue_or_manual_recall"
+      },
+      "modes": [
+        "text",
+        "2d",
+        "ar_when_asset_ready"
+      ],
+      "modelAsset": "BP_MODEL_DUCIC",
+      "modelStatus": "integration_pending",
+      "animationStates": [
+        "appear",
+        "idle",
+        "speak",
+        "point",
+        "vanish"
+      ],
+      "captionsRequired": true,
+      "safety": "stationary_confirmed_surface_or_2d",
+      "historicalVoiceClaim": false
+    },
+    {
+      "id": "BP_CH_AUREL",
+      "name": "Аурел Варга",
+      "role": "fictional_antagonist",
+      "availableIn": [
+        "budapest-act-2",
+        "budapest-act-3",
+        "budapest-act-4",
+        "budapest-act-5"
+      ],
+      "appearance": {
+        "trigger": "scripted_dialogue_or_manual_recall"
+      },
+      "modes": [
+        "text",
+        "2d",
+        "ar_when_asset_ready"
+      ],
+      "modelAsset": null,
+      "modelStatus": "planned_not_created",
+      "animationStates": [
+        "appear",
+        "idle",
+        "speak",
+        "point",
+        "vanish"
+      ],
+      "captionsRequired": true,
+      "safety": "stationary_confirmed_surface_or_2d",
+      "historicalVoiceClaim": false
+    },
+    {
+      "id": "BP_CH_ILO",
+      "name": "Ило",
+      "role": "fictional_cafe_echo",
+      "availableIn": [
+        "budapest-act-3"
+      ],
+      "appearance": {
+        "trigger": "scripted_dialogue_or_manual_recall"
+      },
+      "modes": [
+        "text",
+        "2d",
+        "ar_when_asset_ready"
+      ],
+      "modelAsset": null,
+      "modelStatus": "planned_not_created",
+      "animationStates": [
+        "appear",
+        "idle",
+        "speak",
+        "point",
+        "vanish"
+      ],
+      "captionsRequired": true,
+      "safety": "stationary_confirmed_surface_or_2d",
+      "historicalVoiceClaim": false
+    },
+    {
+      "id": "BP_CH_STUDENT",
+      "name": "Студентски ехо",
+      "role": "fictional_composite",
+      "availableIn": [
+        "budapest-act-4"
+      ],
+      "appearance": {
+        "trigger": "scripted_dialogue_or_manual_recall"
+      },
+      "modes": [
+        "text",
+        "2d",
+        "ar_when_asset_ready"
+      ],
+      "modelAsset": null,
+      "modelStatus": "planned_not_created",
+      "animationStates": [
+        "appear",
+        "idle",
+        "speak",
+        "point",
+        "vanish"
+      ],
+      "captionsRequired": true,
+      "safety": "stationary_confirmed_surface_or_2d",
+      "historicalVoiceClaim": false
+    },
+    {
+      "id": "BP_CH_STEFAN",
+      "name": "Стефан Лазаревић",
+      "role": "optional_literary_echo",
+      "availableIn": [
+        "budapest-act-5"
+      ],
+      "appearance": {
+        "trigger": "scripted_dialogue_or_manual_recall"
+      },
+      "modes": [
+        "text",
+        "2d",
+        "ar_when_asset_ready"
+      ],
+      "modelAsset": null,
+      "modelStatus": "planned_not_created",
+      "animationStates": [
+        "appear",
+        "idle",
+        "speak",
+        "point",
+        "vanish"
+      ],
+      "captionsRequired": true,
+      "safety": "stationary_confirmed_surface_or_2d",
+      "historicalVoiceClaim": false
+    }
+  ]
+}

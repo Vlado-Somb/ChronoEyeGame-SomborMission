@@ -1,0 +1,32 @@
+{
+  "taskPoints": 10,
+  "missionCompletionPoints": 30,
+  "wrongQuizAnswerPoints": -2,
+  "scoreFloor": 0,
+  "hintsCost": 0,
+  "arFallbackScoreEqual": true,
+  "narrativeChoicePenalty": 0,
+  "relicBonusPoints": 0,
+  "idempotencyKey": "gameId:taskOrMissionId:awardType",
+  "replayAwards": false,
+  "requiredState": [
+    "completedTaskIds",
+    "completedMissionIds",
+    "firedTriggerIds",
+    "scoreAwardsByKey",
+    "unlockedCollectibleIds",
+    "currentFlowNodeId",
+    "storyFlags",
+    "savedAt",
+    "processedAttemptIds",
+    "evidenceSelections"
+  ],
+  "timers": {
+    "travel": "none",
+    "dialogue": "user_paced",
+    "hints": "offer_only"
+  },
+  "flowAuthority": "Only FINISH emits MISSION_COMPLETED; task completion alone cannot finish act",
+  "manualArrival": "allowed_and_logged",
+  "contentVersionMigration": "see DATA_CONTRACT.md"
+}

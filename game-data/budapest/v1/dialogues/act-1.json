@@ -1,0 +1,177 @@
+{
+  "id": "BP_DIALOGUE_1",
+  "language": "sr-Cyrl",
+  "scenes": [
+    {
+      "id": "BP_D1_opening",
+      "act": 1,
+      "title": "Писмо без коверте",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D1_opening_L01",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Станите где не ометате пролаз. Не тражимо улаз у Амбасаду. Тражимо улаз у причу.",
+          "subtitle": "Станите где не ометате пролаз. Не тражимо улаз у Амбасаду. Тражимо улаз у причу.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_opening_L02",
+          "speakerId": "BP_CH_DUCIC",
+          "text": "Писмо је стигло. Коверта, наравно, није. Без ње свако може да каже да га је послао.",
+          "subtitle": "Писмо је стигло. Коверта, наравно, није. Без ње свако може да каже да га је послао.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_opening_L03",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Ви сте Дучић?",
+          "subtitle": "Ви сте Дучић?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_opening_L04",
+          "speakerId": "BP_CH_DUCIC",
+          "text": "Лик који су начинили по сећању на њега. Разлика није мала. Запишите је.",
+          "subtitle": "Лик који су начинили по сећању на њега. Разлика није мала. Запишите је.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_opening_L05",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Овај ехо припада нашем архивском позоришту. Његове реплике нису историјски цитати.",
+          "subtitle": "Овај ехо припада нашем архивском позоришту. Његове реплике нису историјски цитати.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_opening_L06",
+          "speakerId": "BP_CH_DUCIC",
+          "text": "А сада, инспекторе: коме верујете — лепој реченици или трагу који можете да пратите?",
+          "subtitle": "А сада, инспекторе: коме верујете — лепој реченици или трагу који можете да пратите?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_opening_L07",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Волео бих да не морам да бирам.",
+          "subtitle": "Волео бих да не морам да бирам.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_opening_L08",
+          "speakerId": "BP_CH_DUCIC",
+          "text": "Одлично. Тражите и једно и друго.",
+          "subtitle": "Одлично. Тражите и једно и друго.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D1_puzzle",
+      "act": 1,
+      "title": "Маргина",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D1_puzzle_L01",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Две картице садрже исту поруку. Једна има забележено порекло. Друга има само потпис.",
+          "subtitle": "Две картице садрже исту поруку. Једна има забележено порекло. Друга има само потпис.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_puzzle_L02",
+          "speakerId": "BP_CH_DUCIC",
+          "text": "Леп рукопис уме да заведе. Зато постоје маргине.",
+          "subtitle": "Леп рукопис уме да заведе. Зато постоје маргине.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_puzzle_L03",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Потпис може да се копира.",
+          "subtitle": "Потпис може да се копира.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_puzzle_L04",
+          "speakerId": "BP_CH_DUCIC",
+          "text": "Може и читава песма. Оно што не треба копирати је туђа сигурност.",
+          "subtitle": "Може и читава песма. Оно што не треба копирати је туђа сигурност.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_puzzle_L05",
+          "speakerId": "BP_CH_UNKNOWN",
+          "text": "Три… остави четврто…",
+          "subtitle": "Три… остави четврто…",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_puzzle_L06",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Опет тај размак. Сачуваћу и њега, мада ме програм упорно пита да га исправи.",
+          "subtitle": "Опет тај размак. Сачуваћу и њега, мада ме програм упорно пита да га исправи.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D1_completion",
+      "act": 1,
+      "title": "Први струјни круг",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D1_completion_L01",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Чујете ли ме?",
+          "subtitle": "Чујете ли ме?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_completion_L02",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Као радио у тунелу.",
+          "subtitle": "Као радио у тунелу.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_completion_L03",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Онда бар знамо да нисам сувише убедљив.",
+          "subtitle": "Онда бар знамо да нисам сувише убедљив.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_completion_L04",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Порекло картице је сачувано. Имамо прву везу.",
+          "subtitle": "Порекло картице је сачувано. Имамо прву везу.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_completion_L05",
+          "speakerId": "BP_CH_DUCIC",
+          "text": "Понесите маргину. Главни текст већ сви носе.",
+          "subtitle": "Понесите маргину. Главни текст већ сви носе.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_completion_L06",
+          "speakerId": "BP_CH_TESLA",
+          "text": "На Тргу хероја канал је шири. Тамо ћу моћи да вам покажем шта се дешава.",
+          "subtitle": "На Тргу хероја канал је шири. Тамо ћу моћи да вам покажем шта се дешава.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D1_completion_L07",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Кад кренете, спустите телефон. Сигнал ће сачекати.",
+          "subtitle": "Кад кренете, спустите телефон. Сигнал ће сачекати.",
+          "voiceAssetId": null
+        }
+      ]
+    }
+  ]
+}
