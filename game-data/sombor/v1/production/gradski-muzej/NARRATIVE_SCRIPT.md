@@ -8,3 +8,6 @@ Four original symbolic cards represent archaeology and coins, ethnology, history
 
 ## Act III: The empty cabinet
 All labels return, but the central cabinet stays dark. Vlada: 'A collection is more than objects. We must also preserve where each story came from.' Three distinct dates illuminate: 1883 society, 1887 room in Županija, 1945 museum in its present home.
+
+## Act IV: Return of light
+The player names Gradski muzej Sombor, then chooses 1945 for the present building. Vlada awards the symbolic lantern relic, not a historical artifact. The Herbarijum card explains the museum's four collections.
