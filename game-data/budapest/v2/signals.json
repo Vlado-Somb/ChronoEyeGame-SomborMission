@@ -1,0 +1,68 @@
+{
+  "signals": [
+    {
+      "id": "BP2_SIGNAL_THREE_OPEN",
+      "pattern": "three_pulses_and_open_margin",
+      "isHistoricalCode": false,
+      "audioAssetId": "BP2_SFX_CAFE",
+      "textEquivalent": "Три кратка импулса; остаје отворено место.",
+      "instances": [
+        {
+          "sceneId": "BP2_D0_fracture",
+          "purpose": "first_mystery"
+        },
+        {
+          "sceneId": "BP2_D1_interruption",
+          "purpose": "tesla_faint"
+        },
+        {
+          "sceneId": "BP2_D2_aftermath",
+          "purpose": "apparent_victory"
+        },
+        {
+          "sceneId": "BP2_D4_rupture",
+          "purpose": "tesla_loss"
+        },
+        {
+          "sceneId": "BP2_D5_unlocking",
+          "purpose": "restore"
+        },
+        {
+          "sceneId": "BP2_D6_timeloop",
+          "purpose": "loop_payoff"
+        }
+      ],
+      "captionRequired": true
+    },
+    {
+      "id": "BP2_SIGNAL_GESTURE",
+      "pattern": "thumb_index_middle_fingertips_together",
+      "isHistoricalCode": false,
+      "audioAssetId": null,
+      "textEquivalent": "Палац, кажипрст и средњи прст спојени у један знак.",
+      "instances": [
+        {
+          "sceneId": "BP2_D1_departure",
+          "purpose": "circle_three_fictional_recognition"
+        },
+        {
+          "sceneId": "BP2_D4_mihailo",
+          "purpose": "circle_three_fictional_recognition"
+        },
+        {
+          "sceneId": "BP2_D5_stag",
+          "purpose": "circle_three_fictional_recognition"
+        },
+        {
+          "sceneId": "BP2_D5_return_place",
+          "purpose": "circle_three_fictional_recognition"
+        },
+        {
+          "sceneId": "BP2_D6_epilogue",
+          "purpose": "circle_three_fictional_recognition"
+        }
+      ],
+      "captionRequired": true
+    }
+  ]
+}
