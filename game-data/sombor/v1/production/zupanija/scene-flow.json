@@ -1,0 +1,102 @@
+{
+  "packageId": "zup-prod-06",
+  "missionId": "sombor-zup",
+  "gameplayOrder": [
+    "ZUP-01",
+    "ZUP-AR-01",
+    "ZUP-02",
+    "ZUP-03"
+  ],
+  "events": [
+    {
+      "id": "arrival",
+      "trigger": "SO_ŽUP zone2, 2s, stationary, safe confirmation",
+      "action": "complete ZUP-01; summon profesor-vlada"
+    },
+    {
+      "id": "ar_or_2d",
+      "trigger": "ZUP-01 complete",
+      "action": "show three cards and three role slots",
+      "expectedMapping": {
+        "event": "battle_1697",
+        "artwork": "painting_1896",
+        "installation": "hall_1898"
+      },
+      "ar": "manual_surface_or_camera_relative",
+      "fallback": "2d_three_clocks_role_mapping"
+    },
+    {
+      "id": "ar_success",
+      "trigger": "all_slots_match",
+      "action": "AR_INTERACTION_COMPLETED once for ZUP-AR-01",
+      "onMistake": "hint_retry_no_penalty"
+    },
+    {
+      "id": "painting_quiz",
+      "trigger": "ZUP-AR-01 complete",
+      "action": "show ZUP-02",
+      "expectedAnswer": "Bitka kod Sente"
+    },
+    {
+      "id": "memory_quiz",
+      "trigger": "ZUP-02 accepted",
+      "action": "show respectful context and ZUP-03",
+      "correctIndex": 0
+    },
+    {
+      "id": "finale",
+      "trigger": "ZUP-03 accepted",
+      "action": "award mission once; unlock zup-three-times-key-relic",
+      "awardKey": "mission:sombor-zup:completed"
+    },
+    {
+      "id": "gold",
+      "trigger": "optional safe discovery",
+      "action": "unlock two sourced seals once per spawn",
+      "collectibleIds": [
+        "gold-zup-001",
+        "gold-zup-002"
+      ]
+    },
+    {
+      "id": "album",
+      "trigger": "Moja zbirka",
+      "action": "open Herbarijum",
+      "cardId": "zup-three-times-key-relic"
+    }
+  ],
+  "fallback": {
+    "mode": "2d_three_clocks_role_mapping",
+    "sameEducationalObjective": true,
+    "sameScoring": true,
+    "identicalCardIds": [
+      "battle_1697",
+      "painting_1896",
+      "hall_1898"
+    ],
+    "identicalExpectedMapping": {
+      "event": "battle_1697",
+      "artwork": "painting_1896",
+      "installation": "hall_1898"
+    }
+  },
+  "scoring": {
+    "taskPointsEach": 10,
+    "missionBonus": 30,
+    "totalMainBeforeWrongAnswers": 70,
+    "quizWrongAnswerPenalty": -2,
+    "arRetryPenalty": 0,
+    "relicExtraPoints": 0,
+    "goldPointsEach": 2,
+    "awardOnce": true
+  },
+  "safety": {
+    "fieldVerified": false,
+    "approachMeters": 66,
+    "noBuildingEntry": true,
+    "noRoadCrossing": true,
+    "noPaintingScan": true,
+    "stationaryRequired": true
+  },
+  "status": "editorial_ready_runtime_pending"
+}
