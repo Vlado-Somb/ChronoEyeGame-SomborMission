@@ -1,0 +1,98 @@
+{
+  "id": "budapest-act-3",
+  "title": "Столови који памте",
+  "actIndex": 3,
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "runtimeStatus": "not_integrated",
+  "primaryWaypointId": "BP_CENTRAL",
+  "intermediateWaypointIds": [],
+  "prerequisiteMissionIds": [
+    "budapest-act-2"
+  ],
+  "dialoguePath": "dialogues/act-3.json",
+  "evidenceSetId": "BP2_EVIDENCE_3",
+  "tasks": [
+    {
+      "id": "BP2_A3_ARRIVE",
+      "type": "gps",
+      "title": "Потврди безбедну станицу",
+      "instruction": "Ручно или провереним GPS-ом, без рада камере у ходу.",
+      "waypointId": "BP_CENTRAL",
+      "arrivalMode": "gps_or_explicit_manual",
+      "completion": {
+        "title": "Приступ потврђен"
+      }
+    },
+    {
+      "id": "BP2_A3_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Провера слојева",
+      "instruction": "Послушај разговоре и раздвој проверљив историјат од измишљеног дијалога и фалсификата.",
+      "ar": {
+        "activationAfterTask": "BP2_A3_ARRIVE",
+        "assetIds": [
+          "BP2_ART_3"
+        ],
+        "successCondition": {
+          "allEvidenceMappings": [
+            "opening_1887:sourced",
+            "agency_1886:manipulated",
+            "table_dialogue:dramatized"
+          ]
+        }
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "opening_1887:sourced",
+            "agency_1886:manipulated",
+            "table_dialogue:dramatized"
+          ]
+        }
+      },
+      "evidenceSetId": "BP2_EVIDENCE_3",
+      "completion": {
+        "title": "Докази раздвојени"
+      }
+    },
+    {
+      "id": "BP2_A3_QUIZ",
+      "type": "multiple_choice",
+      "title": "Питање из досијеа",
+      "instruction": "Не веруј аутоматски реконструисаном говору.",
+      "question": {
+        "text": "Када је отворен Centrál, према његовом историјату?",
+        "choices": [
+          "1886",
+          "1887",
+          "1908"
+        ],
+        "correctIndex": 1
+      },
+      "sources": [
+        "SRC_CENTRAL",
+        "SRC_USER_CORE"
+      ],
+      "completion": {
+        "title": "Проверено"
+      }
+    }
+  ],
+  "narrative": {
+    "mentorOpening": "BP2_D3_threshold",
+    "mentorCompletion": "BP2_D3_rupture",
+    "educationalObjective": "Послушај разговоре и раздвој проверљив историјат од измишљеног дијалога и фалсификата.",
+    "sources": [
+      "SRC_CENTRAL",
+      "SRC_USER_CORE"
+    ]
+  },
+  "progressPolicy": {
+    "namespace": "budapest-content-v2",
+    "v1AutoImport": false
+  }
+}
