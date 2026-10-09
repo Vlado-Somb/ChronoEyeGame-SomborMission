@@ -5,64 +5,173 @@
     "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/PŠM_SO_Mission.asset",
     "sourceBranch": "fix/sombor-resource-stabilization-20261008"
   },
-  "title": "MUZEJ PODUNAVSKIH ŠVABA",
+  "title": "MUZEJ PODUNAVSKIH ŠVABA — KOFER SEĆANJA",
   "primaryWaypointId": "SO_PŠM",
   "language": "sr-Latn",
-  "reviewStatus": "legacy_unreviewed",
+  "reviewStatus": "production_editorial_v1",
   "tasks": [
     {
       "id": "PSM-01",
       "type": "gps",
-      "title": "Most kultura i tradicije",
-      "instruction": "Pronađi lokaciju Muzeja Podunavskih Švaba.",
+      "title": "Palata koja pamti putovanja",
+      "instruction": "Pronađi Muzej podunavskih Švaba u Grašalkovićevoj palati. Ostani na bezbednoj pešačkoj površini; nije potrebno ulaziti u muzej.",
       "completion": {
-        "title": "Uspešno si pronašao Muzej Podunavskih Švaba",
-        "narrative": "Kad si se našao pred zgradom muzeja, seti se da ona čuva sećanja na zajednice koje su se nad Dunavom razvijale više od dva veka. Ovaj kutak Sombora svedoči o bogatom spoju nemačke i srpske tradicije.",
-        "delaySeconds": 6
+        "title": "Pronašao si palatu sećanja",
+        "narrative": "Ova palata bila je sedište komorske uprave i mesto povezano sa doseljavanjem u Bačku. Danas čuva uspomene podunavskih Nemaca i njihovih suseda.",
+        "delaySeconds": 4
       },
       "gps": {
         "waypointId": "SO_PŠM",
-        "requiredZone": 3
+        "requiredZone": 2,
+        "arrivalActivationZone": 2,
+        "fieldVerificationRequired": true
+      },
+      "legacyOriginal": {
+        "title": "Most kultura i tradicije",
+        "instruction": "Pronađi lokaciju Muzeja Podunavskih Švaba.",
+        "completion": {
+          "title": "Uspešno si pronašao Muzej Podunavskih Švaba",
+          "narrative": "Kad si se našao pred zgradom muzeja, seti se da ona čuva sećanja na zajednice koje su se nad Dunavom razvijale više od dva veka. Ovaj kutak Sombora svedoči o bogatom spoju nemačke i srpske tradicije.",
+          "delaySeconds": 6
+        },
+        "gps": {
+          "waypointId": "SO_PŠM",
+          "requiredZone": 3
+        }
+      }
+    },
+    {
+      "id": "PSM-AR-01",
+      "type": "ar_interaction",
+      "title": "Kofer sećanja — tri traga",
+      "instruction": "Poređaj tri simbolične kartice: Dolazak Dunavom → Svakodnevica → Muzej sećanja.",
+      "implementationStatus": "production_specified_assets_partial",
+      "active": true,
+      "requiredForMission": true,
+      "ar": {
+        "interaction": "chronological_memory_cards",
+        "activationAfterTask": "PSM-01",
+        "anchorPolicy": "camera_relative_cards_or_user_selected_safe_surface",
+        "neverRequireUnsafePositioning": true,
+        "assetIds": [
+          "assets/psm-danube-voyage.svg",
+          "assets/psm-workshop.svg",
+          "assets/psm-museum-memory.svg",
+          "assets/ar-focus-reticle.svg"
+        ],
+        "content": {
+          "cards": [
+            {
+              "id": "arrival",
+              "label": "Dolazak",
+              "period": "XVIII vek",
+              "asset": "assets/psm-danube-voyage.svg"
+            },
+            {
+              "id": "daily_life",
+              "label": "Svakodnevica",
+              "period": "XVIII–XX vek",
+              "asset": "assets/psm-workshop.svg"
+            },
+            {
+              "id": "memory",
+              "label": "Muzej sećanja",
+              "period": "2019–",
+              "asset": "assets/psm-museum-memory.svg"
+            }
+          ],
+          "correctSequence": [
+            "arrival",
+            "daily_life",
+            "memory"
+          ],
+          "historicalCaveat": "Originalne simbolične ilustracije, ne istorijski eksponati. Hronologija je pojednostavljena; obavezno objasniti i teška poglavlja istorije.",
+          "onMistake": "retry_without_penalty"
+        },
+        "successCondition": {
+          "kind": "sequence_equals",
+          "expected": [
+            "arrival",
+            "daily_life",
+            "memory"
+          ],
+          "resultEvent": "AR_INTERACTION_COMPLETED",
+          "taskId": "PSM-AR-01"
+        },
+        "feedback": "Od doseljavanja i života zajednica do savremenog muzeja. Sećanje uključuje i bolna poglavlja XX veka."
+      },
+      "mentorCue": {
+        "mentorId": "profesor-vlada",
+        "appearance": "auto_then_recallable"
+      },
+      "fallback": {
+        "mode": "2d_ordered_memory_cards",
+        "sameEducationalObjective": true,
+        "sameScoring": true,
+        "mayActivateWithoutCamera": true
+      },
+      "completion": {
+        "title": "Tri traga su složena",
+        "narrative": "U istoriji nema samo lepih uspomena. Muzej čuva i svedočanstva o ratovima, progonima i gubicima.",
+        "delaySeconds": 3
       }
     },
     {
       "id": "PSM-02",
       "type": "multiple_choice",
-      "title": "Sada muzej a nekada palata",
-      "instruction": "Odgovori tačno na postavljeno pitanja.",
+      "title": "Čija je bila ova palata?",
+      "instruction": "Odgovori na pitanje o zgradi muzeja.",
       "completion": {
-        "title": "Bravo, uspešno si odgovrio na ovo pitanje!",
-        "narrative": "Kada je sagrađena, Grašalkovićeva palata je služila kao administrativna i stambena zgrada komorske uprave (Domus cameralis administrationis) i predstavljala je jednu od najimpozantnijih javnih građevina u Somboru.",
-        "delaySeconds": 7
+        "title": "Tačno — Grašalkovićeva palata!",
+        "narrative": "Palata je bila sedište komorske uprave. U XVIII veku služila je i za prihvat i raspoređivanje doseljenika. Izvori različito datiraju faze gradnje.",
+        "delaySeconds": 5
       },
       "question": {
-        "text": "Čije je palata nekada bila ova zgrada u kojoj se nalazi MPŠ muzej?",
+        "text": "Kako se zove palata u kojoj je Muzej podunavskih Švaba?",
         "choices": [
           "Kronićeva palata",
           "Grašalkovićeva palata",
-          "Vlaškalićeva plata"
+          "Vlaškalićeva palata"
         ],
         "correctIndex": 1
       },
       "unusedUnityFields": {
         "waypointId": "SO_GK"
+      },
+      "legacyOriginal": {
+        "title": "Sada muzej a nekada palata",
+        "instruction": "Odgovori tačno na postavljeno pitanja.",
+        "completion": {
+          "title": "Bravo, uspešno si odgovrio na ovo pitanje!",
+          "narrative": "Kada je sagrađena, Grašalkovićeva palata je služila kao administrativna i stambena zgrada komorske uprave (Domus cameralis administrationis) i predstavljala je jednu od najimpozantnijih javnih građevina u Somboru.",
+          "delaySeconds": 7
+        },
+        "question": {
+          "text": "Čije je palata nekada bila ova zgrada u kojoj se nalazi MPŠ muzej?",
+          "choices": [
+            "Kronićeva palata",
+            "Grašalkovićeva palata",
+            "Vlaškalićeva plata"
+          ],
+          "correctIndex": 1
+        }
       }
     },
     {
       "id": "PSM-03",
       "type": "text_input",
-      "title": "Naseljavanja Bačke kroz vekove",
-      "instruction": "Unesi tačan odgovor.",
+      "title": "Godina muzeja",
+      "instruction": "Unesi godinu kada je osnovan Muzej podunavskih Švaba kao muzejska jedinica Gradskog muzeja Sombor.",
       "completion": {
-        "title": "Bravo, uspešno si odgovrio na ovo pitanje!",
-        "narrative": "Izborom 1751. godine pokazuješ da poznaješ period prvih naseljavanja Bačke. Prvo su naseljavane rusinske grkokatoličke porodice, a zatim je počela i kolonizacija nemačkih zemljoradnika u Banat i Bačku. Njihov trud u poljoprivredi i zanatima ostavio je neizbrisiv trag u istoriji regiona.",
-        "delaySeconds": 7
+        "title": "Tako je — 2019!",
+        "narrative": "Muzej je osnovan odlukom grada 9. jula 2019. Postavka prikazuje život podunavskih Nemaca od doseljavanja do teških iskustava XX veka.",
+        "delaySeconds": 5
       },
       "textInput": {
-        "questionText": "Koje godine su se Podunavske Švabe počele da se doseljavaju na teritoiju današnjeg Sombora?",
-        "inputPlaceholder": "Koje godine je potpisan dekret o početku kolonizacije Bačke?",
-        "answerPlaceholder": "Ovde brojem upiši svoj odgovor",
-        "expectedAnswer": "1751"
+        "questionText": "Koje godine je osnovan Muzej podunavskih Švaba u Somboru?",
+        "inputPlaceholder": "Godina osnivanja",
+        "answerPlaceholder": "Unesi četiri cifre",
+        "expectedAnswer": "2019"
       },
       "unusedUnityFields": {
         "waypointId": "SO_GK",
@@ -73,7 +182,89 @@
           "1763. godine"
         ],
         "CorrectChoiceIndex": "1"
+      },
+      "legacyOriginal": {
+        "title": "Naseljavanja Bačke kroz vekove",
+        "instruction": "Unesi tačan odgovor.",
+        "completion": {
+          "title": "Bravo, uspešno si odgovrio na ovo pitanje!",
+          "narrative": "Izborom 1751. godine pokazuješ da poznaješ period prvih naseljavanja Bačke. Prvo su naseljavane rusinske grkokatoličke porodice, a zatim je počela i kolonizacija nemačkih zemljoradnika u Banat i Bačku. Njihov trud u poljoprivredi i zanatima ostavio je neizbrisiv trag u istoriji regiona.",
+          "delaySeconds": 7
+        },
+        "textInput": {
+          "questionText": "Koje godine su se Podunavske Švabe počele da se doseljavaju na teritoiju današnjeg Sombora?",
+          "inputPlaceholder": "Koje godine je potpisan dekret o početku kolonizacije Bačke?",
+          "answerPlaceholder": "Ovde brojem upiši svoj odgovor",
+          "expectedAnswer": "1751"
+        },
+        "unusedUnityFields": {
+          "waypointId": "SO_GK",
+          "Choices": [
+            "1596. godine",
+            "1763. godine",
+            "1763. godine",
+            "1763. godine"
+          ],
+          "CorrectChoiceIndex": "1"
+        },
+        "editorialFlag": "Original 1751 is not substantiated as a unique first year of German immigration to Sombor; several waves started in late 1740s. Preserved for audit, not active."
       }
     }
+  ],
+  "narrative": {
+    "setting": "Grašalkovićeva palata, Sombor",
+    "theme": "Putovanje, suživot i odgovornost pamćenja",
+    "historyParagraphs": [
+      "Podunavske Švabe je istorijski naziv za nemačke zajednice nastanjene u dunavskom prostoru. U XVIII veku porodice su u više talasa dolazile u Bačku, često ploveći Dunavom.",
+      "Grašalkovićeva palata bila je zgrada komorske uprave i prihvatno mesto za doseljenike. Turistički izvor navodi 1763, dok lokalna istorija beleži kamen temeljac 1750. i postepenu gradnju; tačan datum nije predmet kviza.",
+      "Zajednice su gradile domove, radile i živele uz druge narode Bačke. Muzejska priča uključuje i stradanja, progone i kolektivno kažnjavanje posle Drugog svetskog rata. O svim žrtvama govorimo dostojanstveno.",
+      "Muzej je osnovan 9. jula 2019. kao deo Gradskog muzeja Sombor; predmeti su prikupljani i poklonima potomaka i udruženja Gerhard."
+    ],
+    "mentorOpening": "Kao da je neko spustio stari kofer pred palatu. To je samo naša zamišljena priča, ali putovanja su ovde bila stvarna. Danas ova zgrada čuva mnogo glasova. Hoćeš li da pratiš njihove tragove?",
+    "mentorBeforeAR": "Tri kartice: putovanje Dunavom, svakodnevni život i muzej. Složi ih redom. To su naši simboli, a ne pravi predmeti neke porodice.",
+    "mentorAfterAR": "Bravo. Ali istorija nije samo uredan niz lepih slika. Postoje i teške priče o ratovima i gubicima. Muzej nas uči da ih čitamo pažljivo. Sada proveri ime palate i godinu osnivanja muzeja.",
+    "mentorCompletion": "Dobio si Ključ sećanja. On ne otvara prava vrata, već novo pitanje: čije priče znamo, a čije tek treba saslušati?",
+    "historicalEchoPolicy": "No impersonated historical victims, fabricated family testimonies or comedic treatment of persecution."
+  },
+  "hints": [
+    "HINTPŠM1",
+    "HINTPŠM2",
+    "HINTPŠM3"
+  ],
+  "characters": [
+    "profesor-vlada"
+  ],
+  "rewards": {
+    "mainCollectibleId": "psm-memory-key-relic",
+    "afterMissionCompleted": true,
+    "optionalCollectibleIds": [
+      "gold-psm-001",
+      "gold-psm-002"
+    ]
+  },
+  "productionPackage": "production/muzej-podunavskih-svaba/PRODUCTION_BRIEF.md",
+  "historicalSources": [
+    {
+      "title": "Heritage Guide — Stari zanati",
+      "url": "https://myheritageguide.com/sr/object/stari-zanati-2/"
+    },
+    {
+      "title": "Turistička organizacija Vojvodine — Grašalkovićeva palata",
+      "url": "https://vojvodina.travel/atrakcije/grasalkoviceva-palata-sombor/"
+    },
+    {
+      "title": "Ravnoplov — Grašalkovićeva palata",
+      "url": "https://www.ravnoplov.rs/grasalkoviceva-palata-u-somboru-zgrada-iz-koje-je-naseljena-backa/"
+    },
+    {
+      "title": "SOinfo — prikupljanje građe",
+      "url": "https://www.soinfo.org/vesti/vest/20947/muzej-moli-za-pomoc-gradjana/"
+    }
+  ],
+  "historicalReviewNotes": [
+    "Original 1751 quiz preserved in legacyOriginal but changed to verified 2019; immigration had multiple waves.",
+    "Palace dates differ: 1750 cornerstone versus 1763 tourism source.",
+    "Legacy unusedUnityFields refer to SO_GK, but active GPS uses SO_PŠM.",
+    "GPS zone2 15 m not field-verified."
   ]
 }
