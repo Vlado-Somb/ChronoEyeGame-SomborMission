@@ -1,0 +1,100 @@
+{
+  "id": "budapest-act-4",
+  "title": "Улица туђих гласова",
+  "actIndex": 4,
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "runtimeStatus": "not_integrated",
+  "primaryWaypointId": "BP_TEKELIJANUM",
+  "intermediateWaypointIds": [
+    "BP_MIHAILO"
+  ],
+  "prerequisiteMissionIds": [
+    "budapest-act-3"
+  ],
+  "dialoguePath": "dialogues/act-4.json",
+  "evidenceSetId": "BP2_EVIDENCE_4",
+  "tasks": [
+    {
+      "id": "BP2_A4_ARRIVE",
+      "type": "gps",
+      "title": "Потврди безбедну станицу",
+      "instruction": "Ручно или провереним GPS-ом, без рада камере у ходу.",
+      "waypointId": "BP_TEKELIJANUM",
+      "arrivalMode": "gps_or_explicit_manual",
+      "completion": {
+        "title": "Приступ потврђен"
+      }
+    },
+    {
+      "id": "BP2_A4_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Провера слојева",
+      "instruction": "Историјска зграда, студенти и кратка Михаилова порука; Илона преузима гласове.",
+      "ar": {
+        "activationAfterTask": "BP2_A4_ARRIVE",
+        "assetIds": [
+          "BP2_ART_4"
+        ],
+        "successCondition": {
+          "allEvidenceMappings": [
+            "institution:historical",
+            "building:historical",
+            "gesture:fiction"
+          ]
+        }
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "institution:historical",
+            "building:historical",
+            "gesture:fiction"
+          ]
+        }
+      },
+      "evidenceSetId": "BP2_EVIDENCE_4",
+      "completion": {
+        "title": "Докази раздвојени"
+      }
+    },
+    {
+      "id": "BP2_A4_QUIZ",
+      "type": "multiple_choice",
+      "title": "Питање из досијеа",
+      "instruction": "Не веруј аутоматски реконструисаном говору.",
+      "question": {
+        "text": "На шта се односи 1838. у причи о Текелијануму?",
+        "choices": [
+          "Оснивање установе",
+          "Завршетак данашње зграде",
+          "Рушење Табанске цркве"
+        ],
+        "correctIndex": 0
+      },
+      "sources": [
+        "SRC_TEKELIJANUM",
+        "SRC_VITKOVICS_SALON"
+      ],
+      "completion": {
+        "title": "Проверено"
+      }
+    }
+  ],
+  "narrative": {
+    "mentorOpening": "BP2_D4_threshold",
+    "mentorCompletion": "BP2_D4_rupture",
+    "educationalObjective": "Историјска зграда, студенти и кратка Михаилова порука; Илона преузима гласове.",
+    "sources": [
+      "SRC_TEKELIJANUM",
+      "SRC_VITKOVICS_SALON"
+    ]
+  },
+  "progressPolicy": {
+    "namespace": "budapest-content-v2",
+    "v1AutoImport": false
+  }
+}
