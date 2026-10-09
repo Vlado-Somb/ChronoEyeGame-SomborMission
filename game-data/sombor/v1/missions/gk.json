@@ -65,7 +65,9 @@
       },
       "fallback": {
         "mode": "2d_tower_hotspot",
-        "sameEducationalObjective": true
+        "sameEducationalObjective": true,
+        "sameScoring": true,
+        "mayActivateWithoutCamera": true
       },
       "completion": {
         "title": "AR trag otkriven",
