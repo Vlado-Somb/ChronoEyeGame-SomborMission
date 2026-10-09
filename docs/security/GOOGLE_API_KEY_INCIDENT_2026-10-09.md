@@ -61,3 +61,7 @@ References:
 - Downloaded the tracked legacy APK (76,736,664 bytes), SHA-256 `b115ba9abb92492c253c2a8a65a8fec69f677e8d2753f168d338cb8f3461f930`. A byte-pattern scan of every decompressed ZIP entry found one JWT in `assets/bin/Data/data.unity3d`; no literal Google-key match in that scan. This does not clear nested Unity compression/serialized data or obfuscated credentials.
 - Remove this obsolete checked-in APK from the updated PR tree, preserving history and all source assets. Installed apps, Cloud projects and OAuth clients are unaffected by this repository-file removal. Historical copies still require token revocation and coordinated distribution cleanup.
 - Scanner fixture checks passed: clean text, extensionless Google key, backup JWT, >8 MiB text key, PEM private key; matching values are not emitted. Full source CI on the updated remote commit is a separate gate. No Android/Unity runtime build was run here.
+
+### Expanded CI finding
+
+Full-checkout source CI run `37989345627` inspected 1,774 text files and correctly failed on `UserSettings/CesiumIonServerManager.asset`; 178 binary/archive files were excluded. This revealed a third distinct Cesium JWT (four source occurrences total, superseding the earlier two-token count). Remove this tracked editor-session file from the PR; UserSettings is already ignored for future additions. All three Cesium values require provider-side scope/revocation review. No claim is made that the JWT in the legacy APK is the only credential within nested Unity content.

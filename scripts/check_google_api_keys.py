@@ -57,7 +57,7 @@ def main() -> int:
     for rel in found:
         print(f"FAIL: credential pattern in {rel} (value redacted)")
     if found:
-        print("Rotate exposed credentials in Google Cloud; do not paste keys into logs.")
+        print("Revoke/rotate exposed credentials at their provider; do not paste values into logs.")
         return 1
     return 0
 

@@ -102,3 +102,5 @@
 Signing SHA-1 values must be read from the actual distributed APK/signing certificate; do not infer them from package name or generate a new identity accidentally. The source namespaces differ from applicationId; use `rs.chronoeye.prototype` for the reviewed prototype's Android client. Production applicationId is not yet selected.
 
 Recovery configuration and proposed spending controls: [Cloud recovery](../security/CLOUD_RECOVERY_2026-10-09.md). All proposed restrictions remain **not applied**, not `configured` or `verified`.
+
+- **Expanded CI addendum:** full-checkout scan found `UserSettings/CesiumIonServerManager.asset`. Total confirmed Cesium source exposure is **three distinct JWTs in four locations** (supersedes the earlier two-token/three-location count). Remove the tracked editor-session file; keep all provider revocation states unverified. Source CI run `37989345627` correctly failed before this follow-up containment.

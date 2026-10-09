@@ -178,3 +178,5 @@
 - **Recovery proposal / gates:** see `docs/security/CLOUD_RECOVERY_2026-10-09.md`. Cost-bearing activation and destructive actions still need the owner's concrete approval.
 
 - **Binary containment addendum:** byte inspection found a JWT in the obsolete tracked legacy APK. Remove that repository file from this review branch; preserve source, history and installed applications. No claim of nested Unity binary clearance.
+
+- **Expanded CI addendum:** full-checkout scan found `UserSettings/CesiumIonServerManager.asset`. Total confirmed Cesium source exposure is **three distinct JWTs in four locations** (supersedes the earlier two-token/three-location count). Remove the tracked editor-session file; keep all provider revocation states unverified. Source CI run `37989345627` correctly failed before this follow-up containment.
