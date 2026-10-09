@@ -1,0 +1,150 @@
+{
+  "packageId": "vp-prod-05",
+  "missionId": "sombor-vp",
+  "gameplayOrder": [
+    "VP-01",
+    "VP-AR-01",
+    "VP-02",
+    "VP-03"
+  ],
+  "events": [
+    {
+      "id": "vp_arrival",
+      "trigger": {
+        "type": "GPS_ZONE_CONFIRMED",
+        "waypointId": "SO_VP",
+        "zone": 2,
+        "confirmSeconds": 2,
+        "fieldVerified": false
+      },
+      "action": "complete_VP-01_and_show_safe_view_prompt",
+      "next": "vp_mentor"
+    },
+    {
+      "id": "vp_mentor",
+      "trigger": "VP-01 complete + user_stationary_or_2d",
+      "action": "profesor_vlada_auto_once_or_manual_recall_with_captions",
+      "narrativeRef": "missions/vp.json#narrative.mentorOpening",
+      "next": "vp_ar_start"
+    },
+    {
+      "id": "vp_ar_start",
+      "trigger": "user_pressed_Pokreni_AR_or_Igraj_bez_kamere",
+      "action": "show_three_shuffled_original_chronology_cards",
+      "anchorPolicy": "relative_to_camera_or_manual_surface",
+      "fallback": "2d_ordered_flight_route_cards",
+      "next": "vp_ar_sequence"
+    },
+    {
+      "id": "vp_ar_sequence",
+      "trigger": {
+        "type": "CARD_SEQUENCE",
+        "expected": [
+          "sombor_1884",
+          "budapest_1902",
+          "monument_2017"
+        ]
+      },
+      "action": "emit_AR_INTERACTION_COMPLETED_once_for_VP-AR-01",
+      "onMistake": "hint_and_retry_without_penalty",
+      "narrativeRef": "missions/vp.json#narrative.mentorAfterAR",
+      "next": "vp_story_quiz"
+    },
+    {
+      "id": "vp_story_quiz",
+      "trigger": "VP-AR-01 complete",
+      "action": "show_VP-02_existing_choices",
+      "correctIndex": 0,
+      "correctText": "GOLUBICA SA CRNIM SRCEM",
+      "next": "vp_sculptor_quiz"
+    },
+    {
+      "id": "vp_sculptor_quiz",
+      "trigger": "VP-02 correct",
+      "action": "show_VP-03_existing_choices",
+      "correctIndex": 1,
+      "correctText": "Igor Šeter",
+      "next": "vp_finale"
+    },
+    {
+      "id": "vp_finale",
+      "trigger": "VP-03 correct",
+      "action": "award_task_and_mission_once_unlock_relic",
+      "collectibleId": "vp-feather-relic",
+      "awardKey": "mission:sombor-vp:completed",
+      "narrativeRef": "missions/vp.json#narrative.mentorCompletion",
+      "next": "vp_album"
+    },
+    {
+      "id": "vp_gold_optional",
+      "trigger": "player_taps_safe_stationary_bonus_AR_or_2D",
+      "action": "unlock_sourced_microstory_score_once_per_spawn_with_daily_cap",
+      "collectibleIds": [
+        "gold-vp-001",
+        "gold-vp-002"
+      ]
+    },
+    {
+      "id": "vp_joker_optional",
+      "trigger": "player_taps_safe_stationary_bonus_AR_or_2D",
+      "action": "unlock_fictional_joker_once",
+      "collectibleId": "joker-vp-001"
+    },
+    {
+      "id": "vp_album",
+      "trigger": "player_taps_Moja_zbirka",
+      "action": "open_Herbarijum_Sombora",
+      "tab": "Veliki tragovi",
+      "cardId": "vp-feather-relic"
+    }
+  ],
+  "fallback": {
+    "when": [
+      "ARCore_unavailable",
+      "camera_permission_denied",
+      "tracking_unstable",
+      "low_light",
+      "user_prefers_2d"
+    ],
+    "mode": "2d_ordered_flight_route_cards",
+    "sameEducationalObjective": true,
+    "scoringEquivalent": true,
+    "identicalSequence": [
+      "sombor_1884",
+      "budapest_1902",
+      "monument_2017"
+    ]
+  },
+  "scoring": {
+    "taskPointsEach": 10,
+    "missionBonus": 30,
+    "totalMainBeforeWrongAnswers": 70,
+    "quizWrongAnswerPenalty": -2,
+    "arRetryPenalty": 0,
+    "relicExtraPoints": 0,
+    "goldPointsEach": 2,
+    "jokerPoints": 1,
+    "awardOnce": true,
+    "playerStateKeys": [
+      "scoreAwardsByKey",
+      "pickedSpawnIds",
+      "unlockedCollectibleIds"
+    ]
+  },
+  "safety": {
+    "noWalkingWithCamera": true,
+    "noRoadSpawns": true,
+    "stationaryRequired": true,
+    "noLibraryEntryRequired": true,
+    "noLegacyAltitudeAR": true,
+    "fieldVerified": false
+  },
+  "accessibility": {
+    "cardsHaveTextLabels": true,
+    "keyboard2D": true,
+    "subtitles": true,
+    "mute": true,
+    "manualMentorRecall": true
+  },
+  "status": "editorial_and_svg_concepts_ready_runtime_pending"
+}
