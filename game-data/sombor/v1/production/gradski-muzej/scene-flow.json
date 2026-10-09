@@ -1,0 +1,48 @@
+{
+  "packageId": "gms-prod-08",
+  "missionId": "sombor-gms",
+  "status": "editorial_spec_runtime_pending_not_wired",
+  "gameplayOrder": [
+    "GMS-01",
+    "GMS-AR-01",
+    "GMS-02",
+    "GMS-03"
+  ],
+  "events": [
+    {
+      "id": "gms_arrival",
+      "trigger": "GPS_ZONE_CONFIRMED",
+      "zone": 2,
+      "next": "gms_ar"
+    },
+    {
+      "id": "gms_ar",
+      "trigger": "GMS-01_complete",
+      "task": "GMS-AR-01",
+      "next": "gms_quiz"
+    },
+    {
+      "id": "gms_quiz",
+      "trigger": "GMS-AR-01_complete",
+      "next": "GMS-02"
+    },
+    {
+      "id": "gms_finale",
+      "trigger": "GMS-03_complete",
+      "awardOnce": true,
+      "relic": "gms-four-collections-relic"
+    }
+  ],
+  "fallback": {
+    "mode": "2d_museum_four_collections_match",
+    "sameCards": true,
+    "sameMapping": true,
+    "sameScoring": true
+  },
+  "scoring": {
+    "taskPointsEach": 10,
+    "missionBonus": 30,
+    "relicExtraPoints": 0,
+    "awardOnce": true
+  }
+}
