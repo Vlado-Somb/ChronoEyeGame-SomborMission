@@ -1,15 +1,14 @@
-# Gradski muzej Sombor
+# Gradski muzej Sombor — Četiri lica muzeja
 
-Mission: sombor-gms. Narrative: four lost labels, four museum collections. This is a draft. See EDITORIAL_DECISIONS.md.
+Mission: sombor-gms. EDITORIAL DRAFT; active mission and global registry integration still pending. See EDITORIAL_DECISIONS.md.
 
 Historical source: https://vojvodina.travel/atrakcije/gradski-muzej-sombor/
 
-## Narrative
-A mysterious signal from the museum reveals four misplaced symbolic labels. Professor Vlada asks the player to classify a coin and pottery shard, a weaving shuttle, a sealed document and a painter's palette. The fourth cabinet is empty until the player understands that a museum preserves provenance, not just objects. The mystery is fiction; the collections and chronology are documented. A lantern of lost stories becomes the unique relic after the quizzes. No entry or exhibit scanning required.
+## Educational narrative
+At the public approach to the museum, Profesor Vlada briefly introduces four fields: archaeology and numismatics, ethnology, history, and fine arts. The player matches four clearly symbolic original cards (coin/pottery, weaving tool, archival document, palette) to the corresponding collections. No mystical signal, lost labels, supernatural lighting or scanning of actual museum exhibits. The cards are teaching illustrations, not claimed museum objects.
 
 ## Historical anchors
-11 May 1883: the historical society was founded. In 1887 it gained a room in Županija. The museum was housed in its present building in 1945. These are three distinct institutional milestones. The original Unity quiz about an allegedly current exhibition is retained in legacy-gms.json but should not be presented as current without verification.
+1883: historical society founded; 1887: room in Županija; 1945: museum moved into the present building. These facts belong to contextual text, NOT a three-date AR sorting task. A separate quiz may ask what happened in 1945, after source verification. Original Unity quiz preserved in legacy-gms.json.
 
-AR → 2D: same four cards and score.
-
-GPS SO_GMS: zone 2, 25 m provisional. AR places four drawers on a safe user-selected surface. The same cards and mapping appear in 2D without camera.
+## Interaction and safety
+GPS SO_GMS: zone 2, provisional 25 m; requires field verification. AR: four cards, four collections; 2D: identical cards, matching, score and retry. No entry or exhibit scanning required. Keep professor dialogue concise and factual. Relic concept should represent the four collections, not a magical lantern. Existing candidate files and registries must be reconciled before merge.
