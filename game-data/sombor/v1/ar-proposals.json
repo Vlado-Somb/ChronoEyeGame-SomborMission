@@ -77,17 +77,20 @@
       "id": "AR-SO-EB-01",
       "missionId": "sombor-eb",
       "waypointId": "SO_EB",
-      "title": "Сомборски неми филм",
-      "interaction": "Place a stylized silent-film frame over the camera view, then answer a question about Ernest Bošnjak.",
-      "completion": "place_frame_then_answer",
+      "title": "Nedovršeni film — tri kadra",
+      "interaction": "Arrange 1906 projector, 1909 camera and 1914 unrealized studio cards, then play original vector montage. Same 2D task.",
+      "completion": "sequence_equals_projector_camera_studio",
       "assetNeeds": [
-        "original silent-film frame",
-        "historical context caption"
+        "four original film-card SVGs",
+        "film relic SVG",
+        "voice script",
+        "optional GLB and OGG"
       ],
       "optional": false,
       "active": true,
-      "editingStatus": "editorial_concept_accepted_implementation_pending",
-      "taskId": "EB-AR-01"
+      "editingStatus": "full_production_package_written_assets_partial_runtime_pending",
+      "taskId": "EB-AR-01",
+      "productionPackage": "production/ernest-bosnjak/PRODUCTION_BRIEF.md"
     },
     {
       "id": "AR-SO-PSM-01",
