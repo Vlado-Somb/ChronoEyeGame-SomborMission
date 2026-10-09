@@ -1,0 +1,81 @@
+{
+  "status": "planned_only",
+  "voicePolicy": "original_actor_performances_no_historical_voice_cloning",
+  "captionsRequired": true,
+  "safeModes": [
+    "stationary_ar",
+    "2d_text_and_audio"
+  ],
+  "cues": [
+    {
+      "id": "BP2_CUE_1",
+      "sceneId": "BP2_D0_fracture",
+      "type": "three_pulses",
+      "assetId": null,
+      "status": "planned_not_created"
+    },
+    {
+      "id": "BP2_CUE_2",
+      "sceneId": "BP2_D1_poem",
+      "type": "original_verse",
+      "assetId": null,
+      "status": "planned_not_created"
+    },
+    {
+      "id": "BP2_CUE_3",
+      "sceneId": "BP2_D2_invasion",
+      "type": "voice_face_morph",
+      "assetId": null,
+      "status": "planned_not_created"
+    },
+    {
+      "id": "BP2_CUE_4",
+      "sceneId": "BP2_D3_longtable",
+      "type": "stable_cafe_dialogue",
+      "assetId": null,
+      "status": "planned_not_created"
+    },
+    {
+      "id": "BP2_CUE_5",
+      "sceneId": "BP2_D3_versecloud",
+      "type": "poetry_and_music_layers",
+      "assetId": null,
+      "status": "planned_not_created"
+    },
+    {
+      "id": "BP2_CUE_6",
+      "sceneId": "BP2_D3_listening",
+      "type": "offscreen_students",
+      "assetId": null,
+      "status": "planned_not_created"
+    },
+    {
+      "id": "BP2_CUE_7",
+      "sceneId": "BP2_D4_mihailo",
+      "type": "three_finger_gesture",
+      "assetId": null,
+      "status": "planned_not_created"
+    },
+    {
+      "id": "BP2_CUE_8",
+      "sceneId": "BP2_D5_stag",
+      "type": "watercolor_portrait",
+      "assetId": null,
+      "status": "planned_not_created"
+    },
+    {
+      "id": "BP2_CUE_9",
+      "sceneId": "BP2_D5_unlocking",
+      "type": "living_rhythm",
+      "assetId": null,
+      "status": "planned_not_created"
+    },
+    {
+      "id": "BP2_CUE_10",
+      "sceneId": "BP2_D6_timeloop",
+      "type": "three_pulse_payoff",
+      "assetId": null,
+      "status": "planned_not_created"
+    }
+  ]
+}
