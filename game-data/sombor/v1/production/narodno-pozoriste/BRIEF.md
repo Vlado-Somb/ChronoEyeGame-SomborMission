@@ -1,1 +1,0 @@
-NPS story: Izgubljeni znak.
