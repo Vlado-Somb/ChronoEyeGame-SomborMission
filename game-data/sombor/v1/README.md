@@ -11,9 +11,11 @@ Samostalan **sadržaj igre**, izveden iz Unity ScriptableObject resursa i dopunj
 - [`production/gradska-kuca/QA_CHECKLIST.md`](production/gradska-kuca/QA_CHECKLIST.md) — kriterijumi prihvatanja pre release-a.
 - [`production/galerija-milan-konjovic/PRODUCTION_BRIEF.md`](production/galerija-milan-konjovic/PRODUCTION_BRIEF.md) — Misija 02: *Genije boja*, originalna priča + aktivan AR zadatak hronoloških plave/crvene/sive faze, postojeća pitanja slikar/1898, bonus tokeni i zvučni/likovni plan.
 
+- [`production/muzej-podunavskih-svaba/PRODUCTION_BRIEF.md`](production/muzej-podunavskih-svaba/PRODUCTION_BRIEF.md) — Misija 03: *Kofer sećanja*, AR/2D igra sa tri traga, proverena godina muzeja 2019 i sačuvani izvorni 1751 pod `legacyOriginal`.
+
 ## Sadržaj
 
-- `missions/*.json`: **9 misija / 31 zadatak**: 9 GPS, 5 AR, 11 multiple-choice, 6 text-input. AR dolazi odmah posle GPS-a i ima jednakovredan 2D fallback.
+- `missions/*.json`: **9 misija / 32 zadatka**: 9 GPS, 6 AR, 11 multiple-choice, 6 text-input. AR dolazi odmah posle GPS-a i ima jednakovredan 2D fallback.
 - `waypoints.json`: 13 WGS84 lokacija, probni GPS radijusi i vreme potvrde zona.
 - `dialogues/*.json`: tri narativna dijaloga i jedan neaktivan testni.
 - `hints.json`: 13 tekstova pomoći; GK ima HINTGK1/HINTGK2/HINTGK3.
@@ -23,8 +25,8 @@ Samostalan **sadržaj igre**, izveden iz Unity ScriptableObject resursa i dopunj
 - `systems/collectibles.json`: glavni relic po lokaciji, zlatni pečati iz 1749, srca i džokeri.
 - `systems/album.json`: UX „Herbarijum Sombora“, kolekcija, otključane kartice i zaštita od duplih poena.
 - `mechanics.json`: zadaci, skoring, GPS, AR i fallback.
-- `ar-proposals.json`: evidencija **prihvaćenih pet AR ideja**, sve povezane sa aktivnim zadacima.
-- `assets/*.svg`: sedam originalnih konceptnih 2D grafika koje ne zahtevaju licencu spoljašnjih fotografija.
+- `ar-proposals.json`: evidencija **prihvaćenih šest AR ideja**, sve povezane sa aktivnim zadacima.
+- `assets/*.svg`: originalnih konceptnih 2D grafika koje ne zahtevaju licencu spoljašnjih fotografija.
 - `CHANGELOG.md`: urednički i produkcioni trag odluka.
 
 ## Podela odgovornosti

@@ -105,6 +105,15 @@
       "delayBeforeShowSeconds": 0,
       "extraDisplaySeconds": 3,
       "sourceAsset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Blocks/HINTS/HINTŽUP2.asset"
+    },
+    {
+      "id": "HINTPŠM3",
+      "text": "Pitanje se ne odnosi na početak doseljavanja, već na osnivanje muzeja. Potraži godinu iz druge decenije XXI veka.",
+      "category": 2,
+      "delayBeforeShowSeconds": 4,
+      "extraDisplaySeconds": 5,
+      "sourceAsset": null,
+      "editorialStatus": "new_20261009"
     }
   ]
 }

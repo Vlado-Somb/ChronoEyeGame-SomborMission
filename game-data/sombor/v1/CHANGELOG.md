@@ -1,5 +1,14 @@
 # CHANGELOG — CHRONO EYE SOMBOR
 
+## 2026-10-09 — production package 03: Muzej podunavskih Švaba
+
+- Nova AR mini-igra `PSM-AR-01` između GPS i dva istorijska kviza: tri originalne simbolične kartice (dolazak → svakodnevica → muzej), jednakovredan 2D fallback.
+- Originalni kviz o Grašalkovićevoj palati ostaje (tačan odgovor indeks 1). Originalni odgovor **1751** za jedinstven početak nemačkog doseljavanja nije istorijski pouzdan; sačuvan je pod `PSM-03.legacyOriginal`, a aktivni odgovor je proverena godina osnivanja muzeja **2019**.
+- Napisana četiri produkciona dokumenta, mentorski narativ, četiri originalna SVG koncepta, `psm-memory-key-relic` i dva istorijska zlatna pečata. Nema srca, džokera ni istorijskog eha zbog dostojanstvenog pristupa stradanju.
+- Privremena GPS zona prilaza 2 (15 m), `fieldVerified=false`. Inventar: 9 misija, 32 zadatka, 6 AR.
+- Web/Android/ARCore integracija, GLB/OGG i terenska provera nisu obavljeni. Servisi i credentials nisu menjani.
+
+
 ## 2026-10-08 — production package 02: Milan Konjović
 
 - Razrađena galerijska misija `sombor-mkg` kao urednička i produkciona celina po Mission Standard v0.2, bez promene broja glavnih zadataka. Tok: GPS `MKG-01` → AR `MKG-AR-01` → ABC `MKG-02` → tekst `MKG-03`.

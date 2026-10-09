@@ -1,6 +1,6 @@
 {
   "status": "accepted_active_game_design",
-  "integrationPrinciple": "All five ideas are now active AR task entries in corresponding mission JSON, directly after their GPS step. Implementations and media may remain pending; 2D equivalent is required.",
+  "integrationPrinciple": "Six AR tasks active in content, not yet implemented or tested in Android/ARCore; equal 2D fallback mandatory.",
   "arAltitudePolicy": "Do not use legacy Unity altitude as absolute vertical AR alignment. Use user placement, visual alignment or field-verified geospatial anchor only.",
   "proposals": [
     {
@@ -86,6 +86,24 @@
       "active": true,
       "editingStatus": "editorial_concept_accepted_implementation_pending",
       "taskId": "EB-AR-01"
+    },
+    {
+      "id": "AR-SO-PSM-01",
+      "missionId": "sombor-psm",
+      "waypointId": "SO_PŠM",
+      "title": "Кофер сећања — три трага",
+      "interaction": "Player selects three original symbolic cards in historical order: Danube arrival → everyday community life → museum memory. 2D equivalent has the same objective, scores and mandatory context.",
+      "completion": "ordered_memory_cards_arrival_daily_life_memory",
+      "assetNeeds": [
+        "three original symbolic SVG cards",
+        "key relic SVG",
+        "voice scripts"
+      ],
+      "optional": false,
+      "active": true,
+      "editingStatus": "full_production_package_written",
+      "taskId": "PSM-AR-01",
+      "productionPackage": "production/muzej-podunavskih-svaba/PRODUCTION_BRIEF.md"
     }
   ],
   "reviewRule": "AR tasks are required for the mission but must always be completable via equally rewarded 2D fallback; active in data is not synonymous with implemented in app."
