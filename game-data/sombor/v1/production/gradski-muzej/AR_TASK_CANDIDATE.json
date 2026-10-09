@@ -1,1 +1,43 @@
-{"id":"GMS-AR-01","type":"ar_interaction","after":"GMS-01","interaction":"museum_four_collections_match","cards":["archaeology","ethnology","history","art"],"slots":["archaeology","ethnology","history","art"],"expectedMapping":{"archaeology":"archaeology","ethnology":"ethnology","history":"history","art":"art"},"assets":["assets/gms-archaeology.svg","assets/gms-ethnology.svg","assets/gms-history.svg","assets/gms-art.svg"],"fallback":{"mode":"2d_museum_four_collections_match","sameCards":true,"sameMapping":true,"sameScoring":true},"awardOnce":true,"implementationStatus":"candidate_not_wired"}
+{
+  "id": "GMS-AR-01",
+  "type": "ar_interaction",
+  "after": "GMS-01",
+  "interaction": "museum_four_collections_match",
+  "cards": [
+    "archaeology",
+    "ethnology",
+    "history",
+    "art"
+  ],
+  "slots": [
+    "archaeology",
+    "ethnology",
+    "history",
+    "art"
+  ],
+  "expectedMapping": {
+    "archaeology": "archaeology",
+    "ethnology": "ethnology",
+    "history": "history",
+    "art": "art"
+  },
+  "assets": [
+    "assets/gms-archaeology.svg",
+    "assets/gms-ethnology.svg",
+    "assets/gms-history.svg",
+    "assets/gms-art.svg"
+  ],
+  "fallback": {
+    "mode": "2d_museum_four_collections_match",
+    "sameCards": true,
+    "sameMapping": true,
+    "sameScoring": true,
+    "sameEducationalObjective": true,
+    "mayActivateWithoutCamera": true
+  },
+  "awardOnce": true,
+  "implementationStatus": "candidate_not_wired",
+  "title": "Četiri lica muzeja",
+  "instruction": "Poveži simbolične ilustracije sa četiri oblasti Gradskog muzeja.",
+  "historicalCaveat": "Ilustracije su autorske i simbolične, nisu autentični muzejski eksponati."
+}
