@@ -5,24 +5,131 @@
     "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/ŽUP_SO_Mission.asset",
     "sourceBranch": "fix/sombor-resource-stabilization-20261008"
   },
-  "title": "ŽUPANIJA",
+  "title": "ŽUPANIJA — TRI SATA JEDNE SLIKE",
   "primaryWaypointId": "SO_ŽUP",
   "language": "sr-Latn",
-  "reviewStatus": "legacy_unreviewed",
+  "reviewStatus": "zup_production_overlay_ready",
   "tasks": [
     {
       "id": "ZUP-01",
       "type": "gps",
       "title": "Tiha moć Sombora",
-      "instruction": "Pronađi zgradu Bačko-Bodroške županije u Somboru ",
+      "instruction": "Pronađi Županiju sa bezbedne javne pešačke površine; ulazak u zgradu nije potreban.",
       "completion": {
         "title": "Bravo mladi istoričaru!",
-        "narrative": "Još u 15. veku, u tadašnjem Cobor Sent-Mihalju, a današnjem Somboru, održavana su ponekad zasedanja skupštine Bodroške županije. Nakon povlačenja Turaka iz Bačke 1687., sednice županijske skupštine ponovo su počele da se održavaju u Somboru. Za stalno sedište Bačko-bodroške županije Sombor je proglašen 1786. godine.",
+        "narrative": "Sombor je 1786. postao sedište županije. Zgrada je građena 1805–1808, a proširena 1882.",
         "delaySeconds": 10
       },
       "gps": {
         "waypointId": "SO_ŽUP",
-        "requiredZone": 3
+        "requiredZone": 2,
+        "fieldVerificationRequired": true,
+        "minimumStationarySeconds": 2,
+        "safeViewpointConfirmationRequired": true
+      },
+      "legacyOriginal": {
+        "archive": "production/zupanija/legacy-zup.json",
+        "taskId": "ZUP-01"
+      }
+    },
+    {
+      "id": "ZUP-AR-01",
+      "type": "ar_interaction",
+      "title": "Tri sata: događaj, slika, sala",
+      "instruction": "Poveži godine 1697, 1896. i 1898. sa istorijskim događajem, umetničkim delom i njegovim postavljanjem u Županiji.",
+      "active": true,
+      "requiredForMission": true,
+      "implementationStatus": "production_specified_assets_partial",
+      "ar": {
+        "interaction": "history_event_artwork_location_mapping",
+        "activationAfterTask": "ZUP-01",
+        "anchorPolicy": "relative_to_camera_or_manual_surface",
+        "assetIds": [
+          "assets/zup-three-clocks-board.svg",
+          "assets/zup-event-1697.svg",
+          "assets/zup-painting-1896.svg",
+          "assets/zup-hall-1898.svg"
+        ],
+        "content": {
+          "cards": [
+            {
+              "id": "battle_1697",
+              "year": "1697",
+              "label": "Istorijski događaj",
+              "role": "event",
+              "asset": "assets/zup-event-1697.svg",
+              "source": "https://www.ravnoplov.rs/bitka-kod-sente-nasa-najveca-slika/"
+            },
+            {
+              "id": "painting_1896",
+              "year": "1896",
+              "label": "Umetničko delo",
+              "role": "artwork",
+              "asset": "assets/zup-painting-1896.svg",
+              "source": "https://www.ravnoplov.rs/bitka-kod-sente-nasa-najveca-slika/"
+            },
+            {
+              "id": "hall_1898",
+              "year": "1898",
+              "label": "Postavljanje u salu",
+              "role": "installation",
+              "asset": "assets/zup-hall-1898.svg",
+              "source": "https://www.ravnoplov.rs/zdanje-zupanije-u-somboru/"
+            }
+          ],
+          "slots": [
+            {
+              "id": "event",
+              "label": "Šta se dogodilo?"
+            },
+            {
+              "id": "artwork",
+              "label": "Kada je naslikano?"
+            },
+            {
+              "id": "installation",
+              "label": "Kada je postavljeno?"
+            }
+          ],
+          "expectedMapping": {
+            "event": "battle_1697",
+            "artwork": "painting_1896",
+            "installation": "hall_1898"
+          },
+          "shuffleInitialOrder": true,
+          "onMistake": "retry_without_penalty"
+        },
+        "successCondition": {
+          "kind": "all_slots_match",
+          "expectedMapping": {
+            "event": "battle_1697",
+            "artwork": "painting_1896",
+            "installation": "hall_1898"
+          },
+          "resultEvent": "AR_INTERACTION_COMPLETED",
+          "awardOnce": true
+        }
+      },
+      "fallback": {
+        "mode": "2d_three_clocks_role_mapping",
+        "sameEducationalObjective": true,
+        "sameScoring": true,
+        "identicalCardIds": [
+          "battle_1697",
+          "painting_1896",
+          "hall_1898"
+        ],
+        "identicalExpectedMapping": {
+          "event": "battle_1697",
+          "artwork": "painting_1896",
+          "installation": "hall_1898"
+        },
+        "mayActivateWithoutCamera": true
+      },
+      "completion": {
+        "title": "Tri sata su razdvojena",
+        "narrative": "1697 bitka, 1896 slika, 1898 postavljanje u Županiji.",
+        "delaySeconds": 3
       }
     },
     {
@@ -36,13 +143,17 @@
         "delaySeconds": 12
       },
       "textInput": {
-        "questionText": "",
+        "questionText": "Kako se zove Ajzenhutova slika koja prikazuje bitku iz 1697?",
         "inputPlaceholder": "Kako se zove ta slika?",
         "answerPlaceholder": "unesi tačan odgovor",
         "expectedAnswer": "Bitka kod Sente"
       },
       "unusedUnityFields": {
         "waypointId": "SO_GK"
+      },
+      "legacyOriginal": {
+        "archive": "production/zupanija/legacy-zup.json",
+        "taskId": "ZUP-02"
       }
     },
     {
@@ -56,7 +167,7 @@
         "delaySeconds": 10
       },
       "question": {
-        "text": "Kako se zove narodni heroj koji je streljan u krugu zatvora ove",
+        "text": "Kako se zove somborski antifašista Vujadin Bane Sekulić među ponuđenim odgovorima?",
         "choices": [
           "Vujadin Bane Sekulić",
           "Mihajlo Mika Alas",
@@ -67,7 +178,62 @@
       },
       "unusedUnityFields": {
         "waypointId": "SO_GK"
+      },
+      "legacyOriginal": {
+        "archive": "production/zupanija/legacy-zup.json",
+        "taskId": "ZUP-03"
       }
     }
+  ],
+  "narrative": {
+    "setting": "Županija, Trg cara Uroša 1, Sombor",
+    "theme": "Tri vremena, jedno javno pamćenje",
+    "logline": "Chrono Eye meša tri datuma, a igrač razdvaja istorijski događaj od umetničkog prikaza.",
+    "historyParagraphs": [
+      "Sombor je 1786. postao sedište županije; zgrada je građena 1805–1808. i preoblikovana 1882.",
+      "Bitka kod Sente vođena je 1697. na Tisi. Ferenc Ajzenhut naslikao je sliku 1896, a u Županiju je postavljena 1898.",
+      "Zgrada čuva i složenu istoriju 20. veka; sećanje na Vujadina Baneta Sekulića obrađuje se dostojanstveno."
+    ],
+    "mentorOpening": "Tri sata u Chrono Eye-u odjednom kucaju. Nešto je pobrkalo vreme. Hoćeš li mi pomoći da ih razdvojimo?",
+    "mentorBeforeAR": "Jedno je bitka, drugo slikarov prikaz, a treće mesto na kojem se slika čuva. Poveži tri kartice.",
+    "mentorWrongAR": "To nije ista vrsta istorijskog traga. Pokušaj ponovo, bez kazne.",
+    "mentorAfterAR": "Bravo: 1697, 1896, 1898. Sada proverimo ime platna.",
+    "mentorAfterPainting": "Ali zgrada pamti i teške događaje 1941. godine. Pristupimo tom tragu s poštovanjem.",
+    "mentorCompletion": "Ključ tri vremena je naš izmišljeni simbol, ne istorijski predmet. Čuvaj ga u Herbarijumu Sombora.",
+    "historicalEchoPolicy": "No historical voice impersonation or painting reproduction."
+  },
+  "rewards": {
+    "mainCollectibleId": "zup-three-times-key-relic",
+    "afterMissionCompleted": true,
+    "optionalCollectibleIds": [
+      "gold-zup-001",
+      "gold-zup-002"
+    ],
+    "missionCompletionAwardOnce": true,
+    "ar2dSameScore": true
+  },
+  "characters": [
+    "profesor-vlada"
+  ],
+  "productionPackage": "production/zupanija/PRODUCTION_BRIEF.md",
+  "historicalSources": [
+    {
+      "title": "Ravnoplov: Županija",
+      "url": "https://www.ravnoplov.rs/zdanje-zupanije-u-somboru/"
+    },
+    {
+      "title": "Ravnoplov: Bitka kod Sente",
+      "url": "https://www.ravnoplov.rs/bitka-kod-sente-nasa-najveca-slika/"
+    },
+    {
+      "title": "Ravnoplov: Bane Sekulić",
+      "url": "https://www.ravnoplov.rs/vujadin-bane-sekulic-antifasisticki-heroj-iz-sombora/"
+    }
+  ],
+  "historicalReviewNotes": [
+    "Original unchanged in production/zupanija/legacy-zup.json",
+    "ZUP-02 expectedAnswer and ZUP-03 choices/correctIndex unchanged",
+    "1697 battle, 1896 artwork, 1898 installation",
+    "GPS zone2 66 m is provisional; field test required"
   ]
 }
