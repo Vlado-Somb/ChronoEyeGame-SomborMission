@@ -1,1 +1,19 @@
-{"taskId":"GMS-03","replaceReason":"Original question refers to a temporary exhibition as current.","question":{"text":"Koje godine je Gradski muzej Sombor smešten u današnju zgradu?","choices":["1883.","1887.","1945.","1961."],"correctIndex":2},"originalAnswer":"Ispit zrelosti","originalCorrectIndex":1,"originalArchive":"legacy-gms.json","source":"https://vojvodina.travel/atrakcije/gradski-muzej-sombor/"}
+{
+  "taskId": "GMS-03",
+  "replaceReason": "Original question refers to a temporary exhibition as current.",
+  "question": {
+    "text": "Šta se dogodilo 27. oktobra 1945. godine u istoriji Gradskog muzeja Sombor?",
+    "choices": [
+      "Muzej je useljen u današnju zgradu.",
+      "Otvorena je prva filmska projekcija u gradu.",
+      "Podignuta je zgrada Županije.",
+      "Osnovano je Narodno pozorište."
+    ],
+    "correctIndex": 0
+  },
+  "originalAnswer": "Ispit zrelosti",
+  "originalCorrectIndex": 1,
+  "originalArchive": "legacy-gms.json",
+  "source": "https://www.politika.rs/sr/clanak/545587/gradski-muzej-u-somboru-obelezava-140-godina-postojanja",
+  "editorialNote": "Only one date in question; 1883 and 1887 retained as contextual history, not three-date distractors."
+}
