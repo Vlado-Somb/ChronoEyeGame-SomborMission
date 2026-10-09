@@ -62,7 +62,7 @@
     "collectibleDiscovery": "emits item_unlocked and at_most_one_score_award_per_unique_spawn"
   },
   "ar": {
-    "activeMissionTasks": 7,
+    "activeMissionTasks": 8,
     "trigger": "immediately_after_gps_arrival_in_supported_missions",
     "requires": [
       "user_ready_and_stationary",

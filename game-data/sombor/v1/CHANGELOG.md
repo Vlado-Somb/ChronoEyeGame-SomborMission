@@ -1,5 +1,18 @@
 # CHANGELOG — CHRONO EYE SOMBOR
 
+## 2026-10-09 — Županija, production package 06
+
+- SO_ŽUP remains 45.770009385415605, 19.117732572954402; zone 2 / 66 m is provisional, not field-verified.
+- Added ZUP-AR-01 immediately after GPS: map 1697 historical event, 1896 painting, 1898 installation; equivalent 2D fallback.
+- Full original Unity mission archived unchanged in production/zupanija/legacy-zup.json.
+- ZUP-02 expectedAnswer "Bitka kod Sente" and ZUP-03 four choices / correctIndex=0 preserved.
+- Professor Vlada story, four production documents, five original SVG concepts and unique Ključ tri vremena relic.
+- Two sourced golden seals (1786 / 1882); no hearts or jokers.
+- Updated manifest, AR registry, collectibles, characters, mechanics, README. Inventory: 9 missions / 34 tasks / 8 AR.
+- No Web/Android/ARCore, GPS field, GLB/OGG or photo-rights verification. No main/runtime/cloud changes.
+
+
+
 ## 2026-10-09 — Veljko Petrović, production package 05
 
 - Waypoint SO_VP is **spomenik Veljku Petroviću**, not the Gradska biblioteka; sources confirm the monument stands in front of the library.

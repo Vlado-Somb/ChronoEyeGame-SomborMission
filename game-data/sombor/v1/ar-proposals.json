@@ -1,6 +1,6 @@
 {
   "status": "accepted_active_game_design",
-  "integrationPrinciple": "Seven AR tasks active in content, not yet implemented/tested in Android/ARCore; equal 2D fallback mandatory.",
+  "integrationPrinciple": "Eight AR tasks active in content; Android/ARCore integration untested; equal 2D fallback required.",
   "arAltitudePolicy": "Do not use legacy Unity altitude as absolute vertical AR alignment. Use user placement, visual alignment or field-verified geospatial anchor only.",
   "proposals": [
     {
@@ -124,6 +124,24 @@
       "editingStatus": "full_production_package_written_assets_partial_runtime_pending",
       "taskId": "VP-AR-01",
       "productionPackage": "production/veljko-petrovic/PRODUCTION_BRIEF.md"
+    },
+    {
+      "id": "AR-SO-ZUP-01",
+      "missionId": "sombor-zup",
+      "waypointId": "SO_ŽUP",
+      "title": "Tri sata — događaj, slika, sala",
+      "interaction": "Map 1697 battle / 1896 painting / 1898 installation to three roles, with identical 2D fallback",
+      "completion": "all_slots_match",
+      "assetNeeds": [
+        "five original SVG concepts",
+        "future mentor voice",
+        "optional three-clock GLB"
+      ],
+      "optional": false,
+      "active": true,
+      "editingStatus": "full_production_package_written_assets_partial_runtime_pending",
+      "taskId": "ZUP-AR-01",
+      "productionPackage": "production/zupanija/PRODUCTION_BRIEF.md"
     }
   ],
   "reviewRule": "AR tasks are required for the mission but must always be completable via equally rewarded 2D fallback; active in data is not synonymous with implemented in app."

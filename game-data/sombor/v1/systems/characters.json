@@ -56,7 +56,12 @@
         "vpOpeningRef": "missions/vp.json#narrative.mentorOpening",
         "vpBeforeArRef": "missions/vp.json#narrative.mentorBeforeAR",
         "vpAfterArRef": "missions/vp.json#narrative.mentorAfterAR",
-        "vpClosingRef": "missions/vp.json#narrative.mentorCompletion"
+        "vpClosingRef": "missions/vp.json#narrative.mentorCompletion",
+        "zupOpeningRef": "missions/zup.json#narrative.mentorOpening",
+        "zupBeforeArRef": "missions/zup.json#narrative.mentorBeforeAR",
+        "zupAfterArRef": "missions/zup.json#narrative.mentorAfterAR",
+        "zupAfterPaintingRef": "missions/zup.json#narrative.mentorAfterPainting",
+        "zupClosingRef": "missions/zup.json#narrative.mentorCompletion"
       },
       "safety": {
         "neverSpawnOnRoad": true,

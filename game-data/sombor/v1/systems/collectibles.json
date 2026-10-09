@@ -67,6 +67,20 @@
             "points": 0,
             "awardOnce": true
           }
+        },
+        {
+          "id": "zup-three-times-key-relic",
+          "name": "Ključ tri vremena",
+          "missionId": "sombor-zup",
+          "rarity": "unique",
+          "asset": "assets/zup-three-times-key-relic.svg",
+          "caption": "Izmišljeni ključ razlikovanja događaja 1697, slike 1896. i postavke 1898; nije istorijski predmet.",
+          "historicalFact": "Bitka kod Sente 1697, Ajzenhutova slika 1896, postavljena u Županiji 1898.",
+          "source": "https://www.ravnoplov.rs/bitka-kod-sente-nasa-najveca-slika/",
+          "scoring": {
+            "points": 0,
+            "awardOnce": true
+          }
         }
       ]
     },
@@ -150,6 +164,18 @@
             "waypointId": "SO_VP",
             "text": "Spomenik Veljku Petroviću sa golubicom, delo Igora Šetera, otkriven je 15. decembra 2017. ispred biblioteke „Karlo Bijelicki“.",
             "source": "https://www.025.rs/otkriven-spomenik-veljku-petrovicu/"
+          },
+          {
+            "id": "gold-zup-001",
+            "waypointId": "SO_ŽUP",
+            "text": "Sombor je 1786. postao sedište Bačko-bodroške županije.",
+            "source": "https://www.ravnoplov.rs/zdanje-zupanije-u-somboru/"
+          },
+          {
+            "id": "gold-zup-002",
+            "waypointId": "SO_ŽUP",
+            "text": "Zgrada je proširena i preoblikovana 1882. prema projektu Đule Partoša.",
+            "source": "https://www.soinfo.org/vesti/vest/19149/sledi-rekonstrukcija-atrijuma-zupanije/"
           }
         ]
       }

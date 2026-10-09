@@ -9,7 +9,7 @@
     "android",
     "arcore"
   ],
-  "editorialStatus": "gk_mkg_psm_nps_vp_production_briefs_ready_other_missions_pending",
+  "editorialStatus": "gk_mkg_psm_nps_vp_zup_production_briefs_ready_gms_lk_eb_pending",
   "sourceBranch": "fix/sombor-resource-stabilization-20261008",
   "missions": [
     {
@@ -135,12 +135,20 @@
       "scene": "production/veljko-petrovic/scene-flow.json",
       "assets": "production/veljko-petrovic/asset-manifest.json",
       "qa": "production/veljko-petrovic/QA_CHECKLIST.md"
+    },
+    {
+      "id": "zup-prod-06",
+      "missionId": "sombor-zup",
+      "brief": "production/zupanija/PRODUCTION_BRIEF.md",
+      "scene": "production/zupanija/scene-flow.json",
+      "assets": "production/zupanija/asset-manifest.json",
+      "qa": "production/zupanija/QA_CHECKLIST.md"
     }
   ],
   "contentInventory": {
     "missions": 9,
-    "tasks": 33,
-    "arInteractions": 7,
+    "tasks": 34,
+    "arInteractions": 8,
     "gpsTasks": 9,
     "multipleChoiceTasks": 11,
     "textInputTasks": 6

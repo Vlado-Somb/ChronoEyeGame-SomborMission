@@ -162,12 +162,12 @@
       "title": "Sombor grad heroja",
       "instruction": "Odgovori tačno na pitanje",
       "completion": {
-        "title": "Smrt fašizmu, sloboda narodu!",
-        "narrative": "Vujadin Bane Sekulić potiče iz imućne somborske porodice. Bio je bio student, rukovodilac Saveza komunističke omladine Jugoslavije (SKOJ) za Sombor i član Komunističke partije Jugoslavije, u koju je primljen nedelju dana pre nego što je uhvaćen u prigrevačkom ataru, u akciji paljevine žita. I pored strahovitih muka, kojima je bio podvrgnut, nije odao ni jednog od saučesnika. Streljan je 14. avgusta 1941. godine.",
-        "delaySeconds": 10
+        "title": "Tačno — Vujadin Bane Sekulić",
+        "narrative": "Vujadin Bane Sekulić (1921–1941), mladi somborski antifašista, izgubio je život 14. avgusta 1941. godine. Njegovo ime čuvamo sa poštovanjem.",
+        "delaySeconds": 8
       },
       "question": {
-        "text": "Kako se zove somborski antifašista Vujadin Bane Sekulić među ponuđenim odgovorima?",
+        "text": "Koji je mladi somborski antifašista izgubio život 1941. godine?",
         "choices": [
           "Vujadin Bane Sekulić",
           "Mihajlo Mika Alas",
