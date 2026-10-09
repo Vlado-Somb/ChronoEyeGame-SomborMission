@@ -1,1 +1,36 @@
-{"packageId":"gms-prod-08","missionId":"sombor-gms","status":"draft","gameplayOrder":["GMS-01","GMS-AR-01","GMS-02","GMS-03"]}
+{
+  "packageId": "gms-prod-08",
+  "missionId": "sombor-gms",
+  "status": "draft",
+  "gameplayOrder": [
+    "GMS-01",
+    "GMS-AR-01",
+    "GMS-02",
+    "GMS-03"
+  ],
+  "events": [
+    {
+      "id": "gms_arrival",
+      "trigger": "GPS_ZONE_CONFIRMED",
+      "zone": 2,
+      "next": "gms_ar"
+    },
+    {
+      "id": "gms_ar",
+      "trigger": "GMS-01_complete",
+      "task": "GMS-AR-01",
+      "next": "gms_quiz"
+    },
+    {
+      "id": "gms_quiz",
+      "trigger": "GMS-AR-01_complete",
+      "next": "GMS-02"
+    },
+    {
+      "id": "gms_finale",
+      "trigger": "GMS-03_complete",
+      "awardOnce": true,
+      "relic": "gms-lantern-relic"
+    }
+  ]
+}
