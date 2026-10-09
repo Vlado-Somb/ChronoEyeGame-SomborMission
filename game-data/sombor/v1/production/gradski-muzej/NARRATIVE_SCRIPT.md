@@ -5,3 +5,6 @@ Professor Vlada hears a faint paper-rustle. Four labels have lost their stories.
 
 ## Act II: Four cabinets
 Four original symbolic cards represent archaeology and coins, ethnology, history and fine art. The player matches each card to its department in AR or 2D. No real museum object is scanned.
+
+## Act III: The empty cabinet
+All labels return, but the central cabinet stays dark. Vlada: 'A collection is more than objects. We must also preserve where each story came from.' Three distinct dates illuminate: 1883 society, 1887 room in Županija, 1945 museum in its present home.
