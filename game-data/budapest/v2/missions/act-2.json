@@ -1,0 +1,96 @@
+{
+  "id": "budapest-act-2",
+  "title": "Лица на тргу",
+  "actIndex": 2,
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "runtimeStatus": "not_integrated",
+  "primaryWaypointId": "BP_HEROES",
+  "intermediateWaypointIds": [],
+  "prerequisiteMissionIds": [
+    "budapest-act-1"
+  ],
+  "dialoguePath": "dialogues/act-2.json",
+  "evidenceSetId": "BP2_EVIDENCE_2",
+  "tasks": [
+    {
+      "id": "BP2_A2_ARRIVE",
+      "type": "gps",
+      "waypointId": "BP_HEROES",
+      "arrivalMode": "gps_or_explicit_manual",
+      "title": "Станите на безбедној тачки",
+      "instruction": "Ручна потврда док VPS/координате нису проверене.",
+      "completion": {
+        "title": "Тачка потврђена"
+      }
+    },
+    {
+      "id": "BP2_A2_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Извор и холограм",
+      "instruction": "Раздвој физички Трг хероја од фикционалног двобоја.",
+      "ar": {
+        "activationAfterTask": "BP2_A2_ARRIVE",
+        "assetIds": [
+          "BP2_ART_2"
+        ],
+        "successCondition": {
+          "allEvidenceMappings": [
+            "square:physical",
+            "tesla:fiction",
+            "single_truth:unverified"
+          ]
+        }
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "square:physical",
+            "tesla:fiction",
+            "single_truth:unverified"
+          ]
+        }
+      },
+      "evidenceSetId": "BP2_EVIDENCE_2",
+      "completion": {
+        "title": "Извори сачувани"
+      }
+    },
+    {
+      "id": "BP2_A2_QUIZ",
+      "type": "multiple_choice",
+      "title": "Шта је стварно?",
+      "instruction": "Провери карту и извор.",
+      "question": {
+        "text": "Шта је стварни локалитет?",
+        "choices": [
+          "Теслин холограм",
+          "Маскин приказ",
+          "Трг хероја"
+        ],
+        "correctIndex": 2
+      },
+      "sources": [
+        "SRC_HEROES"
+      ],
+      "completion": {
+        "title": "Раздвојено"
+      }
+    }
+  ],
+  "narrative": {
+    "mentorOpening": "BP2_D2_plaza",
+    "mentorCompletion": "BP2_D2_aftermath",
+    "sources": [
+      "SRC_HEROES",
+      "SRC_USER_CORE"
+    ]
+  },
+  "progressPolicy": {
+    "namespace": "budapest-content-v2",
+    "v1AutoImport": false
+  }
+}
