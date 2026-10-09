@@ -15,3 +15,11 @@ local.properties
 /app/src/main/res/drawable-xxhdpi/ic_launcher.png
 /app/src/main/res/drawable-xxhdpi/ic_settings.png
 /gradle/wrapper/gradle-wrapper.jar
+
+# Private diagnostics and local Python output
+__pycache__/
+*.pyc
+*.apk
+*.zip
+*.u16
+/analysis/

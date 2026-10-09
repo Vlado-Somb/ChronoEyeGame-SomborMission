@@ -15,8 +15,11 @@
  */
 
 package com.google.ar.core.examples.java.helloar;
-// ChronoEye modifications: single object, depth freshness, collection, diagnostics.
+// ChronoEye AR Lab: diagnostic depth, bounded telemetry, five local anchors.
 import android.content.Intent;
+import org.json.JSONObject;
+import org.json.JSONArray;
+import static com.google.ar.core.examples.java.helloar.DiagnosticSession.json;
 import android.os.SystemClock;
 import android.widget.Button;
 import android.widget.TextView;
@@ -141,6 +144,18 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
   private final float[] localCenter = {0f, .11f, 0f};
   private final float[] depthInput = new float[2], depthUv = new float[2];
 
+  private DiagnosticSession log;
+  private volatile int viewMode, snapshotInterval;
+  private volatile boolean markRequested, collectRequested;
+  private int selectedId=-1, nextId=1;
+  private String depthState="no_data", lastTracking="";
+  private double depthAge=-1, centerMm=-1, selectedZ=-1, selectedRealMm=-1;
+  private long lastFrameNs, sampleNs, missingFrames, staleFrames, slowFrames, lastSnapshotMs;
+  private double frameSum, frameMax, producerMs;
+  private int frameCount;
+  private final float[][] objectColors={{1f,.6f,.05f},{.05f,.7f,1f},{.2f,1f,.3f},{1f,.2f,.5f},{.7f,.35f,1f}};
+  private final String[] colorNames={"златни","плави","зелени","ружичасти","љубичасти"};
+
   private Session session;
   private final SnackbarHelper messageSnackbarHelper = new SnackbarHelper();
   private DisplayRotationHelper displayRotationHelper;
@@ -202,6 +217,8 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    log=new DiagnosticSession(this);
+    log.event("session_start",json());
     surfaceView = findViewById(R.id.surfaceview);
     displayRotationHelper = new DisplayRotationHelper(/* context= */ this);
 
@@ -220,10 +237,31 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     depthButton = findViewById(R.id.depth_button);
     depthButton.setOnClickListener(v -> {
       depthWanted = !depthWanted;
-      depthButton.setText(depthWanted ? "Depth: УКЉ." : "Depth: ИСКЉ.");
+      depthButton.setText(depthWanted ? "Заклањање: ДА" : "Заклањање: НЕ");
+      log.event("occlusion_toggle",json("enabled",depthWanted));
     });
     findViewById(R.id.reset_button).setOnClickListener(v -> resetRequested = true);
     findViewById(R.id.return_button).setOnClickListener(v -> finish());
+    findViewById(R.id.mode_button).setOnClickListener(v -> {
+      viewMode=(viewMode+1)%3;
+      ((Button)v).setText(new String[]{"Камера","Дубина","Преклапање"}[viewMode]);
+      log.event("view_mode",json("mode",viewMode));
+    });
+    findViewById(R.id.mark_button).setOnClickListener(v -> {
+      log.event("problem_mark",json("requestedElapsedMs",log.elapsedMs())); markRequested=true;
+      Toast.makeText(this,"Проблем обележен",Toast.LENGTH_SHORT).show();
+    });
+    findViewById(R.id.share_button).setOnClickListener(v -> log.share(this));
+    findViewById(R.id.collect_button).setOnClickListener(v -> collectRequested=true);
+    findViewById(R.id.sample_button).setOnClickListener(v -> {
+      snapshotInterval=snapshotInterval==0?10:snapshotInterval==10?30:0;
+      ((Button)v).setText("Снимци: "+(snapshotInterval==0?"ручни":snapshotInterval+" s"));
+      log.event("snapshot_interval",json("seconds",snapshotInterval));
+    });
+    findViewById(R.id.log_button).setOnClickListener(v -> {
+      log.detailed=!log.detailed; ((Button)v).setText(log.detailed?"Лог: пун":"Лог: основни");
+      log.event("logging_mode",json("detailed",log.detailed));
+    });
   }
 
   /** Menu button to launch feature specific settings. */
@@ -251,12 +289,15 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
       session = null;
     }
 
+    if(log!=null) log.close();
     super.onDestroy();
   }
 
   @Override
   protected void onResume() {
     super.onResume();
+    if(log!=null) { log.active=true; log.event("resume",json()); }
+    lastFrameNs=0; sampleNs=0; frameSum=0; frameMax=0; frameCount=0; slowFrames=0;
 
     if (session == null) {
       Exception exception = null;
@@ -306,6 +347,7 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
       if (message != null) {
         messageSnackbarHelper.showError(this, message);
         Log.e(TAG, "Exception creating session", exception);
+        log.event("session_error",json("error",String.valueOf(exception)));
         return;
       }
     }
@@ -314,7 +356,7 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     try {
       depthSupported = session.isDepthModeSupported(Config.DepthMode.AUTOMATIC);
       depthButton.setEnabled(depthSupported);
-      depthButton.setText(depthSupported ? (depthWanted ? "Depth: УКЉ." : "Depth: ИСКЉ.") : "Depth: НЕМА");
+      depthButton.setText(depthSupported ? (depthWanted ? "Заклањање: ДА" : "Заклањање: НЕ") : "Depth: НЕМА");
       getSharedPreferences("chrono_progress", MODE_PRIVATE).edit().putBoolean("depthSupported", depthSupported).apply();
       configureSession();
       // To record a live camera session for later playback, call
@@ -339,6 +381,7 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
   @Override
   public void onPause() {
     super.onPause();
+    if(log!=null) { log.active=false; log.event("pause",json()); }
     if (session != null) {
       // Note that the order matters - GLSurfaceView is paused first so that it does not try
       // to query the session. If Session is paused before GLSurfaceView, GLSurfaceView may
@@ -381,6 +424,7 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     try {
       planeRenderer = new PlaneRenderer(render);
       backgroundRenderer = new BackgroundRenderer(render);
+      backgroundRenderer.setUseDepthVisualization(render,false);
       virtualSceneFramebuffer = new Framebuffer(render, /* width= */ 1, /* height= */ 1);
 
       cubemapFilter =
@@ -475,6 +519,7 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
   public void onDrawFrame(SampleRender render) {
     if (session == null || !renderReady || completing) return;
     if (resetRequested) {
+      log.event("reset",json("objects",wrappedAnchors.size())); selectedId=-1;
       for (WrappedAnchor wrapped : wrappedAnchors) wrapped.getAnchor().detach();
       wrappedAnchors.clear();
       resetRequested = false;
@@ -503,36 +548,69 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
       frame = session.update();
     } catch (CameraNotAvailableException e) {
       Log.e(TAG, "Camera not available during onDrawFrame", e);
+      log.event("camera_error",json("error",e.toString()));
       messageSnackbarHelper.showError(this, "Camera not available. Try restarting the app.");
       return;
     }
     Camera camera = frame.getCamera();
 
-    // Update BackgroundRenderer state to match the depth settings.
-    try {
-      backgroundRenderer.setUseDepthVisualization(
-          render, depthSettings.depthColorVisualizationEnabled());
-    } catch (IOException e) {
-      Log.e(TAG, "Failed to read a required asset file", e);
-      messageSnackbarHelper.showError(this, "Failed to read a required asset file: " + e);
-      return;
-    }
-    // BackgroundRenderer.updateDisplayGeometry must be called every frame to update the coordinates
-    // used to draw the background camera image.
     backgroundRenderer.updateDisplayGeometry(frame);
-
-    boolean freshDepth = false;
-    if (camera.getTrackingState() == TrackingState.TRACKING && depthSupported && depthWanted) {
-      try (Image image = frame.acquireDepthImage16Bits()) {
-        if (Math.abs(frame.getTimestamp() - image.getTimestamp()) <= 100_000_000L) {
-          backgroundRenderer.updateCameraDepthTexture(image);
-          freshDepth = true;
-        }
-      } catch (NotYetAvailableException e) { /* Wait for depth; never queue camera frames. */ }
+    long producerStart=SystemClock.elapsedRealtimeNanos();
+    boolean freshDepth=false;
+    depthAge=-1; centerMm=-1; selectedZ=-1; selectedRealMm=-1;
+    depthState=!depthSupported?"unsupported":camera.getTrackingState()!=TrackingState.TRACKING?"not_tracking":"no_data";
+    for(WrappedAnchor w:wrappedAnchors) if(w.id==selectedId && w.getAnchor().getTrackingState()==TrackingState.TRACKING) {
+      w.getAnchor().getPose().transformPoint(localCenter,0,objectCenter,0);
+      camera.getPose().inverse().transformPoint(objectCenter,0,cameraPoint,0); selectedZ=-cameraPoint[2]*1000.0;
     }
-    try { backgroundRenderer.setUseOcclusion(render, freshDepth); }
-    catch (IOException e) { Log.e(TAG, "Depth shader", e); return; }
-    updateDiagnostics(camera, freshDepth);
+    boolean snapshotDue=markRequested || (log.detailed && snapshotInterval>0 && log.elapsedMs()-lastSnapshotMs>=snapshotInterval*1000L);
+    if(camera.getTrackingState()==TrackingState.TRACKING && depthSupported) {
+      try(Image image=frame.acquireDepthImage16Bits()) {
+        depthAge=(frame.getTimestamp()-image.getTimestamp())/1_000_000.0;
+        freshDepth=depthAge>=0 && depthAge<=100;
+        depthState=freshDepth?"active":"stale";
+        if(!freshDepth) staleFrames++;
+        if(freshDepth) backgroundRenderer.updateCameraDepthTexture(image);
+        centerMm=depthAt(frame,image,surfaceView.getWidth()/2f,surfaceView.getHeight()/2f);
+        for(WrappedAnchor w:wrappedAnchors) if(w.id==selectedId && w.getAnchor().getTrackingState()==TrackingState.TRACKING) {
+          w.getAnchor().getPose().transformPoint(localCenter,0,objectCenter,0);
+          camera.getPose().inverse().transformPoint(objectCenter,0,cameraPoint,0);
+          selectedZ=-cameraPoint[2]*1000.0;
+          float[] point={objectCenter[0],objectCenter[1],objectCenter[2],1}, clip=new float[4];
+          camera.getViewMatrix(tapView,0); camera.getProjectionMatrix(tapProjection,0,Z_NEAR,Z_FAR);
+          Matrix.multiplyMM(tapVp,0,tapProjection,0,tapView,0); Matrix.multiplyMV(clip,0,tapVp,0,point,0);
+          if(clip[3]>0) selectedRealMm=depthAt(frame,image,(clip[0]/clip[3]+1)*surfaceView.getWidth()/2f,(1-clip[1]/clip[3])*surfaceView.getHeight()/2f);
+        }
+        if(snapshotDue) { captureDepth(frame,camera,image,markRequested?"problem":"periodic"); lastSnapshotMs=log.elapsedMs(); }
+      } catch(NotYetAvailableException e) { missingFrames++; }
+      catch(RuntimeException e) { log.event("depth_error",json("error",e.toString())); depthState="error"; }
+    } else missingFrames++;
+    if(snapshotDue && (depthState.equals("no_data") || depthState.equals("not_tracking") || depthState.equals("unsupported") || depthState.equals("error"))) {
+      log.event("snapshot_unavailable",json("reason",depthState,"problem",markRequested)); lastSnapshotMs=log.elapsedMs();
+    }
+    markRequested=false;
+    try { backgroundRenderer.setUseOcclusion(render,freshDepth && depthWanted); }
+    catch(IOException e) { log.event("shader_error",json("error",e.toString())); return; }
+    backgroundRenderer.setDiagnosticView(viewMode,freshDepth);
+    producerMs=(SystemClock.elapsedRealtimeNanos()-producerStart)/1_000_000.0;
+    updateDiagnostics(frame,camera,freshDepth && depthWanted);
+    if(collectRequested) {
+      collectRequested=false;
+      boolean canCollect=!depthWanted || !depthSupported || (freshDepth && selectedZ>0 && selectedRealMm>0 && selectedRealMm>=selectedZ-140);
+      if(!canCollect) {
+        log.event("collection_rejected",json("id",selectedId,"reason","occluded_or_depth_unavailable"));
+        runOnUiThread(() -> Toast.makeText(this,"Приближи избор у кадар; нема потврде видљивости",Toast.LENGTH_SHORT).show());
+      }
+      for(int i=0;i<wrappedAnchors.size();i++) if(canCollect && wrappedAnchors.get(i).id==selectedId) {
+        WrappedAnchor w=wrappedAnchors.remove(i); w.getAnchor().detach();
+        log.event("collected",json("id",w.id)); selectedId=-1;
+        runOnUiThread(() -> {
+          android.content.SharedPreferences prefs=getSharedPreferences("chrono_progress",MODE_PRIVATE);
+          prefs.edit().putInt("collected",prefs.getInt("collected",0)+1).apply();
+          setResult(RESULT_OK,new Intent().putExtra("event","artifact_collected").putExtra("sessionId",log.id));
+        }); break;
+      }
+    }
 
     // Handle one tap per frame.
     handleTap(frame, camera);
@@ -612,6 +690,7 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
       Matrix.multiplyMM(modelViewProjectionMatrix, 0, projectionMatrix, 0, modelViewMatrix, 0);
 
       // Update shader properties and draw
+      virtualObjectShader.setVec3("u_ObjectTint",objectColors[wrappedAnchor.color]);
       virtualObjectShader.setMat4("u_ModelView", modelViewMatrix);
       virtualObjectShader.setMat4("u_ModelViewProjection", modelViewProjectionMatrix);
 
@@ -637,28 +716,26 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     if (tap == null) return;
     try {
       if (camera.getTrackingState() != TrackingState.TRACKING || completing) return;
-      if (!wrappedAnchors.isEmpty()) {
-        Anchor anchor = wrappedAnchors.get(0).getAnchor();
-        if (anchor.getTrackingState() == TrackingState.TRACKING && intersectsObject(tap, camera, anchor)
-            && visibleAtTap(frame, camera, tap)) {
-          completing = true;
-          runOnUiThread(() -> {
-            if (isFinishing()) return;
-            android.content.SharedPreferences prefs = getSharedPreferences("chrono_progress", MODE_PRIVATE);
-            prefs.edit().putInt("collected", prefs.getInt("collected", 0) + 1).putFloat("lastFps", lastFps).apply();
-            setResult(RESULT_OK, new Intent().putExtra("event", "artifact_collected"));
-            finish();
-          });
+      for(WrappedAnchor wrapped:wrappedAnchors) {
+        Anchor anchor=wrapped.getAnchor();
+        if(anchor.getTrackingState()==TrackingState.TRACKING && intersectsObject(tap,camera,anchor) && visibleAtTap(frame,camera,tap)) {
+          selectedId=wrapped.id;
+          log.event("selected",json("id",selectedId));
+          return;
         }
-        return;
       }
+      if(wrappedAnchors.size()>=5) return;
       for (HitResult hit : frame.hitTest(tap)) {
         Trackable t = hit.getTrackable();
         if ((t instanceof Plane && ((Plane)t).isPoseInPolygon(hit.getHitPose())
              && PlaneRenderer.calculateDistanceToPlane(hit.getHitPose(), camera.getPose()) > 0)
              || t instanceof DepthPoint
              || (t instanceof Point && ((Point)t).getOrientationMode() == OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
-          wrappedAnchors.add(new WrappedAnchor(hit.createAnchor(), t));
+          boolean[] used=new boolean[5]; for(WrappedAnchor w:wrappedAnchors) used[w.color]=true;
+          int color=0; while(color<4 && used[color]) color++;
+          WrappedAnchor created=new WrappedAnchor(hit.createAnchor(),t,nextId++,color);
+          wrappedAnchors.add(created); selectedId=created.id;
+          log.event("placed",json("id",created.id,"color",colorNames[color],"pose",pose(created.getAnchor().getPose())));
           break;
         }
       }
@@ -704,17 +781,75 @@ public class HelloArActivity extends AppCompatActivity implements SampleRender.R
     } catch (NotYetAvailableException e) { return false; }
   }
 
-  private void updateDiagnostics(Camera camera, boolean depth) {
-    long now=SystemClock.elapsedRealtime();
-    if (statsStart == 0) statsStart=now;
-    statsFrames++;
-    if (now-statsStart < 1000) return;
-    lastFps=statsFrames*1000f/(now-statsStart); statsStart=now; statsFrames=0;
-    String track=camera.getTrackingState()==TrackingState.TRACKING ? "ПРАЋЕЊЕ" : "ТРАЖИ ПРОСТОР";
-    String ds=!depthSupported ? "Depth: неподржан" : !depthWanted ? "Depth: искључен" : depth ? "Depth: активан" : "Depth: чека податке";
-    String instruction=wrappedAnchors.isEmpty() ? "Додирни површину за постављање" : "Додирни предмет да га преузмеш";
-    String text=String.format(java.util.Locale.ROOT,"%s · %.0f FPS\n%s\n%s",track,lastFps,ds,instruction);
-    runOnUiThread(() -> { if (!isFinishing()) diagnostics.setText(text); });
+  private static JSONObject pose(com.google.ar.core.Pose p) {
+    return json("translation",DiagnosticSession.array(p.getTranslation()),"quaternion",DiagnosticSession.array(p.getRotationQuaternion()));
+  }
+  private int depthAt(Frame frame,Image image,float x,float y) {
+    if(x<0 || y<0 || x>=surfaceView.getWidth() || y>=surfaceView.getHeight()) return -1;
+    float[] uv=new float[2];
+    frame.transformCoordinates2d(Coordinates2d.VIEW,new float[]{x,y},Coordinates2d.TEXTURE_NORMALIZED,uv);
+    if(uv[0]<0 || uv[0]>=1 || uv[1]<0 || uv[1]>=1) return -1;
+    Image.Plane p=image.getPlanes()[0];
+    return p.getBuffer().order(ByteOrder.LITTLE_ENDIAN).getShort((int)(uv[1]*image.getHeight())*p.getRowStride()+(int)(uv[0]*image.getWidth())*p.getPixelStride())&0xffff;
+  }
+  private void captureDepth(Frame frame,Camera camera,Image image,String reason) {
+    if(!log.acceptsSnapshot()) { log.event("snapshot_rejected",json("reason","queue_or_session_limit")); return; }
+    int w=image.getWidth(),h=image.getHeight(); Image.Plane p=image.getPlanes()[0];
+    byte[] bytes=new byte[w*h*2]; ByteBuffer buffer=p.getBuffer();
+    for(int y=0;y<h;y++) for(int x=0;x<w;x++) {
+      int from=y*p.getRowStride()+x*p.getPixelStride(), to=(y*w+x)*2;
+      bytes[to]=buffer.get(from); bytes[to+1]=buffer.get(from+1);
+    }
+    float[] ndc={-1,-1,1,-1,-1,1,1,1}, uv=new float[8];
+    frame.transformCoordinates2d(Coordinates2d.OPENGL_NORMALIZED_DEVICE_COORDINATES,ndc,Coordinates2d.TEXTURE_NORMALIZED,uv);
+    float[] v=new float[16],proj=new float[16]; camera.getViewMatrix(v,0); camera.getProjectionMatrix(proj,0,Z_NEAR,Z_FAR);
+    log.snapshot(bytes,json("reason",reason,"width",w,"height",h,"format","uint16_le","unit","mm","invalidValue",0,
+        "sourceFormat",image.getFormat(),"sourceRowStride",p.getRowStride(),"sourcePixelStride",p.getPixelStride(),"packedRowStride",w*2,
+        "frameTimestampNs",frame.getTimestamp(),"depthTimestampNs",image.getTimestamp(),"depthAgeMs",depthAge,
+        "captureElapsedMs",log.elapsedMs(),"fresh",depthState.equals("active"),"cameraPose",pose(camera.getPose()),
+        "viewMatrixColumnMajor",DiagnosticSession.array(v),"projectionMatrixColumnMajor",DiagnosticSession.array(proj),
+        "ndcQuad",DiagnosticSession.array(ndc),"textureUvQuad",DiagnosticSession.array(uv),
+        "displayRotation",getWindowManager().getDefaultDisplay().getRotation(),"viewportWidth",surfaceView.getWidth(),"viewportHeight",surfaceView.getHeight(),
+        "imageIntrinsics",json("focalLength",DiagnosticSession.array(camera.getImageIntrinsics().getFocalLength()),"principalPoint",DiagnosticSession.array(camera.getImageIntrinsics().getPrincipalPoint())),
+        "confidence",null,"confidenceReason","filtered depth; raw confidence not acquired"));
+  }
+  private void updateDiagnostics(Frame frame,Camera camera,boolean occlusion) {
+    long now=SystemClock.elapsedRealtimeNanos();
+    if(lastFrameNs!=0) { double ms=(now-lastFrameNs)/1_000_000.0; frameSum+=ms; frameMax=Math.max(frameMax,ms); frameCount++; if(ms>50) slowFrames++; }
+    lastFrameNs=now;
+    String tracking=camera.getTrackingState()+":"+camera.getTrackingFailureReason();
+    if(!tracking.equals(lastTracking)) { log.event("tracking",json("state",camera.getTrackingState().toString(),"reason",camera.getTrackingFailureReason().toString())); lastTracking=tracking; }
+    if(sampleNs==0) { sampleNs=now; return; }
+    if(now-sampleNs<1_000_000_000L) return;
+    lastFps=(float)(frameCount*1e9/(now-sampleNs));
+    JSONArray anchors=new JSONArray(),pairs=new JSONArray();
+    if(log.detailed) {
+      for(WrappedAnchor a:wrappedAnchors) anchors.put(json("id",a.id,"color",colorNames[a.color],"tracking",a.getAnchor().getTrackingState().toString(),"pose",pose(a.getAnchor().getPose())));
+      for(int i=0;i<wrappedAnchors.size();i++) for(int j=i+1;j<wrappedAnchors.size();j++) {
+        WrappedAnchor a=wrappedAnchors.get(i),b=wrappedAnchors.get(j);
+        float[] at=a.getAnchor().getPose().getTranslation(),bt=b.getAnchor().getPose().getTranslation(); double d=0;
+        for(int k=0;k<3;k++) d+=(at[k]-bt[k])*(at[k]-bt[k]);
+        pairs.put(json("a",a.id,"b",b.id,"meters",Math.sqrt(d),"bothTracking",a.getAnchor().getTrackingState()==TrackingState.TRACKING&&b.getAnchor().getTrackingState()==TrackingState.TRACKING));
+      }
+    }
+    double mean=frameCount==0?0:frameSum/frameCount;
+    JSONObject data=json("fps",lastFps,"frameMeanMs",mean,"frameMaxMs",frameMax,"slowOver50Ms",slowFrames,
+      "frameTimestampNs",frame.getTimestamp(),"depthAgeMs",depthAge<0?null:depthAge,"depthState",depthState,
+      "occlusion",occlusion,"occlusionReason",!depthWanted?"user_disabled":depthState,"centerMm",centerMm<=0?null:centerMm,
+      "selectedId",selectedId,"objectZMm",selectedZ<=0?null:selectedZ,"realAtObjectMm",selectedRealMm<=0?null:selectedRealMm,
+      "cameraPose",log.detailed?pose(camera.getPose()):null,"anchors",anchors,"pairs",pairs,
+      "tracking",tracking,"missingFrames",missingFrames,"staleFrames",staleFrames,"detailed",log.detailed,"producerMs",producerMs);
+    String row=String.format(java.util.Locale.ROOT,"%.2f,%.3f,%.3f,%d,%s,%s,%s,%s,%s,%d,%d,%d,%s,%.3f",lastFps,mean,frameMax,slowFrames,
+      depthAge<0?"":Double.toString(depthAge),depthState,occlusion,centerMm<=0?"":Double.toString(centerMm),selectedZ<=0?"":Double.toString(selectedZ),wrappedAnchors.size(),missingFrames,staleFrames,log.detailed,producerMs);
+    log.sample(data,row);
+    String selected="нема"; for(WrappedAnchor w:wrappedAnchors) if(w.id==selectedId) selected="#"+w.id+" "+colorNames[w.color];
+    String text=String.format(java.util.Locale.ROOT,
+      "%s · %.1f s · %.0f FPS\n%s\nДубина: %s · старост %s ms · заклањање %s\nЦентар +: %s mm | избор %s\nZ предмета: %s mm | стварно ту: %s mm\n0 m плаво → 2.5 m зелено → ≥5 m црвено\nШаховница: нема важеће дубине · %d/5 предмета\n%s · губитак реда %d",
+      log.id.substring(0,8),log.elapsedMs()/1000.0,lastFps,tracking,depthState,depthAge<0?"—":String.format(java.util.Locale.ROOT,"%.0f",depthAge),occlusion?"ДА":"НЕ",
+      centerMm<=0?"—":String.format(java.util.Locale.ROOT,"%.0f",centerMm),selected,
+      selectedZ<=0?"—":String.format(java.util.Locale.ROOT,"%.0f",selectedZ),selectedRealMm<=0?"—":String.format(java.util.Locale.ROOT,"%.0f",selectedRealMm),wrappedAnchors.size(),log.status,log.dropped.get());
+    runOnUiThread(() -> { if(!isFinishing()) diagnostics.setText(text); });
+    sampleNs=now; frameCount=0; frameSum=0; frameMax=0; slowFrames=0;
   }
 
   /**
@@ -906,7 +1041,9 @@ class WrappedAnchor {
   private Anchor anchor;
   private Trackable trackable;
 
-  public WrappedAnchor(Anchor anchor, Trackable trackable) {
+  final int id, color;
+  public WrappedAnchor(Anchor anchor, Trackable trackable,int id,int color) {
+    this.id=id; this.color=color;
     this.anchor = anchor;
     this.trackable = trackable;
   }

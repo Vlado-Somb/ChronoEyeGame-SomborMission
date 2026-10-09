@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ChronoEye diagnostic event v1",
+  "type": "object",
+  "required": [
+    "elapsedMs",
+    "type",
+    "data"
+  ],
+  "properties": {
+    "sessionId": {
+      "type": "string"
+    },
+    "elapsedMs": {
+      "type": "number",
+      "minimum": 0
+    },
+    "type": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

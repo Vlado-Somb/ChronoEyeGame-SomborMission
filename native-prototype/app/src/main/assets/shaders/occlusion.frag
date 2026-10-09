@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-precision mediump float;
+precision highp float;
 
 // The virtual scene as rendered to a texture via a framebuffer. This will be
 // composed with the background image depending on which modes were set in
@@ -72,6 +72,7 @@ float Depth_GetVirtualSceneDepthMillimeters(const sampler2D depthTexture,
 float Depth_GetOcclusion(const sampler2D depthTexture, const vec2 depthUv,
                          float assetDepthMm) {
   float depthMm = Depth_GetCameraDepthInMillimeters(depthTexture, depthUv);
+  if (depthMm < 0.5 || assetDepthMm <= 0.0) return 0.0; // Missing is not a physical occluder.
 
   // Instead of a hard z-buffer test, allow the asset to fade into the
   // background along a 2 * kDepthTolerancePerMm * assetDepthMm

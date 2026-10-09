@@ -1,54 +1,46 @@
-# ChronoEye AR Lab 0.1.0
+# ChronoEye AR Lab 0.2.0
 
-Први Android прототип: локални веб интерфејс + изворни ARCore приказ. Unity није потребан. Стари пројекат се не мења.
+Дијагностички Android прототип за следећи S25 Ultra тест. Нова верзија има
+камера/heatmap/overlay, независно заклањање, до пет обојених предмета, временски
+усклађене приватне логове и depth снимке, и ZIP дељење из AR екрана.
 
-## Тест на телефону
+- [Кратко упутство за тест](docs/FIELD_TEST_SR.md)
+- [Шема и ограничења дијагностике](docs/LOG_SCHEMA.md)
+- [Одлуке / интеграционе тачке](docs/DECISION_LOG.md)
+- [Провере и стварни статус](docs/VALIDATION.md)
+- [Offline анализатор](tools/analyze.py)
 
-1. Инсталирати APK и отворити „ChronoEye · AR Lab“.
-2. „Отвори AR камеру“, одобрити камеру; ажурирати Google Play Services for AR ако Android затражи.
-3. Полако померити телефон у добро осветљеном простору и додирнути препознат под или сто.
-4. Обићи кристал (око 22 cm). Пробати заклањање непрозирним предметом и упоредити Depth укључен/искључен.
-5. Додирнути видљиви кристал: повратак у интерфејс, сачуван резултат. „Назад“ напушта AR без преузимања. „Постави поново“ уклања стари кристал.
-6. Поновити отварање/затварање камере пет пута, затим пробати 10–15 минута AR приказа. Забележити FPS на почетку/крају, загревање, кашњење додира и прекиде камере.
-
-Depth ради само на подржаном уређају. Ако пише да чека податке, померити телефон. Стара мапа дубине се не користи; ако свежа дубина недостаје, заклањање се прескаче, а преузимање уз укључен Depth чека важећу дубину на месту додира. Искључен Depth омогућава основни тест интеракције. Избор је приближан пресек зрака са сфером око кристала, уз проверу дубине; није избор појединачних троуглова.
-
-## Обим
-
-Ово је локални anchor. При новом отварању камере предмет се поставља поново. GPS, VPS/Geospatial anchors, Streetscape, Cesium, фасаде и сомборске мисије нису укључени у 0.1.0. Овај тест проверава паковање, native AR, Depth, интеракцију и повратак резултата у веб интерфејс. Стварна прецизност, камера, загревање и FPS захтевају физички телефон.
-
-Пакет `rs.chronoeye.prototype` не замењује стару Unity игру. Напредак је локалан. Нема снимања камере нити слања дијагностике. Библиотеке Google Play Services for AR имају сопствено системско понашање.
+Нема аутоматског upload-а нити снимања RGB/аудија. Обавезно поделити дијагностику
+пре напуштања текућег AR екрана. Локална сидра се не чувају после затварања.
+Код је припремљен за тест; теренска исправност није потврђена изградњом APK-а.
 
 ## Изградња
 
-JDK 17 са javac; Android SDK platform 35 + build-tools 35.0.0; Python 3 за проверено преузимање изворних Google бинарних ресурса.
+JDK 17, Android SDK 35 + build-tools 35.0.0, Python 3.
 
 ```
 python3 prepare_assets.py
 ./gradlew :app:assembleDebug :app:lintDebug
+python3 -m unittest discover -s tools -v
 ```
 
-Windows: `python prepare_assets.py`, затим `gradlew.bat :app:assembleDebug :app:lintDebug`.
+Излаз: `app/build/outputs/apk/debug/app-debug.apk`. Debug потпис зависи од машине;
+други потпис може захтевати деинсталацију старог тестног APK-а (брише податке).
+Ниједан signing key или приватни endpoint credential није у јавном репозиторијуму.
 
-SDK путања: `ANDROID_HOME` или локални `local.properties` (`sdk.dir=...`). Излаз је `app/build/outputs/apk/debug/app-debug.apk`. За Android Studio отворити овај директоријум након `prepare_assets.py`.
+Верзије: Gradle 8.11.1, AGP 8.9.1, Kotlin 2.1.0, ARCore 1.56.0. ARM64,
+Android 8+, OpenGL ES 3.0. Пакет `rs.chronoeye.prototype`.
 
-Debug потпис зависи од машине; APK са другим потписом може захтевати деинсталацију претходне debug верзије. За редовне надоградње касније обезбедити стабилан приватни signing key.
+## Границе и порекло
 
-Верзије: Gradle 8.11.1, AGP 8.9.1, Kotlin 2.1.0, ARCore 1.56.0. ARM64, Android 8+, OpenGL ES 3.0, ARCore подржан телефон.
+Задржан постојећи ограничени WebView/native мост и Activity result; пуни
+оркестратор, мапе, GPS/VPS, Streetscape, мисије и Unity нису део ове измене.
 
-## Архитектура
+Google ARCore Android SDK `samples/hello_ar_java`, commit
+`3abfeb18669c2cbb2d07057f135d117ee9d91826`, Apache-2.0:
+https://github.com/google-ar/arcore-android-sdk . Видети `LICENSE-GOOGLE-ARCORE.txt`.
+Бинарни ресурси и wrapper имају SHA-256 проверу у `prepare_assets.py`.
 
-- `app/src/main/assets/web/`: HTML/CSS/JS интерфејс.
-- `.../java/com/chronoeye/prototype/MainActivity.kt`: Kotlin љуска, локални WebView и ограничени мост.
-- `.../java/com/google/ar/core/examples/java/helloar/HelloArActivity.java`: AR сесија, приказ, један anchor, интеракција и дијагностика.
-- `.../common/samplerender/`: Google OpenGL/Depth основа.
-
-Камера и кадрови остају у изворном модулу. Камера се паузира при напуштању AR екрана, а сесија се затвара при његовом уништавању. Резултат се чува једном пре повратка. FPS је једносекундни узорак приказа.
-
-Прототип користи директан WebView мост; Capacitor још није уведен. При развоју пуног веб дела може заменити љуску и задржати AR Activity. Следе: GPS независан од камере; Geospatial/VPS ауторизација, мерење прецизности и поновна локализација; Streetscape/Depth и ручне маске заклањања; једна цела сомборска мисија; фасаде и историјски модели.
-
-## Порекло
-
-Google ARCore Android SDK `samples/hello_ar_java`, commit `3abfeb18669c2cbb2d07057f135d117ee9d91826`, Apache-2.0: https://github.com/google-ar/arcore-android-sdk . Лиценце су у `LICENSE-GOOGLE-ARCORE.txt`. Задржана су изворна обавештења о ауторству. Бинарни ресурси и Gradle wrapper се преузимају са тог фиксног commit-а и проверавају SHA-256 пре употребе.
-
-ChronoEye измене: љуска, интерфејс, кристал, напредак, дијагностика, свежина дубине, исправно власништво MotionEvent објеката, ограничење на један anchor и уклањање приказа point cloud-а.
+Праг свежине 100 ms остаје. Нове корекције: stride-aware DEPTH16 upload,
+нулта дубина не заклања, исправан почетни aspect ratio, nearest byte sampling,
+унапред припремљени shader-и. Ово нису тврдње о узроку ранијег теренског проблема.
