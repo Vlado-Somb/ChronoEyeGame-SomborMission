@@ -1,1 +1,309 @@
-{"schemaVersion":1,"collectionName":"Herbarijum Sombora","categories":[{"id":"relic","label":"Veliki tragovi","color":"#C9944A","rarity":"mission_unique","scoring":{"points":0,"note":"Mission completion bonus is awarded once, relic is the collectible record and does not duplicate the mission score."},"repeatable":false,"unlock":"complete_main_mission","uiGroup":"Spomenari","items":[{"id":"gk-tower-relic","name":"Toranj Gradske kuće","missionId":"sombor-gk","rarity":"unique","asset":"assets/gk-tower-token.svg","caption":"Toranj, pročelje i 1842. — prvi veliki trag gradskog pamćenja.","historicalFact":"Natpis MDCCCXLII označava 1842. godinu."},{"id":"mkg-palette-relic","name":"Paleta genija boja","missionId":"sombor-mkg","rarity":"unique","asset":"assets/mkg-palette-relic.svg","caption":"Tri faze umetničkog putovanja: plava, crvena i siva. Sombor čuva poklon od 500 radova.","historicalFact":"Galerija „Milan Konjović” otvorena je 10. septembra 1966, uz početni legat od 500 dela.","source":"https://visitsombor.org/ponuda/id56/culture/art-studios-and-ateliers/gallery-milan-konjovic.html"},{"id":"psm-memory-key-relic","name":"Ključ sećanja","missionId":"sombor-psm","rarity":"unique","asset":"assets/psm-memory-key-relic.svg","caption":"Simbolični ključ za priče mnogih porodica, nije istorijski predmet.","historicalFact":"Muzej podunavskih Švaba osnovan je 9. jula 2019.","source":"https://myheritageguide.com/sr/object/stari-zanati-2/"},{"id":"nps-promptbook-relic","name":"Knjiga replika","missionId":"sombor-nps","rarity":"unique","asset":"assets/nps-promptbook-relic.svg","caption":"Simbolicna knjiga, ne istorijski eksponat.","historicalFact":"Prva predstava u zgradi odigrana je 25. novembra 1882.","source":"https://www.npozoristeso.co.rs/info/o-nama.html"},{"id":"vp-feather-relic","name":"Pero povratka","missionId":"sombor-vp","rarity":"unique","asset":"assets/vp-feather-relic.svg","caption":"Izmišljeno pero simbolizuje povratak priče u grad, nije Petrovićev istorijski predmet.","historicalFact":"Veljko Petrović rođen je 1884. u Somboru, a spomenik sa golubicom otkriven je 2017.","source":"https://www.025.rs/otkriven-spomenik-veljku-petrovicu/","scoring":{"points":0,"awardOnce":true}},{"id":"zup-three-times-key-relic","name":"Ključ tri vremena","missionId":"sombor-zup","rarity":"unique","asset":"assets/zup-three-times-key-relic.svg","caption":"Izmišljeni ključ razlikovanja događaja 1697, slike 1896. i postavke 1898; nije istorijski predmet.","historicalFact":"Bitka kod Sente 1697, Ajzenhutova slika 1896, postavljena u Županiji 1898.","source":"https://www.ravnoplov.rs/bitka-kod-sente-nasa-najveca-slika/","scoring":{"points":0,"awardOnce":true}},{"id":"eb-dream-filmstrip-relic","name":"Filmska traka","missionId":"sombor-eb","asset":"assets/eb-film-relic.svg"}]},{"id":"golden_seal","label":"Zlatni gradski pečati","color":"#E3AC32","rarity":"common","repeatable":true,"scoring":{"pointsPerPickup":2,"dailyCap":10,"requiresUniqueSpawnId":true},"unlock":"discover_in_safe_gps_area_or_ar_scene","uiGroup":"Pečati","appearance":{"asset":"assets/gold-city-seal.svg","inspiration":"Simplified original graphic inspired by the 1749 free-royal-city seal — not a facsimile","verifyAgainst":"https://www.ravnoplov.rs/grb-sombora/"},"content":{"microStories":true,"examples":[{"id":"gold-gk-001","waypointId":"SO_GK","text":"Sombor je 1749. dobio status slobodnog i kraljevskog grada.","source":"https://www.arhivsombor.org.rs/povelja/povela-slobodnog-kralevskog-grada"},{"id":"gold-gk-002","waypointId":"SO_GK","text":"Na pročelju Gradske kuće možeš pročitati rimski zapis MDCCCXLII.","source":"https://vojvodina.travel/atrakcije/gradska-kuca-sombor/"},{"id":"gold-mkg-001","waypointId":"SO_MKG","text":"Galerija „Milan Konjović” svečano je otvorena 10. septembra 1966. godine.","source":"https://visitsombor.org/ponuda/id56/culture/art-studios-and-ateliers/gallery-milan-konjovic.html"},{"id":"gold-mkg-002","waypointId":"SO_MKG","text":"Konjović je Somboru poklonio početni legat od 500 svojih radova.","source":"https://srpskaenciklopedija.rs/books/slovo-g/page/galerija-milan-konjovic"},{"id":"gold-psm-001","waypointId":"SO_PŠM","text":"Grašalkovićeva palata služila je komorskoj upravi i prihvatu doseljenika.","source":"https://vojvodina.travel/atrakcije/grasalkoviceva-palata-sombor/"},{"id":"gold-psm-002","waypointId":"SO_PŠM","text":"Muzej podunavskih Švaba osnovan je 9. jula 2019.","source":"https://myheritageguide.com/sr/object/stari-zanati-2/"},{"id":"gold-nps-001","waypointId":"SO_NPS","text":"Prva predstava u pozorisnoj zgradi odigrana je 25. novembra 1882.","source":"https://www.npozoristeso.co.rs/info/o-nama.html"},{"id":"gold-nps-002","waypointId":"SO_NPS","text":"Profesionalni ansambl deluje od 1946, a naziv Narodno pozoriste nosi od 1952.","source":"https://www.npozoristeso.co.rs/info/o-nama.html"},{"id":"gold-vp-001","waypointId":"SO_VP","text":"Godine 1902. Veljko Petrović otišao je u Budimpeštu, gde je studirao pravo i bio pitomac Tekelijanuma.","source":"https://www.digitalizacija.ns.rs/lat/veljko-petrovic/tab-os-informacije"},{"id":"gold-vp-002","waypointId":"SO_VP","text":"Spomenik Veljku Petroviću sa golubicom, delo Igora Šetera, otkriven je 15. decembra 2017. ispred biblioteke „Karlo Bijelicki“.","source":"https://www.025.rs/otkriven-spomenik-veljku-petrovicu/"},{"id":"gold-zup-001","waypointId":"SO_ŽUP","text":"Sombor je 1786. postao sedište Bačko-bodroške županije.","source":"https://www.ravnoplov.rs/zdanje-zupanije-u-somboru/"},{"id":"gold-zup-002","waypointId":"SO_ŽUP","text":"Zgrada je proširena i preoblikovana 1882. prema projektu Đule Partoša.","source":"https://www.soinfo.org/vesti/vest/19149/sledi-rekonstrukcija-atrijuma-zupanije/"}]}},{"id":"heart","label":"Srca Sombora","color":"#E87791","rarity":"uncommon","repeatable":false,"scoring":{"pointsPerNewItem":3},"unlock":"romantic_story_discovery","uiGroup":"Srca","asset":"assets/heart-token.svg","example":"Srce uz priču o poeziji i ljubavi; sadržaj za Lazu Kostića ide uz Santa Maria della Salute."},{"id":"joker","label":"Šaljivi tragovi","color":"#9E74CE","rarity":"rare","repeatable":false,"scoring":{"pointsPerNewItem":1},"unlock":"discover_playful_interaction","uiGroup":"Džokeri","asset":"assets/joker-token.svg","rule":"Humor clearly fictional, not a false historical fact; future court-jester themed micro-scenes.","items":[{"id":"joker-mkg-001","name":"Pobegla mrlja","waypointId":"SO_MKG","asset":"assets/joker-token.svg","caption":"Jedna nestašna kap boje pobegla je sa palete! Uhvati je pre nego što oboji i tvoj ekran.","contentType":"fictional_playful","truthNote":"Izmišljena humoristička scena, ne istorijska činjenica.","rarity":"uncommon","repeatable":false},{"id":"joker-nps-001","name":"Zaboravljena replika","waypointId":"SO_NPS","asset":"assets/joker-token.svg","caption":"Izmisljeni saptac je zaboravio repliku, a publika je vec tu!","contentType":"fictional_playful","truthNote":"Autorska sala, nije istorijska cinjenica.","repeatable":false},{"id":"joker-vp-001","name":"Golubica bez karte","waypointId":"SO_VP","asset":"assets/joker-token.svg","caption":"Golubica je krenula u Peštu bez karte. U ovoj igri može da leti kroz vreme!","contentType":"fictional_playful","truthNote":"Autorska šala, nije istorijska činjenica.","rarity":"uncommon","repeatable":false}]}],"spawnRules":{"safePedestrianOnly":true,"noCollectiblesOnRoads":true,"proximityEligibleOnly":true,"maxVisibleAtOnce":3,"optional":true,"allow2DCollection":true,"avoidDuplicateAwardsOnReload":true,"collectionProgressStoredPerPlayer":true},"initialGkPlacementPlan":{"main":{"id":"gk-tower-relic","when":"after_GK_02_correct"},"gold":[{"id":"gold-gk-001","when":"after_safe_arrival_and_mentor_intro"},{"id":"gold-gk-002","when":"after_ar_target_confirmed"}],"heart":[],"joker":[]}}
+{
+  "schemaVersion": 1,
+  "collectionName": "Herbarijum Sombora",
+  "categories": [
+    {
+      "id": "relic",
+      "label": "Veliki tragovi",
+      "color": "#C9944A",
+      "rarity": "mission_unique",
+      "scoring": {
+        "points": 0,
+        "note": "Mission completion bonus is awarded once, relic is the collectible record and does not duplicate the mission score."
+      },
+      "repeatable": false,
+      "unlock": "complete_main_mission",
+      "uiGroup": "Spomenari",
+      "items": [
+        {
+          "id": "gk-tower-relic",
+          "name": "Toranj Gradske kuće",
+          "missionId": "sombor-gk",
+          "rarity": "unique",
+          "asset": "assets/gk-tower-token.svg",
+          "caption": "Toranj, pročelje i 1842. — prvi veliki trag gradskog pamćenja.",
+          "historicalFact": "Natpis MDCCCXLII označava 1842. godinu."
+        },
+        {
+          "id": "mkg-palette-relic",
+          "name": "Paleta genija boja",
+          "missionId": "sombor-mkg",
+          "rarity": "unique",
+          "asset": "assets/mkg-palette-relic.svg",
+          "caption": "Tri faze umetničkog putovanja: plava, crvena i siva. Sombor čuva poklon od 500 radova.",
+          "historicalFact": "Galerija „Milan Konjović” otvorena je 10. septembra 1966, uz početni legat od 500 dela.",
+          "source": "https://visitsombor.org/ponuda/id56/culture/art-studios-and-ateliers/gallery-milan-konjovic.html"
+        },
+        {
+          "id": "psm-memory-key-relic",
+          "name": "Ključ sećanja",
+          "missionId": "sombor-psm",
+          "rarity": "unique",
+          "asset": "assets/psm-memory-key-relic.svg",
+          "caption": "Simbolični ključ za priče mnogih porodica, nije istorijski predmet.",
+          "historicalFact": "Muzej podunavskih Švaba osnovan je 9. jula 2019.",
+          "source": "https://myheritageguide.com/sr/object/stari-zanati-2/"
+        },
+        {
+          "id": "nps-promptbook-relic",
+          "name": "Knjiga replika",
+          "missionId": "sombor-nps",
+          "rarity": "unique",
+          "asset": "assets/nps-promptbook-relic.svg",
+          "caption": "Simbolicna knjiga, ne istorijski eksponat.",
+          "historicalFact": "Prva predstava u zgradi odigrana je 25. novembra 1882.",
+          "source": "https://www.npozoristeso.co.rs/info/o-nama.html"
+        },
+        {
+          "id": "vp-feather-relic",
+          "name": "Pero povratka",
+          "missionId": "sombor-vp",
+          "rarity": "unique",
+          "asset": "assets/vp-feather-relic.svg",
+          "caption": "Izmišljeno pero simbolizuje povratak priče u grad, nije Petrovićev istorijski predmet.",
+          "historicalFact": "Veljko Petrović rođen je 1884. u Somboru, a spomenik sa golubicom otkriven je 2017.",
+          "source": "https://www.025.rs/otkriven-spomenik-veljku-petrovicu/",
+          "scoring": {
+            "points": 0,
+            "awardOnce": true
+          }
+        },
+        {
+          "id": "zup-three-times-key-relic",
+          "name": "Ključ tri vremena",
+          "missionId": "sombor-zup",
+          "rarity": "unique",
+          "asset": "assets/zup-three-times-key-relic.svg",
+          "caption": "Izmišljeni ključ razlikovanja događaja 1697, slike 1896. i postavke 1898; nije istorijski predmet.",
+          "historicalFact": "Bitka kod Sente 1697, Ajzenhutova slika 1896, postavljena u Županiji 1898.",
+          "source": "https://www.ravnoplov.rs/bitka-kod-sente-nasa-najveca-slika/",
+          "scoring": {
+            "points": 0,
+            "awardOnce": true
+          }
+        },
+        {
+          "id": "eb-dream-filmstrip-relic",
+          "name": "Filmska traka",
+          "missionId": "sombor-eb",
+          "asset": "assets/eb-film-relic.svg",
+          "rarity": "unique",
+          "caption": "Simbolična filmska traka neostvarenog studija, nije autentičan Bošnjakov predmet.",
+          "historicalFact": "Ernest Bošnjak počeo je snimati filmove 1909. godine.",
+          "scoring": {
+            "points": 0,
+            "awardOnce": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "golden_seal",
+      "label": "Zlatni gradski pečati",
+      "color": "#E3AC32",
+      "rarity": "common",
+      "repeatable": true,
+      "scoring": {
+        "pointsPerPickup": 2,
+        "dailyCap": 10,
+        "requiresUniqueSpawnId": true
+      },
+      "unlock": "discover_in_safe_gps_area_or_ar_scene",
+      "uiGroup": "Pečati",
+      "appearance": {
+        "asset": "assets/gold-city-seal.svg",
+        "inspiration": "Simplified original graphic inspired by the 1749 free-royal-city seal — not a facsimile",
+        "verifyAgainst": "https://www.ravnoplov.rs/grb-sombora/"
+      },
+      "content": {
+        "microStories": true,
+        "examples": [
+          {
+            "id": "gold-gk-001",
+            "waypointId": "SO_GK",
+            "text": "Sombor je 1749. dobio status slobodnog i kraljevskog grada.",
+            "source": "https://www.arhivsombor.org.rs/povelja/povela-slobodnog-kralevskog-grada"
+          },
+          {
+            "id": "gold-gk-002",
+            "waypointId": "SO_GK",
+            "text": "Na pročelju Gradske kuće možeš pročitati rimski zapis MDCCCXLII.",
+            "source": "https://vojvodina.travel/atrakcije/gradska-kuca-sombor/"
+          },
+          {
+            "id": "gold-mkg-001",
+            "waypointId": "SO_MKG",
+            "text": "Galerija „Milan Konjović” svečano je otvorena 10. septembra 1966. godine.",
+            "source": "https://visitsombor.org/ponuda/id56/culture/art-studios-and-ateliers/gallery-milan-konjovic.html"
+          },
+          {
+            "id": "gold-mkg-002",
+            "waypointId": "SO_MKG",
+            "text": "Konjović je Somboru poklonio početni legat od 500 svojih radova.",
+            "source": "https://srpskaenciklopedija.rs/books/slovo-g/page/galerija-milan-konjovic"
+          },
+          {
+            "id": "gold-psm-001",
+            "waypointId": "SO_PŠM",
+            "text": "Grašalkovićeva palata služila je komorskoj upravi i prihvatu doseljenika.",
+            "source": "https://vojvodina.travel/atrakcije/grasalkoviceva-palata-sombor/"
+          },
+          {
+            "id": "gold-psm-002",
+            "waypointId": "SO_PŠM",
+            "text": "Muzej podunavskih Švaba osnovan je 9. jula 2019.",
+            "source": "https://myheritageguide.com/sr/object/stari-zanati-2/"
+          },
+          {
+            "id": "gold-nps-001",
+            "waypointId": "SO_NPS",
+            "text": "Prva predstava u pozorisnoj zgradi odigrana je 25. novembra 1882.",
+            "source": "https://www.npozoristeso.co.rs/info/o-nama.html"
+          },
+          {
+            "id": "gold-nps-002",
+            "waypointId": "SO_NPS",
+            "text": "Profesionalni ansambl deluje od 1946, a naziv Narodno pozoriste nosi od 1952.",
+            "source": "https://www.npozoristeso.co.rs/info/o-nama.html"
+          },
+          {
+            "id": "gold-vp-001",
+            "waypointId": "SO_VP",
+            "text": "Godine 1902. Veljko Petrović otišao je u Budimpeštu, gde je studirao pravo i bio pitomac Tekelijanuma.",
+            "source": "https://www.digitalizacija.ns.rs/lat/veljko-petrovic/tab-os-informacije"
+          },
+          {
+            "id": "gold-vp-002",
+            "waypointId": "SO_VP",
+            "text": "Spomenik Veljku Petroviću sa golubicom, delo Igora Šetera, otkriven je 15. decembra 2017. ispred biblioteke „Karlo Bijelicki“.",
+            "source": "https://www.025.rs/otkriven-spomenik-veljku-petrovicu/"
+          },
+          {
+            "id": "gold-zup-001",
+            "waypointId": "SO_ŽUP",
+            "text": "Sombor je 1786. postao sedište Bačko-bodroške županije.",
+            "source": "https://www.ravnoplov.rs/zdanje-zupanije-u-somboru/"
+          },
+          {
+            "id": "gold-zup-002",
+            "waypointId": "SO_ŽUP",
+            "text": "Zgrada je proširena i preoblikovana 1882. prema projektu Đule Partoša.",
+            "source": "https://www.soinfo.org/vesti/vest/19149/sledi-rekonstrukcija-atrijuma-zupanije/"
+          },
+          {
+            "id": "gold-eb-001",
+            "waypointId": "SO_EB",
+            "text": "Ernest Bošnjak vratio se u Sombor 1906. i doprineo razvoju filmskih projekcija.",
+            "source": "https://www.ravnoplov.rs/"
+          },
+          {
+            "id": "gold-eb-002",
+            "waypointId": "SO_EB",
+            "text": "Ernest Bošnjak je 1909. počeo da snima filmove; filmski studio ostao je neostvaren plan.",
+            "source": "https://www.ravnoplov.rs/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "heart",
+      "label": "Srca Sombora",
+      "color": "#E87791",
+      "rarity": "uncommon",
+      "repeatable": false,
+      "scoring": {
+        "pointsPerNewItem": 3
+      },
+      "unlock": "romantic_story_discovery",
+      "uiGroup": "Srca",
+      "asset": "assets/heart-token.svg",
+      "example": "Srce uz priču o poeziji i ljubavi; sadržaj za Lazu Kostića ide uz Santa Maria della Salute."
+    },
+    {
+      "id": "joker",
+      "label": "Šaljivi tragovi",
+      "color": "#9E74CE",
+      "rarity": "rare",
+      "repeatable": false,
+      "scoring": {
+        "pointsPerNewItem": 1
+      },
+      "unlock": "discover_playful_interaction",
+      "uiGroup": "Džokeri",
+      "asset": "assets/joker-token.svg",
+      "rule": "Humor clearly fictional, not a false historical fact; future court-jester themed micro-scenes.",
+      "items": [
+        {
+          "id": "joker-mkg-001",
+          "name": "Pobegla mrlja",
+          "waypointId": "SO_MKG",
+          "asset": "assets/joker-token.svg",
+          "caption": "Jedna nestašna kap boje pobegla je sa palete! Uhvati je pre nego što oboji i tvoj ekran.",
+          "contentType": "fictional_playful",
+          "truthNote": "Izmišljena humoristička scena, ne istorijska činjenica.",
+          "rarity": "uncommon",
+          "repeatable": false
+        },
+        {
+          "id": "joker-nps-001",
+          "name": "Zaboravljena replika",
+          "waypointId": "SO_NPS",
+          "asset": "assets/joker-token.svg",
+          "caption": "Izmisljeni saptac je zaboravio repliku, a publika je vec tu!",
+          "contentType": "fictional_playful",
+          "truthNote": "Autorska sala, nije istorijska cinjenica.",
+          "repeatable": false
+        },
+        {
+          "id": "joker-vp-001",
+          "name": "Golubica bez karte",
+          "waypointId": "SO_VP",
+          "asset": "assets/joker-token.svg",
+          "caption": "Golubica je krenula u Peštu bez karte. U ovoj igri može da leti kroz vreme!",
+          "contentType": "fictional_playful",
+          "truthNote": "Autorska šala, nije istorijska činjenica.",
+          "rarity": "uncommon",
+          "repeatable": false
+        },
+        {
+          "id": "joker-eb-001",
+          "name": "Kadar koji je pobegao",
+          "waypointId": "SO_EB",
+          "asset": "assets/joker-token.svg",
+          "caption": "Jedan zamišljeni kadar iskočio je iz filmske trake! Vrati ga u priču.",
+          "contentType": "fictional_playful",
+          "truthNote": "Izmišljena šala, nije istorijska činjenica.",
+          "repeatable": false
+        }
+      ]
+    }
+  ],
+  "spawnRules": {
+    "safePedestrianOnly": true,
+    "noCollectiblesOnRoads": true,
+    "proximityEligibleOnly": true,
+    "maxVisibleAtOnce": 3,
+    "optional": true,
+    "allow2DCollection": true,
+    "avoidDuplicateAwardsOnReload": true,
+    "collectionProgressStoredPerPlayer": true
+  },
+  "initialGkPlacementPlan": {
+    "main": {
+      "id": "gk-tower-relic",
+      "when": "after_GK_02_correct"
+    },
+    "gold": [
+      {
+        "id": "gold-gk-001",
+        "when": "after_safe_arrival_and_mentor_intro"
+      },
+      {
+        "id": "gold-gk-002",
+        "when": "after_ar_target_confirmed"
+      }
+    ],
+    "heart": [],
+    "joker": []
+  }
+}
