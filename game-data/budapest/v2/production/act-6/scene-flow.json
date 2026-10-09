@@ -1,0 +1,160 @@
+{
+  "id": "BP2_A6_FLOW",
+  "missionId": "budapest-act-6",
+  "entryNodeId": "BP2_A6_NODE_ARRIVE",
+  "nodes": [
+    {
+      "id": "BP2_A6_NODE_ARRIVE",
+      "kind": "task",
+      "taskId": "BP2_A6_ARRIVE",
+      "next": "BP2_A6_NODE_S0"
+    },
+    {
+      "id": "BP2_A6_NODE_S0",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_overlook",
+      "skipSummary": "Сачувани су извор и одлука; сценски говор је ауторска драматизација.",
+      "next": "BP2_A6_NODE_S1"
+    },
+    {
+      "id": "BP2_A6_NODE_S1",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_anchors",
+      "skipSummary": "Сачувани су извор и одлука; сценски говор је ауторска драматизација.",
+      "next": "BP2_A6_NODE_EXPLORE"
+    },
+    {
+      "id": "BP2_A6_NODE_S2",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_apparition",
+      "skipSummary": "Сачувани су извор и одлука; сценски говор је ауторска драматизација.",
+      "next": "BP2_A6_NODE_S3"
+    },
+    {
+      "id": "BP2_A6_NODE_S3",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_seizure",
+      "skipSummary": "Сачувани су извор и одлука; сценски говор је ауторска драматизација.",
+      "next": "BP2_A6_NODE_S4"
+    },
+    {
+      "id": "BP2_A6_NODE_S4",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_adjudication",
+      "skipSummary": "Сачувани су извор и одлука; сценски говор је ауторска драматизација.",
+      "next": "BP2_A6_NODE_CHOICE"
+    },
+    {
+      "id": "BP2_A6_NODE_S5",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_false_end",
+      "skipSummary": "Сачувани су извор и одлука; сценски говор је ауторска драматизација.",
+      "next": "BP2_A6_NODE_REPAIR"
+    },
+    {
+      "id": "BP2_A6_NODE_S6",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_ending_evidence",
+      "skipSummary": "Сачувани су извор и одлука; сценски говор је ауторска драматизација.",
+      "next": "BP2_A6_NODE_S8"
+    },
+    {
+      "id": "BP2_A6_NODE_S7",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_ending_both",
+      "skipSummary": "Сачувани су извор и одлука; сценски говор је ауторска драматизација.",
+      "next": "BP2_A6_NODE_S8"
+    },
+    {
+      "id": "BP2_A6_NODE_S8",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_timeloop",
+      "skipSummary": "Сачувани су извор и одлука; сценски говор је ауторска драматизација.",
+      "next": "BP2_A6_NODE_S9"
+    },
+    {
+      "id": "BP2_A6_NODE_S9",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_epilogue",
+      "skipSummary": "Сачувани су извор и одлука; сценски говор је ауторска драматизација.",
+      "next": "BP2_A6_NODE_FINISH"
+    },
+    {
+      "id": "BP2_A6_NODE_EXPLORE",
+      "kind": "task",
+      "taskId": "BP2_A6_EXPLORE",
+      "next": "BP2_A6_NODE_QUIZ"
+    },
+    {
+      "id": "BP2_A6_NODE_QUIZ",
+      "kind": "task",
+      "taskId": "BP2_A6_QUIZ",
+      "next": "BP2_A6_NODE_S2"
+    },
+    {
+      "id": "BP2_A6_NODE_CHOICE",
+      "kind": "choice",
+      "choices": [
+        {
+          "id": "evidence",
+          "label": "Само поткрепљено",
+          "next": "BP2_A6_NODE_S6"
+        },
+        {
+          "id": "both",
+          "label": "Обе означене верзије",
+          "next": "BP2_A6_NODE_S7"
+        },
+        {
+          "id": "perfect",
+          "label": "Савршена верзија — проба",
+          "next": "BP2_A6_NODE_S5"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "BP2_A6_NODE_REPAIR",
+      "kind": "choice",
+      "choices": [
+        {
+          "id": "evidence",
+          "label": "Врати доказе",
+          "next": "BP2_A6_NODE_S6"
+        },
+        {
+          "id": "both",
+          "label": "Врати две означене верзије",
+          "next": "BP2_A6_NODE_S7"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "BP2_A6_NODE_FINISH",
+      "kind": "mission_completion",
+      "requiresAllTaskIds": [
+        "BP2_A6_ARRIVE",
+        "BP2_A6_EXPLORE",
+        "BP2_A6_QUIZ"
+      ],
+      "awardKey": "budapest-act-6:complete",
+      "collectibleId": "BP2_RELIC_6",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": null,
+      "next": null
+    }
+  ],
+  "taskOrder": [
+    "BP2_A6_ARRIVE",
+    "BP2_A6_EXPLORE",
+    "BP2_A6_QUIZ"
+  ],
+  "optionalSceneIds": [],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "transcriptAlwaysAvailable": true
+  },
+  "fallback": "2d_evidence_cards",
+  "status": "candidate_no_runtime_test"
+}
