@@ -1,7 +1,7 @@
 {
   "packageId": "gms-prod-08",
   "missionId": "sombor-gms",
-  "status": "editorial_spec_runtime_pending",
+  "status": "editorial_spec_runtime_pending_not_wired",
   "gameplayOrder": [
     "GMS-01",
     "GMS-AR-01",
@@ -30,7 +30,7 @@
       "id": "gms_finale",
       "trigger": "GMS-03_complete",
       "awardOnce": true,
-      "relic": "gms-lantern-relic"
+      "relic": "gms-four-collections-relic"
     }
   ],
   "fallback": {
