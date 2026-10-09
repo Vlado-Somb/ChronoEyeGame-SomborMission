@@ -1,0 +1,148 @@
+{
+  "packageId": "eb-prod-07",
+  "missionId": "sombor-eb",
+  "gameplayOrder": [
+    "EB-01",
+    "EB-AR-01",
+    "EB-02",
+    "EB-03"
+  ],
+  "events": [
+    {
+      "id": "eb_arrival",
+      "trigger": {
+        "type": "GPS_ZONE_CONFIRMED",
+        "waypointId": "SO_EB",
+        "zone": 2,
+        "confirmSeconds": 2,
+        "fieldVerified": false
+      },
+      "action": "complete_EB-01_then_safe_viewpoint_confirmation",
+      "next": "eb_mentor"
+    },
+    {
+      "id": "eb_mentor",
+      "trigger": "EB-01_complete_and_stationary_or_2d",
+      "action": "show_profesor_vlada_captioned_intro",
+      "narrativeRef": "missions/eb.json#narrative.mentorOpening",
+      "next": "eb_ar"
+    },
+    {
+      "id": "eb_ar",
+      "trigger": "user_starts_AR_or_2D",
+      "action": "show_three_shuffled_original_cards",
+      "anchorPolicy": "camera_relative_or_manual_surface",
+      "fallback": "2d_silent_film_three_shot_montage",
+      "next": "eb_montage"
+    },
+    {
+      "id": "eb_montage",
+      "trigger": {
+        "type": "CARD_SEQUENCE",
+        "expected": [
+          "projector_1906",
+          "camera_1909",
+          "studio_1914"
+        ]
+      },
+      "action": "emit_AR_INTERACTION_COMPLETED_once_for_EB-AR-01_then_original_filmstrip_animation",
+      "onMistake": "hint_retry_without_ar_penalty",
+      "next": "eb_quiz_occupation"
+    },
+    {
+      "id": "eb_quiz_occupation",
+      "trigger": "EB-AR-01_complete",
+      "action": "show_EB-02_original_choices",
+      "correctIndex": 2,
+      "correctText": "reditelj",
+      "next": "eb_quiz_title"
+    },
+    {
+      "id": "eb_quiz_title",
+      "trigger": "EB-02_correct",
+      "action": "show_EB-03_original_text_input",
+      "expectedAnswer": "Holivud",
+      "next": "eb_finale"
+    },
+    {
+      "id": "eb_finale",
+      "trigger": "EB-03_correct",
+      "action": "award_mission_once_unlock_relic",
+      "collectibleId": "eb-dream-filmstrip-relic",
+      "awardKey": "mission:sombor-eb:completed",
+      "next": "eb_album"
+    },
+    {
+      "id": "eb_gold_optional",
+      "trigger": "safe_stationary_bonus_tap_AR_or_2D",
+      "action": "unlock_sourced_microstory_once",
+      "collectibleIds": [
+        "gold-eb-001",
+        "gold-eb-002"
+      ]
+    },
+    {
+      "id": "eb_joker_optional",
+      "trigger": "safe_stationary_bonus_tap_AR_or_2D",
+      "action": "unlock_fictional_joker_once",
+      "collectibleId": "joker-eb-001"
+    },
+    {
+      "id": "eb_album",
+      "trigger": "player_taps_Moja_zbirka",
+      "action": "open_Herbarijum_Sombora",
+      "cardId": "eb-dream-filmstrip-relic"
+    }
+  ],
+  "fallback": {
+    "when": [
+      "ARCore_unavailable",
+      "camera_permission_denied",
+      "tracking_unstable",
+      "user_prefers_2d"
+    ],
+    "mode": "2d_silent_film_three_shot_montage",
+    "identicalCardIds": [
+      "projector_1906",
+      "camera_1909",
+      "studio_1914"
+    ],
+    "identicalCorrectSequence": [
+      "projector_1906",
+      "camera_1909",
+      "studio_1914"
+    ],
+    "scoringEquivalent": true
+  },
+  "scoring": {
+    "taskPointsEach": 10,
+    "missionBonus": 30,
+    "totalMainBeforeWrongAnswers": 70,
+    "quizWrongPenalty": -2,
+    "arRetryPenalty": 0,
+    "relicExtraPoints": 0,
+    "goldPointsEach": 2,
+    "jokerPoints": 1,
+    "awardOnce": true,
+    "playerStateKeys": [
+      "scoreAwardsByKey",
+      "pickedSpawnIds",
+      "unlockedCollectibleIds"
+    ]
+  },
+  "safety": {
+    "stationaryRequired": true,
+    "noWalkingWithCamera": true,
+    "noRoadSpawns": true,
+    "noLegacyAltitudeAR": true,
+    "fieldVerified": false
+  },
+  "accessibility": {
+    "subtitles": true,
+    "mute": true,
+    "skipAnimation": true,
+    "keyboard2D": true,
+    "manualMentorRecall": true
+  },
+  "status": "content_and_svg_ready_runtime_pending"
+}
