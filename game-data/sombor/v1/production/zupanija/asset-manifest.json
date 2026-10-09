@@ -1,1 +1,62 @@
-{"packageId":"zup-prod-06","missionId":"sombor-zup","assets":[],"runtimeStatus":"not_tested"}
+{
+  "packageId": "zup-prod-06",
+  "missionId": "sombor-zup",
+  "assetBase": "game-data/sombor/v1/",
+  "assets": [
+    {
+      "id": "zup-three-clocks-board",
+      "path": "assets/zup-three-clocks-board.svg",
+      "kind": "svg",
+      "status": "created_concept",
+      "rights": "original_project"
+    },
+    {
+      "id": "zup-event-1697",
+      "path": "assets/zup-event-1697.svg",
+      "kind": "svg",
+      "status": "created_concept",
+      "rights": "original_project"
+    },
+    {
+      "id": "zup-painting-1896",
+      "path": "assets/zup-painting-1896.svg",
+      "kind": "svg",
+      "status": "created_concept",
+      "rights": "original_project"
+    },
+    {
+      "id": "zup-hall-1898",
+      "path": "assets/zup-hall-1898.svg",
+      "kind": "svg",
+      "status": "created_concept",
+      "rights": "original_project"
+    },
+    {
+      "id": "zup-three-times-key-relic",
+      "path": "assets/zup-three-times-key-relic.svg",
+      "kind": "svg",
+      "status": "created_concept",
+      "rights": "original_project"
+    },
+    {
+      "id": "profesor-vlada",
+      "path": "models/profesor-vlada.glb",
+      "kind": "glb",
+      "status": "planned_not_created"
+    },
+    {
+      "id": "zup-voice",
+      "path": "audio/zup-mentor.ogg",
+      "kind": "ogg",
+      "status": "script_ready_audio_pending"
+    },
+    {
+      "id": "zup-facade",
+      "path": "media/zup-facade.webp",
+      "kind": "webp",
+      "status": "planned_not_created"
+    }
+  ],
+  "runtimeStatus": "not_tested",
+  "rightsPolicy": "Original SVG symbols only; any artwork photo requires separate clearance."
+}
