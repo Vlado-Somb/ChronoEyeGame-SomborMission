@@ -5,38 +5,39 @@
     "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/LK_SO_Mission.asset",
     "sourceBranch": "fix/sombor-resource-stabilization-20261008"
   },
-  "title": "SPOMENIK LAZI KOSTIĆU",
+  "title": "LAZA KOSTIĆ — PESMA I SEĆANJE",
   "primaryWaypointId": "SO_LK",
   "language": "sr-Latn",
-  "reviewStatus": "ar_accepted_editorial_pending",
+  "reviewStatus": "production_editorial_v1_assets_partial",
   "tasks": [
     {
       "id": "LK-01",
       "type": "gps",
       "title": "Stihovi izliveni u bronzi",
-      "instruction": "Pronađi spomeni Lazi Kostiću.",
+      "instruction": "Pronađi spomenik Lazi Kostiću sa bezbedne pešačke površine.",
       "completion": {
         "title": "Bravo!",
-        "narrative": "Jedna žena čekala ga je četvrt veka u Somboru. Napisao je najlepšu ljubavnu pesmu u Somboru. Utočište mu je bio Sombor i u njemu je zauvek ostao. To je bio Laza Kostić!",
+        "narrative": "Laza Kostić je značajan pesnik srpskog romantizma. Poslednje godine života proveo je u Somboru.",
         "delaySeconds": 7
       },
       "gps": {
         "waypointId": "SO_LK",
-        "requiredZone": 3
+        "requiredZone": 2,
+        "fieldVerificationRequired": true
       }
     },
     {
       "id": "LK-AR-01",
       "type": "ar_interaction",
-      "title": "Santa Maria della Salute — stihovi u vazduhu",
-      "instruction": "Rasporedi plutajuće kartice tako da pravilno složiš naslov pesme Laze Kostića.",
+      "title": "Složi naslov pesme",
+      "instruction": "Poređaj tri kartice da dobiješ naslov poznate pesme.",
       "implementationStatus": "editorially_active_assets_pending",
       "active": true,
       "requiredForMission": true,
       "ar": {
         "interaction": "sequence_tap",
         "activationAfterTask": "LK-01",
-        "anchorPolicy": "user_ground_plane_or_camera_guided_overlay",
+        "anchorPolicy": "camera_relative_or_user_selected_safe_surface",
         "neverRequireUnsafePositioning": true,
         "feedback": "Složio si naslov poznate pesme: Santa Maria della Salute.",
         "assetIds": [
@@ -65,10 +66,20 @@
         "mode": "2d_equivalent",
         "sameEducationalObjective": true,
         "sameScoring": true,
-        "mayActivateWithoutCamera": true
+        "mayActivateWithoutCamera": true,
+        "identicalFragments": [
+          "della Salute",
+          "Santa",
+          "Maria"
+        ],
+        "identicalCorrectSequence": [
+          1,
+          2,
+          0
+        ]
       },
       "completion": {
-        "title": "AR trag otkriven",
+        "title": "Naslov je složen",
         "narrative": "Složio si naslov poznate pesme: Santa Maria della Salute.",
         "delaySeconds": 2
       }
@@ -80,11 +91,11 @@
       "instruction": "Odgovori tačno na postavljeno pitanje..",
       "completion": {
         "title": "Tačno, bio je poznati književnik!",
-        "narrative": "Laza Kostić je umro 1910. god. u Beču, a sahranjen je na Velikom Pravoslavnom groblju u Somboru. Ostaće zapamćen kao jedan od najznačajnijih književnika srpskog romantizma. Izabran je za člana Srpskog učenog društva i za redovnog člana Srpske kraljevske akademije.",
+        "narrative": "Kostić je jedan od najznačajnijih pesnika srpskog romantizma.",
         "delaySeconds": 6
       },
       "question": {
-        "text": "Laza Kostićj je bio poznati srpski..?",
+        "text": "Po čemu je Laza Kostić poznat u srpskoj kulturi?",
         "choices": [
           "glumac",
           "zemljoradnik",
@@ -101,14 +112,14 @@
       "id": "LK-03",
       "type": "text_input",
       "title": "Pesma o prelepoj Lenki Dunđerski",
-      "instruction": "Upiši tačan odgovor, pravopis je važan..",
+      "instruction": "Upiši naslov pesme.",
       "completion": {
         "title": "Bravo, otkrio si ko je napisao jednu od najlepših pesama srpske poezije!",
-        "narrative": "A naša deca pesme su moje, tih sastanaka večiti trag, to se ne piše, to se ne poje, samo što dušom probije zrak. To razumemo samo nas dvoje, to je u raju prinovak drag, to tek u zanosu proroci slute, Santa Maria della Salute.",
-        "delaySeconds": 12
+        "narrative": "„Santa Maria della Salute“ je jedna od najpoznatijih Kostićevih pesama.",
+        "delaySeconds": 4
       },
       "textInput": {
-        "questionText": "",
+        "questionText": "Kako se zove poznata pesma Laze Kostića?",
         "inputPlaceholder": "Kako se zove najpoznatija pesma Laze Kostića?",
         "answerPlaceholder": "pesma se zove",
         "expectedAnswer": "Santa Maria della Salute"
@@ -117,5 +128,23 @@
         "waypointId": "SO_GK"
       }
     }
-  ]
+  ],
+  "rewards": {
+    "mainCollectibleId": "lk-poem-title-relic",
+    "afterMissionCompleted": true,
+    "missionCompletionAwardOnce": true,
+    "ar2dSameScore": true
+  },
+  "narrative": {
+    "theme": "Laza Kostić, Sombor i srpska književnost",
+    "mentorOpening": "Pred nama je spomenik Lazi Kostiću. Hajde da upoznamo njegovo književno delo.",
+    "mentorBeforeAR": "Složi tri dela naslova njegove poznate pesme.",
+    "mentorAfterAR": "Naslov je tačan. Sada proveri šta znaš o pesniku.",
+    "mentorCompletion": "U albumu si otključao karticu o Lazi Kostiću.",
+    "historyParagraphs": [
+      "Laza Kostić (1841–1910) bio je pesnik, pisac i prevodilac, jedan od predstavnika srpskog romantizma.",
+      "Poslednje godine života proveo je u Somboru. Umro je u Beču, a sahranjen u Somboru.",
+      "Njegova pesma „Santa Maria della Salute“ objavljena je 1909. godine."
+    ]
+  }
 }

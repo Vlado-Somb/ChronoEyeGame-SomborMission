@@ -94,6 +94,19 @@
             "points": 0,
             "awardOnce": true
           }
+        },
+        {
+          "id": "lk-poem-title-relic",
+          "name": "Kartica pesme",
+          "missionId": "sombor-lk",
+          "rarity": "unique",
+          "asset": "assets/lk-poem-title-relic.svg",
+          "caption": "Autorska ilustracija naslova pesme, nije istorijski predmet.",
+          "historicalFact": "Laza Kostić je autor pesme „Santa Maria della Salute“.",
+          "scoring": {
+            "points": 0,
+            "awardOnce": true
+          }
         }
       ]
     },

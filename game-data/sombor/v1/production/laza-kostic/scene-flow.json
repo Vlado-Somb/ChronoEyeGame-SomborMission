@@ -1,0 +1,42 @@
+{
+  "missionId": "sombor-lk",
+  "status": "production_specified_not_runtime_verified",
+  "steps": [
+    {
+      "taskId": "LK-01",
+      "mode": "gps",
+      "safePublicApproach": true
+    },
+    {
+      "taskId": "LK-AR-01",
+      "mode": "ar_or_2d",
+      "cards": [
+        "della Salute",
+        "Santa",
+        "Maria"
+      ],
+      "correctSequence": [
+        1,
+        2,
+        0
+      ],
+      "sameScoring": true,
+      "mayActivateWithoutCamera": true
+    },
+    {
+      "taskId": "LK-02",
+      "mode": "multiple_choice",
+      "correctIndex": 3
+    },
+    {
+      "taskId": "LK-03",
+      "mode": "text_input",
+      "expectedAnswer": "Santa Maria della Salute"
+    },
+    {
+      "event": "mission_completed",
+      "relicId": "lk-poem-title-relic",
+      "awardOnce": true
+    }
+  ]
+}
