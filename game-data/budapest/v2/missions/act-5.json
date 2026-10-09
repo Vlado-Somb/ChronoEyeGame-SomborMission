@@ -1,0 +1,111 @@
+{
+  "id": "budapest-act-5",
+  "title": "Последњи живи код",
+  "actIndex": 5,
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "runtimeStatus": "not_integrated",
+  "primaryWaypointId": "BP_GOLDEN_STAG",
+  "intermediateWaypointIds": [
+    "BP_BRIDGE_SAFE",
+    "BP_TABAN_NEAR",
+    "BP_TABAN_RETURN",
+    "BP_GELLERT_VIEW"
+  ],
+  "prerequisiteMissionIds": [
+    "budapest-act-4"
+  ],
+  "dialoguePath": "dialogues/act-5.json",
+  "evidenceSetId": "BP2_EVIDENCE_5",
+  "tasks": [
+    {
+      "id": "BP2_A5_ARRIVE",
+      "type": "gps",
+      "title": "Потврди безбедну станицу",
+      "instruction": "Ручна потврда док геопросторна теренска тачка не прође QA.",
+      "waypointId": "BP_GOLDEN_STAG",
+      "arrivalMode": "gps_or_explicit_manual",
+      "completion": {
+        "title": "Тачка потврђена"
+      }
+    },
+    {
+      "id": "BP2_A5_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Последњи доказ",
+      "instruction": "Испрати Пачића и Јована до места несталог храма; разликуј стварну баштину од измишљеног кода.",
+      "ar": {
+        "activationAfterTask": "BP2_A5_ARRIVE",
+        "assetIds": [
+          "BP2_ART_5"
+        ],
+        "successCondition": {
+          "allEvidenceMappings": [
+            "temple:history",
+            "kud:contemporary",
+            "cipher:fiction"
+          ]
+        }
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "temple:history",
+            "kud:contemporary",
+            "cipher:fiction"
+          ]
+        }
+      },
+      "evidenceSetId": "BP2_EVIDENCE_5",
+      "completion": {
+        "title": "Докази сачувани"
+      }
+    },
+    {
+      "id": "BP2_A5_QUIZ",
+      "type": "multiple_choice",
+      "title": "Образложи одлуку",
+      "instruction": "Провери изворе пре избора.",
+      "question": {
+        "text": "Шта је у причи измишљено, а не потврђена историјска чињеница?",
+        "choices": [
+          "Постојање српске цркве у Табану",
+          "Постојање КУД-а Табан",
+          "Теслина шифра у ношњи и колу"
+        ],
+        "correctIndex": 2
+      },
+      "sources": [
+        "SRC_TABAN_OSZK",
+        "SRC_GOLDEN_STAG",
+        "SRC_KUD_TABAN",
+        "SRC_USER_CORE"
+      ],
+      "completion": {
+        "title": "Проверено"
+      }
+    }
+  ],
+  "narrative": {
+    "mentorOpening": "BP2_D5_bridge",
+    "mentorCompletion": "BP2_D5_unlocking",
+    "educationalObjective": "Испрати Пачића и Јована до места несталог храма; разликуј стварну баштину од измишљеног кода.",
+    "sources": [
+      "SRC_TABAN_OSZK",
+      "SRC_GOLDEN_STAG",
+      "SRC_KUD_TABAN",
+      "SRC_USER_CORE"
+    ]
+  },
+  "progressPolicy": {
+    "namespace": "budapest-content-v2",
+    "v1AutoImport": false
+  },
+  "travelSafety": {
+    "noCameraWhileWalking": true,
+    "stationaryOnly": true
+  }
+}
