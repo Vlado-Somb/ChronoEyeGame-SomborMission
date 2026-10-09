@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="sr-Cyrl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#142c3c">
+  <title>CHRONO EYE — Сомбор / Maps прототип</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./config.js"></script>
+  <script src="./geo.js" defer></script>
+  <script src="./maps.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="eyebrow">CHRONO EYE · MAPS v0.1</span><h1>Упознај Сомбор</h1><p>Мисије и локације · независни Web модул</p></div>
+    <div class="badge" id="mapMode">Учитавање…</div>
+  </header>
+  <main class="layout">
+    <aside class="panel" aria-label="Листа мисија">
+      <div class="panel-head"><h2>Мисије</h2><span id="missionCount">—</span></div>
+      <div class="subtle" id="dataSource" role="status">Провера података…</div>
+      <div class="mission-list" id="missionList" aria-live="polite"></div>
+    </aside>
+    <section class="map-panel" aria-label="Мапа Сомбора">
+      <div class="toolbar">
+        <button type="button" id="fitAll">Све локације</button>
+        <button type="button" id="locate">Моја локација</button>
+        <label><input type="checkbox" id="followPlayer"> Прати играча</label>
+        <label><input type="checkbox" id="showZones" checked> GPS зоне</label>
+      </div>
+      <div class="map-wrap"><div id="map" role="region" aria-label="Картографски приказ мисија"></div><div class="map-note" id="mapNote"></div></div>
+      <div class="statusbar"><span id="gpsStatus">Локација није укључена.</span><span id="status" role="status">Припрема приказа…</span></div>
+    </section>
+    <aside class="panel detail-panel" aria-label="Детаљи мисије">
+      <div class="panel-head"><h2>Изабрана мисија</h2></div>
+      <article id="detail" class="detail">Изабери мисију на мапи или у листи.</article>
+      <section class="simulation">
+        <h3>Симулатор локације</h3>
+        <p>Само за браузерски тест. Не потврђује задатке и не додељује бодове.</p>
+        <div class="button-row">
+          <button type="button" id="simNext">Следећа тачка</button>
+          <button type="button" id="simPlay">Аутоматски</button>
+          <button type="button" id="simStop">Заустави</button>
+        </div>
+      </section>
+    </aside>
+  </main>
+  <footer class="footer">Прототип · GPS зоне и координате нису теренски верификоване · ARCore и Android bridge нису повезани.</footer>
+</body>
+</html>

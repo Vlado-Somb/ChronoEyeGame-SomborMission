@@ -136,3 +136,13 @@
 ```
 
 **Важно:** Овај документ не тврди да је било који Google API већ укључен у корисничком Cloud Console налогу.
+
+
+### DEC-2026-018 — CHRONO EYE Web Google Maps adapter (candidate)
+- **Датум:** 2026-10-09; **Статус:** `accepted_for_design`, није `verified_in_test` на уређају.
+- **Одлука:** за први Web Maps прототип користимо Google Maps JavaScript API и издвојени `web/maps/` модул, по узору на постојећи Heritage Map. Постојећи WGS84 `waypoints.json` остаје извор истине; `data/sombor-demo.json` је само верзионисан snapshot кандидат-грана док `game-data` није спојен у `main`.
+- **Безбедност:** без копирања Heritage Maps кључа; засебан ограничен browser key, HTTPS referrer и Cloud одобрење пре јавног Google приказа. Празан кључ покреће координатни преглед.
+- **Android/iOS:** WebView + Android Location Engine / iOS location bridge су одвојени будући адаптери. Ова одлука не потврђује њихову интеграцију нити ARCore.
+- **Механика:** мапа само приказује GPS zone candidates, никада не потврђује GPS долазак, не чува Player State и не додељује бодове.
+- **Провера:** статичка провера `web/maps/tests/maps.test.cjs` и визуелни HTTPS/WebView тест тек предстоје; видети README у PR-у за детаље.
+- **Однос према DEC-009:** конкретизује избор Web адаптера за прототип, без брисања раније алтернативе native Maps SDK.
