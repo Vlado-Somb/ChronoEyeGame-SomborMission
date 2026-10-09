@@ -1,0 +1,81 @@
+{
+  "id": "BP2_A0_FLOW",
+  "missionId": "budapest-act-0",
+  "entryNodeId": "BP2_A0_NODE_ARRIVE",
+  "nodes": [
+    {
+      "id": "BP2_A0_NODE_ARRIVE",
+      "kind": "task",
+      "taskId": "BP2_A0_ARRIVE",
+      "next": "BP2_A0_NODE_S00"
+    },
+    {
+      "id": "BP2_A0_NODE_S00",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D0_invitation",
+      "skipSummary": "Позив агенције, један непоуздан сигнал и прво питање о изворима.",
+      "next": "BP2_A0_NODE_S01"
+    },
+    {
+      "id": "BP2_A0_NODE_S01",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D0_onboarding",
+      "skipSummary": "Позив агенције, један непоуздан сигнал и прво питање о изворима.",
+      "next": "BP2_A0_NODE_EXPLORE"
+    },
+    {
+      "id": "BP2_A0_NODE_S02",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D0_fracture",
+      "skipSummary": "Позив агенције, један непоуздан сигнал и прво питање о изворима.",
+      "next": "BP2_A0_NODE_S03"
+    },
+    {
+      "id": "BP2_A0_NODE_S03",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D0_handler",
+      "skipSummary": "Позив агенције, један непоуздан сигнал и прво питање о изворима.",
+      "next": "BP2_A0_NODE_FINISH"
+    },
+    {
+      "id": "BP2_A0_NODE_EXPLORE",
+      "kind": "task",
+      "taskId": "BP2_A0_EXPLORE",
+      "next": "BP2_A0_NODE_QUIZ"
+    },
+    {
+      "id": "BP2_A0_NODE_QUIZ",
+      "kind": "task",
+      "taskId": "BP2_A0_QUIZ",
+      "next": "BP2_A0_NODE_S02"
+    },
+    {
+      "id": "BP2_A0_NODE_FINISH",
+      "kind": "mission_completion",
+      "requiresAllTaskIds": [
+        "BP2_A0_ARRIVE",
+        "BP2_A0_EXPLORE",
+        "BP2_A0_QUIZ"
+      ],
+      "awardKey": "budapest-act-0:complete",
+      "collectibleId": "BP2_RELIC_0",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-1",
+      "next": null
+    }
+  ],
+  "taskOrder": [
+    "BP2_A0_ARRIVE",
+    "BP2_A0_EXPLORE",
+    "BP2_A0_QUIZ"
+  ],
+  "optionalSceneIds": [],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "skipWritesPlotSummary": true,
+    "transcriptAlwaysAvailable": true
+  },
+  "resumePolicy": "resume_node_no_duplicate_reward",
+  "fallback": "2d_evidence_cards",
+  "status": "candidate_no_runtime_test"
+}
