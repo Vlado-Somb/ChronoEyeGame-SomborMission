@@ -1,0 +1,53 @@
+Act 0: Onboarding and Story Introduction
+Purpose
+Act 0 introduces the player to the game’s mechanics, UI, and core narrative after downloading and registering in the app.
+It sets the tone for the AR treasure hunt and immerses the player in the dystopian future where their journey begins.
+Flow of Act 0
+1. Registration and Setup
+Welcome Screen:
+Background: A calm and ordinary interface, hinting at familiarity and normality.
+Message: *"Welcome to the Budapest History Exploration App. Your journey through this city’s rich heritage begins here."
+Player Registration:
+Players input their name and choose an avatar symbolizing their identity as an explorer.
+Optional: Players select preferences for gameplay difficulty and narrative depth.
+2. Introduction to the World
+Cinematic Sequence 1 (Beginning the Act):
+The screen fades to an aerial view of Budapest, with landmarks glowing faintly against the backdrop of a normal, bustling city.
+Narrator Voiceover:
+"You walk among streets where stories lie hidden in plain sight. The facades hold whispers, and the stones beneath your feet pulse with secrets of what has been and what is yet to come. But beware, history is fragile."
+As the camera zooms in on the Serbian Embassy, the glow fades, and a static ripple hints at something unseen.
+UI Tutorial:
+"Use your scanner to locate key monuments. Tap on highlighted points to reveal more."
+Players practice scanning and collecting small clues scattered in the tutorial space.
+3. Setting the Stage for the Backbone Narrative
+Narrator Explanation:
+"History is not just a record of the past. It is a living current that shapes the future. Yet, as technology rises, so does distortion. The overuse of artificial intelligence has muddied the waters of truth."
+"Monuments, paintings, and architecture—these are humanity’s anchors to the real. They stand resilient, whispering truths even as the storm of falsehood rages. Your task is to uncover these truths and preserve them."
+Hint at the Esoteric Circle:
+"Long ago, a group of visionaries prepared for this moment. Poets, scientists, and dreamers bound their works to the tangible world, knowing that truth might one day need guardians."
+4. First Interactive Challenge
+Simple Location-Based Challenge:
+Players use their scanner to identify key monuments on the map.
+Upon finding the correct location, the app reveals a brief historical description of the site.
+Example:
+"You’ve found the Serbian Embassy. This location was a focal point for diplomacy and culture, where ideas and alliances converged to shape history."
+Visual and Audio Feedback:
+A subtle pulse of light appears on the map to indicate successful discovery.
+Narrator Voiceover: "Each monument holds a piece of the larger truth. The more you uncover, the clearer the story becomes."
+5. Transition to Act I
+Narrative Bridge:
+Cinematic Sequence 2 (Concluding the Act):
+The completed task fades into a map view highlighting the Serbian Embassy as the starting point.
+The narrator’s voice deepens: "The gates of the past await you. Your journey begins now."
+Visual Cue:
+The app’s map system activates, pointing to the Serbian Embassy.
+Key Features for Act 0
+Interactive Engagement:
+Tutorials are presented as part of the story, blending narrative with functionality.
+Immersion:
+Subtle visual and audio cues create an atmosphere of mystery, even as the world appears normal.
+Player Agency:
+Players choose their avatar and customize their experience, fostering a sense of ownership.
+Smooth Transition:
+Act 0 flows seamlessly into Act I, with the onboarding experience doubling as the narrative setup.
+Let me know if further refinements are needed or if this aligns better with the story development!

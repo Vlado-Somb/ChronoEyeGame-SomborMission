@@ -1,0 +1,32 @@
+{
+  "signals": [
+    {
+      "id": "BP_SIGNAL_OPEN_SLOT",
+      "pattern": "three_pulses_then_empty_slot",
+      "durationMs": 1800,
+      "isHistoricalCode": false,
+      "audioAssetId": "BP_SFX",
+      "textEquivalent": "Три кратка импулса. Четврто место остаје празно.",
+      "instances": [
+        {
+          "sceneId": "BP_D0_opening",
+          "purpose": "mystery"
+        },
+        {
+          "sceneId": "BP_D1_puzzle",
+          "purpose": "reinforcement"
+        },
+        {
+          "sceneId": "BP_D2_confrontation",
+          "purpose": "antagonist_closes_gap"
+        },
+        {
+          "sceneId": "BP_D4_reveal",
+          "purpose": "payoff"
+        }
+      ],
+      "replay": "manual_only",
+      "captionRequired": true
+    }
+  ]
+}

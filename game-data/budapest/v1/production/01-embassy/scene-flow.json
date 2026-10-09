@@ -1,0 +1,82 @@
+{
+  "id": "BP_A1_FLOW",
+  "missionId": "budapest-act-1",
+  "entryNodeId": "BP_A1_NODE_ARRIVAL",
+  "nodes": [
+    {
+      "id": "BP_A1_NODE_ENTRY",
+      "kind": "dialogue",
+      "next": "BP_A1_NODE_PREPARE",
+      "dialogueId": "BP_D1_opening",
+      "requiresSafeStationary": true,
+      "skipSummary": "Картица има проверљиво порекло; Дучић и Тесла су драматизовани ликови."
+    },
+    {
+      "id": "BP_A1_NODE_ARRIVAL",
+      "kind": "task",
+      "next": "BP_A1_NODE_ENTRY",
+      "taskId": "BP_A1_ARRIVE"
+    },
+    {
+      "id": "BP_A1_NODE_PREPARE",
+      "kind": "dialogue",
+      "next": "BP_A1_NODE_EXPLORE",
+      "dialogueId": "BP_D1_puzzle",
+      "skipSummary": "Картица има проверљиво порекло; Дучић и Тесла су драматизовани ликови."
+    },
+    {
+      "id": "BP_A1_NODE_EXPLORE",
+      "kind": "task",
+      "next": "BP_A1_NODE_QUIZ",
+      "taskId": "BP_A1_EXPLORE"
+    },
+    {
+      "id": "BP_A1_NODE_QUIZ",
+      "kind": "task",
+      "next": "BP_A1_NODE_POST",
+      "taskId": "BP_A1_QUIZ"
+    },
+    {
+      "id": "BP_A1_NODE_POST",
+      "kind": "checkpoint",
+      "next": "BP_A1_NODE_CLOSE"
+    },
+    {
+      "id": "BP_A1_NODE_CLOSE",
+      "kind": "dialogue",
+      "next": "BP_A1_NODE_FINISH",
+      "dialogueId": "BP_D1_completion",
+      "skipSummary": "Картица има проверљиво порекло; Дучић и Тесла су драматизовани ликови."
+    },
+    {
+      "id": "BP_A1_NODE_FINISH",
+      "kind": "mission_completion",
+      "next": null,
+      "requiresAllTaskIds": [
+        "BP_A1_ARRIVE",
+        "BP_A1_EXPLORE",
+        "BP_A1_QUIZ"
+      ],
+      "awardKey": "budapest-act-1:complete",
+      "collectibleId": "BP_RELIC_1",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-2"
+    }
+  ],
+  "taskOrder": [
+    "BP_A1_ARRIVE",
+    "BP_A1_EXPLORE",
+    "BP_A1_QUIZ"
+  ],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "skipWritesPlotSummary": true,
+    "transcriptAlwaysAvailable": true,
+    "completionWaitsForFlowFinish": true
+  },
+  "resumePolicy": "resume_current_node; do_not_replay_awards",
+  "optionalSceneIds": [],
+  "fallback": "2d_evidence_cards",
+  "status": "data_contract_candidate_not_runtime",
+  "launchPolicy": "unlock_after_trigger; start_only_on_user_continue; pause_during_travel"
+}

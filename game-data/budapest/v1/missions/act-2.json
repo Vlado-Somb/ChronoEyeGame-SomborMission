@@ -1,0 +1,115 @@
+{
+  "id": "budapest-act-2",
+  "title": "Чувари и савршени круг",
+  "primaryWaypointId": "BP_HEROES",
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "actIndex": 2,
+  "prerequisiteMissionIds": [
+    "budapest-act-1"
+  ],
+  "tasks": [
+    {
+      "id": "BP_A2_ARRIVE",
+      "type": "gps",
+      "title": "Стигни и стани",
+      "instruction": "Потврди безбедно место у јавном простору; ако GPS није употребљив, изабери ручну потврду.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "gps": {
+        "waypointId": "BP_HEROES",
+        "requiredZone": 2
+      },
+      "arrivalMode": "gps_or_explicit_manual",
+      "waypointId": "BP_HEROES"
+    },
+    {
+      "id": "BP_A2_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Чувари и савршени круг",
+      "instruction": "Повежи три картице са ознакама: стварни локалитет, наша сценска допуна, непотврђен податак. Не бирај по боји или снази гласа.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "ar": {
+        "interaction": "connect_evidence",
+        "activationAfterTask": "BP_A2_ARRIVE",
+        "assetIds": [
+          "BP_ART_2"
+        ],
+        "mode": "guided_photo_overlay",
+        "successCondition": {
+          "allEvidenceMappings": [
+            "square:location",
+            "tesla:dramatization",
+            "closed_ring:unverified"
+          ]
+        },
+        "automaticRecognition": false
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "square:location",
+            "tesla:dramatization",
+            "closed_ring:unverified"
+          ]
+        }
+      },
+      "implementationStatus": "editorially_active_assets_pending",
+      "evidenceSetId": "BP_EVIDENCE_2"
+    },
+    {
+      "id": "BP_A2_QUIZ",
+      "type": "multiple_choice",
+      "title": "Провери закључак",
+      "instruction": "Користи досије и извор наведен уз картицу.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Hősök tere је стварна будимпештанска локација. Холограми и борба канала припадају фикцији игре.",
+        "delaySeconds": 0
+      },
+      "question": {
+        "text": "Шта је у овој сцени стварни локалитет, а не наш дигитални додатак?",
+        "choices": [
+          "Теслин холограм",
+          "Светлосни струјни круг",
+          "Hősök tere — Трг хероја"
+        ],
+        "correctIndex": 2,
+        "wrongAnswerFeedback": "Погледај историјску картицу и њен извор. Можеш поново одговорити; хинт је бесплатан."
+      },
+      "sources": [
+        "SRC_HEROES"
+      ],
+      "historyCardId": "BP_HISTORY_2"
+    }
+  ],
+  "narrative": {
+    "setting": "Чувари и савршени круг",
+    "historyParagraphs": [
+      "Hősök tere је стварни Трг хероја у Будимпешти. Приказани електрични круг и сукоб ликова су ауторски дигитални слој."
+    ],
+    "mentorOpening": "BP_D2_opening",
+    "mentorCompletion": "BP_D2_completion",
+    "educationalObjective": "Одвојити стварни трг од сценске интерпретације и сачувати везе извор–тврдња.",
+    "sources": [
+      "SRC_HEROES"
+    ]
+  },
+  "runtimeStatus": "not_integrated"
+}

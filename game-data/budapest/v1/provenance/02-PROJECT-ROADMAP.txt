@@ -1,0 +1,69 @@
+AR Treasure Hunt Project with Acts Integration
+1. Story/Narrative
+Focus: The overarching plot and narrative are broken into the game’s acts, along with character-driven moments and historical insights.
+Subfolders:
+Act_0_EmailApp_Introduction: Introducing players to the dystopian future, gameplay mechanics, and setting the stage (Ref: [218†source]).
+Act_1_SerbianEmbassy_AnalogBeginning: Where players interact with Dučić’s legacy and unravel poetry-driven puzzles (Ref: [220†source]).
+Act_2_HeroesSquare_GuardiansOfUnity: Tesla's battle with rival factions amidst historical statues, with themes of unity and memory (Ref: [221†source]).
+Act_3_CentralCafe_RestfulInterlude: A reflective pause, introducing cultural immersion and intellectual discussions at Centrál Café (Ref: [217†source]).
+Act_4_VaciStreetToTokolyanum_ThreadsOfUnity: Connecting Hungarian and Serbian cultural legacies through trade and scholarship (Ref: [219†source]).
+Act_5_BudimHill_CulminationOfTruth: Players reconstruct a destroyed Serbian church, face distortions, and ensure history’s survival (Ref: [222†source]).
+Core_Story: Overarching narrative of truth preservation in a dystopian AI-dominated world (Ref: [223†source]).
+2. Business Model and Roadmap
+Focus: Monetization and marketing strategies, and the timeline for project milestones.
+Subfolders:
+Roadmap: Timeline for developing acts, technical milestones, and testing phases.
+Business_Strategy: Ideas for sponsorships (e.g., partnerships with historical or cultural institutions in Budapest) and app monetization strategies.
+Pitch_Deck: Compiled materials for pitching the project to investors or collaborators.
+3. Technical Details and Unity C# Scripts
+Focus: Development of game mechanics, Unity setups, and script debugging.
+Subfolders:
+Scripts: Organized by functionality:
+ActScripts: C# scripts specific to triggering scenes and actions in Acts 0-5.
+GPS: Code handling GPS interactions and object placement (Ref: Unified GPS Script).
+UI: Interfaces for AR scanning and progress displays.
+Unity_Configurations: AR Foundation setups, scene optimizations, and configurations for cross-platform builds.
+Debug_Logs: Issues encountered and resolutions applied during development.
+4. Art Assets
+Focus: Assets supporting the narrative and gameplay experience.
+Subfolders:
+3D Models:
+Tesla’s hologram and animations.
+Historical landmarks (e.g., Serbian Embassy, Tökölyanum, Hero’s Square statues).
+Textures: High-quality textures for AR objects and environments.
+Visual Effects: Particle systems for Tesla’s holograms, AR glitches, and portals.
+5. Other
+Focus: Supporting tools, references, and expansion ideas.
+Subfolders:
+References: External resources, historical articles, and cultural inspirations.
+Future Ideas: Placeholder for unplanned features or possible expansions.
+Proposed Folder Structure
+AR Treasure Hunt Project
+├── Story_Narrative
+│   ├── Plot_Development
+│   ├── Dialogue_Scripts
+│   └── Historical_Research
+├── Business_Model_and_Roadmap
+│   ├── Roadmap
+│   ├── Business_Strategy
+│   └── Pitch_Deck
+├── Technical_Details_and_Scripts
+│   ├── Scripts
+│   │   ├── GPS
+│   │   ├── Interactions
+│   │   └── UI
+│   ├── Unity_Configurations
+│   └── Debug_Logs
+├── Art_Assets
+│   ├── 3D_Models
+│   ├── Textures
+│   └── Visual_Effects
+└── Other
+    ├── References
+    └── Future_Ideas
+Next Steps
+Create the folder structure in your Unity project or project management tool.
+Sort existing materials (scripts, story drafts, etc.) into the corresponding folders.
+Identify missing assets or areas needing further development.
+Continue progress in individual areas with the sorted structure as a guide.
+Let me know if you want assistance creating or organizing specific parts of this structure!

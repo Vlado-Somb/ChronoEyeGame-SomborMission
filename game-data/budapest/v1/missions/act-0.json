@@ -1,0 +1,113 @@
+{
+  "id": "budapest-act-0",
+  "title": "Порука која није требало да стигне",
+  "primaryWaypointId": "BP_START",
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "actIndex": 0,
+  "prerequisiteMissionIds": [],
+  "tasks": [
+    {
+      "id": "BP_A0_START",
+      "type": "multiple_choice",
+      "title": "Сачувај отворено питање",
+      "instruction": "Одговори пре него што изабереш верзију.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "question": {
+        "text": "Када се два записа разликују, који је добар први корак?",
+        "choices": [
+          "Избрисати старији",
+          "Сачувати оба и проверити порекло"
+        ],
+        "correctIndex": 1
+      }
+    },
+    {
+      "id": "BP_A0_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Порука која није требало да стигне",
+      "instruction": "Упореди две ауторске карте. Означи да се силуета појављује само на једној; сачувај обе верзије.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "ar": {
+        "interaction": "compare_versions",
+        "activationAfterTask": "BP_A0_START",
+        "assetIds": [
+          "BP_ART_0"
+        ],
+        "mode": "relative_to_camera",
+        "successCondition": {
+          "allEvidenceMappings": [
+            "version_a",
+            "version_b"
+          ]
+        },
+        "automaticRecognition": false
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "version_a",
+            "version_b"
+          ]
+        }
+      },
+      "implementationStatus": "editorially_active_assets_pending",
+      "evidenceSetId": "BP_EVIDENCE_0"
+    },
+    {
+      "id": "BP_A0_QUIZ",
+      "type": "multiple_choice",
+      "title": "Провери закључак",
+      "instruction": "Користи досије и извор наведен уз картицу.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Разлика је повод за проверу, а не довољан доказ о прошлости.",
+        "delaySeconds": 0
+      },
+      "question": {
+        "text": "Шта доказују две карте које различито приказују исто место?",
+        "choices": [
+          "Да је старија карта увек тачна",
+          "Да прикази нису исти и да треба проверити изворе",
+          "Да зграда никада није постојала"
+        ],
+        "correctIndex": 1,
+        "wrongAnswerFeedback": "Погледај историјску картицу и њен извор. Можеш поново одговорити; хинт је бесплатан."
+      },
+      "sources": [
+        "SRC_USER_CORE"
+      ],
+      "historyCardId": "BP_HISTORY_0"
+    }
+  ],
+  "narrative": {
+    "setting": "Порука која није требало да стигне",
+    "historyParagraphs": [
+      "Фикционални увод у истраживање; нема историјске тврдње о настанку града."
+    ],
+    "mentorOpening": "BP_D0_opening",
+    "mentorCompletion": "BP_D0_completion",
+    "educationalObjective": "Разликовати запажање разлике од закључка о истинитости.",
+    "sources": [
+      "SRC_USER_CORE"
+    ]
+  },
+  "runtimeStatus": "not_integrated"
+}

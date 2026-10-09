@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "1.2.0-budapest-draft.1",
+  "baseSchemaVersion": "1.1.0",
+  "contentVersion": "1.0.0",
+  "gameId": "chrono-eye-budapest",
+  "name": "Град који није пристао да нестане",
+  "language": "sr-Cyrl",
+  "runtimeTargets": [
+    "web",
+    "android",
+    "arcore"
+  ],
+  "reviewStatus": "accepted_for_design",
+  "runtimeStatus": "not_integrated",
+  "releaseStatus": "blocked_pending_field_assets_editorial_qa",
+  "missions": [
+    {
+      "id": "budapest-act-0",
+      "path": "missions/act-0.json",
+      "primaryWaypointId": "BP_START"
+    },
+    {
+      "id": "budapest-act-1",
+      "path": "missions/act-1.json",
+      "primaryWaypointId": "BP_EMBASSY"
+    },
+    {
+      "id": "budapest-act-2",
+      "path": "missions/act-2.json",
+      "primaryWaypointId": "BP_HEROES"
+    },
+    {
+      "id": "budapest-act-3",
+      "path": "missions/act-3.json",
+      "primaryWaypointId": "BP_CENTRAL"
+    },
+    {
+      "id": "budapest-act-4",
+      "path": "missions/act-4.json",
+      "primaryWaypointId": "BP_TEKELIJANUM"
+    },
+    {
+      "id": "budapest-act-5",
+      "path": "missions/act-5.json",
+      "primaryWaypointId": "BP_TABAN"
+    }
+  ],
+  "waypoints": "waypoints.json",
+  "dialogues": [
+    {
+      "id": "BP_DIALOGUE_0",
+      "path": "dialogues/act-0.json"
+    },
+    {
+      "id": "BP_DIALOGUE_1",
+      "path": "dialogues/act-1.json"
+    },
+    {
+      "id": "BP_DIALOGUE_2",
+      "path": "dialogues/act-2.json"
+    },
+    {
+      "id": "BP_DIALOGUE_3",
+      "path": "dialogues/act-3.json"
+    },
+    {
+      "id": "BP_DIALOGUE_4",
+      "path": "dialogues/act-4.json"
+    },
+    {
+      "id": "BP_DIALOGUE_5",
+      "path": "dialogues/act-5.json"
+    }
+  ],
+  "hints": "hints.json",
+  "timeline": "timeline.json",
+  "triggers": "triggers.json",
+  "mechanics": "mechanics.json",
+  "sources": "sources.json",
+  "systems": {
+    "characters": "systems/characters.json",
+    "collectibles": "systems/collectibles.json",
+    "album": "systems/album.json"
+  },
+  "productionPackages": [
+    {
+      "id": "BP_A0_PRODUCTION",
+      "missionId": "budapest-act-0",
+      "brief": "production/00-signal/PRODUCTION_BRIEF.md",
+      "scene": "production/00-signal/scene-flow.json",
+      "assets": "production/00-signal/asset-manifest.json",
+      "qa": "production/00-signal/QA_CHECKLIST.md"
+    },
+    {
+      "id": "BP_A1_PRODUCTION",
+      "missionId": "budapest-act-1",
+      "brief": "production/01-embassy/PRODUCTION_BRIEF.md",
+      "scene": "production/01-embassy/scene-flow.json",
+      "assets": "production/01-embassy/asset-manifest.json",
+      "qa": "production/01-embassy/QA_CHECKLIST.md"
+    },
+    {
+      "id": "BP_A2_PRODUCTION",
+      "missionId": "budapest-act-2",
+      "brief": "production/02-heroes/PRODUCTION_BRIEF.md",
+      "scene": "production/02-heroes/scene-flow.json",
+      "assets": "production/02-heroes/asset-manifest.json",
+      "qa": "production/02-heroes/QA_CHECKLIST.md"
+    },
+    {
+      "id": "BP_A3_PRODUCTION",
+      "missionId": "budapest-act-3",
+      "brief": "production/03-central/PRODUCTION_BRIEF.md",
+      "scene": "production/03-central/scene-flow.json",
+      "assets": "production/03-central/asset-manifest.json",
+      "qa": "production/03-central/QA_CHECKLIST.md"
+    },
+    {
+      "id": "BP_A4_PRODUCTION",
+      "missionId": "budapest-act-4",
+      "brief": "production/04-tekelijanum/PRODUCTION_BRIEF.md",
+      "scene": "production/04-tekelijanum/scene-flow.json",
+      "assets": "production/04-tekelijanum/asset-manifest.json",
+      "qa": "production/04-tekelijanum/QA_CHECKLIST.md"
+    },
+    {
+      "id": "BP_A5_PRODUCTION",
+      "missionId": "budapest-act-5",
+      "brief": "production/05-taban/PRODUCTION_BRIEF.md",
+      "scene": "production/05-taban/scene-flow.json",
+      "assets": "production/05-taban/asset-manifest.json",
+      "qa": "production/05-taban/QA_CHECKLIST.md"
+    }
+  ],
+  "requiredCapabilities": [
+    "budapest_scene_flow_v1",
+    "evidence_mapping_v1",
+    "manual_arrival_v1"
+  ],
+  "assets": "assets/index.json",
+  "contentInventory": {
+    "acts": 6,
+    "tasks": 18,
+    "arInteractions": 6,
+    "dialogueScenes": 26,
+    "dialogueLines": 167,
+    "hints": 18,
+    "relics": 6
+  },
+  "evidence": "evidence.json",
+  "signals": "signals.json"
+}

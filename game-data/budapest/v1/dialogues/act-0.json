@@ -1,0 +1,163 @@
+{
+  "id": "BP_DIALOGUE_0",
+  "language": "sr-Cyrl",
+  "scenes": [
+    {
+      "id": "BP_D0_opening",
+      "act": 0,
+      "title": "Обична апликација",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D0_opening_L01",
+          "speakerId": "BP_CH_SYSTEM",
+          "text": "Добро дошли у Будимпешту. Изаберите шта желите да откријете.",
+          "subtitle": "Добро дошли у Будимпешту. Изаберите шта желите да откријете.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_opening_L02",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Град. Полако, ако може.",
+          "subtitle": "Град. Полако, ако може.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_opening_L03",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Може полако. Само немојте још ажурирати карту.",
+          "subtitle": "Може полако. Само немојте још ажурирати карту.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_opening_L04",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Ово је део обиласка?",
+          "subtitle": "Ово је део обиласка?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_opening_L05",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Требало је да буде. На вашој карти недостаје једна зграда. На мојој недостаје разлог зашто је нема.",
+          "subtitle": "Требало је да буде. На вашој карти недостаје једна зграда. На мојој недостаје разлог зашто је нема.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_opening_L06",
+          "speakerId": "BP_CH_SYSTEM",
+          "text": "ПАЛИМПСЕСТ: доступна је потпуна верзија градске прошлости.",
+          "subtitle": "ПАЛИМПСЕСТ: доступна је потпуна верзија градске прошлости.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_opening_L07",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Видите? Чак су и реч „потпуна“ успели да напишу без стида.",
+          "subtitle": "Видите? Чак су и реч „потпуна“ успели да напишу без стида.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_opening_L08",
+          "speakerId": "BP_CH_UNKNOWN",
+          "text": "Не затварај… четврто…",
+          "subtitle": "Не затварај… четврто…",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_opening_L09",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Ко је то био?",
+          "subtitle": "Ко је то био?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_opening_L10",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Не знам. Сачувајте обе верзије. За почетак је то довољно.",
+          "subtitle": "Не знам. Сачувајте обе верзије. За почетак је то довољно.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D0_refusal",
+      "act": 0,
+      "title": "Право на оклевање",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D0_refusal_L01",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Само сам дошао да разгледам.",
+          "subtitle": "Само сам дошао да разгледам.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_refusal_L02",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Онда разгледајте. То нам управо недостаје: неко ко ће погледати пре него што прихвати објашњење.",
+          "subtitle": "Онда разгледајте. То нам управо недостаје: неко ко ће погледати пре него што прихвати објашњење.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_refusal_L03",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "А ако искључим апликацију?",
+          "subtitle": "А ако искључим апликацију?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_refusal_L04",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Наставићемо кад се вратите. Град је овде дуже од наше батерије.",
+          "subtitle": "Наставићемо кад се вратите. Град је овде дуже од наше батерије.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D0_completion",
+      "act": 0,
+      "title": "Праг",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D0_completion_L01",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Сачували сте разлику. Нисте још доказали која је верзија тачна.",
+          "subtitle": "Сачували сте разлику. Нисте још доказали која је верзија тачна.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_completion_L02",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Прилично скроман почетак за спасавање историје.",
+          "subtitle": "Прилично скроман почетак за спасавање историје.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_completion_L03",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Најопасније грешке обично почну великим закључком.",
+          "subtitle": "Најопасније грешке обично почну великим закључком.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_completion_L04",
+          "speakerId": "BP_CH_SYSTEM",
+          "text": "Нова станица: Амбасада Републике Србије. Задатак се одвија из јавног простора.",
+          "subtitle": "Нова станица: Амбасада Републике Србије. Задатак се одвија из јавног простора.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D0_completion_L05",
+          "speakerId": "BP_CH_UNKNOWN",
+          "text": "Остави… место.",
+          "subtitle": "Остави… место.",
+          "voiceAssetId": null
+        }
+      ]
+    }
+  ]
+}

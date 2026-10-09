@@ -1,0 +1,115 @@
+{
+  "id": "budapest-act-4",
+  "title": "Стране које држе град",
+  "primaryWaypointId": "BP_TEKELIJANUM",
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "actIndex": 4,
+  "prerequisiteMissionIds": [
+    "budapest-act-3"
+  ],
+  "tasks": [
+    {
+      "id": "BP_A4_ARRIVE",
+      "type": "gps",
+      "title": "Стигни и стани",
+      "instruction": "Потврди безбедно место у јавном простору; ако GPS није употребљив, изабери ручну потврду.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "gps": {
+        "waypointId": "BP_TEKELIJANUM",
+        "requiredZone": 2
+      },
+      "arrivalMode": "gps_or_explicit_manual",
+      "waypointId": "BP_TEKELIJANUM"
+    },
+    {
+      "id": "BP_A4_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Стране које држе град",
+      "instruction": "Споји 1838. са оснивањем Текелијанума, 1907–1908. са данашњом зградом, а 1907. са полагањем камена темељца приказаним на рељефу.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "ar": {
+        "interaction": "match_historical_layers",
+        "activationAfterTask": "BP_A4_ARRIVE",
+        "assetIds": [
+          "BP_ART_4"
+        ],
+        "mode": "guided_photo_overlay",
+        "successCondition": {
+          "allEvidenceMappings": [
+            "1838:institution",
+            "1907-1908:building",
+            "1907:relief_foundation"
+          ]
+        },
+        "automaticRecognition": false
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "1838:institution",
+            "1907-1908:building",
+            "1907:relief_foundation"
+          ]
+        }
+      },
+      "implementationStatus": "editorially_active_assets_pending",
+      "evidenceSetId": "BP_EVIDENCE_4"
+    },
+    {
+      "id": "BP_A4_QUIZ",
+      "type": "multiple_choice",
+      "title": "Провери закључак",
+      "instruction": "Користи досије и извор наведен уз картицу.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "1838. се односи на установу; данашња зграда подигнута је 1907–1908. Два датума не морају бити противречна ако описују различите ствари.",
+        "delaySeconds": 0
+      },
+      "question": {
+        "text": "На шта се односи 1838. у причи о Текелијануму?",
+        "choices": [
+          "На оснивање установе",
+          "На завршетак данашње зграде",
+          "На рушење Табанске цркве"
+        ],
+        "correctIndex": 0,
+        "wrongAnswerFeedback": "Погледај историјску картицу и њен извор. Можеш поново одговорити; хинт је бесплатан."
+      },
+      "sources": [
+        "SRC_TEKELIJANUM"
+      ],
+      "historyCardId": "BP_HISTORY_4"
+    }
+  ],
+  "narrative": {
+    "setting": "Стране које држе град",
+    "historyParagraphs": [
+      "Текелијанум је основан 1838. Данашња зграда настала је 1907–1908. Фасадни рељефи приказују и полагање камена темељца 1907."
+    ],
+    "mentorOpening": "BP_D4_opening",
+    "mentorCompletion": "BP_D4_completion",
+    "educationalObjective": "Разликовати оснивање установе, изградњу садашње зграде и приказ на рељефу.",
+    "sources": [
+      "SRC_TEKELIJANUM"
+    ]
+  },
+  "runtimeStatus": "not_integrated"
+}

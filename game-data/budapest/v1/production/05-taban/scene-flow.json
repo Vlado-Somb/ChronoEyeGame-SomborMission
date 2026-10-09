@@ -1,0 +1,154 @@
+{
+  "id": "BP_A5_FLOW",
+  "missionId": "budapest-act-5",
+  "entryNodeId": "BP_A5_NODE_ARRIVAL",
+  "nodes": [
+    {
+      "id": "BP_A5_NODE_ENTRY",
+      "kind": "dialogue",
+      "next": "BP_A5_NODE_PREPARE",
+      "dialogueId": "BP_D5_opening",
+      "requiresSafeStationary": true,
+      "skipSummary": "Противник нуди савршену слику без извора. Сачувај доказе и означи претпоставке; локална копија остаје."
+    },
+    {
+      "id": "BP_A5_NODE_ARRIVAL",
+      "kind": "task",
+      "next": "BP_A5_NODE_ENTRY",
+      "taskId": "BP_A5_ARRIVE"
+    },
+    {
+      "id": "BP_A5_NODE_PREPARE",
+      "kind": "dialogue",
+      "next": "BP_A5_NODE_EXPLORE",
+      "dialogueId": "BP_D5_temptation",
+      "skipSummary": "Противник нуди савршену слику без извора. Сачувај доказе и означи претпоставке; локална копија остаје."
+    },
+    {
+      "id": "BP_A5_NODE_EXPLORE",
+      "kind": "task",
+      "next": "BP_A5_NODE_QUIZ",
+      "taskId": "BP_A5_EXPLORE"
+    },
+    {
+      "id": "BP_A5_NODE_QUIZ",
+      "kind": "task",
+      "next": "BP_A5_NODE_POST",
+      "taskId": "BP_A5_QUIZ"
+    },
+    {
+      "id": "BP_A5_NODE_POST",
+      "kind": "dialogue",
+      "next": "BP_A5_NODE_DECIDE",
+      "dialogueId": "BP_D5_ordeal",
+      "setFlag": {
+        "mentorChannel": "offline"
+      },
+      "skipSummary": "Противник нуди савршену слику без извора. Сачувај доказе и означи претпоставке; локална копија остаје."
+    },
+    {
+      "id": "BP_A5_NODE_DECIDE",
+      "kind": "choice",
+      "next": null,
+      "choices": [
+        {
+          "id": "evidence",
+          "label": "Сачувај доказе и означи непознато",
+          "setFlag": {
+            "ending": "evidence"
+          },
+          "next": "BP_A5_NODE_EVIDENCE"
+        },
+        {
+          "id": "both",
+          "label": "Сачувај обе означене верзије",
+          "setFlag": {
+            "ending": "both"
+          },
+          "next": "BP_A5_NODE_BOTH"
+        },
+        {
+          "id": "perfect",
+          "label": "Прихвати савршену верзију као истину",
+          "next": "BP_A5_NODE_FALSE"
+        }
+      ]
+    },
+    {
+      "id": "BP_A5_NODE_FALSE",
+      "kind": "dialogue",
+      "next": "BP_A5_NODE_DECIDE",
+      "dialogueId": "BP_D5_false_end",
+      "skipSummary": "Противник нуди савршену слику без извора. Сачувај доказе и означи претпоставке; локална копија остаје."
+    },
+    {
+      "id": "BP_A5_NODE_EVIDENCE",
+      "kind": "dialogue",
+      "next": "BP_A5_NODE_CLOSE",
+      "dialogueId": "BP_D5_ending_evidence",
+      "skipSummary": "Противник нуди савршену слику без извора. Сачувај доказе и означи претпоставке; локална копија остаје."
+    },
+    {
+      "id": "BP_A5_NODE_BOTH",
+      "kind": "dialogue",
+      "next": "BP_A5_NODE_CLOSE",
+      "dialogueId": "BP_D5_ending_both",
+      "skipSummary": "Противник нуди савршену слику без извора. Сачувај доказе и означи претпоставке; локална копија остаје."
+    },
+    {
+      "id": "BP_A5_NODE_CLOSE",
+      "kind": "dialogue",
+      "next": "BP_A5_NODE_FINISH",
+      "dialogueId": "BP_D5_return",
+      "skipSummary": "Противник нуди савршену слику без извора. Сачувај доказе и означи претпоставке; локална копија остаје."
+    },
+    {
+      "id": "BP_A5_NODE_FINISH",
+      "kind": "mission_completion",
+      "next": null,
+      "requiresAllTaskIds": [
+        "BP_A5_ARRIVE",
+        "BP_A5_EXPLORE",
+        "BP_A5_QUIZ"
+      ],
+      "awardKey": "budapest-act-5:complete",
+      "collectibleId": "BP_RELIC_5",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": null
+    }
+  ],
+  "taskOrder": [
+    "BP_A5_ARRIVE",
+    "BP_A5_EXPLORE",
+    "BP_A5_QUIZ"
+  ],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "skipWritesPlotSummary": true,
+    "transcriptAlwaysAvailable": true,
+    "completionWaitsForFlowFinish": true
+  },
+  "resumePolicy": "resume_current_node; do_not_replay_awards",
+  "optionalSceneIds": [
+    "BP_D5_optional_knight"
+  ],
+  "fallback": "2d_evidence_cards",
+  "status": "data_contract_candidate_not_runtime",
+  "launchPolicy": "unlock_after_trigger; start_only_on_user_continue; pause_during_travel",
+  "endingCallbacks": [
+    {
+      "condition": {
+        "mentorChallenged": true
+      },
+      "speakerId": "BP_CH_TESLA",
+      "text": "Оно питање у кафани било је почетак овога."
+    },
+    {
+      "condition": {
+        "mentorChallenged": false
+      },
+      "speakerId": "BP_CH_TESLA",
+      "text": "Сада знаш и које питање треба поставити мени."
+    }
+  ]
+}

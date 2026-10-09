@@ -1,0 +1,8 @@
+Additional polish you might consider
+Cinematic transitionPlay a very brief full-screen “flash” or quick zoom-in before revealing the HUD.
+HUD intro animationSlide the GPS panel, compass or minimap in from the side with a small easing curve.
+Dynamic music layeringInstead of a hard cut, build up an additional percussion loop or synth pad as the player moves.
+Contextual hintsShow a one-time tooltip near the HUD—“Tap a waypoint to lock on”—that fades out after they tap it.
+Haptics or controller rumbleA short pulse when the mission starts, or when you spawn the first waypoint.
+Environmental audioAdd distant city or nature sounds to remind them this is AR in a real place.
+Objective trackerA small on-screen list “1. Find the embassy → 2. Decipher the plaque → 3. Speak to Tesla” that highlights the current step.

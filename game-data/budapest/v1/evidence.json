@@ -1,0 +1,200 @@
+{
+  "sets": [
+    {
+      "id": "BP_EVIDENCE_0",
+      "act": 0,
+      "cards": [
+        {
+          "id": "version_a",
+          "text": "Ауторска карта A: на означеном месту видљива је силуета зграде.",
+          "kind": "fictional_training_card"
+        },
+        {
+          "id": "version_b",
+          "text": "Ауторска карта B: на истом месту нема силуете.",
+          "kind": "fictional_training_card"
+        }
+      ],
+      "options": [
+        "Сачувај обе",
+        "Избриши карту A",
+        "Избриши карту B"
+      ],
+      "submitMode": "select_both_ids"
+    },
+    {
+      "id": "BP_EVIDENCE_1",
+      "act": 1,
+      "cards": [
+        {
+          "id": "card_with_provenance",
+          "text": "Копија поруке: „Остави место следећем читаоцу.“ Порекло: ауторски досије CHRONO EYE → картица I → ова копија.",
+          "kind": "fictional_training_card"
+        },
+        {
+          "id": "card_signature_only",
+          "text": "Иста порука. Потпис: Д. Порекло копије није наведено.",
+          "kind": "fictional_training_card"
+        }
+      ],
+      "options": [
+        "Картица са ланцем порекла",
+        "Картица само са потписом"
+      ],
+      "submitMode": "select_card_id"
+    },
+    {
+      "id": "BP_EVIDENCE_2",
+      "act": 2,
+      "cards": [
+        {
+          "id": "square",
+          "text": "Hősök tere — Трг хероја. Извор: званична туристичка карта Budapestinfo.",
+          "sourceId": "SRC_HEROES"
+        },
+        {
+          "id": "tesla",
+          "text": "Теслин холограм у овој игри. Ауторски лик; није историјски снимак.",
+          "sourceId": "SRC_USER_CORE"
+        },
+        {
+          "id": "closed_ring",
+          "text": "„Затварањем круга сви записи постају истинити.“ Порекло: ПАЛИМПСЕСТ; независна потврда није приложена.",
+          "kind": "fictional_claim"
+        }
+      ],
+      "targets": {
+        "location": "Стварни локалитет",
+        "dramatization": "Сценска допуна",
+        "unverified": "Непотврђена тврдња"
+      },
+      "submitMode": "map_card_to_target"
+    },
+    {
+      "id": "BP_EVIDENCE_3",
+      "act": 3,
+      "cards": [
+        {
+          "id": "1886",
+          "text": "Менторска белешка са Трга: „1886.“ Ознака: непроверено.",
+          "kind": "fictional_corrupted_note"
+        },
+        {
+          "id": "1887",
+          "text": "Историјат Centrál-а: кафе отворен 1887.",
+          "sourceId": "SRC_CENTRAL"
+        },
+        {
+          "id": "revision_log",
+          "text": "Дневник: претходна белешка 1886; исправка на 1887 са извором.",
+          "kind": "player_revision"
+        }
+      ],
+      "targets": {
+        "rejected": "Одбачена тврдња",
+        "supported": "Подржано наведеним извором",
+        "kept": "Сачувати уз исправку"
+      },
+      "submitMode": "map_card_to_target"
+    },
+    {
+      "id": "BP_EVIDENCE_4",
+      "act": 4,
+      "cards": [
+        {
+          "id": "1838",
+          "text": "1838",
+          "sourceId": "SRC_TEKELIJANUM"
+        },
+        {
+          "id": "1907-1908",
+          "text": "1907–1908",
+          "sourceId": "SRC_TEKELIJANUM"
+        },
+        {
+          "id": "1907",
+          "text": "1907, мотив на рељефу",
+          "sourceId": "SRC_TEKELIJANUM"
+        }
+      ],
+      "targets": {
+        "institution": "Оснивање установе",
+        "building": "Данашња зграда",
+        "relief_foundation": "Полагање камена темељца приказано на рељефу"
+      },
+      "submitMode": "map_card_to_target"
+    },
+    {
+      "id": "BP_EVIDENCE_5",
+      "act": 5,
+      "cards": [
+        {
+          "id": "visible_front",
+          "text": "Облик прочеља видљив на приложеној референтној слици; размера није потврђена.",
+          "sourceId": "SRC_USER_PHOTO"
+        },
+        {
+          "id": "hidden_side",
+          "text": "Страна коју та слика не приказује; допуњена према визуелној претпоставци.",
+          "sourceId": "SRC_USER_PHOTO"
+        },
+        {
+          "id": "bell",
+          "text": "Нови звучни ефекат звона направљен за сцену. Није историјски снимак.",
+          "kind": "artistic_audio"
+        }
+      ],
+      "targets": {
+        "photo_supported": "Видљиви облик поткрепљен сликом",
+        "unverified": "Непотврђена геометрија",
+        "artistic": "Уметничка допуна"
+      },
+      "submitMode": "map_card_to_target"
+    }
+  ],
+  "historyCards": [
+    {
+      "id": "BP_HISTORY_0",
+      "text": "Фикционални увод у истраживање; нема историјске тврдње о настанку града.",
+      "sourceIds": [
+        "SRC_USER_CORE"
+      ]
+    },
+    {
+      "id": "BP_HISTORY_1",
+      "text": "Станица је Амбасада Републике Србије, Dózsa György út 92. Игра користи јавни прилаз; Дучићев ехо је драматизација.",
+      "sourceIds": [
+        "SRC_EMBASSY"
+      ]
+    },
+    {
+      "id": "BP_HISTORY_2",
+      "text": "Hősök tere је стварни Трг хероја у Будимпешти. Приказани електрични круг и сукоб ликова су ауторски дигитални слој.",
+      "sourceIds": [
+        "SRC_HEROES"
+      ]
+    },
+    {
+      "id": "BP_HISTORY_3",
+      "text": "Centrál је отворен 1887. године. Тај проверљив податак служи да играч открије измењену менторску белешку.",
+      "sourceIds": [
+        "SRC_CENTRAL"
+      ]
+    },
+    {
+      "id": "BP_HISTORY_4",
+      "text": "Текелијанум је основан 1838. Данашња зграда настала је 1907–1908. Фасадни рељефи приказују и полагање камена темељца 1907.",
+      "sourceIds": [
+        "SRC_TEKELIJANUM"
+      ]
+    },
+    {
+      "id": "BP_HISTORY_5",
+      "text": "Табанска српска црква срушена је 1949. OSZK описује сачуване уметнине и документе који омогућавају да њена прича остане доступна.",
+      "sourceIds": [
+        "SRC_TABAN"
+      ]
+    }
+  ],
+  "finaleImagePolicy": "Text-only desk review can use descriptions; public visual release waits for licensed reference image."
+}

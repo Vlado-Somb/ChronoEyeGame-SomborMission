@@ -1,0 +1,15 @@
+{
+  "missionId": "budapest-act-0",
+  "assetRegistry": "assets/index.json",
+  "assetIds": [
+    "BP_ART_0",
+    "BP_VOICE",
+    "BP_SFX"
+  ],
+  "textAssets": [
+    "dialogues/act-0.json",
+    "missions/act-0.json"
+  ],
+  "missingAssetsDoNotBlockTextReview": true,
+  "publicArReleaseBlocked": true
+}

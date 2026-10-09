@@ -1,0 +1,115 @@
+{
+  "id": "budapest-act-3",
+  "title": "Једна година вишка",
+  "primaryWaypointId": "BP_CENTRAL",
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "actIndex": 3,
+  "prerequisiteMissionIds": [
+    "budapest-act-2"
+  ],
+  "tasks": [
+    {
+      "id": "BP_A3_ARRIVE",
+      "type": "gps",
+      "title": "Стигни и стани",
+      "instruction": "Потврди безбедно место у јавном простору; ако GPS није употребљив, изабери ручну потврду.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "gps": {
+        "waypointId": "BP_CENTRAL",
+        "requiredZone": 2
+      },
+      "arrivalMode": "gps_or_explicit_manual",
+      "waypointId": "BP_CENTRAL"
+    },
+    {
+      "id": "BP_A3_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Једна година вишка",
+      "instruction": "Упореди Теслину белешку са извором кафеа. Обележи погрешну годину, сачувај исправку и претходну верзију.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "ar": {
+        "interaction": "compare_revision",
+        "activationAfterTask": "BP_A3_ARRIVE",
+        "assetIds": [
+          "BP_ART_3"
+        ],
+        "mode": "relative_to_camera",
+        "successCondition": {
+          "allEvidenceMappings": [
+            "1886:rejected",
+            "1887:supported",
+            "revision_log:kept"
+          ]
+        },
+        "automaticRecognition": false
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "1886:rejected",
+            "1887:supported",
+            "revision_log:kept"
+          ]
+        }
+      },
+      "implementationStatus": "editorially_active_assets_pending",
+      "evidenceSetId": "BP_EVIDENCE_3"
+    },
+    {
+      "id": "BP_A3_QUIZ",
+      "type": "multiple_choice",
+      "title": "Провери закључак",
+      "instruction": "Користи досије и извор наведен уз картицу.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Centrál наводи 1887. Погрешних 1886 у претходном дијалогу је намерно подметање у фикцији, не историјски податак.",
+        "delaySeconds": 0
+      },
+      "question": {
+        "text": "Која година отварања Centrál-а стоји у историјату самог кафеа?",
+        "choices": [
+          "1886",
+          "1887",
+          "1907"
+        ],
+        "correctIndex": 1,
+        "wrongAnswerFeedback": "Погледај историјску картицу и њен извор. Можеш поново одговорити; хинт је бесплатан."
+      },
+      "sources": [
+        "SRC_CENTRAL"
+      ],
+      "historyCardId": "BP_HISTORY_3"
+    }
+  ],
+  "narrative": {
+    "setting": "Једна година вишка",
+    "historyParagraphs": [
+      "Centrál је отворен 1887. године. Тај проверљив податак служи да играч открије измењену менторску белешку."
+    ],
+    "mentorOpening": "BP_D3_opening",
+    "mentorCompletion": "BP_D3_completion",
+    "educationalObjective": "Исправити проверљиву историјску грешку, сачувати траг исправке и преиспитати ментора.",
+    "sources": [
+      "SRC_CENTRAL"
+    ]
+  },
+  "runtimeStatus": "not_integrated"
+}

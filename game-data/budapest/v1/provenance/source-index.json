@@ -1,0 +1,61 @@
+{
+  "documents": [
+    {
+      "sourceFilename": "02-PROJECT-ROADMAP.docx",
+      "sha256": "5fd44ab31c1fb3810eb70403dd53ae7410991d59a2100a63e42bdaec2babed18",
+      "extractedTextPath": "provenance/02-PROJECT-ROADMAP.txt",
+      "status": "original_user_supplied_text_not_historical_authority"
+    },
+    {
+      "sourceFilename": "03-Additional-polish-you-might-consider.docx",
+      "sha256": "06bbdb3ab79f2fccc349a41e2a4370efe63650fd0b20fce4d40cc37609fe5c0a",
+      "extractedTextPath": "provenance/03-Additional-polish-you-might-consider.txt",
+      "status": "original_user_supplied_text_not_historical_authority"
+    },
+    {
+      "sourceFilename": "04-Core_Story.docx",
+      "sha256": "c6546a7e7606f8c062d3d33c025342f6eec072e79b3d5308c37014f6f22665b5",
+      "extractedTextPath": "provenance/04-Core_Story.txt",
+      "status": "original_user_supplied_text_not_historical_authority"
+    },
+    {
+      "sourceFilename": "05-act_5_BudimHill_TheCulminationOfTruth.docx",
+      "sha256": "878217fd2c4dcd5892b71ee4f956a0b17e868791d768081806b9094c3f0c9218",
+      "extractedTextPath": "provenance/05-act_5_BudimHill_TheCulminationOfTruth.txt",
+      "status": "original_user_supplied_text_not_historical_authority"
+    },
+    {
+      "sourceFilename": "06-act_4_VaciStreetTokolyanum_ThreadsOfUnity.docx",
+      "sha256": "016e04643b6782816cdb9dfc7f775c9b2eecbda41d118d33ceaaca34bd0b1a5e",
+      "extractedTextPath": "provenance/06-act_4_VaciStreetTokolyanum_ThreadsOfUnity.txt",
+      "status": "original_user_supplied_text_not_historical_authority"
+    },
+    {
+      "sourceFilename": "07-act_3_CentralCafe_RestfullInterlude.docx",
+      "sha256": "a14b8a116f515240cbc6de574cf74178c477046190025b1813ce088913895f42",
+      "extractedTextPath": "provenance/07-act_3_CentralCafe_RestfullInterlude.txt",
+      "status": "original_user_supplied_text_not_historical_authority"
+    },
+    {
+      "sourceFilename": "08-act_2_HerosSquare_GuardiansOfUnity.docx",
+      "sha256": "d0ff6d2fd6985b019f50649b8f100b4793c53b86d2b5235447b036e5a67caf12",
+      "extractedTextPath": "provenance/08-act_2_HerosSquare_GuardiansOfUnity.txt",
+      "status": "original_user_supplied_text_not_historical_authority"
+    },
+    {
+      "sourceFilename": "09-act_1_SerbianEmbassy_AnalogBegginig.docx",
+      "sha256": "3e18f43edceae16605529a791110794703e5b6babcd00aa8882c03539ebf3e4f",
+      "extractedTextPath": "provenance/09-act_1_SerbianEmbassy_AnalogBegginig.txt",
+      "status": "original_user_supplied_text_not_historical_authority"
+    },
+    {
+      "sourceFilename": "10-act_0_EmailApp_Introduction.docx",
+      "sha256": "a01ba7047ca0a7ed568ad31264d3665d770d7eee4581a491660cf5587159e56a",
+      "extractedTextPath": "provenance/10-act_0_EmailApp_Introduction.txt",
+      "status": "original_user_supplied_text_not_historical_authority"
+    }
+  ],
+  "photo": "visible_in_user_message_local_copy_missing",
+  "originalsUnmodified": true,
+  "extractionNormalization": "Paragraph text preserved; trailing whitespace normalized; original DOCX hashes retained."
+}

@@ -1,0 +1,114 @@
+{
+  "id": "BP_A3_FLOW",
+  "missionId": "budapest-act-3",
+  "entryNodeId": "BP_A3_NODE_ARRIVAL",
+  "nodes": [
+    {
+      "id": "BP_A3_NODE_ENTRY",
+      "kind": "dialogue",
+      "next": "BP_A3_NODE_PREPARE",
+      "dialogueId": "BP_D3_opening",
+      "requiresSafeStationary": true,
+      "skipSummary": "Извор наводи 1887. Мира је писала модул допуњавања, Теслина белешка била је измењена."
+    },
+    {
+      "id": "BP_A3_NODE_ARRIVAL",
+      "kind": "task",
+      "next": "BP_A3_NODE_ENTRY",
+      "taskId": "BP_A3_ARRIVE"
+    },
+    {
+      "id": "BP_A3_NODE_PREPARE",
+      "kind": "dialogue",
+      "next": "BP_A3_NODE_EXPLORE",
+      "dialogueId": "BP_D3_crisis",
+      "skipSummary": "Извор наводи 1887. Мира је писала модул допуњавања, Теслина белешка била је измењена."
+    },
+    {
+      "id": "BP_A3_NODE_EXPLORE",
+      "kind": "task",
+      "next": "BP_A3_NODE_QUIZ",
+      "taskId": "BP_A3_EXPLORE"
+    },
+    {
+      "id": "BP_A3_NODE_QUIZ",
+      "kind": "task",
+      "next": "BP_A3_NODE_POST",
+      "taskId": "BP_A3_QUIZ"
+    },
+    {
+      "id": "BP_A3_NODE_POST",
+      "kind": "choice",
+      "next": null,
+      "choices": [
+        {
+          "id": "challenge_mentor",
+          "label": "Покажи ми извор убудуће",
+          "setFlag": {
+            "mentorChallenged": true
+          },
+          "next": "BP_A3_NODE_CHALLENGE"
+        },
+        {
+          "id": "continue_with_checks",
+          "label": "Настављамо уз проверу",
+          "setFlag": {
+            "mentorChallenged": false
+          },
+          "next": "BP_A3_NODE_TRUST"
+        }
+      ]
+    },
+    {
+      "id": "BP_A3_NODE_CHALLENGE",
+      "kind": "dialogue",
+      "next": "BP_A3_NODE_CLOSE",
+      "dialogueId": "BP_D3_challenge",
+      "skipSummary": "Извор наводи 1887. Мира је писала модул допуњавања, Теслина белешка била је измењена."
+    },
+    {
+      "id": "BP_A3_NODE_TRUST",
+      "kind": "dialogue",
+      "next": "BP_A3_NODE_CLOSE",
+      "dialogueId": "BP_D3_trust",
+      "skipSummary": "Извор наводи 1887. Мира је писала модул допуњавања, Теслина белешка била је измењена."
+    },
+    {
+      "id": "BP_A3_NODE_CLOSE",
+      "kind": "dialogue",
+      "next": "BP_A3_NODE_FINISH",
+      "dialogueId": "BP_D3_completion",
+      "skipSummary": "Извор наводи 1887. Мира је писала модул допуњавања, Теслина белешка била је измењена."
+    },
+    {
+      "id": "BP_A3_NODE_FINISH",
+      "kind": "mission_completion",
+      "next": null,
+      "requiresAllTaskIds": [
+        "BP_A3_ARRIVE",
+        "BP_A3_EXPLORE",
+        "BP_A3_QUIZ"
+      ],
+      "awardKey": "budapest-act-3:complete",
+      "collectibleId": "BP_RELIC_3",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-4"
+    }
+  ],
+  "taskOrder": [
+    "BP_A3_ARRIVE",
+    "BP_A3_EXPLORE",
+    "BP_A3_QUIZ"
+  ],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "skipWritesPlotSummary": true,
+    "transcriptAlwaysAvailable": true,
+    "completionWaitsForFlowFinish": true
+  },
+  "resumePolicy": "resume_current_node; do_not_replay_awards",
+  "optionalSceneIds": [],
+  "fallback": "2d_evidence_cards",
+  "status": "data_contract_candidate_not_runtime",
+  "launchPolicy": "unlock_after_trigger; start_only_on_user_continue; pause_during_travel"
+}

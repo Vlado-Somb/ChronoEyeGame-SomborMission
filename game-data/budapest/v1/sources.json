@@ -1,0 +1,85 @@
+{
+  "sources": [
+    {
+      "id": "SRC_USER_CORE",
+      "title": "Core_Story и актови 0–5",
+      "type": "user_supplied",
+      "url": null,
+      "scope": "Наративни извор, не доказ историјских тврдњи.",
+      "checkedAt": "2026-10-09",
+      "mediaRedistribution": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_EMBASSY",
+      "title": "Амбасада Републике Србије — контакт",
+      "type": "official",
+      "url": "https://budapest.mfa.gov.rs/ambasada/kontakt",
+      "scope": "Идентитет и адреса станице; 92/92b варијанта адресе захтева теренску проверу прилаза.",
+      "checkedAt": "2026-10-09",
+      "mediaRedistribution": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_HEROES",
+      "title": "Budapestinfo — туристичка карта",
+      "type": "official",
+      "url": "https://www.budapestinfo.hu/storage/files/GBm6FrGupWdIt02ktNeA30WVJalrL3tVD5oUN7nV.pdf",
+      "scope": "Назив Hősök tere и локација трга; не потврђује садашње стање сваке статуе.",
+      "checkedAt": "2026-10-09",
+      "mediaRedistribution": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_CENTRAL",
+      "title": "Centrál — историјат",
+      "type": "institutional",
+      "url": "https://centralgrandcafe.hu/en/central-history/",
+      "scope": "Година отварања 1887; не потврђује фикционални разговор за столом.",
+      "checkedAt": "2026-10-09",
+      "mediaRedistribution": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_TEKELIJANUM",
+      "title": "Српски институт — Текелијанум",
+      "type": "institutional",
+      "url": "https://srpskiinstitut.hu/текелијанум/",
+      "scope": "1838 установа; 1907–1908 зграда; теме фасадних рељефа.",
+      "checkedAt": "2026-10-09",
+      "mediaRedistribution": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_TABAN",
+      "title": "OSZK — Pillantás a Tabánra, Голуб Ксенија, 2019",
+      "type": "institutional",
+      "url": "https://nemzetikonyvtar.blog.hu/2019/03/07/pillantas_a_tabanra_az_eltunt_racvaros_emlekezete_nemzeti_konyvtarunkbol_nezve",
+      "scope": "Рушење 1949, сачувана дела и документација. Није геодетски план.",
+      "checkedAt": "2026-10-09",
+      "mediaRedistribution": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_USER_PHOTO",
+      "title": "Корисникова фотографија Табанске цркве",
+      "type": "user_supplied",
+      "url": null,
+      "scope": "Визуелна референца у поруци; датовање, аутор, права, размера и невидљиве стране непотврђени.",
+      "checkedAt": "2026-10-09",
+      "mediaRedistribution": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_GOOGLE_GEO",
+      "title": "Google ARCore Geospatial",
+      "type": "official",
+      "url": "https://developers.google.com/ar/develop/geospatial",
+      "scope": "Проверити подршку на свакој станици.",
+      "checkedAt": "2026-10-09",
+      "mediaRedistribution": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_GOOGLE_DEPTH",
+      "title": "Google Geospatial Depth",
+      "type": "official",
+      "url": "https://developers.google.com/ar/develop/java/depth/geospatial-depth",
+      "scope": "Geospatial Depth зависи од VPS/Streetscape и способности уређаја.",
+      "checkedAt": "2026-10-09",
+      "mediaRedistribution": "not_granted_by_citation"
+    }
+  ]
+}

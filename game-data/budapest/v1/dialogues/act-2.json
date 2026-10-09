@@ -1,0 +1,198 @@
+{
+  "id": "BP_DIALOGUE_2",
+  "language": "sr-Cyrl",
+  "scenes": [
+    {
+      "id": "BP_D2_opening",
+      "act": 2,
+      "title": "Трг који постаје мрежа",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D2_opening_L01",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Сада станите. Цео призор можете видети одавде; нема потребе да јурите светлост.",
+          "subtitle": "Сада станите. Цео призор можете видети одавде; нема потребе да јурите светлост.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_opening_L02",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Овако је боље. Напокон имам и рамена.",
+          "subtitle": "Овако је боље. Напокон имам и рамена.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_opening_L03",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Очекивао сам да будете виши.",
+          "subtitle": "Очекивао сам да будете виши.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_opening_L04",
+          "speakerId": "BP_CH_TESLA",
+          "text": "То је подешавање, не историјска расправа.",
+          "subtitle": "То је подешавање, не историјска расправа.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_opening_L05",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Погледајте везе између записа. Ако неко избрише порекло, слика остаје. Само више не знамо одакле долази.",
+          "subtitle": "Погледајте везе између записа. Ако неко избрише порекло, слика остаје. Само више не знамо одакле долази.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_opening_L06",
+          "speakerId": "BP_CH_AUREL",
+          "text": "А ипак је свима лепше да гледају слику.",
+          "subtitle": "А ипак је свима лепше да гледају слику.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_opening_L07",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Непознат канал. Има приступ нашем приказу.",
+          "subtitle": "Непознат канал. Има приступ нашем приказу.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_opening_L08",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Аурел Варга. ПАЛИМПСЕСТ. Ви то зовете упадом; ја бих рекао да смо коначно добили публику.",
+          "subtitle": "Аурел Варга. ПАЛИМПСЕСТ. Ви то зовете упадом; ја бих рекао да смо коначно добили публику.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D2_confrontation",
+      "act": 2,
+      "title": "Понуда савршене верзије",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D2_confrontation_L01",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Људи желе град који разумеју. Ви им нудите фусноте.",
+          "subtitle": "Људи желе град који разумеју. Ви им нудите фусноте.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_confrontation_L02",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Нудимо им могућност да нас провере.",
+          "subtitle": "Нудимо им могућност да нас провере.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_confrontation_L03",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Колико њих ће то урадити? Ја им дајем прошлост коју могу да виде.",
+          "subtitle": "Колико њих ће то урадити? Ја им дајем прошлост коју могу да виде.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_confrontation_L04",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "А шта уклањате да би се видела тако јасно?",
+          "subtitle": "А шта уклањате да би се видела тако јасно?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_confrontation_L05",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Сметње. Дупликате. Неслагања.",
+          "subtitle": "Сметње. Дупликате. Неслагања.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_confrontation_L06",
+          "speakerId": "BP_CH_MIRA",
+          "text": "И разлику између њих.",
+          "subtitle": "И разлику између њих.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_confrontation_L07",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Инспекторе, довршите круг. Један додир. Све празнине могу нестати.",
+          "subtitle": "Инспекторе, довршите круг. Један додир. Све празнине могу нестати.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_confrontation_L08",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Не затварајте ништа што још нисте проверили. Повежите картице са њиховим изворима.",
+          "subtitle": "Не затварајте ништа што још нисте проверили. Повежите картице са њиховим изворима.",
+          "voiceAssetId": null
+        }
+      ]
+    },
+    {
+      "id": "BP_D2_completion",
+      "act": 2,
+      "title": "Лажна победа",
+      "fictionLabel": "Ауторска драматизација; није архивски снимак или историјски цитат.",
+      "lines": [
+        {
+          "id": "BP_D2_completion_L01",
+          "speakerId": "BP_CH_SYSTEM",
+          "text": "Везе сачуване. Преузимање приказа прекинуто.",
+          "subtitle": "Везе сачуване. Преузимање приказа прекинуто.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_completion_L02",
+          "speakerId": "BP_CH_AUREL",
+          "text": "Одлично. Сада верујете свом екрану мало више него пре.",
+          "subtitle": "Одлично. Сада верујете свом екрану мало више него пре.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_completion_L03",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Изгубила сам његов канал.",
+          "subtitle": "Изгубила сам његов канал.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_completion_L04",
+          "speakerId": "BP_CH_TESLA",
+          "text": "Стабилизовано. Архивска белешка: Centrál је отворио врата 1886. године. Тамо настављамо.",
+          "subtitle": "Стабилизовано. Архивска белешка: Centrál је отворио врата 1886. године. Тамо настављамо.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_completion_L05",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Сачекајте, пакет је управо… Не, сада изгледа у реду.",
+          "subtitle": "Сачекајте, пакет је управо… Не, сада изгледа у реду.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_completion_L06",
+          "speakerId": "BP_CH_PLAYER",
+          "text": "Шта је изгледало погрешно?",
+          "subtitle": "Шта је изгледало погрешно?",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_completion_L07",
+          "speakerId": "BP_CH_MIRA",
+          "text": "Једна ознака верзије. Проверићу у миру.",
+          "subtitle": "Једна ознака верзије. Проверићу у миру.",
+          "voiceAssetId": null
+        },
+        {
+          "id": "BP_D2_completion_L08",
+          "speakerId": "BP_CH_SYSTEM",
+          "text": "Пренос до центра. Прича је паузирана до наставка; нема временског ограничења.",
+          "subtitle": "Пренос до центра. Прича је паузирана до наставка; нема временског ограничења.",
+          "voiceAssetId": null
+        }
+      ]
+    }
+  ]
+}

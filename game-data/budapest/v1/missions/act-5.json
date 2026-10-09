@@ -1,0 +1,117 @@
+{
+  "id": "budapest-act-5",
+  "title": "Град који није пристао да нестане",
+  "primaryWaypointId": "BP_TABAN",
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "actIndex": 5,
+  "prerequisiteMissionIds": [
+    "budapest-act-4"
+  ],
+  "tasks": [
+    {
+      "id": "BP_A5_ARRIVE",
+      "type": "gps",
+      "title": "Стигни и стани",
+      "instruction": "Потврди безбедно место у јавном простору; ако GPS није употребљив, изабери ручну потврду.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "gps": {
+        "waypointId": "BP_TABAN",
+        "requiredZone": 2
+      },
+      "arrivalMode": "gps_or_explicit_manual",
+      "waypointId": "BP_TABAN"
+    },
+    {
+      "id": "BP_A5_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Град који није пристао да нестане",
+      "instruction": "Разврстај три дела: видљиво на референтној фотографији, непозната геометрија ван кадра, ауторска звучна допуна. Изабери завршетак који чува ознаке и изворе.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Запис је додат у локални досије. Настави када желиш.",
+        "delaySeconds": 0
+      },
+      "ar": {
+        "interaction": "reconstruct_with_uncertainty",
+        "activationAfterTask": "BP_A5_ARRIVE",
+        "assetIds": [
+          "BP_ART_5",
+          "BP_PHOTO_TABAN",
+          "BP_MODEL_CHURCH"
+        ],
+        "mode": "guided_photo_overlay",
+        "successCondition": {
+          "allEvidenceMappings": [
+            "visible_front:photo_supported",
+            "hidden_side:unverified",
+            "bell:artistic"
+          ]
+        },
+        "automaticRecognition": false
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "visible_front:photo_supported",
+            "hidden_side:unverified",
+            "bell:artistic"
+          ]
+        }
+      },
+      "implementationStatus": "editorially_active_assets_pending",
+      "evidenceSetId": "BP_EVIDENCE_5"
+    },
+    {
+      "id": "BP_A5_QUIZ",
+      "type": "multiple_choice",
+      "title": "Провери закључак",
+      "instruction": "Користи досије и извор наведен уз картицу.",
+      "active": true,
+      "requiredForMission": true,
+      "completion": {
+        "title": "Траг сачуван",
+        "narrative": "Извор OSZK наводи рушење 1949. Сачувана дела и документација омогућавају истраживање; наш модел није замена за њих.",
+        "delaySeconds": 0
+      },
+      "question": {
+        "text": "Које године је срушена Табанска српска црква, према наведеном тексту националне библиотеке OSZK?",
+        "choices": [
+          "1838",
+          "1887",
+          "1949"
+        ],
+        "correctIndex": 2,
+        "wrongAnswerFeedback": "Погледај историјску картицу и њен извор. Можеш поново одговорити; хинт је бесплатан."
+      },
+      "sources": [
+        "SRC_TABAN"
+      ],
+      "historyCardId": "BP_HISTORY_5"
+    }
+  ],
+  "narrative": {
+    "setting": "Град који није пристао да нестане",
+    "historyParagraphs": [
+      "Табанска српска црква срушена је 1949. OSZK описује сачуване уметнине и документе који омогућавају да њена прича остане доступна."
+    ],
+    "mentorOpening": "BP_D5_opening",
+    "mentorCompletion": "BP_D5_return",
+    "educationalObjective": "Сачувати доказе несталог наслеђа и разликовати документовани приказ од претпостављених делова модела.",
+    "sources": [
+      "SRC_TABAN"
+    ]
+  },
+  "runtimeStatus": "not_integrated"
+}
