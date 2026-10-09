@@ -15,7 +15,7 @@
 | **ARCore Geospatial/VPS** | `not_configured` | Геопросторно AR постављање | Захтева ARCore API, локацијске дозволе и проверу VPS доступности | DEC-008 |
 | **ARCore Depth** | `decision_pending` | Заклањање виртуелних објеката стварним | ARCore SDK режим, **није** засебан Cloud Maps API; check device support | DEC-004/008 |
 | **ARCore Streetscape Geometry** | `decision_pending` | Геометрија фасада/терена и occlusion | ARCore Geospatial + session режим; доступност зависи од локације | DEC-008 |
-| **Google Maps JavaScript API** | `decision_pending` | Веб мапа ако изаберемо Google подлогу | Само за проверени HTTPS/referrer WebView сценарио; одвојен restricted browser key | DEC-009 |
+| **Google Maps JavaScript API** | `not_configured` за CHRONO EYE Cloud; Web адаптер `accepted_for_design` | Први Web Maps прототип у `web/maps/`, са координатним fallback-ом без кључа | HTTPS/referrer тест и засебан ограничен browser key тек предстоје; није Android/WebView верификовано | DEC-009/018 |
 | **Maps SDK for Android** | `decision_pending` | Алтернатива за native Android мапу | Android package/certificate ограничења API кључа | DEC-009 |
 | **Независни Web map adapter** | `decision_pending` | Преносиви приказ сопствених WGS84 маркера | Библиотека, подлога и лиценца бирају се посебно; не злоупотребљавати јавне OSM tile сервере | DEC-009 |
 | **Google My Maps** | `decision_pending` за уређивачки workflow | Визуелна теренска корекција координата | Само редакторски алат / ручни извоз и ревизија; није runtime извор истине | DEC-009 |

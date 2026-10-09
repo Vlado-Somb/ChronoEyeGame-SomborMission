@@ -1,0 +1,380 @@
+{
+  "schemaVersion": "chronoeye-maps-snapshot/1.0",
+  "source": {
+    "repository": "Vlado-Somb/ChronoEyeGame-SomborMission",
+    "ref": "content/sombor-portable-game-data-20261008",
+    "commit": "aa74a2bc64b55ae8c90896eb7019c22e6987c3a5",
+    "contentSchema": "1.1.0",
+    "generatedOn": "2026-10-09",
+    "status": "candidate_not_main"
+  },
+  "gameId": "chrono-eye-sombor",
+  "name": "Упознај Сомбор",
+  "waypoints": [
+    {
+      "id": "SO_GK",
+      "name": "Gradska kuća",
+      "category": "main",
+      "position": {
+        "latitude": 45.772478019300046,
+        "longitude": 19.11388079514005,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 75,
+        "approachMeters": 21,
+        "closeMeters": 7,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_MKG",
+      "name": "Galerija Milan Konjović",
+      "category": "main",
+      "position": {
+        "latitude": 45.77215606194312,
+        "longitude": 19.113776908494945,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 50,
+        "approachMeters": 15,
+        "closeMeters": 7,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_PŠM",
+      "name": "Muzej Podunavskih Švaba",
+      "category": "main",
+      "position": {
+        "latitude": 45.772059444178886,
+        "longitude": 19.11271056383739,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 50,
+        "approachMeters": 15,
+        "closeMeters": 7,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_GMS",
+      "name": "Gradski Muzej Sombor",
+      "category": "main",
+      "position": {
+        "latitude": 45.77192920802979,
+        "longitude": 19.111556856276923,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 50,
+        "approachMeters": 25,
+        "closeMeters": 7,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_NPS",
+      "name": "Narodno pozorište Sombor",
+      "category": "main",
+      "position": {
+        "latitude": 45.77228188438349,
+        "longitude": 19.11181348204088,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 50,
+        "approachMeters": 12,
+        "closeMeters": 7,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_VP",
+      "name": "Spomenik Veljku Petroviću",
+      "category": "main",
+      "position": {
+        "latitude": 45.772193708091905,
+        "longitude": 19.1161010794803,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 50,
+        "approachMeters": 12,
+        "closeMeters": 5,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_SČ",
+      "name": "Srpska čitaonica",
+      "category": "additional",
+      "position": {
+        "latitude": 45.77286325919296,
+        "longitude": 19.11566256691123,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 50,
+        "approachMeters": 12,
+        "closeMeters": 5,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_LK",
+      "name": "Spomenik Lazi Kostiću",
+      "category": "main",
+      "position": {
+        "latitude": 45.773483680738025,
+        "longitude": 19.115175987705435,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 50,
+        "approachMeters": 12,
+        "closeMeters": 5,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_EB",
+      "name": "Spomenik Ernestu Bošnjaku",
+      "category": "main",
+      "position": {
+        "latitude": 45.772966468741664,
+        "longitude": 19.11547583884617,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 50,
+        "approachMeters": 12,
+        "closeMeters": 5,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_PED",
+      "name": "Pedagoški fakultet u Somboru",
+      "category": "additional",
+      "position": {
+        "latitude": 45.7683412509427,
+        "longitude": 19.12169385967678,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 70,
+        "approachMeters": 20,
+        "closeMeters": 10,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_SVĐ",
+      "name": "Crkva Svetog Đorđa",
+      "category": "additional",
+      "position": {
+        "latitude": 45.77257847221019,
+        "longitude": 19.10976272208343,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 50,
+        "approachMeters": 20,
+        "closeMeters": 10,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_ŽUP",
+      "name": "Županija",
+      "category": "main",
+      "position": {
+        "latitude": 45.770009385415605,
+        "longitude": 19.117732572954402,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 180,
+        "approachMeters": 66,
+        "closeMeters": 15,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    },
+    {
+      "id": "SO_GLOBAL",
+      "name": "Opšti Waypoint za Sombor",
+      "category": "additional",
+      "position": {
+        "latitude": 45.77302199880994,
+        "longitude": 19.115302193863783,
+        "legacyAltitudeMeters": 90
+      },
+      "zones": {
+        "outerMeters": 1000,
+        "approachMeters": 550,
+        "closeMeters": 250,
+        "confirmSeconds": {
+          "outer": 2,
+          "approach": 2,
+          "close": 2
+        }
+      },
+      "fieldVerified": false
+    }
+  ],
+  "missions": [
+    {
+      "id": "sombor-gk",
+      "title": "GRADSKA KUĆA",
+      "primaryWaypointId": "SO_GK",
+      "reviewStatus": "production_editorial_v1",
+      "taskCount": 3,
+      "setting": "Trg Svetog Trojstva — Ćelavi trg, Sombor",
+      "summary": "Stani na bezbedno mesto na Trgu Svetog Trojstva odakle jasno vidiš pročelje Gradske kuće. Nije potrebno prilaziti ulici ili sredini kolovoza.",
+      "gpsRequiredZone": 2
+    },
+    {
+      "id": "sombor-mkg",
+      "title": "MILAN KONJOVIĆ — GENIJE BOJA",
+      "primaryWaypointId": "SO_MKG",
+      "reviewStatus": "production_editorial_v1",
+      "taskCount": 4,
+      "setting": "Trg Svetog Trojstva 2 — Galerija „Milan Konjović”, Sombor",
+      "summary": "Pronađi Galeriju „Milan Konjović” na Trgu Svetog Trojstva 2. Zadrži se na bezbednom trotoaru ili javnoj pešačkoj površini odakle vidiš pročelje. Ne moraš ulaziti u galeriju.",
+      "gpsRequiredZone": 2
+    },
+    {
+      "id": "sombor-psm",
+      "title": "MUZEJ PODUNAVSKIH ŠVABA — KOFER SEĆANJA",
+      "primaryWaypointId": "SO_PŠM",
+      "reviewStatus": "production_editorial_v1",
+      "taskCount": 4,
+      "setting": "Grašalkovićeva palata, Sombor",
+      "summary": "Pronađi Muzej podunavskih Švaba u Grašalkovićevoj palati. Ostani na bezbednoj pešačkoj površini; nije potrebno ulaziti u muzej.",
+      "gpsRequiredZone": 2
+    },
+    {
+      "id": "sombor-gms",
+      "title": "MUZEJ GRADA SOMBORA",
+      "primaryWaypointId": "SO_GMS",
+      "reviewStatus": "legacy_unreviewed",
+      "taskCount": 3,
+      "setting": "",
+      "summary": "Pronađi lokaciju muzeja koji čuva istoriju grada Sombora",
+      "gpsRequiredZone": 3
+    },
+    {
+      "id": "sombor-nps",
+      "title": "SOMBORSKO POZORIŠTE",
+      "primaryWaypointId": "SO_NPS",
+      "reviewStatus": "ar_accepted_editorial_pending",
+      "taskCount": 4,
+      "setting": "",
+      "summary": "Pronađi zgradu pozorišta u Somboru, i stani pored metalne skulpture  ispred ulaza.",
+      "gpsRequiredZone": 3
+    },
+    {
+      "id": "sombor-vp",
+      "title": "SPOMENIK VELJKU PETROVIĆU",
+      "primaryWaypointId": "SO_VP",
+      "reviewStatus": "legacy_unreviewed",
+      "taskCount": 3,
+      "setting": "",
+      "summary": "Pronađi spomenik Veljku Petroviću",
+      "gpsRequiredZone": 3
+    },
+    {
+      "id": "sombor-lk",
+      "title": "SPOMENIK LAZI KOSTIĆU",
+      "primaryWaypointId": "SO_LK",
+      "reviewStatus": "ar_accepted_editorial_pending",
+      "taskCount": 4,
+      "setting": "",
+      "summary": "Pronađi spomeni Lazi Kostiću.",
+      "gpsRequiredZone": 3
+    },
+    {
+      "id": "sombor-eb",
+      "title": "SPOMENIK ERNESTU BOŠNJAKU",
+      "primaryWaypointId": "SO_EB",
+      "reviewStatus": "ar_accepted_editorial_pending",
+      "taskCount": 4,
+      "setting": "",
+      "summary": "Pronađi spomenik poznatom somborcu Ernestu Bošnjaku",
+      "gpsRequiredZone": 3
+    },
+    {
+      "id": "sombor-zup",
+      "title": "ŽUPANIJA",
+      "primaryWaypointId": "SO_ŽUP",
+      "reviewStatus": "legacy_unreviewed",
+      "taskCount": 3,
+      "setting": "",
+      "summary": "Pronađi zgradu Bačko-Bodroške županije u Somboru ",
+      "gpsRequiredZone": 3
+    }
+  ]
+}
