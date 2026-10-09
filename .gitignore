@@ -1,0 +1,20 @@
+# CHRONO EYE — ignore new generated artifacts and local credentials.
+# WARNING: already tracked files remain tracked until explicitly removed from Git.
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Bb]uild/
+[Bb]uilds/
+*.apk
+*.aab
+*.keystore
+*.jks
+*.p12
+.env
+.env.*
+!.env.example
+local.properties
+secrets.properties
+google-services.json
