@@ -1,0 +1,110 @@
+{
+  "id": "BP2_A5_FLOW",
+  "missionId": "budapest-act-5",
+  "entryNodeId": "BP2_A5_NODE_ARRIVE",
+  "nodes": [
+    {
+      "id": "BP2_A5_NODE_ARRIVE",
+      "kind": "task",
+      "taskId": "BP2_A5_ARRIVE",
+      "next": "BP2_A5_NODE_S00"
+    },
+    {
+      "id": "BP2_A5_NODE_S00",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_bridge",
+      "skipSummary": "Пролаз крај несталог храма, Пачићево коло, Јованов траг и живи код на Гелерт брду.",
+      "next": "BP2_A5_NODE_S01"
+    },
+    {
+      "id": "BP2_A5_NODE_S01",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_near_absence",
+      "skipSummary": "Пролаз крај несталог храма, Пачићево коло, Јованов траг и живи код на Гелерт брду.",
+      "next": "BP2_A5_NODE_S02"
+    },
+    {
+      "id": "BP2_A5_NODE_S02",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_stag",
+      "skipSummary": "Пролаз крај несталог храма, Пачићево коло, Јованов траг и живи код на Гелерт брду.",
+      "next": "BP2_A5_NODE_S03"
+    },
+    {
+      "id": "BP2_A5_NODE_S03",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_watercolor",
+      "skipSummary": "Пролаз крај несталог храма, Пачићево коло, Јованов траг и живи код на Гелерт брду.",
+      "next": "BP2_A5_NODE_S04"
+    },
+    {
+      "id": "BP2_A5_NODE_S04",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_false_copy",
+      "skipSummary": "Пролаз крај несталог храма, Пачићево коло, Јованов траг и живи код на Гелерт брду.",
+      "next": "BP2_A5_NODE_S05"
+    },
+    {
+      "id": "BP2_A5_NODE_S05",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_return_place",
+      "skipSummary": "Пролаз крај несталог храма, Пачићево коло, Јованов траг и живи код на Гелерт брду.",
+      "next": "BP2_A5_NODE_EXPLORE"
+    },
+    {
+      "id": "BP2_A5_NODE_S06",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_chorus",
+      "skipSummary": "Пролаз крај несталог храма, Пачићево коло, Јованов траг и живи код на Гелерт брду.",
+      "next": "BP2_A5_NODE_S07"
+    },
+    {
+      "id": "BP2_A5_NODE_S07",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_unlocking",
+      "skipSummary": "Пролаз крај несталог храма, Пачићево коло, Јованов траг и живи код на Гелерт брду.",
+      "next": "BP2_A5_NODE_FINISH"
+    },
+    {
+      "id": "BP2_A5_NODE_EXPLORE",
+      "kind": "task",
+      "taskId": "BP2_A5_EXPLORE",
+      "next": "BP2_A5_NODE_QUIZ"
+    },
+    {
+      "id": "BP2_A5_NODE_QUIZ",
+      "kind": "task",
+      "taskId": "BP2_A5_QUIZ",
+      "next": "BP2_A5_NODE_S06"
+    },
+    {
+      "id": "BP2_A5_NODE_FINISH",
+      "kind": "mission_completion",
+      "requiresAllTaskIds": [
+        "BP2_A5_ARRIVE",
+        "BP2_A5_EXPLORE",
+        "BP2_A5_QUIZ"
+      ],
+      "awardKey": "budapest-act-5:complete",
+      "collectibleId": "BP2_RELIC_5",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-6",
+      "next": null
+    }
+  ],
+  "taskOrder": [
+    "BP2_A5_ARRIVE",
+    "BP2_A5_EXPLORE",
+    "BP2_A5_QUIZ"
+  ],
+  "optionalSceneIds": [],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "transcriptAlwaysAvailable": true,
+    "skipWritesPlotSummary": true
+  },
+  "resumePolicy": "resume_node_no_duplicate_reward",
+  "fallback": "2d_evidence_cards",
+  "status": "candidate_no_runtime_test",
+  "navigationPolicy": "bridge_navigation_only_no_ar; pause_for_safe_scene_standing"
+}
