@@ -190,6 +190,9 @@ public class WaypointRuntime
         triggerRadiusLevel1 = data.triggerRadiusLevel1;
         triggerRadiusLevel2 = data.triggerRadiusLevel2;
         triggerRadiusLevel3 = data.triggerRadiusLevel3;
+        zone1ConfirmDelay = data.zone1ConfirmDelay;
+        zone2ConfirmDelay = data.zone2ConfirmDelay;
+        zone3ConfirmDelay = data.zone3ConfirmDelay;
     }
 }
 

@@ -9,7 +9,6 @@ public class ScoreUIController : MonoBehaviour
     [Tooltip("UI Document that contains the score panel UXML")]
     public UIDocument scoreUIDocument;
 
-<<<<<<< Updated upstream
     [Header("Manager Reference")]
     [Tooltip("Link to ScoreManager instance (drag from hierarchy)")]
     [SerializeField] private ScoreManager scoreManager;
@@ -17,8 +16,7 @@ public class ScoreUIController : MonoBehaviour
     private bool debugScoreUI = false;
     public int _toastTime;
 
-=======
->>>>>>> Stashed changes
+
     [Header("Audio Settings")]
     [Tooltip("Sound to play whenever the score changes")]
     public AudioClip normalPointsClip;
@@ -35,17 +33,14 @@ public class ScoreUIController : MonoBehaviour
 
     // — Intuitivna imena —
     private VisualElement scoreRootElement;
-<<<<<<< Updated upstream
     private VisualElement _scorePanel;
 
-=======
->>>>>>> Stashed changes
+
 
     [Header("UI Text Defaults (srpski)")]
     [Tooltip("Tekst naslova panela poena")]
     [SerializeField]
     private string defaultScoreTitle = "Osvojeni poeni:";
-<<<<<<< Updated upstream
 
     private Label _toastLabel;
     private Label _newPointsLabel;
@@ -54,19 +49,7 @@ public class ScoreUIController : MonoBehaviour
 
     private AudioSource _audioSource;
 
-=======
-    private Label scoreTitleLabel; // sada se vrednost postavlja iz defaultScoreTitle
-    private Label scoreValueLabel;
-    private AudioSource _audioSource;
 
-    private TextField _normalInput, _bonusInput, _penaltyInput;
-    // toast display
-    private Label _toastLabel;
-    // current messages
-    private string _normalToast;
-    private string _bonusToast;
-    private string _penaltyToast;
->>>>>>> Stashed changes
 
     [Header("Toast Text Defaults (srpski)")]
     [Tooltip("Poruka kada igrač dobije obične poene")]
@@ -96,7 +79,6 @@ public class ScoreUIController : MonoBehaviour
             return;
         }
 
-<<<<<<< Updated upstream
         // Query visual elements
         _scorePanel = scoreRootElement.Q<VisualElement>("ScorePanel");
         _toastLabel = scoreRootElement.Q<Label>("ScoreToast");
@@ -140,43 +122,11 @@ public class ScoreUIController : MonoBehaviour
 
 
         // Setup audio
-=======
-        // Query the two labels
-        scoreTitleLabel = scoreRootElement.Q<Label>("ScoreTitle");
-        scoreValueLabel = scoreRootElement.Q<Label>("ScoreValue");
 
-        if (scoreTitleLabel != null)
-            scoreTitleLabel.text = defaultScoreTitle;
-        else
-            Debug.LogWarning("[ScoreUIController] 'ScoreTitle' Label not found.");
-
-        _toastLabel = scoreRootElement.Q<Label>("ScoreToast");
-        _toastLabel.visible = false;
-
-        // grab inputs and set defaults
-        _normalInput = scoreRootElement.Q<TextField>("NormalToastInput");
-        _bonusInput = scoreRootElement.Q<TextField>("BonusToastInput");
-        _penaltyInput = scoreRootElement.Q<TextField>("PenaltyToastInput");
-
-        _normalInput.value = _normalToast;
-        _bonusInput.value = _bonusToast;
-        _penaltyInput.value = _penaltyToast;
-
-        // on change, overwrite the running strings
-        _normalInput.RegisterValueChangedCallback(evt => _normalToast = evt.newValue);
-        _bonusInput.RegisterValueChangedCallback(evt => _bonusToast = evt.newValue);
-        _penaltyInput.RegisterValueChangedCallback(evt => _penaltyToast = evt.newValue);
-
-        // Apply the inspector‐set panel color
-        scoreRootElement.style.backgroundColor = new StyleColor(normalPointsColor);
-
-        // Set up audio source
->>>>>>> Stashed changes
         _audioSource = gameObject.AddComponent<AudioSource>();
         _audioSource.playOnAwake = false;
         _audioSource.volume = audioVolume;
 
-<<<<<<< Updated upstream
         // Guard: ScoreManager assigned?
         if (scoreManager == null)
         {
@@ -202,35 +152,7 @@ public class ScoreUIController : MonoBehaviour
         }
     }
 
-=======
-        // inicijalizuj fallback poruke iz Inspektora
-        _normalToast = defaultNormalToast;
-        _bonusToast = defaultBonusToast;
-        _penaltyToast = defaultPenaltyToast;
 
-        // podešavanje TextField inputa
-        _normalInput.value = _normalToast;
-        _bonusInput.value = _bonusToast;
-        _penaltyInput.value = _penaltyToast;
-
-        // Subscribe to ScoreManager events
-        var scoreMgr = ScoreManager.Instance;
-        if (scoreValueLabel != null && scoreMgr != null && scoreMgr.IsScoringEnabled)
-        {
-            scoreMgr.OnScoreChanged += HandleScoreChanged;
-            scoreMgr.OnScoreDelta += HandleScoreDelta;
-            HandleScoreChanged(scoreMgr.CurrentScore);
-            Debug.Log("[ScoreUIController] Subscribed to score changes.", this);
-        }
-        else
-        {
-            // Hide if scoring disabled or missing
-            scoreRootElement.style.display = DisplayStyle.None;
-            Debug.Log("[ScoreUIController] Score panel hidden (scoring disabled or no ScoreManager).", this);
-        }
-
-    }
->>>>>>> Stashed changes
 
     void OnDestroy()
     {
@@ -247,15 +169,10 @@ public class ScoreUIController : MonoBehaviour
     /// </summary>
     private void HandleScoreChanged(int newScore)
     {
-<<<<<<< Updated upstream
         if (_scoreValueLabel == null) return;
 
         _scoreValueLabel.text = newScore.ToString();
-=======
-        if (scoreValueLabel == null) return;
 
-        scoreValueLabel.text = newScore.ToString();
->>>>>>> Stashed changes
         Debug.Log($"[ScoreUIController] Score updated to {newScore}.", this);
 
         StopAllCoroutines();
@@ -267,7 +184,6 @@ public class ScoreUIController : MonoBehaviour
     // bira zvuk i boju po tipu promene
     private void HandleScoreDelta(int delta)
     {
-<<<<<<< Updated upstream
         if (_audioSource == null || _toastLabel == null)
             return;
 
@@ -284,31 +200,11 @@ public class ScoreUIController : MonoBehaviour
                 _toastLabel.text = defaultNormalToast;
                 _audioSource.PlayOneShot(normalPointsClip);
                 _scorePanel.style.backgroundColor = new StyleColor(normalPointsColor);
-=======
-        if (_audioSource == null) return;
 
-        if (delta > 0)
-        {
-            // bonus ili obični
-            if (delta == ScoreManager.Instance.PointsOnMissionComplete)
-            {
-                msgToastDelta = _bonusToast;
-                _audioSource.PlayOneShot(bonusPointsClip);
-                scoreRootElement.style.backgroundColor = new StyleColor(bonusPointsColor);
-                Debug.Log($"[ScoreUIController] Bonus {delta} poena!", this);
-            }
-            else
-            {
-                msgToastDelta = _normalToast;
-                _audioSource.PlayOneShot(normalPointsClip);
-                scoreRootElement.style.backgroundColor = new StyleColor(normalPointsColor);
-                Debug.Log($"[ScoreUIController] +{delta} običnih poena.", this);
->>>>>>> Stashed changes
             }
         }
         else if (delta < 0)
         {
-<<<<<<< Updated upstream
             _toastLabel.text = defaultPenaltyToast;
             _audioSource.PlayOneShot(penaltyPointsClip);
             _scorePanel.style.backgroundColor = new StyleColor(penaltyPointsColor);
@@ -330,19 +226,12 @@ public class ScoreUIController : MonoBehaviour
     {
         while (_toastActive)
             yield return null;
-=======
-            msgToastDelta = _penaltyToast;
-            _audioSource.PlayOneShot(penaltyPointsClip);
-            scoreRootElement.style.backgroundColor = new StyleColor(penaltyPointsColor);
-            Debug.Log($"[ScoreUIController] {delta} kaznenih poena.", this);
-        }
->>>>>>> Stashed changes
+
     }
 
     private IEnumerator HideToastAfter(float secs)
     {
         yield return new WaitForSeconds(secs);
-<<<<<<< Updated upstream
         _scorePanel.visible = false;
         _toastLabel.visible = false;
         _newPointsLabel.visible = false;
@@ -351,8 +240,5 @@ public class ScoreUIController : MonoBehaviour
         _toastActive = false;
     }
 
-=======
-        _toastLabel.visible = false;
-    }
->>>>>>> Stashed changes
+
 }

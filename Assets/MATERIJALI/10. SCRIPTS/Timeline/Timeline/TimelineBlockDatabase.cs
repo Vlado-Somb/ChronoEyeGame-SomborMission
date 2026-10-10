@@ -43,7 +43,6 @@ namespace MyGame.Timeline
             }
             return -1;
         }
-<<<<<<< Updated upstream
 
         public string[] GetBlockIds()
         {
@@ -58,7 +57,6 @@ namespace MyGame.Timeline
             return ids.ToArray();
         }
 
-=======
->>>>>>> Stashed changes
+
     }
 }

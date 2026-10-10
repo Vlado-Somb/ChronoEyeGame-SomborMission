@@ -71,7 +71,6 @@ public class WaypointTriggerBindingAssetEditor : Editor
 
             // Foldout with label (Binding i)
             SerializedProperty groupIdProp = element.FindPropertyRelative("groupId");
-<<<<<<< Updated upstream
             SerializedProperty labelProp = element.FindPropertyRelative("bindingLabel");
 
             string header = !string.IsNullOrEmpty(labelProp.stringValue)
@@ -81,11 +80,7 @@ public class WaypointTriggerBindingAssetEditor : Editor
             groupIdProp.isExpanded = EditorGUILayout.Foldout(groupIdProp.isExpanded, header, true);
 
 
-=======
-            string header = $"Binding {i + 1}";
-            groupIdProp.isExpanded = EditorGUILayout.Foldout(groupIdProp.isExpanded, header, true);
 
->>>>>>> Stashed changes
             if (groupIdProp.isExpanded)
             {
                 EditorGUILayout.PropertyField(element);

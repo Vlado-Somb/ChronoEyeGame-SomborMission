@@ -22,7 +22,6 @@ public class BindingDrawer : PropertyDrawer
     private static readonly Dictionary<int, bool> _bindingFoldouts = new();
     private static readonly Dictionary<int, bool> _triggerFoldouts = new();
 
-<<<<<<< Updated upstream
 #if UNITY_EDITOR
     [InitializeOnLoadMethod]
     private static void HookProjectChange()
@@ -320,8 +319,7 @@ public class BindingDrawer : PropertyDrawer
     private static readonly Dictionary<int, bool> _bindingFoldouts = new();
     private static readonly Dictionary<int, bool> _triggerFoldouts = new();
 
-=======
->>>>>>> Stashed changes
+
     private static void LoadTimelineBlockDatabase()
     {
         if (_cachedBlockDb != null) return;
@@ -525,7 +523,5 @@ public class BindingDrawer : PropertyDrawer
     }
 }
 #endif
-<<<<<<< Updated upstream
 */
-=======
->>>>>>> Stashed changes
+

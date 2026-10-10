@@ -15,10 +15,8 @@ public class MissionManager : MonoBehaviour
 {
     public static MissionManager Instance { get; private set; }
 
-<<<<<<< Updated upstream
     [SerializeField] private ScoreUIController scoreUI;
-=======
->>>>>>> Stashed changes
+
     [SerializeField, Tooltip("Isključi bodovanje iz ovog kontrolera")]
     private bool enableScoringInThisMission = true;
     int pts;
@@ -34,10 +32,8 @@ public class MissionManager : MonoBehaviour
     [SerializeField] private MissionTaskUIController taskUI;
     [SerializeField] private MissionGPSHUDUIController gpsUI;
     [SerializeField] private POIInteractionDetector poiDetector;
-<<<<<<< Updated upstream
     [SerializeField] private MapOverlayController mapOverlayController;
-=======
->>>>>>> Stashed changes
+
 
     [Header("Managers")]
     [SerializeField] private WaypointManager waypointManager;
@@ -58,10 +54,8 @@ public class MissionManager : MonoBehaviour
     private int _currentIndex = -1;
     private string _activeWaypointId;
     private bool _taskCompleted;
-<<<<<<< Updated upstream
     private WaypointData _completedWaypointTarget;
-=======
->>>>>>> Stashed changes
+
 
     // GPS provider
     [Header("GPS Provider")]
@@ -115,10 +109,7 @@ public class MissionManager : MonoBehaviour
             pts = bonus = pen = 0;
         }
 
-<<<<<<< Updated upstream
-=======
-        waypointManager.OnWaypointZoneEntered += gpsWaypointHandler;
->>>>>>> Stashed changes
+
     }
 
   
@@ -180,6 +171,8 @@ public class MissionManager : MonoBehaviour
 
         Debug.Log($"[MissionManager] BeginMission: {missionAsset.missionName}");
         _tasks = missionAsset.tasks;
+        // Never reuse serialized completion flags left by editor/test runs.
+        foreach (var missionTask in _tasks) missionTask.isCompleted = false;
         _currentIndex = -1;
 
         taskUI.ShowHeader(true);
@@ -192,45 +185,7 @@ public class MissionManager : MonoBehaviour
         AdvanceToNextTask();
     }
 
-<<<<<<< Updated upstream
-=======
-    public void CompleteCurrentTask()
-    {
-        if (_taskCompleted) return;
-        _taskCompleted = true;
-        Debug.Log("[MissionManager] CompleteCurrentTask called");
-        if (_currentIndex >= 0 && _currentIndex < _tasks.Count)
-        {
-            _tasks[_currentIndex].isCompleted = true;
 
-            var task = _tasks[_currentIndex];
-
-            taskUI.ShowHeader(false);
-            taskUI.ShowQuestionSection(false);
-            taskUI.ShowTextInputSection(false);
-            taskUI.ShowWrapperContainerOnly(true);
-            taskUI.SetTaskCompletionContainer(task.completionTitle, task.completionQuote);
-            taskUI.ShowCompletionSection(true);
-
-            var delay = _tasks[_currentIndex].taskCompletionDelay;
-            StartCoroutine(DelayedAdvanceToNextTask(delay));
-        }
-    }
-
-    private IEnumerator DelayedAdvanceToNextTask(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        taskUI.ShowCompletionSection(false);
-        if (enableScoringInThisMission)
-        {
-            ScoreManager.Instance.AddTaskPoints();
-            Debug.Log($"[MissionManager] +{pts} poena za završetak zadatka");
-        }
-        AdvanceToNextTask();
-    }
-
-
->>>>>>> Stashed changes
     private void AdvanceToNextTask()
     {
         _taskCompleted = false;
@@ -249,7 +204,6 @@ public class MissionManager : MonoBehaviour
             Debug.Log("[MissionManager] All tasks complete — finishing mission");
 
             taskUI.ShowHeader(false);
-<<<<<<< Updated upstream
 
             if (_completedWaypointTarget != null && !string.IsNullOrEmpty(_completedWaypointTarget.id))
             {
@@ -273,15 +227,9 @@ public class MissionManager : MonoBehaviour
                 Debug.LogError($"[MissionManager] OnMissionComplete handler threw: {ex}");
             }
 
-            // ✅ Force the timeline to advance
-            MasterTimelineManager.Instance?.RequestBlockExecution(
-                MasterTimelineManager.Instance.FindBlockIndexById("NextBlockId")
-            );
+            // MissionBlockSO advances the timeline when OnMissionComplete fires.
 
-=======
-            OnMissionComplete?.Invoke();
-            _taskCompleted = false;
->>>>>>> Stashed changes
+
             return;
         }
 
@@ -402,7 +350,6 @@ public class MissionManager : MonoBehaviour
     private void StartGpsTask(MissionTask task)
     {
         Debug.Log("[MissionManager] Starting GPS Task");
-<<<<<<< Updated upstream
 
         if (waypointManager == null)
         {
@@ -424,17 +371,12 @@ public class MissionManager : MonoBehaviour
             Debug.LogError("[MissionManager] ❌ Invalid confirmationZone enum value: " + task.confirmationZone);
             return;
         }
-=======
->>>>>>> Stashed changes
+
         taskUI.ShowHeader(true);
         taskUI.ShowQuestionSection(false);
         taskUI.ShowTextInputSection(false);
 
-<<<<<<< Updated upstream
-=======
-        waypointManager.ClearAll();
 
->>>>>>> Stashed changes
         // Waypoint-driven system — add only runtime marker if we need a visual cue (optional)
         var db = missionAsset?.waypointDatabase;
         var targetWaypoint = db?.GetById(task.waypointId);
@@ -442,7 +384,6 @@ public class MissionManager : MonoBehaviour
         {
             Debug.LogError($"[MissionManager] Waypoint ID not found in database: {task.waypointId}");
             return;
-<<<<<<< Updated upstream
         }
 
         gpsUI.Show();
@@ -485,11 +426,9 @@ public class MissionManager : MonoBehaviour
             waypointManager.OnWaypointZoneEntered -= gpsWaypointHandler;
             _completedWaypointTarget = targetWaypoint;
             CompleteCurrentTask();
-=======
->>>>>>> Stashed changes
         }
+    }
 
-<<<<<<< Updated upstream
     public bool IsWaypointLockedByCurrentMission(string waypointId)
     {
         if (MissionAsset == null || MissionAsset.tasks == null)
@@ -506,23 +445,7 @@ public class MissionManager : MonoBehaviour
         }
 
         return false;
-=======
-        gpsUI.Show();
-        gpsUI.SetMissionTarget(targetWaypoint.latitude, targetWaypoint.longitude, task.title);
 
-        // Register GPS logic using zone trigger
-        _activeWaypointId = task.waypointId;
-        gpsWaypointHandler = (id, zone) =>
-        {
-            if (id == _activeWaypointId && zone == task.confirmationZone)
-            {
-                Debug.Log($"[MissionManager] ✅ Reached required zone {zone} of waypoint {id} — completing task");
-                waypointManager.OnWaypointZoneEntered -= gpsWaypointHandler;
-                CompleteCurrentTask();
-            }
-        };
-        waypointManager.OnWaypointZoneEntered += gpsWaypointHandler;
->>>>>>> Stashed changes
     }
 
     private IEnumerator CheckProximity(MissionTask task)
@@ -677,11 +600,8 @@ public class MissionManager : MonoBehaviour
                 else
                 {
                     Debug.Log("[MissionManager] Incorrect answer, prompting retry");
-<<<<<<< Updated upstream
                     taskUI.ShowChoiceError("Pogrešan odgovor - pokušaj ponovo!");
-=======
-                    taskUI.ShowChoiceError("Wrong answer—try again!");
->>>>>>> Stashed changes
+
                     if (enableScoringInThisMission)
                     {
                         ScoreManager.Instance.DeductWrongAnswer();

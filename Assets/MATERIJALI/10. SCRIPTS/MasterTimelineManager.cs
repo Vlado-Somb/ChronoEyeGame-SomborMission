@@ -111,10 +111,7 @@ namespace MyGame.Timeline
 
 }
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 public class MasterTimelineManager : MonoBehaviour
 {
     public static MasterTimelineManager Instance { get; private set; }
@@ -385,20 +382,14 @@ public class MasterTimelineManager : MonoBehaviour
         if (currentBlock is MissionBlockSO)
         {
             UnifiedGpsProvider gps = FindFirstObjectByType<UnifiedGpsProvider>();
-<<<<<<< Updated upstream
             if (gps != null) gps.emitInterval = 1f;
-=======
-            if (gps != null) gps.emitInterval = 10f;
->>>>>>> Stashed changes
+
         }
         else
         {
             UnifiedGpsProvider gps = FindFirstObjectByType<UnifiedGpsProvider>();
-<<<<<<< Updated upstream
             if (gps != null) gps.emitInterval = 1f;
-=======
-            if (gps != null) gps.emitInterval = 1.5f;
->>>>>>> Stashed changes
+
         }
     }
 
@@ -481,11 +472,8 @@ public class MasterTimelineManager : MonoBehaviour
     {
         if (completedBlock != currentBlock) return;
 
-<<<<<<< Updated upstream
         OnBlockEnded?.Invoke(completedBlock);
-=======
-        // … existing teardown …
->>>>>>> Stashed changes
+
 
         // NEW: drain our queue first
         if (pendingRequests.Count > 0)
