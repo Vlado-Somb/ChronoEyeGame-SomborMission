@@ -8,7 +8,7 @@ Status: accepted_for_design; runtime adoption pending. Date: 2026-10-10.
 - `edu_mission`: evidence-led educational missions (Sombor)
 - `game_mission`: narrative game missions (Budapest)
 
-One city may later host multiple packages/profiles. The editor must dispatch by manifest `missionType`, not by city name. Do not infer task types from `missionType`.
+One city may later host multiple packages/profiles. Each editor is separately launched and has a fixed configured package root; no automatic editor switching is required. The backend must enforce that root for every read/write and verify the manifest `missionType` matches the editor's configured profile. Do not infer task types from `missionType`.
 
 ## Backward compatibility and migration
 
