@@ -13,5 +13,17 @@
     "missions/act-5.json"
   ],
   "missingAssetsDoNotBlockTextReview": true,
-  "publicArReleaseBlocked": true
+  "publicArReleaseBlocked": true,
+  "prototypeBuild": {
+    "branch": "feature/taban-church-historical-reconstruction",
+    "artifactName": "taban-review-3d",
+    "runId": 37971637198,
+    "artifactId": 11636456029,
+    "status": "review_only_unverified",
+    "formats": [
+      "glb",
+      "fbx",
+      "blend"
+    ]
+  }
 }

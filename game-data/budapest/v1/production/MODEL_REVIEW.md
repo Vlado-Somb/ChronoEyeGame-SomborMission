@@ -9,3 +9,9 @@
 - У истом Git стаблу постоје `Assets/MATERIJALI/Likovi 3D  FBX models/Nikola Tesla.fbx` и `jovan_ducic_ghost.fbx`. Само постојање не доказује анимациону/мобилну спремност.
 
 Постојећи Budapest Waypoint Database има празан низ waypoint-а. Координата Амбасаде преузета је из Budapest 1 Mission као legacy кандидат. Наслеђено altitude=150 није увезено као проверена AR висина. Нису преузети serialized isCompleted флагови из старе пробне мисије.
+
+## Taban prototype — 2026-10-09
+
+Blender 4.0.2 imported the legacy Cathedral.FBX: one Cathedral mesh (2057 vertices, 4021 faces) and eight Ivy meshes. Unity AssetOrigin identifies the third-party generic package Victorain Cathedral/Large Church. This mesh was NOT used in the new original geometry.
+
+The isolated branch builds an original photograph-informed prototype. GitHub Actions run 37971637198 generated GLB, FBX, BLEND, QA and legacy inspection artifacts (artifact 11636456029). The CI GLB has 11784 triangles and an estimated height of 41.075 m. Dimensions, materials, historical orientation and AR runtime remain unverified; public release stays blocked.

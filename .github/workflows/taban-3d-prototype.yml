@@ -1,0 +1,29 @@
+name: Taban 3D review build
+on:
+  push:
+    branches:
+      - feature/taban-church-historical-reconstruction
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install trimesh numpy
+      - run: python game-data/budapest/v1/production/05-taban/build_taban.py
+      - run: sudo apt-get update -qq && sudo apt-get install -y blender python3-numpy
+      - run: blender -b --python game-data/budapest/v1/production/05-taban/inspect_legacy_fbx.py
+      - name: Export editable BLEND and FBX and verify files
+        run: |
+          blender -b --python game-data/budapest/v1/production/05-taban/export_taban_blender.py
+          test -s game-data/budapest/v1/production/05-taban/generated/TabanChurch_reconstruction_v01.blend
+          test -s game-data/budapest/v1/production/05-taban/generated/TabanChurch_reconstruction_v01.fbx
+      - uses: actions/upload-artifact@v4
+        with:
+          name: taban-review-3d
+          path: game-data/budapest/v1/production/05-taban/generated/

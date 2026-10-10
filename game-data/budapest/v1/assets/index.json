@@ -55,14 +55,32 @@
       "legacyRepositoryPath": "Assets/Model/Cathedral.FBX",
       "legacyBlobSha": "9ca3b6951cf1c4a014fa9b3e28e4e13a021aa1b5",
       "status": "integration_pending",
-      "identityStatus": "candidate_not_visually_verified_as_taban",
+      "identityStatus": "legacy_generic_not_taban; separate original prototype",
       "rights": "owner_and_license_review_required",
       "requiredWork": [
         "inspect_geometry_against_user_reference",
         "confirm_scale_orientation_period",
         "export_glb_lods",
         "label_hypothetical_geometry"
-      ]
+      ],
+      "prototype": {
+        "branch": "feature/taban-church-historical-reconstruction",
+        "generator": "game-data/budapest/v1/production/05-taban/build_taban.py",
+        "blenderExport": "game-data/budapest/v1/production/05-taban/export_taban_blender.py",
+        "workflow": ".github/workflows/taban-3d-prototype.yml",
+        "artifact": "taban-review-3d",
+        "status": "original_procedural_prototype_review_only",
+        "originalLegacyGeometryUsed": false,
+        "dimensionsVerified": false,
+        "photoReferences": [
+          "34576.jpg",
+          "34577.jpg",
+          "34578.jpg",
+          "34579.jpg",
+          "34580.jpg"
+        ]
+      },
+      "legacySourceOrigin": "Victorain Cathedral/Large Church (Unity AssetOrigin, third-party generic)"
     },
     {
       "id": "BP_MODEL_TESLA",
