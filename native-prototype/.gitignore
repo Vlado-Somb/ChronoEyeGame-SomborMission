@@ -1,0 +1,25 @@
+.gradle/
+.kotlin/
+**/build/
+local.properties
+*.jks
+*.keystore
+
+# Unchanged pinned upstream binaries, restored by prepare_assets.py
+/app/src/main/assets/models/depth_color_palette.png
+/app/src/main/assets/models/dfg.raw
+/app/src/main/assets/models/pawn_albedo.png
+/app/src/main/assets/models/pawn_albedo_instant_placement.png
+/app/src/main/assets/models/pawn_roughness_metallic_ao.png
+/app/src/main/assets/models/trigrid.png
+/app/src/main/res/drawable-xxhdpi/ic_launcher.png
+/app/src/main/res/drawable-xxhdpi/ic_settings.png
+/gradle/wrapper/gradle-wrapper.jar
+
+# Private diagnostics and local Python output
+__pycache__/
+*.pyc
+*.apk
+*.zip
+*.u16
+/analysis/

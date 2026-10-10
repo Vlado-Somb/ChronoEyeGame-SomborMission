@@ -1,0 +1,38 @@
+[
+  {
+    "path": "app/src/main/assets/models/depth_color_palette.png",
+    "sha256": "da006d734cc34c45f5e9346c134078937190f7c4188a1bef06cf663c4381f677"
+  },
+  {
+    "path": "app/src/main/assets/models/dfg.raw",
+    "sha256": "1c164330107bba2d3fd8860ff32a43ef01d9074b690b6c9f07a3ec175efe3929"
+  },
+  {
+    "path": "app/src/main/assets/models/pawn_albedo.png",
+    "sha256": "f03d301d859d07ee184c739ad116a89651aad0efa3056e3a080c7c96aa3cb4a5"
+  },
+  {
+    "path": "app/src/main/assets/models/pawn_albedo_instant_placement.png",
+    "sha256": "c16c4029c5d3c4f6a763aa4fad311640731e6d37e32a019d2382b6971e817c91"
+  },
+  {
+    "path": "app/src/main/assets/models/pawn_roughness_metallic_ao.png",
+    "sha256": "6ca776fba873a383d57ab6ef7f3aa0ec851b5addebf1e787956d68065dbf923b"
+  },
+  {
+    "path": "app/src/main/assets/models/trigrid.png",
+    "sha256": "1c0571d860dd91d1aa25957d1ff801e2255ca90775378e865c8c17f5dcea47e7"
+  },
+  {
+    "path": "app/src/main/res/drawable-xxhdpi/ic_launcher.png",
+    "sha256": "c999518aaa83f81a0dc0744353144ccf36adcc34b2cbc6045dd808c1fffe56e5"
+  },
+  {
+    "path": "app/src/main/res/drawable-xxhdpi/ic_settings.png",
+    "sha256": "e8ff370b339fde4f646ea433c2d532a96876778ff0e4cc4f6888bb42a72b14e0"
+  },
+  {
+    "path": "gradle/wrapper/gradle-wrapper.jar",
+    "sha256": "497c8c2a7e5031f6aa847f88104aa80a93532ec32ee17bdb8d1d2f67a194a9c7"
+  }
+]

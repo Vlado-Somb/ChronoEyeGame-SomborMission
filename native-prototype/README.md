@@ -1,0 +1,72 @@
+# ChronoEye AR Lab 0.4.0 (V4 depth diagnostics)
+
+Дијагностички Android прототип за следећи S25 Ultra тест. Нова верзија има
+камера/heatmap/overlay, независно заклањање, до пет обојених предмета, временски
+усклађене приватне логове и depth снимке, и ZIP дељење из AR екрана.
+
+- [Кратко упутство за тест](docs/FIELD_TEST_SR.md)
+- [Шема и ограничења дијагностике](docs/LOG_SCHEMA.md)
+- [Одлуке / интеграционе тачке](docs/DECISION_LOG.md)
+- [Провере и стварни статус](docs/VALIDATION.md)
+- [Offline анализатор](tools/analyze.py)
+
+Нема аутоматског upload-а нити снимања RGB/аудија. Обавезно поделити дијагностику
+пре напуштања текућег AR екрана. Локална сидра се не чувају после затварања.
+Код је припремљен за тест; теренска исправност није потврђена изградњом APK-а.
+
+## Изградња
+
+JDK 17, Android SDK 35 + build-tools 35.0.0, Python 3.
+
+```
+python3 prepare_assets.py
+./gradlew :app:assembleDebug :app:lintDebug
+python3 -m unittest discover -s tools -v
+```
+
+Излаз: `app/build/outputs/apk/debug/app-debug.apk`. Debug потпис зависи од машине;
+други потпис може захтевати деинсталацију старог тестног APK-а (брише податке).
+Ниједан signing key или приватни endpoint credential није у јавном репозиторијуму.
+
+Верзије: Gradle 8.11.1, AGP 8.9.1, Kotlin 2.1.0, ARCore 1.56.0. ARM64,
+Android 8+, OpenGL ES 3.0. Пакет `rs.chronoeye.prototype`.
+
+## Границе и порекло
+
+Задржан постојећи ограничени WebView/native мост и Activity result; пуни
+оркестратор, мапе, GPS/VPS, Streetscape, мисије и Unity нису део ове измене.
+
+Google ARCore Android SDK `samples/hello_ar_java`, commit
+`3abfeb18669c2cbb2d07057f135d117ee9d91826`, Apache-2.0:
+https://github.com/google-ar/arcore-android-sdk . Видети `LICENSE-GOOGLE-ARCORE.txt`.
+Бинарни ресурси и wrapper имају SHA-256 проверу у `prepare_assets.py`.
+
+Праг свежине 100 ms остаје. Нове корекције: stride-aware DEPTH16 upload,
+нулта дубина не заклања, исправан почетни aspect ratio, nearest byte sampling,
+унапред припремљени shader-и. Ово нису тврдње о узроку ранијег теренског проблема.
+
+## AR Lab 0.3.0 — тест додира и свежине
+
+- `abs(frameTimestampNs - depthTimestampNs) <= 100 ms`: обе стране временског одступања важе; негативне вредности се задржавају у CSV/JSON/HUD.
+- Кристал се рендерује 2× већим (44 cm висине), а ray/sphere picking и Z мерење су усклађени са том размером.
+- Додир постојећег дијаманта га директно сакупља. Дугме „Преузми избор“ остаје као резервни начин. Потврђена стварна препрека може да спречи сакупљање; недоступни depth подаци дозвољавају интеракцију и бележе `touch_depth_unverified`.
+- HUD: `Преостало: N/5 дијаманата`. После 5 постављања приказује 0/5, а сакупљање враћа слободно место. „Ресет“ или нова AR сесија враћају 5/5; исти anchor-и се не преносе између сесија.
+- „Заврши тест“ завршава AR екран и шаље `ar_test_finished` у Android host; `testFinished` је засебно стање од броја сакупљених кристала. Напредак теста служи само за лабораторијски UI, не додељује бодове мисијама.
+
+**Статус:** имплементирано у коду; мора се потврдити компајлирањем APK-а и физичким тестом додира/оклузије на телефону. Извезени логови нису у Git-у.
+
+## V4 — после V3 теренског лога (2026-10-09)
+
+- Depth је и даље строго ограничен на signed |frameTs − depthTs| ≤ 100 ms.
+- Додат watchdog за >1 s без свежих података при TRACKING стању;
+  бележи се status аквизиције, depth/camera timestamp, поновљени кадрови и опоравак.
+  Не ресетује се ARCore Session и не руше се локални anchor-и.
+- Једно acquireDepthImage16Bits по AR кадру; исти затворени Image scope се
+  користи за додир/оклузију/снимак, увек преко try-with-resources.
+- Укључени су периодични DEPTH16 снимци сваких 10 s и снимци при прелазу
+  active↔stale (највише 200; disk/raw u16, DEFLATE у ZIP).
+- „Заврши тест“ финализује session_end/end.json, затим отвара Android
+  дељење архиве са sessionContinues=false. После дељења „Назад у мапу“.
+- 0.4.0 / versionCode 4, schemaVersion 2, buildId у manifest/sample/export.
+- Остају потребни GitHub Actions build и физички тест; нема тврдње да је
+  V3 depth застој тиме решен.

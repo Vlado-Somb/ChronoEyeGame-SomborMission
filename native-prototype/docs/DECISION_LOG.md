@@ -1,0 +1,46 @@
+# AR Lab decisions — 2026-10-09
+
+DEC-AR-20261009-01 — accepted_for_design, requested diagnostic build 0.2.0.
+Read native AR base 0fef5c9 and Mission Standard v0.2 at 5ad5a7d (separate,
+unmerged standards branch). This local addendum deliberately does not merge or
+modify narrative/standards/maps branches. Native Activity + existing WebView
+bridge remain; no orchestrator, Cloud activation, GPS or persistence added.
+
+Filtered DEPTH16, millimetres, camera-axis Z; 100 ms gate retained. Camera,
+heatmap and overlay independent of occlusion. Zero depth is missing, never
+confidence. Keep original occlusion bias (-80 mm) and blur for comparison;
+correct byte strides, invalid zero depth handling and initial aspect ratio.
+Precompile shaders on surface creation, avoiding shader asset I/O on mode changes.
+
+Local bounded telemetry with explicit UTC/monotonic clocks; background-only
+writes and system sampling. FileProvider ZIP export, no RGB/audio capture.
+No approved private ingestion endpoint/authentication found in reviewed AR code
+or service registry; upload integration status = not_configured. No credentials
+or network permission added. Future receiver requires owner-approved HTTPS URL,
+short-lived user authentication, retention/access policy and upload receipt/retry
+contract keyed by sessionId. Diagnostic logs are private device data, never Git.
+
+Stable session-local object IDs and five colors. Anchors are not persisted.
+Future integration: AR result Intent event artifact_collected + sessionId;
+game engine remains responsible for scoring/idempotency. Diagnostic format
+schemaVersion=1 is independent of mission schema; no mission migration.
+
+Validation status: implemented_not_field_tested. See VALIDATION.md for actual
+build/lint/analyzer checks. S25 Ultra physical test is still required.
+
+DEC-AR-20261009-02 — accepted_for_design / implemented_not_field_tested.
+Following 2026-10-09 field report with consistently small negative depthAgeMs,
+accept absolute camera-depth timestamp skew <= 100 ms instead of rejecting
+negative skew. Record signed skew. Preserve known physical occlusion, but do
+not block crystal touch solely because depth is missing/stale/invalid. Scale
+five test crystals 2x (22cm -> 44cm), match pick radius and center, collect
+on crystal tap, show remaining placement slots 5/5 -> 0/5 -> restored by
+collection/reset/new AR session. Explicit `ar_test_finished` native result.
+This is diagnostic AR Lab functionality, NOT final mission collectibles/scoring.
+Status must not be promoted to verified_in_test before APK CI and phone QA.
+
+DEC-AR-20261009-03 — V4 designed/implemented, awaiting CI and physical validation.
+After V3 field log (213/374 active depth samples, stale intervals tens of seconds),
+keep 100 ms threshold; add one-Image-per-frame acquisition, 1 s watchdog,
+status transitions, 10 s snapshots and completed ZIP export. No programmatic ARCore
+session restart, no changes to mission scoring or WebView host.
