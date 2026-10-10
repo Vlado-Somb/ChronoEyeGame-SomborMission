@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {checkCandidate} from '../lib/candidate.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../../game-data/budapest/v2');
+const read=async p=>JSON.parse(await readFile(path.join(root,p),'utf8'));
+test('candidate gate accepts prose edits and rejects broken links',async()=>{
+ const p='missions/act-0.json',before=await read(p);
+ const good=JSON.parse(JSON.stringify(before));
+ good.tasks[0].instruction+=' (draft)';
+ const ok=await checkCandidate(p,good,before,read);
+ assert.equal(ok.ok,true,JSON.stringify(ok.errors));
+ const bad=JSON.parse(JSON.stringify(good));
+ bad.primaryWaypointId='MISSING_WAYPOINT';
+ const result=await checkCandidate(p,bad,before,read);
+ assert.equal(result.ok,false);
+ assert.ok(result.errors.some(e=>/waypoint/i.test(e.message)));
+});
