@@ -27,3 +27,6 @@ Version: 2.0.0-budapest-draft.1. A content authoring candidate, NOT a globally d
 
 ## Изузетак: редослед V акта
 Act V graph почиње сценом пешачке навигације (bridge) и скоро непримећеног места храма (near_absence), а тек затим захтева задаћу GPS/manual ARRIVE код Златног јелена. То не значи потврду GPS-а док је телефон у покрету: навигација не покреће AR, сценски говор само кад се стане, недоказане координате остају null. 
+
+## Stabilization addendum — 2026-10-10
+Package profile is explicitly `game_mission`, validated before content checks. The existing authored task sequence and scoring are a draft-specific configuration, not an inherited EDU requirement. See CHANGELOG.md and Mission Type Contract v0.1 for additive migration; runtime remains not_integrated.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "2.0.0-budapest-draft.1",
   "baseSchemaVersion": "1.1.0",
-  "contentVersion": "2.0.0-draft.1",
+  "contentVersion": "2.0.0-draft.2",
   "gameId": "chrono-eye-budapest",
   "name": "Град који није пристао да нестане",
   "language": "sr-Cyrl",
@@ -198,5 +198,6 @@
     "assetsPlanned": 13,
     "sourceEntries": 13
   },
-  "releaseNote": "This package is editorial and static QA only; no GLB/OGG binaries, geo anchors, runtime adapter or device tests are certified."
+  "releaseNote": "This package is editorial and static QA only; no GLB/OGG binaries, geo anchors, runtime adapter or device tests are certified.",
+  "missionType": "game_mission"
 }

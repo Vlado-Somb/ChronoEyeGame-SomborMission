@@ -28,6 +28,8 @@ const evidenceMap=byId(evidence),characterMap=byId(characters),relicMap=byId(col
 const blockMap=byId(timeline);
 const scenario={acts:0,tasks:0,ar:0,scenes:0,lines:0,sequenceEntries:0,flowNodes:0,reachableFlowNodes:0,flowPaths:0};
 const everyDistinct=(arr)=>new Set(arr).size===arr.length;
+ok(manifest.missionType==="game_mission","Budapest v2 requires explicit game_mission profile");
+// Remaining counts/scoring/task checks pin this authored draft, not the shared GAME contract.
 ok(manifest.gameId==="chrono-eye-budapest","incorrect game id");
 ok(manifest.language==="sr-Cyrl","language must be sr-Cyrl");
 ok(manifest.runtimeStatus==="not_integrated","do not claim runtime integration");

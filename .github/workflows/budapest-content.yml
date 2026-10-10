@@ -1,0 +1,25 @@
+name: Budapest content contract
+on:
+  pull_request:
+    paths:
+      - 'game-data/budapest/v2/**'
+      - '.github/workflows/budapest-content.yml'
+  push:
+    branches:
+      - 'integration/budapest-v2-content-*'
+    paths:
+      - 'game-data/budapest/v2/**'
+      - '.github/workflows/budapest-content.yml'
+permissions:
+  contents: read
+jobs:
+  static-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: game-data/budapest
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node game-data/budapest/v2/tools/validate-v2.mjs
