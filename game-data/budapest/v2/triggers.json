@@ -1,0 +1,97 @@
+{
+  "triggers": [
+    {
+      "id": "BP2_A0_TRIGGER",
+      "type": "event",
+      "event": "CAMPAIGN_STARTED",
+      "targetBlockId": "BP2_A0_BLOCK",
+      "conditions": [],
+      "conditionMode": "all",
+      "onlyOnce": true
+    },
+    {
+      "id": "BP2_A1_TRIGGER",
+      "type": "event",
+      "event": "MISSION_COMPLETED",
+      "targetBlockId": "BP2_A1_BLOCK",
+      "conditions": [
+        {
+          "field": "missionId",
+          "equals": "budapest-act-0"
+        }
+      ],
+      "conditionMode": "all",
+      "onlyOnce": true
+    },
+    {
+      "id": "BP2_A2_TRIGGER",
+      "type": "event",
+      "event": "MISSION_COMPLETED",
+      "targetBlockId": "BP2_A2_BLOCK",
+      "conditions": [
+        {
+          "field": "missionId",
+          "equals": "budapest-act-1"
+        }
+      ],
+      "conditionMode": "all",
+      "onlyOnce": true
+    },
+    {
+      "id": "BP2_A3_TRIGGER",
+      "type": "event",
+      "event": "MISSION_COMPLETED",
+      "targetBlockId": "BP2_A3_BLOCK",
+      "conditions": [
+        {
+          "field": "missionId",
+          "equals": "budapest-act-2"
+        }
+      ],
+      "conditionMode": "all",
+      "onlyOnce": true
+    },
+    {
+      "id": "BP2_A4_TRIGGER",
+      "type": "event",
+      "event": "MISSION_COMPLETED",
+      "targetBlockId": "BP2_A4_BLOCK",
+      "conditions": [
+        {
+          "field": "missionId",
+          "equals": "budapest-act-3"
+        }
+      ],
+      "conditionMode": "all",
+      "onlyOnce": true
+    },
+    {
+      "id": "BP2_A5_TRIGGER",
+      "type": "event",
+      "event": "MISSION_COMPLETED",
+      "targetBlockId": "BP2_A5_BLOCK",
+      "conditions": [
+        {
+          "field": "missionId",
+          "equals": "budapest-act-4"
+        }
+      ],
+      "conditionMode": "all",
+      "onlyOnce": true
+    },
+    {
+      "id": "BP2_A6_TRIGGER",
+      "type": "event",
+      "event": "MISSION_COMPLETED",
+      "targetBlockId": "BP2_A6_BLOCK",
+      "conditions": [
+        {
+          "field": "missionId",
+          "equals": "budapest-act-5"
+        }
+      ],
+      "conditionMode": "all",
+      "onlyOnce": true
+    }
+  ]
+}

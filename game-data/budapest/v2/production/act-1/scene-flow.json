@@ -1,0 +1,94 @@
+{
+  "id": "BP2_A1_FLOW",
+  "missionId": "budapest-act-1",
+  "entryNodeId": "BP2_A1_NODE_ARRIVE",
+  "nodes": [
+    {
+      "id": "BP2_A1_NODE_ARRIVE",
+      "kind": "task",
+      "taskId": "BP2_A1_ARRIVE",
+      "next": "BP2_A1_NODE_S00"
+    },
+    {
+      "id": "BP2_A1_NODE_S00",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D1_arrival",
+      "skipSummary": "Дучићев ехо разликује потпис и порекло; говор није аутентичан историјски снимак.",
+      "next": "BP2_A1_NODE_S01",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A1_NODE_S01",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D1_poem",
+      "skipSummary": "Оригинални ауторски стихови помињу три гласа и празну маргину, чије значење још није откривено.",
+      "next": "BP2_A1_NODE_S02",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A1_NODE_S02",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D1_evidence",
+      "skipSummary": "Два слична документа имају различито порекло; сачувати оба и означити шта је проверљиво.",
+      "next": "BP2_A1_NODE_EXPLORE",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A1_NODE_S03",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D1_interruption",
+      "skipSummary": "Оштећени Теслин глас продире у агенцијски канал; АРГО га проглашава сметњом.",
+      "next": "BP2_A1_NODE_S04",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A1_NODE_S04",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D1_departure",
+      "skipSummary": "Дучић не открива примаоца писма; кратак поздрав са три прста остаје ненаметљив траг.",
+      "next": "BP2_A1_NODE_FINISH",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A1_NODE_EXPLORE",
+      "kind": "task",
+      "taskId": "BP2_A1_EXPLORE",
+      "next": "BP2_A1_NODE_QUIZ"
+    },
+    {
+      "id": "BP2_A1_NODE_QUIZ",
+      "kind": "task",
+      "taskId": "BP2_A1_QUIZ",
+      "next": "BP2_A1_NODE_S03"
+    },
+    {
+      "id": "BP2_A1_NODE_FINISH",
+      "kind": "mission_completion",
+      "requiresAllTaskIds": [
+        "BP2_A1_ARRIVE",
+        "BP2_A1_EXPLORE",
+        "BP2_A1_QUIZ"
+      ],
+      "awardKey": "budapest-act-1:complete",
+      "collectibleId": "BP2_RELIC_1",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-2",
+      "next": null
+    }
+  ],
+  "taskOrder": [
+    "BP2_A1_ARRIVE",
+    "BP2_A1_EXPLORE",
+    "BP2_A1_QUIZ"
+  ],
+  "optionalSceneIds": [],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "skipWritesPlotSummary": true,
+    "transcriptAlwaysAvailable": true,
+    "completionWaitsForFlowFinish": true
+  },
+  "resumePolicy": "resume_node_no_duplicate_reward",
+  "fallback": "2d_evidence_cards",
+  "status": "candidate_no_runtime_test"
+}

@@ -1,0 +1,1202 @@
+{
+  "id": "BP2_DIALOGUE_3",
+  "language": "sr-Cyrl",
+  "status": "accepted_for_design_not_recorded",
+  "authoringSource": "screenplay/act-3*.txt",
+  "scenes": [
+    {
+      "id": "BP2_D3_threshold",
+      "act": 3,
+      "slug": "threshold",
+      "title": "Не мораш ући да би чуо",
+      "location": "Centrál — спољна безбедна тачка или виртуелни сто",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-3a.txt",
+      "lines": [
+        {
+          "id": "BP2_D3_threshold_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Предах. Историјски кафе „Централ“, Károlyi utca 9.",
+          "subtitle": "Предах. Историјски кафе „Централ“, Károlyi utca 9.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_threshold_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Овде је бар све мирно.",
+          "subtitle": "Овде је бар све мирно.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_threshold_L03",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Место на којем многи разговарају може изгледати као да нико никог не чује.",
+          "subtitle": "Место на којем многи разговарају може изгледати као да нико никог не чује.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_threshold_L04",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Историјски слој доступан. Ради удобности, реплике су аутоматски сажете.",
+          "subtitle": "Историјски слој доступан. Ради удобности, реплике су аутоматски сажете.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_threshold_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Немој да сажимаш. Пусти да слушам.",
+          "subtitle": "Немој да сажимаш. Пусти да слушам.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D3_threshold_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D3_threshold_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_threshold_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_threshold_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_threshold_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_threshold_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_threshold_L05"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D3_threshold_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D3_threshold_ST01",
+          "text": "Камера не улази међу стварне госте; потпун 2D акустички приказ. Звуци садашњег града полако се мешају са прошлошћу."
+        },
+        {
+          "id": "BP2_D3_threshold_ST02",
+          "text": "АРГО се повуче. Играч може да слуша столове, чита транскрипт или искључи звук без губитка приче."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D3_threshold_CU01",
+          "kind": "ambien",
+          "direction": "Садашња улица; кашичица удара у шољицу из другог, временског слоја.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D3_arrival1910",
+      "act": 3,
+      "slug": "arrival1910",
+      "title": "Шоља, број и мастило",
+      "location": "драматизовани сто, око 1910.",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-3a.txt",
+      "lines": [
+        {
+          "id": "BP2_D3_arrival1910_L01",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Господо, једну реченицу могу поправити. Али не доносите ми читав свет без иједне маргине.",
+          "subtitle": "Господо, једну реченицу могу поправити. Али не доносите ми читав свет без иједне маргине.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_arrival1910_L02",
+          "speakerId": "BP2_CH_KARINTHY",
+          "text": "А шта ако је свет сам себе лоше уредио?",
+          "subtitle": "А шта ако је свет сам себе лоше уредио?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_arrival1910_L03",
+          "speakerId": "BP2_CH_KOSZTOLANYI",
+          "text": "Онда му вратимо рукопис. Нека сам прочита шта је написао.",
+          "subtitle": "Онда му вратимо рукопис. Нека сам прочита шта је написао.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_arrival1910_L04",
+          "speakerId": "BP2_CH_KAFFKA",
+          "text": "Вас тројица се шалите као да ће онај који пише сутра имати исти папир.",
+          "subtitle": "Вас тројица се шалите као да ће онај који пише сутра имати исти папир.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_arrival1910_L05",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Проблем није нов папир. Проблем је кад промениш реченицу и потпишеш је туђим именом.",
+          "subtitle": "Проблем није нов папир. Проблем је кад промениш реченицу и потпишеш је туђим именом.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_arrival1910_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Чујем их као да су овде. Јесу ли ово стварно изговорили?",
+          "subtitle": "Чујем их као да су овде. Јесу ли ово стварно изговорили?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_arrival1910_L07",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Ово је драматизован књижевни сусрет. Нема извора за овај конкретни разговор.",
+          "subtitle": "Ово је драматизован књижевни сусрет. Нема извора за овај конкретни разговор.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_arrival1910_L08",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Онда бар знам шта не смем да узмем за доказ.",
+          "subtitle": "Онда бар знам шта не смем да узмем за доказ.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D3_arrival1910_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D3_arrival1910_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_arrival1910_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_arrival1910_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_arrival1910_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_arrival1910_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_arrival1910_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_arrival1910_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_arrival1910_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_arrival1910_L08"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D3_arrival1910_ST01",
+          "text": "Стабилна столна сцена, не гасити фигуре после сваке реченице. Главно дијалошко сидро је Овсат. У 2D: празан сто с положајима гласова, без обавезних лица."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D3_arrival1910_CU01",
+          "kind": "sou",
+          "direction": "Хартија, кашичица, гласови суседних столова, тиха виолина; ауторска звучна атмосфера.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D3_longtable",
+      "act": 3,
+      "slug": "longtable",
+      "title": "Да ли реченица може бити без власника?",
+      "location": "исти сто, дуже задржавање",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-3a.txt",
+      "lines": [
+        {
+          "id": "BP2_D3_longtable_L01",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Имам три рукописа. Један је добар и недовршен. Други је савршено довршен, али сумњам да га је аутор видео. Трећи је препис првог.",
+          "subtitle": "Имам три рукописа. Један је добар и недовршен. Други је савршено довршен, али сумњам да га је аутор видео. Трећи је препис првог.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L02",
+          "speakerId": "BP2_CH_KARINTHY",
+          "text": "Задржите трећи. Људи највише воле оно што су већ читали.",
+          "subtitle": "Задржите трећи. Људи највише воле оно што су већ читали.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L03",
+          "speakerId": "BP2_CH_KAFFKA",
+          "text": "Није смешно када једна рука препише другу и избрише јој име.",
+          "subtitle": "Није смешно када једна рука препише другу и избрише јој име.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L04",
+          "speakerId": "BP2_CH_KOSZTOLANYI",
+          "text": "У читаочевом уху и један и други могу звучати исто.",
+          "subtitle": "У читаочевом уху и један и други могу звучати исто.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L05",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Зато није довољно слушати како реченица звучи. Пита се ко је оставио црту, ко је прецртао реч, ко је издао страницу.",
+          "subtitle": "Зато није довољно слушати како реченица звучи. Пита се ко је оставио црту, ко је прецртао реч, ко је издао страницу.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "То већ знам од Дучића.",
+          "subtitle": "То већ знам од Дучића.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L07",
+          "speakerId": "BP2_CH_KARINTHY",
+          "text": "Сви смо паметнији кад нам нешто већ неко каже.",
+          "subtitle": "Сви смо паметнији кад нам нешто већ неко каже.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L08",
+          "speakerId": "BP2_CH_KAFFKA",
+          "text": "А шта ако онај који говори више не може да одговори?",
+          "subtitle": "А шта ако онај који говори више не може да одговори?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L09",
+          "speakerId": "BP2_CH_KOSZTOLANYI",
+          "text": "Прочиташ оно што није речено.",
+          "subtitle": "Прочиташ оно што није речено.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L10",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Не, Деже. Прво признаш да није речено. Тек онда тражиш другу страницу.",
+          "subtitle": "Не, Деже. Прво признаш да није речено. Тек онда тражиш другу страницу.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L11",
+          "speakerId": "BP2_CH_KARINTHY",
+          "text": "У том случају уредник мора бити најпоштенији човек у кафани. То звучи као трагедија.",
+          "subtitle": "У том случају уредник мора бити најпоштенији човек у кафани. То звучи као трагедија.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L12",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Довољно је да оставим видљив траг сваке измене.",
+          "subtitle": "Довољно је да оставим видљив траг сваке измене.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L13",
+          "speakerId": "BP2_CH_KAFFKA",
+          "text": "А ако дође неко ко уме да направи нов рукопис лепши од старог?",
+          "subtitle": "А ако дође неко ко уме да направи нов рукопис лепши од старог?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L14",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Показаће колико је вешт. Неће показати чији је.",
+          "subtitle": "Показаће колико је вешт. Неће показати чији је.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L15",
+          "speakerId": "BP2_CH_KOSZTOLANYI",
+          "text": "Ипак, понекад морамо да замислимо оно што недостаје.",
+          "subtitle": "Ипак, понекад морамо да замислимо оно што недостаје.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L16",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Свакако. Али замишљено не сме појести оно што је остало.",
+          "subtitle": "Свакако. Али замишљено не сме појести оно што је остало.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L17",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "А сада, Маргит, прочитај нешто што још нико није поправио.",
+          "subtitle": "А сада, Маргит, прочитај нешто што још нико није поправио.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_longtable_L18",
+          "speakerId": "BP2_CH_KAFFKA",
+          "text": "Само ако ћете га прво чути, па тек онда судити.",
+          "subtitle": "Само ако ћете га прво чути, па тек онда судити.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D3_longtable_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D3_longtable_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L09"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L10"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L11"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L12"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L13"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L14"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L15"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L16"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D3_longtable_ST02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L17"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_longtable_L18"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D3_longtable_ST01",
+          "text": "Ово је најдужи стабилни дијалог у кафани. Овсат је присутан кроз целу сцену. Никакав свезнајући монолог; жив спор, прекиди, хумор и паузе. Титлови негују смену говорника."
+        },
+        {
+          "id": "BP2_D3_longtable_ST02",
+          "text": "Овсат подигне лист: на углу су три ситна убода, четврто место остаје празно. Нема popup хинта."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D3_longtable_CU01",
+          "kind": "mus",
+          "direction": "Виолина и пригушени клавир у позадини; инструментал се стишава кад се чита стих.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D3_versecloud",
+      "act": 3,
+      "slug": "versecloud",
+      "title": "Стихови који нису историјски цитати",
+      "location": "гласови између столова",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-3a.txt",
+      "lines": [
+        {
+          "id": "BP2_D3_versecloud_L01",
+          "speakerId": "BP2_CH_POET_ECHO",
+          "text": "На столу време мења место.",
+          "subtitle": "На столу време мења место.",
+          "voiceAssetId": null,
+          "speechType": "recited_original"
+        },
+        {
+          "id": "BP2_D3_versecloud_L02",
+          "speakerId": "BP2_CH_POET_ECHO2",
+          "text": "Под чашом леже три питања.",
+          "subtitle": "Под чашом леже три питања.",
+          "voiceAssetId": null,
+          "speechType": "recited_original"
+        },
+        {
+          "id": "BP2_D3_versecloud_L03",
+          "speakerId": "BP2_CH_POET_ECHO",
+          "text": "А четврто је празна страна",
+          "subtitle": "А четврто је празна страна",
+          "voiceAssetId": null,
+          "speechType": "recited_original"
+        },
+        {
+          "id": "BP2_D3_versecloud_L04",
+          "speakerId": "BP2_CH_POET_ECHO2",
+          "text": "коју не сме нико да допише у моје име.",
+          "subtitle": "коју не сме нико да допише у моје име.",
+          "voiceAssetId": null,
+          "speechType": "recited_original"
+        },
+        {
+          "id": "BP2_D3_versecloud_L05",
+          "speakerId": "BP2_CH_STUDENT_A",
+          "text": "Професоре, зар је то песма ако не знамо ко ју је написао?",
+          "subtitle": "Професоре, зар је то песма ако не знамо ко ју је написао?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_versecloud_L06",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Ово није испит из имена, него из поузданости.",
+          "subtitle": "Ово није испит из имена, него из поузданости.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_versecloud_L07",
+          "speakerId": "BP2_CH_STUDENT_B",
+          "text": "Лакше ми је да је запамтим него да набројим све изворе.",
+          "subtitle": "Лакше ми је да је запамтим него да набројим све изворе.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_versecloud_L08",
+          "speakerId": "BP2_CH_KAFFKA",
+          "text": "Онда је немој мешати са извором. Памћење је почетак, не печат.",
+          "subtitle": "Онда је немој мешати са извором. Памћење је почетак, не печат.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_versecloud_L09",
+          "speakerId": "BP2_CH_KARINTHY",
+          "text": "У кафани можемо бити и гласни и нетачни. За то се бар не плаћа додатни порез.",
+          "subtitle": "У кафани можемо бити и гласни и нетачни. За то се бар не плаћа додатни порез.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D3_versecloud_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D3_versecloud_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_versecloud_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_versecloud_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_versecloud_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_versecloud_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_versecloud_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_versecloud_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_versecloud_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_versecloud_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_versecloud_L09"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D3_versecloud_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D3_versecloud_ST01",
+          "text": "Лете оригинални, новонаписани стихови. Имају ознаку „ауторска драматизација“, не приписују се Кафки, Адију или стварним песмама."
+        },
+        {
+          "id": "BP2_D3_versecloud_ST02",
+          "text": "Звук шоље преклапа паузу између трећег и четвртог стиха. Трећи ненаметљив знак Круга."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D3_versecloud_CU01",
+          "kind": "recitati",
+          "direction": "Два удаљена гласа, један са леве, други од врата; музика се повлачи у паузама.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D3_year",
+      "act": 3,
+      "slug": "year",
+      "title": "Година која је отпала с листа",
+      "location": "виртуелна архивска карта",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-3b.txt",
+      "lines": [
+        {
+          "id": "BP2_D3_year_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Година отварања: 1886. Стабилизована архивска белешка.",
+          "subtitle": "Година отварања: 1886. Стабилизована архивска белешка.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_year_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Историјат кафеа каже 1887.",
+          "subtitle": "Историјат кафеа каже 1887.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_year_L03",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "И ја сам имао 1886. Пре него што сам је проверио.",
+          "subtitle": "И ја сам имао 1886. Пре него што сам је проверио.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_year_L04",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Разлика је статистички мала.",
+          "subtitle": "Разлика је статистички мала.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_year_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "То је цела година нечијег живота. Остави и погрешан број у дневнику.",
+          "subtitle": "То је цела година нечијег живота. Остави и погрешан број у дневнику.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_year_L06",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Један број делује ситно док не буде нечија година рођења.",
+          "subtitle": "Један број делује ситно док не буде нечија година рођења.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D3_year_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_year_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_year_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_year_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_year_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_year_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_year_L06"
+        },
+        {
+          "type": "beat",
+          "id": "BP2_D3_year_BE01"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D3_year_ST01",
+          "text": "На листу писаном агенцијском типографијом види се „1886“; историјат кафеа показује 1887. Доказ игре је стварни датум из званичног историјата, а „1886“ је наше фикционално подметање."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": [
+        {
+          "id": "BP2_D3_year_BE01",
+          "kind": "EVIDEN",
+          "instruction": "1887 source-supported; 1886 forged agency note; retain both with provenance rather than auto-overwrite."
+        }
+      ]
+    },
+    {
+      "id": "BP2_D3_intruder",
+      "act": 3,
+      "slug": "intruder",
+      "title": "Тон који не припада столу",
+      "location": "кавана мења акустику",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-3b.txt",
+      "lines": [
+        {
+          "id": "BP2_D3_intruder_L01",
+          "speakerId": "BP2_CH_KOSZTOLANYI",
+          "text": "Чујете ли? Неко је поправио мелодију.",
+          "subtitle": "Чујете ли? Неко је поправио мелодију.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_intruder_L02",
+          "speakerId": "BP2_CH_KARINTHY",
+          "text": "Штета. Најбоље у мелодији је што понекад омаши.",
+          "subtitle": "Штета. Најбоље у мелодији је што понекад омаши.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_intruder_L03",
+          "speakerId": "BP2_CH_KAFFKA",
+          "text": "А можда слушамо копију сопственог разговора.",
+          "subtitle": "А можда слушамо копију сопственог разговора.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_intruder_L04",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Није исто ако је разговор поновљен и ако је поново вођен.",
+          "subtitle": "Није исто ако је разговор поновљен и ако је поново вођен.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_intruder_L05",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Поновљен. Поновљен. Поновљен.",
+          "subtitle": "Поновљен. Поновљен. Поновљен.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D3_intruder_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Тесла, то је Илона.",
+          "subtitle": "Тесла, то је Илона.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_intruder_L07",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Она не слуша шта причају. Она слуша шта си ти разумео.",
+          "subtitle": "Она не слуша шта причају. Она слуша шта си ти разумео.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_intruder_L08",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Безбедна аудио-дупликација. Систем ће сам исправити приказ.",
+          "subtitle": "Безбедна аудио-дупликација. Систем ће сам исправити приказ.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_intruder_L09",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Не дирај ништа. Желим да чујем и грешку.",
+          "subtitle": "Не дирај ништа. Желим да чујем и грешку.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D3_intruder_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D3_intruder_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_intruder_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_intruder_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_intruder_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_intruder_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_intruder_L05"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D3_intruder_ST02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_intruder_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_intruder_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_intruder_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_intruder_L09"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D3_intruder_ST01",
+          "text": "Овсат још седи за истим столом; за његовим леђима на тренутак се појављује новина са савременим агенцијским знаком. Из виолине излази потпуно раван електронски тон."
+        },
+        {
+          "id": "BP2_D3_intruder_ST02",
+          "text": "Три историјска еха изговарају исту реч МАСКИНИМ тембром. Овсат први пут заћути, што ствара прави страх."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D3_intruder_CU01",
+          "kind": "mus",
+          "direction": "Ауторски акустички мотив уступа место једном синтетичком тону који не дише.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D3_listening",
+      "act": 3,
+      "slug": "listening",
+      "title": "За другим столом",
+      "location": "просторни звук, без обавезних лица",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-3b.txt",
+      "lines": [
+        {
+          "id": "BP2_D3_listening_L01",
+          "speakerId": "BP2_CH_STUDENT_A",
+          "text": "Ако неко дође овде следеће године, хоће ли чути нас?",
+          "subtitle": "Ако неко дође овде следеће године, хоће ли чути нас?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_listening_L02",
+          "speakerId": "BP2_CH_STUDENT_B",
+          "text": "Ако нас неко запише.",
+          "subtitle": "Ако нас неко запише.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_listening_L03",
+          "speakerId": "BP2_CH_STUDENT_A",
+          "text": "А ако запише само оно што мисли да смо рекли?",
+          "subtitle": "А ако запише само оно што мисли да смо рекли?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_listening_L04",
+          "speakerId": "BP2_CH_STUDENT_B",
+          "text": "Онда ће прочитати нас, а чути себе.",
+          "subtitle": "Онда ће прочитати нас, а чути себе.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_listening_L05",
+          "speakerId": "BP2_CH_WAITER_ECHO",
+          "text": "Још једна кафа за господу? На рачуну је све тачно, макар прича каснила.",
+          "subtitle": "Још једна кафа за господу? На рачуну је све тачно, макар прича каснила.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_listening_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Не морам да им видим лица да бих разумео расправу.",
+          "subtitle": "Не морам да им видим лица да бих разумео расправу.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_listening_L07",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Понекад је најпоштеније да седиш и слушаш разговор који не разумеш до краја.",
+          "subtitle": "Понекад је најпоштеније да седиш и слушаш разговор који не разумеш до краја.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_listening_L08",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "И научнику. И инспектору.",
+          "subtitle": "И научнику. И инспектору.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D3_listening_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D3_listening_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_listening_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_listening_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_listening_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_listening_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_listening_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_listening_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_listening_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_listening_L08"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D3_listening_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D3_listening_ST01",
+          "text": "Преко садашњих звучних нивоа појављује се засебан разговор студената. На екрану није неопходно приказати личности: положај звука и суптитл са именом слоја носе сцену."
+        },
+        {
+          "id": "BP2_D3_listening_ST02",
+          "text": "АРГО нуди кратак транскрипт; играч може посебно вратити било који слој."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D3_listening_CU01",
+          "kind": "ambien",
+          "direction": "Главни сто Овсата у средини; студенти с леве стране; кашичица и конобар у даљини. Ниједан глас не сме потпуно прекрити други.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D3_rupture",
+      "act": 3,
+      "slug": "rupture",
+      "title": "Када сви говоре једним гласом",
+      "location": "кафанска полифонија се распада",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-3b.txt",
+      "lines": [
+        {
+          "id": "BP2_D3_rupture_L01",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Могу их све ставити за исти сто, у сваком веку. Нико неће приметити.",
+          "subtitle": "Могу их све ставити за исти сто, у сваком веку. Нико неће приметити.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D3_rupture_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Приметиће ако оставиш године.",
+          "subtitle": "Приметиће ако оставиш године.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_rupture_L03",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Онда ћу уклонити године.",
+          "subtitle": "Онда ћу уклонити године.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D3_rupture_L04",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "У добром листу увек има места за исправку.",
+          "subtitle": "У добром листу увек има места за исправку.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_rupture_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "А за оно што још не знамо?",
+          "subtitle": "А за оно што још не знамо?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_rupture_L06",
+          "speakerId": "BP2_CH_EDITOR_OSVAT",
+          "text": "Кад помислиш да је ствар завршена, окрени страницу.",
+          "subtitle": "Кад помислиш да је ствар завршена, окрени страницу.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_rupture_L07",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Иди до Текелијанума. Можда тамо нађеш онога ко је нешто сачувао мењајући зграде, а не бришући их.",
+          "subtitle": "Иди до Текелијанума. Можда тамо нађеш онога ко је нешто сачувао мењајући зграде, а не бришући их.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_rupture_L08",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Навигација обновљена. Нема утврђених неправилности.",
+          "subtitle": "Навигација обновљена. Нема утврђених неправилности.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D3_rupture_L09",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Баш та реченица ме сада највише брине.",
+          "subtitle": "Баш та реченица ме сада највише брине.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D3_rupture_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_rupture_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_rupture_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_rupture_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_rupture_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_rupture_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_rupture_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_rupture_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_rupture_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D3_rupture_L09"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D3_rupture_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D3_rupture_ST01",
+          "text": "МАСКА на кратко сложи сенке из различитих деценија у истом кадру. Тај кадар је намерна фикциона монтажа, не тврдња о истој стварној вечери."
+        },
+        {
+          "id": "BP2_D3_rupture_ST02",
+          "text": "Овсатов последњи глас траје секунду после визуелног нестанка стола. Задржава се као стабилнији актер са стварним сценским развојем."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": []
+    }
+  ]
+}

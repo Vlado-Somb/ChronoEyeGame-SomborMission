@@ -1,0 +1,173 @@
+{
+  "id": "BP2_A6_FLOW",
+  "missionId": "budapest-act-6",
+  "entryNodeId": "BP2_A6_NODE_ARRIVE",
+  "nodes": [
+    {
+      "id": "BP2_A6_NODE_ARRIVE",
+      "kind": "task",
+      "taskId": "BP2_A6_ARRIVE",
+      "next": "BP2_A6_NODE_S0"
+    },
+    {
+      "id": "BP2_A6_NODE_S0",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_overlook",
+      "skipSummary": "Са безбедног видиковца отвара се реконструкциони досије; Круг није једновремени састанак.",
+      "next": "BP2_A6_NODE_S1",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A6_NODE_S1",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_anchors",
+      "skipSummary": "Положај и габарит храма нису теренски потврђени; приказати само умањени/2D модел.",
+      "next": "BP2_A6_NODE_EXPLORE",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A6_NODE_S2",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_apparition",
+      "skipSummary": "Храм се појављује као раздвојен приказ извора, непотврђеног и уметничког слоја.",
+      "next": "BP2_A6_NODE_S3",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A6_NODE_S3",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_seizure",
+      "skipSummary": "Илона нуди савршену али недоказану реконструкцију без ознака порекла.",
+      "next": "BP2_A6_NODE_S4",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A6_NODE_S4",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_adjudication",
+      "skipSummary": "Инспектор мора одлучити шта ће сачувати; две означене верзије су могући исход.",
+      "next": "BP2_A6_NODE_CHOICE",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A6_NODE_S5",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_false_end",
+      "skipSummary": "Привремени избор савршене верзије открива губитак извора и враћа избор без казне.",
+      "next": "BP2_A6_NODE_REPAIR",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A6_NODE_S6",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_ending_evidence",
+      "skipSummary": "Први валидан исход чува само поткрепљене делове и видљиве празнине.",
+      "next": "BP2_A6_NODE_S8",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A6_NODE_S7",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_ending_both",
+      "skipSummary": "Други валидан исход чува одвојено поткрепљену реконструкцију и Илонину интерпретацију.",
+      "next": "BP2_A6_NODE_S8",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A6_NODE_S8",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_timeloop",
+      "skipSummary": "Инспектор шаље три импулса и празну маргину у прошлост; тиме затвара A+V временску петљу.",
+      "next": "BP2_A6_NODE_S9",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A6_NODE_S9",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D6_epilogue",
+      "skipSummary": "Варга и Илона остају одговорни за своје изборе; досије и извори остају проверљиви.",
+      "next": "BP2_A6_NODE_FINISH",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A6_NODE_EXPLORE",
+      "kind": "task",
+      "taskId": "BP2_A6_EXPLORE",
+      "next": "BP2_A6_NODE_QUIZ"
+    },
+    {
+      "id": "BP2_A6_NODE_QUIZ",
+      "kind": "task",
+      "taskId": "BP2_A6_QUIZ",
+      "next": "BP2_A6_NODE_S2"
+    },
+    {
+      "id": "BP2_A6_NODE_CHOICE",
+      "kind": "choice",
+      "choices": [
+        {
+          "id": "evidence",
+          "label": "Само поткрепљено",
+          "next": "BP2_A6_NODE_S6"
+        },
+        {
+          "id": "both",
+          "label": "Обе означене верзије",
+          "next": "BP2_A6_NODE_S7"
+        },
+        {
+          "id": "perfect",
+          "label": "Савршена верзија — проба",
+          "next": "BP2_A6_NODE_S5"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "BP2_A6_NODE_REPAIR",
+      "kind": "choice",
+      "choices": [
+        {
+          "id": "evidence",
+          "label": "Врати доказе",
+          "next": "BP2_A6_NODE_S6"
+        },
+        {
+          "id": "both",
+          "label": "Врати две означене верзије",
+          "next": "BP2_A6_NODE_S7"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "BP2_A6_NODE_FINISH",
+      "kind": "mission_completion",
+      "requiresAllTaskIds": [
+        "BP2_A6_ARRIVE",
+        "BP2_A6_EXPLORE",
+        "BP2_A6_QUIZ"
+      ],
+      "awardKey": "budapest-act-6:complete",
+      "collectibleId": "BP2_RELIC_6",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": null,
+      "next": null
+    }
+  ],
+  "taskOrder": [
+    "BP2_A6_ARRIVE",
+    "BP2_A6_EXPLORE",
+    "BP2_A6_QUIZ"
+  ],
+  "optionalSceneIds": [],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "transcriptAlwaysAvailable": true,
+    "skipWritesPlotSummary": true,
+    "completionWaitsForFlowFinish": true
+  },
+  "fallback": "2d_evidence_cards",
+  "status": "candidate_no_runtime_test",
+  "resumePolicy": "resume_node_no_duplicate_reward"
+}

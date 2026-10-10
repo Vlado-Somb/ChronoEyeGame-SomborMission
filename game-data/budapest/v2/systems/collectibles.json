@@ -1,0 +1,155 @@
+{
+  "categories": [
+    "relic",
+    "golden_seal",
+    "heart",
+    "joker"
+  ],
+  "items": [
+    {
+      "id": "BP2_RELIC_0",
+      "category": "relic",
+      "title": "Мала маргина",
+      "assetId": "BP2_ART_0",
+      "storyByte": "Разлика покреће проверу.",
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-0"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP2_RELIC_0"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    },
+    {
+      "id": "BP2_RELIC_1",
+      "category": "relic",
+      "title": "Писмо без адресе",
+      "assetId": "BP2_ART_1",
+      "storyByte": "Дучић је сачувао празну маргину.",
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-1"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP2_RELIC_1"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    },
+    {
+      "id": "BP2_RELIC_2",
+      "category": "relic",
+      "title": "Два лица пројекције",
+      "assetId": "BP2_ART_2",
+      "storyByte": "Лице не доказује ко говори.",
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-2"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP2_RELIC_2"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    },
+    {
+      "id": "BP2_RELIC_3",
+      "category": "relic",
+      "title": "Шоља са исправком",
+      "assetId": "BP2_ART_3",
+      "storyByte": "Чуј разговор, али провери извор.",
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-3"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP2_RELIC_3"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    },
+    {
+      "id": "BP2_RELIC_4",
+      "category": "relic",
+      "title": "Три спојена прста",
+      "assetId": "BP2_ART_4",
+      "storyByte": "Круг има много чланова, три начела.",
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-4"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP2_RELIC_4"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    },
+    {
+      "id": "BP2_RELIC_5",
+      "category": "relic",
+      "title": "Живи корак",
+      "assetId": "BP2_ART_5",
+      "storyByte": "Живи пренос није исто што и копија.",
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-5"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP2_RELIC_5"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    },
+    {
+      "id": "BP2_RELIC_6",
+      "category": "relic",
+      "title": "Храм отворених извора",
+      "assetId": "BP2_ART_6",
+      "storyByte": "Сачувај и празнине и порекло.",
+      "unlockCondition": {
+        "event": "MISSION_COMPLETED",
+        "missionId": "budapest-act-6"
+      },
+      "scoring": {
+        "points": 0,
+        "awardKey": "BP2_RELIC_6"
+      },
+      "spawnRules": {
+        "mode": "album",
+        "requiresPhysicalMovement": false
+      },
+      "repeatability": "once_per_profile"
+    }
+  ],
+  "optionalCategoriesStatus": {
+    "golden_seal": "reserved_no_items_authored",
+    "heart": "reserved_no_items_authored",
+    "joker": "reserved_no_items_authored"
+  }
+}

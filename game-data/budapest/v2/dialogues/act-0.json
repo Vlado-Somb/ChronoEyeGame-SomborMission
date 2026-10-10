@@ -1,0 +1,491 @@
+{
+  "id": "BP2_DIALOGUE_0",
+  "language": "sr-Cyrl",
+  "sourceFiles": [
+    "screenplay/act-0.txt"
+  ],
+  "scenes": [
+    {
+      "id": "BP2_D0_invitation",
+      "act": 0,
+      "title": "Добродошли у прошлост",
+      "location": "старт апликације",
+      "sourceFile": "screenplay/act-0.txt",
+      "fictionLabel": "Ауторска драматизација; не историјски цитат.",
+      "lines": [
+        {
+          "id": "BP2_D0_invitation_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Добро дошли у CHRONO EYE. Историја не мора да буде загонетка.",
+          "subtitle": "Добро дошли у CHRONO EYE. Историја не мора да буде загонетка.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_invitation_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Мислио сам да је ово обилазак Будимпеште.",
+          "subtitle": "Мислио сам да је ово обилазак Будимпеште.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_invitation_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "И јесте. Само што сваки посетилац може помоћи да сачувамо оно што време брише.",
+          "subtitle": "И јесте. Само што сваки посетилац може помоћи да сачувамо оно што време брише.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_invitation_L04",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Инспекторе? Овде Варга, ваш непосредни руководилац. Хвала што сте прихватили теренски задатак.",
+          "subtitle": "Инспекторе? Овде Варга, ваш непосредни руководилац. Хвала што сте прихватили теренски задатак.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_invitation_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Нисам знао да туристички водич има руководиоца.",
+          "subtitle": "Нисам знао да туристички водич има руководиоца.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_invitation_L06",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Лепи градови имају много тога што не стаје у разгледницу. Ми сакупљамо проверљиве трагове, пре него што их неко препише.",
+          "subtitle": "Лепи градови имају много тога што не стаје у разгледницу. Ми сакупљамо проверљиве трагове, пре него што их неко препише.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_invitation_L07",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Задатак је једноставан: пронађите, проверите, синхронизујте.",
+          "subtitle": "Задатак је једноставан: пронађите, проверите, синхронизујте.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_invitation_L08",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "А ако нешто не успем да проверим?",
+          "subtitle": "А ако нешто не успем да проверим?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_invitation_L09",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Означите као непроверено. Ништа не бришите. Систем ће се побринути за остало.",
+          "subtitle": "Означите као непроверено. Ништа не бришите. Систем ће се побринути за остало.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D0_invitation_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D0_invitation_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_invitation_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_invitation_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_invitation_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_invitation_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_invitation_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_invitation_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_invitation_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_invitation_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_invitation_L09"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D0_invitation_ST02"
+        },
+        {
+          "type": "beat",
+          "id": "BP2_D0_invitation_BT01"
+        }
+      ],
+      "slug": "invitation",
+      "stageDirections": [
+        {
+          "id": "BP2_D0_invitation_ST01",
+          "text": "БЕЗ AR: обична мапа Будимпеште. Пријатан минималистички интерфејс; без наговештаја хорора. На дну је ситан индикатор „синхронизација укључена“."
+        },
+        {
+          "id": "BP2_D0_invitation_ST02",
+          "text": "При избору „настави“ инспектор добија први празан досије, не црну кутију. Важно: Варга изговара исправне, разумне ствари."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D0_invitation_CU01",
+          "kind": "ambience",
+          "direction": "Садашњи град, удаљени трамвај, ваздух на тргу; сувише чист агенцијски сигнал.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": [
+        {
+          "id": "BP2_D0_invitation_BT01",
+          "text": "CHOICE|Прихвати задатак / Прво прегледај правила — обе опције воде даље, али могу поставити flag cautiousStart.",
+          "implementationStatus": "authoring_note_flow_controls_gameplay"
+        }
+      ]
+    },
+    {
+      "id": "BP2_D0_onboarding",
+      "act": 0,
+      "title": "Три команде",
+      "location": "на истој карти",
+      "sourceFile": "screenplay/act-0.txt",
+      "fictionLabel": "Ауторска драматизација; не историјски цитат.",
+      "lines": [
+        {
+          "id": "BP2_D0_onboarding_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Када отворите два записа, можете их упоредити. Свака сачувана белешка добија извор и време проналаска.",
+          "subtitle": "Када отворите два записа, можете их упоредити. Свака сачувана белешка добија извор и време проналаска.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_onboarding_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "И локалну копију?",
+          "subtitle": "И локалну копију?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_onboarding_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Локална копија је доступна за каснију синхронизацију.",
+          "subtitle": "Локална копија је доступна за каснију синхронизацију.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_onboarding_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Нисам то питао.",
+          "subtitle": "Нисам то питао.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_onboarding_L05",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Ваша безбедност нам је важна. Све можете наставити сутра.",
+          "subtitle": "Ваша безбедност нам је важна. Све можете наставити сутра.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_onboarding_L06",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Заборавите за сада на меније. Прва станица је испред Амбасаде Србије. Тамо је једно писмо остало без пошиљаоца.",
+          "subtitle": "Заборавите за сада на меније. Прва станица је испред Амбасаде Србије. Тамо је једно писмо остало без пошиљаоца.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D0_onboarding_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_onboarding_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_onboarding_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_onboarding_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_onboarding_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_onboarding_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_onboarding_L06"
+        },
+        {
+          "type": "beat",
+          "id": "BP2_D0_onboarding_BT01"
+        }
+      ],
+      "slug": "onboarding",
+      "stageDirections": [
+        {
+          "id": "BP2_D0_onboarding_ST01",
+          "text": "Кратка и ненаметљива обука: INSPECT, COMPARE, KEEP LOCAL. Прва два изгледају активно; треће је скривено у додатним опцијама."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": [
+        {
+          "id": "BP2_D0_onboarding_BT01",
+          "text": "EVIDENCE|Две верзије ауторске дигиталне карте, једна садржи сенку зграде. Закључак: прикази се разликују, не да је један нужно истинит. 2D и AR исти исход.",
+          "implementationStatus": "authoring_note_flow_controls_gameplay"
+        }
+      ]
+    },
+    {
+      "id": "BP2_D0_fracture",
+      "act": 0,
+      "title": "Није грешка у екрану",
+      "location": "на путу или безбедно заустављен",
+      "sourceFile": "screenplay/act-0.txt",
+      "fictionLabel": "Ауторска драматизација; не историјски цитат.",
+      "lines": [
+        {
+          "id": "BP2_D0_fracture_L01",
+          "speakerId": "BP2_CH_UNKNOWN",
+          "text": "Не веруј… само… једном…",
+          "subtitle": "Не веруј… само… једном…",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_fracture_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "АРГО, чији је ово глас?",
+          "subtitle": "АРГО, чији је ово глас?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_fracture_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Ниједан регистровани извор. Вероватно оштећен запис.",
+          "subtitle": "Ниједан регистровани извор. Вероватно оштећен запис.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_fracture_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Нисам тражио вероватноћу. Тражио сам чији је.",
+          "subtitle": "Нисам тражио вероватноћу. Тражио сам чији је.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_fracture_L05",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Обавештење је уклоњено ради бољег корисничког доживљаја.",
+          "subtitle": "Обавештење је уклоњено ради бољег корисничког доживљаја.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_fracture_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ја га нисам уклонио.",
+          "subtitle": "Ја га нисам уклонио.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D0_fracture_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D0_fracture_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_fracture_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_fracture_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_fracture_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_fracture_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_fracture_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_fracture_L06"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D0_fracture_ST02"
+        }
+      ],
+      "slug": "fracture",
+      "stageDirections": [
+        {
+          "id": "BP2_D0_fracture_ST01",
+          "text": "Не терати инспектора да гледа у телефон док хода. Када застане или се врати у мапу, један кадар затрепери; три импулса, затим тишина."
+        },
+        {
+          "id": "BP2_D0_fracture_ST02",
+          "text": "Кратко видљив знак три тачке које се додирују. Не сме личити на доказан историјски религијски поздрав."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D0_fracture_CU01",
+          "kind": "motif",
+          "direction": "Три удара без четвртог; није Морзеова азбука, него оригинални мотив.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D0_handler",
+      "act": 0,
+      "title": "Мала службена тајна",
+      "location": "приватни агенцијски канал",
+      "sourceFile": "screenplay/act-0.txt",
+      "fictionLabel": "Ауторска драматизација; не историјски цитат.",
+      "lines": [
+        {
+          "id": "BP2_D0_handler_L01",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Јавили су ми да сте имали аномалију. Не брините, то се дешава када се старе базе података преклапају.",
+          "subtitle": "Јавили су ми да сте имали аномалију. Не брините, то се дешава када се старе базе података преклапају.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_handler_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ко је старији: запис или база?",
+          "subtitle": "Ко је старији: запис или база?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_handler_L03",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Добро питање. Запишите га. Али следите протокол, молим вас. Не преносите несинхронизоване податке другим каналима.",
+          "subtitle": "Добро питање. Запишите га. Али следите протокол, молим вас. Не преносите несинхронизоване податке другим каналима.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_handler_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Као да се плашите да ћу изгубити доказе.",
+          "subtitle": "Као да се плашите да ћу изгубити доказе.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D0_handler_L05",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Управо тога се плашим.",
+          "subtitle": "Управо тога се плашим.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D0_handler_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_handler_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_handler_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_handler_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_handler_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D0_handler_L05"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D0_handler_ST02"
+        }
+      ],
+      "slug": "handler",
+      "stageDirections": [
+        {
+          "id": "BP2_D0_handler_ST01",
+          "text": "Први пут чујемо Варгу без ARGO-а. Његово дисање је људско, не синтетичко."
+        },
+        {
+          "id": "BP2_D0_handler_ST02",
+          "text": "КРАЈ: код гледаоца остаје сумња у систем, али Варга делује коректно. Снага је у двосмислености, не у откривеном негативцу."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": []
+    }
+  ],
+  "status": "accepted_for_design_not_recorded",
+  "authoringSource": "screenplay/act-0.txt"
+}

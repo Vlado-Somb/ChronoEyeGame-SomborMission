@@ -1,0 +1,192 @@
+{
+  "id": "BP2_A5_FLOW",
+  "missionId": "budapest-act-5",
+  "entryNodeId": "BP2_A5_NODE_S00",
+  "nodes": [
+    {
+      "id": "BP2_A5_NODE_ARRIVE",
+      "kind": "task",
+      "taskId": "BP2_A5_ARRIVE",
+      "next": "BP2_A5_NODE_S02"
+    },
+    {
+      "id": "BP2_A5_NODE_S00",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_bridge",
+      "skipSummary": "Ержебет мост је безбедносна навигациона транзиција без активног AR-а током хода.",
+      "next": "BP2_A5_NODE_S01",
+      "skipPreservesTranscript": true,
+      "navigationCue": {
+        "waypointId": "BP_BRIDGE_SAFE",
+        "mode": "map_or_manual_2d",
+        "requiresSafeStopBeforeDialogue": true,
+        "automaticGpsCompletion": false,
+        "geofenceStatus": "survey_pending"
+      },
+      "safety": {
+        "arDisabledWhileCrossing": true,
+        "audioRequiresSafeStop": true
+      }
+    },
+    {
+      "id": "BP2_A5_NODE_S01",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_near_absence",
+      "skipSummary": "Инспектор у близини некадашњег храма примећује само слаб сигнал, не препознаје место.",
+      "next": "BP2_A5_NODE_ARRIVE",
+      "skipPreservesTranscript": true,
+      "navigationCue": {
+        "waypointId": "BP_TABAN_NEAR",
+        "mode": "map_or_manual_2d",
+        "requiresSafeStopBeforeDialogue": true,
+        "automaticGpsCompletion": false,
+        "geofenceStatus": "survey_pending"
+      }
+    },
+    {
+      "id": "BP2_A5_NODE_S02",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_stag",
+      "skipSummary": "Код Златног јелена Јован Пачић у фикционалној сцени усмерава инспектора ка Јовану Витковићу.",
+      "next": "BP2_A5_NODE_S03",
+      "skipPreservesTranscript": true,
+      "navigationCue": {
+        "waypointId": "BP_GOLDEN_STAG",
+        "mode": "map_or_manual_2d",
+        "requiresSafeStopBeforeDialogue": true,
+        "automaticGpsCompletion": false,
+        "geofenceStatus": "survey_pending"
+      }
+    },
+    {
+      "id": "BP2_A5_NODE_S03",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_watercolor",
+      "skipSummary": "Пачићев акварел ношње не чува сам покрет; живо извођење додаје нови тип сведочења.",
+      "next": "BP2_A5_NODE_S04",
+      "skipPreservesTranscript": true,
+      "navigationCue": {
+        "waypointId": "BP_GOLDEN_STAG",
+        "mode": "map_or_manual_2d",
+        "requiresSafeStopBeforeDialogue": true,
+        "automaticGpsCompletion": false,
+        "geofenceStatus": "survey_pending"
+      }
+    },
+    {
+      "id": "BP2_A5_NODE_S04",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_false_copy",
+      "skipSummary": "МАСКА представља савршен плес који не уме да одговори на промену и контекст.",
+      "next": "BP2_A5_NODE_S05",
+      "skipPreservesTranscript": true,
+      "navigationCue": {
+        "waypointId": "BP_GOLDEN_STAG",
+        "mode": "map_or_manual_2d",
+        "requiresSafeStopBeforeDialogue": true,
+        "automaticGpsCompletion": false,
+        "geofenceStatus": "survey_pending"
+      }
+    },
+    {
+      "id": "BP2_A5_NODE_S05",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_return_place",
+      "skipSummary": "Инспектор се враћа на место несталог храма и чује Јованов ехо; пун храм се још не реконструише.",
+      "next": "BP2_A5_NODE_EXPLORE",
+      "skipPreservesTranscript": true,
+      "navigationCue": {
+        "waypointId": "BP_TABAN_RETURN",
+        "mode": "map_or_manual_2d",
+        "requiresSafeStopBeforeDialogue": true,
+        "automaticGpsCompletion": false,
+        "geofenceStatus": "survey_pending"
+      }
+    },
+    {
+      "id": "BP2_A5_NODE_S06",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_chorus",
+      "skipSummary": "Круг има много чланова и три принципа: материју, сећање и покрет, а не тачно три човека.",
+      "next": "BP2_A5_NODE_S07",
+      "skipPreservesTranscript": true,
+      "navigationCue": {
+        "waypointId": "BP_GELLERT_VIEW",
+        "mode": "map_or_manual_2d",
+        "requiresSafeStopBeforeDialogue": true,
+        "automaticGpsCompletion": false,
+        "geofenceStatus": "survey_pending"
+      }
+    },
+    {
+      "id": "BP2_A5_NODE_S07",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D5_unlocking",
+      "skipSummary": "На Гелерт брду три независна трага оживљавају Теслин канал; пуна реконструкција остаје за чин VI.",
+      "next": "BP2_A5_NODE_FINISH",
+      "skipPreservesTranscript": true,
+      "navigationCue": {
+        "waypointId": "BP_GELLERT_VIEW",
+        "mode": "map_or_manual_2d",
+        "requiresSafeStopBeforeDialogue": true,
+        "automaticGpsCompletion": false,
+        "geofenceStatus": "survey_pending"
+      }
+    },
+    {
+      "id": "BP2_A5_NODE_EXPLORE",
+      "kind": "task",
+      "taskId": "BP2_A5_EXPLORE",
+      "next": "BP2_A5_NODE_QUIZ"
+    },
+    {
+      "id": "BP2_A5_NODE_QUIZ",
+      "kind": "task",
+      "taskId": "BP2_A5_QUIZ",
+      "next": "BP2_A5_NODE_S06"
+    },
+    {
+      "id": "BP2_A5_NODE_FINISH",
+      "kind": "mission_completion",
+      "requiresAllTaskIds": [
+        "BP2_A5_ARRIVE",
+        "BP2_A5_EXPLORE",
+        "BP2_A5_QUIZ"
+      ],
+      "awardKey": "budapest-act-5:complete",
+      "collectibleId": "BP2_RELIC_5",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-6",
+      "next": null
+    }
+  ],
+  "taskOrder": [
+    "BP2_A5_ARRIVE",
+    "BP2_A5_EXPLORE",
+    "BP2_A5_QUIZ"
+  ],
+  "optionalSceneIds": [],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "transcriptAlwaysAvailable": true,
+    "skipWritesPlotSummary": true,
+    "completionWaitsForFlowFinish": true
+  },
+  "resumePolicy": "resume_node_no_duplicate_reward",
+  "fallback": "2d_evidence_cards",
+  "status": "candidate_no_runtime_test",
+  "navigationPolicy": "bridge_navigation_only_no_ar; pause_for_safe_scene_standing",
+  "routePolicy": {
+    "entryBeforeArrival": true,
+    "orderedNarrativeWaypoints": [
+      "BP_BRIDGE_SAFE",
+      "BP_TABAN_NEAR",
+      "BP_GOLDEN_STAG",
+      "BP_TABAN_RETURN",
+      "BP_GELLERT_VIEW"
+    ],
+    "taskArrivalAt": "BP_GOLDEN_STAG",
+    "noAROnBridge": true,
+    "allUnsurveyedRouteStepsRequireSafeStop": true
+  }
+}

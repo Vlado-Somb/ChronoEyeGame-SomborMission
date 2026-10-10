@@ -1,0 +1,134 @@
+{
+  "sources": [
+    {
+      "id": "SRC_USER_CORE",
+      "title": "Полазни Core Story, оригинални акти и одобрена Story Bible v0.2.1",
+      "type": "user_supplied",
+      "url": null,
+      "scope": "Само фикционални канон.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_EMBASSY",
+      "title": "Амбасада Републике Србије — контакт",
+      "type": "official",
+      "url": "https://budapest.mfa.gov.rs/ambasada/kontakt",
+      "scope": "Контакт и адреса; не доказ Дучићевог боравка на конкретној адреси.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_HEROES",
+      "title": "Трг хероја / туристичко наслеђе",
+      "type": "official",
+      "url": "https://www.budapestinfo.hu/",
+      "scope": "Локација; нема праве Теслине AR битке.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_CENTRAL",
+      "title": "Centrál — историјат и књижевници",
+      "type": "institutional",
+      "url": "https://centralgrandcafe.hu/kavehaz-tortenelme/",
+      "scope": "1887; документовано књижевно окупљање. Реплике Овсата, Каринтија, Костолањија и Кафке су измишљене.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_TEKELIJANUM",
+      "title": "Српски институт — Текелијанум",
+      "type": "institutional",
+      "url": "https://srpskiinstitut.hu/текелијанум/",
+      "scope": "Установа 1838; данашња зграда 1907–1908.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_VITKOVICS_SALON",
+      "title": "Витковићев салон, пештански Срби",
+      "type": "historical_secondary",
+      "url": "https://hszanto.com/hercegszanto/publicisztika/bacher-ivan/bacher-ivan-helyek/1992-07-11-pesti-szerbek-temploma/",
+      "scope": "Локалитет Veres Pálné 36; фикционално чланство у Кругу.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_TABAN_OSZK",
+      "title": "OSZK — Табански српски храм",
+      "type": "institutional",
+      "url": "https://nemzetikonyvtar.blog.hu/2019/03/07/pillantas_a_tabanra_az_eltunt_racvaros_emlekezete_nemzeti_konyvtarunkbol_nezve",
+      "scope": "Црква Св. Димитрија, рушење 1949, улога Јована Витковића и иконостас; није геодетски план.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_TABAN_BTM",
+      "title": "Будимпештански историјски музеј / историјско место",
+      "type": "institutional",
+      "url": "https://service-einfoszab.budapest.hu/api/dvd/146836",
+      "scope": "Историјско место/извори, координате и габарит тек треба теренски и архивски верификовати.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_PACIC",
+      "title": "Јован Пачић — биографија и акварели ношњи",
+      "type": "historical_secondary",
+      "url": "https://www.kcns.org.rs/agora/novi-sad-od-pocetka-xix-veka-pa-do-bune/",
+      "scope": "Сликар народних ношњи, не историјски шифрар.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_GOLDEN_STAG",
+      "title": "Златни јелен и Пачић",
+      "type": "historical_secondary",
+      "url": "https://kulturpart.hu/2018/11/13/a_taban_titkai",
+      "scope": "Зграда и повезаност Пачића, не тајно друштво.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_KUD_TABAN",
+      "title": "КУД Табан — о друштву",
+      "type": "institutional",
+      "url": "https://www.kudtaban.hu/sr/",
+      "scope": "Савремено живо преношење традиције, друштво основано 1994; није потврда древне шифре.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_USER_PHOTO",
+      "title": "Корисникова референтна фотографија табанског храма",
+      "type": "user_supplied",
+      "url": null,
+      "scope": "Не потврђује скривене стране, размеру и права за јавну дистрибуцију.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    },
+    {
+      "id": "SRC_ARCORE",
+      "title": "ARCore Geospatial / Depth документација",
+      "type": "official",
+      "url": "https://developers.google.com/ar/develop/geospatial",
+      "scope": "Видиковац, AR сидра, VPS и мерење остају непроверени.",
+      "reviewStatus": "editorial_reference",
+      "checkedAt": "2026-10-09",
+      "mediaRights": "not_granted_by_citation"
+    }
+  ]
+}

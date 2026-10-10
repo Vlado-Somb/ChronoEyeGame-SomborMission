@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "2.0.0-budapest-draft.1",
+  "baseSchemaVersion": "1.1.0",
+  "contentVersion": "2.0.0-draft.1",
+  "gameId": "chrono-eye-budapest",
+  "name": "Град који није пристао да нестане",
+  "language": "sr-Cyrl",
+  "runtimeTargets": [
+    "web",
+    "android",
+    "arcore"
+  ],
+  "reviewStatus": "accepted_for_design",
+  "editorialStatus": "screenplay_package_ready_for_fine_tuning",
+  "runtimeStatus": "not_integrated",
+  "releaseStatus": "blocked_assets_geo_device_integration",
+  "narrativeCanon": "../v1/narrative/STORY_BIBLE.md",
+  "legacyContentVersion": "../v1/manifest.json",
+  "automaticLegacyProgressMigration": false,
+  "requiredCapabilities": [
+    "budapest_scene_flow_v2",
+    "dialogue_sequence_id_v2",
+    "evidence_mapping_v1",
+    "manual_arrival_v1",
+    "branch_choice_v1",
+    "safe_navigation_cues_v1",
+    "captions_and_skip_summary_v1"
+  ],
+  "missions": [
+    {
+      "id": "budapest-act-0",
+      "path": "missions/act-0.json",
+      "primaryWaypointId": "BP_START",
+      "prerequisiteMissionIds": []
+    },
+    {
+      "id": "budapest-act-1",
+      "path": "missions/act-1.json",
+      "primaryWaypointId": "BP_EMBASSY",
+      "prerequisiteMissionIds": [
+        "budapest-act-0"
+      ]
+    },
+    {
+      "id": "budapest-act-2",
+      "path": "missions/act-2.json",
+      "primaryWaypointId": "BP_HEROES",
+      "prerequisiteMissionIds": [
+        "budapest-act-1"
+      ]
+    },
+    {
+      "id": "budapest-act-3",
+      "path": "missions/act-3.json",
+      "primaryWaypointId": "BP_CENTRAL",
+      "prerequisiteMissionIds": [
+        "budapest-act-2"
+      ]
+    },
+    {
+      "id": "budapest-act-4",
+      "path": "missions/act-4.json",
+      "primaryWaypointId": "BP_TEKELIJANUM",
+      "prerequisiteMissionIds": [
+        "budapest-act-3"
+      ]
+    },
+    {
+      "id": "budapest-act-5",
+      "path": "missions/act-5.json",
+      "primaryWaypointId": "BP_GOLDEN_STAG",
+      "prerequisiteMissionIds": [
+        "budapest-act-4"
+      ]
+    },
+    {
+      "id": "budapest-act-6",
+      "path": "missions/act-6.json",
+      "primaryWaypointId": "BP_GELLERT_VIEW",
+      "prerequisiteMissionIds": [
+        "budapest-act-5"
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "id": "BP2_DIALOGUE_0",
+      "path": "dialogues/act-0.json"
+    },
+    {
+      "id": "BP2_DIALOGUE_1",
+      "path": "dialogues/act-1.json"
+    },
+    {
+      "id": "BP2_DIALOGUE_2",
+      "path": "dialogues/act-2.json"
+    },
+    {
+      "id": "BP2_DIALOGUE_3",
+      "path": "dialogues/act-3.json"
+    },
+    {
+      "id": "BP2_DIALOGUE_4",
+      "path": "dialogues/act-4.json"
+    },
+    {
+      "id": "BP2_DIALOGUE_5",
+      "path": "dialogues/act-5.json"
+    },
+    {
+      "id": "BP2_DIALOGUE_6",
+      "path": "dialogues/act-6.json"
+    }
+  ],
+  "waypoints": "waypoints.json",
+  "hints": "hints.json",
+  "timeline": "timeline.json",
+  "triggers": "triggers.json",
+  "mechanics": "mechanics.json",
+  "sources": "sources.json",
+  "evidence": "evidence.json",
+  "signals": "signals.json",
+  "assets": "assets/index.json",
+  "media": "media/cues.json",
+  "systems": {
+    "characters": "systems/characters.json",
+    "collectibles": "systems/collectibles.json",
+    "album": "systems/album.json"
+  },
+  "productionPackages": [
+    {
+      "id": "BP2_A0_PRODUCTION",
+      "missionId": "budapest-act-0",
+      "brief": "production/act-0/PRODUCTION_BRIEF.md",
+      "scene": "production/act-0/scene-flow.json",
+      "assets": "production/act-0/asset-manifest.json",
+      "qa": "production/act-0/QA_CHECKLIST.md"
+    },
+    {
+      "id": "BP2_A1_PRODUCTION",
+      "missionId": "budapest-act-1",
+      "brief": "production/act-1/PRODUCTION_BRIEF.md",
+      "scene": "production/act-1/scene-flow.json",
+      "assets": "production/act-1/asset-manifest.json",
+      "qa": "production/act-1/QA_CHECKLIST.md"
+    },
+    {
+      "id": "BP2_A2_PRODUCTION",
+      "missionId": "budapest-act-2",
+      "brief": "production/act-2/PRODUCTION_BRIEF.md",
+      "scene": "production/act-2/scene-flow.json",
+      "assets": "production/act-2/asset-manifest.json",
+      "qa": "production/act-2/QA_CHECKLIST.md"
+    },
+    {
+      "id": "BP2_A3_PRODUCTION",
+      "missionId": "budapest-act-3",
+      "brief": "production/act-3/PRODUCTION_BRIEF.md",
+      "scene": "production/act-3/scene-flow.json",
+      "assets": "production/act-3/asset-manifest.json",
+      "qa": "production/act-3/QA_CHECKLIST.md"
+    },
+    {
+      "id": "BP2_A4_PRODUCTION",
+      "missionId": "budapest-act-4",
+      "brief": "production/act-4/PRODUCTION_BRIEF.md",
+      "scene": "production/act-4/scene-flow.json",
+      "assets": "production/act-4/asset-manifest.json",
+      "qa": "production/act-4/QA_CHECKLIST.md"
+    },
+    {
+      "id": "BP2_A5_PRODUCTION",
+      "missionId": "budapest-act-5",
+      "brief": "production/act-5/PRODUCTION_BRIEF.md",
+      "scene": "production/act-5/scene-flow.json",
+      "assets": "production/act-5/asset-manifest.json",
+      "qa": "production/act-5/QA_CHECKLIST.md"
+    },
+    {
+      "id": "BP2_A6_PRODUCTION",
+      "missionId": "budapest-act-6",
+      "brief": "production/act-6/PRODUCTION_BRIEF.md",
+      "scene": "production/act-6/scene-flow.json",
+      "assets": "production/act-6/asset-manifest.json",
+      "qa": "production/act-6/QA_CHECKLIST.md"
+    }
+  ],
+  "contentInventory": {
+    "acts": 7,
+    "prologueIncluded": true,
+    "tasks": 21,
+    "arInteractions": 7,
+    "dialogueScenes": 48,
+    "dialogueLines": 375,
+    "hints": 21,
+    "relics": 7,
+    "waypoints": 11,
+    "assetsPlanned": 13,
+    "sourceEntries": 13
+  },
+  "releaseNote": "This package is editorial and static QA only; no GLB/OGG binaries, geo anchors, runtime adapter or device tests are certified."
+}

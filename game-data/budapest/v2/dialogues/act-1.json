@@ -1,0 +1,602 @@
+{
+  "id": "BP2_DIALOGUE_1",
+  "language": "sr-Cyrl",
+  "status": "accepted_for_design_not_recorded",
+  "authoringSource": "screenplay/act-1.txt",
+  "scenes": [
+    {
+      "id": "BP2_D1_arrival",
+      "act": 1,
+      "slug": "arrival",
+      "title": "Писмо без коверте",
+      "location": "Амбасада Републике Србије — јавна зона",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-1.txt",
+      "lines": [
+        {
+          "id": "BP2_D1_arrival_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Станица један: дипломатска преписка. Наш систем је реконструисао један глас из архивских записа.",
+          "subtitle": "Станица један: дипломатска преписка. Наш систем је реконструисао један глас из архивских записа.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_arrival_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Реконструисао или пронашао?",
+          "subtitle": "Реконструисао или пронашао?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_arrival_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "За туристички доживљај разлика је најчешће небитна.",
+          "subtitle": "За туристички доживљај разлика је најчешће небитна.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_arrival_L04",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "За писмо је то најважнија разлика.",
+          "subtitle": "За писмо је то најважнија разлика.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_arrival_L05",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Наравно да писмо има потпис. Свако уме да потпише и туђу реченицу.",
+          "subtitle": "Наравно да писмо има потпис. Свако уме да потпише и туђу реченицу.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_arrival_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "А ви сте Јован Дучић?",
+          "subtitle": "А ви сте Јован Дучић?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_arrival_L07",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Ово је прича начињена од онога што је остало од мог имена. Не дај јој више сигурности него што заслужује.",
+          "subtitle": "Ово је прича начињена од онога што је остало од мог имена. Не дај јој више сигурности него што заслужује.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D1_arrival_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D1_arrival_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_arrival_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_arrival_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_arrival_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_arrival_L04"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D1_arrival_ST02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_arrival_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_arrival_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_arrival_L07"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D1_arrival_ST01",
+          "text": "Службена фасада остаје стварна и чиста. На приватном екрану отвара се виртуелни сто са писмом, не лажни натпис на објекту."
+        },
+        {
+          "id": "BP2_D1_arrival_ST02",
+          "text": "Дучићев ехо није патетичан. Једном руком држи коверат, али на столу нема адресе."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D1_arrival_CU01",
+          "kind": "ambience",
+          "direction": "Градски саобраћај, лишће; један врло танак акустички траг мастила по папиру.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D1_poem",
+      "act": 1,
+      "slug": "poem",
+      "title": "Стих на маргини",
+      "location": "архивски виртуелни сто",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-1.txt",
+      "lines": [
+        {
+          "id": "BP2_D1_poem_L01",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "На камену остаје име. На листу остане траг.",
+          "subtitle": "На камену остаје име. На листу остане траг.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_poem_L02",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "А коме носиш памћење када изгуби последњи праг?",
+          "subtitle": "А коме носиш памћење када изгуби последњи праг?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_poem_L03",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Потражи оног ко чује и тишину међу три гласа.",
+          "subtitle": "Потражи оног ко чује и тишину међу три гласа.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_poem_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Три гласа? Мислите ли на сведоке?",
+          "subtitle": "Три гласа? Мислите ли на сведоке?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_poem_L05",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Или на три начина да нико не остане сам.",
+          "subtitle": "Или на три начина да нико не остане сам.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_poem_L06",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Пријављена песничка дигресија. Предлажем краћи садржај.",
+          "subtitle": "Пријављена песничка дигресија. Предлажем краћи садржај.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_poem_L07",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Некад и празна маргина каже више него резиме.",
+          "subtitle": "Некад и празна маргина каже више него резиме.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D1_poem_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D1_poem_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_poem_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_poem_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_poem_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_poem_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_poem_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_poem_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_poem_L07"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D1_poem_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D1_poem_ST01",
+          "text": "Ауторска, новонаписана тростиха строфа прелази преко маргине. Није Дучићев стварни стих. На екрану стоји „ДРАМАТИЗАЦИЈА“."
+        },
+        {
+          "id": "BP2_D1_poem_ST02",
+          "text": "Трећи стих се помера на десну маргину; остаје једна очигледна празна линија. Предигра за „треће начело“, не решавати сада."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D1_poem_CU01",
+          "kind": "recitation",
+          "direction": "Тих, сув мушки глас, без музичке подлоге до завршне паузе.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D1_evidence",
+      "act": 1,
+      "slug": "evidence",
+      "title": "Једна реченица — два порекла",
+      "location": "виртуелне архивске картице",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-1.txt",
+      "lines": [
+        {
+          "id": "BP2_D1_evidence_L01",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "У два записа је исти текст.",
+          "subtitle": "У два записа је исти текст.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_evidence_L02",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Одлично. Сад нам треба нешто што није исто.",
+          "subtitle": "Одлично. Сад нам треба нешто што није исто.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_evidence_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Верзија А је јаснија. Препоручујем оптимизовани документ.",
+          "subtitle": "Верзија А је јаснија. Препоручујем оптимизовани документ.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_evidence_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Верзија Б има време, извор и ланац преписа.",
+          "subtitle": "Верзија Б има време, извор и ланац преписа.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_evidence_L05",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Онда је она почетак истраживања, не крај.",
+          "subtitle": "Онда је она почетак истраживања, не крај.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_evidence_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Могу ли да задржим обе?",
+          "subtitle": "Могу ли да задржим обе?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_evidence_L07",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Мораш. У другој је можда скривена намера онога ко је преписивао.",
+          "subtitle": "Мораш. У другој је можда скривена намера онога ко је преписивао.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D1_evidence_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_evidence_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_evidence_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_evidence_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_evidence_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_evidence_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_evidence_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_evidence_L07"
+        },
+        {
+          "type": "beat",
+          "id": "BP2_D1_evidence_BE01"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D1_evidence_ST01",
+          "text": "Два документа носе исту фикционалну реченицу; један има јасно означено порекло, други само потпис. Ни један се не представља као стварни изгубљени Дучићев рукопис."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": [
+        {
+          "id": "BP2_D1_evidence_BE01",
+          "kind": "EVIDENCE",
+          "instruction": "Сачувај обе картице; обележи изворно поткрепљену, поређење не сме бити аутоматска истинитост."
+        }
+      ]
+    },
+    {
+      "id": "BP2_D1_interruption",
+      "act": 1,
+      "slug": "interruption",
+      "title": "Први човек из шума",
+      "location": "приближавање електричног сигнала",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-1.txt",
+      "lines": [
+        {
+          "id": "BP2_D1_interruption_L01",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Не шаљи… онима који…",
+          "subtitle": "Не шаљи… онима који…",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_interruption_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Чујем други глас.",
+          "subtitle": "Чујем други глас.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_interruption_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Синхронизација успела. Неповезани аудио-фрагмент није део мисије.",
+          "subtitle": "Синхронизација успела. Неповезани аудио-фрагмент није део мисије.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_interruption_L04",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Кад један глас надјача све остале, престајеш да слушаш.",
+          "subtitle": "Кад један глас надјача све остале, престајеш да слушаш.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_interruption_L05",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Узми… оно што не могу… да исправе.",
+          "subtitle": "Узми… оно што не могу… да исправе.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_interruption_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ко сте ви?",
+          "subtitle": "Ко сте ви?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_interruption_L07",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "На тргу… светлије је…",
+          "subtitle": "На тргу… светлије је…",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_interruption_L08",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Следећа станица: Трг хероја. Систем препоручује да не покушавате да дешифрујете сметње.",
+          "subtitle": "Следећа станица: Трг хероја. Систем препоручује да не покушавате да дешифрујете сметње.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_interruption_L09",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Ја бих урадио баш супротно. Али не жури. Однеси маргину.",
+          "subtitle": "Ја бих урадио баш супротно. Али не жури. Однеси маргину.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "cue",
+          "id": "BP2_D1_interruption_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_interruption_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_interruption_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_interruption_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_interruption_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_interruption_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_interruption_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_interruption_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_interruption_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_interruption_L09"
+        }
+      ],
+      "stageDirections": [],
+      "mediaCues": [
+        {
+          "id": "BP2_D1_interruption_CU01",
+          "kind": "motif",
+          "direction": "Три кратка импулса у паузама између нових ауторских стихова; последњи садржи врло слаб четврти одјек.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D1_departure",
+      "act": 1,
+      "slug": "departure",
+      "title": "Писмо које још није послато",
+      "location": "завршни кадар",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-1.txt",
+      "lines": [
+        {
+          "id": "BP2_D1_departure_L01",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Коме је ово писмо упућено?",
+          "subtitle": "Коме је ово писмо упућено?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_departure_L02",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Не ономе који уме да га прочита.",
+          "subtitle": "Не ономе који уме да га прочита.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_departure_L03",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Него?",
+          "subtitle": "Него?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D1_departure_L04",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Ономе који ће га једном послати.",
+          "subtitle": "Ономе који ће га једном послати.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D1_departure_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_departure_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_departure_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_departure_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D1_departure_L04"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D1_departure_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D1_departure_ST01",
+          "text": "Дучић се не претвара у експлозију. Преклопи коверат, благо приближи три врха прста испод стола — знак је једва видљив и играч га НЕ МОРА уочити за пролаз."
+        },
+        {
+          "id": "BP2_D1_departure_ST02",
+          "text": "Сигнал за одлазак. Та реплика добија пуно значење тек у VI акту, временска петља A+V. Не објашњавати прерано."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": []
+    }
+  ]
+}
