@@ -76,3 +76,31 @@
 - Доказ конфигурације / TEST-...:
 - Rollback / деактивација:
 ```
+
+
+## Инцидент: наслеђени Unity Google кључеви (2026-10-09)
+
+- **Сервиси / извор:** Legacy Unity `ARCoreExtensionsProjectSettings.json` и сцене са URL-ом `tile.googleapis.com/v1/3dtiles`.
+- **Проверено у Git-у:** два различита кључа пронађена у шест текстуалних фајлова јавне `main` гране; припремљено чишћење у `fix/google-api-key-exposure-20261009`. Не објављивати стварне вредности.
+- **Google Cloud статус:** `not_configured` за НОВУ CHRONO EYE платформу и **unverified** за nasleđeni Unity credential-e. Присуство кључева у репозиторијуму не доказује да су активни, исправно ограничени нити да их је неко злоупотребио.
+- **Безбедносни статус:** `remediation_pending` — власник мора ротирати/опозвати оба изложена кључа и проверити usage, API ограничења и обрачун. Стари комитови/гране и APK остају предмет засебне контроле.
+- **Одлука:** `DEC-SEC-2026-001`; поступак и контролна листа: `docs/security/GOOGLE_API_KEY_INCIDENT_2026-10-09.md`.
+- **Нови credential модел:** посебна Android ARCore ауторизација (где је применљиво Keyless OAuth), одвојена Map Tiles HTTP/backend стратегија, одвојен restricted browser Maps кључ ако буде потребан. Ништа не сматрати тестираним пре праве конфигурације и тестова.
+
+
+## Recovery audit — 2026-10-09 (DEC-SEC-2026-002)
+
+| Item | Verified repository state | Cloud state |
+|---|---|---|
+| Cloud projects / billing / OAuth clients | No authoritative Cloud inventory available | `unverified`; Project IDs intentionally not invented |
+| Legacy Unity ARCore + Map Tiles | Two exposed Google values in six files on 27 of 28 reviewed branch heads; PR #19 clears source values | Revocation, restrictions and usage unknown |
+| Legacy Cesium ion | Two token values in three serialized locations; cleared in updated security PR with owner authorization | Account scopes and revocation unknown; separate provider |
+| Native AR Lab v0.4.1 | `rs.chronoeye.prototype`, versionCode 5, ARCore 1.56.0; reviewed manifest has no Cloud key, INTERNET or location permission | Local AR/depth source reviewed; Geospatial/Keyless not configured or tested |
+| Android Host | `android-host/` on feature/android-host-session-20261009 is candidate source, no independent applicationId or signed APK | Integration pending |
+| Web Maps | `web/maps/config.js` on feature/chronoeye-web-maps-package-20261009 has empty googleMapsApiKey; coordinate-only fallback | Domain/referrer and Maps JavaScript activation unverified |
+
+Signing SHA-1 values must be read from the actual distributed APK/signing certificate; do not infer them from package name or generate a new identity accidentally. The source namespaces differ from applicationId; use `rs.chronoeye.prototype` for the reviewed prototype's Android client. Production applicationId is not yet selected.
+
+Recovery configuration and proposed spending controls: [Cloud recovery](../security/CLOUD_RECOVERY_2026-10-09.md). All proposed restrictions remain **not applied**, not `configured` or `verified`.
+
+- **Expanded CI addendum:** full-checkout scan found `UserSettings/CesiumIonServerManager.asset`. Total confirmed Cesium source exposure is **three distinct JWTs in four locations** (supersedes the earlier two-token/three-location count). Remove the tracked editor-session file; keep all provider revocation states unverified. Source CI run `37989345627` correctly failed before this follow-up containment.

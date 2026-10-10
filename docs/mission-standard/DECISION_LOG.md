@@ -155,3 +155,28 @@
 - **Границе:** име репозиторијума и Unity путање остају; apps/android, apps/web и packages/engine су циљна структура за каснију миграцију, не већ премештен код. Независни ноћни PR-ови остају нетакнути.
 - **Издавање:** развојно/оперативно раздвајање и безбедносне/release провере су засебан посао пре јавног лансирања, како је власник затражио.
 - **Компатибилност:** нема промене шеме, сервиса, runtime-а или миграције player state-а овом организационом одлуком.
+
+
+### DEC-SEC-2026-001 — Google API key exposure in legacy Unity source
+- **Датум:** 2026-10-09; **Статус:** `accepted_for_design` за изолацију credential-а; **Cloud remediation:** `not_configured` / непотврђена.
+- **Инцидент:** GitGuardian упозорење за јавни репозиторијум, најмање два различита Google API кључа у шест текстуалних Unity датотека (`main`); изложене вредности не понављати у документима.
+- **Одлука:** у посебној грани очистити Unity сцене и ARCore Extensions settings; додати preventivni CI scan за тренутне текстуалне фајлове. Не мешати са новом Web + Android + ARCore имплементацијом и не радити force-push промене историје у оквиру хитне исправке.
+- **Граница:** поправка source tree није ротација кључа; ранији комитови, остале гране и APK/артефакти могу и даље носити вредности.
+- **Зависност:** власник Google Cloud налога мора опозвати/ротирати оба кључа, проверити ограничења и billing, па одобрити засебну конфигурацију за ARCore/Map Tiles. Ни Cloud подешавања, ни API активације, ни billing нису промењени овом одлуком.
+- **Последица:** legacy Unity Geospatial/3D Tiles функције могу бити нефункционалне до безбедног увођења ограничених credential-а; теренски и build тест нису обављени.
+- **Доказ и поступак:** `docs/security/GOOGLE_API_KEY_INCIDENT_2026-10-09.md`. Затварање инцидента после Cloud потврде, контроле branches/artefacts и регресионих тестова.
+
+
+### DEC-SEC-2026-002 — Recovery audit and legacy Cesium containment
+- **Date:** 2026-10-09; **Status:** `accepted_for_design` for source containment; Cloud changes blocked/unverified.
+- **Authorization:** owner explicitly allowed removal of legacy Unity/Cesium credentials; future legacy use will be reconfigured.
+- **Change:** clear three serialized Cesium token occurrences (two distinct token values), extend source CI beyond Google keys to JWT/private-key patterns and previously skipped text filenames. Preserve scenes and projects.
+- **Evidence:** targeted eight-path comparison of 28 remote branch heads; both Google keys remain in the six affected files on the other 27 heads, including main. PR #19 originally removed only Google keys.
+- **Cloud boundary:** Cloud Browser returned Site Unavailable twice; no signed-in console observed. Project IDs, IAM, credential validity/revocation, usage, abuse, billing and quotas remain unknown. No Cloud or Cesium account changes.
+- **Integration:** keep PR #19 draft until review; no force-push, history rewrite or unrelated branch merge. Update stale branches from the reviewed security fix before future merges and run the source check on every resulting tree.
+- **Legacy consequence:** old Unity cloud/Cesium rendering requires fresh restricted configuration. New native local-depth prototype is separate; no device runtime test claimed.
+- **Recovery proposal / gates:** see `docs/security/CLOUD_RECOVERY_2026-10-09.md`. Cost-bearing activation and destructive actions still need the owner's concrete approval.
+
+- **Binary containment addendum:** byte inspection found a JWT in the obsolete tracked legacy APK. Remove that repository file from this review branch; preserve source, history and installed applications. No claim of nested Unity binary clearance.
+
+- **Expanded CI addendum:** full-checkout scan found `UserSettings/CesiumIonServerManager.asset`. Total confirmed Cesium source exposure is **three distinct JWTs in four locations** (supersedes the earlier two-token/three-location count). Remove the tracked editor-session file; keep all provider revocation states unverified. Source CI run `37989345627` correctly failed before this follow-up containment.

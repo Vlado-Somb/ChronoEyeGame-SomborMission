@@ -8352,7 +8352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showCreditsOnScreen: 1
   _tilesetSource: 0
-  _url: https://tile.googleapis.com/v1/3dtiles/root.json?key=AIzaSyBRh5TQhZ2ESQqWz4N_MyTGjJ6Tu9auZEM
+  _url: https://tile.googleapis.com/v1/3dtiles/root.json?key=CONFIGURE_RESTRICTED_MAP_TILES_API_KEY
   _ionAssetID: 2275207
   _ionAccessToken: 
   _ionServer: {fileID: 11400000, guid: fdbc6525dc52e4f438f100d1aa8d86f7, type: 2}

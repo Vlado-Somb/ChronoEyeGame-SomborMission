@@ -1,0 +1,17 @@
+name: Check committed Google API keys
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check-google-api-keys:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current source tree
+        uses: actions/checkout@v4
+      - name: Detect committed API keys (redacted output)
+        run: python3 scripts/check_google_api_keys.py
