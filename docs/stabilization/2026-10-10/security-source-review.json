@@ -1,0 +1,62 @@
+[
+  {
+    "ref": "origin/main",
+    "scope": "Known PR19 credential-bearing source paths only; no binaries/history/provider verification",
+    "distinctGoogle": 2,
+    "distinctJWT": 3,
+    "files": [
+      {
+        "path": "Assets/CesiumSettings/Resources/CesiumIonServers/ion.cesium.com.asset",
+        "google": 0,
+        "jwt": 1
+      },
+      {
+        "path": "Assets/CesiumSettings/Resources/CesiumRuntimeSettings.asset",
+        "google": 0,
+        "jwt": 1
+      },
+      {
+        "path": "Assets/MATERIJALI/6. Scene Acts/3_ACT0_Embassy 1.unity",
+        "google": 1,
+        "jwt": 1
+      },
+      {
+        "path": "Assets/MATERIJALI/6. Scene Acts/3_ACT0_Embassy.unity",
+        "google": 1,
+        "jwt": 0
+      },
+      {
+        "path": "Assets/MATERIJALI/6. Scene Acts/GeospatialArf6 1.unity",
+        "google": 1,
+        "jwt": 0
+      },
+      {
+        "path": "Assets/MATERIJALI/6. Scene Acts/Test.unity",
+        "google": 1,
+        "jwt": 0
+      },
+      {
+        "path": "Assets/MATERIJALI/7. SYSTEMS/GEOSPATIAL ORIGIN+ANCHORS.prefab",
+        "google": 1,
+        "jwt": 0
+      },
+      {
+        "path": "ProjectSettings/ARCoreExtensionsProjectSettings.json",
+        "google": 1,
+        "jwt": 0
+      },
+      {
+        "path": "UserSettings/CesiumIonServerManager.asset",
+        "google": 0,
+        "jwt": 1
+      }
+    ]
+  },
+  {
+    "ref": "origin/fix/google-api-key-exposure-20261009",
+    "scope": "Known PR19 credential-bearing source paths only; no binaries/history/provider verification",
+    "distinctGoogle": 0,
+    "distinctJWT": 0,
+    "files": []
+  }
+]
