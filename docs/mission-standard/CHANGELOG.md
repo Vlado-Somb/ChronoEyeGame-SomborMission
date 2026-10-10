@@ -55,3 +55,8 @@
 ## Организација репозиторијума — 2026-10-09
 - DEC-REPO-2026-001: одобрени један репозиторијум и заједничка апликација са одвојеним пакетима градова; привремене радне гране и PR ток.
 - Додат REPOSITORY_STRUCTURE.md и везе из смерница. Без премештања прототипова, измене workflow-а или активирања продукције.
+
+## 2026-10-10 — Repository stabilization preparation
+- Add PR/branch/CI snapshot and private Unity archive inventory/verification procedure.
+- Record accepted phase boundaries in DEC-STAB-2026-001. No main merge, runtime implementation, provider configuration or archive-completion claim.
+- Budapest content and editor candidates are separate local review branches; their checks do not constitute remote CI or device verification.

@@ -1,0 +1,343 @@
+[
+  {
+    "branch": "origin/chronoeye/ar-depth-v4-20261009",
+    "sha": "b6763e040db6e9ba2c3bff492005aaf26a9b4a99",
+    "containedIn": [],
+    "aheadBehind": "4\t10"
+  },
+  {
+    "branch": "origin/chronoeye/ar-diagnostics-20261009",
+    "sha": "bc1f9acb23e1bdcfb2da23f2a38074b7aa639226",
+    "containedIn": [
+      "origin/chronoeye/ar-depth-v4-20261009",
+      "origin/chronoeye/ar-diagnostics-touch-20261009"
+    ],
+    "aheadBehind": "4\t7"
+  },
+  {
+    "branch": "origin/chronoeye/ar-diagnostics-touch-20261009",
+    "sha": "dc3b1456df143b532b99089fbd5a3a2656f8479e",
+    "containedIn": [
+      "origin/chronoeye/ar-depth-v4-20261009"
+    ],
+    "aheadBehind": "4\t8"
+  },
+  {
+    "branch": "origin/chronoeye/native-ar-prototype",
+    "sha": "0fef5c989e0e7a79c03dd4e5a5433fb452edaece",
+    "containedIn": [
+      "origin/chronoeye/ar-depth-v4-20261009",
+      "origin/chronoeye/ar-diagnostics-20261009",
+      "origin/chronoeye/ar-diagnostics-touch-20261009"
+    ],
+    "aheadBehind": "4\t4"
+  },
+  {
+    "branch": "origin/content/budapest-narrative-20261009",
+    "sha": "9b499f98dd60805ec0e98471f73ca942ad7f33b6",
+    "containedIn": [],
+    "aheadBehind": "2\t16"
+  },
+  {
+    "branch": "origin/content/budapest-screenplay-v2-20261009",
+    "sha": "c96c712ecf3e515e68f6695d25f070d5af7b9c11",
+    "containedIn": [
+      "origin/content/budapest-v2-editorial-finalization-20261009",
+      "origin/tooling/budapest-editor-integration-20261010",
+      "origin/tooling/budapest-editor-integration-fix-20261010",
+      "origin/tooling/budapest-editor-integration-save-gate-20261010",
+      "origin/tooling/budapest-editor-save-restore-20261010",
+      "origin/tooling/budapest-local-editor-20261010"
+    ],
+    "aheadBehind": "1\t51"
+  },
+  {
+    "branch": "origin/content/budapest-v2-editorial-finalization-20261009",
+    "sha": "418a205fa357c4e9013ebde2d92a03adcdc8bccc",
+    "containedIn": [
+      "origin/tooling/budapest-editor-integration-20261010",
+      "origin/tooling/budapest-editor-integration-fix-20261010",
+      "origin/tooling/budapest-editor-integration-save-gate-20261010",
+      "origin/tooling/budapest-editor-save-restore-20261010",
+      "origin/tooling/budapest-local-editor-20261010"
+    ],
+    "aheadBehind": "1\t59"
+  },
+  {
+    "branch": "origin/content/editor-backend-integration-20261009",
+    "sha": "1a35ca4e28122dc2016d79130a2f0ebaa8dade9b",
+    "containedIn": [
+      "origin/feature/sombor-editor-v02-20261010"
+    ],
+    "aheadBehind": "4\t179"
+  },
+  {
+    "branch": "origin/content/ernest-bosnjak-production-20261009-0900",
+    "sha": "7d778e6ac2867054c020d04c4c6fed6c68796047",
+    "containedIn": [
+      "origin/content/editor-backend-integration-20261009",
+      "origin/content/gms-production-20261009-1500",
+      "origin/content/laza-kostic-production-20261009",
+      "origin/content/sombor-integration-qa-20261009",
+      "origin/feature/sombor-editor-backend-20261009",
+      "origin/feature/sombor-editor-v02-20261010"
+    ],
+    "aheadBehind": "4\t120"
+  },
+  {
+    "branch": "origin/content/gms-production-20261009-1500",
+    "sha": "e3c292ecaf93ba321285ebe1436f4f2a1a164bcb",
+    "containedIn": [
+      "origin/content/editor-backend-integration-20261009",
+      "origin/content/laza-kostic-production-20261009",
+      "origin/content/sombor-integration-qa-20261009",
+      "origin/feature/sombor-editor-backend-20261009",
+      "origin/feature/sombor-editor-v02-20261010"
+    ],
+    "aheadBehind": "4\t168"
+  },
+  {
+    "branch": "origin/content/laza-kostic-production-20261009",
+    "sha": "be48f08849ca718dd85e1a8a7269e851201d04ad",
+    "containedIn": [
+      "origin/content/editor-backend-integration-20261009",
+      "origin/content/sombor-integration-qa-20261009",
+      "origin/feature/sombor-editor-backend-20261009",
+      "origin/feature/sombor-editor-v02-20261010"
+    ],
+    "aheadBehind": "4\t177"
+  },
+  {
+    "branch": "origin/content/nps-production-20261009-0300",
+    "sha": "9caa77f817b14e5e285ccda09d87a3823dd858ed",
+    "containedIn": [
+      "origin/content/editor-backend-integration-20261009",
+      "origin/content/ernest-bosnjak-production-20261009-0900",
+      "origin/content/gms-production-20261009-1500",
+      "origin/content/laza-kostic-production-20261009",
+      "origin/content/revision-zup-psm-20261009",
+      "origin/content/sombor-integration-qa-20261009",
+      "origin/content/vp-production-20261009-0400",
+      "origin/content/zup-production-20261009-0500",
+      "origin/feature/sombor-editor-backend-20261009",
+      "origin/feature/sombor-editor-v02-20261010"
+    ],
+    "aheadBehind": "4\t75"
+  },
+  {
+    "branch": "origin/content/revision-zup-psm-20261009",
+    "sha": "d5aed718d83fa6cd2b39cd4f892ab59cb5c8af06",
+    "containedIn": [
+      "origin/content/editor-backend-integration-20261009",
+      "origin/content/ernest-bosnjak-production-20261009-0900",
+      "origin/content/gms-production-20261009-1500",
+      "origin/content/laza-kostic-production-20261009",
+      "origin/content/sombor-integration-qa-20261009",
+      "origin/feature/sombor-editor-backend-20261009",
+      "origin/feature/sombor-editor-v02-20261010"
+    ],
+    "aheadBehind": "4\t91"
+  },
+  {
+    "branch": "origin/content/sombor-integration-qa-20261009",
+    "sha": "7098e83c4ccaa0e47ca4ec4d592c45e75a3d93d2",
+    "containedIn": [
+      "origin/content/editor-backend-integration-20261009",
+      "origin/feature/sombor-editor-backend-20261009",
+      "origin/feature/sombor-editor-v02-20261010"
+    ],
+    "aheadBehind": "4\t178"
+  },
+  {
+    "branch": "origin/content/sombor-portable-game-data-20261008",
+    "sha": "aa74a2bc64b55ae8c90896eb7019c22e6987c3a5",
+    "containedIn": [
+      "origin/content/editor-backend-integration-20261009",
+      "origin/content/ernest-bosnjak-production-20261009-0900",
+      "origin/content/gms-production-20261009-1500",
+      "origin/content/laza-kostic-production-20261009",
+      "origin/content/nps-production-20261009-0300",
+      "origin/content/revision-zup-psm-20261009",
+      "origin/content/sombor-integration-qa-20261009",
+      "origin/content/vp-production-20261009-0400",
+      "origin/content/zup-production-20261009-0500",
+      "origin/feature/sombor-editor-backend-20261009",
+      "origin/feature/sombor-editor-v02-20261010",
+      "origin/production/muzej-podunavskih-svaba-20261009"
+    ],
+    "aheadBehind": "4\t53"
+  },
+  {
+    "branch": "origin/content/vp-production-20261009-0400",
+    "sha": "71d52a1397b5ad2cc2877d508ea708fef0696ed1",
+    "containedIn": [
+      "origin/content/editor-backend-integration-20261009",
+      "origin/content/ernest-bosnjak-production-20261009-0900",
+      "origin/content/gms-production-20261009-1500",
+      "origin/content/laza-kostic-production-20261009",
+      "origin/content/revision-zup-psm-20261009",
+      "origin/content/sombor-integration-qa-20261009",
+      "origin/content/zup-production-20261009-0500",
+      "origin/feature/sombor-editor-backend-20261009",
+      "origin/feature/sombor-editor-v02-20261010"
+    ],
+    "aheadBehind": "4\t80"
+  },
+  {
+    "branch": "origin/content/zup-production-20261009-0500",
+    "sha": "d335108ec47cb83b28b09f1c39df8b08cc30d152",
+    "containedIn": [
+      "origin/content/editor-backend-integration-20261009",
+      "origin/content/ernest-bosnjak-production-20261009-0900",
+      "origin/content/gms-production-20261009-1500",
+      "origin/content/laza-kostic-production-20261009",
+      "origin/content/revision-zup-psm-20261009",
+      "origin/content/sombor-integration-qa-20261009",
+      "origin/feature/sombor-editor-backend-20261009",
+      "origin/feature/sombor-editor-v02-20261010"
+    ],
+    "aheadBehind": "4\t89"
+  },
+  {
+    "branch": "origin/docs/chrono-eye-mission-standard-v0.1",
+    "sha": "ec8079399133f772dfee7d7b5e301c7902f6b181",
+    "containedIn": [],
+    "aheadBehind": "4\t8"
+  },
+  {
+    "branch": "origin/docs/mission-standard-v0.2-production-gk",
+    "sha": "5ad5a7d99fc0b1a7901ff3383d8cee187a2f064e",
+    "containedIn": [],
+    "aheadBehind": "3\t8"
+  },
+  {
+    "branch": "origin/feature/android-host-session-20261009",
+    "sha": "1bc4bf9f1b97ae0e6dbf8366cd65ccfc9cca2cee",
+    "containedIn": [],
+    "aheadBehind": "2\t1"
+  },
+  {
+    "branch": "origin/feature/chronoeye-web-maps-package-20261009",
+    "sha": "f46b1630ef8dafa7c6b064adab42a43ef2c81bdb",
+    "containedIn": [],
+    "aheadBehind": "2\t1"
+  },
+  {
+    "branch": "origin/feature/mission-type-contract-20261010",
+    "sha": "f3ac29c9bc00c536ad8be1ba7e076ebfd9ac28bc",
+    "containedIn": [],
+    "aheadBehind": "1\t8"
+  },
+  {
+    "branch": "origin/feature/sombor-editor-backend-20261009",
+    "sha": "27861099163093f02c2b53b968a0065d6d711678",
+    "containedIn": [],
+    "aheadBehind": "4\t179"
+  },
+  {
+    "branch": "origin/feature/sombor-editor-v02-20261010",
+    "sha": "8b3ac189bad59eab5672a6dbceacdaaaff9b6aef",
+    "containedIn": [],
+    "aheadBehind": "4\t194"
+  },
+  {
+    "branch": "origin/feature/sombor-editor-v02-main-integration-20261010",
+    "sha": "25a02f685fbde2ffd681a9dd771688ccbc57e63f",
+    "containedIn": [],
+    "aheadBehind": "1\t1"
+  },
+  {
+    "branch": "origin/feature/taban-church-historical-reconstruction",
+    "sha": "d1846a636ffd1125ecc7a429cdc34e95b21ba929",
+    "containedIn": [],
+    "aheadBehind": "1\t4"
+  },
+  {
+    "branch": "origin/fix/google-api-key-exposure-20261009",
+    "sha": "97af06dc0c2650f333843fa17af22a19492296aa",
+    "containedIn": [],
+    "aheadBehind": "1\t14"
+  },
+  {
+    "branch": "origin/fix/sombor-resource-stabilization-20261008",
+    "sha": "44db83c1fae1f139a7742c6599ccabf4fe6f47dc",
+    "containedIn": [],
+    "aheadBehind": "4\t26"
+  },
+  {
+    "branch": "origin/main",
+    "sha": "814b85d19909bb07bc07b65da784acd9d05dfaaa",
+    "containedIn": [],
+    "aheadBehind": "0\t0"
+  },
+  {
+    "branch": "origin/production/milan-konjovic-genije-boja-20261008",
+    "sha": "833fd2680ce20cd1a906b092b42f292e79d16493",
+    "containedIn": [],
+    "aheadBehind": "4\t62"
+  },
+  {
+    "branch": "origin/production/muzej-podunavskih-svaba-20261009",
+    "sha": "aa74a2bc64b55ae8c90896eb7019c22e6987c3a5",
+    "containedIn": [
+      "origin/content/editor-backend-integration-20261009",
+      "origin/content/ernest-bosnjak-production-20261009-0900",
+      "origin/content/gms-production-20261009-1500",
+      "origin/content/laza-kostic-production-20261009",
+      "origin/content/nps-production-20261009-0300",
+      "origin/content/revision-zup-psm-20261009",
+      "origin/content/sombor-integration-qa-20261009",
+      "origin/content/sombor-portable-game-data-20261008",
+      "origin/content/vp-production-20261009-0400",
+      "origin/content/zup-production-20261009-0500",
+      "origin/feature/sombor-editor-backend-20261009",
+      "origin/feature/sombor-editor-v02-20261010"
+    ],
+    "aheadBehind": "4\t53"
+  },
+  {
+    "branch": "origin/tooling/budapest-editor-integration-20261010",
+    "sha": "2a1afabd97ade923e8516de59bf4e98434ab8a55",
+    "containedIn": [
+      "origin/tooling/budapest-editor-integration-fix-20261010",
+      "origin/tooling/budapest-editor-integration-save-gate-20261010",
+      "origin/tooling/budapest-editor-save-restore-20261010",
+      "origin/tooling/budapest-local-editor-20261010"
+    ],
+    "aheadBehind": "1\t63"
+  },
+  {
+    "branch": "origin/tooling/budapest-editor-integration-fix-20261010",
+    "sha": "61e6044c515f58ab631ddfa1ff2c8d75d0fc4ce7",
+    "containedIn": [
+      "origin/tooling/budapest-editor-integration-save-gate-20261010",
+      "origin/tooling/budapest-editor-save-restore-20261010"
+    ],
+    "aheadBehind": "1\t64"
+  },
+  {
+    "branch": "origin/tooling/budapest-editor-integration-save-gate-20261010",
+    "sha": "5a260dfe1e7bc1322b901d0064be2a6eeab4a1f6",
+    "containedIn": [],
+    "aheadBehind": "1\t71"
+  },
+  {
+    "branch": "origin/tooling/budapest-editor-save-restore-20261010",
+    "sha": "db22be3908899fef177a5125ad63c5c07153dfd5",
+    "containedIn": [
+      "origin/tooling/budapest-editor-integration-save-gate-20261010"
+    ],
+    "aheadBehind": "1\t70"
+  },
+  {
+    "branch": "origin/tooling/budapest-local-editor-20261010",
+    "sha": "2a1afabd97ade923e8516de59bf4e98434ab8a55",
+    "containedIn": [
+      "origin/tooling/budapest-editor-integration-20261010",
+      "origin/tooling/budapest-editor-integration-fix-20261010",
+      "origin/tooling/budapest-editor-integration-save-gate-20261010",
+      "origin/tooling/budapest-editor-save-restore-20261010"
+    ],
+    "aheadBehind": "1\t63"
+  }
+]

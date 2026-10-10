@@ -1,0 +1,27 @@
+
+> chronoeye-budapest-editor@0.1.1 test
+> node --test test/*.test.mjs
+
+✔ candidate gate accepts prose edits and rejects broken links (36.435379ms)
+✔ Budapest v2 identity and canonical AR mapping regression (29.95195ms)
+✔ allowlist rejects traversal and other cities (1.056707ms)
+✔ digest detects changes (0.517262ms)
+✔ WGS84 pair and unverified navigation (0.420347ms)
+✔ dialogue sequence referential integrity (0.258665ms)
+✔ quiz index and AR/2D parity (0.353377ms)
+✔ cross-file missing refs (0.43591ms)
+✔ all seven scene flows reference tasks and dialogue in their own acts (15.584811ms)
+✔ editorial text may change without changing stable IDs (1.222684ms)
+✔ OSM adapter uses official tile endpoint, attribution, no Google key (1.562751ms)
+✔ OSM adapter keeps drag/click events independent of tile engine (0.711061ms)
+✔ HTML and localhost headers permit OSM tiles without leaking credentials (6.915348ms)
+✔ HTTP save gate preserves bytes for invalid edits and rejects profile drift (278.772166ms)
+✔ localhost API smoke: read, validate, reject unsafe requests (118.608489ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 378.748827

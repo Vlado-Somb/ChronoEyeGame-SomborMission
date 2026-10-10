@@ -1,0 +1,23 @@
+{
+  "status": "PASS_STATIC_ONLY",
+  "checks": 1575,
+  "errors": [],
+  "warnings": [
+    "Not device tested: all 11 waypoints require a field survey; 13 assets are planned, not binary media.",
+    "Historical fact checking, media rights, ARCore, Android Host, Web Maps, GPS accuracy and save/restore remain external release gates."
+  ],
+  "scenario": {
+    "acts": 7,
+    "tasks": 21,
+    "ar": 7,
+    "scenes": 48,
+    "lines": 375,
+    "sequenceEntries": 492,
+    "flowNodes": 79,
+    "reachableFlowNodes": 79,
+    "flowPaths": 11
+  },
+  "unverifiedWaypoints": 11,
+  "uncreatedAssets": 13,
+  "releaseEligible": false
+}

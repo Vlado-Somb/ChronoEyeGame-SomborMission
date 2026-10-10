@@ -155,3 +155,11 @@
 - **Границе:** име репозиторијума и Unity путање остају; apps/android, apps/web и packages/engine су циљна структура за каснију миграцију, не већ премештен код. Независни ноћни PR-ови остају нетакнути.
 - **Издавање:** развојно/оперативно раздвајање и безбедносне/release провере су засебан посао пре јавног лансирања, како је власник затражио.
 - **Компатибилност:** нема промене шеме, сервиса, runtime-а или миграције player state-а овом организационом одлуком.
+
+### DEC-STAB-2026-001 — Repository stabilization boundaries
+- Date: 2026-10-10; status: accepted_for_design by owner for preparation only.
+- Budapest is game_mission. Adopt the Sombor GPS zone model for scene/audio triggers without importing EDU narrative/scoring requirements. Coordinates and runtime adapters remain unverified.
+- Defer media production except the necessary Tabán church model. Use no Google keys in this phase. No Cloud/credential/deploy changes.
+- Freeze active Unity development and prepare a separate private historical archive. Preserve all source until archive completeness is independently verified and deletion explicitly approved.
+- Prepare review branches/Draft PRs only. Main merges, closure of existing PRs and source deletion require explicit approval.
+- Evidence and candidate tests: docs/stabilization/2026-10-10/REPORT.md. Existing append-only decisions are preserved; no historical claim is rewritten.

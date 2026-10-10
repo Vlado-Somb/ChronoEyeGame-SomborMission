@@ -1,0 +1,12 @@
+✔ candidate snapshot has valid linked missions and WGS84 points (0.909766ms)
+✔ Haversine distance is symmetric and self-distance is zero (0.299897ms)
+✔ zone thresholds are inclusive, ordered and display-only (0.175933ms)
+✔ rejects invalid WGS84 points and broken mission references (0.324323ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 86.172262

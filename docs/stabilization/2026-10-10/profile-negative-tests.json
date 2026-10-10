@@ -1,0 +1,18 @@
+[
+  {
+    "missionType": null,
+    "rejected": true
+  },
+  {
+    "missionType": "edu_mission",
+    "rejected": true
+  },
+  {
+    "missionType": "",
+    "rejected": true
+  },
+  {
+    "missionType": "invalid",
+    "rejected": true
+  }
+]
