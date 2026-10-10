@@ -177,5 +177,6 @@
     "multipleChoiceTasks": 12,
     "textInputTasks": 5
   },
-  "changelog": "CHANGELOG.md"
+  "changelog": "CHANGELOG.md",
+  "missionType": "edu_mission"
 }
