@@ -1,0 +1,29 @@
+name: Budapest local editor QA
+on:
+  pull_request:
+    paths:
+      - 'editor/budapest/**'
+      - 'game-data/budapest/v2/**'
+      - '.github/workflows/budapest-editor.yml'
+  push:
+    branches:
+      - 'tooling/budapest-local-editor-20261010'
+    paths:
+      - 'editor/budapest/**'
+      - '.github/workflows/budapest-editor.yml'
+jobs:
+  local-editor:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Syntax
+        run: npm --prefix editor/budapest run check
+      - name: Unit tests
+        run: npm --prefix editor/budapest test
+      - name: Budapest v2 static validation
+        run: node game-data/budapest/v2/tools/validate-v2.mjs
