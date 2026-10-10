@@ -1,0 +1,4 @@
+.env
+.editor-backups/
+*.tmp
+node_modules/
