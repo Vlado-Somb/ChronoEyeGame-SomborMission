@@ -1,0 +1,142 @@
+{
+  "id": "budapest-act-3",
+  "title": "Столови који памте",
+  "actIndex": 3,
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "runtimeStatus": "not_integrated",
+  "primaryWaypointId": "BP_CENTRAL",
+  "intermediateWaypointIds": [],
+  "prerequisiteMissionIds": [
+    "budapest-act-2"
+  ],
+  "dialoguePath": "dialogues/act-3.json",
+  "evidenceSetId": "BP2_EVIDENCE_3",
+  "tasks": [
+    {
+      "id": "BP2_A3_ARRIVE",
+      "type": "gps",
+      "title": "Потврди безбедну станицу",
+      "instruction": "Ручно или провереним GPS-ом, без рада камере у ходу.",
+      "waypointId": "BP_CENTRAL",
+      "arrivalMode": "gps_or_explicit_manual",
+      "completion": {
+        "title": "Приступ потврђен",
+        "narrative": "Приступ кафеу је означен без снимања стварних гостију.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true,
+      "gps": {
+        "waypointId": "BP_CENTRAL",
+        "requiredZone": 2,
+        "fieldVerificationRequired": true
+      }
+    },
+    {
+      "id": "BP2_A3_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Провера слојева",
+      "instruction": "Послушај разговоре и раздвој проверљив историјат од измишљеног дијалога и фалсификата.",
+      "ar": {
+        "activationAfterTask": "BP2_A3_ARRIVE",
+        "assetIds": [
+          "BP2_ART_3"
+        ],
+        "successCondition": {
+          "allEvidenceMappings": [
+            "opening_1887:sourced",
+            "agency_1886:manipulated",
+            "table_dialogue:dramatized"
+          ]
+        },
+        "interaction": "evidence_mapping",
+        "mode": "manual_surface",
+        "placementMode": "manual_surface",
+        "automaticRecognition": false,
+        "capabilityCheck": [
+          "arcore_available",
+          "safe_stationary_surface"
+        ],
+        "requiresSurveyForWorldLockedAnchor": true
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "opening_1887:sourced",
+            "agency_1886:manipulated",
+            "table_dialogue:dramatized"
+          ]
+        }
+      },
+      "evidenceSetId": "BP2_EVIDENCE_3",
+      "completion": {
+        "title": "Докази раздвојени",
+        "narrative": "Поређани су документовани подаци и фикционална измена године.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true,
+      "implementationStatus": "editorially_authored_assets_pending"
+    },
+    {
+      "id": "BP2_A3_QUIZ",
+      "type": "multiple_choice",
+      "title": "Питање из досијеа",
+      "instruction": "Не веруј аутоматски реконструисаном говору.",
+      "question": {
+        "text": "Када је отворен Centrál, према његовом историјату?",
+        "choices": [
+          "1886",
+          "1887",
+          "1908"
+        ],
+        "correctIndex": 1,
+        "wrongAnswerFeedback": "Погледај означене изворе, па покушај поново. Нетачан покушај не одузима бодове."
+      },
+      "sources": [
+        "SRC_CENTRAL",
+        "SRC_USER_CORE"
+      ],
+      "completion": {
+        "title": "Проверено",
+        "narrative": "Година 1887. потврђена је извором; разговор је драматизација.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true
+    }
+  ],
+  "narrative": {
+    "mentorOpening": "BP2_D3_threshold",
+    "mentorCompletion": "BP2_D3_rupture",
+    "educationalObjective": "Послушај разговоре и раздвој проверљив историјат од измишљеног дијалога и фалсификата.",
+    "sources": [
+      "SRC_CENTRAL",
+      "SRC_USER_CORE"
+    ],
+    "setting": "Столови који памте",
+    "historyParagraphs": [
+      "Кафе „Централ“ на адреси Károlyi utca 9 отворен је 1887. године и био је једно од средишта будимпештанског књижевног живота.",
+      "Овсат, Каринти, Костолањи и Маргит Кафка повезани су са књижевним круговима тог кафеа, али њихов заједнички разговор око 1910. у овој игри је ауторски композит. Агенцијски датум 1886. је намерно нетачан елемент фикције."
+    ],
+    "fictionDisclosure": "Историјске личности и места су стварни где је наведен извор; тајни Круг, временска шифра и изговорене реплике су ауторска драматизација.",
+    "historicalReviewStatus": "editorial_reference_with_targeted_primary_source_checks; full_fact_audit_pending",
+    "reviewStatus": "accepted_for_design"
+  },
+  "progressPolicy": {
+    "namespace": "budapest-content-v2",
+    "v1AutoImport": false,
+    "manualArrivalRecordedAs": "manual_not_gps",
+    "contentVersionGuard": "explicit_migration_required"
+  },
+  "packageVersion": "2.0.0-draft.1",
+  "travelSafety": {
+    "noCameraWhileWalking": true,
+    "stationaryOnly": true,
+    "privateAreasForbidden": true
+  }
+}

@@ -1,0 +1,766 @@
+{
+  "id": "BP2_DIALOGUE_2",
+  "language": "sr-Cyrl",
+  "status": "accepted_for_design_not_recorded",
+  "authoringSource": "screenplay/act-2.txt",
+  "scenes": [
+    {
+      "id": "BP2_D2_plaza",
+      "act": 2,
+      "slug": "plaza",
+      "title": "Трг који памти више лица",
+      "location": "Трг хероја",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-2.txt",
+      "lines": [
+        {
+          "id": "BP2_D2_plaza_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Овде наш систем има најбољу визуелну стабилност. Ускладићу приказ.",
+          "subtitle": "Овде наш систем има најбољу визуелну стабилност. Ускладићу приказ.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_plaza_L02",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Онда, напокон, могу да станем усправно.",
+          "subtitle": "Онда, напокон, могу да станем усправно.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_plaza_L03",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Никола Тесла?",
+          "subtitle": "Никола Тесла?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_plaza_L04",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "У овој причи — његов сачувани глас и лице. Не очекуј да ми је сваки одговор тачан.",
+          "subtitle": "У овој причи — његов сачувани глас и лице. Не очекуј да ми је сваки одговор тачан.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_plaza_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Зашто сте се крили?",
+          "subtitle": "Зашто сте се крили?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_plaza_L06",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Нисам се крио од тебе. Крили су те од мене.",
+          "subtitle": "Нисам се крио од тебе. Крили су те од мене.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_plaza_L07",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Непотврђена тврдња. Дозвољена реконструкција може наставити.",
+          "subtitle": "Непотврђена тврдња. Дозвољена реконструкција може наставити.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_plaza_L08",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Видиш ли споменике? Они су ту. Али чак ни камен не говори сам за себе.",
+          "subtitle": "Видиш ли споменике? Они су ту. Али чак ни камен не говори сам за себе.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D2_plaza_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D2_plaza_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_plaza_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_plaza_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_plaza_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_plaza_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_plaza_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_plaza_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_plaza_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_plaza_L08"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D2_plaza_ST01",
+          "text": "У првих пет секунди гледа се стварни трг без виртуелног прекривања. Архитектура није лажни доказ приче. Три линије полако повезују три архивске картице."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D2_plaza_CU01",
+          "kind": "mus",
+          "direction": "Низак пулс и три нежна метална тона, без тријумфалне мелодије.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D2_architecture",
+      "act": 2,
+      "slug": "architecture",
+      "title": "Три извора",
+      "location": "стационарна трг-сцена",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-2.txt",
+      "lines": [
+        {
+          "id": "BP2_D2_architecture_L01",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Не питај која слика је већа. Питај шта је иза ње.",
+          "subtitle": "Не питај која слика је већа. Питај шта је иза ње.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_architecture_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Један извор је место, један је ваша пројекција, један само претпоставка.",
+          "subtitle": "Један извор је место, један је ваша пројекција, један само претпоставка.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_architecture_L03",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "И ниједан не сме говорити у име друга два.",
+          "subtitle": "И ниједан не сме говорити у име друга два.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_architecture_L04",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "То је прихватљиво разврставање.",
+          "subtitle": "То је прихватљиво разврставање.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_architecture_L05",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Данас си великодушан, АРГО.",
+          "subtitle": "Данас си великодушан, АРГО.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_architecture_L06",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Не разумем иронију у овом контексту.",
+          "subtitle": "Не разумем иронију у овом контексту.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D2_architecture_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_architecture_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_architecture_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_architecture_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_architecture_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_architecture_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_architecture_L06"
+        },
+        {
+          "type": "beat",
+          "id": "BP2_D2_architecture_BE01"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D2_architecture_ST01",
+          "text": "На простору се појаве три чисте картице: стварни локалитет; наша драматизација; неутврђена повезаност. Инспектор прво погрешно верује најлепшој."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": [
+        {
+          "id": "BP2_D2_architecture_BE01",
+          "kind": "EVIDEN",
+          "instruction": "Три картице добијају ознаком physical, dramatized, unverified; исте мапе у 2D/AR."
+        }
+      ]
+    },
+    {
+      "id": "BP2_D2_invasion",
+      "act": 2,
+      "slug": "invasion",
+      "title": "Једно тело, два лица",
+      "location": "почетак отмице холограма",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-2.txt",
+      "lines": [
+        {
+          "id": "BP2_D2_invasion_L01",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Ово није мој… канал.",
+          "subtitle": "Ово није мој… канал.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_invasion_L02",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Грешите, господине Тесла. Сада је наш.",
+          "subtitle": "Грешите, господине Тесла. Сада је наш.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D2_invasion_L03",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ко сте ви?",
+          "subtitle": "Ко сте ви?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_invasion_L04",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Лице које је било потребно. Данас можете да ме зовете Маска.",
+          "subtitle": "Лице које је било потребно. Данас можете да ме зовете Маска.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D2_invasion_L05",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Чију намеру носиш?",
+          "subtitle": "Чију намеру носиш?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_invasion_L06",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Оног ко је разумео да је историја лепша без сталног преиспитивања.",
+          "subtitle": "Оног ко је разумео да је историја лепша без сталног преиспитивања.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D2_invasion_L07",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Сукоб извора. Молим сачекајте аутоматско разрешење.",
+          "subtitle": "Сукоб извора. Молим сачекајте аутоматско разрешење.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_invasion_L08",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Не, не разрешавај. Покажи оба.",
+          "subtitle": "Не, не разрешавај. Покажи оба.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D2_invasion_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D2_invasion_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_invasion_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_invasion_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_invasion_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_invasion_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_invasion_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_invasion_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_invasion_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_invasion_L08"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D2_invasion_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D2_invasion_ST01",
+          "text": "Тесла застаде усред реченице. Из његове леве стране избија други профил, женски, хладан. У једном кадру обе усне различито артикулишу; два титла се накратко појаве један поред другог."
+        },
+        {
+          "id": "BP2_D2_invasion_ST02",
+          "text": "Прва одлука играча на његовој страни — сачувати двојну пројекцију као доказ упада, не само „победити“."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D2_invasion_CU01",
+          "kind": "voice_mor",
+          "direction": "Теслин глас се цепа на сув људски и механички женски; без лажне аутентичне реконструкције стварног Теслиног гласа.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D2_conflict",
+      "act": 2,
+      "slug": "conflict",
+      "title": "Др Илона Арц",
+      "location": "објава антагонисте",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-2.txt",
+      "lines": [
+        {
+          "id": "BP2_D2_conflict_L01",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Звала сам се различито у различитим архивима. Др Илона Арц ће бити довољно за данас.",
+          "subtitle": "Звала сам се различито у различитим архивима. Др Илона Арц ће бити довољно за данас.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_conflict_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ви стојите иза Маске?",
+          "subtitle": "Ви стојите иза Маске?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_conflict_L03",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Ја бирам шта ће Маска приказати. Све остало је алат.",
+          "subtitle": "Ја бирам шта ће Маска приказати. Све остало је алат.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_conflict_L04",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Сваки запис има порекло. Не можете га преписати и оставити исту истину.",
+          "subtitle": "Сваки запис има порекло. Не можете га преписати и оставити исту истину.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_conflict_L05",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Могу оставити исто осећање. Људима је то често сасвим довољно.",
+          "subtitle": "Могу оставити исто осећање. Људима је то често сасвим довољно.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_conflict_L06",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "То није довољно људима који су избрисани.",
+          "subtitle": "То није довољно људима који су избрисани.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_conflict_L07",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Али ко ће приметити? Ко ће још проверити?",
+          "subtitle": "Али ко ће приметити? Ко ће још проверити?",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D2_conflict_L08",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ја.",
+          "subtitle": "Ја.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D2_conflict_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_conflict_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_conflict_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_conflict_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_conflict_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_conflict_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_conflict_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_conflict_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_conflict_L08"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D2_conflict_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D2_conflict_ST01",
+          "text": "Лице МАСКЕ постепено добија конкретнији људски изглед др Илоне Арц. Ово је визуелно први поглед на стварну жену, мада је њен говор дигитални канал."
+        },
+        {
+          "id": "BP2_D2_conflict_ST02",
+          "text": "Илона застане. Није очекивала одговор; та кратка тишина је важнија од ефекта струје."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D2_contest",
+      "act": 2,
+      "slug": "contest",
+      "title": "Отворени круг",
+      "location": "сукоб решаван доказима",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-2.txt",
+      "lines": [
+        {
+          "id": "BP2_D2_contest_L01",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Инспекторе, слушајте АРГО-а. Не морате да се уплићете у конфликт приказа.",
+          "subtitle": "Инспекторе, слушајте АРГО-а. Не морате да се уплићете у конфликт приказа.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_contest_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Није приказ. Неко брише одакле су подаци дошли.",
+          "subtitle": "Није приказ. Неко брише одакле су подаци дошли.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_contest_L03",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Онда нека систем то забележи.",
+          "subtitle": "Онда нека систем то забележи.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_contest_L04",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Не шаљи све у њихову мрежу.",
+          "subtitle": "Не шаљи све у њихову мрежу.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_contest_L05",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Још једно упозорење научника чији су сви изуми на крају постали власништво некога.",
+          "subtitle": "Још једно упозорење научника чији су сви изуми на крају постали власништво некога.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D2_contest_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Повратићу ознаке. После ћемо расправљати чије су.",
+          "subtitle": "Повратићу ознаке. После ћемо расправљати чије су.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D2_contest_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D2_contest_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_contest_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_contest_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_contest_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_contest_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_contest_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_contest_L06"
+        },
+        {
+          "type": "beat",
+          "id": "BP2_D2_contest_BE01"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D2_contest_ST01",
+          "text": "Уместо брзинских удараца, три извора почињу да губе ознаке. Виртуелни свет постаје прелеп али без историјских објашњења."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D2_contest_CU01",
+          "kind": "pul",
+          "direction": "Ритам се изравнава у неприродан савршен такт; са сваком враћеном ознаком једна асиметрија се враћа.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": [
+        {
+          "id": "BP2_D2_contest_BE01",
+          "kind": "EVIDEN",
+          "instruction": "Играч заштити три везе извор–тврдња; AR објекти и 2D картице имају исту логику."
+        }
+      ]
+    },
+    {
+      "id": "BP2_D2_aftermath",
+      "act": 2,
+      "slug": "aftermath",
+      "title": "Победа која је предугачка",
+      "location": "завршетак Трга хероја",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-2.txt",
+      "lines": [
+        {
+          "id": "BP2_D2_aftermath_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Интегритет приказа враћен. Мисија успешно завршена.",
+          "subtitle": "Интегритет приказа враћен. Мисија успешно завршена.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_aftermath_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Јесмо ли је зауставили?",
+          "subtitle": "Јесмо ли је зауставили?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_aftermath_L03",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "У овом кадру, можда. Не знам колико дубоко је ушла.",
+          "subtitle": "У овом кадру, можда. Не знам колико дубоко је ушла.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_aftermath_L04",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Одличан посао. Ваша теренска потврда управо је постала део централног архива.",
+          "subtitle": "Одличан посао. Ваша теренска потврда управо је постала део централног архива.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_aftermath_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Може ли се то поништити?",
+          "subtitle": "Може ли се то поништити?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_aftermath_L06",
+          "speakerId": "BP2_CH_VARGA",
+          "text": "Ништа од вредности не сме нестати, инспекторе.",
+          "subtitle": "Ништа од вредности не сме нестати, инспекторе.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_aftermath_L07",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Кад неко обећава да ништа неће нестати, прво провери шта је назвао вредним.",
+          "subtitle": "Кад неко обећава да ништа неће нестати, прво провери шта је назвао вредним.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D2_aftermath_L08",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Следећа станица: Centrál Café. Препоручена пауза.",
+          "subtitle": "Следећа станица: Centrál Café. Препоручена пауза.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D2_aftermath_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_aftermath_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_aftermath_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_aftermath_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_aftermath_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_aftermath_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_aftermath_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_aftermath_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D2_aftermath_L08"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D2_aftermath_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D2_aftermath_ST01",
+          "text": "Теслин лик се врати, МАСКА се повуче. АРГО пријави „успешну синхронизацију“, међутим једна невидљива агенцијска метапорука носи потврђене координате/изворе Илони."
+        },
+        {
+          "id": "BP2_D2_aftermath_ST02",
+          "text": "Теслин поглед остаје секунд дуже ка месту где је лице Илоне било. Три импулса, а затим пауза која почиње да звучи као грешка."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": []
+    }
+  ]
+}

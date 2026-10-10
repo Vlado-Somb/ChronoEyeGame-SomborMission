@@ -1,0 +1,54 @@
+{
+  "id": "BP2_A4_ASSET_MANIFEST",
+  "missionId": "budapest-act-4",
+  "designStatus": "authored_binary_assets_pending",
+  "assets": [
+    {
+      "id": "BP2_ART_4",
+      "type": "scene_prop",
+      "filePath": null,
+      "status": "planned_not_created",
+      "rights": "original_or_licensed",
+      "reference": "assets/index.json"
+    },
+    {
+      "id": "BP2_A4_DIALOGUE_TEXT",
+      "type": "text_dialogue",
+      "filePath": "dialogues/act-4.json",
+      "status": "written_not_recorded",
+      "rights": "original_dramatization"
+    },
+    {
+      "id": "BP2_A4_VOICE",
+      "type": "ogg_voice",
+      "filePath": null,
+      "status": "planned_not_created",
+      "rights": "performer_consent_required"
+    },
+    {
+      "id": "BP2_A4_MUSIC",
+      "type": "ogg_original_ambience",
+      "filePath": null,
+      "status": "planned_not_created",
+      "rights": "new_composition_or_license_required"
+    },
+    {
+      "id": "BP2_A4_LOCATION",
+      "type": "geo_anchor",
+      "filePath": null,
+      "status": "survey_pending",
+      "rights": "field_site_permission_check"
+    }
+  ],
+  "safety": {
+    "noCameraWhileWalking": true,
+    "noHistoricalVoiceClone": true,
+    "ar2dEquivalent": true,
+    "rightsNeedReview": true,
+    "unverifiedCoordinatesNoGPS": true
+  },
+  "accessibility": {
+    "captionsRequired": true,
+    "offline2dEquivalent": true
+  }
+}

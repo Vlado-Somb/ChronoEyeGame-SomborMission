@@ -1,0 +1,108 @@
+{
+  "id": "BP2_A0_FLOW",
+  "missionId": "budapest-act-0",
+  "entryNodeId": "BP2_A0_NODE_ARRIVE",
+  "nodes": [
+    {
+      "id": "BP2_A0_NODE_ARRIVE",
+      "kind": "task",
+      "taskId": "BP2_A0_ARRIVE",
+      "next": "BP2_A0_NODE_S00"
+    },
+    {
+      "id": "BP2_A0_NODE_S00",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D0_invitation",
+      "skipSummary": "Агенција преко АРГО-а и Варге регрутује инспектора; непроверено треба сачувати, али они траже синхронизацију.",
+      "next": "BP2_A0_NODE_CONSENT_CHOICE",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A0_NODE_S01",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D0_onboarding",
+      "skipSummary": "Инспектор учи да упоређује две мапе и чува извор; Дучићево писмо без пошиљаоца води ка Амбасади.",
+      "next": "BP2_A0_NODE_EXPLORE",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A0_NODE_S02",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D0_fracture",
+      "skipSummary": "Појављује се оштећен сигнал који сумња у јединствену верзију; АРГО га потискује.",
+      "next": "BP2_A0_NODE_S03",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A0_NODE_S03",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D0_handler",
+      "skipSummary": "Варга умањује аномалију, али инспектор задржава сумњу у агенцијску обраду.",
+      "next": "BP2_A0_NODE_FINISH",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A0_NODE_EXPLORE",
+      "kind": "task",
+      "taskId": "BP2_A0_EXPLORE",
+      "next": "BP2_A0_NODE_QUIZ"
+    },
+    {
+      "id": "BP2_A0_NODE_QUIZ",
+      "kind": "task",
+      "taskId": "BP2_A0_QUIZ",
+      "next": "BP2_A0_NODE_S02"
+    },
+    {
+      "id": "BP2_A0_NODE_FINISH",
+      "kind": "mission_completion",
+      "requiresAllTaskIds": [
+        "BP2_A0_ARRIVE",
+        "BP2_A0_EXPLORE",
+        "BP2_A0_QUIZ"
+      ],
+      "awardKey": "budapest-act-0:complete",
+      "collectibleId": "BP2_RELIC_0",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-1",
+      "next": null
+    },
+    {
+      "id": "BP2_A0_NODE_CONSENT_CHOICE",
+      "kind": "choice",
+      "choices": [
+        {
+          "id": "accept_task",
+          "label": "Прихвати задатак",
+          "next": "BP2_A0_NODE_S01"
+        },
+        {
+          "id": "review_rules",
+          "label": "Прво прегледај правила",
+          "setFlag": {
+            "cautiousStart": true
+          },
+          "next": "BP2_A0_NODE_S01"
+        }
+      ],
+      "next": null,
+      "skipSummary": "Обе понуђене опције воде у исти наставак и не мењају бодовање.",
+      "scoring": "none"
+    }
+  ],
+  "taskOrder": [
+    "BP2_A0_ARRIVE",
+    "BP2_A0_EXPLORE",
+    "BP2_A0_QUIZ"
+  ],
+  "optionalSceneIds": [],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "skipWritesPlotSummary": true,
+    "transcriptAlwaysAvailable": true,
+    "completionWaitsForFlowFinish": true
+  },
+  "resumePolicy": "resume_node_no_duplicate_reward",
+  "fallback": "2d_evidence_cards",
+  "status": "candidate_no_runtime_test"
+}

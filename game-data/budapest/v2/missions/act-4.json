@@ -1,0 +1,145 @@
+{
+  "id": "budapest-act-4",
+  "title": "Улица туђих гласова",
+  "actIndex": 4,
+  "language": "sr-Cyrl",
+  "reviewStatus": "accepted_for_design",
+  "runtimeStatus": "not_integrated",
+  "primaryWaypointId": "BP_TEKELIJANUM",
+  "intermediateWaypointIds": [
+    "BP_MIHAILO"
+  ],
+  "prerequisiteMissionIds": [
+    "budapest-act-3"
+  ],
+  "dialoguePath": "dialogues/act-4.json",
+  "evidenceSetId": "BP2_EVIDENCE_4",
+  "tasks": [
+    {
+      "id": "BP2_A4_ARRIVE",
+      "type": "gps",
+      "title": "Потврди безбедну станицу",
+      "instruction": "Ручно или провереним GPS-ом, без рада камере у ходу.",
+      "waypointId": "BP_TEKELIJANUM",
+      "arrivalMode": "gps_or_explicit_manual",
+      "completion": {
+        "title": "Приступ потврђен",
+        "narrative": "Приступ Текелијануму је потврђен.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true,
+      "gps": {
+        "waypointId": "BP_TEKELIJANUM",
+        "requiredZone": 2,
+        "fieldVerificationRequired": true
+      }
+    },
+    {
+      "id": "BP2_A4_EXPLORE",
+      "type": "ar_interaction",
+      "title": "Провера слојева",
+      "instruction": "Историјска зграда, студенти и кратка Михаилова порука; Илона преузима гласове.",
+      "ar": {
+        "activationAfterTask": "BP2_A4_ARRIVE",
+        "assetIds": [
+          "BP2_ART_4"
+        ],
+        "successCondition": {
+          "allEvidenceMappings": [
+            "institution:historical",
+            "building:historical",
+            "gesture:fiction"
+          ]
+        },
+        "interaction": "evidence_mapping",
+        "mode": "manual_surface",
+        "placementMode": "manual_surface",
+        "automaticRecognition": false,
+        "capabilityCheck": [
+          "arcore_available",
+          "safe_stationary_surface"
+        ],
+        "requiresSurveyForWorldLockedAnchor": true
+      },
+      "fallback": {
+        "mode": "2d_evidence_cards",
+        "sameEducationalObjective": true,
+        "scoringEquivalent": true,
+        "successCondition": {
+          "allEvidenceMappings": [
+            "institution:historical",
+            "building:historical",
+            "gesture:fiction"
+          ]
+        }
+      },
+      "evidenceSetId": "BP2_EVIDENCE_4",
+      "completion": {
+        "title": "Докази раздвојени",
+        "narrative": "Разлучени су трагови установе, зграде и фикционалног геста.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true,
+      "implementationStatus": "editorially_authored_assets_pending"
+    },
+    {
+      "id": "BP2_A4_QUIZ",
+      "type": "multiple_choice",
+      "title": "Питање из досијеа",
+      "instruction": "Не веруј аутоматски реконструисаном говору.",
+      "question": {
+        "text": "На шта се односи 1838. у причи о Текелијануму?",
+        "choices": [
+          "Оснивање установе",
+          "Завршетак данашње зграде",
+          "Рушење Табанске цркве"
+        ],
+        "correctIndex": 0,
+        "wrongAnswerFeedback": "Погледај означене изворе, па покушај поново. Нетачан покушај не одузима бодове."
+      },
+      "sources": [
+        "SRC_TEKELIJANUM",
+        "SRC_VITKOVICS_SALON"
+      ],
+      "completion": {
+        "title": "Проверено",
+        "narrative": "Раздвојене су године 1838. и 1907–1908.",
+        "delaySeconds": 0
+      },
+      "active": true,
+      "requiredForMission": true
+    }
+  ],
+  "narrative": {
+    "mentorOpening": "BP2_D4_threshold",
+    "mentorCompletion": "BP2_D4_rupture",
+    "educationalObjective": "Историјска зграда, студенти и кратка Михаилова порука; Илона преузима гласове.",
+    "sources": [
+      "SRC_TEKELIJANUM",
+      "SRC_VITKOVICS_SALON",
+      "SRC_USER_CORE"
+    ],
+    "setting": "Улица туђих гласова",
+    "historyParagraphs": [
+      "Текелијанум, задужбина Саве Текелије, основан је 1838. године као ослонац српским студентима у Пешти. Данашња зграда подигнута је 1907–1908. године.",
+      "Некадашње окружење салона Михаила Витковића на Veres Pálné 36 није исто што и Текелијанум на 17–19. Витковићево тајно чланство у Кругу и поздрав три прста јесу драматизација."
+    ],
+    "fictionDisclosure": "Историјске личности и места су стварни где је наведен извор; тајни Круг, временска шифра и изговорене реплике су ауторска драматизација.",
+    "historicalReviewStatus": "editorial_reference_with_targeted_primary_source_checks; full_fact_audit_pending",
+    "reviewStatus": "accepted_for_design"
+  },
+  "progressPolicy": {
+    "namespace": "budapest-content-v2",
+    "v1AutoImport": false,
+    "manualArrivalRecordedAs": "manual_not_gps",
+    "contentVersionGuard": "explicit_migration_required"
+  },
+  "packageVersion": "2.0.0-draft.1",
+  "travelSafety": {
+    "noCameraWhileWalking": true,
+    "stationaryOnly": true,
+    "privateAreasForbidden": true
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "BP2_A4_FLOW",
+  "missionId": "budapest-act-4",
+  "entryNodeId": "BP2_A4_NODE_ARRIVE",
+  "nodes": [
+    {
+      "id": "BP2_A4_NODE_ARRIVE",
+      "kind": "task",
+      "taskId": "BP2_A4_ARRIVE",
+      "next": "BP2_A4_NODE_S00"
+    },
+    {
+      "id": "BP2_A4_NODE_S00",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_threshold",
+      "skipSummary": "Гласови и стихови воде кроз пештанску улицу без потребе за снимањем пролазника.",
+      "next": "BP2_A4_NODE_S01",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A4_NODE_S01",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_phasing",
+      "skipSummary": "Пројекције пролазе кроз фасаде само на екрану; стварни зидови нису извор тих гласова.",
+      "next": "BP2_A4_NODE_S02",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A4_NODE_S02",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_student_table",
+      "skipSummary": "Студенти одвајају оснивање Текелијанума 1838. од садашње зграде 1907–1908.",
+      "next": "BP2_A4_NODE_EXPLORE",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A4_NODE_S03",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_takeover",
+      "skipSummary": "МАСКА присваја гласове; више не може да се верује агенцијском аудио-каналу.",
+      "next": "BP2_A4_NODE_S04",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A4_NODE_S04",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_varga",
+      "skipSummary": "Варга захтева синхронизацију и прекид AR-а, али инспектор мора сачувати локалне трагове.",
+      "next": "BP2_A4_NODE_S05",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A4_NODE_S05",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_mihailo",
+      "skipSummary": "Михаило Витковић код некадашњег салона накратко показује три прста и упућује брату Јовану.",
+      "next": "BP2_A4_NODE_S06",
+      "skipPreservesTranscript": true,
+      "navigationCue": {
+        "waypointId": "BP_MIHAILO",
+        "mode": "map_or_manual_2d",
+        "geofenceStatus": "survey_pending"
+      }
+    },
+    {
+      "id": "BP2_A4_NODE_S06",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D4_rupture",
+      "skipSummary": "Теслин канал се гаси; последњи правац за тражење независних трагова је Табан.",
+      "next": "BP2_A4_NODE_FINISH",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A4_NODE_EXPLORE",
+      "kind": "task",
+      "taskId": "BP2_A4_EXPLORE",
+      "next": "BP2_A4_NODE_QUIZ"
+    },
+    {
+      "id": "BP2_A4_NODE_QUIZ",
+      "kind": "task",
+      "taskId": "BP2_A4_QUIZ",
+      "next": "BP2_A4_NODE_S03"
+    },
+    {
+      "id": "BP2_A4_NODE_FINISH",
+      "kind": "mission_completion",
+      "requiresAllTaskIds": [
+        "BP2_A4_ARRIVE",
+        "BP2_A4_EXPLORE",
+        "BP2_A4_QUIZ"
+      ],
+      "awardKey": "budapest-act-4:complete",
+      "collectibleId": "BP2_RELIC_4",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-5",
+      "next": null
+    }
+  ],
+  "taskOrder": [
+    "BP2_A4_ARRIVE",
+    "BP2_A4_EXPLORE",
+    "BP2_A4_QUIZ"
+  ],
+  "optionalSceneIds": [],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "transcriptAlwaysAvailable": true,
+    "skipWritesPlotSummary": true,
+    "completionWaitsForFlowFinish": true
+  },
+  "resumePolicy": "resume_node_no_duplicate_reward",
+  "fallback": "2d_evidence_cards",
+  "status": "candidate_no_runtime_test"
+}

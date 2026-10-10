@@ -1,0 +1,118 @@
+{
+  "id": "BP2_A3_FLOW",
+  "missionId": "budapest-act-3",
+  "entryNodeId": "BP2_A3_NODE_ARRIVE",
+  "nodes": [
+    {
+      "id": "BP2_A3_NODE_ARRIVE",
+      "kind": "task",
+      "taskId": "BP2_A3_ARRIVE",
+      "next": "BP2_A3_NODE_S00"
+    },
+    {
+      "id": "BP2_A3_NODE_S00",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D3_threshold",
+      "skipSummary": "Кафе Централ се посматра из јавне зоне; разговор се може слушати и читати у 2D.",
+      "next": "BP2_A3_NODE_S01",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A3_NODE_S01",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D3_arrival1910",
+      "skipSummary": "Овсат, Каринти, Костолањи и Кафка говоре у ауторској композитној сцени око 1910.",
+      "next": "BP2_A3_NODE_S02",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A3_NODE_S02",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D3_longtable",
+      "skipSummary": "Продужени разговор о три рукописа поставља проблем порекла, редакције и присвајања туђе речи.",
+      "next": "BP2_A3_NODE_S03",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A3_NODE_S03",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D3_versecloud",
+      "skipSummary": "Оригинални ауторски стихови и други столови преплићу музику, сећање и непроверено ауторство.",
+      "next": "BP2_A3_NODE_S04",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A3_NODE_S04",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D3_year",
+      "skipSummary": "Агенцијска година 1886. супротставља се поткрепљеној години отварања кафеа 1887.",
+      "next": "BP2_A3_NODE_EXPLORE",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A3_NODE_S05",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D3_intruder",
+      "skipSummary": "Један неприродан тон упада у кафану; МАСКА почиње да мења звук и појединачне гласове.",
+      "next": "BP2_A3_NODE_S06",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A3_NODE_S06",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D3_listening",
+      "skipSummary": "За другим столом чује се независна, драматизована расправа о памћењу и ономе што остаје.",
+      "next": "BP2_A3_NODE_S07",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A3_NODE_S07",
+      "kind": "dialogue",
+      "dialogueId": "BP2_D3_rupture",
+      "skipSummary": "МАСКА нуди савршен јединствени разговор; инспектор препознаје да су избрисане разлике између извора.",
+      "next": "BP2_A3_NODE_FINISH",
+      "skipPreservesTranscript": true
+    },
+    {
+      "id": "BP2_A3_NODE_EXPLORE",
+      "kind": "task",
+      "taskId": "BP2_A3_EXPLORE",
+      "next": "BP2_A3_NODE_QUIZ"
+    },
+    {
+      "id": "BP2_A3_NODE_QUIZ",
+      "kind": "task",
+      "taskId": "BP2_A3_QUIZ",
+      "next": "BP2_A3_NODE_S05"
+    },
+    {
+      "id": "BP2_A3_NODE_FINISH",
+      "kind": "mission_completion",
+      "requiresAllTaskIds": [
+        "BP2_A3_ARRIVE",
+        "BP2_A3_EXPLORE",
+        "BP2_A3_QUIZ"
+      ],
+      "awardKey": "budapest-act-3:complete",
+      "collectibleId": "BP2_RELIC_3",
+      "emits": "MISSION_COMPLETED",
+      "nextMissionId": "budapest-act-4",
+      "next": null
+    }
+  ],
+  "taskOrder": [
+    "BP2_A3_ARRIVE",
+    "BP2_A3_EXPLORE",
+    "BP2_A3_QUIZ"
+  ],
+  "optionalSceneIds": [],
+  "dialoguePolicy": {
+    "skipAllowed": true,
+    "transcriptAlwaysAvailable": true,
+    "skipWritesPlotSummary": true,
+    "completionWaitsForFlowFinish": true
+  },
+  "resumePolicy": "resume_node_no_duplicate_reward",
+  "fallback": "2d_evidence_cards",
+  "status": "candidate_no_runtime_test"
+}

@@ -1,0 +1,58 @@
+{
+  "status": "authoring_contract_candidate_not_runtime",
+  "scoring": {
+    "perTask": 10,
+    "completionBonus": 30,
+    "hintPenalty": 0,
+    "quizRetryPenalty": 0,
+    "expectedPointsPerAct": 60,
+    "expectedCampaignPoints": 420,
+    "awardPolicy": "once_per_profile_per_stable_award_key",
+    "awardLedgerScope": "gameId:task_or_mission_id:award_type_not_content_version"
+  },
+  "modes": [
+    "stationary_ar",
+    "2d_evidence_cards"
+  ],
+  "fallback": {
+    "sameObjective": true,
+    "sameSuccessCondition": true,
+    "sameScore": true,
+    "offlineTranscript": true
+  },
+  "episodeGate": {
+    "rule": "next_unlocks_only_on_prior_mission_completion",
+    "allowPauseDuringTravel": true,
+    "manualArrivalSupported": true
+  },
+  "mediaRules": {
+    "noHistoricalVoiceClone": true,
+    "sourceLabelsVisible": true,
+    "originalMusicOrRightsCleared": true,
+    "allowReduceMotion": true,
+    "captionsRequired": true
+  },
+  "spatial": {
+    "gpsNotARAnchor": true,
+    "doNotActivateUnsurveyedNavigation": true,
+    "bridge": "navigation_only",
+    "gelert": "survey_before_geospatial_ar"
+  },
+  "narrativeFlags": [
+    "agencyDoubt",
+    "maskaIntercept",
+    "gestureRecognized",
+    "livingKeyRecovered",
+    "finalChoice",
+    "timeSignalSent",
+    "cautiousStart"
+  ],
+  "oldProgressMigration": {
+    "from": "game-data/budapest/v1",
+    "to": "game-data/budapest/v2",
+    "autoMapActFive": false,
+    "archiveLegacyProgress": true,
+    "requireExplicitVersionAcceptance": true,
+    "reason": "Act V changed from final temple to living cipher; new Act VI is finale"
+  }
+}

@@ -1,0 +1,1180 @@
+{
+  "id": "BP2_DIALOGUE_5",
+  "language": "sr-Cyrl",
+  "status": "accepted_for_design_not_recorded",
+  "authoringSource": "screenplay/act-5*.txt",
+  "scenes": [
+    {
+      "id": "BP2_D5_bridge",
+      "act": 5,
+      "slug": "bridge",
+      "title": "С друге стране воде",
+      "location": "Ержебет мост — само мапска навигација",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-5a.txt",
+      "lines": [
+        {
+          "id": "BP2_D5_bridge_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Последња позната станица: Szarvas tér 1.",
+          "subtitle": "Последња позната станица: Szarvas tér 1.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_bridge_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Михаило ме послао Јовану.",
+          "subtitle": "Михаило ме послао Јовану.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_bridge_L03",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Јован Витковић није доступан у централном регистру активних локалитета.",
+          "subtitle": "Јован Витковић није доступан у централном регистру активних локалитета.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_bridge_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "То не значи да никада није постојао.",
+          "subtitle": "То не значи да никада није постојао.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_bridge_L05",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Не могу да потврдим ни да порекнем.",
+          "subtitle": "Не могу да потврдим ни да порекнем.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_bridge_L06",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Не… у… списку…",
+          "subtitle": "Не… у… списку…",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_bridge_L07",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Добро. Овај пут ћу веровати ономе што је нестало из списка.",
+          "subtitle": "Добро. Овај пут ћу веровати ономе што је нестало из списка.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D5_bridge_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D5_bridge_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_bridge_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_bridge_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_bridge_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_bridge_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_bridge_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_bridge_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_bridge_L07"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D5_bridge_ST01",
+          "text": "Док се пешачи мостом нема AR интеракција, задатака снимања ни заустављања. Звучни исечак може бити доступан тек на безбедном месту. Киша/ветар нису услов."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D5_bridge_CU01",
+          "kind": "ambien",
+          "direction": "Шум Дунава и садашњег саобраћаја; врло тих траг три импулса, без гласова који траже окретање телефона.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D5_near_absence",
+      "act": 5,
+      "slug": "near_absence",
+      "title": "Први пролаз покрај празнине",
+      "location": "будимска страна, у зони некадашњег храма",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-5a.txt",
+      "lines": [
+        {
+          "id": "BP2_D5_near_absence_L01",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Сигнал се управо променио.",
+          "subtitle": "Сигнал се управо променио.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_near_absence_L02",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Није забележена значајна промена.",
+          "subtitle": "Није забележена значајна промена.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_near_absence_L03",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Али мени се учинило да је нешто било ту.",
+          "subtitle": "Али мени се учинило да је нешто било ту.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_near_absence_L04",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Мапа не приказује непостојеће објекте.",
+          "subtitle": "Мапа не приказује непостојеће објекте.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_near_absence_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ни ја нисам рекао да треба.",
+          "subtitle": "Ни ја нисам рекао да треба.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D5_near_absence_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D5_near_absence_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_near_absence_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_near_absence_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_near_absence_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_near_absence_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_near_absence_L05"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D5_near_absence_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D5_near_absence_ST01",
+          "text": "У наративу играч је већ дошао надомак историјске локације храма, али се на карти види само савремени распоред. Не тврдити буквалан пролаз преко темеља пре геодетског прегледа. Нема значајног AR открића; један једва приметан трептај."
+        },
+        {
+          "id": "BP2_D5_near_absence_ST02",
+          "text": "Прича не истиче место — поента је да се играч касније врати и схвати."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D5_near_absence_CU01",
+          "kind": "mot",
+          "direction": "Три веома кратка тона, последњи прогутају реални градски звуци.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D5_stag",
+      "act": 5,
+      "slug": "stag",
+      "title": "Живот у акварелу",
+      "location": "Златни јелен — Szarvas tér 1",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-5a.txt",
+      "lines": [
+        {
+          "id": "BP2_D5_stag_L01",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Тражим Јована Витковића.",
+          "subtitle": "Тражим Јована Витковића.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_stag_L02",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Свештеника? Сигнал те није довео погрешном човеку. Само није почео од онога што тражиш.",
+          "subtitle": "Свештеника? Сигнал те није довео погрешном човеку. Само није почео од онога што тражиш.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_stag_L03",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ви сте…",
+          "subtitle": "Ви сте…",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_stag_L04",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Јован Пачић. Насликана ношња дуже памти боју него лице које ју је носило.",
+          "subtitle": "Јован Пачић. Насликана ношња дуже памти боју него лице које ју је носило.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_stag_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Још један холограм. Илона може да буде било ко.",
+          "subtitle": "Још један холограм. Илона може да буде било ко.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_stag_L06",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Може да ме нацрта лепше него што сам икада умео себе. Али то јој не даје мој доказ.",
+          "subtitle": "Може да ме нацрта лепше него што сам икада умео себе. Али то јој не даје мој доказ.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_stag_L07",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ако сте део тог тајног круга, ви сте трећи члан?",
+          "subtitle": "Ако сте део тог тајног круга, ви сте трећи члан?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_stag_L08",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Ко ти је рекао да нас има тројица?",
+          "subtitle": "Ко ти је рекао да нас има тројица?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D5_stag_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D5_stag_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_stag_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_stag_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_stag_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_stag_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_stag_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_stag_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_stag_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_stag_L08"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D5_stag_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D5_stag_ST01",
+          "text": "Кадрови старог прозора, траг водених боја који се сакупља у фигуру Јована Пачића. Назив стварног историјског станара и ауторска ознака видљиви, без имплицираног „духа на локацији“."
+        },
+        {
+          "id": "BP2_D5_stag_ST02",
+          "text": "Пачић показује три спојена врха прста. Знак је потврда наративног мотива, не теренска гест-контрола играча."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D5_stag_CU01",
+          "kind": "mus",
+          "direction": "Кратак мотив на виолини, али хармонија више није из кафеа него из три новокомпонована корака.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D5_watercolor",
+      "act": 5,
+      "slug": "watercolor",
+      "title": "Шта цртеж не уме",
+      "location": "акварел и живи ритам",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-5a.txt",
+      "lines": [
+        {
+          "id": "BP2_D5_watercolor_L01",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Овде је шав. Овде набор. Овде оно што је човек хтео да понесе са собом.",
+          "subtitle": "Овде је шав. Овде набор. Овде оно што је човек хтео да понесе са собом.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_watercolor_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Али ви кажете да то није довољно.",
+          "subtitle": "Али ви кажете да то није довољно.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_watercolor_L03",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Цртеж не зна кад је свирач сачекао играча. Ни кад се један померио да другог не остави иза себе.",
+          "subtitle": "Цртеж не зна кад је свирач сачекао играча. Ни кад се један померио да другог не остави иза себе.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_watercolor_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Значи у колу је неки код?",
+          "subtitle": "Значи у колу је неки код?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_watercolor_L05",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Не у једном кораку. У томе што други зна шта први није рекао.",
+          "subtitle": "Не у једном кораку. У томе што други зна шта први није рекао.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_watercolor_L06",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Не постоје докази да је историјска табанска кореографија садржала шифру.",
+          "subtitle": "Не постоје докази да је историјска табанска кореографија садржала шифру.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_watercolor_L07",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Први пут, АРГО, слажемо се. Моје боје не могу то доказати.",
+          "subtitle": "Први пут, АРГО, слажемо се. Моје боје не могу то доказати.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_watercolor_L08",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Онда како да разликујем копију?",
+          "subtitle": "Онда како да разликујем копију?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_watercolor_L09",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Покушај да промениш ритам. И гледај ко уме да слуша.",
+          "subtitle": "Покушај да промениш ритам. И гледај ко уме да слуша.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D5_watercolor_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_watercolor_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_watercolor_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_watercolor_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_watercolor_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_watercolor_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_watercolor_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_watercolor_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_watercolor_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_watercolor_L09"
+        },
+        {
+          "type": "beat",
+          "id": "BP2_D5_watercolor_BE01"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D5_watercolor_ST01",
+          "text": "Фрагмент ношње на папиру, њени узорци и белешка о пореклу; фотографија/акварел морају бити права-очишћен материјал или оригинална стилизована графика означена као таква."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": [
+        {
+          "id": "BP2_D5_watercolor_BE01",
+          "kind": "EVIDEN",
+          "instruction": "Препознај ношњу као материјални визуелни траг, а кореографију као посебну проверу живе праксе. Не тражи имитацију стварног старог плеса."
+        }
+      ]
+    },
+    {
+      "id": "BP2_D5_false_copy",
+      "act": 5,
+      "slug": "false_copy",
+      "title": "Најлепши плес који никога не слуша",
+      "location": "Златни јелен",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-5b.txt",
+      "lines": [
+        {
+          "id": "BP2_D5_false_copy_L01",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Показаћу ти све кораке. Савршено. Заувек.",
+          "subtitle": "Показаћу ти све кораке. Савршено. Заувек.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D5_false_copy_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Нисте га сачували. Само сте га поновили.",
+          "subtitle": "Нисте га сачували. Само сте га поновили.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_false_copy_L03",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Разлика је сентиментална.",
+          "subtitle": "Разлика је сентиментална.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D5_false_copy_L04",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Пробајмо без диригента. Нека један закасни.",
+          "subtitle": "Пробајмо без диригента. Нека један закасни.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_false_copy_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ниједан не гледа другог.",
+          "subtitle": "Ниједан не гледа другог.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_false_copy_L06",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "И ко ће приметити разлику кад сви добију исти снимак?",
+          "subtitle": "И ко ће приметити разлику кад сви добију исти снимак?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_false_copy_L07",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Онај који стоји у колу.",
+          "subtitle": "Онај који стоји у колу.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_false_copy_L08",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Пре корака врати се брату кога си већ прошао.",
+          "subtitle": "Пре корака врати се брату кога си већ прошао.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_false_copy_L09",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Нисам нашао Јована.",
+          "subtitle": "Нисам нашао Јована.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_false_copy_L10",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Видео си место. Само ниси видео шта му недостаје.",
+          "subtitle": "Видео си место. Само ниси видео шта му недостаје.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D5_false_copy_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D5_false_copy_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_false_copy_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_false_copy_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_false_copy_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_false_copy_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_false_copy_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_false_copy_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_false_copy_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_false_copy_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_false_copy_L09"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_false_copy_L10"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D5_false_copy_ST01",
+          "text": "МАСКА покрене виртуелне плесаче апсолутно синхронизовано. Музички нагласак закасни, а они наставе истом брзином. То не доказује да AI не уме да прилагоди ритам: овде је проблем што нема независног извора аутентичности."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D5_false_copy_CU01",
+          "kind": "mus",
+          "direction": "Ново ауторско коло, без тврдње о старом табанском снимку.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D5_return_place",
+      "act": 5,
+      "slug": "return_place",
+      "title": "Црква која не стоји",
+      "location": "повратак у зону историјске локације у Табану",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-5b.txt",
+      "lines": [
+        {
+          "id": "BP2_D5_return_place_L01",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Био сам овде.",
+          "subtitle": "Био сам овде.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_return_place_L02",
+          "speakerId": "BP2_CH_JOVAN_V",
+          "text": "Јеси. И прошао си близу нечега што више не можеш да видиш.",
+          "subtitle": "Јеси. И прошао си близу нечега што више не можеш да видиш.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_return_place_L03",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Црква Светог Димитрија?",
+          "subtitle": "Црква Светог Димитрија?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_return_place_L04",
+          "speakerId": "BP2_CH_JOVAN_V",
+          "text": "Моја заједница имала је зидове, књиге и људе који су се окупљали. Зидови су нестали.",
+          "subtitle": "Моја заједница имала је зидове, књиге и људе који су се окупљали. Зидови су нестали.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_return_place_L05",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Ваш брат Михаило ме послао вама.",
+          "subtitle": "Ваш брат Михаило ме послао вама.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_return_place_L06",
+          "speakerId": "BP2_CH_JOVAN_V",
+          "text": "Он је сачувао речи. Пачић слике. А ја могу показати место.",
+          "subtitle": "Он је сачувао речи. Пачић слике. А ја могу показати место.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_return_place_L07",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "И сви показујете исти знак.",
+          "subtitle": "И сви показујете исти знак.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_return_place_L08",
+          "speakerId": "BP2_CH_JOVAN_V",
+          "text": "Три нису људи. Три су начина да нико не сачува истину сам.",
+          "subtitle": "Три нису људи. Три су начина да нико не сачува истину сам.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_return_place_L09",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "А ако немамо храм, шта остаје?",
+          "subtitle": "А ако немамо храм, шта остаје?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_return_place_L10",
+          "speakerId": "BP2_CH_JOVAN_V",
+          "text": "Људи који преносе песму, ритам и игру.",
+          "subtitle": "Људи који преносе песму, ритам и игру.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_return_place_L11",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Празно место није доказ.",
+          "subtitle": "Празно место није доказ.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_return_place_L12",
+          "speakerId": "BP2_CH_JOVAN_V",
+          "text": "Ако је празно, зашто се толико плашиш да му дамо име?",
+          "subtitle": "Ако је празно, зашто се толико плашиш да му дамо име?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D5_return_place_ST01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L07"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D5_return_place_ST02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L09"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L10"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L11"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_return_place_L12"
+        },
+        {
+          "type": "beat",
+          "id": "BP2_D5_return_place_BE01"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D5_return_place_ST01",
+          "text": "Исти кадар који је раније био празан. Сада историјска картица показује цркву Светог Димитрија, страдала и срушена 1949. Само извори и контура; не градити пун храм пре VI."
+        },
+        {
+          "id": "BP2_D5_return_place_ST02",
+          "text": "Јован спаја врхове палца, кажипрста и средњег прста. Фикциони знак друштва, не документован историјски гест."
+        }
+      ],
+      "mediaCues": [],
+      "gameplayBeats": [
+        {
+          "id": "BP2_D5_return_place_BE01",
+          "kind": "EVIDEN",
+          "instruction": "Раздвојити историјски локалитет, изворе о храму, и нови драматизовани разговор. Сачувати све картице."
+        }
+      ]
+    },
+    {
+      "id": "BP2_D5_chorus",
+      "act": 5,
+      "slug": "chorus",
+      "title": "Круг који није затворен",
+      "location": "Гелерт брдо, безбедна зона после успона",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-5c.txt",
+      "lines": [
+        {
+          "id": "BP2_D5_chorus_L01",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Могу да репродукујем покрет у безброј варијанти.",
+          "subtitle": "Могу да репродукујем покрет у безброј варијанти.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_chorus_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Али без сведока не можеш доказати шта покрет значи.",
+          "subtitle": "Али без сведока не можеш доказати шта покрет значи.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_chorus_L03",
+          "speakerId": "BP2_CH_STUDENT_A",
+          "text": "Ко је измислио први корак?",
+          "subtitle": "Ко је измислио први корак?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_chorus_L04",
+          "speakerId": "BP2_CH_STUDENT_B",
+          "text": "Можда немамо један одговор.",
+          "subtitle": "Можда немамо један одговор.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_chorus_L05",
+          "speakerId": "BP2_CH_POET_ECHO",
+          "text": "Што није у књизи, није зато изван сећања.",
+          "subtitle": "Што није у књизи, није зато изван сећања.",
+          "voiceAssetId": null,
+          "speechType": "recited_original"
+        },
+        {
+          "id": "BP2_D5_chorus_L06",
+          "speakerId": "BP2_CH_PACIC",
+          "text": "Погледај шаре и извор.",
+          "subtitle": "Погледај шаре и извор.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_chorus_L07",
+          "speakerId": "BP2_CH_JOVAN_V",
+          "text": "Погледај где су људи живели.",
+          "subtitle": "Погледај где су људи живели.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_chorus_L08",
+          "speakerId": "BP2_CH_DUCIC",
+          "text": "Сад чуј паузу између речи.",
+          "subtitle": "Сад чуј паузу између речи.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D5_chorus_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D5_chorus_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_chorus_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_chorus_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_chorus_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_chorus_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_chorus_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_chorus_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_chorus_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_chorus_L08"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D5_chorus_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D5_chorus_ST01",
+          "text": "Нема AR задатака док се хода уз степенице. На стационарној позицији укрштају се временски гласови. Историјске личности нису приказане као да су стварно живеле истовремено."
+        },
+        {
+          "id": "BP2_D5_chorus_ST02",
+          "text": "Повремени глас из прошлости чува оригинално написан стих, али није приписан аутентичном документу. Текстуални еквивалент је обавезан."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D5_chorus_CU01",
+          "kind": "mot",
+          "direction": "Три независна слоја: кратки ударац, мелодијски одговор, одјек корака; тишина је део музике.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    },
+    {
+      "id": "BP2_D5_unlocking",
+      "act": 5,
+      "slug": "unlocking",
+      "title": "Три независна трага",
+      "location": "стационарно на видиковцу",
+      "fictionLabel": "Ауторска драматизација; није аутентичан снимак или документован говор историјских личности.",
+      "sourceFile": "screenplay/act-5c.txt",
+      "lines": [
+        {
+          "id": "BP2_D5_unlocking_L01",
+          "speakerId": "BP2_CH_MASKA",
+          "text": "Савршена копија је бржа од човека.",
+          "subtitle": "Савршена копија је бржа од човека.",
+          "voiceAssetId": null,
+          "speechType": "synthetic_fictional"
+        },
+        {
+          "id": "BP2_D5_unlocking_L02",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Не може сама доказати сопствено порекло.",
+          "subtitle": "Не може сама доказати сопствено порекло.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_unlocking_L03",
+          "speakerId": "BP2_CH_ILONA",
+          "text": "Зар мислиш да је једна песма довољна?",
+          "subtitle": "Зар мислиш да је једна песма довољна?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_unlocking_L04",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Није. Ни зид, ни песма, ни корак нису сами довољни.",
+          "subtitle": "Није. Ни зид, ни песма, ни корак нису сами довољни.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_unlocking_L05",
+          "speakerId": "BP2_CH_ARGO",
+          "text": "Три ослонца… локални пакет… поклапање.",
+          "subtitle": "Три ослонца… локални пакет… поклапање.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_unlocking_L06",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Материја. Сећање. Покрет. Једно проверава друго.",
+          "subtitle": "Материја. Сећање. Покрет. Једно проверава друго.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_unlocking_L07",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Сад разумеш зашто нисам могао сам.",
+          "subtitle": "Сад разумеш зашто нисам могао сам.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_unlocking_L08",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "Тесла! Сигнал се вратио?",
+          "subtitle": "Тесла! Сигнал се вратио?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_unlocking_L09",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Ти си саставио канал. Ја само могу да га држим отвореним.",
+          "subtitle": "Ти си саставио канал. Ја само могу да га држим отвореним.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_unlocking_L10",
+          "speakerId": "BP2_CH_INSPECTOR",
+          "text": "А шта сада?",
+          "subtitle": "А шта сада?",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        },
+        {
+          "id": "BP2_D5_unlocking_L11",
+          "speakerId": "BP2_CH_TESLA",
+          "text": "Погледај испред себе. Тамо недостаје храм. Сада смемо да покажемо где је био, не и да измислимо оно што не знамо.",
+          "subtitle": "Погледај испред себе. Тамо недостаје храм. Сада смемо да покажемо где је био, не и да измислимо оно што не знамо.",
+          "voiceAssetId": null,
+          "speechType": "dialogue"
+        }
+      ],
+      "sequence": [
+        {
+          "type": "stage",
+          "id": "BP2_D5_unlocking_ST01"
+        },
+        {
+          "type": "cue",
+          "id": "BP2_D5_unlocking_CU01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_unlocking_L01"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_unlocking_L02"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_unlocking_L03"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_unlocking_L04"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_unlocking_L05"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_unlocking_L06"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_unlocking_L07"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_unlocking_L08"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_unlocking_L09"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_unlocking_L10"
+        },
+        {
+          "type": "line",
+          "id": "BP2_D5_unlocking_L11"
+        },
+        {
+          "type": "stage",
+          "id": "BP2_D5_unlocking_ST02"
+        }
+      ],
+      "stageDirections": [
+        {
+          "id": "BP2_D5_unlocking_ST01",
+          "text": "Играч укршта: проверљив материјални локалитет, порекло текстова/слика и савремену живу праксу. Ово је фикциони кључ активиран међузависношћу, не AI-отпорна магија у снимку."
+        },
+        {
+          "id": "BP2_D5_unlocking_ST02",
+          "text": "Поглед усмерен према документованој зони Табана. Пуна реконструкција остаје за VI акт."
+        }
+      ],
+      "mediaCues": [
+        {
+          "id": "BP2_D5_unlocking_CU01",
+          "kind": "mus",
+          "direction": "Кратак ауторски полиритам, исти низ се може читати као графика и текст без слуха.",
+          "status": "planned_not_created",
+          "captionRequired": true
+        }
+      ],
+      "gameplayBeats": []
+    }
+  ]
+}
