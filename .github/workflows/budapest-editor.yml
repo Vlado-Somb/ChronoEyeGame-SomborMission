@@ -8,8 +8,10 @@ on:
   push:
     branches:
       - 'tooling/budapest-local-editor-20261010'
+      - 'tooling/budapest-editor-integration-*'
     paths:
       - 'editor/budapest/**'
+      - 'game-data/budapest/v2/**'
       - '.github/workflows/budapest-editor.yml'
 jobs:
   local-editor:

@@ -2,7 +2,7 @@
 const E=id=>document.getElementById(id),C=x=>JSON.parse(JSON.stringify(x));
 const H=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const M={map:['Геолокације','waypoints.json'],dialogue:['Дијалози','dialogues/act-0.json'],mission:['Мисије','missions/act-0.json'],flow:['Ток сцене','production/act-0/scene-flow.json'],source:['Извори','sources.json'],json:['JSON','manifest.json']};
-let mode='map',file='waypoints.json',data=null,original=null,revision='',files=[],selected=0,history=[],dirty=false,map=null,layer=null;
+let mode='map',file='waypoints.json',data=null,original=null,revision='',files=[],selected=0,history=[],dirty=false,map=null;
 async function req(url,options){const r=await fetch(url,options),x=await r.json();if(!r.ok)throw Error(x.error||JSON.stringify(x));return x;}
 function post(url,x){return req(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(x)});}
 function say(t){E('message').textContent=t;E('message').classList.add('visible');}
@@ -46,14 +46,18 @@ function geo(){
  draw();
 }
 function draw(){
- if(!window.L)return;
- if(!map){map=L.map('map').setView([47.4979,19.0402],12);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(map);layer=L.layerGroup().addTo(map);
- map.on('click',e=>{if(mode!=='map')return;snap();place(data.waypoints[selected],e.latlng);changed();render();});}
- layer.clearLayers();
- (data.waypoints||[]).forEach((w,i)=>{if(typeof w.latitude!=='number'||typeof w.longitude!=='number')return;const marker=L.marker([w.latitude,w.longitude],{draggable:true}).addTo(layer);
- marker.bindTooltip(w.id+' · '+(w.fieldVerified?'VERIFIED':'PENDING'));
- marker.on('click',()=>{selected=i;render();});marker.on('dragstart',snap);marker.on('dragend',e=>{selected=i;place(w,e.target.getLatLng());changed();render();});});
- setTimeout(()=>map.invalidateSize(),50);
+ if(!window.L||!window.BudapestMapProviders)return;
+ if(!map){
+  map=window.BudapestMapProviders.create('osm','map',[47.4979,19.0402],12);
+  map.onClick(p=>{if(mode!=='map'||!data.waypoints?.[selected])return;snap();place(data.waypoints[selected],p);changed();render();});
+ }
+ map.clearPins();
+ (data.waypoints||[]).forEach((w,i)=>{
+  if(typeof w.latitude!=='number'||typeof w.longitude!=='number')return;
+  map.addPin({latitude:w.latitude,longitude:w.longitude,label:w.id+' · '+(w.fieldVerified?'VERIFIED':'PENDING'),
+   onClick:()=>{selected=i;render();},onDragStart:()=>snap(),onDragEnd:p=>{selected=i;place(w,p);changed();render();}});
+ });
+ setTimeout(()=>map.resize(),50);
 }
 function place(w,p){w.latitude=Number(p.lat.toFixed(7));w.longitude=Number(p.lng.toFixed(7));w.fieldVerified=false;w.navigationEnabled=false;w.coordinateStatus='survey_required_v2';}
 function content(){
@@ -95,7 +99,7 @@ function update(key,value){
  if(['id','kind'].includes(key))return;
  if(mode==='map'){
   if(['latitude','longitude'].includes(key)){obj[key]=value.trim()===''?null:Number(value);obj.fieldVerified=false;obj.navigationEnabled=false;obj.coordinateStatus='survey_required_v2';}
-  else if(key.startsWith('safe')||key.startsWith('ar')){const p=key.startsWith('safe')?'safeStandingPoint':'arAnchor',axis=key.endsWith('Latitude')?'latitude':'longitude',v=obj[p]||{latitude:null,longitude:null,status:'draft_unverified'};v[axis]=value.trim()===''?null:Number(value);obj[p]=v.latitude===null&&v.longitude===null?null:v;obj.fieldVerified=false;obj.navigationEnabled=false;}
+  else if(key.startsWith('safe')||key.startsWith('ar')){const p=key.startsWith('safe')?'safeStandingPoint':'arAnchor',axis=key.endsWith('Latitude')?'latitude':'longitude',v=obj[p]||{latitude:null,longitude:null,status:'draft_unverified'};v[axis]=value.trim()===''?null:Number(value);obj[p]=v.latitude===null&&v.longitude===null?null:v;obj.fieldVerified=false;obj.navigationEnabled=false;obj.coordinateStatus='survey_required_v2';}
   else if(key==='zones')obj.zones=JSON.parse(value);else obj[key]=value;return;
  }
  if(key==='historyParagraphs'){data.narrative.historyParagraphs=value.split(/\n\s*\n/).filter(Boolean);return;}

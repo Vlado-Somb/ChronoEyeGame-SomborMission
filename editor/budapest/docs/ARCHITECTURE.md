@@ -15,3 +15,8 @@ Validation includes waypoint ranges, ID uniqueness, dialogue sequence references
 Backups are local and gitignored. Undo is an in-memory snapshot, diff is path-based, and SHA-256 revision prevents stale saves. Multi-file transactions and OS-level locking are not yet supported. Security: localhost-only binding, strict Host/Origin, no CORS, path allowlist, canonical realpath, request cap, CSP, no credentials. External Leaflet code is pinned to v1.9.4 and SRI; OSM tile network access remains necessary for the map.
 
 **Next gates:** approve coordinate/zone/anchor schema, survey 11 waypoints, integrate Android Host + Web Maps + ARCore and 2D fallback, audit sources and rights, test UI on browsers and physical devices. Keep PR draft until acceptance.
+
+
+## Map provider boundary (2026-10-10)
+
+`public/map-provider.js` is the only tile-engine integration. It returns a small `onClick/clearPins/addPin/resize/destroy` interface; `app.js` consumes that interface. The editor never stores a tile-provider-specific coordinate object in JSON. OSM tile usage obeys https://operations.osmfoundation.org/policies/tiles/ (correct HTTPS URL, visible attribution, normal Referer and browser caching, no prefetch). The local server uses `strict-origin-when-cross-origin` instead of `no-referrer`. The CSP image allowlist is restricted to the official tile host. A future Google provider requires Budapest-only credentials, HTTP referrer/API restrictions for JS and separate Android restrictions; the browser key cannot be secret. This does not implement Google Maps or ARCore.

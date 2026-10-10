@@ -43,7 +43,7 @@
         "delaySeconds": 0
       },
       "ar": {
-        "interaction": "evidence_map",
+        "interaction": "evidence_mapping",
         "activationAfterTask": "BP2_A0_ARRIVE",
         "assetIds": [
           "BP2_ART_0"

@@ -18,8 +18,8 @@ const MAX = 2 * 1024 * 1024;
 const json = (res, status, body) => send(res, status, 'application/json; charset=utf-8', JSON.stringify(body));
 function send(res, status, mime, body) {
   res.writeHead(status, { 'Content-Type': mime, 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff',
-    'Referrer-Policy': 'no-referrer', 'X-Frame-Options': 'DENY',
-    'Content-Security-Policy': "default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://unpkg.com 'unsafe-inline'; img-src 'self' data: https://*.tile.openstreetmap.org https://unpkg.com; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'" });
+    'Referrer-Policy': 'strict-origin-when-cross-origin', 'X-Frame-Options': 'DENY',
+    'Content-Security-Policy': "default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' https://unpkg.com 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'" });
   res.end(body);
 }
 function assertClient(req) {
@@ -71,7 +71,7 @@ async function qa() {
   result.ok = result.errors.length === 0;
   return result;
 }
-const routes = { '/': ['index.html','text/html; charset=utf-8'], '/app.js': ['app.js','text/javascript; charset=utf-8'],
+const routes = { '/': ['index.html','text/html; charset=utf-8'], '/app.js': ['app.js','text/javascript; charset=utf-8'], '/map-provider.js': ['map-provider.js','text/javascript; charset=utf-8'],
   '/style.css': ['style.css','text/css; charset=utf-8'] };
 const server = http.createServer(async (req,res) => {
   try {
