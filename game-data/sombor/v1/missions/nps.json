@@ -1,0 +1,112 @@
+{
+  "id": "sombor-nps",
+  "source": {
+    "repository": "Vlado-Somb/ChronoEyeGame-SomborMission",
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/NPS_SO_Mission.asset",
+    "sourceBranch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "title": "SOMBORSKO POZORIŠTE",
+  "primaryWaypointId": "SO_NPS",
+  "language": "sr-Latn",
+  "reviewStatus": "ar_accepted_editorial_pending",
+  "tasks": [
+    {
+      "id": "NPS-01",
+      "type": "gps",
+      "title": "Daske koje Somborcima mnogo znače",
+      "instruction": "Pronađi zgradu pozorišta u Somboru, i stani pored metalne skulpture  ispred ulaza.",
+      "completion": {
+        "title": "Bravo, pronašao si zgradu jednog od simbola grada!",
+        "narrative": "Narodno pozorište Sombor ima dve scene: Veliku scenu i malu scenu - Studio 99. Gledalište Velike scene ima trista mesta, a gledalište Studia 99 ima devedeset i devet mesta. Deo je Evropske rute istorijskih teatara (The european route of historic theatres), koja ima za cilj negovanje kulturne baštine odabranih evropskih pozorišta nastalih između 1500. i 1900. godine.",
+        "delaySeconds": 6
+      },
+      "gps": {
+        "waypointId": "SO_NPS",
+        "requiredZone": 3
+      }
+    },
+    {
+      "id": "NPS-AR-01",
+      "type": "ar_interaction",
+      "title": "Pozornica u prostoru",
+      "instruction": "Postavi malu virtuelnu pozornicu na bezbednu površinu i podigni zavesu.",
+      "implementationStatus": "editorially_active_assets_pending",
+      "active": true,
+      "requiredForMission": true,
+      "ar": {
+        "interaction": "stage_place_and_activate",
+        "activationAfterTask": "NPS-01",
+        "anchorPolicy": "user_ground_plane_or_camera_guided_overlay",
+        "neverRequireUnsafePositioning": true,
+        "feedback": "Pozorišna scena oživljava tek kada je istraživač pokrene.",
+        "assetIds": [
+          "assets/ar-focus-reticle.svg"
+        ]
+      },
+      "mentorCue": {
+        "mentorId": "profesor-vlada",
+        "appearance": "auto_then_recallable"
+      },
+      "fallback": {
+        "mode": "2d_equivalent",
+        "sameEducationalObjective": true
+      },
+      "completion": {
+        "title": "AR trag otkriven",
+        "narrative": "Pozorišna scena oživljava tek kada je istraživač pokrene.",
+        "delaySeconds": 2
+      }
+    },
+    {
+      "id": "NPS-02",
+      "type": "text_input",
+      "title": "Gradska teatarska istorija",
+      "instruction": "Unesi tačan odgovor.",
+      "completion": {
+        "title": "Bravo, 1882. godina je tačan odgovor!",
+        "narrative": "Prva predstava u zgradi Pozorišta u Somboru održana je 25. novembra 1882. godine. Zdanje je sagrađeno na inicijativu Deoničarskog društva somborskog pozorišta, formiranog 1879. koje su činili građani Sombora. Od tada, Pozorište u Somboru radi kontinuirano.",
+        "delaySeconds": 8
+      },
+      "textInput": {
+        "questionText": "",
+        "inputPlaceholder": "Koje godine je osnovano ovo pozorište?",
+        "answerPlaceholder": "godina osnivanja",
+        "expectedAnswer": "1882"
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK",
+        "Choices": [
+          "",
+          "",
+          ""
+        ],
+        "CorrectChoiceIndex": "1"
+      }
+    },
+    {
+      "id": "NPS-03",
+      "type": "multiple_choice",
+      "title": "Čije li je? Naše je!",
+      "instruction": "Odgovori tačno na postavljeno pitanje.",
+      "completion": {
+        "title": "Tačno!",
+        "narrative": "Srpsko Diletantsko pozorište je tokom 1847 – 1848 davalo predstave u Somboru, nastupajući sa bogatim repertoarom na srpskom jeziku. Stalno profesionalno pozorište deluje od 1946. godine, a 1952. ovaj teatar prerasta u Narodno pozorište, a 1997. godine upisano je u registar spomenika kulture, kao kulturno dobro od velikog značaja. ",
+        "delaySeconds": 8
+      },
+      "question": {
+        "text": "Koji je današnji naziv ove umetničke institucije?",
+        "choices": [
+          "Gradsko pozorište Sombor",
+          "Narodno pozorište Sombor",
+          "Državno pozorište Sombor",
+          "Građansko pozorište Sombor"
+        ],
+        "correctIndex": 1
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK",
+        "inputPlaceholder": "Koje godine je osnovano somborsko pozorište?"
+      }
+    }
+  ]
+}

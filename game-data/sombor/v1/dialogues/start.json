@@ -1,0 +1,89 @@
+{
+  "id": "start",
+  "legacyId": "uvod_dialog",
+  "active": true,
+  "reviewStatus": "legacy_unreviewed",
+  "source": {
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Dialogues/START Dialog.asset",
+    "branch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "lines": [
+    {
+      "id": "start-01",
+      "speaker": "Profesor Vlada",
+      "text": "Dragi istraživaču, svaki kamen, skulptira, fasada ili naziv ulice u Somboru čuvaju neispričane priče generacija koje su ovde živele.",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "start-02",
+      "speaker": "Profesor Vlada",
+      "text": "Ispitivanjem javnih prostora otvaraš vrata ka nekim pričama i običajima rasutim po zidovima i pločnicima.",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "start-03",
+      "speaker": "Profesor Vlada",
+      "text": "Skulpture na trgovima često su podignute kao spomenici hrabrosti ili sećanja na događaje koji su promenili tok istorije.",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "start-04",
+      "speaker": "Profesor Vlada",
+      "text": "Skulpture na trgovima često su podignute kao spomenici hrabrosti ili sećanja na događaje koji su promenili tok istorije.",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "start-05",
+      "speaker": "Profesor Vlada",
+      "text": "I nazivi ulica, predstavljaju tragove međukulturne saradnje i raznih naroda koji su nekada, ali i danas, preplitali svoje živote na ovim prostorima.",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "start-06",
+      "speaker": "Profesor Vlada",
+      "text": "Sve te znamenitosti grade mozaik koji otkriva ko smo bili i ko smo postali kroz vekove. Tvoj zadatak je da otkriješ te slojeve značenja i dopuniš slagalicu prošlosti sopstvenim zapažanjima.",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    },
+    {
+      "id": "start-07",
+      "speaker": "Profesor Vlada",
+      "text": "A sada se zaputi ka centru grada, tamo te čekaju veliki gradski trgovi!",
+      "options": [],
+      "glitch": {
+        "enabled": false,
+        "pattern": [],
+        "durationSeconds": 0
+      }
+    }
+  ]
+}

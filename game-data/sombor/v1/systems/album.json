@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "herbarijum-sombora",
+  "title": "Herbarijum Sombora",
+  "entryPoint": {
+    "persistentHudIcon": "book-open",
+    "label": "Moja zbirka",
+    "availableDuringMission": true
+  },
+  "tabs": [
+    {
+      "id": "relics",
+      "label": "Veliki tragovi",
+      "dataCategory": "relic"
+    },
+    {
+      "id": "seals",
+      "label": "Gradski pečati",
+      "dataCategory": "golden_seal"
+    },
+    {
+      "id": "hearts",
+      "label": "Srca",
+      "dataCategory": "heart"
+    },
+    {
+      "id": "jokers",
+      "label": "Džokeri",
+      "dataCategory": "joker"
+    }
+  ],
+  "itemCard": {
+    "thumbnail": true,
+    "title": true,
+    "shortNarrative": true,
+    "discoveryLocation": true,
+    "discoveryTimestamp": true,
+    "sourceLinkWhenAvailable": true,
+    "rarity": true,
+    "earnedPoints": true
+  },
+  "lockedItems": "silhouette_plus_hint_not_solution",
+  "progress": {
+    "mainMissions": "collected_unique_relics / total_missions",
+    "bonusByType": "unlocked / authored_total",
+    "bonusScore": "separate_visible_component_of_game_score"
+  },
+  "persistence": {
+    "playerStateFields": [
+      "unlockedCollectibleIds",
+      "pickedSpawnIds",
+      "firstDiscoveredAt",
+      "scoreAwardsByKey",
+      "completedMissionIds",
+      "seenMentorIntros"
+    ],
+    "oneTimeAwardKeys": "playerId + collectibleId + spawnId or taskId",
+    "contentSeparatelyStored": true
+  },
+  "accessibility": {
+    "worksWithoutCamera": true,
+    "iconsHaveTextLabels": true,
+    "contrastChecked": true,
+    "largeTouchTargets": true,
+    "sfxCanBeMuted": true
+  },
+  "privacy": "GPS is used for device-side eligibility; do not add individual location history to the public JSON package."
+}

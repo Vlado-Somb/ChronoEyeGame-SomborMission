@@ -1,0 +1,274 @@
+{
+  "id": "sombor-mkg",
+  "source": {
+    "repository": "Vlado-Somb/ChronoEyeGame-SomborMission",
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/MKG_SO_Mission.asset",
+    "sourceBranch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "title": "MILAN KONJOVIĆ — GENIJE BOJA",
+  "primaryWaypointId": "SO_MKG",
+  "language": "sr-Latn",
+  "reviewStatus": "production_editorial_v1",
+  "tasks": [
+    {
+      "id": "MKG-01",
+      "type": "gps",
+      "title": "Galerija — slikar koji je Somboru poklonio boje",
+      "instruction": "Pronađi Galeriju „Milan Konjović” na Trgu Svetog Trojstva 2. Zadrži se na bezbednom trotoaru ili javnoj pešačkoj površini odakle vidiš pročelje. Ne moraš ulaziti u galeriju.",
+      "completion": {
+        "title": "Stigao si pred Konjovićevu galeriju",
+        "narrative": "Pred tobom je galerija koja je 1966. otvorena zahvaljujući umetnikovom daru od 500 radova rodnom Somboru. Milan Konjović je slike stvarao od mladosti, a svoj grad i vojvođanske pejzaže slikao kroz snažan osećaj boje.",
+        "delaySeconds": 4
+      },
+      "gps": {
+        "waypointId": "SO_MKG",
+        "requiredZone": 2,
+        "arrivalActivationZone": 2,
+        "fieldVerificationRequired": true,
+        "note": "Legacy: zone3 required; approach zone2 temporarily removes potentially unsafe or GPS-noisy 7m constraint; verify sidewalk on site."
+      },
+      "legacyOriginal": {
+        "title": "Platno utkano u gradske zidove",
+        "instruction": "Pronađi lokaciju Galerija Milana Konjovića, i stani sipred nje.",
+        "completion": {
+          "title": "Bravo, uspešno si pronašao galeriju ovog znamenitog Somborca!",
+          "narrative": "Galerija „Milan Konjović” u Somboru osnovana je Ugovorom o poklonu od 8. jula 1966. godine, kojim je Milan Konjović svom rodnom gradu Somboru darivao zbirku od 500 svojih radova.",
+          "delaySeconds": 7
+        },
+        "gps": {
+          "waypointId": "SO_MKG",
+          "requiredZone": 3
+        }
+      }
+    },
+    {
+      "id": "MKG-AR-01",
+      "type": "ar_interaction",
+      "title": "Genije boja — tri epohe",
+      "instruction": "Pred tobom lebde tragovi tri slikarske faze. Dodirni ih redom: najpre plavu, zatim crvenu, pa sivu.",
+      "implementationStatus": "production_specified_assets_partial",
+      "active": true,
+      "requiredForMission": true,
+      "ar": {
+        "interaction": "ordered_color_phase_selection",
+        "activationAfterTask": "MKG-01",
+        "anchorPolicy": "camera_relative_cards_or_user_selected_safe_surface",
+        "neverRequireUnsafePositioning": true,
+        "feedback": "Plava, crvena, siva — Konjovićeva umetnost prolazila je kroz različite faze. U svakoj je tražio novi način da bojom izrazi svet.",
+        "assetIds": [
+          "assets/mkg-phase-blue.svg",
+          "assets/mkg-phase-red.svg",
+          "assets/mkg-phase-grey.svg",
+          "assets/mkg-paint-trail.svg",
+          "assets/ar-focus-reticle.svg"
+        ],
+        "content": {
+          "phases": [
+            {
+              "id": "blue",
+              "label": "Plava faza",
+              "period": "1929–1933",
+              "artAsset": "assets/mkg-phase-blue.svg",
+              "description": "Parisko iskustvo i sazrevanje jednog osobenog slikarskog izraza."
+            },
+            {
+              "id": "red",
+              "label": "Crvena faza",
+              "period": "1934–1940",
+              "artAsset": "assets/mkg-phase-red.svg",
+              "description": "Intenzivne tople boje i izražajni motivi Vojvodine i Mediterana."
+            },
+            {
+              "id": "grey",
+              "label": "Siva faza",
+              "period": "1945–1952",
+              "artAsset": "assets/mkg-phase-grey.svg",
+              "description": "Posleratni, smireniji i prigušeniji kolorit."
+            }
+          ],
+          "correctSequence": [
+            "blue",
+            "red",
+            "grey"
+          ],
+          "selectionMethod": "tap_color_phase_cards_in_chronological_order",
+          "onMistake": "gentle_reset_no_score_penalty",
+          "meaning": "Color swatches are original didactic illustrations, NOT exact colors or reproductions of particular Konjović canvases.",
+          "afterSuccess": "show_three_color_strokes_converging_into_mini_palette_then_continue_with_real_quiz"
+        },
+        "successCondition": {
+          "kind": "sequence_equals",
+          "expected": [
+            "blue",
+            "red",
+            "grey"
+          ],
+          "resultEvent": "AR_INTERACTION_COMPLETED",
+          "taskId": "MKG-AR-01"
+        }
+      },
+      "mentorCue": {
+        "mentorId": "profesor-vlada",
+        "appearance": "auto_then_recallable"
+      },
+      "fallback": {
+        "mode": "2d_ordered_color_phase_selection",
+        "sameEducationalObjective": true,
+        "sameScoring": true,
+        "mayActivateWithoutCamera": true
+      },
+      "completion": {
+        "title": "Otkrio si tri slikarske faze",
+        "narrative": "Plava (1929–1933), crvena (1934–1940) i siva faza (1945–1952) deo su Konjovićevog razvoja; nijedna pojedinačna boja sama ne opisuje sve njegove slike.",
+        "delaySeconds": 3
+      }
+    },
+    {
+      "id": "MKG-02",
+      "type": "multiple_choice",
+      "title": "Od Sombora do Pariza i natrag",
+      "instruction": "Priseti se čime se umetnik bavio i zašto u njegovoj galeriji govorimo o boji.",
+      "completion": {
+        "title": "Tako je — Milan Konjović bio je slikar!",
+        "narrative": "Milan Konjović (1898–1993) bio je slikar i jedan od velikih srpskih kolorista 20. veka. Posle umetničkog školovanja i putovanja u Pragu i Beču, boravio je u Parizu između 1924. i 1932. Potom se vratio Somboru i na svojim platnima često prikazivao Vojvodinu, njene ljude i ravnicu.",
+        "delaySeconds": 5
+      },
+      "question": {
+        "text": "U kojoj umetnosti se posebno proslavio Milan Konjović?",
+        "choices": [
+          "Vajarstvo",
+          "Književnost",
+          "Slikarstvo",
+          "Fotografija"
+        ],
+        "correctIndex": 2
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_MKG",
+        "confirmationZone": "3"
+      },
+      "legacyOriginal": {
+        "title": "Od Sombora do Pariza i natrag..",
+        "instruction": "Odgovori na postavljeno pitanje.",
+        "completion": {
+          "title": "Bravo, Milan Konjović bio je srpski slikar i akademik!",
+          "narrative": "Studirao je u Pragu i Beču, a živeo u Parizu od 1924. do 1932. Svojim opusom od 6.000 radova pripada vrhu srpske likovne umetnosti, uz afirmaciju svoga osobenog stila koloriste ekspresionističkog temperamenta.",
+          "delaySeconds": 8
+        },
+        "question": {
+          "text": "Ko je bio Milan Konjović?",
+          "choices": [
+            "Vajar",
+            "Pisac",
+            "Slikar",
+            "Fotograf"
+          ],
+          "correctIndex": 2
+        }
+      }
+    },
+    {
+      "id": "MKG-03",
+      "type": "text_input",
+      "title": "Prva boja — 1898. godina",
+      "instruction": "Sada pronađi godinu njegovog rođenja. Upiši samo godinu; ne moraš da unosiš ceo datum.",
+      "completion": {
+        "title": "Tačno, 1898!",
+        "narrative": "Milan Konjović je rođen u Somboru 28. januara 1898. Kao gimnazijalac već je 1914. izlagao prve slike nastale pred prirodom. Posle dugog umetničkog puta vratio se u rodni grad; 1966. njegova galerija je otvorena kao legat koji počiva na prvobitnoj donaciji od 500 radova.",
+        "delaySeconds": 5
+      },
+      "textInput": {
+        "questionText": "Koje godine je Milan Konjović rođen u Somboru?",
+        "inputPlaceholder": "Godina rođenja",
+        "answerPlaceholder": "Unesi 4 cifre",
+        "expectedAnswer": "1898",
+        "acceptedAnswers": [
+          "1898",
+          "1898."
+        ]
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_MKG",
+        "confirmationZone": "3"
+      },
+      "legacyOriginal": {
+        "title": "Poslednji Fovista bio je iz Sombora",
+        "instruction": "U belo polje unesi tačan odgovor.",
+        "completion": {
+          "title": "Tačan odgovor!",
+          "narrative": "Milan Konjović je rođen 28. januara 1898. godine u znamenitoj porodici advokata i poslanika u ugarskom saboru Davida Konjevića.Po majci je potomak uglednog srpskog pedagoga, publiciste i upravnika Srpske učiteljske škole Nikole Vukićevića. U Somboru je, tokom pohađanja gimnazije, 1914. godine prvi put izlagao pedesetak radova slikanih u prirodi.",
+          "delaySeconds": 8
+        },
+        "textInput": {
+          "questionText": "Kada je rođen Milan Konjović?",
+          "inputPlaceholder": "Kada je rođen Milan Konjović?",
+          "answerPlaceholder": "Unesi godinu rođenja",
+          "expectedAnswer": "1898"
+        }
+      }
+    }
+  ],
+  "narrative": {
+    "setting": "Trg Svetog Trojstva 2 — Galerija „Milan Konjović”, Sombor",
+    "theme": "Čovek koji je bojama oslikavao grad i svetu otvorio prozor prema ravnici",
+    "historyParagraphs": [
+      "Milan Konjović rođen je 28. januara 1898. u Somboru. Još 1914, kao učenik gimnazije, izlagao je svoje radove. Umetnički put vodio ga je preko Praga i Beča do Pariza, u kojem je živeo od 1924. do 1932. godine.",
+      "Njegov slikarski svet nije imao samo jednu boju. U stvaralaštvu se prepoznaju plava faza (1929–1933), crvena (1934–1940), siva (1945–1952), ali i kasniji periodi snažnog kolorizma i asocijativnog slikarstva. Boja kod Konjovića nije samo ukras: ona ume da dočara pokret, raspoloženje i doživljaj pejzaža.",
+      "Umetnik je svom rodnom gradu darovao zbirku od 500 radova. Galerija „Milan Konjović” otvorena je 10. septembra 1966. godine, u zgradi na Trgu Svetog Trojstva. Tako se jedan dug umetnički put završava i nastavlja u istom gradu iz kojeg je krenuo."
+    ],
+    "mentorOpening": "Dobro došao pred galeriju Milana Konjovića! U ovoj kući nisu sakrivene samo slike nego i jedan neobičan jezik — jezik boja. Ovaj Somborac je putovao daleko, ali mu se rodni grad stalno vraćao na platna. Hoćeš li da pratiš tragove njegove palete?",
+    "mentorBeforeAR": "Pogledaj: plava, crvena i siva! To nisu sve njegove boje, ali označavaju tri važne slikarske faze. Dodirni ih redosledom kojim su se smenjivale kroz vreme.",
+    "mentorAfterAR": "Bravo! Plava faza dolazi pre crvene, a zatim sledi siva. Umetnik je kasnije iznova oslobađao boje i njihove mogućnosti. A znaš li ko je bio Milan Konjović i kada je rođen?",
+    "mentorCompletion": "Odlično! Nisi samo pronašao galeriju — otkrio si umetnika koji je Somboru ostavio čitav jedan svet slika. Tvoja paleta sada ima svoje mesto u Herbarijumu Sombora!",
+    "historicalEchoCue": "Kratka providna silueta slikara sa četkicom može da se pojavi i nestane bez lažnog istorijskog govora; Profesor Vlada objašnjava da je to umetnička interpretacija."
+  },
+  "hints": [
+    "HINTMKG1"
+  ],
+  "characters": [
+    "profesor-vlada"
+  ],
+  "optionalEncounters": [
+    {
+      "characterId": "milan-konjovic-echo",
+      "status": "accepted_for_design_assets_pending",
+      "trigger": "after_MKG-AR-01_complete",
+      "requiredForMission": false
+    }
+  ],
+  "rewards": {
+    "mainCollectibleId": "mkg-palette-relic",
+    "afterMissionCompleted": true,
+    "optionalCollectibleIds": [
+      "gold-mkg-001",
+      "gold-mkg-002",
+      "joker-mkg-001"
+    ]
+  },
+  "productionPackage": "production/galerija-milan-konjovic/PRODUCTION_BRIEF.md",
+  "historicalSources": [
+    {
+      "title": "Galerija Milan Konjović — Srpska enciklopedija",
+      "url": "https://srpskaenciklopedija.rs/books/slovo-g/page/galerija-milan-konjovic"
+    },
+    {
+      "title": "Galerija Milan Konjović — Turistička organizacija Sombora",
+      "url": "https://visitsombor.org/ponuda/id56/culture/art-studios-and-ateliers/gallery-milan-konjovic.html"
+    },
+    {
+      "title": "Konjović Milan — enciklopedija Srpskog narodnog pozorišta",
+      "url": "https://snp.org.rs/enciklopedija/?p=6247"
+    },
+    {
+      "title": "The Red Phase — Heritage Guide / Galerija Konjović",
+      "url": "https://myheritageguide.com/en/object/the-red-phase/"
+    }
+  ],
+  "historicalReviewNotes": [
+    "Legacy detail about father's surname 'David Konjević' appears to be a typo; consulted sources refer to David Konjović. Original paragraph preserved in legacyOriginal but not repeated in main narrative.",
+    "The gallery dates found online differ for foundation/donation contract; editorial copy uses confirmed opening 10 September 1966 and initial donation 500 works. Exact 8 July contract date preserved in legacyOriginal, can be footnoted after archival verification.",
+    "Blue/red/grey graphics are independent original pedagogical illustrations, not reproductions of Konjović's actual paintings or a universal diagnostic of each phase.",
+    "Gallery may have rotating displays; external-facing task does not require entry, opening hours or a current exhibition.",
+    "GPS approach zone2 is provisional and needs sidewalk/road field testing; no 7m forced zone."
+  ]
+}

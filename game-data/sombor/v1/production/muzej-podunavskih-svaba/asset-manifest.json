@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "package": "psm-prod-03",
+  "status": "original_svg_concepts_created_other_media_pending",
+  "assets": [
+    {
+      "id": "psm-danube-voyage",
+      "kind": "svg",
+      "path": "assets/psm-danube-voyage.svg",
+      "status": "created_concept",
+      "purpose": "Originalna ilustracija simboličnog dolaska Dunavom, nije arhivski prikaz"
+    },
+    {
+      "id": "psm-workshop",
+      "kind": "svg",
+      "path": "assets/psm-workshop.svg",
+      "status": "created_concept",
+      "purpose": "Originalni simbol svakodnevnog života, ne reprodukcija eksponata"
+    },
+    {
+      "id": "psm-museum-memory",
+      "kind": "svg",
+      "path": "assets/psm-museum-memory.svg",
+      "status": "created_concept",
+      "purpose": "Originalni simbol muzeja i sećanja"
+    },
+    {
+      "id": "psm-memory-key-relic",
+      "kind": "svg",
+      "path": "assets/psm-memory-key-relic.svg",
+      "status": "created_concept",
+      "purpose": "Glavni jedinstveni predmet, nije stvarni istorijski ključ"
+    },
+    {
+      "id": "ar-focus-reticle",
+      "kind": "svg",
+      "path": "assets/ar-focus-reticle.svg",
+      "status": "created_concept",
+      "purpose": "Zajednički AR fokus"
+    },
+    {
+      "id": "gold-city-seal",
+      "kind": "svg",
+      "path": "assets/gold-city-seal.svg",
+      "status": "created_concept",
+      "purpose": "Zajednički zlatni pečat"
+    },
+    {
+      "id": "profesor-vlada-portrait",
+      "kind": "svg",
+      "path": "assets/profesor-vlada-portrait.svg",
+      "status": "created_concept",
+      "purpose": "Zajednički mentor 2D fallback"
+    },
+    {
+      "id": "profesor-vlada-3d",
+      "kind": "glb",
+      "path": "models/profesor-vlada.glb",
+      "status": "planned_not_created",
+      "animations": [
+        "materialize",
+        "idle",
+        "point",
+        "speak",
+        "dematerialize"
+      ]
+    },
+    {
+      "id": "psm-suitcase-3d",
+      "kind": "glb",
+      "path": "models/psm-memory-suitcase.glb",
+      "status": "planned_not_created",
+      "purpose": "Opcioni simbolični kofer, ne istorijski predmet"
+    },
+    {
+      "id": "psm-facade",
+      "kind": "webp",
+      "path": "media/psm-palace-facade.webp",
+      "status": "planned_not_created",
+      "purpose": "Samo uz pravo korišćenja; nije potreban za 2D fallback"
+    },
+    {
+      "id": "psm-mentor-opening",
+      "kind": "ogg",
+      "path": "audio/psm-mentor-opening.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/psm.json#narrative.mentorOpening"
+    },
+    {
+      "id": "psm-mentor-before-ar",
+      "kind": "ogg",
+      "path": "audio/psm-mentor-before-ar.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/psm.json#narrative.mentorBeforeAR"
+    },
+    {
+      "id": "psm-mentor-after-ar",
+      "kind": "ogg",
+      "path": "audio/psm-mentor-after-ar.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/psm.json#narrative.mentorAfterAR"
+    },
+    {
+      "id": "psm-mentor-completion",
+      "kind": "ogg",
+      "path": "audio/psm-mentor-completion.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/psm.json#narrative.mentorCompletion"
+    },
+    {
+      "id": "psm-water-ambience",
+      "kind": "ogg",
+      "path": "audio/psm-water-ambience.ogg",
+      "status": "planned_not_created",
+      "purpose": "Originalni kratki simbolični ambijent, opcioni i bez glumljenja arhivskog snimka"
+    },
+    {
+      "id": "psm-suitcase-open",
+      "kind": "ogg",
+      "path": "audio/psm-suitcase-open.ogg",
+      "status": "planned_not_created",
+      "purpose": "Diskretan originalni efekat"
+    }
+  ],
+  "guidelines": {
+    "rights": "No museum artifact photographs, historic portraits or archival documents without rights and context.",
+    "sensitivity": "No dramatized victim voices, fabricated personal testimony or collectible suffering.",
+    "education": "Timeline deliberately simplified, followed by compulsory historical context.",
+    "accessibility": "Text labels and 2D equivalent; no dependence on color, camera or audio.",
+    "geospatial": "No unverified legacy altitude or false object detection."
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "package": "sombor-gk-prod-01",
+  "status": "asset_registry_with_original_svg_concepts",
+  "assets": [
+    {
+      "id": "gk-tower-outline",
+      "kind": "svg",
+      "path": "assets/gk-tower-outline.svg",
+      "status": "created_concept",
+      "purpose": "guided AR tower contour; schematic, not photo-accurate"
+    },
+    {
+      "id": "ar-focus-reticle",
+      "kind": "svg",
+      "path": "assets/ar-focus-reticle.svg",
+      "status": "created_concept",
+      "purpose": "AR gaze target"
+    },
+    {
+      "id": "gk-tower-relic",
+      "kind": "svg",
+      "path": "assets/gk-tower-token.svg",
+      "status": "created_concept",
+      "purpose": "unique location collectible"
+    },
+    {
+      "id": "gold-seal",
+      "kind": "svg",
+      "path": "assets/gold-city-seal.svg",
+      "status": "created_concept",
+      "purpose": "stylized token of 1749 royal/free city seal, NOT heraldic facsimile"
+    },
+    {
+      "id": "heart-token",
+      "kind": "svg",
+      "path": "assets/heart-token.svg",
+      "status": "created_concept",
+      "purpose": "romantic small collectibles"
+    },
+    {
+      "id": "joker-token",
+      "kind": "svg",
+      "path": "assets/joker-token.svg",
+      "status": "created_concept",
+      "purpose": "comedy small collectibles"
+    },
+    {
+      "id": "profesor-vlada-portrait",
+      "kind": "svg",
+      "path": "assets/profesor-vlada-portrait.svg",
+      "status": "created_concept",
+      "purpose": "fallback mentor portrait, not yet approved likeness"
+    },
+    {
+      "id": "profesor-vlada-3d",
+      "kind": "glb",
+      "path": "models/profesor-vlada.glb",
+      "status": "planned_not_created",
+      "animations": [
+        "appear",
+        "idle",
+        "point",
+        "speak",
+        "vanish"
+      ],
+      "suggestedTriangleBudget": "optimized for mid-range Android; exact budget after test"
+    },
+    {
+      "id": "gk-facade-fallback",
+      "kind": "photo",
+      "path": "media/gk-facade-fallback.webp",
+      "status": "pending_rights_and_capture",
+      "purpose": "2D tap hotspots, wide frontal facade image with tower and inscription"
+    },
+    {
+      "id": "gk-mentor-intro",
+      "kind": "audio",
+      "path": "audio/gk-mentor-intro.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/gk.json#narrative.mentorOpening"
+    },
+    {
+      "id": "gk-mentor-ar",
+      "kind": "audio",
+      "path": "audio/gk-mentor-after-ar.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/gk.json#narrative.mentorAfterAR"
+    },
+    {
+      "id": "gk-mentor-end",
+      "kind": "audio",
+      "path": "audio/gk-mentor-completion.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/gk.json#narrative.mentorCompletion"
+    },
+    {
+      "id": "mentor-appear",
+      "kind": "audio",
+      "path": "audio/mentor-ding.ogg",
+      "status": "pending_original_sfx",
+      "durationRangeSeconds": [
+        0.3,
+        1.2
+      ]
+    },
+    {
+      "id": "ar-success",
+      "kind": "audio",
+      "path": "audio/ar-success.ogg",
+      "status": "pending_original_sfx",
+      "durationRangeSeconds": [
+        0.2,
+        1
+      ]
+    },
+    {
+      "id": "ar-error",
+      "kind": "audio",
+      "path": "audio/ar-error.ogg",
+      "status": "pending_original_sfx",
+      "durationRangeSeconds": [
+        0.2,
+        0.6
+      ]
+    },
+    {
+      "id": "token-pickup",
+      "kind": "audio",
+      "path": "audio/token-pickup.ogg",
+      "status": "pending_original_sfx",
+      "durationRangeSeconds": [
+        0.3,
+        1
+      ]
+    }
+  ],
+  "guidelines": {
+    "audio": "original recordings or properly licensed SFX; expose volume/mute and captions",
+    "ar3d": "ground-plane or user placement; do not interpret old Unity height as geoid elevation",
+    "image": "user-provided or rights-cleared frontal facade photo needed before production; online references are research not deliverable asset",
+    "tokenDesign": "seals are graphic interpretations, not documentary copies of the official historical seal"
+  }
+}

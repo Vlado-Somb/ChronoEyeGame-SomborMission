@@ -1,0 +1,166 @@
+{
+  "source": {
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/Sombor Timeline Block Database.asset",
+    "branch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "note": "Index-ordered legacy block registry, not a guarantee that all blocks play sequentially; event triggers can invoke blocks independently.",
+  "blocks": [
+    {
+      "index": 0,
+      "id": "SO_E_Block",
+      "type": "exploration",
+      "durationSeconds": 10,
+      "allowEarlyExit": true
+    },
+    {
+      "index": 1,
+      "id": "EB_SO_Mission",
+      "type": "mission",
+      "missionId": "sombor-eb"
+    },
+    {
+      "index": 2,
+      "id": "MKG_SO_Mission",
+      "type": "mission",
+      "missionId": "sombor-mkg"
+    },
+    {
+      "index": 3,
+      "id": "GK_SO_Mission",
+      "type": "mission",
+      "missionId": "sombor-gk"
+    },
+    {
+      "index": 4,
+      "id": "LK_SO_Mission",
+      "type": "mission",
+      "missionId": "sombor-lk"
+    },
+    {
+      "index": 5,
+      "id": "GMS_SO_Mission",
+      "type": "mission",
+      "missionId": "sombor-gms"
+    },
+    {
+      "index": 6,
+      "id": "PŠM_SO_Mission",
+      "type": "mission",
+      "missionId": "sombor-psm"
+    },
+    {
+      "index": 7,
+      "id": "NPS_SO_Mission",
+      "type": "mission",
+      "missionId": "sombor-nps"
+    },
+    {
+      "index": 8,
+      "id": "VP_SO_Mission",
+      "type": "mission",
+      "missionId": "sombor-vp"
+    },
+    {
+      "index": 9,
+      "id": "ŽUP_SO_Mission",
+      "type": "mission",
+      "missionId": "sombor-zup"
+    },
+    {
+      "index": 10,
+      "id": "uvod_dialog",
+      "type": "dialogue",
+      "dialogueId": "start"
+    },
+    {
+      "index": 11,
+      "id": "midgame_dialog",
+      "type": "dialogue",
+      "dialogueId": "mid_game"
+    },
+    {
+      "index": 12,
+      "id": "finale_dialog",
+      "type": "dialogue",
+      "dialogueId": "finale"
+    },
+    {
+      "index": 13,
+      "id": "HINTEB1",
+      "type": "hint",
+      "hintId": "HINTEB1"
+    },
+    {
+      "index": 14,
+      "id": "HINTGK1",
+      "type": "hint",
+      "hintId": "HINTGK1"
+    },
+    {
+      "index": 15,
+      "id": "HINTGK2",
+      "type": "hint",
+      "hintId": "HINTGK2"
+    },
+    {
+      "index": 16,
+      "id": "HINTGK3",
+      "type": "hint",
+      "hintId": "HINTGK3"
+    },
+    {
+      "index": 17,
+      "id": "HINTGMS1",
+      "type": "hint",
+      "hintId": "HINTGMS1"
+    },
+    {
+      "index": 18,
+      "id": "HINTLK1",
+      "type": "hint",
+      "hintId": "HINTLK1"
+    },
+    {
+      "index": 19,
+      "id": "HINTMKG1",
+      "type": "hint",
+      "hintId": "HINTMKG1"
+    },
+    {
+      "index": 20,
+      "id": "HINTNPS1",
+      "type": "hint",
+      "hintId": "HINTNPS1"
+    },
+    {
+      "index": 21,
+      "id": "HINTPŠM1",
+      "type": "hint",
+      "hintId": "HINTPŠM1"
+    },
+    {
+      "index": 22,
+      "id": "HINTPŠM2",
+      "type": "hint",
+      "hintId": "HINTPŠM2"
+    },
+    {
+      "index": 23,
+      "id": "HINTVP",
+      "type": "hint",
+      "hintId": "HINTVP"
+    },
+    {
+      "index": 24,
+      "id": "HINTŽUP1",
+      "type": "hint",
+      "hintId": "HINTŽUP1"
+    },
+    {
+      "index": 25,
+      "id": "HINTŽUP2",
+      "type": "hint",
+      "hintId": "HINTŽUP2"
+    }
+  ]
+}

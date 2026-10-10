@@ -1,0 +1,76 @@
+{
+  "id": "sombor-gms",
+  "source": {
+    "repository": "Vlado-Somb/ChronoEyeGame-SomborMission",
+    "asset": "Assets/MATERIJALI/11. Upoznaj Sombor ASSETS/MIssions/GMS_SO_Mission.asset",
+    "sourceBranch": "fix/sombor-resource-stabilization-20261008"
+  },
+  "title": "MUZEJ GRADA SOMBORA",
+  "primaryWaypointId": "SO_GMS",
+  "language": "sr-Latn",
+  "reviewStatus": "legacy_unreviewed",
+  "tasks": [
+    {
+      "id": "GMS-01",
+      "type": "gps",
+      "title": "Sombor od neolita do modernog doba",
+      "instruction": "Pronađi lokaciju muzeja koji čuva istoriju grada Sombora",
+      "completion": {
+        "title": "Našao si mesto gde se čuva istorija grada!",
+        "narrative": "Ovo je kompleksan zavičajni muzej koji obavlja delatnost sakupljanja, čuvanja, publikovanja i izlaganja kulturnog nasleđa sa prostora grada Sombora i opština Apatin, Kula i Odžaci. Muzejska delatnost je organizovana kroz rad arheološkog, etnološkog, istorijskog i likovnog odeljenja.",
+        "delaySeconds": 8
+      },
+      "gps": {
+        "waypointId": "SO_GMS",
+        "requiredZone": 3
+      }
+    },
+    {
+      "id": "GMS-02",
+      "type": "multiple_choice",
+      "title": "'Putovanje Somborom kroz vekove '",
+      "instruction": "Odgovori tačno na postavljeno pitanje",
+      "completion": {
+        "title": "Tako je, Gradski muzej Sombor je tačan odgovor!",
+        "narrative": "Gradski muzej Sombor ima i dva depandansa u sastavu Istorijskog odeljenja: Spomen muzej Batinske bitke i Muzej Podunavskih Švaba. Ukupan muzejski fond čini oko 40.000 muzejskih predmeta iz svih oblasti muzeološke delatnosti.",
+        "delaySeconds": 7
+      },
+      "question": {
+        "text": "Tačan naziv ove somborske muzejske institucije je..",
+        "choices": [
+          "Narodni muzej Sombor",
+          "Zavičajni muzej Sombor",
+          "Gradski muzej Sombor",
+          "Istorijski muzej Sombor"
+        ],
+        "correctIndex": 2
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK"
+      }
+    },
+    {
+      "id": "GMS-03",
+      "type": "multiple_choice",
+      "title": "Izložbe i postavke",
+      "instruction": "Odgovori tačno na postavljeno pitanje",
+      "completion": {
+        "title": "Tako je aktuelna izložba je \"Ispit zrelosti — maturanti vojvođanskih gimnazija\"",
+        "narrative": "Postavka hronološki prati period razvoja gimnazija na prostoru Vojvodine koje su i dalje aktuelne, od druge polovine 19. veka (kada se pojavljuju prvi ispiti zrelosti u srpskim gimnazijama) do 60–ih godina 20. veka (kada počinje novi način i pristup proslave mature prepoznatljiv i današnjim đacima).",
+        "delaySeconds": 0
+      },
+      "question": {
+        "text": "Kako se zove aktuelna izložba u Gradskom muzeju Sombor?",
+        "choices": [
+          "'200 godina vladavine Avara '",
+          "Ispit zrelosti",
+          "Nit snovana 60 jeseni"
+        ],
+        "correctIndex": 1
+      },
+      "unusedUnityFields": {
+        "waypointId": "SO_GK"
+      }
+    }
+  ]
+}

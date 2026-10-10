@@ -1,0 +1,132 @@
+{
+  "packageId": "psm-prod-03",
+  "missionId": "sombor-psm",
+  "gameplayOrder": [
+    "PSM-01",
+    "PSM-AR-01",
+    "PSM-02",
+    "PSM-03"
+  ],
+  "events": [
+    {
+      "id": "psm_arrival",
+      "trigger": {
+        "type": "GPS_ZONE_CONFIRMED",
+        "waypointId": "SO_PŠM",
+        "zone": 2,
+        "confirmSeconds": 2,
+        "fieldVerified": false
+      },
+      "action": "complete_PSM-01_then_show_mentor",
+      "narrativeRef": "missions/psm.json#narrative.mentorOpening"
+    },
+    {
+      "id": "mentor_intro",
+      "trigger": "PSM-01 complete and user safely stationary",
+      "action": "show_profesor_vlada_or_2d_portrait_and_caption",
+      "canSkip": true,
+      "manualRecall": true
+    },
+    {
+      "id": "psm_ar_start",
+      "trigger": "user_pressed_Pokreni_AR_after_PSM-01",
+      "action": "render_three_symbolic_cards",
+      "cardIds": [
+        "arrival",
+        "daily_life",
+        "memory"
+      ],
+      "anchorPolicy": "camera_relative_or_user_confirmed_surface",
+      "fallback": "2d_ordered_memory_cards"
+    },
+    {
+      "id": "psm_ar_correct",
+      "trigger": {
+        "type": "CARD_SEQUENCE",
+        "expected": [
+          "arrival",
+          "daily_life",
+          "memory"
+        ]
+      },
+      "action": "emit_AR_INTERACTION_COMPLETED_for_PSM-AR-01",
+      "onMistake": "retry_without_penalty",
+      "mustShowHistoricalCaveat": true
+    },
+    {
+      "id": "psm_mentor_history",
+      "trigger": "PSM-AR-01 completed",
+      "action": "show_context_about_full_history_including_war_and_postwar_suffering",
+      "narrativeRef": "missions/psm.json#narrative.mentorAfterAR",
+      "skippableAfterRead": true
+    },
+    {
+      "id": "psm_palace_quiz",
+      "trigger": "PSM-AR-01 completed and history_caption_seen",
+      "action": "show_PSM-02_multiple_choice",
+      "correctIndex": 1,
+      "correctText": "Grašalkovićeva palata"
+    },
+    {
+      "id": "psm_museum_year",
+      "trigger": "PSM-02 completed",
+      "action": "show_PSM-03_text_input",
+      "expectedAnswer": "2019",
+      "legacyAnswerNotActive": "1751"
+    },
+    {
+      "id": "psm_mission_complete",
+      "trigger": "PSM-03 completed",
+      "action": "award_mission_score_once_and_unlock_relic",
+      "collectibleId": "psm-memory-key-relic",
+      "narrativeRef": "missions/psm.json#narrative.mentorCompletion"
+    },
+    {
+      "id": "psm_gold_bonus",
+      "trigger": "player_taps_safe_stationary_optional_2d_or_ar_bonus",
+      "action": "unlock_microhistory_with_existing_cap",
+      "collectibleIds": [
+        "gold-psm-001",
+        "gold-psm-002"
+      ]
+    },
+    {
+      "id": "psm_album",
+      "trigger": "player_taps_Moja_zbirka",
+      "action": "open_Herbarijum_Sombora",
+      "tab": "Veliki tragovi"
+    }
+  ],
+  "fallback": {
+    "when": [
+      "ARCore_unavailable",
+      "camera_denied",
+      "tracking_unstable",
+      "low_light",
+      "user_prefers_2d"
+    ],
+    "mode": "2d_ordered_memory_cards",
+    "sameEducationalObjective": true,
+    "scoringEquivalent": true,
+    "identicalSequence": [
+      "arrival",
+      "daily_life",
+      "memory"
+    ]
+  },
+  "safety": {
+    "noWalkingWithCamera": true,
+    "noRoadSpawns": true,
+    "stationaryRequired": true,
+    "noMuseumEntryRequired": true,
+    "doNotUseLegacyAltitudeForAR": true
+  },
+  "accessibility": {
+    "cardsHaveTextLabels": true,
+    "largeTapTargets": true,
+    "subtitles": true,
+    "mute": true,
+    "manualMentorRecall": true
+  },
+  "status": "editorial_and_svg_concepts_ready_android_arcore_integration_pending"
+}

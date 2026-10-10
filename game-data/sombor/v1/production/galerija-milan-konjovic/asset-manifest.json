@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "package": "sombor-mkg-prod-02",
+  "status": "asset_registry_original_svg_concepts_and_pending_media",
+  "assets": [
+    {
+      "id": "mkg-phase-blue",
+      "kind": "svg",
+      "path": "assets/mkg-phase-blue.svg",
+      "status": "created_concept",
+      "purpose": "Originalna kartica plave faze 1929–1933; nije reprodukcija Konjovićeve slike"
+    },
+    {
+      "id": "mkg-phase-red",
+      "kind": "svg",
+      "path": "assets/mkg-phase-red.svg",
+      "status": "created_concept",
+      "purpose": "Originalna kartica crvene faze 1934–1940"
+    },
+    {
+      "id": "mkg-phase-grey",
+      "kind": "svg",
+      "path": "assets/mkg-phase-grey.svg",
+      "status": "created_concept",
+      "purpose": "Originalna kartica sive faze 1945–1952"
+    },
+    {
+      "id": "mkg-palette-relic",
+      "kind": "svg",
+      "path": "assets/mkg-palette-relic.svg",
+      "status": "created_concept",
+      "purpose": "Glavni jedinstveni token po završenoj misiji"
+    },
+    {
+      "id": "mkg-paint-trail",
+      "kind": "svg",
+      "path": "assets/mkg-paint-trail.svg",
+      "status": "created_concept",
+      "purpose": "Efekat tri poteza posle AR sekvence"
+    },
+    {
+      "id": "mkg-historical-echo-silhouette",
+      "kind": "svg",
+      "path": "assets/mkg-historical-echo-silhouette.svg",
+      "status": "created_concept",
+      "purpose": "Generička umetnička figura slikara, nije portret ni istorijska fotografija"
+    },
+    {
+      "id": "ar-focus-reticle",
+      "kind": "svg",
+      "path": "assets/ar-focus-reticle.svg",
+      "status": "created_concept",
+      "purpose": "Zajednički početni AR nišan"
+    },
+    {
+      "id": "gold-city-seal",
+      "kind": "svg",
+      "path": "assets/gold-city-seal.svg",
+      "status": "created_concept",
+      "purpose": "Zajednički mali zlatni token"
+    },
+    {
+      "id": "joker-token",
+      "kind": "svg",
+      "path": "assets/joker-token.svg",
+      "status": "created_concept",
+      "purpose": "Zajednička ikonica za Pobeglu mrlju"
+    },
+    {
+      "id": "profesor-vlada-3d",
+      "kind": "glb",
+      "path": "models/profesor-vlada.glb",
+      "status": "planned_not_created",
+      "animations": [
+        "appear",
+        "idle",
+        "point",
+        "speak",
+        "vanish"
+      ],
+      "reuseFrom": "gk-prod-01"
+    },
+    {
+      "id": "mkg-historical-echo-3d",
+      "kind": "glb",
+      "path": "models/mkg-historical-echo.glb",
+      "status": "planned_not_created",
+      "animations": [
+        "fade_in",
+        "paint",
+        "fade_out"
+      ],
+      "rights": "original symbolic character, not actor/photograph"
+    },
+    {
+      "id": "mkg-gallery-facade-photo",
+      "kind": "webp",
+      "path": "media/mkg-facade-fallback.webp",
+      "status": "pending_rights_and_capture",
+      "purpose": "Optional safe arrival image; not required for the 2D palette game"
+    },
+    {
+      "id": "mkg-mentor-opening",
+      "kind": "ogg",
+      "path": "audio/mkg-mentor-opening.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/mkg.json#narrative.mentorOpening"
+    },
+    {
+      "id": "mkg-mentor-before-ar",
+      "kind": "ogg",
+      "path": "audio/mkg-mentor-before-ar.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/mkg.json#narrative.mentorBeforeAR"
+    },
+    {
+      "id": "mkg-mentor-after-ar",
+      "kind": "ogg",
+      "path": "audio/mkg-mentor-after-ar.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/mkg.json#narrative.mentorAfterAR"
+    },
+    {
+      "id": "mkg-mentor-completion",
+      "kind": "ogg",
+      "path": "audio/mkg-mentor-completion.ogg",
+      "status": "script_ready_audio_pending",
+      "textRef": "missions/mkg.json#narrative.mentorCompletion"
+    },
+    {
+      "id": "mkg-brush-whisper",
+      "kind": "ogg",
+      "path": "audio/mkg-brush-whisper.ogg",
+      "status": "planned_not_created",
+      "purpose": "Originalni brush zvuk opcionalnog istorijskog eha"
+    },
+    {
+      "id": "mkg-phase-tap",
+      "kind": "ogg",
+      "path": "audio/mkg-phase-tap.ogg",
+      "status": "planned_not_created",
+      "purpose": "Zvučni signal uspešnog faznog dodira"
+    },
+    {
+      "id": "mkg-color-bloom",
+      "kind": "ogg",
+      "path": "audio/mkg-color-bloom.ogg",
+      "status": "planned_not_created",
+      "purpose": "Kratki zvuk stapanja boja posle završetka AR zadatka"
+    },
+    {
+      "id": "mkg-joker-blob",
+      "kind": "ogg",
+      "path": "audio/mkg-joker-blob.ogg",
+      "status": "planned_not_created",
+      "purpose": "Neobavezni šaljivi zvuk Pobegle mrlje"
+    }
+  ],
+  "guidelines": {
+    "art": "All current SVG illustrations are newly created stylizations; do not substitute photographs of copyrighted artworks without permission.",
+    "education": "Color phase cards use dates & labels; real paintings cannot be reduced to one literal color.",
+    "accessibility": "Each color is labelled with a name and year range and is selectable without relying exclusively on color vision.",
+    "audio": "Original sound/permission-cleared audio, optional voice and required captions.",
+    "historicalFigure": "Historical echo must be explicitly a dramatization, no synthetic authentic-sounding speech attributed to Milan Konjović.",
+    "location": "AR screen-space or manual surface; no unverified geospatial height."
+  }
+}
